@@ -1,0 +1,101 @@
+schema_id: "v22_p1_t04_gate_lock_policy_v1"
+policy_id: "V22-P1-T04-GATE-B-ONLY-LOCK-V1"
+task_id: "RT-20260809-004"
+job_id: "AJ-RT-20260809-004-001"
+status: "active_fail_closed_control_policy"
+active_derivation_milestone: "effective_metric_g_eff"
+sole_active_physics_gate: "Gate B"
+gate_b_current_status: "NOT_READY"
+gate_b_source_record:
+  path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+  sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+  criteria_met: 0
+  criteria_total: 8
+  continuation_status: "blocked_adoption_open_continuation"
+directly_admissible_physics_classes:
+  - class_id: "gate_b_necessary_condition"
+    required_explanation: "Name the exact Gate B criterion or prerequisite narrowed by the theorem."
+  - class_id: "gate_b_candidate_construction"
+    required_explanation: "Name the source-derived candidate map, domains, assumptions, and hard-fail tests."
+  - class_id: "gate_b_scoped_obstruction"
+    required_explanation: "Name the tested ontology family, hypotheses, scope, and open escape routes."
+  - class_id: "minimal_source_extension_comparison"
+    required_explanation: "Compare materially distinct minimal extensions against the same Gate B burden without adoption."
+  - class_id: "gate_b_robustness_or_uniqueness_test"
+    required_explanation: "Test stability, uniqueness, equivalence, finite variation, or coarse graining for one admitted Gate B candidate."
+gate_b_required_evidence:
+  - {criterion_id: "B1", criterion: "target-atlas-free construction"}
+  - {criterion_id: "B2", criterion: "gauge- and constraint-reduced hyperbolic principal polynomial"}
+  - {criterion_id: "B3", criterion: "one stable Lorentzian cone or physically derived equivalence class"}
+  - {criterion_id: "B4", criterion: "universal compatibility across declared matter sectors"}
+  - {criterion_id: "B5", criterion: "operational clocks rods calibration and physical scale"}
+  - {criterion_id: "B6", criterion: "tensorial transformation and local-to-global gluing"}
+  - {criterion_id: "B7", criterion: "finite-variation and coarse-graining robustness"}
+  - {criterion_id: "B8", criterion: "no hidden metric tetrad coframe constitutive tensor quadratic form principal polynomial or equivalent target primitive"}
+dependency_rules:
+  - route_family: "new Gate C"
+    prerequisite: "genuinely positive Gate B evidence record"
+    current_disposition: "PARKED"
+  - route_family: "Gate D"
+    prerequisite: "genuinely positive P4-T05 Gate B verdict"
+    current_disposition: "PARKED"
+  - route_family: "Gate E"
+    prerequisite: "genuinely positive P5-T03 Gate D verdict"
+    current_disposition: "PARKED"
+  - route_family: "Einstein-route physics"
+    prerequisite: "genuinely positive Gate B and Gate D predecessor records"
+    current_disposition: "PARKED"
+  - route_family: "benchmark execution"
+    prerequisite: "source-derived geometry and genuinely positive Gate D path plus the registered benchmark protocol prerequisites"
+    current_disposition: "PARKED"
+  - route_family: "P5 conditional packages"
+    prerequisite: "genuinely positive P4-T05 Gate B verdict"
+    current_disposition: "PARKED"
+  - route_family: "P6-T02"
+    prerequisite: "genuinely positive P5-T03 Gate D verdict and P6-T01 control protocol"
+    current_disposition: "PARKED"
+  - route_family: "P6-T03"
+    prerequisite: "declared positive or terminal-failure predecessor path"
+    current_disposition: "PARKED"
+control_only_exception:
+  route: "P6-T01"
+  may_define_protocol_early: true
+  physics_execution_authorized: false
+  current_disposition: "CONTROL_DEFINITION_ONLY_PHYSICS_PARKED"
+candidate_hard_fail_triggers:
+  - "missing gauge- and constraint-reduced principal polynomial"
+  - "nonhyperbolic or unstable cone"
+  - "non-universal propagation across declared matter sectors"
+  - "hidden metric or metric-equivalent primitive"
+  - "uncontrolled continuum refinement or coarse-graining limit"
+source_extension_concurrency:
+  maximum_active_families: 1
+  fallback_requires_recorded_termination: true
+  fallback_requires_fresh_selector: true
+invalid_admission_bases:
+  - "convenience or implementation readiness"
+  - "protected human decision without new admissible evidence"
+  - "postulate or target-side GR assumption"
+  - "validator checkpoint role route or documentation PASS"
+  - "finite token or familiar physical label"
+  - "historical negative/control record treated as a positive predecessor"
+formal_rule:
+  theorem_id: "V22-P1-T04-GATE-LOCK-DEPENDENCY-CLOSURE-V1"
+  statement: "Without a genuinely positive Gate B evidence record every route in the downstream closure of Gate B is ineligible; protected and operational records cannot change eligibility."
+  direct_gate_b_classes_count: 5
+  active_gate_count: 1
+historical_gate_c:
+  status: "PROTECTED_SOURCE_MATTER_PACKAGE_ADOPTED_BY_POSTULATE"
+  preserved: true
+  rerun: false
+  supplies_gate_b_evidence: false
+authority_limits:
+  policy_is_gate_b_verdict: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  ontology_or_source_law_adopted: false
+  protected_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false

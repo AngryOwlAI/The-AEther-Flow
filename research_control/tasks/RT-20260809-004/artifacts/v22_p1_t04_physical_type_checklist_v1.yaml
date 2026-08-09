@@ -1,0 +1,70 @@
+schema_id: "v22_p1_t04_physical_type_checklist_v1"
+checklist_id: "V22-P1-T04-PHYSICAL-TYPE-CHECKLIST-V1"
+policy_id: "V22-P1-T04-GATE-B-ONLY-LOCK-V1"
+default_result: "REJECT_UNTYPED"
+common_required_witnesses:
+  - witness_id: "source_type"
+    requirement: "Explicit source-side mathematical type and provenance."
+  - witness_id: "operational_semantics"
+    requirement: "Preparation use comparison and readout semantics for the physical label."
+  - witness_id: "source_to_world_map"
+    requirement: "A derived map from source objects to physical observables or world-level claims."
+  - witness_id: "units_scale_calibration"
+    requirement: "Units physical scale calibration and comparison rule."
+  - witness_id: "domain_regime_equivalence"
+    requirement: "Domain validity regime resolution and physically justified equivalence relation."
+  - witness_id: "falsification_validation"
+    requirement: "A discriminating test or failure condition tied to the claimed physical meaning."
+labels:
+  - label: "clock"
+    label_specific_witnesses:
+      - "repeatable periodic or monotonic rate observable"
+      - "comparison synchronization and second-clock-effect analysis"
+    token_alone_is_sufficient: false
+  - label: "signal"
+    label_specific_witnesses:
+      - "preparation propagation detection and causal-access semantics"
+      - "sector universality or explicitly bounded sector dependence"
+    token_alone_is_sufficient: false
+  - label: "free-fall"
+    label_specific_witnesses:
+      - "universal trajectory or response law across declared matter sectors"
+      - "initial-data and local-inertial comparison semantics"
+    token_alone_is_sufficient: false
+  - label: "gravity"
+    label_specific_witnesses:
+      - "universal interaction or effective-geometry relation"
+      - "separation from force-law analogy and target-GR import"
+    token_alone_is_sufficient: false
+  - label: "metric"
+    label_specific_witnesses:
+      - "nondegenerate bilinear or lawfully equivalent tensorial structure"
+      - "signature transformation gluing scale and causal-cone relation"
+      - "proof that no target metric-equivalent primitive was imported"
+    token_alone_is_sufficient: false
+  - label: "compact source"
+    label_specific_witnesses:
+      - "physical matter content localization and controlled compactness"
+      - "interior exterior matching and applicable conservation law"
+    token_alone_is_sufficient: false
+evaluator:
+  theorem_id: "V22-P1-T04-FINITE-TOKEN-PHYSICAL-TYPING-LEMMA-V1"
+  pass_rule: "All six common witnesses and every label-specific witness must be established by admissible source-derived evidence."
+  finite_token_result: "REJECT_UNTYPED"
+  familiar_name_result: "REJECT_UNTYPED"
+  partial_witness_result: "REJECT_UNTYPED"
+  future_retest_allowed: true
+invalid_shortcuts:
+  - "renaming a vertex or state token"
+  - "finite detector register interpreted by assertion"
+  - "graph distance called physical length without calibration"
+  - "transition edge called causal signal without propagation and detection semantics"
+  - "quadratic form called emergent metric without provenance transformation and gluing"
+  - "localized graph substructure called compact source without matter and exterior semantics"
+authority_limits:
+  checklist_supplies_physical_witnesses: false
+  terminology_counts_as_evidence: false
+  gate_b_verdict_changed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

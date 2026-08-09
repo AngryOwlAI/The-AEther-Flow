@@ -1,0 +1,79 @@
+schema_id: "v22_p1_t04_parked_route_registry_v1"
+registry_id: "V22-P1-T04-PARKED-ROUTE-REGISTRY-V1"
+policy_id: "V22-P1-T04-GATE-B-ONLY-LOCK-V1"
+active_milestone: "effective_metric_g_eff"
+active_gate: "Gate B"
+entries:
+  - route_id: "historical_gate_c_p7"
+    status: "PRESERVED_HISTORICAL_NOT_RERUN"
+    prerequisite: "none because this is an immutable historical record not new execution"
+    reopening_condition: "a separately admitted materially distinct packet with exact authority"
+    execution_authorized: false
+    preserved_status: "PROTECTED_SOURCE_MATTER_PACKAGE_ADOPTED_BY_POSTULATE"
+  - route_id: "new_gate_c"
+    status: "PARKED"
+    prerequisite: "genuinely positive Gate B evidence"
+    execution_authorized: false
+  - route_id: "gate_d"
+    status: "PARKED"
+    prerequisite: "genuinely positive P4-T05 Gate B verdict"
+    execution_authorized: false
+  - route_id: "gate_e"
+    status: "PARKED"
+    prerequisite: "genuinely positive P5-T03 Gate D verdict"
+    execution_authorized: false
+  - route_id: "einstein_route"
+    status: "PARKED"
+    prerequisite: "source-derived effective geometry and positive Gate B/D predecessor records"
+    execution_authorized: false
+  - route_id: "benchmark_execution"
+    status: "PARKED"
+    prerequisite: "source-derived geometry dynamics and coupling plus applicable positive gate predecessors"
+    execution_authorized: false
+  - route_id: "P5-T01"
+    status: "PARKED"
+    prerequisite: "genuinely positive P4-T05 Gate B verdict"
+    execution_authorized: false
+  - route_id: "P5-T02"
+    status: "PARKED"
+    prerequisite: "P5-T01 completed after genuinely positive Gate B"
+    execution_authorized: false
+  - route_id: "P5-T03"
+    status: "PARKED"
+    prerequisite: "P5-T02 completed on the positive Gate B path"
+    execution_authorized: false
+  - route_id: "P6-T01"
+    status: "CONTROL_DEFINITION_ONLY_PHYSICS_PARKED"
+    prerequisite: "P1-T04 for protocol definition; later scientific prerequisites for execution"
+    execution_authorized: false
+  - route_id: "P6-T02"
+    status: "PARKED"
+    prerequisite: "genuinely positive P5-T03 Gate D verdict and P6-T01 protocol"
+    execution_authorized: false
+  - route_id: "P6-T03"
+    status: "PARKED"
+    prerequisite: "actual P4/P5 positive or terminal-failure path plus P6-T01"
+    execution_authorized: false
+route_selection_rule:
+  default_if_prerequisite_absent: "PARKED"
+  convenience_override_allowed: false
+  protected_decision_override_allowed: false
+  validator_override_allowed: false
+  source_extension_family_concurrency: 1
+historical_statuses:
+  Gate_B: "NOT_READY"
+  Gate_C: "PROTECTED_SOURCE_MATTER_PACKAGE_ADOPTED_BY_POSTULATE"
+  Gate_D: "NOT_READY"
+  Gate_E: "NOT_READY"
+  benchmark_cases: 6
+  benchmark_inconclusive: 6
+  benchmark_passes: 0
+  independent_replications: 0
+authority_limits:
+  registry_is_route_execution: false
+  historical_gate_c_rerun: false
+  gate_status_changed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false

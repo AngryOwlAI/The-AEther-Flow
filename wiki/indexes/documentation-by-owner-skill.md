@@ -188,6 +188,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P16-T06-PARENT-FUSION-GOAL-RELAY-CLOSURE-V1` `research_control/tasks/RT-20260804-004/artifacts/parent_fusion_notes_p16_t06_goal_relay_closure.md`
 - `MD-V22-P1-T02-PARENT-FUSION-PRIMITIVE-DEBT-V1` `research_control/tasks/RT-20260809-002/artifacts/parent_fusion_notes_p1_t02_primitive_debt.md`
 - `MD-V22-P1-T03-PARENT-FUSION-GATE-POLICY-V1` `research_control/tasks/RT-20260809-003/artifacts/parent_fusion_notes_p1_t03_gate_policy.md`
+- `MD-V22-P1-T04-PARENT-FUSION-GATE-LOCK-V1` `research_control/tasks/RT-20260809-004/artifacts/parent_fusion_notes_p1_t04_gate_lock.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 - `WIKI-HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/html/html-aether-flow-ontology-explainer.md`
 - `WIKI-HTML-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/html/html-aether-flow-physics-program-explainer.md`
@@ -862,6 +863,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P9-T09-PARENT-FUSION-GATE-E-REVIEW-V1` `wiki/markdown/md-v21-p9-t09-parent-fusion-gate-e-review-v1.md`
 - `WIKI-MD-V22-P1-T02-PARENT-FUSION-PRIMITIVE-DEBT-V1` `wiki/markdown/md-v22-p1-t02-parent-fusion-primitive-debt-v1.md`
 - `WIKI-MD-V22-P1-T03-PARENT-FUSION-GATE-POLICY-V1` `wiki/markdown/md-v22-p1-t03-parent-fusion-gate-policy-v1.md`
+- `WIKI-MD-V22-P1-T04-PARENT-FUSION-GATE-LOCK-V1` `wiki/markdown/md-v22-p1-t04-parent-fusion-gate-lock-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 
 ## obsidian-wiki

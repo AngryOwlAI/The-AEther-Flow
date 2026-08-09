@@ -1,12 +1,121 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260809-003"
-active_agent_job_id: "AJ-RT-20260809-003-001"
-latest_handoff_id: "handoff-0973"
-current_status: "v22_p1_t03_position_a_and_no_postulate_policy_complete_p1_t04_selected_checkpoint_pending"
-claim_boundary_summary: "RT-20260809-003 freezes the exact six-member and eight-postulate P7 package as Position A finite conditional input, keeps Position B inactive, and proves evidence-projection invariance for Gate B/D evaluators. P1-T04 is selected but unexecuted. P7 status, Distance-to-GR, protected authority, and external-action authority are unchanged."
-next_plan_task_id: "P1-T04"
+active_task_id: "RT-20260809-004"
+active_agent_job_id: "AJ-RT-20260809-004-001"
+latest_handoff_id: "handoff-0974"
+current_status: "v22_p1_t04_gate_b_only_lock_complete_p2_t01_selected_checkpoint_pending"
+claim_boundary_summary: "RT-20260809-004 makes Gate B the sole active physics gate at effective_metric_g_eff, admits five direct Gate B task classes, parks downstream and conditional physics, rejects untyped physical labels, and preserves all 66 historical P8/P9 baseline entries without rerun or promotion. P2-T01 is selected but unexecuted; scientific and Distance-to-GR status are unchanged."
+next_plan_task_id: "P2-T01"
 next_worker_skill: "continue-research"
-next_recommended_action: "After the single governed checkpoint for AJ-RT-20260809-003-001 execute exactly one separately admitted V22 P1-T04 continue-research AgentJob to make Gate B the sole active physics gate and park downstream routes; perform no protected or external action."
+next_recommended_action: "After the single governed checkpoint for AJ-RT-20260809-004-001 execute exactly one separately admitted V22 P2-T01 continue-research AgentJob to prove the coordinate- and gauge-aware local source information-capacity necessary condition; perform no protected or external action."
+
+v22_p1_t04_gate_b_only_physics_lock:
+  task_id: "RT-20260809-004"
+  parent_task_id: "RT-20260809-003"
+  parent_handoff_id: "handoff-0973"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P1-T04"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P2-T01"
+  claim_boundary_id: "CB-V22-P1-T04-GATE-B-ONLY-PHYSICS-LOCK-001"
+  status: "PASS_V22_P1_T04_GATE_B_ONLY_PHYSICS_LOCK"
+  work_item_status: "completed_checkpoint_pending"
+  route_label: "ordinary-research-packet"
+  selected_role_family: "smuggling-auditor@0.2.0"
+  supporting_perspective: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "implement_v22_p1_t04_gate_b_only_lock_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Metric law; enforce Gate B as the sole active physics gate and park every downstream Gate C D E Einstein and benchmark route until source-derived prerequisites are satisfied."
+  source_head: "7ca77f1e4a433e92cebd472bc80c5343b5b52137"
+  source_tree: "e41410851dc2c28f33b855a47dc975201a178724"
+  agent_job_id: "AJ-RT-20260809-004-001"
+  decision_id: "DDR-20260809-004"
+  execution_role_ref: "smuggling-auditor@0.2.0--RT-20260809-004"
+  source_handoff_id: "handoff-0973"
+  source_handoff_path: "research_control/handoffs/handoff-0973.yaml"
+  source_handoff_sha256: "1b2d55ff17adf67a0620c3e478f9151f6153a7844f5ce4b6bb88e31b901d7e8b"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "6156ca45355e0ddc3934799b0c907c0ff52234f2b4ec7fdaf0c65d0e586c4a15"
+  gate_b_source_path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+  gate_b_source_sha256: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+  baseline_manifest_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_manifest_v1.json"
+  baseline_manifest_sha256: "cd4b3fa94e6b1fe3cd5eb576953d3e918b683e3628c0fe63887d9135281d4043"
+  fused_decision_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex"
+  fused_decision_sha256: "28334e08c64cdf7ea5588e553a974eb7c37114e6792b8dcb98ea9b6b259a6408"
+  gate_lock_policy_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_lock_policy_v1.yaml"
+  gate_lock_policy_sha256: "f7f9293a65d16f5d229df7effc1553bab4d75a0e688be88fd6e154429fd4b40d"
+  admission_matrix_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_physics_admission_matrix_v1.yaml"
+  admission_matrix_sha256: "f51ec136d886906f2bf92e874c4e04951335a174efe74005bb938e0f17007b60"
+  parked_route_registry_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_parked_route_registry_v1.yaml"
+  parked_route_registry_sha256: "19dfa4f69b7c0c0fe69b953da93f0c08ad6c4d0d591d3bf57e0c819f528465d3"
+  physical_type_checklist_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_physical_type_checklist_v1.yaml"
+  physical_type_checklist_sha256: "6df696bed4d0cff83b8e8656fd0ec9f533d0b0a42682addb9aa82b31ec84bfc2"
+  historical_index_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_historical_obstruction_index_v1.yaml"
+  historical_index_sha256: "3f98f222cb747f431ff981f94518043b5db597cef624b9a25beae34dca0757a9"
+  fixture_path: "research_control/tasks/RT-20260809-004/artifacts/fixtures/v22_p1_t04_route_decision_cases.yaml"
+  fixture_sha256: "de1c18f7f9767b82236767389051d52938fc138f1b725282483e55ddf95650a7"
+  validation_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_lock_validation.json"
+  validation_sha256: "458704252bab297d3faf4f926cfbe300f5e5f98660c7a49bc71a87557038cc81"
+  compact_receipt_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_compact_receipt.json"
+  compact_receipt_sha256: "53b7c30fc5d89b0afe89acbdddb9c0d426641360412da33c6fea20580654ac0b"
+  completion_path: "research_control/tasks/RT-20260809-004/jobs/completions/AJC-AJ-RT-20260809-004-001.yaml"
+  completion_sha256: "738fa2ba31a761a0fd2efbaf2defd9d77ec57b8ab2317543e563807ec9fe6870"
+  handoff_id: "handoff-0974"
+  handoff_path: "research_control/handoffs/handoff-0974.yaml"
+  handoff_sha256: "530460c7650156d8647b5fa44d6fa2b2a9c2ead66936b86ef4f578427d166fda"
+  active_gate_count: 1
+  sole_active_physics_gate: "Gate B"
+  directly_admissible_physics_class_count: 5
+  admission_matrix_entry_count: 19
+  parked_route_registry_entry_count: 12
+  physical_label_count: 6
+  route_fixture_count: 19
+  physical_type_fixture_count: 6
+  historical_task_root_count: 16
+  historical_archive_entry_count: 66
+  historical_archive_failure_count: 0
+  focused_check_count: 69
+  focused_check_failure_count: 0
+  theorem_payload_count: 3
+  resolved_parent_conflict_count: 4
+  v22_p1_t04_executed: true
+  v22_p2_t01_selected: true
+  v22_p2_t01_executed: false
+  historical_gate_c_rerun: false
+  p5_p6_early_physics_execution_count: 0
+  downstream_bypass_count: 0
+  canonical_science_modified: false
+  ontology_or_source_law_adopted: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  protected_gate_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P2-T01"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P2-T01"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_supporting_perspective: "refuter@0.2.0"
+  selected_next_packet_type: "local_source_information_capacity_theorem"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "prove_v22_p2_t01_local_source_information_capacity_theorem_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
 
 v22_p1_t03_matter_position_no_postulate_policy:
   task_id: "RT-20260809-003"

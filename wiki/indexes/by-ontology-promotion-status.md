@@ -449,6 +449,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P9-T09-PROTECTED-GATE-E-DECISION-V1` `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`
 - `TEX-V22-P1-T02-SCIENTIFIC-OBJECTIVE-PRIMITIVE-DEBT-AUDIT-V1` `research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_scientific_objective_primitive_debt_audit_v1.tex`
 - `TEX-V22-P1-T03-MATTER-POSITION-NO-POSTULATE-GATE-POLICY-V1` `research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex`
+- `TEX-V22-P1-T04-GATE-B-ONLY-PHYSICS-LOCK-V1` `research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex`
 
 ## superseded
 

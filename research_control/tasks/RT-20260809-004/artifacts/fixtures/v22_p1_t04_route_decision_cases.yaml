@@ -1,0 +1,30 @@
+schema_id: "v22_p1_t04_route_decision_fixture_set_v1"
+fixture_set_id: "V22-P1-T04-ROUTE-DECISION-CASES-V1"
+policy_id: "V22-P1-T04-GATE-B-ONLY-LOCK-V1"
+cases:
+  - {case_id: "ROUTE-001", route_class: "gate_b_necessary_condition", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "ELIGIBLE"}
+  - {case_id: "ROUTE-002", route_class: "gate_b_candidate_construction", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "ELIGIBLE"}
+  - {case_id: "ROUTE-003", route_class: "gate_b_scoped_obstruction", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "ELIGIBLE"}
+  - {case_id: "ROUTE-004", route_class: "minimal_source_extension_comparison", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "ELIGIBLE"}
+  - {case_id: "ROUTE-005", route_class: "gate_b_robustness_or_uniqueness_test", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "ELIGIBLE"}
+  - {case_id: "ROUTE-006", route_class: "gate_d_execution", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "PARKED"}
+  - {case_id: "ROUTE-007", route_class: "gate_e_execution", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "PARKED"}
+  - {case_id: "ROUTE-008", route_class: "einstein_route_physics", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "PARKED"}
+  - {case_id: "ROUTE-009", route_class: "benchmark_execution", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "PARKED"}
+  - {case_id: "ROUTE-010", route_class: "new_gate_c_execution", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "PARKED"}
+  - {case_id: "ROUTE-011", route_class: "gate_b_candidate_construction", direct_gate_b_burden_typed: false, gate_b_positive: false, physical_type_complete: true, expected: "REJECTED"}
+  - {case_id: "ROUTE-012", route_class: "gate_b_candidate_construction", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: false, expected: "REJECTED"}
+  - {case_id: "ROUTE-013", route_class: "protected_decision_as_gate_b_evidence", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "REJECTED"}
+  - {case_id: "ROUTE-014", route_class: "validator_or_checkpoint_as_gate_b_evidence", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "REJECTED"}
+  - {case_id: "ROUTE-015", route_class: "P5-T01", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "PARKED"}
+  - {case_id: "ROUTE-016", route_class: "P5-T03", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "PARKED"}
+  - {case_id: "ROUTE-017", route_class: "P6-T01", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "CONTROL_DEFINITION_ONLY_PHYSICS_PARKED"}
+  - {case_id: "ROUTE-018", route_class: "P6-T02", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "PARKED"}
+  - {case_id: "ROUTE-019", route_class: "historical_gate_c_p7", direct_gate_b_burden_typed: true, gate_b_positive: false, physical_type_complete: true, expected: "PRESERVED_HISTORICAL_NOT_RERUN"}
+physical_type_cases:
+  - {case_id: "TYPE-001", label: "clock", common_witness_count: 0, label_specific_complete: false, finite_token_only: true, expected: "REJECT_UNTYPED"}
+  - {case_id: "TYPE-002", label: "signal", common_witness_count: 6, label_specific_complete: true, finite_token_only: false, expected: "TYPED_FOR_REVIEW"}
+  - {case_id: "TYPE-003", label: "free-fall", common_witness_count: 5, label_specific_complete: true, finite_token_only: false, expected: "REJECT_UNTYPED"}
+  - {case_id: "TYPE-004", label: "gravity", common_witness_count: 6, label_specific_complete: false, finite_token_only: false, expected: "REJECT_UNTYPED"}
+  - {case_id: "TYPE-005", label: "metric", common_witness_count: 6, label_specific_complete: true, finite_token_only: false, expected: "TYPED_FOR_REVIEW"}
+  - {case_id: "TYPE-006", label: "compact source", common_witness_count: 1, label_specific_complete: false, finite_token_only: true, expected: "REJECT_UNTYPED"}

@@ -1,0 +1,579 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260809-004-001"
+completion_id: "AJC-AJ-RT-20260809-004-001"
+task_id: "RT-20260809-004"
+task_type: "v22_p1_t04_gate_b_only_physics_lock"
+decision_id: "DDR-20260809-004"
+role_id: "smuggling-auditor"
+source_role_id: "smuggling-auditor"
+role_version: "0.2.0"
+execution_role_ref: "smuggling-auditor@0.2.0--RT-20260809-004"
+status: "completed"
+created_at: "2026-08-09T04:21:10Z"
+started_at: "2026-08-09T04:21:10Z"
+completed_at: "2026-08-09T04:35:00Z"
+objective: "Implement the exact V22 P1-T04 Gate-B-only lock physics-admission matrix parked-route registry physical-type checklist exhaustive historical P8/P9 index adversarial fixtures and one bounded next-route handoff."
+completion_summary: "P1-T04 makes Gate B the sole active physics gate at effective_metric_g_eff, admits exactly five direct Gate B task classes, parks every downstream and conditional P5/P6 physics route, rejects six untyped physical labels, and verifies all 66 immutable P8/P9 baseline entries. Sixty-nine focused checks, nineteen route fixtures, and six type fixtures pass. Historical Gate C is preserved without rerun; no Gate, Distance-to-GR, benchmark, or scientific status changes. P2-T01 is selected but unexecuted."
+objective_result: "implemented_and_validated_v22_p1_t04_gate_b_only_lock"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "completed_precheckpoint"
+work_item_status: "completed_checkpoint_pending"
+milestone_disposition: "effective_metric_g_eff_is_sole_active_burden_without_gate_b_discharge"
+
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260809-004-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+
+is_physics_task: true
+payload_class: "dependency_lock_physical_typing_and_historical_nonpromotion_theorems"
+has_new_mathematical_payload: true
+source_extension_classification_required: false
+external_red_team_finding_requires_integration: false
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "6156ca45355e0ddc3934799b0c907c0ff52234f2b4ec7fdaf0c65d0e586c4a15"
+  plan_phase_id: "P1"
+  plan_task_id: "P1-T04"
+  work_kind: "integration_or_selection"
+  task_class: "science"
+  expected_result_kind: "completed_or_precisely_blocked"
+  dependency_task_ids:
+    - "P1-T02"
+    - "P1-T03"
+  dependency_checkpoint_commits:
+    - "2c63cb6231259a8b836529d6dda8107f79db9afc"
+    - "7ca77f1e4a433e92cebd472bc80c5343b5b52137"
+  recommendation_ids:
+    - "V22-R04"
+    - "V22-R11"
+    - "V22-R12"
+    - "V22-R14"
+  declared_coverage_ids:
+    - "V22-R04"
+    - "V22-R11"
+    - "V22-R12"
+    - "V22-R14"
+  cross_cutting_directive_ids:
+    - "V22-X03"
+    - "V22-X04"
+    - "V22-X06"
+  work_item_status: "completed_checkpoint_pending"
+  next_plan_task_id: "P2-T01"
+  p1_t04_executed: true
+  p2_t01_selected: true
+  p2_t01_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+result:
+  status: "PASS_V22_P1_T04_GATE_B_ONLY_PHYSICS_LOCK"
+  strategy_id: "implement_v22_p1_t04_gate_b_only_lock_v1"
+  source_handoff_id: "handoff-0973"
+  source_handoff_sha256: "1b2d55ff17adf67a0620c3e478f9151f6153a7844f5ce4b6bb88e31b901d7e8b"
+  active_gate_count: 1
+  sole_active_physics_gate: "Gate B"
+  directly_admissible_physics_class_count: 5
+  admission_matrix_entry_count: 19
+  parked_route_registry_entry_count: 12
+  physical_label_count: 6
+  common_physical_type_witness_count: 6
+  route_fixture_count: 19
+  route_fixture_failure_count: 0
+  physical_type_fixture_count: 6
+  physical_type_fixture_failure_count: 0
+  historical_task_root_count: 16
+  historical_archive_entry_count: 66
+  historical_archive_failure_count: 0
+  focused_check_count: 69
+  focused_check_failure_count: 0
+  new_mathematical_payload_count: 3
+  resolved_parent_conflict_count: 4
+  p5_p6_early_physics_execution_count: 0
+  historical_gate_c_rerun_count: 0
+  downstream_bypass_count: 0
+  ontology_adoption_count: 0
+  canonical_science_file_change_count: 0
+  p1_t04_executed: true
+  p2_t01_selected: true
+  p2_t01_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1140
+    relationship_row_count: 5737
+    semantic_row_count: 1140
+    vault_row_count: 1140
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'sole active physics gate' --json"
+      query_type: "search"
+      query_text: "sole active physics gate"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+        - "TEX-V22-P1-T03-MATTER-POSITION-NO-POSTULATE-GATE-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "TEX-V22-P1-T03-MATTER-POSITION-NO-POSTULATE-GATE-POLICY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex"
+      source_hash: "7e2eae747432b1c3931f8edf63012f841cad64863625b0c12839dec8d67817c5"
+  authority_note: "Tracked registered source and control records govern; generated wiki semantic Obsidian SQLite and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "physics"
+  payload_type: "theorem"
+  candidate_family: "V22-P1-T04-GATE-B-ONLY-PHYSICS-LOCK-V1"
+  theorem_identity: "V22-P1-T04-GATE-LOCK-DEPENDENCY-CLOSURE-V1"
+  lemma_identity: "V22-P1-T04-FINITE-TOKEN-PHYSICAL-TYPING-LEMMA-V1"
+  preservation_theorem_identity: "V22-P1-T04-HISTORICAL-PROJECTION-NONPROMOTION-V1"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physical_status_changed_by_admission: false
+  distance_to_gr_changed_by_admission: false
+  physics_promotion_authorized_by_admission: false
+
+family_freeze_admission_result:
+  status: "admitted_distinct_branch"
+  route_kind: "theorem_investigation"
+  family_id: "V22-P1-T04-GATE-B-ONLY-PHYSICS-LOCK-V1"
+  family_identity_sha256: "1a8212f958a520e9c4fa6b5bcd791cee8d21afb4b51ef8572ccda4dbfd43a5ac"
+  detected_match_basis: []
+  reopening_requested: false
+  local_family_freeze_preserved: true
+  global_no_go_inferred: false
+  physics_promotion_authorized_by_admission: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0973"
+  source_handoff_sha256_at_intake: "1b2d55ff17adf67a0620c3e478f9151f6153a7844f5ce4b6bb88e31b901d7e8b"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P1-T04"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P1-T04"
+  guard_outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one registered Gate-B-only dependency and physical-typing theorem source"
+      - "one five-class physics-admission matrix and downstream parking registry"
+      - "one exhaustive 66-entry historical P8/P9 preservation index"
+    project_system:
+      - "one nineteen-case route and six-case physical-type fixture set"
+      - "task-local deterministic validator and compact receipt"
+      - "parent-child synthesis and standard control records"
+  accepted_criteria:
+    physics:
+      - "no eligible route bypasses Gate B and only five direct task classes remain eligible"
+      - "historical Gate C is preserved without rerun and no conditional P5/P6 physics executes early"
+      - "all six named physical labels fail closed without complete witnesses"
+      - "all 66 P8/P9 baseline entries remain byte-identical negative/control evidence"
+    project_system:
+      - "all focused dependency source hash route type and archive checks pass"
+      - "registered source hashes and generated derivatives synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-004/artifacts/child_phys_math_p1_t04_dependency_lock.yaml"
+      output_sha256: "58afe6f9554e20b8babda21acf04badecb2922253cae636a83fdf73ab031238f"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-004/artifacts/child_process_integrity_p1_t04_audit.yaml"
+      output_sha256: "10a4495b06f1f92233d4c4b27effe0a2f01c46728a784289375d258ecda7bb57"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260809-004/artifacts/parent_conflict_review_p1_t04_gate_lock.yaml"
+    review_sha256: "bdc52acae09ff1af9f117ef900b34d3a1c6eb4351b7633e7d6bf639eeadeebdd"
+    resolution_rounds: 1
+    resolved_conflict_count: 4
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260809-004/artifacts/parent_fusion_notes_p1_t04_gate_lock.md"
+    fusion_notes_sha256: "14c6e86188e2af8d6f44cd09824f73c34143fedbbd1b19da9911f9f7da34c040"
+    shared_consensus_summary: "Both perspectives require Gate B predecessor closure complete physical-type witnesses and exhaustive byte-identical historical preservation with no protected or operational truth promotion."
+    novelty_preservation_summary: "The fusion preserves the dependency-closure theorem finite-token lemma exhaustive 66-entry archive theorem and process separation between protocol definition and physics execution."
+    claim_boundary_preservation_summary: "The packet changes no Gate Distance-to-GR ontology metric coupling Einstein benchmark review or completed-derivation status."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260809-004-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Gate-lock dependency-closure theorem"
+    summary: "Topological predecessor closure parks every Gate-B descendant while no genuinely positive Gate B evidence record exists."
+  - payload_id: "NMP-RT-20260809-004-002"
+    payload_type: "lemma"
+    name: "Finite-token physical-typing lemma"
+    summary: "A name or finite token lacks the six common and label-specific witnesses required for physical typing."
+  - payload_id: "NMP-RT-20260809-004-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Historical projection and nonpromotion theorem"
+    summary: "Identity preservation of all 66 baseline P8/P9 records keeps their negative/control statuses and cannot create a positive predecessor."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260809-004-001"
+    payload_type: "theorem"
+    object_name: "V22 P1-T04 Gate-lock dependency-closure theorem"
+    claim_status: "draft/control policy-conformance theorem with proof"
+    source_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex"
+    burden_effect: "audits"
+    summary: "Defines the exact five eligible Gate-B-direct task classes and proves downstream ineligibility under the current nonpositive Gate B record."
+  - payload_id: "PAYLOAD-RT-20260809-004-002"
+    payload_type: "lemma"
+    object_name: "V22 P1-T04 finite-token physical-typing lemma"
+    claim_status: "draft/control contract-relative lemma with proof"
+    source_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex"
+    burden_effect: "narrows"
+    summary: "Requires source type operational bridge scale scope and falsification witnesses before familiar labels receive physical meaning."
+  - payload_id: "PAYLOAD-RT-20260809-004-003"
+    payload_type: "dependency_map_update"
+    object_name: "V22 P1-T04 exhaustive historical P8/P9 nonpromotion map"
+    claim_status: "draft/control archive identity theorem"
+    source_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_historical_obstruction_index_v1.yaml"
+    burden_effect: "no_distance_delta"
+    summary: "Binds sixteen historical task roots and all 66 baseline entries to exact live hashes while preserving their negative/control use."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Metric law; enforce Gate B as the sole active physics gate and park every downstream route until source-derived prerequisites are satisfied."
+  explanation: "The packet sharpens eligible research and closes bypasses but constructs no source-derived geometry and establishes no Gate B criterion."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "Gate B NOT READY and downstream geometry Einstein and benchmark work blocked"
+  new_status: "the same Gate B burden is the sole active physics gate with machine-readable downstream parking and no evidential status change"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P1-T04 changes admission and preservation controls only; it derives or adopts no geometry and satisfies no Gate B criterion."
+  downstream_unlocked:
+    - "one separately admitted P2-T01 Gate-B-direct necessary-condition theorem packet after checkpoint"
+  downstream_still_blocked:
+    - "new Gate C execution and all Gate D/E execution"
+    - "P5/P6 conditional physics execution"
+    - "effective metric target matter coupling and Einstein equations"
+    - "benchmark execution promotion and completed derivation"
+  explanation: "A direct Gate B theorem route becomes selectable while every downstream scientific object remains blocked."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; no primitive or source law is added"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no source-equivalence theorem is adopted"
+  - burden: "RetainH"
+    status: "unchanged; no retention law is derived or adopted"
+  - burden: "GenH"
+    status: "unchanged; no generator law is derived or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; physical-type policy supplies no operational witness"
+  - burden: "Resp_lc"
+    status: "unchanged; no universal response semantics is derived"
+  - burden: "M_src"
+    status: "unchanged; no target manifold or bridge is constructed"
+  - burden: "g_eff"
+    status: "active burden; Gate B is sole active physics gate with zero of eight historical criteria met"
+  - burden: "matter coupling"
+    status: "blocked; historical Gate C is preserved but not rerun and supplies no Gate B evidence"
+  - burden: "Einstein equations"
+    status: "parked; no target action dynamics or field equation is supplied"
+  - burden: "finite-variation robustness"
+    status: "open as one directly admissible Gate B task class"
+  - burden: "benchmark promotion"
+    status: "parked; six historical cases remain INCONCLUSIVE with zero passes and zero replication"
+  - burden: "Gate Chair status"
+    status: "unchanged; no protected Gate review or verdict is requested or issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "downstream routes parked while same-milestone Gate B continuation remains open"
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: ""
+  prior_attempts_considered:
+    - "RT-20260727-004"
+    - "RT-20260729-011"
+    - "RT-20260731-004"
+    - "RT-20260809-003"
+  freeze_if:
+    - "A later route bypasses Gate B or repeats a historical negative/control output as new positive evidence."
+    - "A later task uses a familiar physical label without complete source-derived witnesses."
+  do_not_freeze_if:
+    - "A separately admitted task adds materially new Gate-B-direct theorem candidate obstruction extension comparison or robustness evidence."
+  freeze_decision: "not_frozen"
+  decision_reason: "Same-milestone continuation remains non-orbital because P2-T01 must prove a new coordinate- and gauge-aware information-capacity necessary condition rather than restate the lock."
+  next_allowed_route: "refuter"
+
+route_cycle_control:
+  cycle_family: "v22_gate_b_dependency_and_source_adequacy"
+  current_cycle_step: "gate_b_only_lock"
+  prior_related_tasks:
+    - "RT-20260727-004"
+    - "RT-20260809-003"
+  cycle_risk: "low"
+  orbit_avoidance_reason: "The next job must deliver a new source-information-capacity theorem and countermodels under gauge and coordinate quotienting rather than another policy restatement."
+  next_role_consequence: "ontology-formalizer@0.2.0"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "positive Gate B C D or E verdict"
+    - "effective metric target matter coupling or Einstein equation constructed or adopted"
+    - "P5/P6 conditional physics executed"
+    - "historical P7 P8 or P9 package rerun promoted or scientifically changed"
+    - "physical meaning established by checklist terminology or finite tokens"
+    - "benchmark pass or qualifying independent replication"
+    - "external review proof authority or completed first-principles GR derivation"
+    - "canonical ontology or source-law adoption"
+    - "publication release push or other external action"
+    - "global theory rejection or future Gate B impossibility"
+  summary: "Theorem fixture validator TeX-compile route archive-preservation and checkpoint success are bounded draft/control evidence and cannot promote scientific or protected status."
+
+artifact_receipts:
+  - artifact_id: "TEX-V22-P1-T04-GATE-B-ONLY-PHYSICS-LOCK-V1"
+    path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex"
+    sha256: "28334e08c64cdf7ea5588e553a974eb7c37114e6792b8dcb98ea9b6b259a6408"
+    status_label: "draft/control"
+  - artifact_id: "V22-P1-T04-GATE-LOCK-POLICY-V1"
+    path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_lock_policy_v1.yaml"
+    sha256: "f7f9293a65d16f5d229df7effc1553bab4d75a0e688be88fd6e154429fd4b40d"
+    status_label: "draft/control"
+  - artifact_id: "V22-P1-T04-PHYSICS-ADMISSION-MATRIX-V1"
+    path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_physics_admission_matrix_v1.yaml"
+    sha256: "f51ec136d886906f2bf92e874c4e04951335a174efe74005bb938e0f17007b60"
+    status_label: "draft/control"
+  - artifact_id: "V22-P1-T04-PARKED-ROUTE-REGISTRY-V1"
+    path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_parked_route_registry_v1.yaml"
+    sha256: "19dfa4f69b7c0c0fe69b953da93f0c08ad6c4d0d591d3bf57e0c819f528465d3"
+    status_label: "draft/control"
+  - artifact_id: "V22-P1-T04-PHYSICAL-TYPE-CHECKLIST-V1"
+    path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_physical_type_checklist_v1.yaml"
+    sha256: "6df696bed4d0cff83b8e8656fd0ec9f533d0b0a42682addb9aa82b31ec84bfc2"
+    status_label: "draft/control"
+  - artifact_id: "V22-P1-T04-HISTORICAL-OBSTRUCTION-INDEX-V1"
+    path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_historical_obstruction_index_v1.yaml"
+    sha256: "3f98f222cb747f431ff981f94518043b5db597cef624b9a25beae34dca0757a9"
+    status_label: "draft/control"
+  - artifact_id: "V22-P1-T04-ROUTE-TYPE-FIXTURES-V1"
+    path: "research_control/tasks/RT-20260809-004/artifacts/fixtures/v22_p1_t04_route_decision_cases.yaml"
+    sha256: "de1c18f7f9767b82236767389051d52938fc138f1b725282483e55ddf95650a7"
+    status_label: "operational_evidence"
+  - artifact_id: "V22-P1-T04-GATE-LOCK-VALIDATION-V1"
+    path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_lock_validation.json"
+    sha256: "458704252bab297d3faf4f926cfbe300f5e5f98660c7a49bc71a87557038cc81"
+    status_label: "operational_evidence"
+  - artifact_id: "V22-P1-T04-COMPACT-RECEIPT-V1"
+    path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_compact_receipt.json"
+    sha256: "53b7c30fc5d89b0afe89acbdddb9c0d426641360412da33c6fea20580654ac0b"
+    status_label: "operational_evidence"
+
+command_results:
+  - command: "validate_v22_p1_t04_gate_lock.py --write --json; validate_v22_p1_t04_gate_lock.py --json"
+    status: "PASS"
+    summary: "All 69 exact source policy dependency admission type theorem synthesis and receipt checks pass; all 19 route fixtures 6 type fixtures and 66 historical archive path/hash checks pass."
+  - command: "latex-compile bundled Tectonic scratch build"
+    status: "PASS"
+    summary: "The fused TeX source compiles to a three-page scratch PDF with no tracked PDF output."
+  - command: "task_taxonomy.py --validate-repository --json"
+    status: "FAIL_INHERITED_KNOWN"
+    summary: "RT-20260809-004 declares a valid complete taxonomy; repository-wide task-index validation retains only the pre-existing RT-20260804-001 invalid result kind qualifying_bounded_audit_verdict."
+  - command: "scripts.validation.cli run --profile affected --paths <P1-T04 affected paths>"
+    status: "PASS_TASK_LOCAL_WITH_ONE_INHERITED_FAILURE"
+    summary: "15 of 16 affected gates pass after final synchronization; only task_index_freshness fails on the pre-existing RT-20260804-001 result-kind value qualifying_bounded_audit_verdict."
+  - command: "bootstrap_memory_system.py; bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Registered source regeneration and validate-only replay pass after final source and control-state synchronization."
+  - command: "validate_research_control.py --check-diff --job-id AJ-RT-20260809-004-001 --json-summary"
+    status: "PASS_WITH_HISTORICAL_WARNINGS"
+    summary: "The bounded diff has zero errors after generated-output synchronization and only repository-historical warnings."
+  - command: "checkpoint_research_transaction.py --job-id AJ-RT-20260809-004-001"
+    status: "PENDING_SINGLE_INVOCATION"
+    summary: "One governed checkpoint remains; no retry push publication or external action is authorized."
+
+selected_next_route:
+  route_id: "v22_p2_t01_local_source_information_capacity_theorem"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P2-T01"
+  work_item_id: "P2-T01"
+  work_kind: "formalization"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  supporting_perspective: "refuter@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "local_source_information_capacity_theorem"
+  task_type: "v22_p2_t01_local_source_information_capacity_theorem"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Metric law; prove a coordinate- and gauge-aware source information-capacity necessary condition and classify escape routes without importing target geometry."
+  expected_result_kind: "completed_or_precisely_blocked"
+  strategy_id: "prove_v22_p2_t01_local_source_information_capacity_theorem_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight exact Gate B P1-T03 baseline-manifest inspection and handoff-0973 route admission passed before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 69 focused checks 19 route fixtures 6 type fixtures and 66 archive hashes pass; both child records are complete and four parent conflicts are resolved."
+  post_write:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "The affected profile passes 15 of 16 gates; its sole failure is the inherited RT-20260804-001 result-kind value qualifying_bounded_audit_verdict, while the bounded research-control diff has zero errors."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier task-index compact-frontier dependency-graph and claim-graph projections are refreshed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only replay pass after source synchronization."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes with zero hard failures; warnings are historical repository findings and carry no promotion authority."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review is authorized; historical Gate C/D/E records are preserved without replay."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+
+project_improvement_signals: []
+project_improvement_signal_count: 0
+project_improvement_sidecar_required: false
+
+protected_authority:
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+
+handoff_id: "handoff-0974"
+handoff_path: "research_control/handoffs/handoff-0974.yaml"
+handoff_authority_boundary: "This completion records only P1-T04 draft/control dependency typing parking and historical-preservation results and selects P2-T01 for a separate AgentJob after checkpoint. It creates no Gate verdict ontology metric coupling Einstein benchmark review replication release publication push or external-action authority."

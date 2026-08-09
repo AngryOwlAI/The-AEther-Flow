@@ -1,0 +1,80 @@
+task_id: "RT-20260809-004"
+task_type: "v22_p1_t04_gate_b_only_physics_lock"
+title: "Make Gate B the sole active physics gate and park downstream work"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "integration_or_selection"
+  milestone: "effective_metric_g_eff"
+  candidate_family: "v22_p1_t04_gate_b_only_physics_lock_v1"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "science_draft"
+  scope: "scientific"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+closure_status: "v22_p1_t04_gate_b_only_lock_complete_p2_t01_selected_checkpoint_pending"
+created_at: "2026-08-09T04:21:10Z"
+updated_at: "2026-08-09T04:35:00Z"
+closed_at: "2026-08-09T04:35:00Z"
+parent_task_id: "RT-20260809-003"
+parent_handoff_id: "handoff-0973"
+current_decision_id: "DDR-20260809-004"
+current_job_id: "AJ-RT-20260809-004-001"
+role_id: "smuggling-auditor"
+role_version: "0.2.0"
+execution_role_ref: "smuggling-auditor@0.2.0--RT-20260809-004"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal and checkpointed handoff-0973 authorize exactly one bounded P1-T04 integration packet. No protected Gate review downstream execution or external action is authorized."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  phase_id: "P1"
+  plan_task_id: "P1-T04"
+  recommendation_ids:
+    - "V22-R04"
+    - "V22-R11"
+    - "V22-R12"
+    - "V22-R14"
+  declared_coverage_ids:
+    - "V22-R04"
+    - "V22-R11"
+    - "V22-R12"
+    - "V22-R14"
+  cross_cutting_directive_ids:
+    - "V22-X03"
+    - "V22-X04"
+    - "V22-X06"
+objective: "Make Gate B the sole active physics gate at effective_metric_g_eff, admit only five direct Gate B task classes, fail-close downstream and untyped routes, and preserve all historical P8/P9 negative/control outputs without rerun or promotion."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Metric law; enforce Gate B as the sole active physics gate and park every downstream Gate C D E Einstein and benchmark route until source-derived prerequisites are satisfied."
+route_label: "ordinary-research-packet"
+route_strategy_id: "implement_v22_p1_t04_gate_b_only_lock_v1"
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-V22-P1-T04-GATE-B-ONLY-PHYSICS-LOCK-001"
+claim_boundary:
+  allowed_scope: "Task-local draft/control Gate-B-only dependency policy; five-class physics admission matrix; downstream parking registry; physical-type checklist; exhaustive immutable P8/P9 obstruction index; dependency and typing fixtures; two internal perspectives; validation; ordinary control-state updates; and one next-route handoff."
+  forbidden_scope: "Any positive Gate B result; new Gate C review; Gate D or E execution; P5/P6 conditional physics execution; metric coupling Einstein or benchmark construction; historical P8/P9 mutation or rerun; protected truth-value alteration; ontology or source-law adoption; external review; replication; publication; release; push; or completed derivation."
+  authority_source: "research_control/handoffs/handoff-0973.yaml"
+  boundary_status: "completed"
+completion_contract:
+  sole_active_physics_gate: "Gate B"
+  active_derivation_milestone: "effective_metric_g_eff"
+  directly_admissible_physics_class_count: 5
+  parked_or_rejected_downstream_bypass_count: 0
+  physical_label_count: 6
+  historical_p8_p9_task_root_count: 16
+  historical_p8_p9_archive_entry_count: 66
+  historical_gate_c_rerun: false
+  p5_p6_early_physics_execution_count: 0
+  parent_child_parallel_synthesis_required: true
+  no_unresolved_blocking_parent_conflict: true
+notes: "This task executes only P1-T04. P2-T01 and every later V22 package remain separate AgentJobs."

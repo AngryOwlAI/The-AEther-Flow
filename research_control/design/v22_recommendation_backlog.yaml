@@ -661,7 +661,7 @@ items:
   stop_conditions: 'Any downstream task admitted from convenience, a finite token
     treated as physical typing, or a protected decision substituted for new evidence.
     ## P2. Source-adequacy theorem, extension budget, and candidate selection'
-  implementation_status: pending
+  implementation_status: completed_checkpoint_pending
   expected_result_kind: completed_or_precisely_blocked
   requires_human_gate: false
   dependency_independent_after_other_human_gates: true
@@ -675,9 +675,18 @@ items:
   proof_authority: false
 - plan_task_id: P2-T01
   phase_id: P2
+  work_kind: formalization
+  task_class: science
   title: Prove the local source information-capacity theorem
   track: B
   owner: ontology formalizer and mathematical refuter
+  role_family: ontology-formalizer@0.2.0
+  supporting_perspective: refuter@0.2.0
+  controlling_launcher: continue-research-goal@v4
+  worker_skill: continue-research
+  route_label: ordinary-research-packet
+  target_derivation_milestone: effective_metric_g_eff
+  milestone_burden: Metric law; prove a coordinate- and gauge-aware source information-capacity necessary condition and classify escape routes without importing target geometry.
   declared_coverage_ids:
   - V22-R06
   - V22-R19
@@ -715,6 +724,10 @@ items:
   stop_conditions: Gauge-dependent rank count, unstated quotient, representative selection
     assumed, or a local theorem promoted to global ontology impossibility.
   implementation_status: pending
+  expected_result_kind: completed_or_precisely_blocked
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  allow_scope_expansion: false
   requires_separate_agentjob: true
   max_outer_agentjobs_per_invocation: 1
   automatic_execution_authorized: false

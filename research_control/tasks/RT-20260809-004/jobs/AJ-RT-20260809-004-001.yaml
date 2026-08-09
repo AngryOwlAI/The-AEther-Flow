@@ -1,0 +1,431 @@
+job_id: "AJ-RT-20260809-004-001"
+task_id: "RT-20260809-004"
+decision_id: "DDR-20260809-004"
+role_id: "smuggling-auditor"
+role_version: "0.2.0"
+execution_role_ref: "smuggling-auditor@0.2.0--RT-20260809-004"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-09T04:21:10Z"
+started_at: "2026-08-09T04:21:10Z"
+completed_at: "2026-08-09T04:35:00Z"
+completion_path: "research_control/tasks/RT-20260809-004/jobs/completions/AJC-AJ-RT-20260809-004-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal and checkpointed handoff-0973 authorize this one P1-T04 integration and one checkpoint only. No protected Gate review or external action is authorized."
+objective: "Implement the exact V22 P1-T04 Gate-B-only lock physics-admission matrix parked-route registry physical-type checklist exhaustive historical P8/P9 index adversarial fixtures and one bounded next-route handoff."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Metric law; enforce Gate B as the sole active physics gate and park every downstream Gate C D E Einstein and benchmark route until source-derived prerequisites are satisfied."
+route_label: "ordinary-research-packet"
+route_reason: "handoff_0973_selects_dependency_ready_v22_p1_t04_after_p1_t03_checkpoint"
+route_strategy_id: "implement_v22_p1_t04_gate_b_only_lock_v1"
+immutable_route_sha256: "1b2d55ff17adf67a0620c3e478f9151f6153a7844f5ce4b6bb88e31b901d7e8b"
+source_head: "7ca77f1e4a433e92cebd472bc80c5343b5b52137"
+source_tree: "e41410851dc2c28f33b855a47dc975201a178724"
+assembly_parent_head: "7ca77f1e4a433e92cebd472bc80c5343b5b52137"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P1-T04"
+recommendation_ids:
+  - "V22-R04"
+  - "V22-R11"
+  - "V22-R12"
+  - "V22-R14"
+declared_coverage_ids:
+  - "V22-R04"
+  - "V22-R11"
+  - "V22-R12"
+  - "V22-R14"
+cross_cutting_directive_ids:
+  - "V22-X03"
+  - "V22-X04"
+  - "V22-X06"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P2-T01"
+next_plan_task_execution_authorized: false
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0973"
+  source_handoff_path: "research_control/handoffs/handoff-0973.yaml"
+  source_handoff_sha256: "1b2d55ff17adf67a0620c3e478f9151f6153a7844f5ce4b6bb88e31b901d7e8b"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P1-T04"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P1-T04"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1140
+    relationship_row_count: 5737
+    semantic_row_count: 1140
+    vault_row_count: 1140
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'sole active physics gate' --json"
+      query_type: "search"
+      query_text: "sole active physics gate"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+        - "TEX-V22-P1-T03-MATTER-POSITION-NO-POSTULATE-GATE-POLICY-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "TEX-V22-P1-T03-MATTER-POSITION-NO-POSTULATE-GATE-POLICY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex"
+      source_hash: "7e2eae747432b1c3931f8edf63012f841cad64863625b0c12839dec8d67817c5"
+  additional_control_inspections:
+    - object_id: "HANDOFF-0973"
+      control_path: "research_control/handoffs/handoff-0973.yaml"
+      source_hash: "1b2d55ff17adf67a0620c3e478f9151f6153a7844f5ce4b6bb88e31b901d7e8b"
+    - object_id: "V21-P6-T08-GATE-B-SEPARATING-CERTIFICATE"
+      control_path: "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+      source_hash: "f3080ed6a6ba1d6847a3b7ed43c7a11ad7f7dae4deccd25486913ea9547f221b"
+    - object_id: "V21-TERMINAL-BASELINE-RELEASE-MANIFEST"
+      control_path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_manifest_v1.json"
+      source_hash: "cd4b3fa94e6b1fe3cd5eb576953d3e918b683e3628c0fe63887d9135281d4043"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      control_path: "research_control/design/gr_derivation_burden_map.md"
+      source_hash: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+  authority_note: "Tracked registered source and control records govern. Generated wiki semantic Obsidian SQLite and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "theorem"
+  candidate_family: "V22-P1-T04-GATE-B-ONLY-PHYSICS-LOCK-V1"
+  assumption_delta:
+    - "Gate B remains NOT READY with zero of eight historical criteria met and becomes the sole active physics gate at effective_metric_g_eff."
+    - "Only five directly Gate-B-bearing physics task classes are eligible; every downstream scientific prerequisite remains evidence-only."
+    - "Physical labels require six common and label-specific witnesses; finite naming alone is rejected."
+    - "All 66 baseline P8/P9 outputs remain immutable negative/control evidence without rerun or promotion."
+  materiality_basis: "V22 lacked one enforceable dependency-closure theorem physical-type predicate exhaustive historical archive proof and machine-readable route matrix binding Gate B as the only active physics gate."
+  payload_details:
+    theorem_identity: "V22-P1-T04-GATE-LOCK-DEPENDENCY-CLOSURE-V1"
+    lemma_identity: "V22-P1-T04-FINITE-TOKEN-PHYSICAL-TYPING-LEMMA-V1"
+    preservation_theorem_identity: "V22-P1-T04-HISTORICAL-PROJECTION-NONPROMOTION-V1"
+    directly_admissible_physics_class_count: 5
+    historical_archive_entry_count: 66
+    ontology_adoption_count: 0
+    global_no_go_claimed: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P1-T03-MATTER-POSITION-NO-POSTULATE-GATE-POLICY-V1"
+    - "research_control/tasks/RT-20260727-004/artifacts/p6_t08_gate_b_separating_certificate_v1.yaml"
+    - "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_manifest_v1.json"
+    - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex"
+    - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_lock_policy_v1.yaml"
+    - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_physics_admission_matrix_v1.yaml"
+    - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_historical_obstruction_index_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v22_p1_t04_gate_b_only_physics_lock"
+  family_id: "V22-P1-T04-GATE-B-ONLY-PHYSICS-LOCK-V1"
+  family_identity_sha256: "1a8212f958a520e9c4fa6b5bcd791cee8d21afb4b51ef8572ccda4dbfd43a5ac"
+  assumption_sha256es:
+    - "8427f6c2db7bfc7fd8884c4706a5f885f7cdc2ea3bf5b3aa23d0a48200a0f6f7"
+  route_kind: "theorem_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V22-P1-T04-GATE-DEPENDENCY-TYPE-AND-HISTORICAL-LOCK-BRANCH"
+    material_difference_basis: "This packet does not reconstruct a frozen EqSrc or geometry candidate. It establishes a distinct route-admission dependency theorem physical-type predicate and historical archive nonpromotion proof required by V22."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex"
+      - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_lock_policy_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered Gate-B-only dependency and physical-typing theorem source"
+      - "one five-class physics-admission matrix and downstream parking registry"
+      - "one exhaustive 66-entry historical P8/P9 preservation index"
+    project_system:
+      - "one nineteen-case route and six-case physical-type fixture set"
+      - "task-local deterministic validator and compact receipt"
+      - "parent-child synthesis and standard control records"
+  acceptance_criteria:
+    physics:
+      - "no eligible route bypasses Gate B and only five direct task classes remain eligible"
+      - "historical Gate C is preserved without rerun and no conditional P5/P6 physics executes early"
+      - "all six named physical labels fail closed without complete witnesses"
+      - "all 66 P8/P9 baseline entries remain byte-identical negative/control evidence"
+    project_system:
+      - "all focused dependency source hash route type and archive checks pass"
+      - "registered source hashes and generated derivatives synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "bind every route dependency type witness and historical record to exact authority"
+      - "fuse mathematical closure with process-integrity analysis"
+      - "resolve child differences without hiding protocol or promotion limits"
+      - "preserve every metric coupling Einstein Gate benchmark and completed-derivation block"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-004/artifacts/child_phys_math_p1_t04_dependency_lock.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-004/artifacts/child_process_integrity_p1_t04_audit.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260809-004/artifacts/parent_conflict_review_p1_t04_gate_lock.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260809-004/artifacts/parent_fusion_notes_p1_t04_gate_lock.md"
+    fused_output_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/**"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/**"
+  - "registries/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0974.yaml"
+  - "research_control/handoffs/handoff-0974.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260809-004/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "README.md"
+  - "implementations_plans/**"
+  - ".codex/skills/**"
+  - ".agents/roles/**"
+  - "html/**"
+  - "pdf/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "research_control/tasks/RT-20260729-003/**"
+  - "research_control/tasks/RT-20260729-005/**"
+  - "research_control/tasks/RT-20260729-006/**"
+  - "research_control/tasks/RT-20260729-007/**"
+  - "research_control/tasks/RT-20260729-008/**"
+  - "research_control/tasks/RT-20260729-009/**"
+  - "research_control/tasks/RT-20260729-011/**"
+  - "research_control/tasks/RT-20260729-012/**"
+  - "research_control/tasks/RT-20260730-008/**"
+  - "research_control/tasks/RT-20260730-010/**"
+  - "research_control/tasks/RT-20260730-011/**"
+  - "research_control/tasks/RT-20260730-012/**"
+  - "research_control/tasks/RT-20260730-013/**"
+  - "research_control/tasks/RT-20260730-015/**"
+  - "research_control/tasks/RT-20260731-001/**"
+  - "research_control/tasks/RT-20260731-004/**"
+allowed_source_classes:
+  - "registered canonical TeX and Markdown sources"
+  - "tracked research-control state and immutable V21 baseline manifest"
+  - "task-local draft/control artifacts and internal review records"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "generated_derivative_authority"
+  - "target_atlas_or_metric_import"
+  - "historical_negative_record_as_positive_evidence"
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260809-004/artifacts/validate_v22_p1_t04_gate_lock.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260809-004/artifacts/validate_v22_p1_t04_gate_lock.py --json"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260809-004/artifacts/validate_v22_p1_t04_gate_lock.py"
+  - "python3 /Users/alex.omegapy/.codex/plugins/cache/openai-bundled/latex/0.2.4/scripts/compile_latex.py <P1-T04 TeX> --output-directory <scratch> --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <P1-T04 affected paths>"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260809-004-001 --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260809-004-001"
+required_validators:
+  - "V22 P1-T04 focused source route type and historical archive validator"
+  - "TeX scratch compilation"
+  - "task taxonomy and affected repository validation"
+  - "documentation impact and claim-language validation"
+  - "bounded research-control diff validation"
+  - "memory bootstrap and generated-freshness validation"
+  - "one governed checkpoint"
+expected_outputs:
+  - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex"
+  - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_lock_policy_v1.yaml"
+  - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_physics_admission_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_parked_route_registry_v1.yaml"
+  - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_physical_type_checklist_v1.yaml"
+  - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_historical_obstruction_index_v1.yaml"
+  - "research_control/tasks/RT-20260809-004/artifacts/fixtures/v22_p1_t04_route_decision_cases.yaml"
+  - "research_control/tasks/RT-20260809-004/artifacts/child_phys_math_p1_t04_dependency_lock.yaml"
+  - "research_control/tasks/RT-20260809-004/artifacts/child_process_integrity_p1_t04_audit.yaml"
+  - "research_control/tasks/RT-20260809-004/artifacts/parent_conflict_review_p1_t04_gate_lock.yaml"
+  - "research_control/tasks/RT-20260809-004/artifacts/parent_fusion_notes_p1_t04_gate_lock.md"
+  - "research_control/tasks/RT-20260809-004/artifacts/validate_v22_p1_t04_gate_lock.py"
+  - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_lock_validation.json"
+  - "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_compact_receipt.json"
+  - "research_control/tasks/RT-20260809-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260809-004/jobs/completions/AJC-AJ-RT-20260809-004-001.yaml"
+  - "research_control/handoffs/handoff-0974.yaml"
+  - "research_control/handoffs/handoff-0974.md"
+  - "research_control/program_state.yaml"
+claim_boundary:
+  claim_boundary_id: "CB-V22-P1-T04-GATE-B-ONLY-PHYSICS-LOCK-001"
+  allowed_claims:
+    - "Gate B is the sole active physics gate at effective_metric_g_eff under the V22 dependency policy."
+    - "Exactly five direct Gate B task classes are eligible when typed."
+    - "Downstream and conditional physics routes are parked while positive prerequisites are absent."
+    - "All 66 historical P8/P9 baseline entries remain byte-identical negative/control evidence."
+    - "P2-T01 may be selected but not executed."
+  forbidden_claims:
+    - "positive Gate B C D or E result"
+    - "effective metric target coupling Einstein equation or benchmark recovery"
+    - "historical P7 P8 or P9 rerun or promotion"
+    - "external review independent replication proof authority or completed derivation"
+    - "ontology adoption source-law adoption publication release push or external action"
+  requires_gate_for:
+    - "any protected Gate verdict or scientific-status promotion"
+    - "any ontology source-law metric coupling Einstein benchmark or completed-derivation promotion"
+    - "any external reviewer contact publication release tag push or submission"

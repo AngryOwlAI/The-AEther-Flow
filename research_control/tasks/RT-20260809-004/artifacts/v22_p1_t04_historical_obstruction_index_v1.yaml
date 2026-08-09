@@ -1,0 +1,71 @@
+schema_id: "v22_p1_t04_historical_obstruction_index_v1"
+index_id: "V22-P1-T04-HISTORICAL-P8-P9-OBSTRUCTION-INDEX-V1"
+status: "immutable_historical_negative_control_index"
+baseline_manifest:
+  path: "research_control/tasks/RT-20260808-002/artifacts/v21_terminal_baseline_release_manifest_v1.json"
+  sha256: "cd4b3fa94e6b1fe3cd5eb576953d3e918b683e3628c0fe63887d9135281d4043"
+  baseline_commit: "233e5dd7024fc068032d0afe86d85dc25e2246e9"
+  baseline_tree: "a7d9c9448de8e204643b093878ba4d84bd58f020"
+  repository_archive_inventory_count: 2417
+preservation_scope:
+  expected_task_root_count: 16
+  expected_archive_entry_count: 66
+  require_live_path: true
+  require_baseline_sha256_match: true
+  task_roots:
+    - {plan_task_id: "P8-T01", task_id: "RT-20260729-003", expected_archive_entries: 2}
+    - {plan_task_id: "P8-T02", task_id: "RT-20260729-005", expected_archive_entries: 3}
+    - {plan_task_id: "P8-T03", task_id: "RT-20260729-006", expected_archive_entries: 3}
+    - {plan_task_id: "P8-T04", task_id: "RT-20260729-007", expected_archive_entries: 3}
+    - {plan_task_id: "P8-T05", task_id: "RT-20260729-008", expected_archive_entries: 3}
+    - {plan_task_id: "P8-T06", task_id: "RT-20260729-009", expected_archive_entries: 2}
+    - {plan_task_id: "P8-T07", task_id: "RT-20260729-011", expected_archive_entries: 11}
+    - {plan_task_id: "P9-T01", task_id: "RT-20260729-012", expected_archive_entries: 2}
+    - {plan_task_id: "P9-T02", task_id: "RT-20260730-008", expected_archive_entries: 2}
+    - {plan_task_id: "P9-T03", task_id: "RT-20260730-010", expected_archive_entries: 2}
+    - {plan_task_id: "P9-T04", task_id: "RT-20260730-011", expected_archive_entries: 2}
+    - {plan_task_id: "P9-T05", task_id: "RT-20260730-012", expected_archive_entries: 2}
+    - {plan_task_id: "P9-T06", task_id: "RT-20260730-013", expected_archive_entries: 2}
+    - {plan_task_id: "P9-T07", task_id: "RT-20260730-015", expected_archive_entries: 2}
+    - {plan_task_id: "P9-T08", task_id: "RT-20260731-001", expected_archive_entries: 14}
+    - {plan_task_id: "P9-T09", task_id: "RT-20260731-004", expected_archive_entries: 11}
+scientific_status_snapshot:
+  Gate_B: "NOT_READY"
+  Gate_C: "PROTECTED_SOURCE_MATTER_PACKAGE_ADOPTED_BY_POSTULATE"
+  Gate_D: "NOT_READY"
+  Gate_E: "NOT_READY"
+  benchmark_case_count: 6
+  benchmark_inconclusive_count: 6
+  benchmark_pass_count: 0
+  independent_replication_count: 0
+  first_principles_gr_derivation_status: "OPEN_NOT_COMPLETED"
+  gr_source_derived: false
+representative_registered_records:
+  - {object_id: "TEX-V21-P8-T07-GATE-D-DECISION-V1", sha256: "035ea88a612d861a00d0703ec2bd1094e01194c113d7ff2588e3a4ad8bf47d63", status: "NOT_READY"}
+  - {object_id: "TEX-V21-P9-T01-SOURCE-DERIVED-BENCHMARK-PROTOCOL-V1", sha256: "88ef097bf712ad115e9af62cc18a8b3eabb12f8545350f714ad065f702471007", status: "six_NOT_RUN_protocol_cases"}
+  - {object_id: "MD-V21-P9-T08-BENCHMARK-SUITE-AUDIT-RECEIPT-V1", sha256: "94d577ef6f5b651e91d6eff0b67817211915f53acf53ad0daf028f0d70d2b62f", status: "six_INCONCLUSIVE_zero_pass_zero_replication"}
+  - {object_id: "TEX-V21-P9-T09-PROTECTED-GATE-E-DECISION-V1", sha256: "7f28103e40664f0a004af0134f3216932136f8efb160f0c7c59039efa5225b0b", status: "NOT_READY"}
+use_policy:
+  allowed_uses:
+    - "negative-result preservation"
+    - "control comparison"
+    - "provenance and reproducibility"
+    - "testing a materially distinct reopening basis"
+  forbidden_uses:
+    - "positive Gate predecessor"
+    - "active downstream execution authority"
+    - "benchmark pass or independent replication"
+    - "global no-go or completed derivation claim"
+formal_result:
+  theorem_id: "V22-P1-T04-HISTORICAL-PROJECTION-NONPROMOTION-V1"
+  statement: "Byte-identical preservation of all 66 P8/P9 baseline entries is an identity map on their negative/control statuses and cannot create a positive gate or eligible downstream route."
+authority_limits:
+  historical_outputs_rerun: false
+  historical_status_changed: false
+  gate_status_changed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  external_review_completed: false
+  independent_replication_completed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
