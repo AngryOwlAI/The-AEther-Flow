@@ -1,0 +1,401 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Vred}{V_{\mathrm{red}}}
+\newcommand{\Eeq}{W_{\mathrm{eq}}}
+\newcommand{\sigmaL}{\sigma_{L_D}}
+\newcommand{\Char}{\operatorname{Char}}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\title{V22 P4--T01: Gauge-Reduced Source Principal Symbol\
+and Branch-Complete Degree-Six Polynomial}
+\author{The \AE ther-Flow Research Project}
+\date{2026-08-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft/control manuscript executes only V22 P4--T01 for the fixed,
+proposal-only P3--T02 six-channel source transport candidate at the P3--T04
+background.  The known algebraic-constraint, differential-constraint,
+internal-gauge, and algebraic-redundancy spaces are all zero.  Consequently,
+the lawful reduced symbol is the diagonal source symbol
+$\operatorname{diag}(k(X_1),\ldots,k(X_6))$, and its determinant is
+\[
+ (\omega+\kappa_1)(\omega+\kappa_2)(\omega+\kappa_3)
+ (\omega+\kappa_1+\kappa_2)(\omega+\kappa_2+2\kappa_3)
+ (\omega+2\kappa_1+\kappa_3).
+\]
+The six global linear factors are pairwise distinct and have multiplicity one.
+Direction-dependent branch crossings nevertheless occur: every pair crosses,
+every triple has a nonzero intersection, and branches $2,3,4,6$ share the
+unique nonzero fourfold intersection class represented by
+$k=(1,0,-1,-1)$.  No fivefold nonzero intersection exists.  We prove passive
+source-chart covariance, state the determinant-line transformation law, audit
+homogeneity and weight, and reproduce the result with an independent rational
+Leibniz calculation.  This is a source-principal structure, not a physical
+causal cone, Lorentzian signature, scale, or effective metric.
+\end{abstract}
+
+\section{Exact inherited boundary}
+
+Let $\A$ be the proposal-only four-dimensional source arena of P3--T02, let
+$D=(\tau,X_1,\ldots,X_6)$ be its fixed coefficient datum, and let
+$q=(q^1,\ldots,q^6)$ be six source scalars.  The sealed fixed-law equations are
+\begin{equation}
+  E_A[D,q]=X_A(q^A)=0,
+  \qquad A=1,\ldots,6,
+  \label{eq:law}
+\end{equation}
+with no sum over $A$.  In the declared source chart
+$(s^0,s^1,s^2,s^3)$,
+\begin{align}
+ X_1&=\partial_0+\partial_1,
+ &X_2&=\partial_0+\partial_2,
+ &X_3&=\partial_0+\partial_3,\nonumber\\
+ X_4&=\partial_0+\partial_1+\partial_2,
+ &X_5&=\partial_0+\partial_2+2\partial_3,
+ &X_6&=\partial_0+2\partial_1+\partial_3.
+ \label{eq:vectors}
+\end{align}
+The normalization $\mathrm d\tau(X_A)=1$ holds for every channel.  Neither the
+source arena nor $D$ is adopted as canonical ontology or physical spacetime.
+
+P3--T04 selected the regular source solution
+\begin{equation}
+ \bar q=(s^1-s^0,s^2-s^0,0,0,0,3)
+ \label{eq:background}
+\end{equation}
+and, holding $D$ fixed, obtained the exact Fr\'echet operator
+\begin{equation}
+ L_Du=\left(X_1u^1,\ldots,X_6u^6\right).
+ \label{eq:linearized}
+\end{equation}
+Because \eqref{eq:law} is affine-linear in $q$ for fixed $D$,
+\eqref{eq:linearized} is independent of the selected background within the
+fixed candidate.  Varying $D$ would change the candidate identity and is not
+part of this calculation.
+
+\section{Lawful reduction before taking a determinant}
+
+The word ``physical'' in the P4--T01 plan is interpreted fail-closed.  We
+reduce every equivalence actually supplied by the candidate, but do not invent
+a physical gauge group, matter sector, detector semantics, or target metric.
+
+\begin{definition}[Declared principal-level spaces]
+At $x\in\A$, let $V_x\cong\R^6$ be the scalar perturbation fiber and
+$W_x\cong\R^6$ the equation-residual fiber.  Let
+$C_{\rm alg}$, $C_{\rm diff}$, $G_{\rm int}$, and $R_{\rm alg}$ denote,
+respectively, the algebraic field-constraint, differential-constraint,
+internal field-gauge, and algebraic equation-redundancy spaces supplied by the
+fixed candidate.
+\end{definition}
+
+The P3--T02 and P3--T04 audits give
+\begin{equation}
+ C_{\rm alg}=C_{\rm diff}=G_{\rm int}=R_{\rm alg}=\{0\}.
+ \label{eq:zeros}
+\end{equation}
+The regularity requirements $q^6\ne0$ and
+$\mathrm d(q^1/q^6)\wedge\mathrm d(q^2/q^6)\ne0$ define an open subset and
+are not linearized equality constraints.  Passive source-chart changes alter
+components but are not vertical field directions.  Thus
+\begin{equation}
+ \Vred=V_x/G_{\rm int}\cong\R^6,
+ \qquad
+ \Eeq=W_x/R_{\rm alg}\cong\R^6.
+ \label{eq:reducedspaces}
+\end{equation}
+This is the candidate's reduced source field fiber.  It is not yet a derived
+physical perturbation space.
+
+\begin{proposition}[Determinant admissibility]
+Under \eqref{eq:zeros}, the reduced symbol is a square map
+$\Vred\to\Eeq$ with no omitted gauge or constraint directions.  Its
+determinant is therefore lawful as the fixed candidate's source principal
+polynomial.  This proposition would fail if a nonzero gauge, constraint, or
+redundancy space were suppressed.
+\end{proposition}
+
+\begin{proof}
+Equations \eqref{eq:zeros} and \eqref{eq:reducedspaces} make both reduced
+fibers six-dimensional.  No quotient or restriction changes the diagonal
+leading map in \eqref{eq:linearized}.  Hence its determinant is the
+determinant of the fully reduced source system, not an unreduced gauge
+determinant.
+\end{proof}
+
+\section{Reduced symbol and principal polynomial}
+
+For $k\in T_x^*\A$, omit the conventional nonzero Fourier factor $i$ and
+define
+\begin{equation}
+ \sigmaL(x,k)u
+ =\left(k(X_1)u^1,\ldots,k(X_6)u^6\right).
+ \label{eq:symbol}
+\end{equation}
+In the inherited scalar channel frames,
+\begin{equation}
+ \sigmaL(x,k)=\operatorname{diag}
+ \left(k(X_1),\ldots,k(X_6)\right).
+ \label{eq:matrix}
+\end{equation}
+
+\begin{theorem}[Branch-complete reduced source polynomial]
+Let $k=\omega\,\mathrm ds^0+\kappa_1\,\mathrm ds^1+
+\kappa_2\,\mathrm ds^2+\kappa_3\,\mathrm ds^3$.  The reduced principal
+polynomial is
+\begin{align}
+ P_D(x,k)&:=\det\sigmaL(x,k)=\prod_{A=1}^6 k(X_A)
+ \label{eq:abstractpoly}\\
+ &= (\omega+\kappa_1)(\omega+\kappa_2)(\omega+\kappa_3)
+ (\omega+\kappa_1+\kappa_2)\nonumber\\
+ &\quad\times(\omega+\kappa_2+2\kappa_3)
+ (\omega+2\kappa_1+\kappa_3).
+ \label{eq:explicitpoly}
+\end{align}
+It is nonzero, homogeneous of degree six, and square-free over $\R$.  Each of
+its six global irreducible linear factors has multiplicity one.
+\end{theorem}
+
+\begin{proof}
+Equation \eqref{eq:matrix} gives \eqref{eq:abstractpoly}, and inserting
+\eqref{eq:vectors} gives \eqref{eq:explicitpoly}.  Evaluating at
+$k=\mathrm d\tau$ yields $P_D=1$, so the polynomial is nonzero.  Each factor
+is linear.  All factor covectors have normalized $\omega$ coefficient one,
+so two factors could be associates only if their four coefficient tuples were
+equal.  The six tuples in \eqref{eq:vectors} are distinct.  Hence the factors
+are pairwise nonassociate and every global multiplicity is one.
+\end{proof}
+
+The projectivized characteristic set is therefore
+\begin{equation}
+ \Char(L_D)_x
+ =\bigcup_{A=1}^6\{[k]\in\mathbb P(T_x^*\A):k(X_A)=0\}.
+ \label{eq:char}
+\end{equation}
+It is a union of six projective hyperplanes.  Equation \eqref{eq:char} does
+not select a single quadratic cone.
+
+\section{Multiplicity, crossings, and degeneracy strata}
+
+For nonzero $k$, define
+\begin{equation}
+ Z(k)=\{A:k(X_A)=0\}.
+ \label{eq:zeroset}
+\end{equation}
+The diagonal form gives the exact pointwise identities
+\begin{equation}
+ \ker\sigmaL(x,k)=\operatorname{span}\{e_A:A\in Z(k)\},
+ \qquad
+ \operatorname{corank}\sigmaL(x,k)=|Z(k)|.
+ \label{eq:corank}
+\end{equation}
+
+Exact rational row reduction gives the following branch ledger.
+\begin{center}
+\small
+\begin{tabular}{lll}
+\toprule
+Intersection class & Exact rank statement & Projective consequence\\
+\midrule
+Any pair & all $15$ two-row sets have rank $2$ & pairwise crossing line\\
+Any triple & all $20$ three-row sets have rank $3$ & triple crossing point\\
+Four branches & only $\{2,3,4,6\}$ has rank $3$ & one nonzero fourfold point\\
+Five branches & every five-row set has rank $4$ & no nonzero intersection\\
+Six branches & full row rank is $4$ & only $k=0$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The fourfold projective point has representative
+\begin{equation}
+ k_\star=(1,0,-1,-1),
+ \qquad
+ \bigl(k_\star(X_1),\ldots,k_\star(X_6)\bigr)
+ =(1,0,0,0,-2,0).
+ \label{eq:fourfold}
+\end{equation}
+Thus the maximum symbol corank at a nonzero covector is four.  There is no
+fivefold nonzero degeneracy.
+
+Global factor multiplicity and direction-dependent root multiplicity must not
+be conflated.  For a fixed spatial source covector
+$\kappa=(1,2,3)$, the six roots in $\omega$ are
+\begin{equation}
+ (-1,-2,-3,-3,-8,-5).
+ \label{eq:rootcrossing}
+\end{equation}
+The repeated root $-3$ is a crossing of two distinct global branches, not a
+repeated irreducible factor of $P_D$.  More generally branches $A$ and $B$
+cross on the source-spatial plane
+$(v_A-v_B)\cdot\kappa=0$.  P4--T02, not this packet, must decide what these
+crossings imply for hyperbolicity conditioning, sector universality, and a
+possible physical causal structure.
+
+\section{Covariance and determinant-line weight}
+
+Let $\phi:\A\to\A$ be a passive source-presentation change.  The natural
+transformations $X_A\mapsto\phi_*X_A$ and
+$k\mapsto(\phi^{-1})^*k$ obey
+\begin{equation}
+ ((\phi^{-1})^*k)(\phi_*X_A)=k(X_A).
+ \label{eq:naturality}
+\end{equation}
+Hence every factor, the factor multiplicities, the ranks, and
+$\Char(L_D)$ are source-chart invariant.  The executable check uses
+\begin{equation}
+ s^{0\prime}=s^0,\quad s^{1\prime}=s^1+s^2,\quad
+ s^{2\prime}=s^2,\quad s^{3\prime}=s^3
+ \label{eq:chart}
+\end{equation}
+and finds exact factor parity for regular, characteristic, and fourfold
+covectors.
+
+There is a second, distinct transformation issue.  Under invertible field and
+equation frame changes $R$ and $S$, the leading map transforms as
+\begin{equation}
+ \sigmaL\longmapsto S\sigmaL R^{-1},
+ \qquad
+ P_D\longmapsto\frac{\det S}{\det R}P_D.
+ \label{eq:frames}
+\end{equation}
+Therefore $P_D$ is intrinsically a section of
+\begin{equation}
+ \det(\Eeq)\otimes\det(\Vred)^*,
+ \label{eq:detline}
+\end{equation}
+and the chosen channel frames trivialize this line to the scalar expression
+\eqref{eq:explicitpoly}.  The nowhere-zero multiplier in
+\eqref{eq:frames} leaves the characteristic set and all zero multiplicities
+unchanged.  Under source-coordinate transformations the pairing factors are
+scalars, so the source-coordinate density weight is zero.
+
+\section{Homogeneity, units, and limiting checks}
+
+For $\lambda\in\R$,
+\begin{equation}
+ P_D(x,\lambda k)=\lambda^6P_D(x,k).
+ \label{eq:homogeneous}
+\end{equation}
+The formal cotangent degree is six and the source-coordinate density weight is
+zero.  If dimensional units are assigned, each $k(X_A)$ inherits the
+corresponding equation-to-field leading-operator unit.  The present source
+model supplies no source-to-physical units map, so no physical frequency,
+speed, clock, length, or metric dimension is inferred from
+\eqref{eq:explicitpoly}.
+
+The following limiting cases are exact:
+\begin{enumerate}[leftmargin=*]
+ \item $k=\mathrm d\tau$ gives six unit factors and $P_D=1$, so the declared
+ source-time covector is noncharacteristic at this algebraic level;
+ \item $k=0$ makes all factors vanish but is excluded from the projective
+ characteristic set;
+ \item at $k_\star$ in \eqref{eq:fourfold}, the rank is two and the kernel is
+ exactly four-dimensional;
+ \item passive source-chart transformation preserves each factor exactly; and
+ \item internal gauge-choice invariance is vacuous but explicit because the
+ internal gauge generator space is $\{0\}$.
+\end{enumerate}
+The real linear representation in $\omega$ is recorded as input for P4--T02.
+No strong/symmetric hyperbolicity, common-cone, robustness, or causal verdict
+is issued here.
+
+\section{Analytic and independent executable reconciliation}
+
+The primary standard-library model expands the six linear factors into a
+51-term exact rational polynomial, checks the factor product at four
+covectors, row-reduces every subset of branches, verifies the unique fourfold
+intersection, and tests passive source-chart and relative-frame covariance.
+All focused checks pass.
+
+A separate implementation imports no primary-model code.  It assembles the
+six-by-six rational symbol independently and evaluates its determinant by the
+Leibniz formula at five preregistered covectors.  The determinant equals the
+factor product in all five cases; it independently obtains rank two and kernel
+dimension four at $k_\star$ and exact factor parity under
+\eqref{eq:chart}.  This is internal independent implementation evidence, not
+external specialist review or independent scientific replication.
+
+Reproduction uses only the repository virtual environment:
+\begin{verbatim}
+.venv/bin/python research_control/tasks/RT-20260809-018/artifacts/
+  v22_p4_t01_principal_symbol_model.py --json
+.venv/bin/python research_control/tasks/RT-20260809-018/artifacts/
+  v22_p4_t01_independent_reproduction.py --json
+.venv/bin/python research_control/tasks/RT-20260809-018/artifacts/
+  validate_v22_p4_t01_principal_symbol.py --json
+\end{verbatim}
+Line wrapping above is typographic; each script path is one shell argument.
+
+\section{Refuter pressure and hard boundaries}
+
+The result rejects the following substitutions:
+\begin{enumerate}[leftmargin=*]
+ \item taking a determinant before identifying constraints, gauge directions,
+ or equation redundancies;
+ \item inserting a quadratic metric factor and calling it source-derived;
+ \item suppressing any of the six linear branches or the fourfold crossing;
+ \item calling a direction-dependent repeated root a repeated global factor;
+ \item treating passive source-chart covariance as a physical gauge quotient;
+ \item treating $\tau$ as a derived physical time or its normalization as a
+ physical speed calibration;
+ \item treating the union of six source hyperplanes as one Lorentzian cone;
+ \item inferring signature, scale, matter universality, or $g_{\rm eff}$;
+ \item treating internal reproduction as external PDE review; or
+ \item treating validator or checkpoint PASS as mathematical proof or physics
+ promotion.
+\end{enumerate}
+The fixed candidate is not frozen by P4--T01 because a new, branch-complete
+principal-symbol theorem has been constructed.  Cross-law uniqueness remains
+unresolved, and P4--T02 must apply the preregistered hyperbolicity,
+universality, robustness, and hard-fail screen.
+
+\section{Distance-to-GR status and decisive disposition}
+
+\begin{center}
+\small
+\begin{tabular}{p{0.29\linewidth}p{0.64\linewidth}}
+\toprule
+Burden & Status after this packet\\
+\midrule
+Source ontology primitives & Unchanged; $\A$, $\tau$, and $X_A$ remain proposal-only source data.\\
+Source equivalence $\mathrm{EqSrc}$ & Passive source-chart covariance is exact for the fixed symbol; no broader source-equivalence adoption follows.\\
+$\mathrm{RetainH}$ and $\mathrm{GenH}$ & Unchanged and not derived.\\
+$\mathrm{ObsLoc}_{\mathrm{lc}}$ and $\mathrm{Resp}_{\mathrm{lc}}$ & P3--T04 rank readiness is inherited; no new physical observer typing is supplied.\\
+$M_{\mathrm{src}}$ & Not adopted or identified with physical spacetime.\\
+$g_{\mathrm{eff}}$ & Blocked; six source hyperplanes, crossings, and a fourfold degeneracy do not select one physical Lorentzian cone or scale.\\
+Matter coupling and Einstein equations & Blocked.\\
+Finite-variation robustness & Not tested here; P4--T02 owns the conditioning and perturbation screen.\\
+Benchmark/Gate status & Blocked; no protected decision or external review is requested.\\
+Current route freeze & Not frozen; this packet adds a theorem, exact branch ledger, and independent reproduction.\\
+Hard-fail status & Unreduced determinant, metric insertion, branch suppression, physical-cone overread, and irreproducibility remain hard failures.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The decisive P4--T01 result is
+\emph{constructed source-principal candidate pending P4--T02 stress}.
+The exact reduced object is the pair
+\begin{equation}
+ \left(\sigmaL, P_D\right)
+ =\left(\operatorname{diag}(k(X_A)),\prod_A k(X_A)\right),
+ \label{eq:result}
+\end{equation}
+with the covariance, factor, crossing, and weight statements above.  The local
+P4--T01 derivation obligation is discharged at draft/control level.  The
+Distance-to-GR ledger is unchanged because \eqref{eq:result} supplies neither
+one stable common physical cone nor a Lorentzian signature, scale, operative
+metric, universal matter coupling, Einstein equations, or Gate B evidence.
+
+\end{document}

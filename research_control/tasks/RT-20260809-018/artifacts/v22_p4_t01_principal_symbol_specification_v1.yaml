@@ -1,0 +1,124 @@
+schema_id: "v22_p4_t01_principal_symbol_specification_v1"
+artifact_id: "V22-P4-T01-PRINCIPAL-SYMBOL-SPECIFICATION-V1"
+task_id: "RT-20260809-018"
+job_id: "AJ-RT-20260809-018-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T01"
+status: "draft/control"
+claim_status: "proposal-only source-principal data"
+candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REDUCED-PRINCIPAL-V1"
+parent_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-PREPRINCIPAL-V1"
+candidate_family_id: "FAM-V22-B1-SIX-TRANSPORT-CONTROLLED-REFINEMENT"
+created_at: "2026-08-09T19:05:58Z"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Extract the highest-derivative operator from the fixed-law continuum linearization, remove constraints gauge directions and algebraic redundancies lawfully, and derive the covariant reduced source principal symbol and polynomial with multiplicities branches and independent reproduction without inserting a metric form."
+
+source_bindings:
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  - object_id: "TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1"
+    path: "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_without_hidden_geometry_v1.tex"
+    sha256: "f26c77a175e7a5783e859eacc5de24270e1089a253e73493114a1403bbd61037"
+  - object_id: "TEX-V22-P3-T03-CONTROLLED-REFINEMENT-LIMIT-V1"
+    path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex"
+    sha256: "ba5b815072de442dda7ee2bfb6aba41b7d98082b4f0586df22d9d327c0eda921"
+  - object_id: "TEX-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-PREPRINCIPAL-V1"
+    path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex"
+    sha256: "f2d4307aeaf746dc5df48c14d6ed8eb59d7c4bbfb8afd1e69c1c8b88aa72d6f6"
+  - object_id: "HANDOFF-0987"
+    path: "research_control/handoffs/handoff-0987.yaml"
+    sha256: "ec107922c78c04eba9550c7b9296feec8897f8eb7bbbe287d62748a3a429fd03"
+
+fixed_law:
+  equation_map: "E_D(q)=(X_1q1,...,X_6q6)"
+  linearized_operator: "L_Du=(X_1u1,...,X_6u6)"
+  source_vectors:
+    - [1, 1, 0, 0]
+    - [1, 0, 1, 0]
+    - [1, 0, 0, 1]
+    - [1, 1, 1, 0]
+    - [1, 0, 1, 2]
+    - [1, 2, 0, 1]
+  coefficient_datum_held_fixed: true
+  background_dependence_of_principal_part: false
+  source_law_adopted: false
+
+reduction:
+  field_fiber_dimension: 6
+  equation_fiber_dimension: 6
+  algebraic_field_constraints: []
+  differential_constraints: []
+  internal_field_gauge_generators: []
+  physical_gauge_generators: []
+  algebraic_equation_redundancies: []
+  passive_source_chart_changes: "representation changes, not quotient directions"
+  open_regularity_conditions:
+    - "q6 nonzero"
+    - "d(q1/q6) wedge d(q2/q6) nonzero"
+  open_conditions_are_constraints: false
+  reduced_field_fiber: "V_red=T_qbar Q_reg/{0} congruent R6"
+  reduced_equation_fiber: "W_eq/{0} congruent R6"
+  physical_interpretation_complete: false
+  determinant_lawful_after_reduction: true
+
+principal_symbol:
+  abstract: "sigma_L(x,k)=diag(k(X_1),...,k(X_6))"
+  convention: "nonzero Fourier factor i omitted"
+  principal_polynomial: "P_D(x,k)=product_A k(X_A)"
+  chart_expression: "(w+x)(w+y)(w+z)(w+x+y)(w+y+2z)(w+2x+z)"
+  homogeneous_degree: 6
+  nontrivial_witness: "P_D(d tau)=1"
+  source_coordinate_density_weight: 0
+  determinant_line: "det(equation fiber) tensor det(reduced field fiber)^*"
+  field_equation_frame_law: "P_D maps to det(S)/det(R) times P_D"
+  global_factor_count: 6
+  global_factor_multiplicities: [1, 1, 1, 1, 1, 1]
+  global_square_free: true
+
+characteristic_structure:
+  projective_set: "union_A {[k]: k(X_A)=0}"
+  pairwise_intersection_count: 15
+  triple_subset_count: 20
+  unique_nonzero_fourfold_branches: [2, 3, 4, 6]
+  fourfold_witness_covector: [1, 0, -1, -1]
+  fourfold_witness_factors: [1, 0, 0, 0, -2, 0]
+  maximum_nonzero_corank: 4
+  nonzero_fivefold_intersection_count: 0
+  nonzero_sixfold_intersection_count: 0
+  fixed_spatial_crossing_example:
+    spatial_covector: [1, 2, 3]
+    omega_roots: [-1, -2, -3, -3, -8, -5]
+    repeated_root: -3
+    multiplicity: 2
+    classification: "direction-dependent crossing of distinct global branches"
+
+covariance_and_weight:
+  passive_chart_map: "s0'=s0, s1'=s1+s2, s2'=s2, s3'=s3"
+  factor_pairing_invariance: "k'(X'_A)=k(X_A)"
+  polynomial_chart_invariant: true
+  branch_rank_chart_invariant: true
+  internal_gauge_choice_invariance: "vacuous because the internal gauge space is zero"
+  homogeneous_covector_weight: 6
+  source_coordinate_density_weight: 0
+  physical_units_status: "unresolved without a source-to-physical units map"
+
+verification:
+  primary_method: "exact standard-library rational polynomial multiplication and subset row reduction"
+  independent_method: "independent six-by-six rational Leibniz determinant"
+  primary_status: "PASS"
+  independent_status: "PASS"
+  external_specialist_review_completed: false
+
+authority_limits:
+  source_polynomial_constructed: true
+  physical_causal_cone_constructed: false
+  lorentzian_signature_constructed: false
+  physical_scale_constructed: false
+  effective_metric_constructed: false
+  matter_universality_established: false
+  hyperbolicity_verdict_issued: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

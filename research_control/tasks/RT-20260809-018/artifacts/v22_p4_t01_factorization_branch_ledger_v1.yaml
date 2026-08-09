@@ -1,0 +1,64 @@
+schema_id: "v22_p4_t01_factorization_branch_ledger_v1"
+artifact_id: "V22-P4-T01-FACTORIZATION-BRANCH-LEDGER-V1"
+task_id: "RT-20260809-018"
+job_id: "AJ-RT-20260809-018-001"
+status: "draft/control"
+candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REDUCED-PRINCIPAL-V1"
+global_factorization:
+  polynomial: "(w+x)(w+y)(w+z)(w+x+y)(w+y+2z)(w+2x+z)"
+  factors:
+    - {branch: 1, coefficients: [1, 1, 0, 0], multiplicity: 1}
+    - {branch: 2, coefficients: [1, 0, 1, 0], multiplicity: 1}
+    - {branch: 3, coefficients: [1, 0, 0, 1], multiplicity: 1}
+    - {branch: 4, coefficients: [1, 1, 1, 0], multiplicity: 1}
+    - {branch: 5, coefficients: [1, 0, 1, 2], multiplicity: 1}
+    - {branch: 6, coefficients: [1, 2, 0, 1], multiplicity: 1}
+  pairwise_nonassociate: true
+  square_free: true
+  repeated_global_factor_count: 0
+intersection_strata:
+  pairwise:
+    subset_count: 15
+    rank_two_count: 15
+    projective_dimension: 1
+  triple:
+    subset_count: 20
+    rank_three_count: 20
+    projective_dimension: 0
+    distinct_projective_point_count: 17
+    explanation: "The four triples contained in branches 2,3,4,6 share one fourfold point; all other triple points are distinct."
+  fourfold:
+    subset_count: 15
+    nonzero_intersection_count: 1
+    branches: [2, 3, 4, 6]
+    row_rank: 3
+    witness_covector: [1, 0, -1, -1]
+    factor_values: [1, 0, 0, 0, -2, 0]
+    symbol_rank: 2
+    symbol_corank: 4
+  fivefold:
+    subset_count: 6
+    nonzero_intersection_count: 0
+  sixfold:
+    subset_count: 1
+    nonzero_intersection_count: 0
+branch_crossings:
+  pairwise_crossing_rule: "(v_A-v_B) dot kappa = 0"
+  all_pairs_have_nonzero_crossing_directions: true
+  example:
+    spatial_covector: [1, 2, 3]
+    omega_roots: [-1, -2, -3, -3, -8, -5]
+    coincident_branches: [3, 4]
+    root: -3
+    classification: "direction-dependent repeated root, not a repeated global factor"
+kernel_rule: "ker sigma(k)=span{e_A:k(X_A)=0}; corank sigma(k)=number of vanishing factors"
+hard_boundaries:
+  - "No branch may be removed because it is inconvenient for a quadratic-cone interpretation."
+  - "No repeated directional root may be relabeled a repeated global irreducible factor."
+  - "No union of source hyperplanes may be relabeled a physical Lorentzian cone before P4-T02 and later gates."
+authority_limits:
+  physical_causal_structure_established: false
+  common_cone_established: false
+  hyperbolicity_robustness_established: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false

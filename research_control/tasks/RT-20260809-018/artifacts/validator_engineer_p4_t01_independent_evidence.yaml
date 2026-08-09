@@ -1,0 +1,21 @@
+schema_id: "validator_engineer_independent_evidence_v1"
+task_id: "RT-20260809-018"
+job_id: "AJ-RT-20260809-018-001"
+status: "completed"
+perspective: "validator-engineer@0.2.0"
+independence:
+  primary_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_principal_symbol_model.py"
+  independent_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_independent_reproduction.py"
+  independent_imports_primary: false
+  independent_method: "Leibniz determinant of a separately encoded six-by-six exact rational diagonal symbol matrix"
+checks:
+  five_determinants_reproduced: true
+  pure_source_time_rank_six: true
+  fourfold_witness_rank_two: true
+  fourfold_witness_kernel_dimension_four: true
+  passive_source_chart_factor_parity: true
+  global_factor_rows_distinct: true
+  target_geometry_inputs: 0
+  metric_factor_inserted: false
+validation_scope: "task-local mathematical and computational evidence only; not proof authority, external review, adoption, Gate review, or physics promotion"
+global_validator_semantics_changed: false

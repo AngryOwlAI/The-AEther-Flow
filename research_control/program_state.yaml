@@ -1,12 +1,139 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260809-017"
-active_agent_job_id: "AJ-RT-20260809-017-001"
-latest_handoff_id: "handoff-0987"
-current_status: "v22_p3_t04_eleven_eof_repaired_p4_t01_selected_fresh_checkpoint_pending"
-claim_boundary_summary: "RT-20260809-017 removes exactly one terminal newline from each of eleven checkpoint-named P3-T04 files and seals zero drift across 54 non-target inherited paths. Every scientific payload hash and authority boundary remains unchanged; the consumed AJ-RT-20260809-016-001 checkpoint is not replayed. P4-T01 is selected but unexecuted pending one fresh checkpoint, and P2-T02 remains externally gated."
-next_plan_task_id: "P4-T01"
+active_task_id: "RT-20260809-018"
+active_agent_job_id: "AJ-RT-20260809-018-001"
+latest_handoff_id: "handoff-0988"
+current_status: "v22_p4_t01_branch_complete_source_principal_candidate_p4_t02_selected_checkpoint_pending"
+claim_boundary_summary: "RT-20260809-018 lawfully reduces the sealed fixed-law tangent system after recording zero algebraic constraints, differential constraints, internal gauge generators, and equation redundancies. It derives the diagonal source symbol and a square-free degree-six determinant-line polynomial with all six branches, exact crossings, covariance, and independent reproduction. This is proposal-only source-principal data: no physical cone, Lorentzian signature, scale, g_eff, adoption, Gate result, or Distance-to-GR delta is created. P4-T02 is selected but unexecuted pending one checkpoint, and P2-T02 remains externally gated."
+next_plan_task_id: "P4-T02"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-017-001. After it commits, execute exactly one separately admitted V22 P4-T01 ontology-formalizer AgentJob with hyperbolic-PDE and Refuter pressure; do not contact reviewers or take any protected or external action."
+next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260809-018-001. After it commits, execute exactly one separately admitted V22 P4-T02 Refuter AgentJob with hyperbolic-PDE and Smuggling Auditor pressure; do not contact reviewers or take any protected or external action."
+
+v22_p4_t01_branch_complete_reduced_source_principal_symbol:
+  task_id: "RT-20260809-018"
+  parent_task_id: "RT-20260809-017"
+  parent_handoff_id: "handoff-0987"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T01"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P4-T02"
+  claim_boundary_id: "CB-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-001"
+  status: "PASS_V22_P4_T01_BRANCH_COMPLETE_REDUCED_SOURCE_PRINCIPAL_SYMBOL"
+  work_item_status: "completed_checkpoint_pending"
+  route_label: "ordinary-research-packet"
+  selected_role_family: "ontology-formalizer@0.2.0"
+  supporting_perspective: "hyperbolic-PDE consultation and refuter@0.2.0"
+  validation_perspective: "validator-engineer@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "derive_v22_p4_t01_gauge_reduced_source_principal_symbol_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Extract the highest-derivative operator from the fixed-law continuum linearization, remove constraints gauge directions and algebraic redundancies lawfully, and derive the covariant reduced source principal symbol and polynomial with multiplicities branches and independent reproduction without inserting a metric form."
+  source_head: "2c0cefed9d55ab43fce3ce1532a56ce26d3f1f25"
+  source_tree: "05108d29bacfa2dd4dd636a66121bfa790f4498c"
+  prior_checkpoint_job_id: "AJ-RT-20260809-017-001"
+  prior_checkpoint_run_id: "RUN-CHECKPOINT-34325e9b2cf506bb"
+  prior_checkpoint_receipt_sha256: "0293ad8d801f0750ffd99a996e82a5056e03a4170982d3ea9ad720b8b9fdc177"
+  source_handoff_id: "handoff-0987"
+  source_handoff_path: "research_control/handoffs/handoff-0987.yaml"
+  source_handoff_sha256: "ec107922c78c04eba9550c7b9296feec8897f8eb7bbbe287d62748a3a429fd03"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  principal_theorem_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex"
+  principal_theorem_sha256: "464743abcc055873b6da41fcab78b4808e86378fc9dd91cfbc9acd0cc22eb151"
+  specification_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_principal_symbol_specification_v1.yaml"
+  specification_sha256: "d0ad866ccf9791487e5a7a04d23acf482581609d2a017206799fa13296bd8e62"
+  branch_ledger_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_factorization_branch_ledger_v1.yaml"
+  branch_ledger_sha256: "983d5e014951c02eac4cd7949cc2da36a1d15ceda54406ba6375116b15964260"
+  provenance_manifest_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_source_provenance_manifest_v1.yaml"
+  provenance_manifest_sha256: "36897a4a7a7c1aa77be3ae207a1b67a65f6b3373b6ea0cd9a7529a446c498b01"
+  principal_model_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_principal_symbol_model.py"
+  principal_model_sha256: "52f320cd6e8d6c1cd66ce66256a08c71bb1f6f0aceaef68ca02bf4ad370531b5"
+  independent_reproduction_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_independent_reproduction.py"
+  independent_reproduction_sha256: "6f827b1f38ac87f3ad07f4bd57356a0fc0f652ac50c929423c8a65e5170051a6"
+  validation_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_principal_symbol_validation.json"
+  validation_sha256: "bfe5ca8622e1b4e2852e57f6d8ca688ad1b20a20ebeff6754b510bd183ad7276"
+  compact_receipt_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_compact_receipt.json"
+  compact_receipt_sha256: "8b4c8b4155cec50692b38427d1efde0590cef08daec377b865ddf14b97c1e2cd"
+  latex_compile_receipt_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_latex_compile_receipt.json"
+  latex_compile_receipt_sha256: "4e17ed01dab33a35636f355448982a26f75b217cc14d1e3e7ad93c797106c013"
+  parent_fusion_path: "research_control/tasks/RT-20260809-018/artifacts/parent_fusion_notes_p4_t01_principal_symbol.md"
+  parent_fusion_sha256: "68496cac32dc4b9093b01d736bf9bfaf9294f145069c54c336a36bd27dc9607d"
+  task_sha256: "4f5198c2d6e3d1e3267e310b0f8598add15aa879057eada37c31ca1ddb2b0078"
+  agent_job_id: "AJ-RT-20260809-018-001"
+  agent_job_sha256: "15985852fbf457cbd52aa18f700d48a15b03b9dd0f707c7e0ca3071ffb261099"
+  decision_id: "DDR-20260809-018"
+  decision_sha256: "538185917417743cf0c2c786ec580473ebbcb55b6329088e7b9f6ca770e99ee2"
+  execution_role_ref: "ontology-formalizer@0.2.0--RT-20260809-018"
+  execution_role_sha256: "d2d7cf54f29a90aa1bf29df0e582f2730b06791963c7874156c8b57f79b22065"
+  completion_path: "research_control/tasks/RT-20260809-018/jobs/completions/AJC-AJ-RT-20260809-018-001.yaml"
+  completion_sha256: "c27693aa9b6060008fe24808402f57b5d92c571f9121b792fd1b89abc3a86dbd"
+  handoff_id: "handoff-0988"
+  handoff_path: "research_control/handoffs/handoff-0988.yaml"
+  handoff_sha256: "41aa74eb541cca5e636539b1056b93c3aa53bcb737601ca9de970d7cfffd45c5"
+  algebraic_constraint_count: 0
+  differential_constraint_count: 0
+  internal_gauge_generator_count: 0
+  equation_redundancy_count: 0
+  reduced_field_fiber_dimension: 6
+  reduced_equation_fiber_dimension: 6
+  polynomial_degree: 6
+  global_factor_count: 6
+  global_repeated_factor_count: 0
+  pair_intersection_count: 15
+  triple_subset_count: 20
+  distinct_projective_triple_point_count: 17
+  nonzero_fourfold_intersection_count: 1
+  nonzero_fivefold_intersection_count: 0
+  focused_check_count: 106
+  focused_check_failure_count: 0
+  independent_determinant_case_count: 5
+  latex_page_count: 6
+  latex_overfull_warning_count: 0
+  pdf_pages_visually_reviewed: 6
+  metric_factor_inserted: false
+  suppressed_branch_count: 0
+  principal_symbol_constructed: true
+  physical_cone_constructed: false
+  lorentzian_signature_constructed: false
+  physical_scale_constructed: false
+  effective_metric_constructed_or_adopted: false
+  p4_t01_executed: true
+  p4_t02_selected: true
+  p4_t02_executed: false
+  v22_p2_t02_external_review_completed: false
+  canonical_science_modified: false
+  source_extension_adopted: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  protected_gate_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  reviewer_contact_authorized: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P4-T02"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "refuter@0.2.0"
+  selected_next_supporting_perspective: "hyperbolic-PDE specialist consultation and smuggling-auditor@0.2.0"
+  selected_next_packet_type: "hyperbolicity_universality_robustness_hard_fail_screen"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "stress_v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
 
 v22_p3_t04_eleven_eof_checkpoint_recovery:
   task_id: "RT-20260809-017"

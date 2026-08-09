@@ -1226,7 +1226,7 @@ items:
   stop_conditions: Determinant of an unreduced gauge system used as the physical polynomial,
     metric factor inserted by premise, branch suppressed without reason, or irreproducible
     calculation.
-  implementation_status: pending
+  implementation_status: completed_checkpoint_pending
   requires_separate_agentjob: true
   max_outer_agentjobs_per_invocation: 1
   automatic_execution_authorized: false
@@ -1239,6 +1239,19 @@ items:
   title: Apply the hyperbolicity, universality, robustness, and hard-fail screen
   track: B
   owner: refuter and hyperbolic-PDE specialist; Director issues the candidate disposition
+  work_kind: audit_or_review
+  task_class: science
+  role_family: refuter@0.2.0
+  supporting_perspective: hyperbolic-PDE specialist consultation and smuggling-auditor@0.2.0
+  controlling_launcher: continue-research-goal@v4
+  worker_skill: continue-research
+  route_label: ordinary-research-packet
+  target_derivation_milestone: effective_metric_g_eff
+  milestone_burden: Stress the exact P4-T01 source principal polynomial for hyperbolicity,
+    strong or symmetric well-posedness, stable time orientation, degeneracy conditioning,
+    common-cone universality across declared sectors, finite-variation robustness, and
+    every preregistered hard-fail trigger without inserting or fitting a target metric.
+  expected_result_kind: audit_verdict_or_precise_obstruction
   declared_coverage_ids:
   - V22-R07
   - V22-R08
@@ -1280,6 +1293,7 @@ items:
     loss, sector-dependent propagation without a physical quotient, hidden metric
     primitive, or repeated frozen route.
   implementation_status: pending
+  requires_human_gate: false
   requires_separate_agentjob: true
   max_outer_agentjobs_per_invocation: 1
   automatic_execution_authorized: false

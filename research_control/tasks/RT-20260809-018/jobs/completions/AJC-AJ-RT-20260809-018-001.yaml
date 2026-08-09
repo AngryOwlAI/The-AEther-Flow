@@ -1,0 +1,756 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260809-018-001"
+completion_id: "AJC-AJ-RT-20260809-018-001"
+task_id: "RT-20260809-018"
+task_type: "v22_p4_t01_gauge_reduced_principal_symbol_and_polynomial"
+decision_id: "DDR-20260809-018"
+role_id: "ontology-formalizer"
+source_role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260809-018"
+supporting_perspective: "hyperbolic-PDE consultation and refuter@0.2.0"
+validation_perspective: "validator-engineer@0.2.0"
+status: "completed"
+created_at: "2026-08-09T19:05:58Z"
+started_at: "2026-08-09T19:05:58Z"
+completed_at: "2026-08-09T19:17:33Z"
+objective: "Implement V22 P4-T01 by deriving and independently reproducing the fixed candidate's lawful gauge-reduced source principal symbol, determinant-line polynomial, source covariance, global multiplicities, and complete branch-degeneracy structure without inserting a metric form or issuing a physical-causality verdict."
+completion_summary: "P4-T01 lawfully reduces the fixed P3-T02/P3-T04 six-channel system after recording zero algebraic constraints, zero differential constraints, zero internal field-gauge generators, and zero algebraic equation redundancies. The reduced source symbol is diag(k(X_1),...,k(X_6)); its determinant is the nontrivial square-free degree-six polynomial (w+x)(w+y)(w+z)(w+x+y)(w+y+2z)(w+2x+z), with source-coordinate density weight zero and the intrinsic determinant-line frame law det(S)/det(R). All six global factors have multiplicity one, but all pairs cross, all triples meet, and branches 2,3,4,6 have the unique nonzero fourfold intersection represented by k=(1,0,-1,-1), where symbol corank is four. No nonzero fivefold intersection exists. A separate rational Leibniz implementation reproduces five determinants, the fourfold rank, and passive chart covariance. All 106 focused checks and the six-page rendered TeX review pass. This is branch-complete source-principal data pending P4-T02 stress, not a physical cone, Lorentzian signature, scale, effective metric, adoption, or Distance-to-GR delta."
+objective_result: "implemented_and_validated_v22_p4_t01_branch_complete_reduced_source_principal_candidate"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "constructed_source_principal_candidate_precheckpoint"
+work_item_status: "completed_checkpoint_pending"
+milestone_disposition: "source_principal_polynomial_constructed_physical_causal_geometry_still_blocked"
+
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260809-018-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+legacy_validation_reason: ""
+
+is_physics_task: true
+payload_class: "theorem"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+external_red_team_finding_requires_integration: false
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T01"
+  work_kind: "formalization_or_theorem"
+  task_class: "science"
+  expected_result_kind: "candidate_or_precise_obstruction"
+  dependency_task_ids:
+    - "P3-T04"
+  dependency_checkpoint_commits:
+    - "2c0cefed9d55ab43fce3ce1532a56ce26d3f1f25"
+  recommendation_ids:
+    - "V22-R07"
+    - "V22-R08"
+  declared_coverage_ids:
+    - "V22-R07"
+    - "V22-R08"
+    - "S5"
+  sequence_step_ids:
+    - "S5"
+  cross_cutting_directive_ids:
+    - "V22-X04"
+  work_item_status: "completed_checkpoint_pending"
+  next_plan_task_id: "P4-T02"
+  p3_t04_executed: true
+  p4_t01_executed: true
+  p4_t02_selected: true
+  p4_t02_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+result:
+  status: "PASS_V22_P4_T01_BRANCH_COMPLETE_REDUCED_SOURCE_PRINCIPAL_SYMBOL"
+  strategy_id: "derive_v22_p4_t01_gauge_reduced_source_principal_symbol_v1"
+  source_handoff_id: "handoff-0987"
+  source_handoff_sha256: "ec107922c78c04eba9550c7b9296feec8897f8eb7bbbe287d62748a3a429fd03"
+  candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REDUCED-PRINCIPAL-V1"
+  parent_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-PREPRINCIPAL-V1"
+  reduced_symbol: "diag(k(X_1),...,k(X_6))"
+  reduced_field_dimension: 6
+  reduced_equation_dimension: 6
+  algebraic_constraint_count: 0
+  differential_constraint_count: 0
+  internal_field_gauge_generator_count: 0
+  algebraic_redundancy_count: 0
+  determinant_lawful: true
+  principal_polynomial: "(w+x)(w+y)(w+z)(w+x+y)(w+y+2z)(w+2x+z)"
+  principal_polynomial_degree: 6
+  expanded_polynomial_term_count: 51
+  global_factor_count: 6
+  global_factor_multiplicities:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+    - 1
+  repeated_global_factor_count: 0
+  source_coordinate_density_weight: 0
+  determinant_line: "det(equation fiber) tensor det(reduced field fiber)^*"
+  relative_frame_law_verified: true
+  passive_chart_factor_covariance_verified: true
+  pairwise_intersection_count: 15
+  triple_subset_count: 20
+  distinct_triple_projective_point_count: 17
+  unique_nonzero_fourfold_branches:
+    - 2
+    - 3
+    - 4
+    - 6
+  unique_nonzero_fourfold_witness:
+    - 1
+    - 0
+    - -1
+    - -1
+  maximum_nonzero_symbol_corank: 4
+  nonzero_fivefold_intersection_count: 0
+  nonzero_sixfold_intersection_count: 0
+  independent_determinant_case_count: 5
+  independent_implementation_imports_primary: false
+  focused_check_count: 106
+  focused_check_failure_count: 0
+  fixture_case_count: 32
+  resolved_parent_conflict_count: 5
+  unresolved_parent_conflict_count: 0
+  latex_page_count: 6
+  latex_final_overfull_warning_count: 0
+  latex_unique_underfull_warning_count: 1
+  pdf_pages_visually_reviewed: 6
+  target_atlas_input_count: 0
+  target_metric_input_count: 0
+  metric_factor_input_count: 0
+  target_fit_count: 0
+  source_extension_adoption_count: 0
+  source_law_adopted: false
+  effective_metric_constructed: false
+  physical_cone_constructed: false
+  lorentzian_signature_constructed: false
+  hyperbolicity_verdict_issued: false
+  p4_t01_executed: true
+  p4_t02_selected: true
+  p4_t02_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1156
+    relationship_row_count: 5868
+    semantic_row_count: 1156
+    vault_row_count: 1156
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      query_status: "completed"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_without_hidden_geometry_v1.tex"
+      source_hash: "f26c77a175e7a5783e859eacc5de24270e1089a253e73493114a1403bbd61037"
+    - object_id: "TEX-V22-P3-T03-CONTROLLED-REFINEMENT-LIMIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex"
+      source_hash: "ba5b815072de442dda7ee2bfb6aba41b7d98082b4f0586df22d9d327c0eda921"
+    - object_id: "TEX-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-PREPRINCIPAL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex"
+      source_hash: "f2d4307aeaf746dc5df48c14d6ed8eb59d7c4bbfb8afd1e69c1c8b88aa72d6f6"
+  authority_note: "Tracked registered source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "physics"
+  payload_type: "theorem"
+  candidate_family: "FAM-V22-B1-SIX-TRANSPORT-CONTROLLED-REFINEMENT"
+  theorem_identity: "V22-P4-T01-BRANCH-COMPLETE-REDUCED-SOURCE-PRINCIPAL-POLYNOMIAL-THEOREM-V1"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physical_status_changed_by_admission: false
+  distance_to_gr_changed_by_admission: false
+  physics_promotion_authorized_by_admission: false
+
+family_freeze_admission_result:
+  status: "admitted_distinct_unfrozen"
+  route_kind: "theorem_investigation"
+  family_id: "FAM-V22-B1-SIX-TRANSPORT-CONTROLLED-REFINEMENT"
+  family_identity_sha256: "32110632f8832091d69ca52e96dfdf99c26087bfc75575b77a466631eca9d051"
+  detected_match_basis: []
+  reopening_requested: false
+  distinct_branch_identity: "V22-P4-T01-BRANCH-COMPLETE-REDUCED-SOURCE-PRINCIPAL-BRANCH"
+  local_family_freeze_preserved: true
+  global_no_go_inferred: false
+  physics_promotion_authorized_by_admission: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0987"
+  source_handoff_sha256_at_intake: "ec107922c78c04eba9550c7b9296feec8897f8eb7bbbe287d62748a3a429fd03"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T01"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T01"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite_commit: "2c0cefed9d55ab43fce3ce1532a56ce26d3f1f25"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one registered reduced source-principal theorem manuscript with exact quotient symbol covariance multiplicity branch ledger and limitations"
+      - "one machine-readable principal-symbol specification factorization ledger and source-provenance manifest"
+    project_system:
+      - "primary and independent exact-rational models frozen fixtures deterministic validation compact receipt LaTeX receipt and synthesis records"
+      - "standard control records regenerated derivatives and one governed checkpoint"
+  accepted_criteria:
+    physics:
+      - "constraints gauge directions and redundancies are removed lawfully before the determinant"
+      - "the nontrivial degree-six polynomial is source-derived covariant and carries explicit global multiplicities and density weight"
+      - "all branch crossings and the unique fourfold degeneracy are retained"
+      - "no metric factor physical cone signature scale or g_eff is inferred"
+    project_system:
+      - "primary and independent computations reproduce the symbol determinant covariance and fourfold rank"
+      - "registered source hashes generated derivatives and rendered TeX synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-018/artifacts/child_phys_math_p4_t01_principal_symbol.yaml"
+      output_sha256: "ee92f0723147706b17d3b25522cfe5d0ed8c808b34da7ca30dd77260815c26d9"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-018/artifacts/child_phys_phil_p4_t01_scope_refutation.yaml"
+      output_sha256: "91e1e16e9bb193baf66a1cb52560af25eac2051a0a17170bc6c7227b6d0dfebc"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260809-018/artifacts/parent_conflict_review_p4_t01_principal_symbol.yaml"
+    review_sha256: "43369a68201705363c023802524fd4e9a1784c1c7ef1a742313f861307b93549"
+    resolution_rounds: 1
+    resolved_conflict_count: 5
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260809-018/artifacts/parent_fusion_notes_p4_t01_principal_symbol.md"
+    fusion_notes_sha256: "68496cac32dc4b9093b01d736bf9bfaf9294f145069c54c336a36bd27dc9607d"
+    shared_consensus_summary: "Both perspectives accept the explicit zero-space reduction, diagonal source symbol, square-free degree-six polynomial, determinant-line covariance, complete branch ledger, and absence of a physical causal interpretation."
+    novelty_preservation_summary: "The fusion preserves the lawful reduction proof, global-versus-directional multiplicity distinction, unique fourfold witness, covariance audit, exact rational model, and independent Leibniz reproduction."
+    claim_boundary_preservation_summary: "The packet adopts no source law, constructs no physical cone signature scale or effective metric, issues no hyperbolicity or Gate verdict, and changes no Distance-to-GR burden."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260809-018-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Lawful fixed-candidate reduced source principal symbol"
+    summary: "Shows that all supplied constraint gauge and redundancy spaces are zero and derives sigma_L=diag(k(X_A)) on the six-dimensional reduced source fibers."
+  - payload_id: "NMP-RT-20260809-018-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Square-free determinant-line principal polynomial"
+    summary: "Derives the nontrivial degree-six source polynomial, proves all global multiplicities equal one, and states source-coordinate weight zero plus the det(S)/det(R) frame law."
+  - payload_id: "NMP-RT-20260809-018-003"
+    payload_type: "finite_concrete_source_object_witnesses"
+    name: "Complete branch-degeneracy classification"
+    summary: "Row-reduces every branch subset and identifies the unique nonzero fourfold intersection branches 2,3,4,6 with maximum symbol corank four and no nonzero fivefold intersection."
+  - payload_id: "NMP-RT-20260809-018-004"
+    payload_type: "concrete_certificate_step_families"
+    name: "Independent rational Leibniz reproduction"
+    summary: "A separately encoded six-by-six rational symbol reproduces five determinant values, passive chart parity, and the fourfold rank without importing primary code."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260809-018-001"
+    payload_type: "theorem"
+    object_name: "Branch-complete reduced source principal polynomial theorem"
+    claim_status: "draft/control conditional on the sealed proposal-only fixed law"
+    source_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex"
+    burden_effect: "discharges"
+    summary: "Discharges the local P4-T01 reduction and principal-polynomial obligation without creating physical geometry."
+  - payload_id: "PAYLOAD-RT-20260809-018-002"
+    payload_type: "definition"
+    object_name: "Reduced source field/equation fibers and determinant-line representative"
+    claim_status: "draft/control proposal-only source-principal data"
+    source_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_principal_symbol_specification_v1.yaml"
+    burden_effect: "narrows"
+    summary: "Separates the lawful source quotient from absent physical gauge and records intrinsic covariance and units debt."
+  - payload_id: "PAYLOAD-RT-20260809-018-003"
+    payload_type: "explicit_witness"
+    object_name: "Fourfold branch crossing and full intersection ledger"
+    claim_status: "draft/control exact rational branch data"
+    source_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_factorization_branch_ledger_v1.yaml"
+    burden_effect: "narrows"
+    summary: "Preserves all degeneracies and provides the exact nonzero corank-four witness required for P4-T02 stress."
+  - payload_id: "PAYLOAD-RT-20260809-018-004"
+    payload_type: "finite_model"
+    object_name: "Primary and independent exact-rational symbol computations"
+    claim_status: "task-local internal computational evidence"
+    source_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_principal_symbol_validation.json"
+    burden_effect: "audits"
+    summary: "Reconciles exact product expansion, subset ranks, covariance, and independent determinants without claiming external replication."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "The fixed proposal-only law now has a lawful branch-complete reduced source symbol and determinant-line polynomial with exact multiplicities covariance and degeneracy strata; one stable common physical cone, Lorentzian signature, scale, and g_eff remain absent."
+  explanation: "P4-T01's local source-principal derivation burden is discharged at draft/control candidate level. The effective-metric burden does not advance because the six source hyperplanes and their crossings have not passed P4-T02 hyperbolicity, robustness, universality, common-cone, or physical-typing tests."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "one proposal-only fixed-law background and linear-response packet existed, but no lawfully reduced branch-complete source polynomial or physical causal geometry was established"
+  new_status: "the protected scientific status is unchanged; one proposal-only branch-complete reduced source polynomial exists, but no stable common physical cone signature scale or effective metric is selected"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P4-T01 supplies conditional source-principal data but no source-derived unique physical cone, Lorentzian signature, scale, g_eff, coupling, field equation, or Gate evidence; draft/control construction and process validation do not justify ledger promotion."
+  downstream_unlocked:
+    - "one separately admitted P4-T02 hyperbolicity universality robustness and hard-fail screen after checkpoint"
+  downstream_still_blocked:
+    - "P2-T02 external review without real reviewer-contact authority"
+    - "canonical source arena coefficient datum source law background or candidate adoption"
+    - "P4-T03 conformal reconstruction without a qualifying P4-T02 verdict"
+    - "physical scale g_eff matter coupling Einstein equations downstream Gates benchmark promotion and completed derivation"
+  explanation: "The packet closes the exact P4-T01 source-principal obligation while preserving every physical-geometry and protected-status block."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "A tau X_A D and the fixed law remain proposal-only source-extension data and are not adopted"
+  - burden: "Source equivalence EqSrc"
+    status: "passive source-chart covariance is exact for the fixed symbol; no broader EqSrc or physical equivalence is adopted"
+  - burden: "RetainH"
+    status: "unchanged; no retention law is derived or adopted"
+  - burden: "GenH"
+    status: "unchanged; no generator law is derived or adopted"
+  - burden: "ObsLoc_lc"
+    status: "P3-T04 local response readiness is inherited; no new physical observer typing is supplied"
+  - burden: "Resp_lc"
+    status: "rank-two source response readiness is inherited; the six principal branches are not typed as universal physical responses"
+  - burden: "M_src"
+    status: "the source chart and cotangent bundle remain proposal-only scaffolding and are not adopted as physical spacetime"
+  - burden: "g_eff"
+    status: "blocked; six source hyperplanes and a fourfold degeneracy do not select one stable common Lorentzian cone or scale"
+  - burden: "matter coupling"
+    status: "blocked; no realistic matter sector or universal coupling law is constructed"
+  - burden: "Einstein equations"
+    status: "blocked"
+  - burden: "finite-variation robustness"
+    status: "not tested by P4-T01; the complete branch data is routed to the P4-T02 perturbation and conditioning screen"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "no protected decision requested or issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "P4-T01 is not frozen because it adds a materially new theorem and branch ledger; unreduced determinant metric insertion branch suppression and physical-cone overread remain hard failures"
+
+bridge_attempt_status:
+  status: "branch_complete_source_principal_candidate_constructed_physical_geometry_still_missing"
+  candidate_map: "fixed D and qbar -> L_D -> explicit zero-space reduction -> sigma_L -> determinant-line P_D -> complete branch strata"
+  constructed_object_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex"
+  missing_object: "one stable common physically typed causal cone with controlled degeneracies robustness universality and scale"
+  missing_primitive: "physical sector quotient operational propagation semantics and source-derived metric selection"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  effective_metric_constructed: false
+  global_no_go_claimed: false
+  claim_boundary_preserved: true
+  preserves_blocks: "The physical cone, Lorentzian signature, physical scale, effective metric, coupling, Einstein-equation, Gate, benchmark, adoption, and Distance-to-GR burdens remain blocked."
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: ""
+  prior_attempts_considered:
+    - "RT-20260809-012"
+    - "RT-20260809-015"
+    - "RT-20260809-016"
+  freeze_if:
+    - "A later route suppresses the fourfold crossing or repeats the same source polynomial without the P4-T02 stress payload."
+    - "A later route inserts a target quadratic factor or treats the six hyperplanes as one selected physical cone."
+  do_not_freeze_if:
+    - "A separately admitted P4-T02 packet applies the preregistered hyperbolicity universality robustness and hard-fail screen to this exact candidate."
+  freeze_decision: "not_frozen"
+  decision_reason: "P4-T01 adds a theorem, determinant-line covariance, exhaustive intersection ranks, a fourfold witness, and independent reproduction; P4-T02 is a distinct adversarial stress obligation rather than a repeated formalization."
+  next_allowed_route: "refuter"
+
+route_cycle_control:
+  cycle_family: "v22_b1_source_to_effective_metric"
+  current_cycle_step: "branch_complete_reduced_source_principal_theorem"
+  prior_related_tasks:
+    - "RT-20260809-012"
+    - "RT-20260809-015"
+    - "RT-20260809-016"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "P4-T01 newly supplies the exact lawful reduction, determinant-line covariance, square-free proof, all branch intersection ranks, and independent reproduction; P4-T02 must now stress those fixed bytes for hyperbolicity, universality, robustness, and common-cone failure rather than restate them."
+  next_role_consequence: "refuter@0.2.0 with hyperbolic-PDE specialist perspective"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REDUCED-PRINCIPAL-V1"
+  category: "principal_symbol_and_polynomial"
+  import_classification: "conditional_derivation_from_proposal_only_source_candidate"
+  status_vocabulary: "proposal-only source-principal data"
+  current_ontology_derives_candidate: false
+  conditional_fixed_law_derivation_valid: true
+  adoption_status: "not_adopted"
+  human_gate_required_for_adoption: true
+  canonical_ontology_candidate_status_claimed: false
+  target_atlas_free: true
+  exact_gr_recovery_claimed: false
+  physical_inequivalence_claimed: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+  records:
+    - classification: "blocked_adoption_open_continuation"
+      claim_boundary_id: "CB-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-001"
+      relation_to_current_ontology: "blocked_open"
+      protected_authority_required: true
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+      blocked_overreads:
+        - "proposal-only source symbol or polynomial described as adopted ontology or physical geometry"
+        - "six source hyperplanes described as one Lorentzian causal cone"
+        - "source-time noncharacteristic covector described as a physical clock or time orientation"
+        - "internal reproduction described as external hyperbolic-PDE review or independent scientific replication"
+
+mathematical_refuter_result:
+  status: "PASS_BRANCH_COMPLETE_SCOPE_PRESSURE"
+  branch_ledger_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_factorization_branch_ledger_v1.yaml"
+  metric_factor_inserted: false
+  suppressed_branch_count: 0
+  global_directional_multiplicity_conflated: false
+  passive_chart_treated_as_physical_gauge: false
+  physical_cone_claimed: false
+  p4_t02_stress_completed: false
+  global_no_go_claimed: false
+  explanation: "P4-T01 survives reduction and source-purity pressure while preserving every branch and the fourfold crossing. The separate P4-T02 hard-fail screen remains required."
+
+validation_evidence:
+  focused_validation_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_principal_symbol_validation.json"
+  focused_validation_sha256: "bfe5ca8622e1b4e2852e57f6d8ca688ad1b20a20ebeff6754b510bd183ad7276"
+  focused_check_count: 106
+  focused_failure_count: 0
+  compact_receipt_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_compact_receipt.json"
+  compact_receipt_sha256: "8b4c8b4155cec50692b38427d1efde0590cef08daec377b865ddf14b97c1e2cd"
+  independent_evidence_path: "research_control/tasks/RT-20260809-018/artifacts/validator_engineer_p4_t01_independent_evidence.yaml"
+  independent_evidence_sha256: "f8179206be3cd5322e2a9a4f0984ebdeea15100d866d94653e41aadbbf41f377"
+  latex_receipt_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_latex_compile_receipt.json"
+  latex_receipt_sha256: "4e17ed01dab33a35636f355448982a26f75b217cc14d1e3e7ad93c797106c013"
+  latex_page_count: 6
+  latex_final_overfull_warning_count: 0
+  visual_review_status: "PASS_ALL_SIX_PAGES"
+  process_validation_is_physics_proof: false
+
+output_inventory:
+  - path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex"
+    sha256: "464743abcc055873b6da41fcab78b4808e86378fc9dd91cfbc9acd0cc22eb151"
+    authority: "registered draft/control TeX after registry update"
+  - path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_principal_symbol_specification_v1.yaml"
+    sha256: "d0ad866ccf9791487e5a7a04d23acf482581609d2a017206799fa13296bd8e62"
+    authority: "task-local specification"
+  - path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_factorization_branch_ledger_v1.yaml"
+    sha256: "983d5e014951c02eac4cd7949cc2da36a1d15ceda54406ba6375116b15964260"
+    authority: "task-local branch ledger"
+  - path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_source_provenance_manifest_v1.yaml"
+    sha256: "36897a4a7a7c1aa77be3ae207a1b67a65f6b3373b6ea0cd9a7529a446c498b01"
+    authority: "task-local source-provenance manifest"
+  - path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_principal_symbol_model.py"
+    sha256: "52f320cd6e8d6c1cd66ce66256a08c71bb1f6f0aceaef68ca02bf4ad370531b5"
+    authority: "task-local executable evidence"
+  - path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_independent_reproduction.py"
+    sha256: "6f827b1f38ac87f3ad07f4bd57356a0fc0f652ac50c929423c8a65e5170051a6"
+    authority: "task-local independent executable evidence"
+  - path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_principal_symbol_validation.json"
+    sha256: "bfe5ca8622e1b4e2852e57f6d8ca688ad1b20a20ebeff6754b510bd183ad7276"
+    authority: "task-local validation receipt"
+  - path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_compact_receipt.json"
+    sha256: "8b4c8b4155cec50692b38427d1efde0590cef08daec377b865ddf14b97c1e2cd"
+    authority: "task-local compact receipt"
+  - path: "research_control/tasks/RT-20260809-018/artifacts/fixtures/v22_p4_t01_principal_symbol_cases.yaml"
+    sha256: "d4c30b038402e308d9d756c66aa80fdb1d0ba7ce2e9834a739b5c49f13bb0de1"
+    authority: "task-local frozen fixtures"
+  - path: "research_control/tasks/RT-20260809-018/artifacts/parent_fusion_notes_p4_t01_principal_symbol.md"
+    sha256: "68496cac32dc4b9093b01d736bf9bfaf9294f145069c54c336a36bd27dc9607d"
+    authority: "registered draft/control Markdown after registry update"
+
+completion_checks:
+  task_scope_exact: true
+  one_outer_agentjob: true
+  parent_child_parallel_synthesis: true
+  child_count_two: true
+  unresolved_parent_conflicts_zero: true
+  highest_derivative_operator_explicit: true
+  constraint_gauge_redundancy_reduced_lawfully: true
+  determinant_lawful: true
+  principal_polynomial_nontrivial: true
+  global_multiplicities_explicit: true
+  density_weight_explicit: true
+  branch_degeneracies_complete: true
+  passive_chart_covariance_passed: true
+  frame_covariance_passed: true
+  independent_reproduction_passed: true
+  source_provenance_bound: true
+  target_convenience_absent: true
+  physical_geometry_not_claimed: true
+  distance_to_gr_unchanged: true
+  checkpoint_pending_exactly_once: true
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "M_src adoption"
+    - "source-law coefficient datum background or candidate adoption"
+    - "invented physical gauge or matter quotient"
+    - "unreduced gauge determinant used as a physical polynomial"
+    - "quadratic metric factor inserted by premise"
+    - "six source hyperplanes relabeled as one physical causal cone"
+    - "source-time normalization relabeled as a physical clock or speed"
+    - "Lorentzian signature scale or g_eff claim"
+    - "P4-T02 hyperbolicity robustness universality or common-cone verdict"
+    - "matter coupling or Einstein-equation claim"
+    - "benchmark promotion or Gate Chair verdict"
+    - "internal reproduction relabeled external review"
+    - "completed derivation or global theory rejection"
+  summary: "The source-principal theorem, branch ledger, internal reproduction, parent-child agreement, validator PASS, rendered PDF, and checkpoint eligibility are not authority for ontology adoption, physical causal geometry, downstream GR objects, external review, or scientific promotion."
+
+project_improvement_signals: []
+project_improvement_signal_count: 0
+project_improvement_sidecar_required: false
+
+authorization_matrix:
+  canonical_ontology_edit: false
+  source_law_adoption: false
+  background_adoption: false
+  physical_cone_claim: false
+  lorentzian_signature_claim: false
+  effective_metric_claim: false
+  p4_t02_verdict: false
+  protected_gate_review: false
+  external_review: false
+  reviewer_contact: false
+  benchmark_promotion: false
+  publication: false
+  release: false
+  push: false
+  external_action: false
+
+command_results:
+  - command: "validate_v22_p4_t01_principal_symbol.py --write --json"
+    status: "PASS"
+    summary: "All 106 reduction symbol polynomial multiplicity covariance branch provenance synthesis and authority checks pass."
+  - command: "v22_p4_t01_principal_symbol_model.py and v22_p4_t01_independent_reproduction.py"
+    status: "PASS"
+    summary: "The exact primary model and separate Leibniz implementation agree on five determinants, passive chart covariance, and the nonzero fourfold rank-two symbol."
+  - command: "bundled Tectonic scratch build and rendered-page visual review"
+    status: "PASS_WITH_NONBLOCKING_UNDERFULL_WARNING"
+    summary: "The registered TeX source compiles to a six-page letter-size scratch PDF with zero overfull warnings and one legible table underfull warning; all six rendered pages were visually reviewed and no PDF is tracked."
+  - command: "prospective physics payload family freeze and ordinary route admissions"
+    status: "PASS"
+    summary: "The theorem is admitted on the physics path as a materially distinct branch, and handoff-0987 binds exactly P4-T01 after commit 2c0cefed9d55ab43fce3ce1532a56ce26d3f1f25."
+  - command: "task taxonomy affected documentation claim research-control memory and generated-freshness validation"
+    status: "PASS_PENDING_FINAL_SYNCHRONIZATION"
+    summary: "These repository-wide validations run after final registry handoff and generated-memory synchronization and before checkpoint."
+  - command: "checkpoint_research_transaction.py --job-id AJ-RT-20260809-018-001 --planner-validation"
+    status: "PENDING_SINGLE_INVOCATION"
+    summary: "One governed checkpoint remains; no retry push publication or external action is authorized."
+
+selected_next_route:
+  route_id: "v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02"
+  work_kind: "audit_or_review"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "refuter@0.2.0"
+  supporting_perspective: "hyperbolic-PDE specialist consultation and smuggling-auditor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "hyperbolicity_universality_robustness_hard_fail_screen"
+  source_extension_category: "principal_structure_stress"
+  source_extension_import_classification: "proposal_only_source_principal_data_under_stress"
+  task_type: "v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Stress the exact P4-T01 source principal polynomial for hyperbolicity, strong or symmetric well-posedness, stable time orientation, degeneracy conditioning, common-cone universality across declared sectors, finite-variation robustness, and every preregistered hard-fail trigger without inserting or fitting a target metric."
+  expected_result_kind: "audit_verdict_or_precise_obstruction"
+  strategy_id: "stress_v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  selected_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REDUCED-PRINCIPAL-V1"
+  transition_id: "STRESS_REDUCED_SOURCE_PRINCIPAL_STRUCTURE"
+  dependency_task_ids:
+    - "P4-T01"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+  p2_t02_not_selected_reason: "P2-T02 acceptance requires a real external mathematical specialist and reviewer contact. No reviewer-contact or external-action authority exists; same-context children do not satisfy it. P4-T02 is independently dependency-ready after checkpoint."
+
+next_recommendation: "Run the single governed checkpoint for AJ-RT-20260809-018-001. After it commits, execute exactly one separately admitted V22 P4-T02 Refuter AgentJob with hyperbolic-PDE and Smuggling Auditor pressure to stress the exact six-branch polynomial for hyperbolicity, common-cone universality, degeneracy conditioning, robustness, and hard-fail disposition without inserting a metric or taking protected or external action."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, plan, burden, registered P3 sources, handoff-0987, RT-017 checkpoint, and role-fit preflight passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 106 focused checks, independent determinant implementation, both child outputs, five conflict resolutions, TeX compile, and six-page visual review pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Registry, generated-memory, affected-profile, documentation-impact, claim-language, and full research-control validation run before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed AJ-RT-20260809-018-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Approved frontier, compact frontier, task-index, graph, wiki, and registry projections regenerate before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only verification run before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation must preserve every adoption and physical-geometry block."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review is authorized for P4-T01."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  background_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+protected_authority:
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+
+handoff_id: "handoff-0988"
+handoff_path: "research_control/handoffs/handoff-0988.yaml"
+handoff_authority_boundary: "This completion records only P4-T01 draft/control reduced source-principal theorem branch ledger covariance and internal reproduction results and selects P4-T02 for a separate AgentJob after checkpoint. It creates no ontology metric causal-geometry coupling Einstein Gate benchmark external-review publication release push or external-action authority."

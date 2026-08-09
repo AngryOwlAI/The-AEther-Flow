@@ -1,0 +1,32 @@
+schema_id: "parent_child_execution_unit_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician with hyperbolic-PDE consultation lens"
+task_id: "RT-20260809-018"
+job_id: "AJ-RT-20260809-018-001"
+status: "completed"
+question: "What is the exact fully reduced principal symbol of the sealed P3-T02 fixed-law linearization, and what are its global factors, weights, and degeneracy strata?"
+result:
+  disposition: "constructed_branch_complete_source_principal_symbol"
+  reduced_symbol: "diag(k(X_1),...,k(X_6))"
+  field_dimension: 6
+  equation_dimension: 6
+  algebraic_constraint_count: 0
+  differential_constraint_count: 0
+  internal_gauge_generator_count: 0
+  algebraic_redundancy_count: 0
+  principal_polynomial: "(w+x)(w+y)(w+z)(w+x+y)(w+y+2z)(w+2x+z)"
+  global_factor_count: 6
+  global_factor_multiplicities: [1, 1, 1, 1, 1, 1]
+  source_coordinate_density_weight: 0
+  maximum_nonzero_symbol_corank: 4
+  unique_fourfold_zero_branches: [2, 3, 4, 6]
+  independent_reproduction_status: "PASS"
+  unresolved:
+    - "whether the six source branches support one stable common physical causal geometry"
+    - "hyperbolicity conditioning and finite-variation robustness"
+    - "physical time, scale, matter-sector universality, and g_eff"
+new_mathematical_payload:
+  - "theorem with hypotheses and proof for the lawful reduced diagonal source symbol"
+  - "square-free degree-six determinant-line polynomial with exact coordinate and frame covariance"
+  - "complete pair triple fourfold and higher intersection rank classification"
+claim_boundary_preserved: true

@@ -457,6 +457,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1` `research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_without_hidden_geometry_v1.tex`
 - `TEX-V22-P3-T03-CONTROLLED-REFINEMENT-LIMIT-V1` `research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex`
 - `TEX-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-PREPRINCIPAL-V1` `research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex`
+- `TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1` `research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex`
 
 ## superseded
 

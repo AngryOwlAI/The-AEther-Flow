@@ -1,0 +1,249 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+handoff_id: "handoff-0988"
+handoff_number: 988
+handoff_kind: "v22_p4_t01_branch_complete_reduced_source_principal_symbol"
+task_id: "RT-20260809-018"
+decision_id: "DDR-20260809-018"
+job_id: "AJ-RT-20260809-018-001"
+completion_id: "AJC-AJ-RT-20260809-018-001"
+completion_path: "research_control/tasks/RT-20260809-018/jobs/completions/AJC-AJ-RT-20260809-018-001.yaml"
+completion_sha256: "c27693aa9b6060008fe24808402f57b5d92c571f9121b792fd1b89abc3a86dbd"
+status: "ready_for_v22_p4_t02_after_checkpoint"
+created_at: "2026-08-09T19:17:33Z"
+parent_handoff_id: "handoff-0987"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+completed_plan_task_id: "P4-T01"
+source_role_id: "ontology-formalizer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "ontology-formalizer@0.2.0--RT-20260809-018"
+summary: "P4-T01 lawfully reduces the fixed P3-T02/P3-T04 system after recording zero algebraic constraints, differential constraints, internal gauge generators, and equation redundancies. The source symbol is diag(k(X_A)); its determinant is a nontrivial square-free degree-six polynomial with six simple global factors, source-coordinate density weight zero, exact passive-chart covariance, and the intrinsic det(S)/det(R) frame law. All pairs cross, all triples meet, and branches 2,3,4,6 share the unique nonzero fourfold intersection k=(1,0,-1,-1), where symbol corank is four; no nonzero fivefold intersection exists. A separate rational Leibniz implementation reproduces five cases. All 106 focused checks and six rendered pages pass. This is proposal-only source-principal data, not one physical cone, Lorentzian signature, scale, g_eff, adoption, or Distance-to-GR change."
+next_action: "Run the single governed checkpoint for AJ-RT-20260809-018-001. After it commits, execute exactly one separately admitted V22 P4-T02 Refuter AgentJob with hyperbolic-PDE and Smuggling Auditor pressure; do not contact reviewers or take any protected or external action."
+current_claim_boundary: "CB-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-001"
+loop_risk_route: "stress_v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260809-018"
+  latest_research_handoff_id: "handoff-0988"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-018-001. After it commits, execute exactly one separately admitted V22 P4-T02 Refuter AgentJob with hyperbolic-PDE and Smuggling Auditor pressure; do not contact reviewers or take any protected or external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed P4-T01 checkpoint followed by one separately admitted V22 P4-T02 hyperbolicity universality robustness and hard-fail stress packet."
+  completed_task: "RT-20260809-018"
+  completed_completion_path: "research_control/tasks/RT-20260809-018/jobs/completions/AJC-AJ-RT-20260809-018-001.yaml"
+  completed_completion_sha256: "c27693aa9b6060008fe24808402f57b5d92c571f9121b792fd1b89abc3a86dbd"
+  source_task_id: "RT-20260809-017"
+  source_job_id: "AJ-RT-20260809-017-001"
+  source_handoff_id: "handoff-0987"
+  source_handoff_path: "research_control/handoffs/handoff-0987.yaml"
+  source_handoff_sha256: "ec107922c78c04eba9550c7b9296feec8897f8eb7bbbe287d62748a3a429fd03"
+  immutable_route_sha256: "ec107922c78c04eba9550c7b9296feec8897f8eb7bbbe287d62748a3a429fd03"
+  prerequisite_checkpoint_commit: "2c0cefed9d55ab43fce3ce1532a56ce26d3f1f25"
+  principal_theorem_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex"
+  principal_theorem_sha256: "464743abcc055873b6da41fcab78b4808e86378fc9dd91cfbc9acd0cc22eb151"
+  specification_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_principal_symbol_specification_v1.yaml"
+  specification_sha256: "d0ad866ccf9791487e5a7a04d23acf482581609d2a017206799fa13296bd8e62"
+  branch_ledger_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_factorization_branch_ledger_v1.yaml"
+  branch_ledger_sha256: "983d5e014951c02eac4cd7949cc2da36a1d15ceda54406ba6375116b15964260"
+  validation_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_principal_symbol_validation.json"
+  validation_sha256: "bfe5ca8622e1b4e2852e57f6d8ca688ad1b20a20ebeff6754b510bd183ad7276"
+  p4_t01_executed: true
+  p4_t02_selected: true
+  p4_t02_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "the six source hyperplanes described as one physical causal cone"
+    - "source-time normalization described as a physical clock or speed"
+    - "P4-T02 hyperbolicity common-cone robustness or universality described as completed"
+    - "internal computation described as external review or independent scientific replication"
+    - "P4-T01 described as effective metric Gate result benchmark promotion or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P4"
+  plan_task_id: "P4-T01"
+  title: "Derive the gauge-reduced principal symbol and polynomial"
+  work_item_status: "completed_checkpoint_pending"
+  result_status: "P4_T01_BRANCH_COMPLETE_SOURCE_PRINCIPAL_CANDIDATE"
+  next_plan_task_id: "P4-T02"
+  p3_t04_executed: true
+  p4_t01_executed: true
+  p4_t02_dependency_ready_after_checkpoint: true
+  p4_t02_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta_source_principal_candidate_only"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "A branch-complete proposal-only source polynomial supplies no stable common physical cone, Lorentzian signature, scale, effective metric, coupling, field equation, or Gate evidence."
+  downstream_unlocked:
+    - "P4-T02 after a valid checkpoint"
+  downstream_still_blocked:
+    - "P2-T02 external review without reviewer-contact authority"
+    - "canonical ontology coefficient datum source law or candidate adoption"
+    - "P4-T03 without a qualifying P4-T02 continuation verdict"
+    - "physical scale g_eff matter coupling Einstein equations Gates benchmark promotion and completed derivation"
+
+selected_next_route:
+  route_id: "v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02"
+  work_kind: "audit_or_review"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "refuter@0.2.0"
+  supporting_perspective: "hyperbolic-PDE specialist consultation and smuggling-auditor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "hyperbolicity_universality_robustness_hard_fail_screen"
+  source_extension_category: "principal_structure_stress"
+  source_extension_import_classification: "proposal_only_source_principal_data_under_stress"
+  task_type: "v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Stress the exact P4-T01 source principal polynomial for hyperbolicity, strong or symmetric well-posedness, stable time orientation, degeneracy conditioning, common-cone universality across declared sectors, finite-variation robustness, and every preregistered hard-fail trigger without inserting or fitting a target metric."
+  expected_result_kind: "audit_verdict_or_precise_obstruction"
+  strategy_id: "stress_v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  selected_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REDUCED-PRINCIPAL-V1"
+  transition_id: "STRESS_REDUCED_SOURCE_PRINCIPAL_STRUCTURE"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0988"
+  ordinary_handoff_id: "handoff-0988"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P4-T02"
+  ready_science_plan_task_refs:
+    - "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  ready_project_system_plan_task_ids: []
+  selected_plan_task_id: "P4-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  selection_reason: "P4-T01 produced the exact fixed candidate bytes and branch ledger that P4-T02 is defined to stress; P2-T02 still requires unavailable external-review authority."
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260809-018"
+  active_job_id: "AJ-RT-20260809-018-001"
+  current_status: "v22_p4_t01_branch_complete_source_principal_candidate_p4_t02_selected_checkpoint_pending"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p4_t01_executed: true
+  p4_t02_executed: false
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "refuter@0.2.0"
+  selected_next_supporting_perspective: "hyperbolic-PDE specialist consultation and smuggling-auditor@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "stress_v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, plan, burden, role-fit, checkpoint, registered P3 source, and route admission passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 106 focused checks, five independent determinants, both child outputs, five conflict resolutions, and six-page visual review pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Registry, documentation, claim-language, memory, renderer, affected-profile, and research-control checks run before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed AJ-RT-20260809-018-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, claim graph, wiki, and registry projections regenerate before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only verification run before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation must preserve every adoption and physical-geometry block."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  background_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  reviewer_contact_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+
+handoff_authority_boundary: "This handoff records only P4-T01 draft/control reduced source-principal theorem branch covariance degeneracy and internal reproduction data. It changes no ontology or source-law adoption, physical cone, signature, scale, metric, coupling, Einstein equation, Gate, benchmark, proof, external review, publication, release, push, external action, or completed-derivation authority."

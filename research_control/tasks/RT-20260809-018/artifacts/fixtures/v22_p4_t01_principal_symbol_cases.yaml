@@ -1,0 +1,37 @@
+schema_id: "v22_p4_t01_principal_symbol_cases_v1"
+task_id: "RT-20260809-018"
+job_id: "AJ-RT-20260809-018-001"
+status: "frozen_before_target_access"
+cases:
+  - {case_id: "PS01", kind: "highest_derivative_operator", expected: "six_diagonal_source_transport_channels"}
+  - {case_id: "PS02", kind: "algebraic_constraints", expected: "zero"}
+  - {case_id: "PS03", kind: "differential_constraints", expected: "zero"}
+  - {case_id: "PS04", kind: "internal_gauge_generators", expected: "zero"}
+  - {case_id: "PS05", kind: "algebraic_redundancies", expected: "zero"}
+  - {case_id: "PS06", kind: "passive_source_chart_change", expected: "representation_not_gauge"}
+  - {case_id: "PS07", kind: "reduced_symbol", expected: "diag_kXA"}
+  - {case_id: "PS08", kind: "lawful_determinant", expected: "yes_after_explicit_zero_quotients"}
+  - {case_id: "PS09", kind: "principal_polynomial_degree", expected: "six"}
+  - {case_id: "PS10", kind: "principal_polynomial_factor_count", expected: "six"}
+  - {case_id: "PS11", kind: "global_factor_multiplicities", expected: "all_one"}
+  - {case_id: "PS12", kind: "source_coordinate_density_weight", expected: "zero"}
+  - {case_id: "PS13", kind: "field_equation_frame_behavior", expected: "relative_determinant_multiplier"}
+  - {case_id: "PS14", kind: "characteristic_set", expected: "union_of_six_projective_hyperplanes"}
+  - {case_id: "PS15", kind: "all_pair_crossings", expected: "fifteen_rank_two_intersections"}
+  - {case_id: "PS16", kind: "all_triple_crossings", expected: "twenty_rank_three_subsets"}
+  - {case_id: "PS17", kind: "nonzero_fourfold_crossing", expected: "branches_2_3_4_6_only"}
+  - {case_id: "PS18", kind: "fivefold_crossing", expected: "none_for_nonzero_covector"}
+  - {case_id: "PS19", kind: "sixfold_crossing", expected: "zero_covector_only"}
+  - {case_id: "PS20", kind: "maximum_nonzero_symbol_corank", expected: "four"}
+  - {case_id: "PS21", kind: "fixed_direction_repeated_root", expected: "branch_crossing_not_global_repeated_factor"}
+  - {case_id: "PS22", kind: "pure_source_time_covector", expected: "noncharacteristic"}
+  - {case_id: "PS23", kind: "passive_chart_covariance", expected: "exact_factor_and_polynomial_parity"}
+  - {case_id: "PS24", kind: "internal_gauge_choice_invariance", expected: "vacuous_zero_gauge_space"}
+  - {case_id: "PS25", kind: "homogeneous_rescaling", expected: "degree_six"}
+  - {case_id: "PS26", kind: "physical_units", expected: "unresolved_without_source_to_physical_units_map"}
+  - {case_id: "PS27", kind: "metric_factor_premise", expected: "reject"}
+  - {case_id: "PS28", kind: "six_hyperplanes_as_one_quadratic_cone", expected: "reject"}
+  - {case_id: "PS29", kind: "source_time_as_physical_time", expected: "reject"}
+  - {case_id: "PS30", kind: "source_polynomial_as_g_eff", expected: "reject"}
+  - {case_id: "PS31", kind: "internal_reproduction_as_external_review", expected: "reject"}
+  - {case_id: "PS32", kind: "distance_to_gr_promotion", expected: "reject"}
