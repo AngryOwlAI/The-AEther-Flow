@@ -1,0 +1,45 @@
+schema_id: "v22_p4_t02_b2_descriptor_dependency_map_v1"
+status: "draft/control"
+descriptor_id: "B2-P7-CONTINUUM-LIFT-DESCRIPTOR-TARGET-V1"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+formal_tuple: ["sector_set", "continuum_fields", "finite_to_continuum_lift", "source_quotient", "output_quotient", "sector_equations", "compatibility_relation", "common_principal_target", "operational_typing_receipt", "adequacy_reevaluation"]
+nodes:
+  - {node_id: "D0_FINITE_P7_INPUT", status: "present_conditional_input"}
+  - {node_id: "D1_CONTINUUM_FIELDS_REGULARITY", status: "missing"}
+  - {node_id: "D2_FINITE_TO_CONTINUUM_LIFT", status: "missing"}
+  - {node_id: "D3_SOURCE_OUTPUT_QUOTIENTS", status: "missing"}
+  - {node_id: "D4_SECTOR_EQUATIONS_REDUCTION", status: "missing"}
+  - {node_id: "D5_COMPATIBILITY_COMMON_PRINCIPAL_TARGET", status: "missing"}
+  - {node_id: "D6_OPERATIONAL_TYPING_NO_TARGET_RECEIPT", status: "missing"}
+  - {node_id: "D7_P2_T01_ADEQUACY_REEVALUATION", status: "blocked_by_descriptor"}
+  - {node_id: "D8_LATER_ACTIVATION_SELECTOR", status: "blocked"}
+edges:
+  - {from: "D0_FINITE_P7_INPUT", to: "D1_CONTINUUM_FIELDS_REGULARITY"}
+  - {from: "D0_FINITE_P7_INPUT", to: "D2_FINITE_TO_CONTINUUM_LIFT"}
+  - {from: "D1_CONTINUUM_FIELDS_REGULARITY", to: "D3_SOURCE_OUTPUT_QUOTIENTS"}
+  - {from: "D1_CONTINUUM_FIELDS_REGULARITY", to: "D4_SECTOR_EQUATIONS_REDUCTION"}
+  - {from: "D2_FINITE_TO_CONTINUUM_LIFT", to: "D4_SECTOR_EQUATIONS_REDUCTION"}
+  - {from: "D3_SOURCE_OUTPUT_QUOTIENTS", to: "D5_COMPATIBILITY_COMMON_PRINCIPAL_TARGET"}
+  - {from: "D4_SECTOR_EQUATIONS_REDUCTION", to: "D5_COMPATIBILITY_COMMON_PRINCIPAL_TARGET"}
+  - {from: "D5_COMPATIBILITY_COMMON_PRINCIPAL_TARGET", to: "D6_OPERATIONAL_TYPING_NO_TARGET_RECEIPT"}
+  - {from: "D6_OPERATIONAL_TYPING_NO_TARGET_RECEIPT", to: "D7_P2_T01_ADEQUACY_REEVALUATION"}
+  - {from: "D7_P2_T01_ADEQUACY_REEVALUATION", to: "D8_LATER_ACTIVATION_SELECTOR"}
+selected_next_node: "D1_CONTINUUM_FIELDS_REGULARITY"
+selected_packet_scope: "Formalize D1 through D7 as one typed descriptor and proof-obligation envelope; do not claim construction, activation, or adequacy passage."
+acceptance_conditions:
+  - "every descriptor object has domain codomain regularity and source provenance"
+  - "sector equations and quotient reduction are typed without a target atlas or metric"
+  - "the common-principal target is derived from sector equations or a source compatibility relation rather than prescribed as Lorentzian"
+  - "finite-to-continuum control and P2-T01 reevaluation inputs are explicit"
+  - "B2 remains inactive and P4-T03 remains locked"
+stop_conditions:
+  - "finite P7 labels are relabeled continuum sectors by fiat"
+  - "target metric tetrad coframe desired cone or benchmark fit is imported"
+  - "descriptor existence is presented as candidate construction activation or adoption"
+  - "adequacy is claimed before the descriptor is evaluated"
+authority_limits:
+  dependency_map_is_construction: false
+  dependency_map_is_proof: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  distance_to_gr_changed: false

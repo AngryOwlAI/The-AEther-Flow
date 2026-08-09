@@ -1,0 +1,44 @@
+schema_id: "v22_p4_t02_b2_source_provenance_manifest_v1"
+status: "draft/control"
+task_id: "RT-20260809-020"
+entries:
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    use: "P4-T02 acceptance, fallback, and hard-fail boundary"
+  - object_id: "HANDOFF-0989"
+    path: "research_control/handoffs/handoff-0989.yaml"
+    sha256: "617872c1b63574d036c0505075af879385192293fac672b2f8acd99a3ed3939a"
+    use: "exact post-B1 selector route"
+  - object_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+    path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_fallback_matter_principal_candidate_v1.yaml"
+    sha256: "11917a5c868b6ed50633e1b7528b59079db40f10c003c32176d1887df5dae6e5"
+    use: "candidate identity and all-required activation criteria"
+  - object_id: "V22-P2-T04-TO-P3-T01-ACTIVATION-HANDOFF-V1"
+    path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_activation_handoff_v1.yaml"
+    sha256: "4fddf53e2f072825081c0412023a6ce5ce24f633e6f6b6464e81606143ab1fc0"
+    use: "selection-activation separation and fallback prerequisites"
+  - object_id: "TEX-V22-P4-T02-HYPERBOLICITY-UNIVERSALITY-ROBUSTNESS-HARD-FAIL-SCREEN-V1"
+    path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex"
+    sha256: "6eec0961cd84b3ec8f88845de1e5f87c13fee009b151fa557655d09a0fa6b50a"
+    use: "B1 scoped obstruction, local freeze, and B2 inactive status"
+  - object_id: "V22-P4-T02-CANDIDATE-TERMINATION-BUDGET-TRANSITION-V1"
+    path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_candidate_termination_budget_transition_v1.yaml"
+    sha256: "84e7a8c9f94377f6cb6de30e987e442b0381988e40fff2460282451cfaf43e8c"
+    use: "append-only B1 termination, zero-active-family state, and open B2 selector"
+  - object_id: "V22-P2-T01-SOURCE-ADEQUACY-CHECKLIST-V1"
+    path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_source_adequacy_checklist_v1.yaml"
+    sha256: "a9b59df7b5b2d1203fef53cf23817400c6d1511836e97ff1ae21b819dc064e68"
+    use: "post-descriptor adequacy reevaluation interface"
+  - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+    path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    use: "effective_metric_g_eff milestone and source-law route controls"
+derived_or_forbidden_inputs:
+  generated_wiki_used_as_authority: false
+  local_cache_used_as_authority: false
+  target_atlas_used: false
+  target_metric_used: false
+  desired_gr_cone_used: false
+  benchmark_fit_used: false
+authority_note: "Tracked registered sources and task-local control artifacts govern; generated derivatives and local retrieval are navigational only."

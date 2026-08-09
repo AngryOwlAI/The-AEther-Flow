@@ -1,0 +1,115 @@
+schema_id: "v22_p4_t02_b2_selector_decision_v1"
+status: "draft/control"
+authority: "science_draft"
+task_id: "RT-20260809-020"
+job_id: "AJ-RT-20260809-020-001"
+decision_id: "V22-P4-T02-B2-DESCRIPTOR-PATH-SELECTION-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+candidate_status_before: "preregistered_fallback_inactive"
+candidate_status_after: "preregistered_fallback_inactive_descriptor_formalization_selected"
+selected_path:
+  path_id: "FORMALIZE_B2_CONTINUUM_LIFT_DESCRIPTOR_V1"
+  packet_type: "ontology_law_research_packet"
+  route_label: "ontology-law-research-packet"
+  next_role_family: "ontology-formalizer@0.2.0"
+  supporting_perspective: "candidate-constructor@0.2.0 and smuggling-auditor@0.2.0"
+  next_plan_task_id: "P4-T02"
+  next_work_item_id: "P4-T02-B2-DESCRIPTOR"
+  next_task_type: "v22_p4_t02_b2_continuum_lift_descriptor_formalization"
+  transition_id: "FORMALIZE_B2_DESCRIPTOR"
+  requires_human_gate: false
+  b2_activation_effect: false
+  p4_t03_unlock_effect: false
+decision_basis:
+  activation_rule: "all six preregistered fallback activation predicates are required"
+  readiness_vector_order: ["b1_terminated", "zero_other_active", "fresh_exact_selector", "p7_hashes_unchanged", "descriptor_complete", "adequacy_reevaluated"]
+  readiness_vector: [1, 1, 1, 1, 0, 0]
+  activation_value: 0
+  decisive_missing_predicates:
+    - "descriptor_complete"
+    - "adequacy_reevaluated"
+  conclusion: "Activation is inadmissible; descriptor formalization is the lowest-authority constructive same-milestone route."
+theoretical_decision_output:
+  selected_next_packet_type: "ontology_law_research_packet"
+  decision_basis: "The exact conjunctive activation rule evaluates to false because the continuum-lift descriptor and its P2-T01 adequacy reevaluation do not exist."
+  theoretical_method: "Evaluate the immutable activation predicate, type the minimal missing descriptor tuple, order its dependencies, compare lawful next routes, and select the constructive packet with the least authority."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "Proposal-only descriptor formalization is unprotected; canonical ontology or source-law adoption remains separately human-gated."
+  decision_consequence: "One Ontology Formalizer packet may define the B2 descriptor and proof obligations after checkpoint; B2 remains inactive and P4-T03 remains locked."
+  new_payload_novelty: "First exact B2 activation readiness vector, activation-exclusion proof, typed ten-component continuum-lift descriptor target, and dependency partial order."
+  source_extension_category: "source_extension_candidate"
+  source_extension_import_classification: "new ontology primitive candidate requiring source-only descriptor formalization and no-target audit"
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  non_trigger_classifications_rejected: ["ordinary_gap", "workflow_inconvenience"]
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Formalize the missing B2 continuum lift, sector equations, quotient data, common-principal target, source-operational typing, no-target receipt, and adequacy reevaluation interface without activating or adopting the fallback."
+  missing_source_law: "A target-atlas-free finite-P7-to-continuum lift and sector-compatibility law from which a common reduced principal target can be derived."
+  underdetermination_statement: "Current ontology does not derive the B2 finite-to-continuum lift, continuum sector equations, quotient compatibility law, or common-principal construction required for activation."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "draft/control"
+    candidate_status: "proposal-only"
+    material_class: "source-extension data"
+    source_side_definition: "A typed descriptor envelope for constructing continuum P7 sector fields and equations, quotienting redundancies, and deriving a sector-common principal target without assuming target geometry."
+    formal_objects: ["P7 sector set", "continuum sector field family", "finite-to-continuum lift", "source quotient", "output quotient", "sector equations", "sector compatibility relation", "common-principal target", "operational typing receipt", "adequacy reevaluation"]
+    domains: ["exact protected finite P7 conditional input", "proposal-only continuum regularity domains", "declared refinement or limit parameter"]
+    maps: ["finite P7 records to continuum sector fields", "sector states to quotient tangents", "reduced sector symbols to a compatibility class", "descriptor to P2-T01 adequacy inputs"]
+    proof_obligations: ["lift existence and regularity", "controlled finite-to-continuum correspondence", "constraint and gauge reduction", "common-principal derivation", "no-target-import audit", "post-descriptor adequacy reevaluation"]
+  candidate_law_comparison:
+    candidates: ["activate now", "formalize descriptor", "refute undefined descriptor", "request human gate"]
+    comparison_basis: ["activation predicate", "constructive availability", "authority level", "object definition status", "claim boundary"]
+    selection_status: "descriptor_formalization_selected"
+  candidate_law_refutation:
+    refuted_candidate: "none"
+    refutation_basis: "No constructed B2 continuum descriptor exists to refute."
+    surviving_obligations: ["all descriptor components", "no-target audit", "adequacy reevaluation"]
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Only adoption or canonical ontology modification would require a human gate."
+  exact_gr_recovery_obligations:
+    checklist: ["target-atlas-free source definition", "common stable physical causal structure remains unproved", "universal matter compatibility remains unproved", "physical scale and gluing remain unproved", "Einstein-leading dynamics remains blocked"]
+    distance_to_gr_links: ["effective_metric_g_eff", "matter_coupling", "einstein_equations", "benchmark_promotion"]
+  no_target_import_audit_scope:
+    forbidden_source_classes: ["target_atlas", "target_metric", "target_tetrad", "target_coframe", "desired_gr_cone", "benchmark_success", "candidate_reconstruction", "generated_derivative", "registry_metadata_authority", "role_authority", "validation_authority"]
+  atlas_glue_obligations:
+    profile_law: "not yet defined"
+    selector_law: "not yet defined"
+    transition_law: "not yet defined"
+    inverse_checks: "required in the descriptor packet"
+    cocycle_checks: "required if local lifts are proposed"
+    finite_variation_robustness: "required before any activation decision"
+  failure_branches:
+    collapse: "continuum lift erases finite P7 distinctions"
+    nonuniqueness: "multiple inequivalent lifts satisfy the same finite data without a source selector"
+    inverse_defect: "finite and continuum maps fail the declared inverse or recovery relation"
+    cocycle_defect: "local descriptor data do not glue"
+    variation_fragility: "small admitted source variation destroys the descriptor or common-principal target"
+  known_risks: ["finite labels laundered into continuum sector semantics", "desired cone imported as compatibility selector", "descriptor existence confused with construction or activation"]
+  failed_alternatives: ["automatic activation", "P4-T03 execution", "premature scoped no-go", "generic controlled pause"]
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "none in this selector"
+    exact_requested_ontology_edit: "none"
+authority_limits:
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  b1_termination_preserved: true
+  b2_activated: false
+  source_extension_adopted: false
+  canonical_ontology_modified: false
+  p4_t03_unlocked: false
+  gate_b_verdict_issued: false
+  physics_promotion_authorized: false
+  proof_authority: false

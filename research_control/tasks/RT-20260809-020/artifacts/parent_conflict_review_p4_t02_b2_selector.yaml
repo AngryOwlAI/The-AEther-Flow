@@ -1,0 +1,39 @@
+schema_id: "parent_conflict_review_v1"
+task_id: "RT-20260809-020"
+job_id: "AJ-RT-20260809-020-001"
+review_id: "PCR-RT-20260809-020-001"
+status: "resolved"
+created_at: "2026-08-09T21:27:35Z"
+resolution_rounds: 1
+resolved_conflict_count: 4
+unresolved_conflicts: []
+resolved_conflicts:
+  - conflict_id: "SELECTOR_BINDING_VERSUS_ACTIVATION"
+    inputs:
+      phys_math: "R3 becomes true when the exact candidate is selected."
+      phys_phil: "Selection language can be misread as activation."
+    resolution: "Set only R3 true; keep R5 and R6 false, activation_value false, and every activation or adoption flag false."
+  - conflict_id: "DESCRIPTOR_TARGET_VERSUS_CONSTRUCTION"
+    inputs:
+      phys_math: "The ten-component tuple sharply defines the next object."
+      phys_phil: "A typed tuple can be laundered into existence."
+    resolution: "Label the tuple a proposal-only theorem target and proof-obligation envelope; state that no component is instantiated."
+  - conflict_id: "ONTOLOGY_LAW_TRIGGER_VERSUS_GLOBAL_IMPOSSIBILITY"
+    inputs:
+      phys_math: "The present ontology lacks the required lift and compatibility law."
+      phys_phil: "Lack of derivation is not impossibility."
+    resolution: "Use derivation_critical_missing_source_law and blocked_adoption_open_continuation; keep no_go_theorem_status not_proved."
+  - conflict_id: "REFUTER_NOW_VERSUS_DESCRIPTOR_FIRST"
+    inputs:
+      phys_math: "A later descriptor may fail exact consistency tests."
+      phys_phil: "Refuting an undefined object would be rhetorical rather than scientific."
+    resolution: "Select descriptor formalization now; reserve Smuggling Auditor and Refuter roles until a concrete descriptor or exact obstruction exists."
+fusion_result:
+  selected_path_id: "FORMALIZE_B2_CONTINUUM_LIFT_DESCRIPTOR_V1"
+  selected_next_packet_type: "ontology_law_research_packet"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  activation_value: false
+  unresolved_conflict_count: 0
+  claim_boundary_preserved: true
+  child_agentjob_count: 0
+  child_subagent_count: 0

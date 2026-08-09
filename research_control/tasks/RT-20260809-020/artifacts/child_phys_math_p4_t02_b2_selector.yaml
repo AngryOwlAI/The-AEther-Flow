@@ -1,0 +1,31 @@
+schema_id: "child_phys_math_p4_t02_b2_selector_v1"
+task_id: "RT-20260809-020"
+job_id: "AJ-RT-20260809-020-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+input_boundary: "Exact B2 candidate identity, all-required activation rule, B1 termination evidence, P2-T01 adequacy interface, and no-target-import boundary."
+results:
+  readiness_predicate: "Act_B2 = R1 and R2 and R3 and R4 and R5 and R6"
+  readiness_vector: [1, 1, 1, 1, 0, 0]
+  activation_value: 0
+  theorem_id: "THM-V22-P4T02-B2-CONJUNCTIVE-ACTIVATION-EXCLUSION"
+  theorem_status: "proved within the preregistered Boolean activation rule"
+  descriptor_tuple: ["sector set", "continuum fields", "finite-to-continuum lift", "source quotient", "output quotient", "sector equations", "compatibility relation", "common-principal target", "operational typing receipt", "adequacy reevaluation"]
+  selected_next_packet: "ontology-law-research-packet descriptor formalization"
+  selected_next_role: "ontology-formalizer@0.2.0"
+unique_contributions:
+  - "finite activation-exclusion proof"
+  - "ten-component typed descriptor target"
+  - "dependency partial order ending in a later activation selector"
+  - "fail-closed branches for lift, quotient, reduction, common-principal, and adequacy defects"
+limitations:
+  - "No continuum field or lift is constructed."
+  - "No sector equation or common principal polynomial is derived."
+  - "No adequacy reevaluation is performed."
+authority_limits:
+  source_law_adopted: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physical_geometry_claimed: false
+  physics_promotion_authorized: false

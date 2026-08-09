@@ -1,0 +1,47 @@
+schema_id: "v22_p4_t02_b2_activation_readiness_matrix_v1"
+status: "draft/control"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+rule: "all_required_conjunction"
+predicate_order: ["R1_B1_TERMINATED", "R2_ZERO_OTHER_ACTIVE", "R3_FRESH_EXACT_SELECTOR", "R4_P7_HASHES_UNCHANGED", "R5_DESCRIPTOR_COMPLETE", "R6_ADEQUACY_REEVALUATED"]
+rows:
+  - predicate_id: "R1_B1_TERMINATED"
+    value: true
+    evidence_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_candidate_termination_budget_transition_v1.yaml"
+    explanation: "B1 is append-only terminated and locally frozen."
+  - predicate_id: "R2_ZERO_OTHER_ACTIVE"
+    value: true
+    evidence_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_candidate_termination_budget_transition_v1.yaml"
+    explanation: "No source-extension family remains active after B1 termination."
+  - predicate_id: "R3_FRESH_EXACT_SELECTOR"
+    value: true
+    evidence_path: "research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_selector_decision_v1.yaml"
+    explanation: "This selector binds the unchanged B2 candidate and family fingerprints."
+  - predicate_id: "R4_P7_HASHES_UNCHANGED"
+    value: true
+    evidence_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_fallback_matter_principal_candidate_v1.yaml"
+    explanation: "The selector reads but does not modify the protected finite P7 conditional input."
+  - predicate_id: "R5_DESCRIPTOR_COMPLETE"
+    value: false
+    evidence_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_fallback_matter_principal_candidate_v1.yaml"
+    explanation: "Continuum fields, regularity, lift, quotient data, sector equations, common-principal target, and typing receipt are not constructed."
+  - predicate_id: "R6_ADEQUACY_REEVALUATED"
+    value: false
+    evidence_path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_source_adequacy_checklist_v1.yaml"
+    explanation: "The adequacy screen cannot be reevaluated until the descriptor exists."
+readiness_vector: [1, 1, 1, 1, 0, 0]
+activation_value: false
+activation_decision: "NOT_ACTIVATED"
+selected_repair_predicate: "R5_DESCRIPTOR_COMPLETE"
+ordered_followup_predicate: "R6_ADEQUACY_REEVALUATED"
+theorem:
+  theorem_id: "THM-V22-P4T02-B2-CONJUNCTIVE-ACTIVATION-EXCLUSION"
+  statement: "If all activation predicates are required and at least one predicate is false, B2 activation is false; here R5 and R6 are false."
+  proof_kind: "finite Boolean conjunction evaluation"
+  proof_status: "proved within the preregistered activation rule"
+authority_limits:
+  readiness_is_viability_evidence: false
+  selector_creates_missing_descriptor: false
+  selector_performs_adequacy_reevaluation: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physics_promotion_authorized: false

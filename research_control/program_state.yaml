@@ -1,12 +1,102 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260809-019"
-active_agent_job_id: "AJ-RT-20260809-019-001"
-latest_handoff_id: "handoff-0989"
-current_status: "v22_p4_t02_b1_scoped_obstruction_b2_selector_selected_checkpoint_pending"
-claim_boundary_summary: "RT-20260809-019 proves the exact fixed B1 source PDE is symmetric hyperbolic relative to proposal-only tau and its polynomial has a polyhedral source hyperbolicity component, while proving no nonzero quadratic vanishes on the six characteristic hyperplanes, finding no P7-to-B1 continuum sector map, and constructing an arbitrarily small family-level complex-speed countermodel. HF04 and family-level HF05 terminate and locally freeze B1 append-only. This is a scoped obstruction: B2 remains inactive, P4-T03 remains locked, and no protected Gate verdict, global no-go, physical cone, g_eff, adoption, or Distance-to-GR delta is created."
+active_task_id: "RT-20260809-020"
+active_agent_job_id: "AJ-RT-20260809-020-001"
+latest_handoff_id: "handoff-0990"
+current_status: "v22_p4_t02_b2_descriptor_path_selected_checkpoint_pending"
+claim_boundary_summary: "RT-20260809-020 evaluates the exact B2 readiness vector as (1,1,1,1,0,0), proves activation false under the preregistered conjunction, and selects one proposal-only Ontology Formalizer descriptor-formalization packet. B1 remains locally frozen, B2 inactive, P4-T03 locked, and no continuum construction, adoption, protected Gate verdict, physical cone, g_eff, global no-go, or Distance-to-GR delta is created."
 next_plan_task_id: "P4-T02"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260809-019-001. After it commits, execute exactly one V22 P4-T02 Theoretical Continuation Selector AgentJob to choose one bounded descriptor or activation path for the inactive B2 fallback while preserving B1 termination and P4-T03 lock; do not contact reviewers or take any protected or external action."
+next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260809-020-001. After it commits, execute exactly one V22 P4-T02 ontology-law-research-packet under ontology-formalizer@0.2.0 to formalize the B2 continuum-lift descriptor and proof obligations without activating or adopting B2; do not execute P4-T03 or any protected or external action."
+
+v22_p4_t02_b2_descriptor_path_selection:
+  task_id: "RT-20260809-020"
+  parent_task_id: "RT-20260809-019"
+  parent_handoff_id: "handoff-0989"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "B2_DESCRIPTOR_FORMALIZATION"
+  claim_boundary_id: "CB-V22-P4-T02-B2-DESCRIPTOR-SELECTOR-001"
+  status: "PASS_V22_P4_T02_B2_ACTIVATION_EXCLUDED_DESCRIPTOR_PATH_SELECTED"
+  work_item_status: "fallback_descriptor_path_selected_construction_pending_checkpoint"
+  route_label: "ordinary-research-packet"
+  selected_role_family: "theoretical-continuation-selector@0.1.0"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_supporting_perspective: "candidate-constructor@0.2.0 and smuggling-auditor@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "formalize_v22_p4_t02_b2_continuum_lift_descriptor_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Formalize the missing B2 finite-to-continuum lift sector equations quotient compatibility law common-principal target operational typing no-target receipt and adequacy interface without activating or adopting B2."
+  source_head: "2341c0de8f496e938fb2ed4b5e53d91721446690"
+  source_tree: "88a43270820f61503496df198d59120a3e5d4fb1"
+  prior_checkpoint_job_id: "AJ-RT-20260809-019-001"
+  prior_checkpoint_commit: "2341c0de8f496e938fb2ed4b5e53d91721446690"
+  source_handoff_id: "handoff-0989"
+  source_handoff_path: "research_control/handoffs/handoff-0989.yaml"
+  source_handoff_sha256: "617872c1b63574d036c0505075af879385192293fac672b2f8acd99a3ed3939a"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  fused_selector_path: "research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_fallback_descriptor_selection_v1.tex"
+  fused_selector_sha256: "544b7a533c47835d3e6173dff35547bf3ce04278085d3b02b1445642001bca02"
+  selector_decision_path: "research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_selector_decision_v1.yaml"
+  selector_decision_sha256: "2c0481ca2a43cd734d0af36681ac2e5793f932d6daa77656944538fdea57298d"
+  activation_readiness_path: "research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_activation_readiness_matrix_v1.yaml"
+  activation_readiness_sha256: "b098ce536d0f25ede2988c96956aac9b4fcb8f02f17edde706d2a9e1b1ef3c8b"
+  descriptor_dependency_map_path: "research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_descriptor_dependency_map_v1.yaml"
+  descriptor_dependency_map_sha256: "100160e31e8ffe31a18a9b2160c7dfbda4a946a42c625df570294764d54bd256"
+  provenance_manifest_path: "research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_source_provenance_manifest_v1.yaml"
+  provenance_manifest_sha256: "05693d395b9b9da2c6530dc85d0d58ed4143ddf79d2f0e8179a7a931c7a3fbbc"
+  parent_fusion_path: "research_control/tasks/RT-20260809-020/artifacts/parent_fusion_notes_p4_t02_b2_selector.md"
+  parent_fusion_sha256: "4a960c423dbe86f4a7adc73704e62fbe96fab86112305953297705c168496909"
+  latex_compile_receipt_path: "research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_latex_compile_receipt.json"
+  latex_compile_receipt_sha256: "c19b0fbbc8858fee88d11f2dcb846db18597b9296f46754c8aad97abc832b4ce"
+  task_sha256: "b989b2aa436839e79beb79661879252b15646c86cf265ad0d0398459a8477c69"
+  agent_job_id: "AJ-RT-20260809-020-001"
+  agent_job_sha256: "d43cb8c924aea7b036cce3164991a9321b7a4214d7043454fa56daeb9faab69c"
+  decision_id: "DDR-20260809-020"
+  decision_sha256: "52b7376256e0e5738a9d6db8a78d74707bf639776c6c1c5d1b27456e432f1fd5"
+  execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260809-020"
+  execution_role_sha256: "fdac0bea8d0b9912cbe16d2e1ea97cf339b72baaab6be06f25dd8c4ac7a174c8"
+  completion_path: "research_control/tasks/RT-20260809-020/jobs/completions/AJC-AJ-RT-20260809-020-001.yaml"
+  completion_sha256: "79e17446e1aa5e7d2b5d430289755f7007751267e4bb5553dae31f9c99c5c75c"
+  handoff_id: "handoff-0990"
+  handoff_path: "research_control/handoffs/handoff-0990.yaml"
+  handoff_sha256: "59c98cc57da0d44cd8f15231ca11bbac417e048f6b557df680454dd09c539ab4"
+  selected_candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  readiness_vector:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 0
+    - 0
+  activation_value: false
+  activation_theorem_id: "THM-V22-P4T02-B2-CONJUNCTIVE-ACTIVATION-EXCLUSION"
+  descriptor_component_count: 10
+  dependency_node_count: 9
+  dependency_edge_count: 10
+  focused_validation_path: "research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_selector_validation.json"
+  focused_validation_sha256: "f28bf3ea2200393b4f81fabfcb6a0e6f105224b611e2a30f58120ad7df14bad7"
+  compact_receipt_path: "research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_selector_compact_receipt.json"
+  compact_receipt_sha256: "33ed859ed1a0042306b96b8cea0073ec02efb087311d771d6c0be45cdb344811"
+  focused_check_count: 162
+  focused_check_failure_count: 0
+  latex_page_count: 3
+  latex_final_warning_count: 0
+  pdf_pages_visually_reviewed: 3
+  p4_t02_b1_branch_executed: true
+  p4_t02_b2_selector_executed: true
+  p4_t02_complete_for_plan_dependency: false
+  b1_primary_terminated: true
+  b2_fallback_activated: false
+  descriptor_complete: false
+  adequacy_reevaluated: false
+  p4_t03_unlocked: false
+  ontology_adoption_count: 0
+  distance_to_gr_ledger_unchanged: true
+  generated_derivatives_non_authority: true
 
 v22_p4_t02_b1_scoped_obstruction_and_inactive_b2_selector:
   task_id: "RT-20260809-019"
@@ -15044,9 +15134,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260809-019"
-  latest_research_handoff_id: "handoff-0989"
-  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-019-001. After it commits, execute exactly one V22 P4-T02 Theoretical Continuation Selector AgentJob to choose one bounded descriptor or activation path for the inactive B2 fallback while preserving B1 termination and P4-T03 lock; do not contact reviewers or take any protected or external action."
+  latest_research_task_id: "RT-20260809-020"
+  latest_research_handoff_id: "handoff-0990"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-020-001. After it commits, execute exactly one V22 P4-T02 ontology-law-research-packet under ontology-formalizer@0.2.0 to formalize the B2 continuum-lift descriptor and proof obligations without activating or adopting B2; do not execute P4-T03 or any protected or external action."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
