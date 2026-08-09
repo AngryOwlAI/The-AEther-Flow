@@ -1,0 +1,398 @@
+job_id: "AJ-RT-20260809-015-001"
+task_id: "RT-20260809-015"
+decision_id: "DDR-20260809-015"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260809-015"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-09T16:05:03Z"
+started_at: "2026-08-09T16:05:03Z"
+completed_at: "2026-08-09T16:22:39Z"
+completion_path: "research_control/tasks/RT-20260809-015/jobs/completions/AJC-AJ-RT-20260809-015-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal, committed RT-20260809-014 checkpoint, and handoff-0984 authorize this one P3-T03 construction packet and one checkpoint. No canonical adoption, physical geometry, protected Gate review, reviewer contact, or external action is authorized."
+objective: "Implement V22 P3-T03 by constructing and refuting one explicit controlled source-side refinement family for the P3-T02 six-channel transport candidate with exact comparison maps, analytic and numerical error control, irregular and adaptive cases, boundary and finite-size protocols, independent implementation, and precise causal/signature status."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Construct one controlled finite-to-continuum refinement model for the P3-T02 proposal-only source dynamics with exact comparison maps, convergence or bounded-error criteria, irregular and adaptive cases, and no target-geometry interpolation."
+route_label: "ordinary-research-packet"
+route_reason: "handoff_0984_selects_dependency_ready_v22_p3_t03_after_the_committed_rt014_checkpoint"
+route_strategy_id: "construct_v22_p3_t03_controlled_refinement_and_error_model_v1"
+immutable_route_sha256: "5f57cb563b1b2fd0a12888bb59aea584cd6a40e4cd50cdb8fd79ab55a02feb1d"
+source_head: "1ca60ee23ed023957edd717333e6f24f9952008c"
+source_tree: "4c9c27a346184ba791c7f4c34c352c4c71ed7e3e"
+assembly_parent_head: "1ca60ee23ed023957edd717333e6f24f9952008c"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P3-T03"
+recommendation_ids:
+  - "V22-R08"
+  - "V22-R10"
+  - "V22-R13"
+declared_coverage_ids:
+  - "V22-R10"
+  - "V22-R13"
+sequence_step_ids: []
+cross_cutting_directive_ids: []
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P3-T04"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0984"
+  source_handoff_path: "research_control/handoffs/handoff-0984.yaml"
+  source_handoff_sha256: "5f57cb563b1b2fd0a12888bb59aea584cd6a40e4cd50cdb8fd79ab55a02feb1d"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P3-T03"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P3-T03"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite:
+    task_id: "RT-20260809-014"
+    commit: "1ca60ee23ed023957edd717333e6f24f9952008c"
+    committed: true
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1152
+    relationship_row_count: 5821
+    semantic_row_count: 1152
+    vault_row_count: 1152
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: '.venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search "controlled refinement continuum limit" --limit 10 --json'
+      query_type: "search"
+      query_text: "controlled refinement continuum limit"
+      returned_object_ids:
+        - "MD-V22-P3-T02-PARENT-FUSION-SOURCE-DYNAMICS-V1"
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+        - "TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1"
+      query_status: "completed"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1"
+      returned_object_ids:
+        - "TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1"
+      query_status: "completed"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_without_hidden_geometry_v1.tex"
+      source_hash: "f26c77a175e7a5783e859eacc5de24270e1089a253e73493114a1403bbd61037"
+    - object_id: "MD-V22-P3-T02-PARENT-FUSION-SOURCE-DYNAMICS-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-012/artifacts/parent_fusion_notes_p3_t02_source_dynamics.md"
+      source_hash: "131e7111c06012fb9356fd0bf19b4c0a4d2f6142643d0b520a020ea15bb5bbe9"
+  additional_control_inspections:
+    - object_id: "HANDOFF-0984"
+      control_path: "research_control/handoffs/handoff-0984.yaml"
+      source_hash: "5f57cb563b1b2fd0a12888bb59aea584cd6a40e4cd50cdb8fd79ab55a02feb1d"
+    - object_id: "V22-P3-T02-SOURCE-DYNAMICS-SPECIFICATION-V1"
+      control_path: "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_specification_v1.yaml"
+      source_hash: "941e16e8a535622fcbcf6a5ac1802cd4bb86a5950af49260a22d2c69d279f46e"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      control_path: "research_control/design/gr_derivation_burden_map.md"
+      source_hash: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    - object_id: "V22-RECOMMENDATION-BACKLOG"
+      control_path: "research_control/design/v22_recommendation_backlog.yaml"
+      source_hash: "37db3df782d53cbb3aca1ff359e54418fe28fa332d3ef57ee37e9f68f645a8fc"
+    - object_id: "DISTANCE-TO-GR-LEDGER"
+      control_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      source_hash: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+  authority_note: "Tracked registered source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "FAM-V22-B1-SIX-TRANSPORT-CONTROLLED-REFINEMENT"
+  assumption_delta:
+    - "Add a proposal-only family K_n of periodic directed product source-chart complexes with maximum coordinate spacing h_n tending to zero."
+    - "Add exact point-sampling I_n, declared cellwise-constant source reconstruction R_n, and monotone explicit upwind maps U_n under a source CFL condition."
+    - "Add uniform, smoothly graded, and source-indicator-adapted mesh variants frozen before target comparison, plus an exact-inflow slab protocol."
+    - "Retain the P3-T02 six fixed source velocities, diagonal law, continuum semigroup, primitive-debt status, and no-target-import boundary unchanged."
+    - "Do not assume a physical metric norm, measure, target atlas, causal cone, Lorentzian signature, physical clock, or target-fit tolerance."
+  materiality_basis: "P3-T02 constructed the continuum source transport law but explicitly left finite-variation robustness and controlled refinement absent. This packet newly supplies K_n, comparison maps, a stability/convergence theorem, boundary control, mesh-universality evidence, principal-factor consistency, and independent computation."
+  payload_details:
+    construction_identity: "V22-P3-T03-B1-CONTROLLED-REFINEMENT-V1"
+    refinement_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REFINEMENT-V1"
+    continuum_limit_object_id: "LIMIT-V22-B1-SIX-TRANSPORT-SEMIGROUP-V1"
+    not_already_encoded_evidence: "The P3-T02 sources contain no finite family K_n, sampling or reconstruction maps, CFL rule, discrete evolution, convergence norm, global error estimate, irregular or adaptive mesh evidence, or finite boundary protocol."
+    source_extension_adopted: false
+    global_no_go_claimed: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1"
+    - "V22-P3-T02-SOURCE-DYNAMICS-SPECIFICATION-V1"
+    - "CAND-V22-B1-SIX-TRANSPORT-DYNAMICS-V1"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex"
+    - "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_refinement_specification_v1.yaml"
+    - "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_error_boundary_universality_ledger_v1.yaml"
+    - "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_refinement_model.py"
+    - "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_independent_solver.py"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v22_p3_t03_b1_controlled_refinement"
+  family_id: "FAM-V22-B1-SIX-TRANSPORT-CONTROLLED-REFINEMENT"
+  family_identity_sha256: "32110632f8832091d69ca52e96dfdf99c26087bfc75575b77a466631eca9d051"
+  assumption_sha256es:
+    - "f26c77a175e7a5783e859eacc5de24270e1089a253e73493114a1403bbd61037"
+    - "941e16e8a535622fcbcf6a5ac1802cd4bb86a5950af49260a22d2c69d279f46e"
+  route_kind: "candidate_construction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered controlled-refinement manuscript with exact K_n maps theorem boundary protocol principal-factor status and limitations"
+      - "one machine-readable refinement specification and error boundary universality ledger"
+    project_system:
+      - "primary and independent executable solvers, adversarial fixtures, deterministic validation receipt, and compact receipt"
+      - "parent-child synthesis, standard control records, regenerated derivatives, and one governed checkpoint"
+  acceptance_criteria:
+    physics:
+      - "K_n h_n I_n R_n U_n and the continuum limit semigroup are explicit and target-independent"
+      - "analytic stability reconstruction truncation and global error bounds are stated under declared hypotheses"
+      - "uniform graded adaptive boundary universality and principal-factor evidence is nonzero and convergent or precisely unresolved"
+      - "physical cone and signature are not claimed when their upstream object is absent"
+    project_system:
+      - "multi-resolution and independent computations pass fixed predeclared thresholds"
+      - "registered source hashes and approved generated derivatives synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "derive bounded child questions from the selected execution role"
+      - "enforce exact P3-T03 scope and sealed P3-T02 dynamics identity"
+      - "separate source-chart convergence from target geometry physical causality signature and adoption"
+      - "review and resolve child and validator conflicts"
+      - "fuse the construction refutations computational evidence and limitations"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-015/artifacts/child_phys_math_p3_t03_refinement.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-015/artifacts/child_phys_phil_p3_t03_source_purity.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260809-015/artifacts/parent_conflict_review_p3_t03_refinement.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260809-015/artifacts/parent_fusion_notes_p3_t03_refinement.md"
+    fused_output_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0985.yaml"
+  - "research_control/handoffs/handoff-0985.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260809-015/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "canonical ontology TeX"
+  - "benchmark source TeX"
+  - "historical task artifacts"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+  - "scripts/**"
+  - "tests/**"
+allowed_source_classes:
+  - "registered canonical TeX and Markdown sources"
+  - "tracked research-control state and immutable prior task artifacts"
+  - "task-local draft/control candidate computational and internal review artifacts"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "candidate_reconstruction"
+  - "source_law_or_refinement_family_adoption"
+  - "M_src_or_g_eff_adoption"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "generated_derivative_authority"
+  - "target_atlas_metric_coframe_connection_measure_or_action_import"
+  - "target_geometry_interpolation_or_target_fit_as_source_merit"
+  - "physical_causal_cone_or_lorentzian_signature_claim"
+  - "finite_zero_remainder_promoted_as_continuum_proof"
+  - "uncontrolled_boundary_or_adaptive_mesh_overread"
+  - "concurrent_candidate_execution"
+validators:
+  - "source_identity_hashes"
+  - "refinement_type_domain_and_comparison_map_audit"
+  - "analytic_stability_consistency_and_error_bounds"
+  - "uniform_graded_and_adaptive_multi_resolution"
+  - "boundary_finite_size_and_universality"
+  - "principal_factor_convergence"
+  - "causal_signature_precondition_status"
+  - "independent_implementation"
+  - "source_purity_and_refuter_cases"
+  - "parent_child_synthesis"
+  - "latex_compile"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "graph_freshness"
+  - "classify_project_changes"
+  - "documentation_impact"
+  - "research_control_validation"
+  - "claim_language"
+  - "affected_validation"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+expected_outputs:
+  - "research_control/tasks/RT-20260809-015/**"
+  - "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex"
+  - "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_refinement_specification_v1.yaml"
+  - "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_error_boundary_universality_ledger_v1.yaml"
+  - "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_refinement_model.py"
+  - "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_independent_solver.py"
+  - "research_control/handoffs/handoff-0985.yaml"
+  - "research_control/handoffs/handoff-0985.md"
+  - "research_control/program_state.yaml"
+claim_boundary: "CB-V22-P3-T03-CONTROLLED-REFINEMENT-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260809-015-001"
+completion_id: "AJC-AJ-RT-20260809-015-001"
+stop_conditions:
+  - "requires_human_gate=true"
+  - "the sealed P3-T02 dynamics or coefficient identity would change"
+  - "the comparison requires a target metric atlas measure physical norm or target-geometry interpolation"
+  - "mesh scheme or tolerance is selected by GR or target-geometry agreement"
+  - "the continuum limit object is undefined"
+  - "multi-resolution errors fail to decrease under declared conditions"
+  - "CFL stability boundary effects or adaptive mesh error are uncontrolled"
+  - "a physical cone or Lorentzian signature would be claimed despite no upstream object"
+  - "finite evidence would be promoted beyond the analytic limit theorem"
+  - "canonical ontology or source-law adoption would be required"
+  - "validation fails"
+  - "authority expansion required"
+  - "job would touch paths outside allowlist"
+memory_preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"

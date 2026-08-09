@@ -1,0 +1,36 @@
+schema_id: "v22_p3_t03_validator_perspective_v1"
+task_id: "RT-20260809-015"
+job_id: "AJ-RT-20260809-015-001"
+perspective: "validator-engineer@0.2.0 task-local inherited boundary"
+status: "completed"
+global_validator_semantics_changed: false
+independence:
+  primary_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_refinement_model.py"
+  independent_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_independent_solver.py"
+  independent_imports_primary: false
+  independent_equation: "u_t+u_x=0 on a periodic source-label interval"
+  levels: [16, 24, 32, 48, 64]
+  errors: [0.0142289400, 0.0095836700, 0.0072677300, 0.0048768800, 0.0036645900]
+  observed_orders: [0.9747, 0.9615, 0.9839, 0.9934]
+  strict_error_decrease: true
+validation_design:
+  predeclared_fixture_path: "research_control/tasks/RT-20260809-015/artifacts/fixtures/v22_p3_t03_refinement_cases.yaml"
+  deterministic: true
+  random_seed_used: false
+  thresholds_target_derived: false
+  checks:
+    - "source identity hashes"
+    - "exact comparison-map declarations"
+    - "CFL and convexity"
+    - "primary multi-resolution error decrease"
+    - "irregular and adapted mesh-ratio bounds"
+    - "boundary and finite-size protocol"
+    - "independent implementation"
+    - "principal-factor convergence"
+    - "physical cone and signature precondition status"
+    - "parent-child conflict resolution and authority limits"
+authority_limits:
+  scientific_truth_inferred_from_validation: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

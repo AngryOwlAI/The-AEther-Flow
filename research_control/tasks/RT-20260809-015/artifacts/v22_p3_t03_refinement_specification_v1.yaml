@@ -1,0 +1,179 @@
+schema_id: "v22_p3_t03_refinement_specification_v1"
+artifact_id: "V22-P3-T03-CONTROLLED-REFINEMENT-SPECIFICATION-V1"
+task_id: "RT-20260809-015"
+job_id: "AJ-RT-20260809-015-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P3-T03"
+status: "draft/control"
+claim_status: "proposal-only controlled refinement data"
+refinement_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REFINEMENT-V1"
+continuum_limit_object_id: "LIMIT-V22-B1-SIX-TRANSPORT-SEMIGROUP-V1"
+dynamics_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-DYNAMICS-V1"
+candidate_family_id: "FAM-V22-B1-SIX-TRANSPORT-CONTROLLED-REFINEMENT"
+created_at: "2026-08-09T16:05:03Z"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Construct one controlled finite-to-continuum refinement model for the P3-T02 proposal-only source dynamics with exact comparison maps, convergence or bounded-error criteria, irregular and adaptive cases, and no target-geometry interpolation."
+
+source_bindings:
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  - object_id: "TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1"
+    path: "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_without_hidden_geometry_v1.tex"
+    sha256: "f26c77a175e7a5783e859eacc5de24270e1089a253e73493114a1403bbd61037"
+  - object_id: "V22-P3-T02-SOURCE-DYNAMICS-SPECIFICATION-V1"
+    path: "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_specification_v1.yaml"
+    sha256: "941e16e8a535622fcbcf6a5ac1802cd4bb86a5950af49260a22d2c69d279f46e"
+  - object_id: "HANDOFF-0984"
+    path: "research_control/handoffs/handoff-0984.yaml"
+    sha256: "5f57cb563b1b2fd0a12888bb59aea584cd6a40e4cd50cdb8fd79ab55a02feb1d"
+
+continuum_limit:
+  source_fixture: "periodic source chart T_src^3 used as computational comparison domain only"
+  state_space: "six periodic source scalar channels"
+  operator: "L_A f=v_A dot source-gradient f"
+  semigroup: "S_A(t)f(s)=f(s-v_A*t)"
+  defined_by_target_agreement: false
+  source_manifold_adopted: false
+  physical_spacetime_claimed: false
+
+refinement_family:
+  symbol: "K_n"
+  type: "directed tensor-product source-coordinate cell complexes"
+  scaling_parameter: "h_n=max source-coordinate cell width"
+  limit_condition: "h_n tends to zero"
+  mesh_ratio_condition: "h_n/h_n,min <= 2 for the declared irregular and adapted fixtures"
+  variants:
+    - id: "uniform"
+      definition: "s_j,i=i/n"
+    - id: "graded"
+      definition: "s_j,i=u_i+a_j*sin(2*pi*u_i)/(2*pi) with fixed a=(0.22,-0.17,0.13)"
+    - id: "adaptive"
+      definition: "positive cell widths from a fixed source-variation indicator with phases (0.07,0.23,0.41)"
+      dynamically_regridded: false
+      target_error_used: false
+  mesh_and_tolerances_frozen_before_target_access: true
+
+comparison_maps:
+  sampling:
+    symbol: "I_n"
+    rule: "(I_n f)_i=f(s_i)"
+    exact: true
+  reconstruction:
+    symbol: "R_n"
+    rule: "R_n z is constant on each half-open directed source cell at the lower-node value"
+    exact: true
+    target_geometry_interpolation: false
+  norm:
+    discrete: "ell_infinity maximum absolute scalar difference"
+    continuum: "source-chart scalar sup norm"
+    physical_metric_norm: false
+  reconstruction_bound: "||R_n I_n f-f|| <= sum_j h_j,max ||partial_j f|| <= 3 h_n max_j ||partial_j f||"
+
+finite_evolution:
+  scheme: "explicit first-order backward upwind for nonnegative fixed P3-T02 source velocities"
+  rule: "(U_A,n z)_i=z_i-dt_n*sum_j v_A^j*(z_i-z_i-ej)/h_j,ij"
+  source_cfl: "max_i dt_n*sum_j v_A^j/h_j,ij <= 1"
+  computational_cfl_target: 0.45
+  stability: "convex-combination monotonicity and ell_infinity contraction"
+  constants_preserved: true
+  scalar_range_preserved: true
+  physical_conservation_claimed: false
+
+analytic_bounds:
+  smoothness: "C2 periodic source scalar data"
+  global_evolution_error: "T/2*[dt_n*||(v_A dot grad)^2 f|| + sum_j v_A^j*h_j,max*||partial_jj f||]"
+  convergence_class: "first order under dt_n=O(h_n)"
+  principal_factor: "|Lambda_A,n(k)-i*v_A dot k| <= 1/2*sum_j v_A^j*h_j,max*|k_j|^2"
+  product_convergence: "finite telescoping-product bound for the six fixed factors"
+  mathematical_tool: "monotone finite-difference consistency plus ell_infinity stability and local source-sheaf restriction compatibility"
+  finite_zero_remainder_used_as_proof: false
+
+boundary_protocol:
+  main_fixture: "periodic source chart"
+  slab_fixture: "one-dimensional positive source transport with exact inflow trace"
+  inflow_rule: "prescribe only faces entered by the backward source characteristic"
+  outflow_rule: "do not prescribe independent outflow values"
+  boundary_error_rule: "maximum inflow trace error propagates without amplification under the monotone update"
+  finite_size_rule: "claim comparison only where the exact backward characteristic remains inside or first meets declared inflow"
+  unit_normal_used: false
+  physical_boundary_measure_used: false
+
+computational_evidence:
+  primary_implementation: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_refinement_model.py"
+  independent_implementation: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_independent_solver.py"
+  levels: [6, 8, 12, 16]
+  uniform_errors: [0.0903385549, 0.0778445874, 0.0616833530, 0.0489699301]
+  graded_errors: [0.0963651802, 0.0864026230, 0.0696444684, 0.0582578060]
+  adaptive_errors: [0.1036776449, 0.0855479233, 0.0713678304, 0.0633280453]
+  all_primary_series_strictly_decrease: true
+  all_primary_errors_nonzero: true
+  maximum_mesh_ratio: 1.7194101486
+  boundary_errors: [0.0149192858, 0.0100431142, 0.0076018881, 0.0047909936]
+  boundary_errors_strictly_decrease: true
+  independent_errors: [0.0142289400, 0.0095836700, 0.0072677300, 0.0048768800, 0.0036645900]
+  independent_orders: [0.9747, 0.9615, 0.9839, 0.9934]
+  principal_factor_errors: [7.2762355252, 3.6852744539, 1.8485698810, 0.9250277150]
+  principal_factor_errors_strictly_decrease: true
+
+property_preservation:
+  source_evolution_orientation: "preserved by positive time steps and fixed P3-T02 velocities"
+  constant_state: "preserved exactly"
+  q6_margin: "preserved by convex range invariance for the manufactured q6 in [2.92,3.08]"
+  principal_factor_count: 6
+  operational_rank_two: "precisely unresolved because the present theorem is sup-norm rather than C1"
+  physical_causal_cone: "upstream_object_undefined_not_preserved_or_lost"
+  lorentzian_signature: "upstream_object_undefined_not_preserved_or_lost"
+  physical_scale: "upstream_object_undefined"
+  effective_metric_constructed: false
+
+universality:
+  status: "bounded_mesh_family_universality_for_declared_source_semigroup"
+  evidence: "uniform graded and source-indicator-adapted bounded-ratio families satisfy the same analytic theorem and show decreasing nonzero errors"
+  physical_microphysics_universality_claimed: false
+  chart_independent_discrete_object_claimed: false
+
+source_extension_classification:
+  category: "controlled_continuum_refinement"
+  import_classification: "proposal_only_controlled_refinement_data"
+  status_vocabulary: "draft/control proposal-only"
+  current_ontology_derives_candidate: false
+  adoption_status: "not_adopted"
+  target_atlas_free: true
+  exact_gr_recovery_claimed: false
+  global_no_go_claimed: false
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex"
+  formal_objects:
+    - "directed source complexes K_n and scaling h_n"
+    - "exact maps I_n and R_n"
+    - "monotone evolution maps U_A,n"
+    - "source transport semigroups S_A(t)"
+  maps:
+    - "C2 source data through I_n to finite nodal data"
+    - "finite nodal data through U_A,n^m and R_n to a source scalar"
+    - "fixed source mode to six discrete principal factors and their continuum limits"
+  proof_obligations:
+    - "P3-T04 C1 or response-level finite-to-continuum parity and derivative-rank adequacy"
+    - "later source-derived reduction to one robust physical cone signature and scale"
+    - "independent smuggling audit before any adoption or Gate route"
+  next_required_role: "candidate-constructor"
+  no_fog_check: true
+  no_fog_explanation: "The packet constructs a controlled first-order source-chart refinement of the fixed P3-T02 transport semigroup with analytic and independent numerical evidence; it does not construct or preserve an upstream-absent physical cone, signature, scale, or effective metric."
+  claim_boundary_preserved: true
+
+authority_limits:
+  ontology_modified: false
+  source_law_adopted: false
+  refinement_family_adopted: false
+  target_geometry_imported: false
+  target_fit_used: false
+  physical_causal_cone_claimed: false
+  lorentzian_signature_claimed: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  gate_chair_verdict_authorized: false
+  completed_derivation_authorized: false

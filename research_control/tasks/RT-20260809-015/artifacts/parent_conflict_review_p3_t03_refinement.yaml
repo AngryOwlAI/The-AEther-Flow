@@ -1,0 +1,30 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260809-015"
+job_id: "AJ-RT-20260809-015-001"
+status: "resolved"
+resolution_rounds: 1
+conflicts:
+  - conflict_id: "P3T03-CONFLICT-NORM"
+    phys_math_position: "ell_infinity and source sup norms suffice for the stability theorem"
+    phys_phil_pressure: "the norms must not be called physical metric norms"
+    resolution: "retain the scalar comparison norms with an explicit nonphysical label"
+  - conflict_id: "P3T03-CONFLICT-ADAPTIVE"
+    phys_math_position: "bounded-ratio source-indicator partitions satisfy the same estimate"
+    phys_phil_pressure: "adaptivity must not use target error or imply fundamental microstructure"
+    resolution: "freeze the source indicator before target access and limit universality to the numerical family"
+  - conflict_id: "P3T03-CONFLICT-ZERO"
+    phys_math_position: "exact constant preservation is useful stability evidence"
+    phys_phil_pressure: "an exact finite residual cannot prove the continuum limit"
+    resolution: "retain constant preservation but require nonzero multi-resolution truncation evidence and the analytic theorem"
+  - conflict_id: "P3T03-CONFLICT-SIGNATURE"
+    phys_math_position: "principal-factor convergence preserves the six transport factors"
+    phys_phil_pressure: "no physical cone or Lorentzian signature exists upstream"
+    resolution: "record factor convergence and return upstream_object_undefined for physical cone and signature"
+  - conflict_id: "P3T03-CONFLICT-RANK"
+    phys_math_position: "q6 positivity is preserved by monotonicity"
+    phys_phil_pressure: "sup-norm convergence does not preserve the derivative-rank wedge"
+    resolution: "accept q6 margin only and route C1 response parity to P3-T04"
+resolved_conflict_count: 5
+unresolved_conflicts: []
+blocking_conflict_count: 0
+claim_boundary_preserved: true

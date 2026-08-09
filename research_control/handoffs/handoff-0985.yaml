@@ -1,0 +1,258 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+handoff_id: "handoff-0985"
+handoff_number: 985
+handoff_kind: "v22_p3_t03_controlled_source_refinement"
+task_id: "RT-20260809-015"
+decision_id: "DDR-20260809-015"
+job_id: "AJ-RT-20260809-015-001"
+completion_id: "AJC-AJ-RT-20260809-015-001"
+completion_path: "research_control/tasks/RT-20260809-015/jobs/completions/AJC-AJ-RT-20260809-015-001.yaml"
+completion_sha256: "b31eb872802b5c4d8698b69f89b0f241088ce084c30b9870e2fcac910c5e2fd6"
+status: "ready_for_v22_p3_t04_after_checkpoint"
+created_at: "2026-08-09T16:22:39Z"
+parent_handoff_id: "handoff-0984"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P3-T04"
+completed_plan_task_id: "P3-T03"
+source_role_id: "candidate-constructor"
+source_role_version: "0.2.0"
+source_execution_role_ref: "candidate-constructor@0.2.0--RT-20260809-015"
+summary: "P3-T03 constructs a proposal-only controlled refinement of the fixed P3-T02 six-channel source transport law. Directed source-coordinate complexes K_n, exact sampling I_n and cellwise-constant reconstruction R_n, monotone upwind evolution U_A,n, and the six source translation semigroups are explicit. Reconstruction, contraction, first-order global evolution, exact-inflow boundary, protected finite-size, and fixed-mode principal-factor bounds are paired with decreasing nonzero uniform, graded, adaptive, boundary, and independent errors. All 276 focused checks and the warning-free six-page TeX build pass. The result does not adopt the source law or refinement family and does not construct or preserve an upstream-absent physical cone, Lorentzian signature, scale, or effective metric."
+next_action: "Run the single governed checkpoint for AJ-RT-20260809-015-001. After it commits, execute exactly one separately admitted V22 P3-T04 Candidate Constructor AgentJob with Smuggling Auditor and Refuter perspectives to construct or precisely fail a source-selected background, linear-response quotient, bounded finite-to-continuum parity, and adequacy result; do not contact reviewers or take any protected or external action."
+current_claim_boundary: "CB-V22-P3-T03-CONTROLLED-REFINEMENT-001"
+loop_risk_route: "construct_v22_p3_t04_background_linear_response_and_preprincipal_readiness_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260809-015"
+  latest_research_handoff_id: "handoff-0985"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-015-001. After it commits, execute exactly one separately admitted V22 P3-T04 Candidate Constructor AgentJob with Smuggling Auditor and Refuter perspectives to construct or precisely fail a source-selected background, linear-response quotient, bounded finite-to-continuum parity, and adequacy result; do not contact reviewers or take any protected or external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed P3-T03 checkpoint followed by one separately admitted V22 P3-T04 background linear-response and pre-principal-readiness construction or precise-obstruction packet."
+  completed_task: "RT-20260809-015"
+  completed_completion_path: "research_control/tasks/RT-20260809-015/jobs/completions/AJC-AJ-RT-20260809-015-001.yaml"
+  completed_completion_sha256: "b31eb872802b5c4d8698b69f89b0f241088ce084c30b9870e2fcac910c5e2fd6"
+  source_task_id: "RT-20260809-014"
+  source_handoff_id: "handoff-0984"
+  source_handoff_path: "research_control/handoffs/handoff-0984.yaml"
+  source_handoff_sha256: "5f57cb563b1b2fd0a12888bb59aea584cd6a40e4cd50cdb8fd79ab55a02feb1d"
+  refinement_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REFINEMENT-V1"
+  continuum_limit_object_id: "LIMIT-V22-B1-SIX-TRANSPORT-SEMIGROUP-V1"
+  focused_validation_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_refinement_validation.json"
+  focused_validation_sha256: "ae414c50028512601fdfe05b8e8b13d16ec2ddd0140d971bafb6868784d00099"
+  compact_receipt_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_compact_receipt.json"
+  compact_receipt_sha256: "d0abe7fa2dda00af2398a9f69f1d81bbc670098b7233c73891f7ca29c3d9caab"
+  controlled_refinement_tex_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex"
+  controlled_refinement_tex_sha256: "ba5b815072de442dda7ee2bfb6aba41b7d98082b4f0586df22d9d327c0eda921"
+  source_law_adopted: false
+  refinement_family_adopted: false
+  target_geometry_imported: false
+  target_geometry_interpolation_used: false
+  physical_cone_constructed: false
+  lorentzian_signature_constructed: false
+  effective_metric_constructed: false
+  p3_t03_executed: true
+  p3_t04_selected: true
+  p3_t04_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "source-chart scalar convergence described as physical geometry"
+    - "K_n or its preferred chart described as adopted ontology or physical microstructure"
+    - "source-coordinate spacing or scalar sup norm described as physical length or metric norm"
+    - "six principal factors described as one physical cone Lorentzian signature scale or g_eff"
+    - "P3-T04 selection described as execution"
+    - "P2-T02 described as externally reviewed or satisfied"
+    - "validator or checkpoint PASS described as Gate benchmark or completed-derivation evidence"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P3"
+  plan_task_id: "P3-T03"
+  title: "Construct and verify the controlled refinement or continuum limit"
+  work_item_status: "completed_checkpoint_pending"
+  result_status: "PASS_V22_P3_T03_CONTROLLED_SOURCE_REFINEMENT"
+  next_plan_task_id: "P3-T04"
+  p3_t02_executed: true
+  p3_t03_executed: true
+  p3_t04_dependency_ready_after_checkpoint: true
+  p3_t04_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Controlled source refinement supplies no source-to-metric map, unique physical cone, signature, scale, effective metric, coupling, field equation, or Gate evidence."
+  downstream_unlocked:
+    - "P3-T04 after a valid P3-T03 checkpoint"
+  downstream_still_blocked:
+    - "P2-T02 external review without reviewer-contact authority"
+    - "canonical source law or refinement-family adoption"
+    - "C1 response parity physical cone signature scale effective metric matter coupling Einstein equations and Gate B"
+    - "downstream Gates benchmark promotion and completed derivation"
+
+selected_next_route:
+  route_id: "v22_p3_t04_background_linear_response_preprincipal_readiness"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P3-T04"
+  work_item_id: "P3-T04"
+  work_kind: "construction_or_implementation"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "candidate-constructor@0.2.0"
+  supporting_perspective: "smuggling-auditor@0.2.0 and refuter@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "background_linear_response_candidate"
+  source_extension_category: "background_linear_response_preprincipal_readiness"
+  source_extension_import_classification: "proposal_only_source_response_data"
+  task_type: "v22_p3_t04_background_linear_response_preprincipal_readiness"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Produce the exact admissible background and linearized operator needed for a lawful principal-symbol calculation, compare finite and continuum linearizations with bounded error, apply the adequacy floor, and stress nonunique response without target convenience."
+  expected_result_kind: "candidate_or_precise_obstruction"
+  strategy_id: "construct_v22_p3_t04_background_linear_response_and_preprincipal_readiness_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  selected_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REFINEMENT-V1"
+  transition_id: "CONSTRUCT_BACKGROUND_LINEAR_RESPONSE"
+  dependency_task_ids:
+    - "P3-T02"
+    - "P3-T03"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0985"
+  ordinary_handoff_id: "handoff-0985"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P3-T04"
+  ready_science_plan_task_refs:
+    - "recommendations_implementation_plan_continue_task-v22:P3-T04"
+  ready_project_system_plan_task_ids: []
+  selected_plan_task_id: "P3-T04"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  selection_reason: "P3-T03 supplies the prerequisite controlled source refinement, making P3-T04 the next dependency-ready distinct science packet; P2-T02 still requires unavailable reviewer-contact authority."
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260809-015"
+  active_job_id: "AJ-RT-20260809-015-001"
+  current_status: "v22_p3_t03_controlled_source_refinement_completed_pending_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p3_t03_executed: true
+  p3_t04_executed: false
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P3-T04"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_supporting_perspective: "smuggling-auditor@0.2.0 and refuter@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "construct_v22_p3_t04_background_linear_response_and_preprincipal_readiness_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, plan, burden, registered P3-T02 source, handoff-0984, checkpoint, and role-fit preflight passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 276 focused checks, both independent implementations, both child outputs, five conflict resolutions, and the TeX compile pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Affected-profile, task-taxonomy, documentation-impact, research-control, generated-freshness, signal, graph, claim-language, and diff validation pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed AJ-RT-20260809-015-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Approved frontier, compact frontier, task-index, graph, wiki, and registry projections are regenerated before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only verification pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation preserves every adoption and physical-geometry block."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  refinement_family_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  reviewer_contact_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+
+handoff_authority_boundary: "This handoff records one proposal-only controlled source refinement and one P3-T04 route only. It changes no ontology, source-law or refinement-family adoption, target geometry, physical cone, Lorentzian signature, scale, effective metric, coupling, Einstein equation, Gate, benchmark, proof, external review, publication, release, push, external action, or completed-derivation authority."

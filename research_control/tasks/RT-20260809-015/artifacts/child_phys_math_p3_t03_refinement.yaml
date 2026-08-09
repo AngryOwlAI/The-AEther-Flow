@@ -1,0 +1,33 @@
+schema_id: "parent_child_execution_unit_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260809-015"
+job_id: "AJ-RT-20260809-015-001"
+status: "completed"
+question: "Can the fixed P3-T02 six-channel transport fixture admit exact finite comparison maps and a controlled source-side limit on uniform irregular and adapted partitions?"
+result:
+  disposition: "constructed_with_declared_hypotheses"
+  continuum_object: "six translation semigroups S_A(t) on periodic source scalars"
+  finite_objects: "directed product complexes K_n and monotone maps U_A,n"
+  exact_maps:
+    - "I_n point sampling"
+    - "R_n lower-node cellwise-constant reconstruction"
+  proved_results:
+    - "reconstruction error bound for C1 source scalars"
+    - "ell_infinity contraction under local source CFL"
+    - "first-order global evolution bound for C2 source scalars"
+    - "exact-inflow boundary error propagation without amplification"
+    - "fixed-mode principal-factor consistency"
+  computational_results:
+    - "all uniform graded and source-indicator-adapted maximum errors decrease"
+    - "independent solver is approximately first order"
+    - "boundary and principal-factor errors decrease"
+  unresolved:
+    - "C1 derivative-rank preservation on irregular and adapted meshes"
+    - "chart-independent discrete equivalence"
+    - "physical cone signature and scale because no such upstream objects exist"
+new_mathematical_payload:
+  - "controlled source-semigroup convergence theorem"
+  - "protected finite-size backward-characteristic proposition"
+  - "fixed-mode principal-factor bound"
+claim_boundary_preserved: true

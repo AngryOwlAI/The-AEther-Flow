@@ -1,0 +1,89 @@
+schema_id: "v22_p3_t03_error_boundary_universality_ledger_v1"
+artifact_id: "V22-P3-T03-ERROR-BOUNDARY-UNIVERSALITY-LEDGER-V1"
+task_id: "RT-20260809-015"
+job_id: "AJ-RT-20260809-015-001"
+status: "draft/control"
+entries:
+  - entry_id: "P3T03-ERR-RECONSTRUCTION"
+    class: "analytic_bound"
+    scope: "source-chart cellwise-constant reconstruction"
+    bound: "sum_j h_j,max ||partial_j f||_infinity"
+    status: "proved_under_C1"
+  - entry_id: "P3T03-ERR-EVOLUTION"
+    class: "analytic_bound"
+    scope: "fixed-channel periodic source transport"
+    bound: "T/2*[dt||(v dot grad)^2f||+sum_j |v_j|h_j,max||partial_jj f||]"
+    status: "proved_under_C2_and_CFL"
+  - entry_id: "P3T03-ERR-PRINCIPAL"
+    class: "analytic_bound"
+    scope: "fixed low-frequency uniform-grid source principal factors"
+    bound: "1/2*sum_j |v_j|h_j|k_j|^2"
+    status: "proved"
+  - entry_id: "P3T03-ERR-UNIFORM"
+    class: "multi_resolution"
+    errors: [0.0903385549, 0.0778445874, 0.0616833530, 0.0489699301]
+    strictly_decreasing: true
+    nonzero: true
+    terminal_order: 0.8023
+  - entry_id: "P3T03-ERR-GRADED"
+    class: "irregular_multi_resolution"
+    errors: [0.0963651802, 0.0864026230, 0.0696444684, 0.0582578060]
+    strictly_decreasing: true
+    nonzero: true
+    terminal_order: 0.6283
+  - entry_id: "P3T03-ERR-ADAPTIVE"
+    class: "source_indicator_adapted_multi_resolution"
+    errors: [0.1036776449, 0.0855479233, 0.0713678304, 0.0633280453]
+    strictly_decreasing: true
+    nonzero: true
+    terminal_order: 0.5522
+  - entry_id: "P3T03-ERR-BOUNDARY"
+    class: "exact_inflow_boundary"
+    errors: [0.0149192858, 0.0100431142, 0.0076018881, 0.0047909936]
+    strictly_decreasing: true
+    outflow_data_used: false
+  - entry_id: "P3T03-ERR-INDEPENDENT"
+    class: "independent_implementation"
+    errors: [0.0142289400, 0.0095836700, 0.0072677300, 0.0048768800, 0.0036645900]
+    strictly_decreasing: true
+    minimum_observed_order: 0.9615
+  - entry_id: "P3T03-PROPERTY-Q6"
+    class: "operational_margin"
+    status: "preserved_under_CFL_convexity"
+    exact_margin: "q6 in [2.92,3.08]"
+  - entry_id: "P3T03-PROPERTY-RANK"
+    class: "operational_derivative_rank"
+    status: "precisely_unresolved"
+    reason: "sup-norm convergence does not supply the C1 bound needed for wedge-rank preservation"
+  - entry_id: "P3T03-PROPERTY-CONE"
+    class: "physical_causal_cone"
+    status: "upstream_object_undefined_not_preserved_or_lost"
+  - entry_id: "P3T03-PROPERTY-SIGNATURE"
+    class: "lorentzian_signature"
+    status: "upstream_object_undefined_not_preserved_or_lost"
+boundary_protocol:
+  periodic_fixture: "no boundary"
+  slab_fixture: "exact source inflow only"
+  finite_size_acceptance: "backward characteristic remains inside or first meets declared inflow"
+  uncontrolled_region_claimed: false
+universality_protocol:
+  accepted_scope: "bounded-ratio source-chart partitions converging to the same fixed transport semigroup"
+  excluded_scope:
+    - "physical microphysics universality"
+    - "chart-independent discrete ontology"
+    - "physical cone signature or metric robustness"
+hard_fail_cases:
+  - "CFL violation"
+  - "h_n not tending to zero"
+  - "unbounded adaptive mesh ratio without replacement proof"
+  - "independent outflow prescription"
+  - "target-tuned mesh or tolerance"
+  - "target metric or atlas interpolation"
+  - "zero finite residual promoted to limit theorem"
+  - "uncontrolled boundary influence"
+  - "physical cone or signature reported as preserved"
+authority_limits:
+  source_extension_adopted: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

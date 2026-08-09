@@ -1,0 +1,73 @@
+schema_id: "v22_p3_t03_refinement_cases_v1"
+task_id: "RT-20260809-015"
+job_id: "AJ-RT-20260809-015-001"
+status: "draft/control"
+predeclared_numerical_contract:
+  mesh_kinds:
+    - "uniform"
+    - "graded"
+    - "adaptive"
+  levels: [6, 8, 12, 16]
+  final_time: 0.1
+  cfl_max: 0.45
+  strict_error_decrease_required: true
+  minimum_terminal_observed_order: 0.45
+  mesh_ratio_max: 2.0
+  independent_levels: [16, 24, 32, 48, 64]
+  independent_minimum_terminal_order: 0.65
+  boundary_levels: [16, 24, 32, 48]
+  principal_levels: [8, 16, 32, 64]
+accepted_cases:
+  - case_id: "P3T03-UNIFORM-MULTIRES"
+    expected: "six-channel maximum error decreases at every declared level"
+  - case_id: "P3T03-GRADED-MULTIRES"
+    expected: "bounded-ratio graded mesh converges to the same source semigroup"
+  - case_id: "P3T03-ADAPTIVE-MULTIRES"
+    expected: "source-indicator-adapted mesh converges without target tuning"
+  - case_id: "P3T03-EXACT-INFLOW"
+    expected: "inflow-boundary error decreases while outflow data remain unprescribed"
+  - case_id: "P3T03-INDEPENDENT-IMPLEMENTATION"
+    expected: "separate one-dimensional implementation has decreasing nonzero error"
+  - case_id: "P3T03-PRINCIPAL-FACTORS"
+    expected: "six fixed low-frequency source principal factors converge"
+  - case_id: "P3T03-Q6-MARGIN"
+    expected: "monotone update preserves the positive q6 range margin"
+precise_unresolved_cases:
+  - case_id: "P3T03-PHYSICAL-CONE"
+    expected: "upstream_object_undefined_not_preserved_or_lost"
+  - case_id: "P3T03-LORENTZIAN-SIGNATURE"
+    expected: "upstream_object_undefined_not_preserved_or_lost"
+rejected_cases:
+  - case_id: "P3T03-CFL-VIOLATION"
+    mutation: "source CFL exceeds one"
+    expected: "stability acceptance rejected"
+  - case_id: "P3T03-NONREFINING-MESH"
+    mutation: "h_n does not tend to zero"
+    expected: "continuum-limit claim rejected"
+  - case_id: "P3T03-UNBOUNDED-MESH-RATIO"
+    mutation: "adaptive mesh ratio diverges without a new proof"
+    expected: "adaptive universality claim rejected"
+  - case_id: "P3T03-OUTFLOW-PRESCRIPTION"
+    mutation: "independent outflow values are imposed"
+    expected: "boundary protocol rejected"
+  - case_id: "P3T03-TARGET-TUNED-MESH"
+    mutation: "mesh or tolerance is selected after GR target comparison"
+    expected: "source-purity acceptance rejected"
+  - case_id: "P3T03-TARGET-INTERPOLATION"
+    mutation: "target metric or atlas defines comparison maps"
+    expected: "candidate rejected"
+  - case_id: "P3T03-ZERO-REMAINDER-OVERREAD"
+    mutation: "one zero finite residual is called a continuum theorem"
+    expected: "claim-language acceptance rejected"
+  - case_id: "P3T03-PHYSICAL-SIGNATURE-OVERREAD"
+    mutation: "undefined physical cone or signature is reported as preserved"
+    expected: "property-preservation acceptance rejected"
+  - case_id: "P3T03-UNCONTROLLED-BOUNDARY"
+    mutation: "comparison region receives undeclared boundary influence"
+    expected: "finite-size acceptance rejected"
+authority_limits:
+  target_geometry_inputs: 0
+  physical_cone_constructed: false
+  lorentzian_signature_constructed: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false

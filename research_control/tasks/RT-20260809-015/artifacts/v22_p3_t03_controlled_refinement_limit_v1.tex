@@ -1,0 +1,355 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\K}{\mathcal K}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\In}{I_n}
+\newcommand{\Rn}{R_n}
+\newcommand{\Un}{U_n}
+\newcommand{\Sn}{S}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\title{V22 P3--T03: A Controlled Source-Chart Refinement Limit\\
+for the Six-Channel Transport Candidate}
+\author{The \AE ther-Flow Research Project}
+\date{2026-08-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft/control manuscript constructs one finite-to-continuum refinement
+family for the proposal-only P3--T02 six-channel source transport law.  The
+family uses directed source-chart complexes, exact point sampling, a declared
+cellwise-constant comparison map, and a monotone upwind evolution under an
+explicit source CFL condition.  We prove contraction, reconstruction,
+consistency, global evolution-error, boundary, and fixed-mode
+principal-factor bounds.  Uniform, smoothly graded, and source-indicator-
+adapted computations have nonzero errors that decrease under refinement; an
+independent implementation and an inflow-boundary study agree.  These are
+source-chart numerical statements, not target-geometry interpolation.  The
+P3--T02 candidate supplies no quadratic physical cone or Lorentzian signature,
+so their preservation status is precisely unresolved rather than passed.  No
+ontology, source law, physical geometry, or Distance-to-GR status is promoted.
+\end{abstract}
+
+\section{Inherited candidate and claim boundary}
+
+On a source chart with labels $(s^0,s^1,s^2,s^3)$, the P3--T02 fixture uses
+$\tau=s^0$ and six fixed source vectors
+\begin{equation}
+  X_A=\partial_0+v_A^j\partial_j,
+  \qquad
+  v_A\in\{(1,0,0),(0,1,0),(0,0,1),(1,1,0),(0,1,2),(2,0,1)\}.
+  \label{eq:velocities}
+\end{equation}
+The continuum equation for channel $A$ is
+\begin{equation}
+  \partial_0 q^A+v_A^j\partial_j q^A=0,
+  \label{eq:transport}
+\end{equation}
+with no sum over $A$.  The coefficient datum remains proposal-only.  The
+chart is a computational source presentation, not a target atlas or physical
+spacetime coordinate system.
+
+For the bounded comparison fixture, identify the three spatial source labels
+periodically and write $\T^3_{\rm src}=\R^3/\mathbb Z^3$.  This quotient is a
+test domain chosen before any target comparison.  It is not adopted as
+$M_{\rm src}$ and carries no physical metric or measure.  The exact continuum
+limit object is the six-component translation semigroup
+\begin{equation}
+  (S_A(t)f)(s)=f(s-v_A t),\qquad t\ge0,
+  \label{eq:semigroup}
+\end{equation}
+on periodic source scalars.  Equation \eqref{eq:semigroup}, not agreement with
+GR, defines the limit.
+
+\section{The refinement family and exact comparison maps}
+
+\begin{definition}[Directed product complexes]
+For each level $n$, choose three cyclic source-coordinate partitions
+$0=s_{j,0}<\cdots<s_{j,N_{j,n}-1}<1$.  Let $\K_n$ be their directed product
+cell complex, let
+\begin{equation}
+  h_{j,i}=s_{j,i}-s_{j,i-1}\pmod 1,
+  \qquad h_n=\max_{j,i}h_{j,i},
+  \label{eq:mesh}
+\end{equation}
+and require $h_n\to0$.  For the irregular and adapted families, also require
+a fixed mesh-ratio bound $h_n/h_{n,\min}\le C_{\rm mesh}$.
+\end{definition}
+
+Three preregistered variants are used:
+\begin{enumerate}[leftmargin=*]
+  \item uniform partitions;
+  \item smoothly graded partitions
+  $s_{j,i}=u_i+a_j\sin(2\pi u_i)/(2\pi)$ with
+  $(a_1,a_2,a_3)=(0.22,-0.17,0.13)$; and
+  \item source-indicator-adapted partitions with fixed source phases and
+  positive cell weights proportional to
+  \begin{equation*}
+    \left[1+0.75\left|\sin\bigl(2\pi(u_{i+1/2}+\phi_j)\bigr)\right|\right]^{-1}.
+  \end{equation*}
+\end{enumerate}
+All rules are frozen before target access.  The third case adapts to a declared
+source variation indicator, not to target error, and is fixed during each run.
+
+The exact sampling and reconstruction maps are
+\begin{align}
+  I_n &: C(\T^3_{\rm src})\longrightarrow\R^{|\K_n^0|},
+       &(I_nf)_{i_1i_2i_3}&=f(s_{1,i_1},s_{2,i_2},s_{3,i_3}),
+       \label{eq:sampling}\\
+  R_n &: \R^{|\K_n^0|}\longrightarrow L^\infty(\T^3_{\rm src}),
+       &(R_nz)|_{C_{i_1i_2i_3}}&=z_{i_1i_2i_3}.
+       \label{eq:reconstruction}
+\end{align}
+Here $C_{i_1i_2i_3}$ is the directed half-open source cell whose lower node is
+the listed node.  No target object is interpolated.  The norms
+$\|z\|_{\ell^\infty}=\max_i|z_i|$ and
+$\|f\|_{\infty,\mathrm{src}}=\sup_s|f(s)|$ are scalar comparison norms;
+they are not physical distance or field norms.
+
+\begin{lemma}[Reconstruction bound]
+For $f\in C^1(\T^3_{\rm src})$,
+\begin{equation}
+ \|R_nI_nf-f\|_{\infty,\mathrm{src}}
+ \le \sum_{j=1}^3h_{j,\max}\|\partial_jf\|_{\infty,\mathrm{src}}
+ \le 3h_n\max_j\|\partial_jf\|_{\infty,\mathrm{src}}.
+ \label{eq:reconstructionbound}
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Join a point in a cell to its lower node one coordinate at a time and apply the
+one-dimensional mean-value theorem.  Only source-coordinate differences are
+used.
+\end{proof}
+
+\section{Finite evolution, stability, and global error}
+
+All velocities in \eqref{eq:velocities} have nonnegative source components.
+Define the one-step upwind map for channel $A$ by
+\begin{equation}
+ (U_{A,n}z)_i=z_i-\Delta t_n\sum_{j=1}^3
+ v_A^j\frac{z_i-z_{i-e_j}}{h_{j,i_j}}.
+ \label{eq:upwind}
+\end{equation}
+The declared local source CFL condition is
+\begin{equation}
+ C_{A,n}(i):=\Delta t_n\sum_j\frac{v_A^j}{h_{j,i_j}}\le1.
+ \label{eq:cfl}
+\end{equation}
+The computations use the stricter maximum $C_{A,n}\le0.45$ and choose an
+integer step count so the final comparison time is exact.
+
+\begin{proposition}[Monotonicity and stability]
+Under \eqref{eq:cfl}, $U_{A,n}$ is a convex-combination map.  It preserves
+constants and scalar order, maps the input range into itself, and is an
+$\ell^\infty$ contraction:
+\begin{equation}
+  \|U_{A,n}z-U_{A,n}w\|_{\ell^\infty}
+  \le\|z-w\|_{\ell^\infty}.
+  \label{eq:stability}
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+The center weight is $1-C_{A,n}(i)\ge0$, each backward-neighbor weight is
+nonnegative, and all weights sum to one.  The claims follow pointwise.
+\end{proof}
+
+\begin{theorem}[Controlled source-semigroup convergence]
+Let $f\in C^2(\T^3_{\rm src})$, let $t_m=m\Delta t_n\le T$, and suppose
+\eqref{eq:cfl} holds.  Then
+\begin{align}
+ &\|U_{A,n}^{m}I_nf-I_nS_A(t_m)f\|_{\ell^\infty}\nonumber\\
+ &\quad\le\frac{T}{2}\left[
+ \Delta t_n\|(v_A\cdot\nabla)^2f\|_{\infty,\mathrm{src}}
+ +\sum_{j=1}^3v_A^jh_{j,\max}
+ \|\partial_j^2f\|_{\infty,\mathrm{src}}\right].
+ \label{eq:globalerror}
+\end{align}
+Consequently, if $h_n\to0$ and $\Delta t_n=O(h_n)$, then
+$R_nU_{A,n}^mI_nf\to S_A(t_m)f$ in the declared source sup norm, with the
+additional reconstruction error \eqref{eq:reconstructionbound}.
+\end{theorem}
+
+\begin{proof}
+Taylor expansion in source time gives a one-step temporal remainder bounded by
+$\Delta t_n^2\|(v_A\cdot\nabla)^2f\|/2$.  The backward difference in direction
+$j$ differs from $\partial_jf$ by at most
+$h_{j,\max}\|\partial_j^2f\|/2$.  Insert the exact solution into
+\eqref{eq:upwind}, sum the local residual over at most $T/\Delta t_n$ steps,
+and use the contraction \eqref{eq:stability}.  Finally apply
+\eqref{eq:reconstructionbound}.
+\end{proof}
+
+The theorem controls nonzero truncation error; it does not infer a continuum
+statement from an exact finite residual.  It applies to all three mesh
+families because each has $h_n\to0$, a bounded mesh ratio, and the same fixed
+continuum semigroup.
+
+\section{Boundary and finite-size protocol}
+
+For a source slab, prescribe channel $A$ only on faces with negative inward
+directional derivative, equivalently the declared inflow faces for $v_A$.
+No independent outflow value is accepted.  If the discrete inflow trace has
+maximum error $\varepsilon_{\partial,n}$, the convex update propagates at most
+$\varepsilon_{\partial,n}$ in addition to the interior consistency bound.
+
+\begin{proposition}[Protected finite-size window]
+At a point $(t,s)$ whose exact backward $v_A$ characteristic remains in the
+slab or first meets a declared inflow face with supplied trace, the finite
+slab comparison uses only the initial data and that trace.  Changing data on
+an outflow face cannot change the accepted update because outflow data are not
+arguments of the scheme.  Outside this backward-characteristic condition, no
+finite-size guarantee is claimed.
+\end{proposition}
+
+The executable boundary control solves $u_t+u_x=0$ on $[0,1]$ with an exact
+source inflow trace.  Its maximum errors at $N=16,24,32,48$ are respectively
+$1.492\times10^{-2}$, $1.004\times10^{-2}$,
+$7.602\times10^{-3}$, and $4.791\times10^{-3}$.  The nonzero decrease is the
+accepted boundary evidence.
+
+\section{Universality and independent computation}
+
+The six-channel maximum nodal errors at the preregistered levels are:
+\begin{center}
+\small
+\begin{tabular}{lrrrrr}
+\toprule
+Mesh family & $N=6$ & $N=8$ & $N=12$ & $N=16$ & terminal order\\
+\midrule
+uniform & 0.09034 & 0.07784 & 0.06168 & 0.04897 & 0.802\\
+graded & 0.09637 & 0.08640 & 0.06964 & 0.05826 & 0.628\\
+source-indicator-adapted & 0.10368 & 0.08555 & 0.07137 & 0.06333 & 0.552\\
+\bottomrule
+\end{tabular}
+\end{center}
+Every series decreases strictly and remains nonzero.  The largest observed
+mesh ratio is below $1.72$, within the preregistered bound $2$.  The different
+microscopic partitions therefore agree with the same analytic limit under the
+declared hypotheses; this is limited universality for the numerical source
+presentation, not universality of physical microphysics.
+
+A separate one-dimensional implementation imports no primary-model code.  Its
+levels and errors are
+\begin{equation*}
+\begin{split}
+  N&=(16,24,32,48,64),\\
+  e_N&=(0.01423,0.00958,0.00727,0.00488,0.00366).
+\end{split}
+\end{equation*}
+The observed orders are $0.975$, $0.962$, $0.984$, and $0.993$.  This
+independently checks the selected monotone refinement mechanism.
+
+\section{Principal-factor comparison and property status}
+
+On a uniform source grid, the frozen spatial factor for a fixed integer mode
+$m$ is
+\begin{equation}
+ \Lambda_{A,n}(m)=\sum_jv_A^j\frac{1-e^{-2\pi i m_jh_n}}{h_n}.
+ \label{eq:discretesymbol}
+\end{equation}
+It obeys
+\begin{equation}
+ |\Lambda_{A,n}(m)-2\pi i\,v_A\cdot m|
+ \le\frac12\sum_jv_A^jh_n|2\pi m_j|^2.
+ \label{eq:symbolbound}
+\end{equation}
+For fixed $m=(1,1,1)$, the largest factor errors at
+$N=8,16,32,64$ are $7.276$, $3.685$, $1.849$, and $0.925$.  The product of
+the six factors also converges by a finite telescoping-product bound.  Factor
+count and the fixed P3--T02 coefficient identity are preserved.
+
+The monotone scheme preserves constants and the range of each scalar.  In
+particular, the manufactured $q^6\in[2.92,3.08]$ remains nonzero.  Preservation
+of the continuum rank-two differential condition would require a separate
+$C^1$ error estimate on the relevant ratios; the present sup-norm theorem does
+not supply it, so that property remains unresolved for P3--T04.
+
+Most importantly, P3--T02 constructed neither a quadratic physical causal
+cone nor a Lorentzian signature.  The explicit precondition tests therefore
+return
+\begin{equation}
+ \texttt{upstream\_object\_undefined\_not\_preserved\_or\_lost}
+ \label{eq:undefinedproperties}
+\end{equation}
+for both objects.  Source evolution orientation and six principal factors are
+not substitutes for physical causality or signature.  Reporting those
+physical properties as preserved would be a hard failure.
+
+\section{Refuter cases and scope limits}
+
+The following variants are rejected by the result:
+\begin{enumerate}[leftmargin=*]
+  \item a source CFL number above one under the declared explicit scheme;
+  \item a family for which $h_n$ does not tend to zero;
+  \item an adaptive mesh with unbounded ratio and no replacement proof;
+  \item independent values prescribed on an outflow face;
+  \item a mesh, tolerance, or comparison map chosen after target-GR access;
+  \item any target metric or atlas used to define interpolation or error;
+  \item a zero finite residual promoted as a continuum theorem;
+  \item an undeclared boundary influence entering the comparison window;
+  \item a physical cone, signature, scale, or metric inferred from the six
+        convergent source transport factors; and
+  \item process validation treated as mathematical or physics proof.
+\end{enumerate}
+
+The source-chart family is not passive-chart invariant as a discrete object;
+only the continuum P3--T02 law has the stated passive naturality.  Different
+regular source charts are allowed only as separately declared comparison
+families whose continuum errors are bounded.  This limitation blocks adoption
+of $\K_n$ as fundamental ontology.
+
+\section{Distance-to-GR and decisive result}
+
+\begin{center}
+\small
+\begin{tabular}{p{0.29\linewidth}p{0.64\linewidth}}
+\toprule
+Burden & Status after this packet\\
+\midrule
+Source ontology primitives & Unchanged; the source arena, $\tau$, $X_A$, and $\K_n$ remain proposal-only debt.\\
+Source equivalence $\mathrm{EqSrc}$ & Continuum passive naturality is inherited; discrete chart-family invariance is not established.\\
+$\mathrm{RetainH}$ and $\mathrm{GenH}$ & Unchanged and not derived.\\
+$\mathrm{ObsLoc}_{\mathrm{lc}}$ and $\mathrm{Resp}_{\mathrm{lc}}$ & Scalar range and $q^6$ margin are controlled; derivative-rank preservation remains unresolved.\\
+$M_{\mathrm{src}}$ & No manifold adoption; the periodic source chart is a computational fixture only.\\
+$g_{\mathrm{eff}}$ & Blocked; principal-factor convergence selects no quadratic cone, signature, or scale.\\
+Matter coupling and Einstein equations & Blocked.\\
+Finite-variation robustness & A controlled first-order source-semigroup refinement now exists for the fixed P3--T02 fixture; physical and chart-independent robustness remain open.\\
+Benchmark/Gate status & Blocked; no protected decision requested.\\
+Current route freeze & Not frozen: P3--T03 adds a distinct controlled-refinement payload and routes P3--T04.\\
+Hard-fail status & CFL, nonrefining, unbounded-mesh, boundary, target-tuning, target-interpolation, zero-remainder, and physical-property overreads fail.\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The Candidate Constructor result is \emph{constructed candidate}:
+`CAND-V22-B1-SIX-TRANSPORT-REFINEMENT-V1` consists of
+\eqref{eq:mesh}--\eqref{eq:upwind}, the exact maps
+\eqref{eq:sampling}--\eqref{eq:reconstruction}, and the limit object
+\eqref{eq:semigroup}.  Under the declared smoothness, mesh, and CFL
+hypotheses, the analytic bounds and independent nonzero-error computations
+establish controlled convergence of this source-chart finite family.  They do
+not establish a physical cone, Lorentzian signature, scale, effective metric,
+matter coupling, Einstein equations, or benchmark recovery.
+
+The next admissible V22 packet after checkpoint is P3--T04, which must use the
+bounded refinement result to classify backgrounds, linearize the relevant
+response, test derivative-rank adequacy, and preserve the unresolved physical
+geometry boundary.
+
+\end{document}

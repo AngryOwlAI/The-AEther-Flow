@@ -1,12 +1,123 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260809-014"
-active_agent_job_id: "AJ-RT-20260809-014-001"
-latest_handoff_id: "handoff-0984"
-current_status: "v22_p3_t02_allowlist_order_parity_repaired_p3_t03_selected_checkpoint_pending"
-claim_boundary_summary: "RT-20260809-014 restores the exact ordered 17-item write allowlist across the committed RT-013 AgentJob, expired execution role, and both registry projections. The AgentJob, completion, handoff, recovery evidence, and P3-T02 scientific payload remain byte-identical. Validator semantics are unchanged; P3-T03 is selected but unexecuted pending one checkpoint, and P2-T02 remains externally gated."
-next_plan_task_id: "P3-T03"
+active_task_id: "RT-20260809-015"
+active_agent_job_id: "AJ-RT-20260809-015-001"
+latest_handoff_id: "handoff-0985"
+current_status: "v22_p3_t03_controlled_source_refinement_completed_p3_t04_selected_checkpoint_pending"
+claim_boundary_summary: "RT-20260809-015 constructs a proposal-only controlled finite-to-continuum refinement of the fixed P3-T02 source transport semigroup with exact comparison maps, analytic stability and error bounds, uniform graded adaptive boundary independent and principal-factor evidence, and explicit C1 response-rank limitations. No source law or refinement family is adopted; the physical cone, Lorentzian signature, scale, effective metric, and Distance-to-GR status remain blocked. P3-T04 is selected but unexecuted pending one checkpoint, and P2-T02 remains externally gated."
+next_plan_task_id: "P3-T04"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260809-014-001. After it commits, execute exactly one separately admitted V22 P3-T03 Candidate Constructor AgentJob with Refuter and Validator Engineer perspectives; do not contact reviewers or take any protected or external action."
+next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260809-015-001. After it commits, execute exactly one separately admitted V22 P3-T04 Candidate Constructor AgentJob with Smuggling Auditor and Refuter perspectives to construct or precisely fail a source-selected background, linear-response quotient, bounded finite-to-continuum parity, and adequacy result; do not contact reviewers or take any protected or external action."
+
+v22_p3_t03_controlled_source_refinement:
+  task_id: "RT-20260809-015"
+  parent_task_id: "RT-20260809-014"
+  parent_handoff_id: "handoff-0984"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P3-T03"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P3-T04"
+  claim_boundary_id: "CB-V22-P3-T03-CONTROLLED-REFINEMENT-001"
+  status: "PASS_V22_P3_T03_CONTROLLED_SOURCE_REFINEMENT"
+  work_item_status: "completed_checkpoint_pending"
+  route_label: "ordinary-research-packet"
+  selected_role_family: "candidate-constructor@0.2.0"
+  supporting_perspective: "refuter@0.2.0"
+  validation_perspective: "validator-engineer@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "construct_v22_p3_t03_controlled_refinement_and_error_model_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "The P3-T02 proposal-only source dynamics now has exact finite comparison maps, analytic stability and error bounds, bounded-ratio irregular and adaptive cases, boundary control, and independent evidence; C1 response parity and every physical geometry object remain absent."
+  source_head: "1ca60ee23ed023957edd717333e6f24f9952008c"
+  source_tree: "4c9c27a346184ba791c7f4c34c352c4c71ed7e3e"
+  agent_job_id: "AJ-RT-20260809-015-001"
+  agent_job_sha256: "eda3da3c88ef06a5d6375d3982e60805279b6116724b8e9031eba6670d975187"
+  decision_id: "DDR-20260809-015"
+  execution_role_ref: "candidate-constructor@0.2.0--RT-20260809-015"
+  source_handoff_id: "handoff-0984"
+  source_handoff_path: "research_control/handoffs/handoff-0984.yaml"
+  source_handoff_sha256: "5f57cb563b1b2fd0a12888bb59aea584cd6a40e4cd50cdb8fd79ab55a02feb1d"
+  prior_checkpoint_commit: "1ca60ee23ed023957edd717333e6f24f9952008c"
+  prior_checkpoint_job_id: "AJ-RT-20260809-014-001"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "8e233493e574cb2748cfd45d3fda0f3da717fc0458e45728a0fedc99c06adbaf"
+  controlled_refinement_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex"
+  controlled_refinement_sha256: "ba5b815072de442dda7ee2bfb6aba41b7d98082b4f0586df22d9d327c0eda921"
+  refinement_specification_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_refinement_specification_v1.yaml"
+  refinement_specification_sha256: "8ce4c69278dbb2a9f250cd191128b2789dc972548709fe75a2084aee077c2416"
+  error_boundary_universality_ledger_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_error_boundary_universality_ledger_v1.yaml"
+  error_boundary_universality_ledger_sha256: "6d644d2c65f0d517d09283e8a0066af52c51bb98f3e19ed1c7595b676a0a4b9b"
+  refinement_model_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_refinement_model.py"
+  refinement_model_sha256: "853dcd71d73e6febcec2ea45891233e72fd75e1ba8f8cb9bb9e608be65ac8c4f"
+  independent_solver_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_independent_solver.py"
+  independent_solver_sha256: "09cd7771b1ce74f5896d2ff05990427cfb537b8eb42451b6cb8c953de1d93747"
+  validation_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_refinement_validation.json"
+  validation_sha256: "ae414c50028512601fdfe05b8e8b13d16ec2ddd0140d971bafb6868784d00099"
+  compact_receipt_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_compact_receipt.json"
+  compact_receipt_sha256: "d0abe7fa2dda00af2398a9f69f1d81bbc670098b7233c73891f7ca29c3d9caab"
+  completion_path: "research_control/tasks/RT-20260809-015/jobs/completions/AJC-AJ-RT-20260809-015-001.yaml"
+  completion_sha256: "b31eb872802b5c4d8698b69f89b0f241088ce084c30b9870e2fcac910c5e2fd6"
+  handoff_id: "handoff-0985"
+  handoff_path: "research_control/handoffs/handoff-0985.yaml"
+  handoff_sha256: "60631e71a9842ed0a74ef00322041c39af005c30b547028ace7e510b495d495a"
+  refinement_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REFINEMENT-V1"
+  continuum_limit_object_id: "LIMIT-V22-B1-SIX-TRANSPORT-SEMIGROUP-V1"
+  channel_count: 6
+  comparison_map_count: 2
+  mesh_family_count: 3
+  primary_channel_run_count: 72
+  maximum_mesh_ratio: 1.7194101486
+  focused_check_count: 276
+  focused_check_failure_count: 0
+  resolved_parent_conflict_count: 5
+  latex_page_count: 6
+  latex_overfull_warning_count: 0
+  p3_t02_executed: true
+  p3_t03_executed: true
+  p3_t04_selected: true
+  p3_t04_executed: false
+  v22_p2_t02_external_review_completed: false
+  canonical_science_modified: false
+  source_extension_adopted: false
+  source_law_adopted: false
+  refinement_family_adopted: false
+  canonical_ontology_modified: false
+  physical_cone_constructed: false
+  lorentzian_signature_constructed: false
+  physical_scale_constructed: false
+  effective_metric_constructed_or_adopted: false
+  operational_rank_preservation_status: "precisely_unresolved_without_C1_control"
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  protected_gate_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  reviewer_contact_authorized: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P3-T04"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P3-T04"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_supporting_perspective: "smuggling-auditor@0.2.0 and refuter@0.2.0"
+  selected_next_packet_type: "background_linear_response_candidate"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "construct_v22_p3_t04_background_linear_response_and_preprincipal_readiness_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  p2_t02_not_selected_reason: "External specialist review requires reviewer-contact authority; internal same-context review does not satisfy P2-T02."
+  successor_requested: false
 
 v22_p3_t02_allowlist_order_parity_recovery:
   task_id: "RT-20260809-014"

@@ -1,0 +1,85 @@
+task_id: "RT-20260809-015"
+task_type: "v22_p3_t03_controlled_refinement_or_continuum_limit"
+title: "Construct and verify the controlled source refinement limit"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "effective_metric_g_eff"
+  candidate_family: "v22_b1_six_transport_controlled_refinement_v1"
+  result_kind: "candidate_or_precise_obstruction"
+  authority: "science_draft"
+  scope: "scientific"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+closure_status: "v22_p3_t03_completed_checkpoint_pending"
+created_at: "2026-08-09T16:05:03Z"
+updated_at: "2026-08-09T16:22:39Z"
+parent_task_id: "RT-20260809-014"
+parent_handoff_id: "handoff-0984"
+current_decision_id: "DDR-20260809-015"
+current_job_id: "AJ-RT-20260809-015-001"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260809-015"
+supporting_perspective: "refuter@0.2.0"
+validation_perspective: "validator-engineer@0.2.0"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal, committed RT-20260809-014 checkpoint, and tracked handoff-0984 authorize exactly one bounded P3-T03 construction or precise-obstruction packet and one checkpoint. Canonical ontology or source-law adoption, physical cone or signature claims, target geometry, Gate review, reviewer contact, publication, push, and external action remain unauthorized."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  phase_id: "P3"
+  plan_task_id: "P3-T03"
+  recommendation_ids:
+    - "V22-R08"
+    - "V22-R10"
+    - "V22-R13"
+  declared_coverage_ids:
+    - "V22-R10"
+    - "V22-R13"
+  sequence_step_ids: []
+  cross_cutting_directive_ids: []
+  dependency_task_ids:
+    - "P3-T01"
+    - "P3-T02"
+objective: "Construct one controlled source-side finite-to-continuum refinement family K_n for the P3-T02 six-channel transport candidate, with exact comparison maps, a declared norm, analytic stability and error bounds, multi-resolution uniform irregular and source-indicator-adapted evidence, boundary and finite-size protocols, independent implementation, principal-factor convergence, explicit physical cone/signature precondition tests, and no target-geometry interpolation."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Construct one controlled finite-to-continuum refinement model for the P3-T02 proposal-only source dynamics with exact comparison maps, convergence or bounded-error criteria, irregular and adaptive cases, and no target-geometry interpolation."
+route_label: "ordinary-research-packet"
+route_strategy_id: "construct_v22_p3_t03_controlled_refinement_and_error_model_v1"
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-V22-P3-T03-CONTROLLED-REFINEMENT-001"
+claim_boundary:
+  allowed_scope: "Task-local proposal-only periodic and inflow source-chart refinement complexes K_n, exact sampling and piecewise-constant reconstruction maps, monotone upwind evolution, analytic consistency stability and convergence bounds, uniform graded and source-indicator-adapted meshes, boundary finite-size universality principal-factor and operational-margin tests, independent computational evidence, internal refuter synthesis, validation, ordinary control-state updates, and one P3-T04 route."
+  forbidden_scope: "Canonical ontology or source-law adoption; target atlas or target-geometry interpolation; physical metric norm measure volume connection coframe causal cone Lorentzian signature physical clock matter law or target fit; g_eff matter coupling Einstein equations protected Gate verdict external review publication release push global impossibility or completed derivation."
+  authority_source: "research_control/handoffs/handoff-0984.yaml"
+  boundary_status: "completed_checkpoint_pending"
+completion_contract:
+  refinement_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REFINEMENT-V1"
+  continuum_limit_object_id: "LIMIT-V22-B1-SIX-TRANSPORT-SEMIGROUP-V1"
+  source_extension_status: "proposal-only controlled refinement data"
+  exact_comparison_maps_required: true
+  convergence_or_bounded_error_required: true
+  irregular_case_required: true
+  adaptive_case_required: true
+  boundary_protocol_required: true
+  universality_test_required: true
+  independent_implementation_required: true
+  principal_factor_convergence_required: true
+  causal_signature_status_required: true
+  parent_child_parallel_synthesis_required: true
+  no_unresolved_blocking_parent_conflict: true
+  source_law_adopted: false
+  effective_metric_constructed: false
+notes: "This task executes only P3-T03. P3-T04 background and pre-principal readiness, any physical cone or signature construction, P2-T02 external review, and every protected or outward action remain separate AgentJobs."

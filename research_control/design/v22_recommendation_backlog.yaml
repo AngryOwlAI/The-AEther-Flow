@@ -1098,7 +1098,7 @@ items:
   stop_conditions: Undefined continuum object, nonconvergent observables, uncontrolled
     boundary effects, causal/signature loss, or finite evidence promoted beyond its
     limit theorem.
-  implementation_status: pending
+  implementation_status: completed_checkpoint_pending
   requires_separate_agentjob: true
   max_outer_agentjobs_per_invocation: 1
   automatic_execution_authorized: false
@@ -1111,6 +1111,19 @@ items:
   title: Establish backgrounds, linear response, and pre-principal-symbol readiness
   track: B
   owner: candidate constructor with smuggling auditor and refuter
+  work_kind: construction_or_implementation
+  task_class: science
+  role_family: candidate-constructor@0.2.0
+  supporting_perspective: smuggling-auditor@0.2.0 and refuter@0.2.0
+  controlling_launcher: continue-research-goal@v4
+  worker_skill: continue-research
+  route_label: ordinary-research-packet
+  target_derivation_milestone: effective_metric_g_eff
+  milestone_burden: Produce the exact admissible background and linearized operator
+    needed for a lawful principal-symbol calculation, compare finite and continuum
+    linearizations with bounded error, apply the adequacy floor, and stress nonunique
+    response without target convenience.
+  expected_result_kind: candidate_or_precise_obstruction
   declared_coverage_ids:
   - V22-R05
   - V22-R07
@@ -1153,6 +1166,9 @@ items:
     error, or nonunique physical response with no derived quotient. ## P4. Derive
     principal structure, reconstruct operational geometry, and perform Gate B'
   implementation_status: pending
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  allow_scope_expansion: false
   requires_separate_agentjob: true
   max_outer_agentjobs_per_invocation: 1
   automatic_execution_authorized: false
