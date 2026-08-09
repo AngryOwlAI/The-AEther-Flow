@@ -1,0 +1,187 @@
+{
+  "authority_limits": {
+    "distance_to_gr_changed": false,
+    "p2_t01_replayed": false,
+    "p2_t02_external_action_taken": false,
+    "p2_t03_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_or_push_authorized": false,
+    "scientific_claims_changed": false
+  },
+  "check_count": 22,
+  "checks": [
+    {
+      "check_id": "replacement_occurs_exactly_once",
+      "detail": 1,
+      "status": "PASS"
+    },
+    {
+      "check_id": "invalid_value_absent",
+      "detail": "result_kind: \"qualifying_bounded_audit_verdict\"",
+      "status": "PASS"
+    },
+    {
+      "check_id": "whole_file_preimage_reconstruction",
+      "detail": "9647114ee7d259d155d61aa7c476d17522927f3978bfea146345609059b720cf",
+      "status": "PASS"
+    },
+    {
+      "check_id": "target_taxonomy_exact",
+      "detail": {
+        "authority": "project_control",
+        "milestone": "benchmark_promotion",
+        "result_kind": "audit_verdict_or_precise_repair",
+        "scope": "scientific",
+        "work_kind": "audit_or_review"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "like_for_like_audit_classification",
+      "detail": {
+        "authority": "project_control",
+        "milestone": "benchmark_promotion",
+        "result_kind": "audit_verdict_or_precise_repair",
+        "scope": "scientific",
+        "work_kind": "audit_or_review"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_contract_parsed",
+      "detail": "v21_task_taxonomy_v1",
+      "status": "PASS"
+    },
+    {
+      "check_id": "replacement_is_policy_enumerated",
+      "detail": [
+        "audit_verdict_or_precise_repair",
+        "candidate_or_precise_obstruction",
+        "completed_or_precisely_blocked",
+        "implemented_and_validated_or_precisely_blocked",
+        "protected_verdict_or_deferred_human_gate",
+        "theorem_or_precise_obstruction",
+        "not_applicable",
+        "unknown"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check_id": "invalid_value_not_policy_enumerated",
+      "detail": [
+        "audit_verdict_or_precise_repair",
+        "candidate_or_precise_obstruction",
+        "completed_or_precisely_blocked",
+        "implemented_and_validated_or_precisely_blocked",
+        "protected_verdict_or_deferred_human_gate",
+        "theorem_or_precise_obstruction",
+        "not_applicable",
+        "unknown"
+      ],
+      "status": "PASS"
+    },
+    {
+      "check_id": "preserve_sha256::research_control/design/v21_task_taxonomy_policy.md",
+      "detail": "7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b",
+      "status": "PASS"
+    },
+    {
+      "check_id": "preserve_sha256::research_control/tasks/RT-20260803-014/00_TASK.yaml",
+      "detail": "655801d0fba61821ebcc41f170792b25ff66900f2598bd9fba642dcc0b46cc72",
+      "status": "PASS"
+    },
+    {
+      "check_id": "preserve_sha256::tests/test_task_taxonomy.py",
+      "detail": "fb1fdcdf8a936b282cb00025868cfc9887709d03f372be9c547f465251832804",
+      "status": "PASS"
+    },
+    {
+      "check_id": "preserve_sha256::research_control/design/v22_recommendation_backlog.yaml",
+      "detail": "d7d33ad808cded6cb429d6bc4ead72c4e1593550f24eb4ff67d11f1f539f6d58",
+      "status": "PASS"
+    },
+    {
+      "check_id": "preserve_sha256::research_control/handoffs/handoff-0975.yaml",
+      "detail": "5d0a708da483f567d7329a9f0c4623192ab3095663062a8f47cb2f8726fa595d",
+      "status": "PASS"
+    },
+    {
+      "check_id": "preserve_sha256::research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex",
+      "detail": "2ba813e4e961b9ea2709a31c6e06152b1cb4d50ebd90185c2ed93d7aeb132439",
+      "status": "PASS"
+    },
+    {
+      "check_id": "preserve_sha256::research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_capacity_validation.json",
+      "detail": "0f5400de250218eca95d5c78ff2b4a8e062bd41f08eee93f581156ae9c708d4f",
+      "status": "PASS"
+    },
+    {
+      "check_id": "preserve_sha256::research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_compact_receipt.json",
+      "detail": "330d1f1982b4cd6e1d3861c20cfdbbc858baaadff642ec586a45552902dd9663",
+      "status": "PASS"
+    },
+    {
+      "check_id": "preserve_sha256::research_control/tasks/RT-20260809-005/jobs/completions/AJC-AJ-RT-20260809-005-001.yaml",
+      "detail": "087086ab7b5840209601794e9b66d0c29d466bbc65e05b22490a786760ea0d5d",
+      "status": "PASS"
+    },
+    {
+      "check_id": "inherited_manifest_sha256",
+      "detail": "58fca4eeecf5fc7d8eea4f4c46b64921154617c86a8149529819ddd7a535ec50",
+      "status": "PASS"
+    },
+    {
+      "check_id": "inherited_manifest_file_count",
+      "detail": 62,
+      "status": "PASS"
+    },
+    {
+      "check_id": "inherited_manifest_is_sorted",
+      "detail": 62,
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_head_unchanged",
+      "detail": "b1dd6195bb963ab02780e24c089d545cb8319cee",
+      "status": "PASS"
+    },
+    {
+      "check_id": "git_index_clean_precheckpoint",
+      "detail": 0,
+      "status": "PASS"
+    }
+  ],
+  "evidence": {
+    "inherited_manifest_sha256": "58fca4eeecf5fc7d8eea4f4c46b64921154617c86a8149529819ddd7a535ec50",
+    "preserved_hashes": {
+      "research_control/design/v21_task_taxonomy_policy.md": "7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b",
+      "research_control/design/v22_recommendation_backlog.yaml": "d7d33ad808cded6cb429d6bc4ead72c4e1593550f24eb4ff67d11f1f539f6d58",
+      "research_control/handoffs/handoff-0975.yaml": "5d0a708da483f567d7329a9f0c4623192ab3095663062a8f47cb2f8726fa595d",
+      "research_control/tasks/RT-20260803-014/00_TASK.yaml": "655801d0fba61821ebcc41f170792b25ff66900f2598bd9fba642dcc0b46cc72",
+      "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_capacity_validation.json": "0f5400de250218eca95d5c78ff2b4a8e062bd41f08eee93f581156ae9c708d4f",
+      "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_compact_receipt.json": "330d1f1982b4cd6e1d3861c20cfdbbc858baaadff642ec586a45552902dd9663",
+      "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex": "2ba813e4e961b9ea2709a31c6e06152b1cb4d50ebd90185c2ed93d7aeb132439",
+      "research_control/tasks/RT-20260809-005/jobs/completions/AJC-AJ-RT-20260809-005-001.yaml": "087086ab7b5840209601794e9b66d0c29d466bbc65e05b22490a786760ea0d5d",
+      "tests/test_task_taxonomy.py": "fb1fdcdf8a936b282cb00025868cfc9887709d03f372be9c547f465251832804"
+    },
+    "prior_checkpoint": {
+      "consumed": true,
+      "failure_count": 1,
+      "job_id": "AJ-RT-20260809-005-001",
+      "replayed": false,
+      "skipped_count": 1,
+      "sole_failure": "tests.test_task_taxonomy.TaskTaxonomyTests.test_repository_report_records_zero_mutation_and_strengthening",
+      "test_count": 1328
+    },
+    "source_head": "b1dd6195bb963ab02780e24c089d545cb8319cee",
+    "target_postimage_sha256": "4e86172a58d0d82676ef5a94612402938c04a0e7927a43fb09501b13f526a88d",
+    "target_preimage_sha256": "9647114ee7d259d155d61aa7c476d17522927f3978bfea146345609059b720cf"
+  },
+  "failure_count": 0,
+  "job_id": "AJ-RT-20260809-006-001",
+  "pass_count": 22,
+  "schema_id": "v22_p2_t01_taxonomy_checkpoint_recovery_validation_v1",
+  "status": "PASS",
+  "task_id": "RT-20260809-006"
+}

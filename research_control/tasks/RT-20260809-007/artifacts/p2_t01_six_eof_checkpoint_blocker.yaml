@@ -1,0 +1,80 @@
+schema_id: "research_checkpoint_blocker_v1"
+blocker_id: "BLOCK-V22-P2-T01-SIX-EOF-CHECKPOINT-001"
+status: "active_blocking"
+job_id: "AJ-RT-20260809-006-001"
+task_id: "RT-20260809-006"
+created_at: "2026-08-09T07:36:24Z"
+source_head: "b1dd6195bb963ab02780e24c089d545cb8319cee"
+source_tree: "a01412cb5aee3a6ddc36948085393887caf1560d"
+checkpoint:
+  run_id: "RUN-CHECKPOINT-35d67803fd0a382a"
+  invocation_count: 1
+  consumed: true
+  committed: false
+  staged: false
+  entry_index_restored: true
+  gate_count: 8
+  pass_count: 2
+  failure_count: 1
+  skipped_count: 5
+  failed_gate: "git_diff_check"
+  failed_gate_returncode: 2
+  test_shard_executed: false
+  receipt:
+    path: ".local/validation-receipts/901a09745e55e09d87397b94e710070f3d3bb2ed04e40d1e6379ff0963f36640/RUN-CHECKPOINT-35d67803fd0a382a/receipt.json"
+    sha256: "d13ac85c59e86740ddda449c8b2115400a19262b797b647fe45b894aecba8224"
+  failed_gate_output:
+    path: ".local/validation-receipts/901a09745e55e09d87397b94e710070f3d3bb2ed04e40d1e6379ff0963f36640/RUN-CHECKPOINT-35d67803fd0a382a/gates/0007-git_diff_check.stdout"
+    sha256: "cc46688a30de7d7565c6461c5a7cbe6165a15e9db4976cbf766adbe026cb9147"
+sole_failure_class:
+  kind: "six_new_blank_lines_at_eof"
+  finding_count: 6
+  semantic_content_error: false
+  validator_or_policy_error: false
+targets:
+  - path: "research_control/tasks/RT-20260809-005/artifacts/child_phys_math_p2_t01_capacity_theorem.yaml"
+    finding_line: 56
+    preimage_sha256: "424bee951281caf3eb0d1b5a05de5039050e1c73b90c02e3f799327cd9e6bace"
+    required_postimage_sha256: "992561f9d7ea96cd099d57113cb529bbaa01b68cf1fb4a6576ef189a43bb0c6e"
+  - path: "research_control/tasks/RT-20260809-005/artifacts/child_refuter_p2_t01_scope_audit.yaml"
+    finding_line: 82
+    preimage_sha256: "09a4e6243ca09a8bfe6c4347cd117ac4daba2a4778236554d5570ea95a68d073"
+    required_postimage_sha256: "f1efdcc0d37900fdf736df20603dd0423d3b30c799ddaac05e6b6e5b8b7cec12"
+  - path: "research_control/tasks/RT-20260809-005/artifacts/parent_conflict_review_p2_t01_capacity.yaml"
+    finding_line: 43
+    preimage_sha256: "2827d9141f8299c9c7278c515622d3e86369227b485de877ee86bb759859f332"
+    required_postimage_sha256: "64fade66b2c5716e9f5fdab2420448f198c470918ed0116731458d3263a3cf24"
+  - path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_state_quotient_definitions_v1.yaml"
+    finding_line: 169
+    preimage_sha256: "eaa545786e17f0b143e29d9c4c29e1d72e0874ac6441734d1cf5b9634ccea668"
+    required_postimage_sha256: "27678adff2559c2a94725531944110e4cbb4496b94337860516b8dcac4e9c5d5"
+  - path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_proof_countermodel_archive_v1.yaml"
+    finding_line: 155
+    preimage_sha256: "0e1c4c809177dd7e0818cdc1652e4ae2d566eaf6292a663c4e32df99ea052bcb"
+    required_postimage_sha256: "28967cd57a833c83ad0855787a6313a07c5bcee68cc95b4d864220fc9fc05c21"
+  - path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_source_adequacy_checklist_v1.yaml"
+    finding_line: 95
+    preimage_sha256: "9b64aee79729c6a7ca83fc94f38cd6ff2fc4eedf93b32d7ee3a345a09b0fb4a0"
+    required_postimage_sha256: "a9b59df7b5b2d1203fef53cf23817400c6d1511836e97ff1ae21b819dc064e68"
+recovery:
+  task_id: "RT-20260809-007"
+  job_id: "AJ-RT-20260809-007-001"
+  route_strategy_id: "repair_v22_p2_t01_six_eof_blank_lines_and_checkpoint_v1"
+  immutable_route_sha256: "bab376964ce0d88d4470a384804b0928a509a54037d87123cbbb604ef5265423"
+  route_blocker_fingerprint: "6a1aa4e2017c9234336df5ee89f3c54ffbde4935c21747ab93415300b2ce81c0"
+  inherited_manifest_path: "research_control/tasks/RT-20260809-007/artifacts/inherited_dirty_manifest_v22_p2_t01_six_eof_checkpoint.txt"
+  inherited_manifest_sha256: "1eba401f33257fca514ba9d656a63e87c816d9d6bbbf0eeda0fe87cbca17880b"
+  prior_job_replay_authorized: false
+  fresh_checkpoint_invocation_limit: 1
+authority_limits:
+  semantic_payload_changed: false
+  p2_t01_replayed: false
+  p2_t03_executed: false
+  p2_t02_external_action_taken: false
+  scientific_claims_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_or_push_authorized: false
+  external_action_authorized: false
+notes: "This blocker binds local operational checkpoint evidence only. It authorizes exactly six one-byte terminal-newline deletions and one fresh checkpoint; it supplies no scientific or protected authority."

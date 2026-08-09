@@ -1,0 +1,123 @@
+{
+  "authority_limits": {
+    "distance_to_gr_changed": false,
+    "p2_t01_replayed": false,
+    "p2_t02_external_action_taken": false,
+    "p2_t03_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_or_push_authorized": false,
+    "scientific_claims_changed": false,
+    "semantic_payload_changed": false
+  },
+  "error_count": 0,
+  "errors": [],
+  "git_index_clean": true,
+  "inherited_manifest_sha256": "1eba401f33257fca514ba9d656a63e87c816d9d6bbbf0eeda0fe87cbca17880b",
+  "job_id": "AJ-RT-20260809-007-001",
+  "prior_checkpoint": {
+    "consumed": true,
+    "finding_count": 6,
+    "job_id": "AJ-RT-20260809-006-001",
+    "replayed": false,
+    "run_id": "RUN-CHECKPOINT-35d67803fd0a382a",
+    "sole_failure_gate": "git_diff_check"
+  },
+  "protected_check_count": 10,
+  "protected_checks": {
+    "research_control/design/v22_recommendation_backlog.yaml": {
+      "expected_sha256": "d7d33ad808cded6cb429d6bc4ead72c4e1593550f24eb4ff67d11f1f539f6d58",
+      "match": true,
+      "observed_sha256": "d7d33ad808cded6cb429d6bc4ead72c4e1593550f24eb4ff67d11f1f539f6d58"
+    },
+    "research_control/design/validation_obligation_resolution_policy_v1.md": {
+      "expected_sha256": "baea9d8b4b67c4c8bceb73da34dfbc562fe285c087992198295a177058c4cfc2",
+      "match": true,
+      "observed_sha256": "baea9d8b4b67c4c8bceb73da34dfbc562fe285c087992198295a177058c4cfc2"
+    },
+    "research_control/handoffs/handoff-0975.yaml": {
+      "expected_sha256": "5d0a708da483f567d7329a9f0c4623192ab3095663062a8f47cb2f8726fa595d",
+      "match": true,
+      "observed_sha256": "5d0a708da483f567d7329a9f0c4623192ab3095663062a8f47cb2f8726fa595d"
+    },
+    "research_control/handoffs/handoff-0976.yaml": {
+      "expected_sha256": "b93b803dd98303f658aad29bdde9410aacaa75dc2a1bea3a8031160ffe45670d",
+      "match": true,
+      "observed_sha256": "b93b803dd98303f658aad29bdde9410aacaa75dc2a1bea3a8031160ffe45670d"
+    },
+    "research_control/tasks/RT-20260804-001/00_TASK.yaml": {
+      "expected_sha256": "4e86172a58d0d82676ef5a94612402938c04a0e7927a43fb09501b13f526a88d",
+      "match": true,
+      "observed_sha256": "4e86172a58d0d82676ef5a94612402938c04a0e7927a43fb09501b13f526a88d"
+    },
+    "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_capacity_validation.json": {
+      "expected_sha256": "0f5400de250218eca95d5c78ff2b4a8e062bd41f08eee93f581156ae9c708d4f",
+      "match": true,
+      "observed_sha256": "0f5400de250218eca95d5c78ff2b4a8e062bd41f08eee93f581156ae9c708d4f"
+    },
+    "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_compact_receipt.json": {
+      "expected_sha256": "330d1f1982b4cd6e1d3861c20cfdbbc858baaadff642ec586a45552902dd9663",
+      "match": true,
+      "observed_sha256": "330d1f1982b4cd6e1d3861c20cfdbbc858baaadff642ec586a45552902dd9663"
+    },
+    "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex": {
+      "expected_sha256": "2ba813e4e961b9ea2709a31c6e06152b1cb4d50ebd90185c2ed93d7aeb132439",
+      "match": true,
+      "observed_sha256": "2ba813e4e961b9ea2709a31c6e06152b1cb4d50ebd90185c2ed93d7aeb132439"
+    },
+    "research_control/tasks/RT-20260809-005/jobs/completions/AJC-AJ-RT-20260809-005-001.yaml": {
+      "expected_sha256": "087086ab7b5840209601794e9b66d0c29d466bbc65e05b22490a786760ea0d5d",
+      "match": true,
+      "observed_sha256": "087086ab7b5840209601794e9b66d0c29d466bbc65e05b22490a786760ea0d5d"
+    },
+    "research_control/tasks/RT-20260809-006/jobs/completions/AJC-AJ-RT-20260809-006-001.yaml": {
+      "expected_sha256": "1716a7c978a5cf685266ca2899cf4459ae9d767583c832b858d82ad72e0c9907",
+      "match": true,
+      "observed_sha256": "1716a7c978a5cf685266ca2899cf4459ae9d767583c832b858d82ad72e0c9907"
+    }
+  },
+  "schema_id": "v22_p2_t01_six_eof_checkpoint_recovery_validation_v1",
+  "sealed_receipt_sha256": "f459d5137eb10c7121add197036925946ac174c0ee3db48d7fa9e3a77c49d3c3",
+  "source_head": "b1dd6195bb963ab02780e24c089d545cb8319cee",
+  "status": "PASS",
+  "target_check_count": 6,
+  "target_checks": {
+    "research_control/tasks/RT-20260809-005/artifacts/child_phys_math_p2_t01_capacity_theorem.yaml": {
+      "expected_after_sha256": "992561f9d7ea96cd099d57113cb529bbaa01b68cf1fb4a6576ef189a43bb0c6e",
+      "match": true,
+      "observed_sha256": "992561f9d7ea96cd099d57113cb529bbaa01b68cf1fb4a6576ef189a43bb0c6e",
+      "sealed_after_sha256": "992561f9d7ea96cd099d57113cb529bbaa01b68cf1fb4a6576ef189a43bb0c6e"
+    },
+    "research_control/tasks/RT-20260809-005/artifacts/child_refuter_p2_t01_scope_audit.yaml": {
+      "expected_after_sha256": "f1efdcc0d37900fdf736df20603dd0423d3b30c799ddaac05e6b6e5b8b7cec12",
+      "match": true,
+      "observed_sha256": "f1efdcc0d37900fdf736df20603dd0423d3b30c799ddaac05e6b6e5b8b7cec12",
+      "sealed_after_sha256": "f1efdcc0d37900fdf736df20603dd0423d3b30c799ddaac05e6b6e5b8b7cec12"
+    },
+    "research_control/tasks/RT-20260809-005/artifacts/parent_conflict_review_p2_t01_capacity.yaml": {
+      "expected_after_sha256": "64fade66b2c5716e9f5fdab2420448f198c470918ed0116731458d3263a3cf24",
+      "match": true,
+      "observed_sha256": "64fade66b2c5716e9f5fdab2420448f198c470918ed0116731458d3263a3cf24",
+      "sealed_after_sha256": "64fade66b2c5716e9f5fdab2420448f198c470918ed0116731458d3263a3cf24"
+    },
+    "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_state_quotient_definitions_v1.yaml": {
+      "expected_after_sha256": "27678adff2559c2a94725531944110e4cbb4496b94337860516b8dcac4e9c5d5",
+      "match": true,
+      "observed_sha256": "27678adff2559c2a94725531944110e4cbb4496b94337860516b8dcac4e9c5d5",
+      "sealed_after_sha256": "27678adff2559c2a94725531944110e4cbb4496b94337860516b8dcac4e9c5d5"
+    },
+    "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_proof_countermodel_archive_v1.yaml": {
+      "expected_after_sha256": "28967cd57a833c83ad0855787a6313a07c5bcee68cc95b4d864220fc9fc05c21",
+      "match": true,
+      "observed_sha256": "28967cd57a833c83ad0855787a6313a07c5bcee68cc95b4d864220fc9fc05c21",
+      "sealed_after_sha256": "28967cd57a833c83ad0855787a6313a07c5bcee68cc95b4d864220fc9fc05c21"
+    },
+    "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_source_adequacy_checklist_v1.yaml": {
+      "expected_after_sha256": "a9b59df7b5b2d1203fef53cf23817400c6d1511836e97ff1ae21b819dc064e68",
+      "match": true,
+      "observed_sha256": "a9b59df7b5b2d1203fef53cf23817400c6d1511836e97ff1ae21b819dc064e68",
+      "sealed_after_sha256": "a9b59df7b5b2d1203fef53cf23817400c6d1511836e97ff1ae21b819dc064e68"
+    }
+  },
+  "task_id": "RT-20260809-007"
+}

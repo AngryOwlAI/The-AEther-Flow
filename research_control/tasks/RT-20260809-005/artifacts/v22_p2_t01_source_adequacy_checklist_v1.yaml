@@ -1,0 +1,94 @@
+schema_id: "v22_p2_t01_source_adequacy_checklist_v1"
+task_id: "RT-20260809-005"
+job_id: "AJ-RT-20260809-005-001"
+status_label: "draft/control candidate test interface"
+purpose: "Apply one uniform necessary-condition test to every later P2-T04 candidate without treating passage as sufficient geometry recovery."
+candidate_required_fields:
+  - field_id: "source_state_and_domain"
+    question: "What local source state or explicit nonlocal replacement is used, at what finite order, and on which domain?"
+    fail_closed_if_missing: true
+  - field_id: "regularity"
+    question: "Where is the state C1, where do redundancy ranks remain constant, and what singular strata exist?"
+    fail_closed_if_missing: true
+  - field_id: "source_equivalence"
+    question: "Which physically or source-derived relabelings define V_src, and why do they act as redundancies?"
+    fail_closed_if_missing: true
+  - field_id: "output_equivalence"
+    question: "Which coordinate or candidate-gauge relabelings define V_out, and which observables descend?"
+    fail_closed_if_missing: true
+  - field_id: "reconstruction"
+    question: "What equivariant map R is defined, and what proves it descends without representative selection?"
+    fail_closed_if_missing: true
+  - field_id: "factor_statistic"
+    question: "Does R_bar factor through I, exactly or approximately, and what is rank(dI) on each stratum?"
+    fail_closed_if_missing: true
+  - field_id: "operational_typing"
+    question: "For each counted response, are source type, device bridge, scale, domain, invariant readout, and falsifier complete?"
+    fail_closed_if_missing: true
+  - field_id: "independence"
+    question: "Which quotient output subspace W is realized, and why is dP restricted to W injective?"
+    fail_closed_if_missing: true
+  - field_id: "stochastic_scope"
+    question: "Is the kernel source-independent after I, and are any latent source channels explicitly budgeted?"
+    fail_closed_if_missing: true
+  - field_id: "escape_and_global_scope"
+    question: "How are marks, higher jets, partial domains, singularities, non-smooth cases, gluing, and nonlocality classified?"
+    fail_closed_if_missing: true
+decision_procedure:
+  - step: 1
+    action: "reject any target atlas metric connection matter coupling or benchmark fit imported as source premise"
+  - step: 2
+    action: "form local source and output quotient tangents or declare a precise non-differential alternative"
+  - step: 3
+    action: "compute route-specific source information capacity after quotienting"
+  - step: 4
+    action: "admit only fully typed invariant operational covectors"
+  - step: 5
+    action: "prove realized operational independence on the same state and patch"
+  - step: 6
+    action: "compare required rank n with capacity rank r"
+  - step: 7
+    action: "classify stochastic marks partial domains singular strata discrete states and added channels"
+  - step: 8
+    action: "emit one bounded verdict and preserve insufficiency versus obstruction"
+allowed_verdicts:
+  - verdict: "necessary_condition_met_not_sufficient"
+    meaning: "n <= r under complete typing; geometry construction robustness uniqueness and Gate B remain open"
+  - verdict: "scoped_obstruction"
+    meaning: "n > r for the exact declared factor-through route on the tested regular patch"
+  - verdict: "outside_differential_scope"
+    meaning: "C1 quotient hypotheses fail; use a declared finite stratified topological or other test"
+  - verdict: "insufficient_physical_typing"
+    meaning: "one or more purported response covectors lack complete source-derived operational provenance"
+  - verdict: "insufficient_equivalence_or_domain_data"
+    meaning: "quotient or local-domain assumptions are not stated well enough to evaluate rank"
+forbidden_verdicts:
+  - "adequate_physical_metric_derived"
+  - "global_ontology_impossible"
+  - "all_source_extensions_excluded"
+  - "Gate_B_pass"
+  - "benchmark_pass"
+probe_slots:
+  - "cone_deformation"
+  - "anisotropic_tidal_response"
+  - "polarization_response"
+  - "clock_rate_shift"
+  - "volume_shear_variation"
+  - "curvature_response"
+current_probe_admission_count: 0
+scope_cases_required:
+  - "deterministic"
+  - "stochastic"
+  - "quotient_observable"
+  - "partial_domain"
+  - "marked_domain"
+optional_proof_assistant_kernel:
+  used: false
+  status: "not_applicable"
+same_context_review:
+  class: "same_context_internal_ai_review_only"
+  external_review_completed: false
+authority_limits:
+  passage_is_sufficient: false
+  hard_candidate_filter_authorized: false
+  physics_promotion_authorized: false

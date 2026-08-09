@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-0974.yaml",
+    "research_control/handoffs/handoff-0977.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "7ca77f1e4a433e92cebd472bc80c5343b5b52137",
+    "source_commit": "b1dd6195bb963ab02780e24c089d545cb8319cee",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "eeaea24e8d0cac2c8720f4ae1ac458a9c1daf5a7b4641463e98f405554ad86d3"
+        "sha256": "c5d011d8ce616938668491f3134d6d61936a87ea6edea5c2d3791cd0d00e739b"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "283cdecd2506790da8d23aae7e1dab2a2d5c8690da364abbdc4785b4d71a3193"
+        "sha256": "3fb7f45d70abd599d69cd5dcf8cb0735f98422e2f3de7d6266c259bfc78b20dc"
       },
       {
-        "path": "research_control/handoffs/handoff-0974.yaml",
-        "sha256": "530460c7650156d8647b5fa44d6fa2b2a9c2ead66936b86ef4f578427d166fda"
+        "path": "research_control/handoffs/handoff-0977.yaml",
+        "sha256": "9145365ac95d3dccd0ecca8fbe584814a81a59d7ea781a5147766c2dd86bf8c4"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "fae9748c0a4ab57415a38efadba3abf99a6ce7a7806606335debf828bcb2db05"
+        "sha256": "f1c5b301a40459a6bb214fe0a16bcd2a821f17c71993e50426b2e03e55fb329b"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "1654612d0782505d7b9a35165616e586f54688d2f31be9177f17c87b3952f8db",
+    "source_manifest_sha256": "f60e8c568c3d6a80f65617d3eba56fe4927b9a7f70b8347ad74d5c12142d317d",
     "source_path_count": "12",
-    "generation_time": "2026-08-09T04:35:00Z",
-    "task_count": "1229",
+    "generation_time": "2026-08-09T07:41:18Z",
+    "task_count": "1232",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260809-004",
-    "latest_handoff_id": "handoff-0974",
-    "current_status": "v22_p1_t04_gate_b_only_lock_complete_p2_t01_selected_checkpoint_pending",
+    "active_task_id": "RT-20260809-007",
+    "latest_handoff_id": "handoff-0977",
+    "current_status": "v22_p2_t01_six_eof_repaired_p2_t03_selected_fresh_checkpoint_pending",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260809-004",
-    "latest_research_handoff_id": "handoff-0974",
-    "latest_research_next_action": "After the single governed checkpoint for AJ-RT-20260809-004-001 execute exactly one separately admitted V22 P2-T01 continue-research AgentJob to prove the coordinate- and gauge-aware local source information-capacity necessary condition; perform no protected or external action.",
+    "latest_research_task_id": "RT-20260809-007",
+    "latest_research_handoff_id": "handoff-0977",
+    "latest_research_next_action": "Run the single fresh governed checkpoint for AJ-RT-20260809-007-001. After it commits, execute exactly one separately admitted V22 P2-T03 continue-research AgentJob; do not contact reviewers or take any protected or external action.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v22_p2_t01_local_source_information_capacity_theorem",
-    "role_family": "ontology-formalizer@0.2.0",
+    "route_id": "v22_p2_t03_source_extension_budget_and_hard_fail_protocol",
+    "role_family": "refuter@0.2.0",
     "target_derivation_milestone": "effective_metric_g_eff",
-    "milestone_burden": "Metric law; prove a coordinate- and gauge-aware source information-capacity necessary condition and classify escape routes without importing target geometry.",
+    "milestone_burden": "Metric law; pre-register a maximum three-family source-extension budget sequential activation and scoped hard-fail criteria before candidate selection.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -445,7 +445,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "no_distance_delta",
+      "effect": "no_distance_delta_project_system_eof_recovery_only",
       "changed": false,
       "milestone": "effective_metric_g_eff",
       "burden_id": "g_eff"
@@ -748,13 +748,13 @@
     }
   },
   "validation": {
-    "latest_required_status": "PASS",
+    "latest_required_status": "PASS_PRECHECKPOINT_STAGING_REQUIRED",
     "pending_layers": [
       {
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "One governed checkpoint remains."
+          "Exactly one fresh governed AJ-RT-20260809-007-001 checkpoint remains."
         ]
       }
     ]

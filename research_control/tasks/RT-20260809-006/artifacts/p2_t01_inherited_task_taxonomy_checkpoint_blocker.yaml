@@ -1,0 +1,36 @@
+schema_id: "research_checkpoint_blocker_v1"
+blocker_id: "BLOCK-V22-P2-T01-INHERITED-TASK-TAXONOMY-001"
+status: "active_blocking"
+job_id: "AJ-RT-20260809-005-001"
+task_id: "RT-20260809-005"
+created_at: "2026-08-09T06:43:58Z"
+source_head: "b1dd6195bb963ab02780e24c089d545cb8319cee"
+checkpoint:
+  invocation_count: 1
+  consumed: true
+  committed: false
+  staged: false
+  test_count: 1328
+  failure_count: 1
+  skipped_count: 1
+sole_failure:
+  test_id: "tests.test_task_taxonomy.TaskTaxonomyTests.test_repository_report_records_zero_mutation_and_strengthening"
+  path: "research_control/tasks/RT-20260804-001/00_TASK.yaml"
+  field: "task_taxonomy.result_kind"
+  invalid_value: "qualifying_bounded_audit_verdict"
+  canonical_replacement: "audit_verdict_or_precise_repair"
+  target_preimage_sha256: "9647114ee7d259d155d61aa7c476d17522927f3978bfea146345609059b720cf"
+recovery:
+  task_id: "RT-20260809-006"
+  job_id: "AJ-RT-20260809-006-001"
+  route_strategy_id: "recover_v22_p2_t01_inherited_task_taxonomy_checkpoint_v1"
+  prior_job_replay_authorized: false
+  fresh_checkpoint_invocation_limit: 1
+authority_limits:
+  scientific_claims_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_or_push_authorized: false
+  external_action_authorized: false
+notes: "This blocker is operational checkpoint evidence only. It is not scientific authority and does not authorize P2-T01 replay, P2-T03 execution, P2-T02 reviewer contact, promotion, publication, push, or external action."

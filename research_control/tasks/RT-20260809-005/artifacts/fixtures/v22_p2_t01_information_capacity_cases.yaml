@@ -1,0 +1,179 @@
+schema_id: "v22_p2_t01_information_capacity_cases_v1"
+task_id: "RT-20260809-005"
+job_id: "AJ-RT-20260809-005-001"
+matrix_convention: "row-major rational matrices acting from source quotient coordinates through a factor statistic and then to operational responses"
+required_case_classes:
+  - "deterministic"
+  - "stochastic"
+  - "quotient_observable"
+  - "partial_domain"
+  - "marked_domain"
+cases:
+  - case_id: "DET-SCALAR-ONE-RESPONSE"
+    case_class: "deterministic"
+    theorem_applicable: true
+    statistic_matrix: [[1, 0]]
+    post_matrix: [[1]]
+    required_operational_rank: 1
+    expected_statistic_rank: 1
+    expected_composite_rank: 1
+    expected_verdict: "necessary_condition_met_not_sufficient"
+  - case_id: "DET-SCALAR-TWO-RESPONSE-P5"
+    case_class: "deterministic"
+    theorem_applicable: true
+    statistic_matrix: [[1, 0]]
+    post_matrix: [[1], [2]]
+    required_operational_rank: 2
+    expected_statistic_rank: 1
+    expected_composite_rank: 1
+    expected_verdict: "scoped_obstruction"
+  - case_id: "DET-TWO-CHANNEL-ESCAPE"
+    case_class: "deterministic"
+    theorem_applicable: true
+    statistic_matrix: [[1, 0], [0, 1]]
+    post_matrix: [[1, 0], [0, 1]]
+    required_operational_rank: 2
+    expected_statistic_rank: 2
+    expected_composite_rank: 2
+    expected_verdict: "necessary_condition_met_not_sufficient"
+  - case_id: "DET-SINGULAR-STRATUM"
+    case_class: "deterministic"
+    theorem_applicable: true
+    statistic_matrix: [[0, 0], [0, 1]]
+    post_matrix: [[1, 0], [0, 1]]
+    required_operational_rank: 2
+    expected_statistic_rank: 1
+    expected_composite_rank: 1
+    expected_verdict: "scoped_obstruction"
+    scope_note: "point u=0 for I(u,v)=(u^2,v); other stratum evaluated separately"
+  - case_id: "QUOTIENT-RAW-GAUGE-INFLATION"
+    case_class: "quotient_observable"
+    theorem_applicable: true
+    raw_source_dimension: 3
+    source_vertical_rank: 2
+    statistic_matrix: [[1]]
+    post_matrix: [[1]]
+    required_operational_rank: 1
+    expected_statistic_rank: 1
+    expected_composite_rank: 1
+    expected_verdict: "necessary_condition_met_not_sufficient"
+  - case_id: "QUOTIENT-OUTPUT-GAUGE-REMOVAL"
+    case_class: "quotient_observable"
+    theorem_applicable: true
+    raw_output_dimension: 2
+    output_vertical_rank: 1
+    statistic_matrix: [[1]]
+    post_matrix: [[1]]
+    required_operational_rank: 1
+    expected_statistic_rank: 1
+    expected_composite_rank: 1
+    expected_verdict: "necessary_condition_met_not_sufficient"
+  - case_id: "QUOTIENT-REPRESENTATIVE-FAILURE"
+    case_class: "quotient_observable"
+    theorem_applicable: false
+    scope_failure: "no_regular_local_section_at_fixed_orbit"
+    discrete_source_class_count: 0
+    required_output_class_count: 0
+    expected_verdict: "insufficient_equivalence_or_domain_data"
+  - case_id: "STOCHASTIC-FIXED-NOISE-SCALAR"
+    case_class: "stochastic"
+    theorem_applicable: true
+    statistic_matrix: [[1, 0]]
+    score_post_matrix: [[1], [2], [-1]]
+    required_operational_rank: 2
+    expected_statistic_rank: 1
+    expected_score_rank: 1
+    expected_verdict: "scoped_obstruction"
+  - case_id: "STOCHASTIC-TWO-SOURCE-PARAMETERS"
+    case_class: "stochastic"
+    theorem_applicable: true
+    statistic_matrix: [[1, 0], [0, 1]]
+    score_post_matrix: [[1, 0], [0, 1], [1, 1]]
+    required_operational_rank: 2
+    expected_statistic_rank: 2
+    expected_score_rank: 2
+    expected_verdict: "necessary_condition_met_not_sufficient"
+    scope_note: "second source parameter is charged as explicit added capacity"
+  - case_id: "STOCHASTIC-SOURCE-DEPENDENT-LATENT-UNDECLARED"
+    case_class: "stochastic"
+    theorem_applicable: false
+    scope_failure: "kernel_has_undeclared_source_dependent_latent_channel"
+    discrete_source_class_count: 0
+    required_output_class_count: 0
+    expected_verdict: "outside_differential_scope"
+  - case_id: "PARTIAL-POSITIVE-PATCH"
+    case_class: "partial_domain"
+    theorem_applicable: true
+    domain: "x>0"
+    statistic_matrix: [[1]]
+    post_matrix: [[-1]]
+    required_operational_rank: 1
+    expected_statistic_rank: 1
+    expected_composite_rank: 1
+    expected_verdict: "necessary_condition_met_not_sufficient"
+    global_conclusion_allowed: false
+  - case_id: "PARTIAL-BOUNDARY"
+    case_class: "partial_domain"
+    theorem_applicable: false
+    domain: "x=0"
+    scope_failure: "reconstruction_undefined"
+    discrete_source_class_count: 0
+    required_output_class_count: 0
+    expected_verdict: "outside_differential_scope"
+    global_conclusion_allowed: false
+  - case_id: "MARKED-INDEPENDENT-CHANNEL"
+    case_class: "marked_domain"
+    theorem_applicable: true
+    mark_is_explicit_source_data: true
+    statistic_matrix: [[1, 0], [0, 1]]
+    post_matrix: [[1, 0], [0, 1]]
+    required_operational_rank: 2
+    expected_statistic_rank: 2
+    expected_composite_rank: 2
+    expected_verdict: "necessary_condition_met_not_sufficient"
+  - case_id: "MARKED-REDUNDANT-MARK"
+    case_class: "marked_domain"
+    theorem_applicable: true
+    mark_is_explicit_source_data: true
+    statistic_matrix: [[1, 0], [2, 0]]
+    post_matrix: [[1, 0], [0, 1]]
+    required_operational_rank: 2
+    expected_statistic_rank: 1
+    expected_composite_rank: 1
+    expected_verdict: "scoped_obstruction"
+  - case_id: "MARKED-UNDECLARED"
+    case_class: "marked_domain"
+    theorem_applicable: false
+    mark_is_explicit_source_data: false
+    scope_failure: "mark_provenance_missing"
+    discrete_source_class_count: 0
+    required_output_class_count: 0
+    expected_verdict: "insufficient_equivalence_or_domain_data"
+  - case_id: "DISCRETE-FOUR-TO-FOUR"
+    case_class: "deterministic"
+    theorem_applicable: false
+    nondifferential_test: "finite_distinguishability"
+    discrete_source_class_count: 4
+    required_output_class_count: 4
+    expected_verdict: "necessary_condition_met_not_sufficient"
+  - case_id: "DISCRETE-THREE-TO-FOUR"
+    case_class: "deterministic"
+    theorem_applicable: false
+    nondifferential_test: "finite_distinguishability"
+    discrete_source_class_count: 3
+    required_output_class_count: 4
+    expected_verdict: "scoped_obstruction"
+expected_counts:
+  total: 17
+  deterministic: 6
+  stochastic: 3
+  quotient_observable: 3
+  partial_domain: 2
+  marked_domain: 3
+proof_assistant_kernel:
+  used: false
+  build_status: "not_applicable"
+authority_limits:
+  finite_model_pass_counts_as_physics_promotion: false
+  external_review_completed: false
+  distance_to_gr_changed: false

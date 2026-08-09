@@ -1,0 +1,435 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{lemma}{Lemma}
+\newtheorem{example}{Countermodel}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\im}{\operatorname{im}}
+\newcommand{\QS}{Q^{\mathrm{src}}}
+\newcommand{\QY}{Q^{\mathrm{out}}}
+
+\title{V22 P2-T01: Local Source Information-Capacity Theorem\\
+\large Coordinate- and Gauge-Aware Draft/Control Manuscript}
+\author{Ontology Formalizer with same-context Refuter audit}
+\date{2026-08-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft/control packet proves a conditional local necessary condition for
+reconstructing operationally distinguishable candidate geometry from a
+finite-order source state.  Source and output redundancies are removed before
+rank is evaluated.  If the induced reconstruction factors through a source
+statistic of quotient rank at most \(r\), then no completely typed operational
+probe family can realize more than \(r\) independent local response directions.
+The result recovers the protected P5 factor-through-amplitude rank-one theorem
+as a corollary, supplies a controlled stochastic analogue, and classifies
+deterministic, stochastic, quotient-observable, partial-domain, marked-domain,
+non-smooth, and discrete escape cases.  It constructs no effective metric,
+adopts no source structure, and proves no global ontology impossibility.
+\end{abstract}
+
+\section{Authority, status, and exact burden}
+
+The active milestone is \texttt{effective\_metric\_g\_eff}.  The burden is:
+\emph{prove a coordinate- and gauge-aware source information-capacity necessary
+condition and classify escape routes without importing target geometry}.
+The source manifold, bundle, jet order, redundancy actions, output space, and
+operational probes below are proposal-only mathematical types used to state a
+test.  They are not canonical ontology and are not identified with physical
+spacetime or an adopted Lorentzian metric.
+
+The P1-T04 physical-typing lock governs every operational label.  Cone
+deformation, anisotropic tidal response, polarization response, clock-rate
+shift, volume/shear variation, and curvature response are merely candidate
+probe slots here.  A slot contributes to operational rank only when its source
+observable, source-to-device bridge, scale and units, domain, invariant
+readout, and falsification rule are all independently source-derived and
+recorded.  Naming a slot supplies none of those witnesses.
+
+\section{Local objects and assumptions}
+
+\begin{definition}[Finite-order source state]
+Let \(A\) be a smooth source manifold retained as explicit primitive debt and
+let \(E_{\rm src}\to A\) be a proposal-only smooth bundle.  For a finite
+\(k\geq 0\), let \(S\) be a finite-dimensional smooth submanifold of a local
+finite-order state space \(J^kE_{\rm src}\) on an open source patch.  A point
+\(z\in S\) is a local source state.  No target atlas, metric, connection,
+measure, or physical clock is part of this definition.
+\end{definition}
+
+\begin{definition}[Source and output redundancy]
+On a neighborhood \(S_0\) of \(z\), let source relabelings act smoothly with a
+locally constant-rank vertical distribution
+\[
+ V_{\rm src}(z)=\{\text{tangents to the source-redundancy orbit through }z\}
+ \subset T_zS .
+\]
+Let \(Y\) be an abstract candidate-output manifold and let coordinate or
+candidate-gauge relabelings have a locally constant-rank vertical distribution
+\[
+ V_{\rm out}(y)\subset T_yY .
+\]
+Assume local quotient manifolds \(\bar S\), \(\bar Y\) and submersions
+\(\pi_S:S_0\to\bar S\), \(\pi_Y:Y_0\to\bar Y\) exist, with kernels equal to the
+vertical distributions.  Define quotient tangent spaces
+\[
+ \QS_z=T_zS/V_{\rm src}(z)\cong T_{[z]}\bar S,\qquad
+ \QY_y=T_yY/V_{\rm out}(y)\cong T_{[y]}\bar Y .
+\]
+Only this local regular quotient is assumed; a global orbit space need not
+exist.
+\end{definition}
+
+\begin{definition}[Equivariant reconstruction]
+A \(C^1\) map \(R:S_0\to Y_0\) is admissible only when it respects the declared
+source and output equivalences.  Equivalently, there is a unique local map
+\(\bar R:\bar S\to\bar Y\) satisfying
+\[
+ \pi_Y\circ R=\bar R\circ\pi_S .
+\]
+Its derivative \(d\bar R_{[z]}:\QS_z\to\QY_{R(z)}\) is the reconstruction
+derivative.  This definition never selects a representative of either orbit.
+\end{definition}
+
+\begin{definition}[Source statistic and information capacity]
+Suppose the quotient reconstruction factors locally as
+\[
+ \bar R=F\circ I,\qquad
+ I:\bar S\to Z,\quad F:Z\to\bar Y ,
+\]
+where \(I\) and \(F\) are \(C^1\).  The local source information capacity of
+this route at \([z]\) is
+\[
+ c_I([z])=\rank(dI_{[z]}).
+\]
+The route has local capacity at most \(r\) when \(c_I\leq r\) on the tested
+constant-rank patch.
+\end{definition}
+
+\begin{definition}[Admitted operational probe and required response rank]
+An admitted probe family is a \(C^1\) invariant map
+\(P:\bar Y\to\R^m\) whose components each possess the complete physical-typing
+provenance required above.  Let \(W\subseteq\im(d\bar R_{[z]})\) be a candidate
+output perturbation subspace.  It is operationally independent for \(P\) when
+\(dP_{[y]}|_W\) is injective.  Its required response rank is
+\(n=\dim W\).  This number is invariant under changes of source coordinates,
+output coordinates, and local quotient charts.  It is not inferred from the
+number of symbols used to write a tensor.
+\end{definition}
+
+The theorem uses the following explicit assumptions:
+\begin{enumerate}
+  \item \(S\), \(Y\), and the local quotient manifolds are finite-dimensional
+        and \(C^1\) on the tested patch.
+  \item Source and output vertical distributions have locally constant rank,
+        and the displayed local quotient submersions exist.
+  \item \(R\) is \(C^1\) and equivariant, so \(\bar R\) is defined without a
+        section or representative choice.
+  \item The factorization \(\bar R=F\circ I\) is exact on the tested patch.
+  \item Every counted component of \(P\) is invariant and completely
+        source-derived under the P1-T04 typing contract.
+  \item The claimed output directions lie in \(\im(d\bar R)\); unattained
+        directions cannot be credited to the reconstruction.
+\end{enumerate}
+
+\section{The quotient-local theorem}
+
+\begin{theorem}[Quotient-local source information-capacity theorem]
+\label{thm:capacity}
+Under the assumptions above, let \(c_I([z])\leq r\).  For every admitted
+operational probe family \(P\),
+\[
+ \rank\!\left(d(P\circ\bar R)_{[z]}\right)\leq r .
+\]
+If an adequate reconstruction must realize an \(n\)-dimensional
+operationally independent subspace
+\(W\subseteq\im(d\bar R_{[z]})\), then necessarily
+\[
+ n\leq c_I([z])\leq r .
+\]
+Thus failure of \(n\leq r\) is a scoped local obstruction to that exact
+factor-through route, not to all possible source extensions or all global
+reconstructions.
+\end{theorem}
+
+\begin{proof}
+Differentiate the exact quotient factorization:
+\[
+ d\bar R_{[z]}=dF_{I([z])}\circ dI_{[z]} .
+\]
+Postcompose with \(dP_{[y]}\).  Rank cannot increase under composition, hence
+\[
+ \rank d(P\circ\bar R)_{[z]}
+ \leq\rank d\bar R_{[z]}
+ \leq\rank dI_{[z]}=c_I([z])\leq r .
+\]
+If \(W\subseteq\im(d\bar R_{[z]})\) and \(dP|_W\) is injective, choose for each
+basis vector of \(W\) a preimage in \(\QS_z\).  The composite derivative maps
+their span onto an \(n\)-dimensional space, so its rank is at least \(n\).
+Combining the inequalities gives \(n\leq c_I([z])\).  All derivatives live on
+local quotients.  A change of quotient chart conjugates them by invertible
+linear maps and leaves rank unchanged; no orbit representative is selected.
+\end{proof}
+
+\begin{corollary}[Protected P5 scalar-amplitude result]
+\label{cor:p5}
+Let the source state be a patch \(U\), let \(a:U\to\R\), and suppose the
+candidate output reconstruction factors as \(R=B\circ a\).  After removing any
+declared source and output redundancy, the induced statistic has rank at most
+one.  Therefore any completely typed operational requirement with
+\(n\geq2\) cannot be realized by this exact factor-through-amplitude route on
+the regular patch.
+\end{corollary}
+
+\begin{proof}
+The codomain of \(a\) is one-dimensional, so \(\rank da\leq1\).  Apply
+Theorem~\ref{thm:capacity}.  This reproduces the P5 rank conclusion while
+making the quotient, typing, locality, and escape assumptions explicit.
+\end{proof}
+
+\section{Stochastic and finite distinguishability forms}
+
+\begin{proposition}[Source-independent stochastic postprocessing]
+\label{prop:stochastic}
+Let the stochastic output law be a regular dominated \(C^1\) family
+\(\mu_{\bar s}=K_{I(\bar s)}\) that depends on the quotient source state only
+through \(I:\bar S\to Z\).  Assume the Markov kernel \(K\) has no additional
+source-dependent parameter.  Then the local score-tangent span, and hence the
+rank of the Fisher information matrix when it exists, is at most
+\(\rank dI_{\bar s}\).  Any further source-independent Markov postprocessing
+also cannot increase that tangent rank.
+\end{proposition}
+
+\begin{proof}
+In local coordinates \(\theta=I(\bar s)\), regularity gives the score chain
+rule
+\[
+ d_{\bar s}\log k(\omega\mid I(\bar s))
+   =(dI_{\bar s})^{\!*}\,
+     d_\theta\log k(\omega\mid\theta).
+\]
+Every source score therefore lies in the image of \((dI)^{\!*}\), whose
+dimension is \(\rank dI\).  The Fisher matrix is a Gram matrix of these scores
+and has no larger rank.  Source-independent Markov postprocessing maps tangent
+measures linearly, so it cannot enlarge their span.  The proposition makes no
+claim about entropy, sample noise, or a kernel carrying a new
+source-dependent latent channel.
+\end{proof}
+
+\begin{lemma}[Finite distinguishability bound]
+\label{lem:finite}
+For a deterministic discrete factorization \(S/{\sim_{\rm src}}\to Z\to
+Y/{\sim_{\rm out}}\), if the statistic \(Z\) has \(M\) distinguishable values,
+then no operational quotient test can realize more than \(M\) distinguishable
+output classes.  Hence a requirement for \(N\) classes needs \(M\geq N\).
+\end{lemma}
+
+\begin{proof}
+Every output class is the image of a statistic value.  A function from an
+\(M\)-element image has at most \(M\) distinct images.  This finite statement
+is the appropriate bounded check when differentiability is unavailable.
+\end{proof}
+
+\section{Operational probe slots}
+
+\begin{longtable}{p{0.20\textwidth}p{0.51\textwidth}p{0.19\textwidth}}
+\toprule
+Probe slot & Evidence required before its covector counts & Current packet status\\
+\midrule
+Cone deformation & source observable; propagation/device bridge; invariant
+readout; scale; domain; falsifier & conditional slot only\\
+Anisotropic tidal response & source response law; extended-body/device bridge;
+orientation rule; units; domain; falsifier & conditional slot only\\
+Polarization response & source mode definition; detector coupling; quotient
+invariant; normalization; domain; falsifier & conditional slot only\\
+Clock-rate shift & source clock mechanism; comparison protocol; scale and
+units; invariant ratio; domain; falsifier & conditional slot only\\
+Volume/shear variation & source volume/shear observable; transport rule;
+device bridge; units; domain; falsifier & conditional slot only\\
+Curvature response & source-derived curvature surrogate; operational bridge;
+gauge-invariant contraction; scale; domain; falsifier & conditional slot only\\
+\bottomrule
+\end{longtable}
+
+No rank lower bound is instantiated by this list alone.  A later P2-T04
+candidate must submit the evidence for each claimed direction, construct the
+corresponding invariant differential, and demonstrate independence on the
+same quotient patch.
+
+\section{Countermodels and escape classification}
+
+\begin{example}[Raw gauge inflation]
+Take source coordinates \((u,\gamma_1,\gamma_2)\) with
+\(\gamma_1,\gamma_2\) pure relabeling directions and statistic \(I=u\).
+The written source space has dimension three, but
+\(\QS\cong\R\) and \(c_I=1\).  Counting the two gauge coordinates would create
+a false capacity surplus.
+\end{example}
+
+\begin{example}[Representative selection failure]
+For the reflection quotient \(x\sim-x\), the invariant coordinate \(q=x^2\)
+is regular only away from the fixed orbit.  A formula using a chosen sign of
+\(x\) assumes a section that is not supplied by the quotient and cannot be
+used in the theorem at the fixed point.
+\end{example}
+
+\begin{example}[Two-channel deterministic escape]
+For \(I(u,v)=(u,v)\), \(F\) the identity, and two independent invariant probe
+covectors, \(c_I=2\).  The rank-two necessity is met.  This is an explicit
+added-capacity escape from the scalar corollary, not a derived physical metric.
+\end{example}
+
+\begin{example}[Source-independent stochastic noise]
+For \(\mu_s=\mathcal N(a(s),1)\), the score is proportional to \(da\) and the
+Fisher rank is at most one even if samples are embedded in a high-dimensional
+output record.  Noise dimension is not source-parametric capacity.
+\end{example}
+
+\begin{example}[Source-dependent latent channel]
+For a law with parameter \((u,v)\), the score can have rank two.  The second
+source-dependent parameter is explicit new source data and must be charged to
+the extension budget; it is not free stochastic postprocessing.
+\end{example}
+
+\begin{example}[Partial domain]
+The reconstruction \(R(x)=1/x\) on \(x>0\) may satisfy all local hypotheses
+there, but gives no result at \(x=0\), on \(x<0\), or about global gluing.
+\end{example}
+
+\begin{example}[Marked domain]
+Replacing \(a\) by the marked state \((a,m)\) can raise capacity from one to
+two when \(dm\) is independent of \(da\).  The mark is an explicit source
+extension with provenance and redundancy obligations.
+\end{example}
+
+\begin{example}[Rank singularity]
+For \(I(u,v)=(u^2,v)\), the rank is two when \(u\neq0\) and one at \(u=0\).
+A theorem statement spanning both regions without a stratified or
+constant-rank treatment overreaches.
+\end{example}
+
+\begin{example}[Discrete injection outside the differential theorem]
+A four-class discrete source statistic can inject into four operational
+classes even though no derivative exists.  Lemma~\ref{lem:finite}, not
+Theorem~\ref{thm:capacity}, tests this case.
+\end{example}
+
+\begin{example}[Quotient-observable restriction]
+Let \(Y=\R^2\) with translations of the second coordinate declared gauge.
+Only the first coordinate descends to \(\bar Y\).  Two raw coordinate
+responses therefore represent one quotient-observable response direction.
+\end{example}
+
+\begin{center}
+\begin{tabular}{p{0.25\textwidth}p{0.29\textwidth}p{0.32\textwidth}}
+\toprule
+Case & Theorem disposition & Honest escape or stop rule\\
+\midrule
+Deterministic smooth & Theorem~\ref{thm:capacity} applies & add independent
+source channels or abandon exact factorization\\
+Stochastic regular & Proposition~\ref{prop:stochastic} applies & declare a
+source-dependent channel or nonregular model\\
+Quotient observable & count only descended probes & derive additional
+invariants, never count gauge coordinates\\
+Partial domain & conclusion is patch-local & prove extension and gluing
+separately\\
+Marked domain & marks enlarge the source state & charge marks as explicit
+source data with provenance\\
+Non-smooth/discrete & differential theorem is not applicable & use stratified,
+topological, or finite distinguishability tests\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{P2-T04 candidate test interface}
+
+A later candidate is testable only if it supplies:
+\begin{enumerate}
+  \item its source state \(S\), finite order or an explicit nonlocal
+        replacement, domain, and regularity;
+  \item source redundancy and the quotient tangent or a precise alternative;
+  \item abstract output state, output redundancy, and invariant operational
+        probe definitions;
+  \item the reconstruction and any factor statistic \(I\);
+  \item a computed local capacity rank or a declared non-differential test;
+  \item complete physical typing and a proof of independence for every counted
+        response direction;
+  \item treatment of singular strata, partial domains, marks, latent
+        variables, randomness, and global gluing; and
+  \item a verdict from the vocabulary
+        \emph{necessary condition met}, \emph{scoped obstruction},
+        \emph{outside differential scope}, or \emph{insufficient evidence}.
+\end{enumerate}
+Meeting the necessary condition is not sufficient for geometry reconstruction,
+physical interpretation, robustness, uniqueness, or Gate B.
+
+\section{Expanded Distance-to-GR matrix}
+
+\begin{longtable}{p{0.27\textwidth}p{0.62\textwidth}}
+\toprule
+Burden & Status after P2-T01\\
+\midrule
+Source ontology primitives & unchanged; the smooth source manifold, bundle,
+jet order, and local quotient types remain primitive debt or proposal-only\\
+Source equivalence \(\mathrm{EqSrc}\) & unchanged; a local redundancy relation
+is a theorem assumption, not an adopted canonical equivalence\\
+\(\mathrm{RetainH}\) & unchanged; no retention law is derived\\
+\(\mathrm{GenH}\) & unchanged; no generator law is derived\\
+\(\mathrm{ObsLoc}_{\rm lc}\) & narrowed only by a fail-closed typing interface;
+no operational witness is supplied\\
+\(\mathrm{Resp}_{\rm lc}\) & unchanged; no universal physical response law is
+derived\\
+\(M_{\rm src}\) & blocked; the source patch is not physical spacetime\\
+\(g_{\rm eff}\) & active burden; a necessary adequacy test is proved, but no
+candidate metric is constructed or adopted\\
+Matter coupling & unchanged; no universal target coupling is derived\\
+Einstein equations & blocked; no target action or field equation is supplied\\
+Finite-variation robustness & unchanged; no candidate is stress-tested under
+finite variation\\
+Benchmark promotion & blocked; no benchmark is executed or passed\\
+Gate Chair status & unchanged; no protected Gate review is requested or issued\\
+Current route freeze or hard-fail & not triggered; P2-T03 is a distinct
+pre-registration package and P2-T04 remains dependent on it\\
+\bottomrule
+\end{longtable}
+
+The physical Distance-to-GR delta is zero.  This packet discharges the
+plan-level obligation to state the necessary-condition theorem but does not
+discharge the metric-law burden itself.
+
+\section{Internal review and forbidden overreads}
+
+The Physicist-Mathematician and Refuter perspectives are same-context internal
+AI review only.  They are not external mathematical review, independent
+replication, proof authority, or permission to use the theorem as a hard
+candidate filter.  P2-T02 remains separately human/external-action gated.
+
+The following conclusions are forbidden:
+\begin{itemize}
+  \item that a raw coordinate dimension or a familiar physical word proves an
+        operational lower bound;
+  \item that a quotient representative or global quotient exists without the
+        stated hypotheses;
+  \item that stochastic noise creates source-parametric information;
+  \item that the scalar-amplitude corollary rules out added fields, marks,
+        non-smooth encodings, discrete refinements, or all future source laws;
+  \item that the local theorem constructs \(g_{\rm eff}\), universal coupling,
+        Einstein equations, a benchmark pass, or a completed derivation; or
+  \item that validation, compilation, checkpointing, or internal agreement
+        promotes a scientific claim.
+\end{itemize}
+
+After checkpoint, P2-T03 may separately pre-register the source-extension
+budget and hard-fail protocol.  P2-T03 is not executed here.
+
+\end{document}

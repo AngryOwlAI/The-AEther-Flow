@@ -6,12 +6,12 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-08-09T04:35:00Z`
-- Source fingerprint: `8a7c64f21db99b849404a900b4441a04341f445262ed0453c02fdf232eeff5e0`
-- Nodes: `25228`
-- Edges: `77274`
+- Generated from tracked state as of: `2026-08-09T07:41:18Z`
+- Source fingerprint: `a9d3079d3b6d5fd5cf2690ee6eded7475c1d27d14c89f040e489ac6678943467`
+- Nodes: `25314`
+- Edges: `77385`
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-09T04:35:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_dependency_graph","schema_id":"generated_report_provenance_v1","source_commit":"7ca77f1e4a433e92cebd472bc80c5343b5b52137","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"b041e9d3886541d3f9cad43915be582f0614015d8880e8154c160e6d090beefe"},{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"eeaea24e8d0cac2c8720f4ae1ac458a9c1daf5a7b4641463e98f405554ad86d3"},{"path":"research_control/program_state.yaml","sha256":"fae9748c0a4ab57415a38efadba3abf99a6ce7a7806606335debf828bcb2db05"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_dependency_graph.py","sha256":"6fdbe02623855697110263a90bbfbbd9a223ff636f320df497593fce3f9bef39"}],"source_manifest_sha256":"544dcefc9e83d2a1d254e270b19f5056f62b242176ddcf104fe452bfa75de460","source_path_count":"2216","task_count":"1229"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-09T07:41:18Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_dependency_graph","schema_id":"generated_report_provenance_v1","source_commit":"b1dd6195bb963ab02780e24c089d545cb8319cee","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"cb173c8c36bd5528acb47b5e65e88d8be7f8b497164a878d4c356f0cbfb59bb8"},{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"c5d011d8ce616938668491f3134d6d61936a87ea6edea5c2d3791cd0d00e739b"},{"path":"research_control/program_state.yaml","sha256":"f1c5b301a40459a6bb214fe0a16bcd2a821f17c71993e50426b2e03e55fb329b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_dependency_graph.py","sha256":"6fdbe02623855697110263a90bbfbbd9a223ff636f320df497593fce3f9bef39"}],"source_manifest_sha256":"1e70941b9fa18aa77671f06d376c8bc88e7772fdc63d2f173672f68da2fa580c","source_path_count":"2222","task_count":"1232"} -->
 
 ## Generated-Report Provenance
 
@@ -20,21 +20,21 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_dependency_graph` |
-| Source commit | `7ca77f1e4a433e92cebd472bc80c5343b5b52137` |
-| Source-derived generation time | `2026-08-09T04:35:00Z` |
-| Tracked task count | 1229 |
-| Exact source-path count | 2216 |
-| Source manifest SHA-256 | `544dcefc9e83d2a1d254e270b19f5056f62b242176ddcf104fe452bfa75de460` |
+| Source commit | `b1dd6195bb963ab02780e24c089d545cb8319cee` |
+| Source-derived generation time | `2026-08-09T07:41:18Z` |
+| Tracked task count | 1232 |
+| Exact source-path count | 2222 |
+| Source manifest SHA-256 | `1e70941b9fa18aa77671f06d376c8bc88e7772fdc63d2f173672f68da2fa580c` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `b041e9d3886541d3f9cad43915be582f0614015d8880e8154c160e6d090beefe`
+- `registries/AGENT_JOB_REGISTRY.csv`: `cb173c8c36bd5528acb47b5e65e88d8be7f8b497164a878d4c356f0cbfb59bb8`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `eeaea24e8d0cac2c8720f4ae1ac458a9c1daf5a7b4641463e98f405554ad86d3`
-- `research_control/program_state.yaml`: `fae9748c0a4ab57415a38efadba3abf99a6ce7a7806606335debf828bcb2db05`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `c5d011d8ce616938668491f3134d6d61936a87ea6edea5c2d3791cd0d00e739b`
+- `research_control/program_state.yaml`: `f1c5b301a40459a6bb214fe0a16bcd2a821f17c71993e50426b2e03e55fb329b`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_dependency_graph.py`: `6fdbe02623855697110263a90bbfbbd9a223ff636f320df497593fce3f9bef39`
@@ -49,11 +49,11 @@ or claim-promotion authority.
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1229 |
+| `completion_yaml` | 1232 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 974 |
+| `handoff_yaml` | 977 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -65,18 +65,18 @@ or claim-promotion authority.
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1229 |
+| `agent_job` | `support_only` | 1232 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 12723 |
-| `blocked_burden` | `blocked` | 5300 |
-| `claim_boundary` | `support_only` | 1186 |
-| `draft_control_candidate` | `draft_control` | 814 |
+| `artifact` | `support_only` | 12767 |
+| `blocked_burden` | `blocked` | 5323 |
+| `claim_boundary` | `support_only` | 1189 |
+| `draft_control_candidate` | `draft_control` | 818 |
 | `draft_control_candidate` | `proposal_only` | 149 |
 | `draft_control_candidate` | `science_draft` | 90 |
 | `frozen_negative` | `frozen_negative` | 152 |
 | `gate_chair_verdict` | `human_gated` | 38 |
-| `handoff` | `support_only` | 974 |
-| `human_gated_object` | `human_gated` | 620 |
+| `handoff` | `support_only` | 977 |
+| `human_gated_object` | `human_gated` | 622 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 3 |
 | `ledger_row` | `frozen_negative` | 1 |
@@ -87,10 +87,10 @@ or claim-promotion authority.
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 40 |
 | `source_ontology_object` | `canonical_source` | 28 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 385 |
+| `source_ontology_object` | `support_only` | 386 |
 | `task` | `human_gated` | 29 |
-| `task` | `science_draft` | 34 |
-| `task` | `support_only` | 1166 |
+| `task` | `science_draft` | 33 |
+| `task` | `support_only` | 1170 |
 
 ## Frontier Table
 
@@ -144,17 +144,21 @@ or claim-promotion authority.
 | `blocked_claim:agreement_or_consensus_as_truth` | Blocked claim: agreement or consensus as truth | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:ai_review_as_external_human_review_independent_replication_or_authorship` | Blocked claim: AI review as external human review independent replication or authorship | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:ai_validator_pass_as_physics_proof` | Blocked claim: AI validator PASS as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:aj_rt_20260809_006_001_or_checkpoint_replay` | Blocked claim: AJ-RT-20260809-006-001 or checkpoint replay | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_map_as_ledger_authority` | Blocked claim: alias map as ledger authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_map_as_physics_proof` | Blocked claim: alias map as physics proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:alias_or_status_language_as_physics_authority` | Blocked claim: alias or status language as physics authority | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:ambiguous_shared_metrics_or_double_counted_budgets` | Blocked permission: ambiguous shared metrics or double-counted budgets | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:ann_v_as_physical_null_cone` | Blocked claim: Ann(V) as physical null cone | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:another_plan_task_or_successor_execution` | Blocked permission: another plan task or successor execution | `registries/ROLE_EXECUTION_REGISTRY.csv` |
+| `blocked_claim:any_other_historical_byte_change` | Blocked claim: any other historical byte change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
+| `blocked_claim:any_other_p2_t01_artifact_mutation` | Blocked claim: any other P2-T01 artifact mutation | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:any_other_predecessor_byte_change` | Blocked claim: any other predecessor byte change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:any_other_rt_20260729_012_task_change` | Blocked permission: any other RT-20260729-012 task change | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:any_other_target_task_change` | Blocked claim: any other target task change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:any_predecessor_byte_change_outside_the_exact_top_level_lifecycle_status_token` | Blocked permission: any predecessor byte change outside the exact top-level lifecycle status token | `registries/ROLE_EXECUTION_REGISTRY.csv` |
 | `blocked_claim:any_rt_20260730_002_or_rt_20260730_003_task_change_outside_the_exact_implementation_plan_identity_field` | Blocked permission: any RT-20260730-002 or RT-20260730-003 task change outside the exact implementation-plan identity field | `registries/ROLE_EXECUTION_REGISTRY.csv` |
+| `blocked_claim:any_semantic_yaml_change` | Blocked claim: any semantic YAML change | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_claim_promotion` | Blocked claim: approval as claim promotion | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_as_proof` | Blocked claim: approval as proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:approval_reuse` | Blocked claim: approval reuse | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
@@ -188,16 +192,12 @@ or claim-promotion authority.
 | `blocked_claim:atlasglue_src_plus_adoption` | Blocked claim: AtlasGlue_src^+ adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:atlasglue_srcplus_adoption` | Blocked claim: AtlasGlue_src+ adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 | `blocked_claim:atlasgluedisc_src_plus_adoption` | Blocked claim: AtlasGlueDisc_src^+ adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:atlasgluedisc_srcplus_adoption` | Blocked claim: AtlasGlueDisc_src+ adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_artifact_as_physics_evidence` | Blocked claim: audit artifact as physics evidence | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_artifact_as_scientific_proof` | Blocked claim: audit artifact as scientific proof | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
-| `blocked_claim:audit_pass_as_adoption` | Blocked claim: audit pass as adoption | `registries/CLAIM_BOUNDARY_REGISTRY.csv` |
 
 ## Route Continuity
 
-- Active task: `RT-20260809-004`
-- Latest handoff: `handoff-0974`
-- Handoff path: `research_control/handoffs/handoff-0974.yaml`
-- Next action: After the single governed checkpoint for AJ-RT-20260809-004-001 execute exactly one separately admitted V22 P2-T01 continue-research AgentJob to prove the coordinate- and gauge-aware local source information-capacity necessary condition; perform no protected or external action.
+- Active task: `RT-20260809-007`
+- Latest handoff: `handoff-0977`
+- Handoff path: `research_control/handoffs/handoff-0977.yaml`
+- Next action: Run the single fresh governed checkpoint for AJ-RT-20260809-007-001. After it commits, execute exactly one separately admitted V22 P2-T03 continue-research AgentJob; do not contact reviewers or take any protected or external action.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

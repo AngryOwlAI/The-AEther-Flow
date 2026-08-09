@@ -1,0 +1,577 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260809-005-001"
+completion_id: "AJC-AJ-RT-20260809-005-001"
+task_id: "RT-20260809-005"
+task_type: "v22_p2_t01_local_source_information_capacity_theorem"
+decision_id: "DDR-20260809-005"
+role_id: "ontology-formalizer"
+source_role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260809-005"
+status: "completed"
+created_at: "2026-08-09T05:23:44Z"
+started_at: "2026-08-09T05:23:44Z"
+completed_at: "2026-08-09T05:38:27Z"
+objective: "Implement the exact V22 P2-T01 local source information-capacity theorem definitions proof and countermodel archive adequacy checklist machine-readable cases internal parent-child review and one bounded next-route handoff."
+completion_summary: "P2-T01 proves a coordinate- and gauge-aware local necessary condition on quotient tangent spaces: an exact reconstruction factoring through a source statistic of rank r cannot realize more than r completely typed operational response directions. It recovers the protected P5 scalar rank-one result, proves a regular source-independent stochastic tangent-rank proposition and a finite distinguishability lemma, records ten countermodels and nine escape routes, and supplies a fail-closed P2-T04 checklist. All six named operational families remain unadmitted conditional slots. No effective metric, ontology object, Gate result, external review, or Distance-to-GR delta is created. P2-T03 is selected but unexecuted; P2-T02 remains externally gated."
+objective_result: "implemented_and_validated_v22_p2_t01_local_source_information_capacity_theorem"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "completed_precheckpoint"
+work_item_status: "completed_checkpoint_pending"
+milestone_disposition: "local_quotient_capacity_necessary_condition_proved_without_metric_construction_or_gate_delta"
+
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260809-005-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: true
+legacy_validation_reason: "The new task taxonomy is valid; legacy mode is required only because inherited task RT-20260804-001 still uses the unrelated invalid result_kind qualifying_bounded_audit_verdict."
+
+is_physics_task: true
+payload_class: "quotient_local_information_capacity_theorem_and_countermodel_archive"
+has_new_mathematical_payload: true
+source_extension_classification_required: false
+external_red_team_finding_requires_integration: false
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T01"
+  work_kind: "formalization_or_theorem"
+  task_class: "science"
+  expected_result_kind: "theorem_or_precise_obstruction"
+  dependency_task_ids:
+    - "P1-T02"
+    - "P1-T04"
+  dependency_checkpoint_commits:
+    - "2c63cb6231259a8b836529d6dda8107f79db9afc"
+    - "b1dd6195bb963ab02780e24c089d545cb8319cee"
+  recommendation_ids:
+    - "V22-R06"
+    - "V22-R19"
+  sequence_step_ids:
+    - "S3"
+  cross_cutting_directive_ids: []
+  work_item_status: "completed_checkpoint_pending"
+  next_plan_task_id: "P2-T03"
+  p2_t01_executed: true
+  p2_t03_selected: true
+  p2_t03_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+result:
+  status: "PASS_V22_P2_T01_LOCAL_SOURCE_INFORMATION_CAPACITY_THEOREM"
+  strategy_id: "prove_v22_p2_t01_local_source_information_capacity_theorem_v1"
+  source_handoff_id: "handoff-0974"
+  source_handoff_sha256: "530460c7650156d8647b5fa44d6fa2b2a9c2ead66936b86ef4f578427d166fda"
+  definition_count: 11
+  operational_probe_slot_count: 6
+  admitted_operational_probe_count: 0
+  theorem_count: 4
+  countermodel_count: 10
+  escape_route_count: 9
+  candidate_checklist_field_count: 10
+  finite_fixture_count: 17
+  finite_fixture_failure_count: 0
+  required_case_class_count: 5
+  exact_source_snapshot_count: 5
+  new_mathematical_payload_count: 4
+  focused_check_count: 40
+  focused_check_failure_count: 0
+  proof_assistant_kernel_used: false
+  ontology_adoption_count: 0
+  canonical_science_file_change_count: 0
+  p2_t01_executed: true
+  p2_t03_selected: true
+  p2_t03_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1142
+    relationship_row_count: 5746
+    semantic_row_count: 1142
+    vault_row_count: 1142
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'local source information-capacity theorem' --limit 10 --json"
+      query_type: "search"
+      query_text: "local source information-capacity theorem"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  authority_note: "Tracked registered source and control records govern; generated wiki semantic Obsidian SQLite and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "physics"
+  payload_type: "theorem"
+  candidate_family: "V22-P2-T01-LOCAL-SOURCE-INFORMATION-CAPACITY-THEOREM-V1"
+  theorem_identity: "V22-P2-T01-QUOTIENT-LOCAL-INFORMATION-CAPACITY-THEOREM-V1"
+  stochastic_proposition_identity: "V22-P2-T01-STOCHASTIC-FACTOR-THROUGH-CAPACITY-PROPOSITION-V1"
+  corollary_identity: "V22-P2-T01-P5-SCALAR-AMPLITUDE-COROLLARY-V1"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physical_status_changed_by_admission: false
+  distance_to_gr_changed_by_admission: false
+  physics_promotion_authorized_by_admission: false
+
+family_freeze_admission_result:
+  status: "admitted_distinct_branch"
+  route_kind: "theorem_investigation"
+  family_id: "V22-P2-T01-LOCAL-SOURCE-INFORMATION-CAPACITY-THEOREM-V1"
+  family_identity_sha256: "0a7fd9a245eeccd76197da6ed70b997bc8bc73c960304f1972f1f2bfc32ab594"
+  detected_match_basis: []
+  reopening_requested: false
+  local_family_freeze_preserved: true
+  global_no_go_inferred: false
+  physics_promotion_authorized_by_admission: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0974"
+  source_handoff_sha256_at_intake: "530460c7650156d8647b5fa44d6fa2b2a9c2ead66936b86ef4f578427d166fda"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P2-T01"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P2-T01"
+  guard_outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one registered quotient-local information-capacity theorem source"
+      - "one exact definition package and proof/countermodel archive"
+      - "one P2-T04-ready source-adequacy checklist and five-class case suite"
+    project_system:
+      - "one task-local deterministic finite-model validator and compact receipt"
+      - "parent-child synthesis and standard control records"
+  accepted_criteria:
+    physics:
+      - "domains regularity equivalences quotient rank and operational typing are explicit"
+      - "the proof uses induced quotient maps and no representative selection or ten-component argument"
+      - "P5 scalar rank-one obstruction follows as a scoped corollary"
+      - "deterministic stochastic quotient partial and marked cases classify all known escape routes"
+    project_system:
+      - "all focused source hash matrix countermodel synthesis and receipt checks pass"
+      - "registered source hashes and generated derivatives synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-005/artifacts/child_phys_math_p2_t01_capacity_theorem.yaml"
+      output_sha256: "424bee951281caf3eb0d1b5a05de5039050e1c73b90c02e3f799327cd9e6bace"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-005/artifacts/child_refuter_p2_t01_scope_audit.yaml"
+      output_sha256: "09a4e6243ca09a8bfe6c4347cd117ac4daba2a4778236554d5570ea95a68d073"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260809-005/artifacts/parent_conflict_review_p2_t01_capacity.yaml"
+    review_sha256: "2827d9141f8299c9c7278c515622d3e86369227b485de877ee86bb759859f332"
+    resolution_rounds: 1
+    resolved_conflict_count: 4
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260809-005/artifacts/parent_fusion_notes_p2_t01_capacity.md"
+    fusion_notes_sha256: "7cdd6dcff668c41d0dc6c12711622f2f623e5bb51d34b3f7f8db89f0801eebc9"
+    shared_consensus_summary: "Both perspectives require local source and output quotient tangents exact equivariance complete operational typing and strictly local necessary-condition language."
+    novelty_preservation_summary: "The fusion preserves the quotient-rank proof stochastic score-tangent proposition P5 scalar corollary finite lemma ten countermodels and nine escape classifications."
+    claim_boundary_preservation_summary: "The packet changes no ontology source law physical witness effective metric coupling Einstein Gate benchmark review or completed-derivation status."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260809-005-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Quotient-local source information-capacity theorem"
+    summary: "For an exact C1 local quotient reconstruction factoring through a source statistic I, every fully typed operational composite has rank at most rank(dI), so any realized n-dimensional independent response requires n no greater than source quotient capacity."
+  - payload_id: "NMP-RT-20260809-005-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Source-independent stochastic tangent-rank proposition"
+    summary: "A regular dominated stochastic family depending on the source only through I has score-tangent and Fisher rank at most rank(dI), and source-independent Markov postprocessing cannot increase it."
+  - payload_id: "NMP-RT-20260809-005-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Protected P5 scalar-amplitude rank-one corollary"
+    summary: "An exact reconstruction factoring through a scalar amplitude has quotient operational rank at most one, obstructing only typed rank-two-or-higher requirements for that route."
+  - payload_id: "NMP-RT-20260809-005-004"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Finite distinguishability bound"
+    summary: "A deterministic factorization through M distinguishable source-statistic values cannot realize more than M quotient-observable output classes."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260809-005-001"
+    payload_type: "theorem"
+    object_name: "V22 P2-T01 quotient-local source information-capacity theorem"
+    claim_status: "draft/control conditional local theorem with explicit proof"
+    source_path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex"
+    burden_effect: "narrows"
+    summary: "Supplies the representation-independent necessary condition every later P2-T04 candidate can test."
+  - payload_id: "PAYLOAD-RT-20260809-005-002"
+    payload_type: "theorem"
+    object_name: "regular stochastic source-independent capacity proposition"
+    claim_status: "draft/control conditional proposition"
+    source_path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex"
+    burden_effect: "narrows"
+    summary: "Separates source-parametric tangent rank from noise dimension and preserves source-dependent latent channels as explicit extensions."
+  - payload_id: "PAYLOAD-RT-20260809-005-003"
+    payload_type: "obstruction"
+    object_name: "P5 scalar factor-through-amplitude rank-one corollary"
+    claim_status: "draft/control scoped local obstruction"
+    source_path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex"
+    burden_effect: "obstructs"
+    summary: "Recovers the exact P5 rank-one result while blocking global or all-extension overreads."
+  - payload_id: "PAYLOAD-RT-20260809-005-004"
+    payload_type: "finite_model"
+    object_name: "finite distinguishability lemma and seventeen-case suite"
+    claim_status: "draft/control finite checks"
+    source_path: "research_control/tasks/RT-20260809-005/artifacts/fixtures/v22_p2_t01_information_capacity_cases.yaml"
+    burden_effect: "stress_tests"
+    summary: "Tests deterministic stochastic quotient partial marked singular and discrete cases without treating finite checks as physical evidence."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Metric law; prove a coordinate- and gauge-aware source information-capacity necessary condition and classify escape routes without importing target geometry."
+  explanation: "The plan-level theorem obligation is met, but the packet constructs no source-derived geometry, admits zero physical operational probes, and establishes none of the eight Gate B criteria."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "Gate B NOT READY with no unscoped Lorentzian metric matter coupling or Einstein-equation derivation"
+  new_status: "the same Gate B and metric-law status; a draft/control local necessary-condition test exists but no candidate or physical witness is supplied"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P2-T01 proves a conditional filter theorem and does not construct adopt or validate g_eff."
+  downstream_unlocked:
+    - "one separately admitted P2-T03 source-extension budget and hard-fail pre-registration packet after checkpoint"
+  downstream_still_blocked:
+    - "P2-T02 external-review completion without real reviewer-contact authority"
+    - "P2-T04 primary and fallback candidate selection until P2-T03 completes"
+    - "effective metric target matter coupling and Einstein equations"
+    - "Gate B and every downstream Gate or benchmark promotion"
+    - "completed first-principles GR derivation"
+  explanation: "The theorem makes candidate adequacy testable but supplies no candidate and no physical response direction."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; source manifold bundle jet order and local state are explicit primitive debt or proposal-only theorem types"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; local source redundancy is an assumption and no canonical equivalence is adopted"
+  - burden: "RetainH"
+    status: "unchanged; no retention law is derived or adopted"
+  - burden: "GenH"
+    status: "unchanged; no generator law is derived or adopted"
+  - burden: "ObsLoc_lc"
+    status: "narrowed by a fail-closed probe interface but unchanged scientifically; zero probes are admitted"
+  - burden: "Resp_lc"
+    status: "unchanged; no universal physical response semantics is derived"
+  - burden: "M_src"
+    status: "blocked; the local source patch is not physical spacetime"
+  - burden: "g_eff"
+    status: "active burden; the necessary capacity test is available but no metric candidate is constructed or adopted"
+  - burden: "matter coupling"
+    status: "unchanged; no universal target matter coupling is derived"
+  - burden: "Einstein equations"
+    status: "blocked; no target action or field equation is supplied"
+  - burden: "finite-variation robustness"
+    status: "unchanged; no candidate is subjected to finite-variation stress"
+  - burden: "benchmark promotion"
+    status: "blocked; no benchmark is executed or passed"
+  - burden: "Gate Chair status"
+    status: "unchanged; no protected Gate review or verdict is requested or issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not triggered; P2-T03 is a dependency-distinct pre-registration packet and P2-T04 remains pending"
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: ""
+  prior_attempts_considered:
+    - "RT-20260726-001"
+    - "RT-20260727-006"
+    - "RT-20260809-002"
+    - "RT-20260809-004"
+  freeze_if:
+    - "A later packet repeats the rank-one scalar obstruction without new source capacity a distinct theorem or a registered candidate test."
+    - "A later route counts gauge coordinates untyped labels marks or stochastic noise as free capacity."
+  do_not_freeze_if:
+    - "A separately admitted package pre-registers the extension budget or tests a materially distinct candidate under this theorem."
+  freeze_decision: "not_frozen"
+  decision_reason: "P2-T01 adds a new quotient-local and stochastic theorem package; P2-T03 addresses the distinct pre-result extension-budget burden."
+  next_allowed_route: "refuter"
+
+route_cycle_control:
+  cycle_family: "v22_source_adequacy_and_extension_budget"
+  current_cycle_step: "local_information_capacity_theorem"
+  prior_related_tasks:
+    - "RT-20260726-001"
+    - "RT-20260727-006"
+    - "RT-20260809-004"
+  cycle_risk: "low"
+  orbit_avoidance_reason: "The next job must pre-register three family identities sequential activation and scoped hard-fail wording before any candidate result is known rather than restate the theorem."
+  next_role_consequence: "refuter@0.2.0"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "raw coordinate field or written tensor-component count used as physical rank"
+    - "six named operational probe families treated as physically derived"
+    - "a source or output quotient representative selected without a derived section"
+    - "local scalar obstruction promoted to global ontology or source-extension impossibility"
+    - "effective metric target matter coupling Einstein equation or Gate criterion constructed or satisfied"
+    - "P2-T02 external review completed or internal review counted as external"
+    - "hard candidate-filter proof authority benchmark pass or completed derivation"
+    - "canonical ontology or source-law adoption"
+    - "M_src adoption or identification of the source patch with physical spacetime"
+    - "g_eff construction or adoption"
+    - "global theory rejection"
+    - "publication release push reviewer contact or other external action"
+  summary: "Theorem finite-case validator TeX-compile route and checkpoint success are bounded draft/control evidence and cannot promote scientific or protected status."
+
+artifact_receipts:
+  - artifact_id: "TEX-V22-P2-T01-LOCAL-SOURCE-INFORMATION-CAPACITY-THEOREM-V1"
+    path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex"
+    sha256: "2ba813e4e961b9ea2709a31c6e06152b1cb4d50ebd90185c2ed93d7aeb132439"
+    status_label: "draft/control"
+  - artifact_id: "V22-P2-T01-LOCAL-STATE-QUOTIENT-DEFINITIONS-V1"
+    path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_state_quotient_definitions_v1.yaml"
+    sha256: "eaa545786e17f0b143e29d9c4c29e1d72e0874ac6441734d1cf5b9634ccea668"
+    status_label: "draft/control"
+  - artifact_id: "V22-P2-T01-PROOF-COUNTERMODEL-ARCHIVE-V1"
+    path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_proof_countermodel_archive_v1.yaml"
+    sha256: "0e1c4c809177dd7e0818cdc1652e4ae2d566eaf6292a663c4e32df99ea052bcb"
+    status_label: "draft/control"
+  - artifact_id: "V22-P2-T01-SOURCE-ADEQUACY-CHECKLIST-V1"
+    path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_source_adequacy_checklist_v1.yaml"
+    sha256: "9b64aee79729c6a7ca83fc94f38cd6ff2fc4eedf93b32d7ee3a345a09b0fb4a0"
+    status_label: "draft/control"
+  - artifact_id: "V22-P2-T01-INFORMATION-CAPACITY-CASES-V1"
+    path: "research_control/tasks/RT-20260809-005/artifacts/fixtures/v22_p2_t01_information_capacity_cases.yaml"
+    sha256: "ee0de01547f430e4d7017126878374ebe2f966ef420202c81ee0f53feb10b301"
+    status_label: "operational_evidence"
+  - artifact_id: "V22-P2-T01-CAPACITY-VALIDATION-V1"
+    path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_capacity_validation.json"
+    sha256: "0f5400de250218eca95d5c78ff2b4a8e062bd41f08eee93f581156ae9c708d4f"
+    status_label: "operational_evidence"
+  - artifact_id: "V22-P2-T01-COMPACT-RECEIPT-V1"
+    path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_compact_receipt.json"
+    sha256: "330d1f1982b4cd6e1d3861c20cfdbbc858baaadff642ec586a45552902dd9663"
+    status_label: "operational_evidence"
+
+command_results:
+  - command: "validate_v22_p2_t01_capacity.py --write --json; validate_v22_p2_t01_capacity.py --json"
+    status: "PASS"
+    summary: "All 40 exact source definition quotient theorem countermodel escape fixture synthesis and scope checks pass; all 17 finite cases pass."
+  - command: "latex-compile bundled Tectonic scratch build"
+    status: "PASS_WITH_NONBLOCKING_LAYOUT_WARNINGS"
+    summary: "The fused TeX source compiles to a seven-page scratch PDF with no tracked PDF output; underfull box warnings do not alter mathematics or registry status."
+  - command: "task_taxonomy.py --validate-repository --json"
+    status: "FAIL_INHERITED_KNOWN"
+    summary: "RT-20260809-005 declares a valid complete taxonomy; repository-wide task-index validation retains only the pre-existing RT-20260804-001 invalid result kind qualifying_bounded_audit_verdict."
+  - command: "scripts.validation.cli run --profile affected --paths <P2-T01 affected paths>"
+    status: "PASS_TASK_LOCAL_WITH_ONE_INHERITED_FAILURE"
+    summary: "15 of 16 affected gates pass after final synchronization; only task_index_freshness fails on the pre-existing RT-20260804-001 result-kind value qualifying_bounded_audit_verdict."
+  - command: "bootstrap_memory_system.py; bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Registered source regeneration and validate-only replay pass after final source and control-state synchronization."
+  - command: "validate_research_control.py --check-diff --job-id AJ-RT-20260809-005-001 --json-summary"
+    status: "PASS_WITH_HISTORICAL_WARNINGS"
+    summary: "The bounded diff has zero errors after generated-output synchronization and only repository-historical warnings."
+  - command: "checkpoint_research_transaction.py --job-id AJ-RT-20260809-005-001 --legacy-validation"
+    status: "PENDING_SINGLE_INVOCATION"
+    summary: "One governed checkpoint remains; legacy mode is limited to the inherited taxonomy defect and no retry push publication or external action is authorized."
+
+selected_next_route:
+  route_id: "v22_p2_t03_source_extension_budget_and_hard_fail_protocol"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P2-T03"
+  work_item_id: "P2-T03"
+  work_kind: "integration_or_selection"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "refuter@0.2.0"
+  supporting_perspective: "smuggling-auditor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_extension_budget_and_hard_fail_protocol"
+  task_type: "v22_p2_t03_source_extension_budget_and_hard_fail_protocol"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Metric law; pre-register a maximum three-family source-extension budget sequential activation and scoped hard-fail criteria before candidate selection."
+  expected_result_kind: "completed_or_precisely_blocked"
+  strategy_id: "preregister_v22_p2_t03_source_extension_budget_hard_fail_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+  p2_t02_not_selected_reason: "P2-T02 acceptance requires a real external mathematical specialist and reviewer contact. No reviewer-contact or external-action authority exists; same-context children do not satisfy it. P2-T03 is independently dependency-ready and remains in-scope progress."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight exact P1-T02 P1-T04 P5 P15 source inspection and handoff-0974 route admission passed before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 40 focused checks and 17 machine cases pass; both child records are complete and all four parent conflicts are resolved."
+  post_write:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "The affected profile passes 15 of 16 gates; its sole failure is the inherited RT-20260804-001 result-kind value qualifying_bounded_audit_verdict, while the bounded research-control diff has zero errors."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier task-index compact-frontier dependency-graph and claim-graph projections are refreshed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only replay pass after source synchronization."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes with zero hard failures; warnings are historical repository findings and carry no promotion authority."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review was requested or authorized for V22 P2-T01."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+project_improvement_signal_count: 0
+project_improvement_sidecar_required: false
+
+protected_authority:
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+
+handoff_id: "handoff-0975"
+handoff_path: "research_control/handoffs/handoff-0975.yaml"
+handoff_authority_boundary: "This completion records only P2-T01 draft/control local necessary-condition theorem countermodel and checklist results and selects P2-T03 for a separate AgentJob after checkpoint. It creates no ontology metric coupling Einstein Gate benchmark external-review hard-filter publication release push or external-action authority."

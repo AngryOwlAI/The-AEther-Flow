@@ -1,0 +1,42 @@
+schema_id: "parent_conflict_review_v1"
+task_id: "RT-20260809-005"
+job_id: "AJ-RT-20260809-005-001"
+status: "resolved"
+resolution_rounds: 1
+blocking_conflict_count: 0
+conflicts:
+  - conflict_id: "PCR-P2-T01-LOCAL-VS-GLOBAL-QUOTIENT"
+    math_position: "Use quotient tangent spaces to state coordinate and gauge invariance."
+    refuter_position: "A global orbit space may be singular or non-Hausdorff."
+    resolution: "Use only local constant-rank quotient submersions and state that no global quotient or section is assumed."
+    preserved_math_contribution: true
+    preserved_refuter_limitation: true
+    status: "resolved"
+  - conflict_id: "PCR-P2-T01-STOCHASTIC-CAPACITY"
+    math_position: "Stochastic factorization inherits the rank bound."
+    refuter_position: "Noise entropy and latent parameters can appear to add dimensions."
+    resolution: "Bound regular score-tangent and Fisher rank only for source-independent post-I kernels; classify source-dependent latent parameters as explicit extensions."
+    preserved_math_contribution: true
+    preserved_refuter_limitation: true
+    status: "resolved"
+  - conflict_id: "PCR-P2-T01-PROBE-RANK"
+    math_position: "An independent probe family supplies the required rank n."
+    refuter_position: "The six labels are not yet physically typed."
+    resolution: "Define n only from completely typed invariant covectors and record zero admitted probes in this packet."
+    preserved_math_contribution: true
+    preserved_refuter_limitation: true
+    status: "resolved"
+  - conflict_id: "PCR-P2-T01-COROLLARY-SCOPE"
+    math_position: "P5 gives rank at most one for factor-through-amplitude."
+    refuter_position: "The claim could be overread as a global ontology no-go."
+    resolution: "State the exact scalar factorization, local regularity, and n>=2 condition, then list added fields marks non-smooth and discrete routes as open scope changes."
+    preserved_math_contribution: true
+    preserved_refuter_limitation: true
+    status: "resolved"
+unresolved_conflicts: []
+fusion_decision:
+  fused_output_path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex"
+  preserve_shared_consensus: true
+  preserve_unique_contributions: true
+  preserve_unresolved_limitations: true
+  blocking_issue_remaining: false

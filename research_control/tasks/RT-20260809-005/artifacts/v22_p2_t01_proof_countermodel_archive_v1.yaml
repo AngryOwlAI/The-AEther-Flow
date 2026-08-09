@@ -1,0 +1,154 @@
+schema_id: "v22_p2_t01_proof_countermodel_archive_v1"
+task_id: "RT-20260809-005"
+job_id: "AJ-RT-20260809-005-001"
+status_label: "draft/control proof and countermodel archive"
+theorems:
+  - theorem_id: "V22-P2-T01-QUOTIENT-LOCAL-INFORMATION-CAPACITY-THEOREM-V1"
+    result_kind: "conditional_local_necessary_condition"
+    hypotheses:
+      - "finite-dimensional C1 local source and output state manifolds"
+      - "locally constant-rank source and output redundancy distributions"
+      - "local quotient submersions with vertical kernels"
+      - "C1 equivariant reconstruction inducing R_bar"
+      - "exact local factorization R_bar=F o I"
+      - "completely source-derived invariant operational probes"
+      - "required response subspace lies in image(dR_bar)"
+    conclusion: "rank d(P o R_bar) <= rank dI; any realized n-dimensional operationally independent response subspace requires n <= rank dI"
+    proof_steps:
+      - "differentiate the induced quotient factorization"
+      - "apply rank monotonicity under composition"
+      - "use injectivity of dP on the realized response subspace"
+      - "use chart-change conjugation by isomorphisms to prove coordinate invariance"
+    forbidden_overread: "This is local, conditional, necessary, and route-specific; it is not a sufficient reconstruction theorem or global ontology no-go."
+  - theorem_id: "V22-P2-T01-STOCHASTIC-FACTOR-THROUGH-CAPACITY-PROPOSITION-V1"
+    result_kind: "conditional_stochastic_tangent_rank_bound"
+    hypotheses:
+      - "regular dominated C1 stochastic family"
+      - "law depends on source quotient state only through I"
+      - "post-I Markov kernel has no source-dependent latent parameter"
+    conclusion: "score-tangent and Fisher rank, where defined, are at most rank(dI), and source-independent postprocessing cannot increase tangent span"
+    proof_steps:
+      - "apply the score chain rule through theta=I(s)"
+      - "bound the score span by image((dI)^*)"
+      - "identify Fisher information as a score Gram matrix"
+      - "use linearity of source-independent Markov tangent pushforward"
+    forbidden_overread: "The proposition does not bound entropy, sample noise, nonregular families, or source-dependent latent channels."
+  - theorem_id: "V22-P2-T01-P5-SCALAR-AMPLITUDE-COROLLARY-V1"
+    result_kind: "scoped_corollary"
+    hypotheses:
+      - "the quotient reconstruction factors exactly as B o a"
+      - "a has codomain R"
+      - "all local quotient and operational-typing hypotheses hold"
+    conclusion: "quotient operational response rank is at most one; a typed requirement of rank at least two obstructs this exact route"
+    proof_steps:
+      - "rank(da) <= 1"
+      - "apply the quotient-local theorem"
+    forbidden_overread: "The scalar corollary does not exclude additional source fields, marks, non-smooth encodings, or other source laws."
+  - theorem_id: "V22-P2-T01-FINITE-DISTINGUISHABILITY-LEMMA-V1"
+    result_kind: "finite_model_bound"
+    hypotheses:
+      - "deterministic factorization through M distinguishable statistic values"
+    conclusion: "no quotient-observable output test realizes more than M distinguishable classes"
+    proof_steps:
+      - "the image of a function from an M-element statistic image has size at most M"
+    forbidden_overread: "This finite lemma supplies no differential, continuum, metric, or physical interpretation."
+countermodels:
+  - countermodel_id: "CM-P2-T01-RAW-GAUGE-INFLATION"
+    attacks: "raw_coordinate_rank"
+    construction: "source coordinates (u,gamma1,gamma2), vertical span of gamma directions, statistic I=u"
+    raw_dimension: 3
+    quotient_capacity: 1
+    verdict: "raw rank overcounts two redundancy directions"
+  - countermodel_id: "CM-P2-T01-REPRESENTATIVE-SELECTION"
+    attacks: "unstated_quotient_section"
+    construction: "reflection quotient x equivalent to -x with invariant q=x^2"
+    failure: "no smooth sign section through the fixed orbit"
+    verdict: "representative-dependent reconstruction rejected"
+  - countermodel_id: "CM-P2-T01-TWO-CHANNEL-ESCAPE"
+    attacks: "global_scalar_impossibility_overread"
+    construction: "I(u,v)=(u,v) with two independent invariant probe covectors"
+    quotient_capacity: 2
+    verdict: "added source capacity can meet a rank-two necessity"
+  - countermodel_id: "CM-P2-T01-SOURCE-INDEPENDENT-NOISE"
+    attacks: "noise_dimension_as_capacity"
+    construction: "Normal law with mean a(s) and fixed unit variance"
+    fisher_rank_upper_bound: 1
+    verdict: "source-independent noise does not add parametric rank"
+  - countermodel_id: "CM-P2-T01-SOURCE-DEPENDENT-LATENT"
+    attacks: "free_stochastic_escape"
+    construction: "regular law parametrized by independent source coordinates (u,v)"
+    fisher_rank_possible: 2
+    verdict: "second source parameter is explicit extension data"
+  - countermodel_id: "CM-P2-T01-PARTIAL-DOMAIN"
+    attacks: "local_to_global_overreach"
+    construction: "R(x)=1/x on x>0"
+    verdict: "no conclusion at x=0, x<0, or across global gluing"
+  - countermodel_id: "CM-P2-T01-MARKED-DOMAIN"
+    attacks: "mark_as_free_information"
+    construction: "marked state (a,m) with independent differentials"
+    quotient_capacity_possible: 2
+    verdict: "mark raises capacity only as explicit source data"
+  - countermodel_id: "CM-P2-T01-RANK-SINGULARITY"
+    attacks: "unstated_constant_rank"
+    construction: "I(u,v)=(u^2,v)"
+    rank_at_u_zero: 1
+    rank_at_u_nonzero: 2
+    verdict: "strata require separate scope"
+  - countermodel_id: "CM-P2-T01-DISCRETE-INJECTION"
+    attacks: "differential_theorem_as_universal"
+    construction: "four-class statistic injected into four output classes"
+    verdict: "outside differential scope; finite lemma applies"
+  - countermodel_id: "CM-P2-T01-QUOTIENT-OBSERVABLE"
+    attacks: "raw_output_components_as_operational_rank"
+    construction: "Y=R2 with translations of second coordinate declared output gauge"
+    raw_dimension: 2
+    quotient_observable_rank: 1
+    verdict: "only descended invariant response counts"
+escape_route_classification:
+  - escape_id: "ESC-P2-T01-ADDED-FIELDS"
+    class: "explicit_source_extension"
+    disposition: "allowed_if_preregistered_and_charged"
+  - escape_id: "ESC-P2-T01-HIGHER-JET"
+    class: "higher_order_local_state"
+    disposition: "allowed_with_new_state_order_and_capacity_recalculation"
+  - escape_id: "ESC-P2-T01-MARKS"
+    class: "marked_domain"
+    disposition: "allowed_as_explicit_source_data_not_free_metadata"
+  - escape_id: "ESC-P2-T01-SOURCE-DEPENDENT-LATENT"
+    class: "stochastic_added_channel"
+    disposition: "allowed_as_explicit_capacity-bearing extension"
+  - escape_id: "ESC-P2-T01-NONSMOOTH"
+    class: "outside_C1_scope"
+    disposition: "requires_stratified_topological_or_nondifferential_test"
+  - escape_id: "ESC-P2-T01-DISCRETE"
+    class: "finite_or_discrete"
+    disposition: "use_finite_distinguishability_bound"
+  - escape_id: "ESC-P2-T01-PARTIAL"
+    class: "partial_domain"
+    disposition: "local_result_only_until_extension_and_gluing_proved"
+  - escape_id: "ESC-P2-T01-APPROXIMATE"
+    class: "approximate_factorization"
+    disposition: "requires_error_metric_stability_and_scale_not_provided_here"
+  - escape_id: "ESC-P2-T01-NONLOCAL"
+    class: "nonlocal_source_state"
+    disposition: "outside_declared_local_state_scope_and_must_be_explicitly_budgeted"
+proof_assistant:
+  used: false
+  build_status: "not_applicable"
+  rationale: "The bounded core is elementary differential rank and finite-cardinality reasoning; P2-T01 makes no proof-assistant authority claim. P2-T02 may review whether formalization is worthwhile."
+formal_derivation_review:
+  class: "same_context_internal_ai_review_only"
+  external_review_completed: false
+  independent_replication_completed: false
+  review_status: "completed_internal_nonexternal"
+counts:
+  theorem_count: 4
+  countermodel_count: 10
+  escape_route_count: 9
+  ontology_adoption_count: 0
+  distance_to_gr_delta_count: 0
+authority_limits:
+  global_ontology_impossibility_claimed: false
+  source_extension_impossibility_claimed: false
+  proof_authority: false
+  physics_promotion_authorized: false

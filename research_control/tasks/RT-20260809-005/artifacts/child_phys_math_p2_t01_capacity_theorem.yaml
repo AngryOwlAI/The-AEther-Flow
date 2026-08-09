@@ -1,0 +1,55 @@
+schema_id: "parent_child_execution_unit_v1"
+task_id: "RT-20260809-005"
+job_id: "AJ-RT-20260809-005-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+review_provenance:
+  class: "same_context_internal_ai_review_only"
+  external_review_completed: false
+  independent_replication_completed: false
+objective: "State and prove the quotient-local capacity theorem, stochastic proposition, P5 corollary, and finite distinguishability lemma under explicit assumptions."
+consensus:
+  - "Rank is evaluated only on local quotient tangent spaces."
+  - "Equivariance is required so the reconstruction derivative descends without a representative choice."
+  - "Operational rank counts only completely typed invariant probes."
+  - "The P5 scalar route has quotient capacity at most one."
+  - "Passage of the necessary bound is not sufficient for physical geometry."
+unique_contributions:
+  - contribution_id: "MATH-P2-T01-QUOTIENT-CHAIN"
+    summary: "Expressed the proof as rank monotonicity for dP o dF o dI on local quotient manifolds."
+  - contribution_id: "MATH-P2-T01-STOCHASTIC-SCORE"
+    summary: "Derived the source-independent stochastic bound from the score chain rule and Fisher Gram rank."
+  - contribution_id: "MATH-P2-T01-FINITE"
+    summary: "Separated non-differential discrete cases through a finite image-cardinality lemma."
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260809-005-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Quotient-local source information-capacity theorem"
+  - payload_id: "NMP-RT-20260809-005-002"
+    payload_type: "proposition_with_hypotheses_and_proof"
+    name: "Source-independent stochastic tangent-rank proposition"
+  - payload_id: "NMP-RT-20260809-005-003"
+    payload_type: "scoped_corollary"
+    name: "P5 scalar-amplitude rank-one corollary"
+  - payload_id: "NMP-RT-20260809-005-004"
+    payload_type: "finite_model_lemma"
+    name: "Finite distinguishability bound"
+checks:
+  quotient_defined_before_rank: "PASS"
+  constant_rank_and_domain_explicit: "PASS"
+  representative_selection_absent: "PASS"
+  coordinate_invariance_proved: "PASS"
+  p5_corollary_exact: "PASS"
+  stochastic_scope_explicit: "PASS"
+  ten_component_argument_used: false
+limitations:
+  - "Global quotient existence and gluing are not proved."
+  - "No operational probe is physically admitted by this mathematical child."
+  - "Nonregular stochastic and non-smooth continuum cases require separate methods."
+  - "The theorem is necessary, not sufficient."
+authority_limits:
+  theorem_truth_promoted: false
+  proof_authority: false
+  effective_metric_constructed: false
+  global_no_go_claimed: false
