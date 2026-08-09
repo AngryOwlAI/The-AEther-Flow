@@ -1,0 +1,87 @@
+task_id: "RT-20260809-014"
+task_type: "project_system_v22_p3_t02_allowlist_order_parity_checkpoint_recovery"
+title: "Restore V22 P3-T02 ordered allowlist identity after checkpoint"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "effective_metric_g_eff"
+  candidate_family: "v22_p3_t02_allowlist_order_parity_checkpoint_recovery_v1"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+created_at: "2026-08-09T15:23:29Z"
+updated_at: "2026-08-09T15:23:29Z"
+closed_at: "2026-08-09T15:23:29Z"
+parent_task_id: "RT-20260809-013"
+parent_handoff_id: "handoff-0983"
+supersedes_active_routing_task_id: "RT-20260809-013"
+current_decision_id: "DDR-20260809-014"
+current_job_id: "AJ-RT-20260809-014-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260809-014"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal authorizes one materially distinct project-system recovery for the post-checkpoint ordered allowlist mismatch. No P3-T02 replay, P3-T03 execution, P2-T02 external review, validator change, science mutation, promotion, publication, push, or external action is authorized."
+implementation_plan:
+  plan_id: "project_system_recovery_for_recommendations_implementation_plan_continue_task-v22"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T03"
+  recovery_for_plan_task_id: "P3-T02"
+  next_plan_task_id: "P3-T03"
+  next_plan_task_execution_authorized: false
+objective: "Preserve the committed RT-013 AgentJob, completion, handoff, and scientific artifacts byte-for-byte; align only its expired execution-role overlay and ROLE_EXECUTION registry representation to the immutable AgentJob's exact ordered 17-item write list; prove four-way parity and protected-byte preservation; then invoke one governed checkpoint while P3-T03 remains unexecuted."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system ordered allowlist identity and checkpoint recovery only; the effective-metric scientific burden and Distance-to-GR state do not advance."
+route_label: "project-system-checkpoint-recovery"
+route_strategy_id: "repair_v22_p3_t02_allowlist_order_parity_after_checkpoint_v1"
+route_blocker_fingerprint: "76fdd80eb91ea0cf5d0900b259110d79cd55fc86ea8bfb4017d2b9c55a68ad19"
+source_head: "92209bb3f773fa6a09554b5cde8b457d973c6d81"
+source_tree: "30b523c0b7397386fcf0d0ec6d41aacc55b89c50"
+source_checkpoint_run_id: "RUN-CHECKPOINT-8dd847a94ff78979"
+source_checkpoint_receipt_sha256: "d23e599f5110ebd8ebce44457afe008861973bb0cdd6dbf776862ff11e3e02fb"
+blocker_path: "research_control/tasks/RT-20260809-014/artifacts/v22_p3_t02_allowlist_order_parity_blocker.yaml"
+blocker_sha256: "6ae02c400ed7d32975223b2d6863685965f23c2eeccb02711c8fb9f67681cec1"
+project_system_change_only: true
+validator_semantics_changed: false
+p3_t02_reexecuted: false
+p3_t03_executed: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-V22-P3-T02-ALLOWLIST-ORDER-PARITY-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Preserve the committed RT-013 transaction; make only its expired execution-role source and ROLE_EXECUTION registry allowlist equal the immutable AgentJob's exact ordered 17-item list; create bounded recovery evidence and ordinary control records; synchronize approved derivatives; and invoke one checkpoint."
+  forbidden_scope: "Any source AgentJob completion handoff or scientific-artifact rewrite; validator test schema policy skill base-role semantic change; P3-T02 replay; P3-T03 execution; P2-T02 external action; science ontology metric coupling Einstein Gate benchmark proof publication release push external action or completed-derivation mutation."
+  source_task_id: "RT-20260809-013"
+  source_job_id: "AJ-RT-20260809-013-001"
+  source_handoff_id: "handoff-0983"
+  source_job_sha256: "7f74b13bf35bc2fae51474837d9f8261f3fc918c6db2465836111d29cd2f7c7d"
+  source_completion_sha256: "f25ba5f311c04a00dee341363ee9d0c5c208d0d851179c4276155666d4edbd22"
+  source_handoff_sha256: "974c3913f14c7c00ed4a3ce2dcccbe5d0a86a7e891116db41c99b290969c9055"
+  required_allowed_write_path_count: 17
+  p3_t02_reexecuted: false
+  p3_t03_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+documentation_impact_id: "DI-RT-20260809-014-001"
+completion_id: "AJC-AJ-RT-20260809-014-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260809-014/artifacts/v22_p3_t02_allowlist_order_parity_blocker.yaml"
+  - "research_control/tasks/RT-20260809-014/artifacts/validate_v22_p3_t02_allowlist_order_parity_recovery.py"
+  - "research_control/tasks/RT-20260809-014/artifacts/v22_p3_t02_allowlist_order_parity_recovery_validation.json"
+  - "research_control/tasks/RT-20260809-014/jobs/completions/AJC-AJ-RT-20260809-014-001.yaml"
+  - "research_control/handoffs/handoff-0984.yaml"
+  - "research_control/handoffs/handoff-0984.md"
+closure_status: "v22_p3_t02_allowlist_order_parity_repaired_p3_t03_selected_checkpoint_pending"
+summary: "The expired RT-013 execution role and its registry row now use the immutable AgentJob's exact 17-item order. The AgentJob, completion, handoff, and scientific artifacts remain byte-identical; P3-T03 stays selected but unexecuted pending one checkpoint."
+next_recommended_action: "Invoke the one governed checkpoint for AJ-RT-20260809-014-001. After a valid commit, claim P3-T03 separately through continue-research."
+project_improvement_signals: []
+notes: "This recovery supplies no theorem, ontology, metric, coupling, Einstein-equation, Gate, benchmark, proof, external-review, publication, release, push, external-action, or completed-derivation authority."

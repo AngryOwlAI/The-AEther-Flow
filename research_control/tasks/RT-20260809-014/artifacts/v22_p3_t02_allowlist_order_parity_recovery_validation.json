@@ -1,0 +1,172 @@
+{
+  "authority": "operational_validation_only",
+  "authority_limits": {
+    "distance_to_gr_changed": false,
+    "p3_t02_reexecuted": false,
+    "p3_t03_executed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "publication_or_push_authorized": false,
+    "scientific_status_changed": false,
+    "validator_semantics_changed": false
+  },
+  "checks": {
+    "active_agent_job_id": "AJ-RT-20260809-014-001",
+    "active_task_id": "RT-20260809-014",
+    "blocker_sha256": "6ae02c400ed7d32975223b2d6863685965f23c2eeccb02711c8fb9f67681cec1",
+    "checkpoint_receipt_sha256": "d23e599f5110ebd8ebce44457afe008861973bb0cdd6dbf776862ff11e3e02fb",
+    "latest_handoff_id": "handoff-0984",
+    "next_plan_task_id": "P3-T03",
+    "protected_hashes": {
+      "research_control/handoffs/handoff-0983.md": {
+        "expected_sha256": "3c038389ab18c511b3c0f2421f795a01da7a6887b178765094ddec553d624825",
+        "match": true,
+        "observed_sha256": "3c038389ab18c511b3c0f2421f795a01da7a6887b178765094ddec553d624825"
+      },
+      "research_control/handoffs/handoff-0983.yaml": {
+        "expected_sha256": "974c3913f14c7c00ed4a3ce2dcccbe5d0a86a7e891116db41c99b290969c9055",
+        "match": true,
+        "observed_sha256": "974c3913f14c7c00ed4a3ce2dcccbe5d0a86a7e891116db41c99b290969c9055"
+      },
+      "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_compact_receipt.json": {
+        "expected_sha256": "39edbdde60ac9996a888f6553648f331cd3ccfaf046833ee9661800e4f310493",
+        "match": true,
+        "observed_sha256": "39edbdde60ac9996a888f6553648f331cd3ccfaf046833ee9661800e4f310493"
+      },
+      "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_specification_v1.yaml": {
+        "expected_sha256": "941e16e8a535622fcbcf6a5ac1802cd4bb86a5950af49260a22d2c69d279f46e",
+        "match": true,
+        "observed_sha256": "941e16e8a535622fcbcf6a5ac1802cd4bb86a5950af49260a22d2c69d279f46e"
+      },
+      "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_validation.json": {
+        "expected_sha256": "651bc8f00ecc7dbf651a2b7ea4dda8d3f067d6e04e965457da99149142e16893",
+        "match": true,
+        "observed_sha256": "651bc8f00ecc7dbf651a2b7ea4dda8d3f067d6e04e965457da99149142e16893"
+      },
+      "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_without_hidden_geometry_v1.tex": {
+        "expected_sha256": "f26c77a175e7a5783e859eacc5de24270e1089a253e73493114a1403bbd61037",
+        "match": true,
+        "observed_sha256": "f26c77a175e7a5783e859eacc5de24270e1089a253e73493114a1403bbd61037"
+      },
+      "research_control/tasks/RT-20260809-013/00_TASK.yaml": {
+        "expected_sha256": "842fcf16c6bc7524d754cbcb227219887a5108d59ef81a4a686723021e72901c",
+        "match": true,
+        "observed_sha256": "842fcf16c6bc7524d754cbcb227219887a5108d59ef81a4a686723021e72901c"
+      },
+      "research_control/tasks/RT-20260809-013/DDR-20260809-013.md": {
+        "expected_sha256": "91268a659d583ece07d8ed6e9fa6c61eb1a45061d3d9e8171bc44df77821c440",
+        "match": true,
+        "observed_sha256": "91268a659d583ece07d8ed6e9fa6c61eb1a45061d3d9e8171bc44df77821c440"
+      },
+      "research_control/tasks/RT-20260809-013/artifacts/inherited_dirty_manifest_v22_p3_t02_staged_acceptance.json": {
+        "expected_sha256": "5cecce1202562261c78477d31a4ec25c10b959ebc45c48d47c07800f8d24cc1c",
+        "match": true,
+        "observed_sha256": "5cecce1202562261c78477d31a4ec25c10b959ebc45c48d47c07800f8d24cc1c"
+      },
+      "research_control/tasks/RT-20260809-013/artifacts/p3_t02_staged_acceptance_checkpoint_blocker.yaml": {
+        "expected_sha256": "f2f1536a9e8a072b79abccd1b42bece2d3dd7110eab31914954a2d2b9861fc97",
+        "match": true,
+        "observed_sha256": "f2f1536a9e8a072b79abccd1b42bece2d3dd7110eab31914954a2d2b9861fc97"
+      },
+      "research_control/tasks/RT-20260809-013/artifacts/v22_p3_t02_staged_acceptance_recovery_validation.json": {
+        "expected_sha256": "2566b9bbca92994a2233256c2ce924739bcfa2cea4d5050b526aca4b3a127d7d",
+        "match": true,
+        "observed_sha256": "2566b9bbca92994a2233256c2ce924739bcfa2cea4d5050b526aca4b3a127d7d"
+      },
+      "research_control/tasks/RT-20260809-013/artifacts/validate_v22_p3_t02_staged_acceptance_recovery.py": {
+        "expected_sha256": "e3c8e2bc599d846813331d3d511535fd52e8d110ab47a67ee980c1beacefc31f",
+        "match": true,
+        "observed_sha256": "e3c8e2bc599d846813331d3d511535fd52e8d110ab47a67ee980c1beacefc31f"
+      },
+      "research_control/tasks/RT-20260809-013/documentation_impact.yaml": {
+        "expected_sha256": "2047e05c95b6c10f50b50ffe6fd40b351cd94952d86d4f49391c2d6dae25b847",
+        "match": true,
+        "observed_sha256": "2047e05c95b6c10f50b50ffe6fd40b351cd94952d86d4f49391c2d6dae25b847"
+      },
+      "research_control/tasks/RT-20260809-013/jobs/AJ-RT-20260809-013-001.yaml": {
+        "expected_sha256": "7f74b13bf35bc2fae51474837d9f8261f3fc918c6db2465836111d29cd2f7c7d",
+        "match": true,
+        "observed_sha256": "7f74b13bf35bc2fae51474837d9f8261f3fc918c6db2465836111d29cd2f7c7d"
+      },
+      "research_control/tasks/RT-20260809-013/jobs/completions/AJC-AJ-RT-20260809-013-001.yaml": {
+        "expected_sha256": "f25ba5f311c04a00dee341363ee9d0c5c208d0d851179c4276155666d4edbd22",
+        "match": true,
+        "observed_sha256": "f25ba5f311c04a00dee341363ee9d0c5c208d0d851179c4276155666d4edbd22"
+      }
+    },
+    "recovery_allowlist_parity": {
+      "canonical_order": [
+        "FOLDER_MAP.md",
+        "output/**",
+        "registries/**",
+        "research_control/current_frontier.md",
+        "research_control/design/v22_recommendation_backlog.yaml",
+        "research_control/handoffs/handoff-0983.md",
+        "research_control/handoffs/handoff-0983.yaml",
+        "research_control/handoffs/handoff-0984.yaml",
+        "research_control/handoffs/handoff-0984.md",
+        "research_control/program_state.yaml",
+        "research_control/tasks/RT-20260809-013/roles/process-integrity-auditor@0.1.0--RT-20260809-013.yaml",
+        "research_control/tasks/RT-20260809-014/**",
+        "research_control/tasks/TASK_INDEX.csv",
+        "research_control/tasks/TASK_INDEX.md",
+        "wiki/indexes/**",
+        "wiki/markdown/**",
+        "wiki/tex/**"
+      ],
+      "counts": {
+        "agent_job": 17,
+        "agent_job_registry": 17,
+        "execution_role": 17,
+        "role_execution_registry": 17
+      },
+      "duplicate_count": 0,
+      "ordered_equal": true
+    },
+    "source_allowlist_parity": {
+      "canonical_order": [
+        "FOLDER_MAP.md",
+        "output/**",
+        "registries/**",
+        "research_control/current_frontier.md",
+        "research_control/design/v22_recommendation_backlog.yaml",
+        "research_control/handoffs/handoff-0982.md",
+        "research_control/handoffs/handoff-0982.yaml",
+        "research_control/handoffs/handoff-0983.yaml",
+        "research_control/handoffs/handoff-0983.md",
+        "research_control/program_state.yaml",
+        "research_control/tasks/RT-20260809-012/**",
+        "research_control/tasks/RT-20260809-013/**",
+        "research_control/tasks/TASK_INDEX.csv",
+        "research_control/tasks/TASK_INDEX.md",
+        "wiki/indexes/**",
+        "wiki/markdown/**",
+        "wiki/tex/**"
+      ],
+      "counts": {
+        "agent_job": 17,
+        "agent_job_registry": 17,
+        "execution_role": 17,
+        "role_execution_registry": 17
+      },
+      "duplicate_count": 0,
+      "ordered_equal": true
+    },
+    "source_job_byte_preserved": true,
+    "source_job_sha256": "7f74b13bf35bc2fae51474837d9f8261f3fc918c6db2465836111d29cd2f7c7d",
+    "source_role_non_allowlist_sha256": "a5a3bfcbfeb6cc687de8a13dc82e193976cc0ae9d3a29f5e2505f9a6a623942f",
+    "source_role_only_allowlist_order_changed": true,
+    "source_role_row_non_allowlist_sha256": "054b28a71154ad97f2009520c1642342a9c5395b32e9a04feac0ff066f83bda6",
+    "source_role_row_only_allowlist_order_changed": true
+  },
+  "error_count": 0,
+  "errors": [],
+  "job_id": "AJ-RT-20260809-014-001",
+  "schema_id": "v22_p3_t02_allowlist_order_parity_recovery_validation_v1",
+  "source_head": "92209bb3f773fa6a09554b5cde8b457d973c6d81",
+  "source_job_id": "AJ-RT-20260809-013-001",
+  "source_task_id": "RT-20260809-013",
+  "strategy_id": "repair_v22_p3_t02_allowlist_order_parity_after_checkpoint_v1",
+  "task_id": "RT-20260809-014",
+  "validation_status": "PASS"
+}

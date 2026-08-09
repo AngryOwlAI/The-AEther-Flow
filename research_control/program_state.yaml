@@ -1,12 +1,60 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260809-013"
-active_agent_job_id: "AJ-RT-20260809-013-001"
-latest_handoff_id: "handoff-0983"
-current_status: "v22_p3_t02_staged_acceptance_repaired_p3_t03_selected_fresh_checkpoint_pending"
-claim_boundary_summary: "RT-20260809-013 repairs only the 28 deterministic staged-acceptance findings from the consumed P3-T02 checkpoint. The sealed P3-T02 manuscript, model, fixtures, ledgers, focused validation, compact receipt, and handoff-0982 remain byte-identical. P3-T03 is selected but unexecuted pending one fresh checkpoint; P2-T02 remains externally gated."
+active_task_id: "RT-20260809-014"
+active_agent_job_id: "AJ-RT-20260809-014-001"
+latest_handoff_id: "handoff-0984"
+current_status: "v22_p3_t02_allowlist_order_parity_repaired_p3_t03_selected_checkpoint_pending"
+claim_boundary_summary: "RT-20260809-014 restores the exact ordered 17-item write allowlist across the committed RT-013 AgentJob, expired execution role, and both registry projections. The AgentJob, completion, handoff, recovery evidence, and P3-T02 scientific payload remain byte-identical. Validator semantics are unchanged; P3-T03 is selected but unexecuted pending one checkpoint, and P2-T02 remains externally gated."
 next_plan_task_id: "P3-T03"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-013-001. After it commits, execute exactly one separately admitted V22 P3-T03 Candidate Constructor AgentJob with Refuter and Validator Engineer perspectives; do not contact reviewers or take any protected or external action."
+next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260809-014-001. After it commits, execute exactly one separately admitted V22 P3-T03 Candidate Constructor AgentJob with Refuter and Validator Engineer perspectives; do not contact reviewers or take any protected or external action."
+
+v22_p3_t02_allowlist_order_parity_recovery:
+  task_id: "RT-20260809-014"
+  parent_task_id: "RT-20260809-013"
+  parent_handoff_id: "handoff-0983"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P3-T03"
+  recovery_for_plan_task_id: "P3-T02"
+  next_plan_task_id: "P3-T03"
+  claim_boundary_id: "CB-V22-P3-T02-ALLOWLIST-ORDER-PARITY-RECOVERY-001"
+  status: "PASS_V22_P3_T02_ALLOWLIST_ORDER_PARITY_RECOVERY"
+  work_item_status: "completed_checkpoint_pending"
+  route_label: "project-system-checkpoint-recovery"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_worker_skill: "improve-project-system"
+  selected_strategy_id: "repair_v22_p3_t02_allowlist_order_parity_after_checkpoint_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system ordered allowlist identity and checkpoint eligibility only; no scientific milestone burden advances."
+  source_head: "92209bb3f773fa6a09554b5cde8b457d973c6d81"
+  source_tree: "30b523c0b7397386fcf0d0ec6d41aacc55b89c50"
+  source_checkpoint_job_id: "AJ-RT-20260809-013-001"
+  source_checkpoint_run_id: "RUN-CHECKPOINT-8dd847a94ff78979"
+  source_checkpoint_receipt_sha256: "d23e599f5110ebd8ebce44457afe008861973bb0cdd6dbf776862ff11e3e02fb"
+  source_checkpoint_consumed: true
+  source_checkpoint_replayed: false
+  blocker_path: "research_control/tasks/RT-20260809-014/artifacts/v22_p3_t02_allowlist_order_parity_blocker.yaml"
+  blocker_sha256: "6ae02c400ed7d32975223b2d6863685965f23c2eeccb02711c8fb9f67681cec1"
+  route_blocker_fingerprint: "76fdd80eb91ea0cf5d0900b259110d79cd55fc86ea8bfb4017d2b9c55a68ad19"
+  source_job_sha256: "7f74b13bf35bc2fae51474837d9f8261f3fc918c6db2465836111d29cd2f7c7d"
+  source_completion_sha256: "f25ba5f311c04a00dee341363ee9d0c5c208d0d851179c4276155666d4edbd22"
+  source_handoff_sha256: "974c3913f14c7c00ed4a3ce2dcccbe5d0a86a7e891116db41c99b290969c9055"
+  allowed_write_path_count: 17
+  ordered_representation_count: 4
+  ordered_representation_mismatch_count: 0
+  source_role_only_allowlist_order_changed: true
+  source_role_registry_only_allowlist_order_changed: true
+  validator_semantics_changed: false
+  p3_t02_reexecuted: false
+  p3_t03_selected: true
+  p3_t03_executed: false
+  p2_t02_external_review_completed: false
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
 
 v22_p3_t02_staged_acceptance_checkpoint_recovery:
   task_id: "RT-20260809-013"
@@ -14435,9 +14483,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260809-013"
-  latest_research_handoff_id: "handoff-0983"
-  latest_research_next_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-013-001. After it commits, execute exactly one separately admitted V22 P3-T03 Candidate Constructor AgentJob with Refuter and Validator Engineer perspectives; do not contact reviewers or take any protected or external action."
+  latest_research_task_id: "RT-20260809-014"
+  latest_research_handoff_id: "handoff-0984"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-014-001. After it commits, execute exactly one separately admitted V22 P3-T03 Candidate Constructor AgentJob with Refuter and Validator Engineer perspectives; do not contact reviewers or take any protected or external action."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

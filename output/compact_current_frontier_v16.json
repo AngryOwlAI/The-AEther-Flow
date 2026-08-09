@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-0983.yaml",
+    "research_control/handoffs/handoff-0984.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "d18637379d0dbde560f1b910255f370fe0c1ce54",
+    "source_commit": "92209bb3f773fa6a09554b5cde8b457d973c6d81",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "ce9b2c29bc6fed43a2aacf8d261f523ff26d30c8c94de00581c19980aaa13523"
+        "sha256": "2f4ce630be3ea1eb3c3e571552d96dcd76d74b9c4bfda53e456693b4eccb4856"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "89cec2eac84aa1c6937e6dde98c8790e1a10a3f22cce1d02dd0bd4f05c44d95b"
+        "sha256": "a6dd8d8fef9d18225ae2e7a6c0ceec514fa62924b0d4b2441387c652816f0ed9"
       },
       {
-        "path": "research_control/handoffs/handoff-0983.yaml",
-        "sha256": "974c3913f14c7c00ed4a3ce2dcccbe5d0a86a7e891116db41c99b290969c9055"
+        "path": "research_control/handoffs/handoff-0984.yaml",
+        "sha256": "5f57cb563b1b2fd0a12888bb59aea584cd6a40e4cd50cdb8fd79ab55a02feb1d"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "25041ad2e21b3788d5671d35cd45e60fa7d1cf89d8256d7bdb1c7b4971b44257"
+        "sha256": "ab847bcb9816e043a501f88002a38dd034b9c082956449c59011514b074b5846"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "ac6d86ef2acd78a8ef538cc774d4e1e705b84ce4938b27292bfcae1e19f17832",
+    "source_manifest_sha256": "68e33f96fc86340e7e3f31d946856066d946b888d617eb2f5d4c26f21a88382a",
     "source_path_count": "12",
-    "generation_time": "2026-08-09T14:28:16Z",
-    "task_count": "1238",
+    "generation_time": "2026-08-09T15:23:29Z",
+    "task_count": "1239",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260809-013",
-    "latest_handoff_id": "handoff-0983",
-    "current_status": "v22_p3_t02_staged_acceptance_repaired_p3_t03_selected_fresh_checkpoint_pending",
+    "active_task_id": "RT-20260809-014",
+    "latest_handoff_id": "handoff-0984",
+    "current_status": "v22_p3_t02_allowlist_order_parity_repaired_p3_t03_selected_checkpoint_pending",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260809-013",
-    "latest_research_handoff_id": "handoff-0983",
-    "latest_research_next_action": "Run the single fresh governed checkpoint for AJ-RT-20260809-013-001. After it commits, execute exactly one separately admitted V22 P3-T03 Candidate Constructor AgentJob with Refuter and Validator Engineer perspectives; do not contact reviewers or take any protected or external action.",
+    "latest_research_task_id": "RT-20260809-014",
+    "latest_research_handoff_id": "handoff-0984",
+    "latest_research_next_action": "Run the single governed checkpoint for AJ-RT-20260809-014-001. After it commits, execute exactly one separately admitted V22 P3-T03 Candidate Constructor AgentJob with Refuter and Validator Engineer perspectives; do not contact reviewers or take any protected or external action.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -445,7 +445,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "no_distance_delta_project_system_staged_acceptance_recovery_only",
+      "effect": "no_distance_delta_project_system_allowlist_order_recovery_only",
       "changed": false,
       "milestone": "effective_metric_g_eff",
       "burden_id": "g_eff"
@@ -754,7 +754,7 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "Exactly one fresh governed AJ-RT-20260809-013-001 checkpoint remains."
+          "Exactly one governed AJ-RT-20260809-014-001 checkpoint remains."
         ]
       }
     ]

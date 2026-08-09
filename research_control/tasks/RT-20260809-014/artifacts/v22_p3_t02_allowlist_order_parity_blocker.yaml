@@ -1,0 +1,72 @@
+schema_id: "v22_p3_t02_allowlist_order_parity_blocker_v1"
+authority: "operational_validation_only"
+task_id: "RT-20260809-014"
+source_task_id: "RT-20260809-013"
+source_job_id: "AJ-RT-20260809-013-001"
+detected_at: "2026-08-09T15:23:29Z"
+source_head: "92209bb3f773fa6a09554b5cde8b457d973c6d81"
+source_tree: "30b523c0b7397386fcf0d0ec6d41aacc55b89c50"
+source_checkpoint:
+  run_id: "RUN-CHECKPOINT-8dd847a94ff78979"
+  receipt_path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-8dd847a94ff78979/receipt.json"
+  receipt_sha256: "d23e599f5110ebd8ebce44457afe008861973bb0cdd6dbf776862ff11e3e02fb"
+  status: "PASS"
+  gate_count: 7
+  pass_count: 7
+  commit: "92209bb3f773fa6a09554b5cde8b457d973c6d81"
+continuation_probe:
+  command: ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  returncode: 1
+  status: "blocked"
+  boundary: "blocked"
+  finding: "[allowlist] job AJ-RT-20260809-013-001 and its execution role have different write allowlists"
+source_records:
+  agent_job:
+    path: "research_control/tasks/RT-20260809-013/jobs/AJ-RT-20260809-013-001.yaml"
+    sha256: "7f74b13bf35bc2fae51474837d9f8261f3fc918c6db2465836111d29cd2f7c7d"
+    allowed_write_path_count: 17
+    duplicate_count: 0
+  execution_role:
+    path: "research_control/tasks/RT-20260809-013/roles/process-integrity-auditor@0.1.0--RT-20260809-013.yaml"
+    sha256: "302cfe349c5ca61220b412076f8952e8dd67ff487f5c4a40f663a7e6f14dfded"
+    allowed_write_path_count: 17
+    duplicate_count: 0
+  agent_job_registry:
+    path: "registries/AGENT_JOB_REGISTRY.csv"
+    row_key: "AJ-RT-20260809-013-001"
+    row_matches_agent_job_order: true
+  role_execution_registry:
+    path: "registries/ROLE_EXECUTION_REGISTRY.csv"
+    row_key: "process-integrity-auditor@0.1.0--RT-20260809-013"
+    row_matches_execution_role_order: true
+mismatch:
+  kind: "same_unique_values_different_order"
+  same_set: true
+  same_count: true
+  same_order: false
+  first_mismatch_index: 7
+  second_mismatch_index: 8
+  agent_job_order:
+    - "research_control/handoffs/handoff-0983.yaml"
+    - "research_control/handoffs/handoff-0983.md"
+  execution_role_order:
+    - "research_control/handoffs/handoff-0983.md"
+    - "research_control/handoffs/handoff-0983.yaml"
+required_repair:
+  strategy_id: "repair_v22_p3_t02_allowlist_order_parity_after_checkpoint_v1"
+  route_blocker_fingerprint: "76fdd80eb91ea0cf5d0900b259110d79cd55fc86ea8bfb4017d2b9c55a68ad19"
+  ordering_authority: "immutable_agent_job_and_matching_agent_job_registry_row"
+  mutable_surfaces:
+    - "expired task-local execution-role overlay allowed_write_paths order only"
+    - "matching ROLE_EXECUTION_REGISTRY.csv allowed_write_paths order only"
+  immutable_surfaces:
+    - "AJ-RT-20260809-013-001"
+    - "AJC-AJ-RT-20260809-013-001"
+    - "handoff-0983"
+    - "P3-T02 scientific artifacts"
+  validator_semantics_changed: false
+  p3_t02_reexecuted: false
+  p3_t03_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+status: "BLOCKED_EXACT_ORDER_PARITY_REPAIR_REQUIRED"

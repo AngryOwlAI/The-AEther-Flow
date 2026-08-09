@@ -1,0 +1,357 @@
+job_id: "AJ-RT-20260809-014-001"
+task_id: "RT-20260809-014"
+decision_id: "DDR-20260809-014"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260809-014"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-09T15:23:29Z"
+started_at: "2026-08-09T15:23:29Z"
+completed_at: "2026-08-09T15:23:29Z"
+completion_path: "research_control/tasks/RT-20260809-014/jobs/completions/AJC-AJ-RT-20260809-014-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal authorizes one materially distinct project-system ordered-parity recovery after the successful RT-013 checkpoint. No replay, P3-T03 execution, external review, science mutation, validator change, promotion, publication, push, or external action is authorized."
+objective: "Preserve the committed RT-013 transaction, make only its expired execution-role and role-registry write allowlists equal the immutable AgentJob's exact ordered 17-item list, prove protected bytes, synchronize ordinary control state, and invoke at most one checkpoint."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system ordered allowlist identity and checkpoint eligibility only; no scientific milestone burden advances."
+route_label: "project-system-checkpoint-recovery"
+route_reason: "post_checkpoint_rt013_execution_role_allowlist_has_the_same_17_unique_paths_in_a_different_order"
+route_strategy_id: "repair_v22_p3_t02_allowlist_order_parity_after_checkpoint_v1"
+route_blocker_fingerprint: "76fdd80eb91ea0cf5d0900b259110d79cd55fc86ea8bfb4017d2b9c55a68ad19"
+source_head: "92209bb3f773fa6a09554b5cde8b457d973c6d81"
+source_tree: "30b523c0b7397386fcf0d0ec6d41aacc55b89c50"
+blocker_path: "research_control/tasks/RT-20260809-014/artifacts/v22_p3_t02_allowlist_order_parity_blocker.yaml"
+blocker_sha256: "6ae02c400ed7d32975223b2d6863685965f23c2eeccb02711c8fb9f67681cec1"
+source_checkpoint_run_id: "RUN-CHECKPOINT-8dd847a94ff78979"
+source_checkpoint_receipt_sha256: "d23e599f5110ebd8ebce44457afe008861973bb0cdd6dbf776862ff11e3e02fb"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+recovery_plan_id: "project_system_recovery_for_recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P3-T03"
+recovery_for_plan_task_id: "P3-T02"
+next_plan_task_id: "P3-T03"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+validator_semantics_changed: false
+p3_t02_reexecuted: false
+p3_t03_executed: false
+p2_t02_external_action_authorized: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1152
+    relationship_row_count: 5821
+    semantic_row_count: 1152
+    vault_row_count: 1152
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      query_status: "completed"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SCHEMA-AGENT-JOB-SCHEMA --json"
+      query_type: "lookup"
+      query_text: "MD-SCHEMA-AGENT-JOB-SCHEMA"
+      returned_object_ids:
+        - "MD-SCHEMA-AGENT-JOB-SCHEMA"
+      query_status: "completed"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "MD-SCHEMA-AGENT-JOB-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/schemas/AGENT_JOB_SCHEMA.md"
+      source_hash: "d804e9e2138eb24ddfd3c8ee3ab7fc829094d1073b82efe3e32dbe017ed92d75"
+  additional_control_inspections:
+    - object_id: "HANDOFF-0983"
+      control_path: "research_control/handoffs/handoff-0983.yaml"
+      source_hash: "974c3913f14c7c00ed4a3ce2dcccbe5d0a86a7e891116db41c99b290969c9055"
+    - object_id: "RT013-ALLOWLIST-ORDER-BLOCKER"
+      control_path: "research_control/tasks/RT-20260809-014/artifacts/v22_p3_t02_allowlist_order_parity_blocker.yaml"
+      source_hash: "6ae02c400ed7d32975223b2d6863685965f23c2eeccb02711c8fb9f67681cec1"
+    - object_id: "RT013-CHECKPOINT-RECEIPT"
+      control_path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-8dd847a94ff78979/receipt.json"
+      source_hash: "d23e599f5110ebd8ebce44457afe008861973bb0cdd6dbf776862ff11e3e02fb"
+  authority_note: "Tracked registered source and control records govern. Generated wiki semantic Obsidian SQLite and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption mathematical payload source law or semantic scientific value changes."
+    - "The same 17 unique write paths are restored to exact ordered identity."
+    - "The RT-013 AgentJob completion handoff and P3-T02 scientific artifacts retain their sealed hashes."
+    - "P3-T03 remains selected but unexecuted."
+  materiality_basis: "Restores live continuation eligibility through exact expired-role and role-registry order parity without changing validator or physics semantics."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "HANDOFF-0983"
+    - "RT013-ALLOWLIST-ORDER-BLOCKER"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260809-014/artifacts/v22_p3_t02_allowlist_order_parity_blocker.yaml"
+    - "research_control/tasks/RT-20260809-014/artifacts/validate_v22_p3_t02_allowlist_order_parity_recovery.py"
+    - "research_control/tasks/RT-20260809-014/artifacts/v22_p3_t02_allowlist_order_parity_recovery_validation.json"
+  project_system_justification: "The immutable AgentJob and exact order-only mismatch uniquely determine the non-scientific recovery."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0983"
+  source_handoff_path: "research_control/handoffs/handoff-0983.yaml"
+  source_handoff_sha256: "974c3913f14c7c00ed4a3ce2dcccbe5d0a86a7e891116db41c99b290969c9055"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P3-T03"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P3-T03"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "exact four-way RT-013 ordered allowlist identity"
+      - "byte-preservation evidence for the committed RT-013 and P3-T02 payload"
+      - "one internally consistent recovery handoff plus synchronized generated projections"
+      - "one governed checkpoint outcome"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the RT-013 AgentJob completion handoff and science remain byte-identical"
+      - "all four RT-013 allowlist representations equal the immutable AgentJob's exact order"
+      - "only the expired role and matching role-registry allowlist order change"
+      - "live continuation reports no allowlist-order parity failure"
+      - "at most one governed checkpoint is invoked"
+      - "P3-T03 remains unexecuted"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-0983.yaml"
+  - "research_control/handoffs/handoff-0983.md"
+  - "research_control/tasks/RT-20260809-012/**"
+  - "research_control/tasks/RT-20260809-013/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0983.md"
+  - "research_control/handoffs/handoff-0983.yaml"
+  - "research_control/handoffs/handoff-0984.yaml"
+  - "research_control/handoffs/handoff-0984.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260809-013/roles/process-integrity-auditor@0.1.0--RT-20260809-013.yaml"
+  - "research_control/tasks/RT-20260809-014/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "research_control/tasks/RT-20260809-014/artifacts/v22_p3_t02_allowlist_order_parity_recovery_validation.json"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "research_control/tasks/RT-20260809-013/jobs/AJ-RT-20260809-013-001.yaml"
+  - "research_control/tasks/RT-20260809-013/jobs/completions/AJC-AJ-RT-20260809-013-001.yaml"
+  - "research_control/tasks/RT-20260809-013/artifacts/**"
+  - "research_control/handoffs/handoff-0983.yaml"
+  - "research_control/handoffs/handoff-0983.md"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+  - ".codex/skills/**"
+  - "scripts/**"
+  - "tests/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+forbidden_source_classes:
+  - "predecessor_agent_job_completion_handoff_or_science_rewrite"
+  - "validator_test_schema_skill_or_base_role_semantics_change"
+  - "write_path_broadening"
+  - "P3_T02_reexecution"
+  - "P3_T03_execution"
+  - "canonical_ontology_write"
+  - "science_source_or_scientific_ledger_mutation"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "proof_authority"
+  - "publication_or_push_authority"
+  - "completed_derivation_claim"
+allowed_source_classes:
+  - "control_state"
+  - "registry"
+  - "execution_role_contract"
+  - "task_control_record"
+  - "active_routing_supersession"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22 --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SCHEMA-AGENT-JOB-SCHEMA --json"
+  - ".venv/bin/python research_control/tasks/RT-20260809-014/artifacts/validate_v22_p3_t02_allowlist_order_parity_recovery.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260809-014/artifacts/validate_v22_p3_t02_allowlist_order_parity_recovery.py --check --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260809-014-001"
+required_validators:
+  - "task_local_allowlist_order_parity"
+  - "protected_hashes"
+  - "routing_snapshot"
+  - "memory_bootstrap"
+  - "memory_validate_only"
+  - "renderers"
+  - "documentation_impact"
+  - "research_control_validation"
+  - "claim_language"
+  - "affected_validation"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+validators:
+  - "task_local_allowlist_order_parity"
+  - "protected_hashes"
+  - "routing_snapshot"
+  - "memory_bootstrap"
+  - "documentation_impact"
+  - "research_control_validation"
+  - "claim_language"
+  - "git_diff_check"
+  - "checkpoint_research_transaction"
+expected_outputs:
+  - "research_control/tasks/RT-20260809-013/roles/process-integrity-auditor@0.1.0--RT-20260809-013.yaml"
+  - "research_control/tasks/RT-20260809-014/00_TASK.yaml"
+  - "research_control/tasks/RT-20260809-014/DDR-20260809-014.md"
+  - "research_control/tasks/RT-20260809-014/artifacts/v22_p3_t02_allowlist_order_parity_blocker.yaml"
+  - "research_control/tasks/RT-20260809-014/artifacts/validate_v22_p3_t02_allowlist_order_parity_recovery.py"
+  - "research_control/tasks/RT-20260809-014/artifacts/v22_p3_t02_allowlist_order_parity_recovery_validation.json"
+  - "research_control/tasks/RT-20260809-014/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260809-014/jobs/completions/AJC-AJ-RT-20260809-014-001.yaml"
+  - "research_control/tasks/RT-20260809-014/roles/process-integrity-auditor@0.1.0--RT-20260809-014.yaml"
+  - "research_control/handoffs/handoff-0984.yaml"
+  - "research_control/handoffs/handoff-0984.md"
+  - "research_control/program_state.yaml"
+claim_boundary: "Restore exact ordered RT-013 allowlist identity through only its expired role and matching role-registry field; preserve all committed and scientific hashes; synchronize approved derivatives; and invoke one checkpoint. No validator change, replay, P3-T03 execution, science, ontology, metric, coupling, Einstein, Gate, benchmark, proof, publication, release, push, external action, or completed-derivation authority."
+documentation_impact_id: "DI-RT-20260809-014-001"
+completion_id: "AJC-AJ-RT-20260809-014-001"
+checkpoint_invocation_limit: 1
+legacy_validation_allowed: false
+resolves_signal_routing: false
