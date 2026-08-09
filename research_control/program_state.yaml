@@ -1,12 +1,125 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260809-007"
-active_agent_job_id: "AJ-RT-20260809-007-001"
-latest_handoff_id: "handoff-0977"
-current_status: "v22_p2_t01_six_eof_repaired_p2_t03_selected_fresh_checkpoint_pending"
-claim_boundary_summary: "RT-20260809-007 removes exactly one terminal newline from each of six checkpoint-named P2-T01 supporting YAML files. Exact preimage reconstruction and the sealed 76-path receipt prove six one-byte nonsemantic changes and zero repair-boundary drift across 70 non-target paths. The consumed AJ-RT-20260809-006-001 checkpoint was not replayed. P2-T03 remains selected but unexecuted; P2-T02 remains externally gated; scientific and Distance-to-GR status are unchanged."
-next_plan_task_id: "P2-T03"
+active_task_id: "RT-20260809-008"
+active_agent_job_id: "AJ-RT-20260809-008-001"
+latest_handoff_id: "handoff-0978"
+current_status: "v22_p2_t03_protocol_complete_p2_t04_selected_checkpoint_pending"
+claim_boundary_summary: "RT-20260809-008 fixes exactly three inactive prospective source-extension family classes, one active primary limit, all-slot overlap debit, append-only failure history, all eight Gate B criteria, all eight hard-fail triggers, and four scoped terminal templates before candidate results. Thirty adversarial cases and 67 focused checks pass. No candidate is selected or activated, no source extension is adopted, and Gate B and Distance-to-GR status are unchanged. P2-T04 is selected but unexecuted; P2-T02 remains externally gated."
+next_plan_task_id: "P2-T04"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-007-001. After it commits, execute exactly one separately admitted V22 P2-T03 continue-research AgentJob; do not contact reviewers or take any protected or external action."
+next_recommended_action: "After the single governed checkpoint for AJ-RT-20260809-008-001 execute exactly one separately admitted V22 P2-T04 theoretical-continuation-selector AgentJob to compare source-side bridge candidate packets, select one primary and one fallback, leave the third slot unallocated, and preserve every adoption and protected-authority block."
+
+v22_p2_t03_source_extension_budget_hard_fail_protocol:
+  task_id: "RT-20260809-008"
+  parent_task_id: "RT-20260809-007"
+  parent_handoff_id: "handoff-0977"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P2-T03"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P2-T04"
+  claim_boundary_id: "CB-V22-P2-T03-SOURCE-EXTENSION-BUDGET-PROTOCOL-001"
+  status: "PASS_V22_P2_T03_SOURCE_EXTENSION_BUDGET_HARD_FAIL_PROTOCOL"
+  work_item_status: "completed_checkpoint_pending"
+  route_label: "ordinary-research-packet"
+  selected_role_family: "refuter@0.2.0"
+  supporting_perspective: "smuggling-auditor@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "preregister_v22_p2_t03_source_extension_budget_hard_fail_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Metric law; pre-register a maximum three-family source-extension budget, sequential activation, and scoped hard-fail criteria before candidate selection."
+  source_head: "488a7f2dd8a18075644d59ed497f3698ead9ee82"
+  source_tree: "8d427f3f770cf371cc0f9faf7be08be5052575a3"
+  agent_job_id: "AJ-RT-20260809-008-001"
+  decision_id: "DDR-20260809-008"
+  execution_role_ref: "refuter@0.2.0--RT-20260809-008"
+  source_handoff_id: "handoff-0977"
+  source_handoff_path: "research_control/handoffs/handoff-0977.yaml"
+  source_handoff_sha256: "9145365ac95d3dccd0ecca8fbe584814a81a59d7ea781a5147766c2dd86bf8c4"
+  prior_checkpoint_commit: "488a7f2dd8a18075644d59ed497f3698ead9ee82"
+  prior_checkpoint_job_id: "AJ-RT-20260809-007-001"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "c6c6946a681fdc60331f63c9d5194d18f7939d3bb4b8476435f3a587c20a635c"
+  fused_protocol_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex"
+  fused_protocol_sha256: "287b96db21bf3a95e03d2027810be94a535bed8f5f6f2961394e709bfe6f25d3"
+  extension_budget_protocol_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_extension_budget_protocol_v1.yaml"
+  extension_budget_protocol_sha256: "736c9914a287863f5bad7d456e20f2a67520ad377b95dca89027c7323fc4b1d7"
+  candidate_family_registry_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_candidate_family_registry_v1.yaml"
+  candidate_family_registry_sha256: "af294001a2773735e5a4ab94bed0f5eccb3f72ce089e95afc99832f6fc835d5c"
+  hard_fail_matrix_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_hard_fail_matrix_v1.yaml"
+  hard_fail_matrix_sha256: "f362ba5f52d472a02d2345760f9ad80b05af31b9973cb5d264ba1929ad16c9d0"
+  fixture_path: "research_control/tasks/RT-20260809-008/artifacts/fixtures/v22_p2_t03_protocol_adversarial_cases.yaml"
+  fixture_sha256: "5cf3ad7996b54944c1bb806ee189586372944e78e3fb03eb8a1827f1da474f42"
+  validation_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_protocol_validation.json"
+  validation_sha256: "6fc580db8e8202c213ee9a5225fc9475ad8f5e97144e486520ac3e055e8ace13"
+  compact_receipt_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_compact_receipt.json"
+  compact_receipt_sha256: "8672047f1ba2af36092726c14a0def0a6253663de9cac953dfa80e2dcbd35c06"
+  child_phys_math_path: "research_control/tasks/RT-20260809-008/artifacts/child_phys_math_p2_t03_budget_protocol.yaml"
+  child_phys_math_sha256: "17488ac65b211b801a15d9f299b23083e12aa18342f563fda62d801a753c5e3a"
+  child_phys_phil_path: "research_control/tasks/RT-20260809-008/artifacts/child_phys_phil_p2_t03_smuggling_scope_audit.yaml"
+  child_phys_phil_sha256: "7eb6502939af95c1a37cdbd57619004f1a3fcd736ccd4d44ecb40ca02c6a889d"
+  conflict_review_path: "research_control/tasks/RT-20260809-008/artifacts/parent_conflict_review_p2_t03_protocol.yaml"
+  conflict_review_sha256: "3a8fc4a4f76ea11a432f80004536b4e40b14f379393b0c836ae353a566b8196b"
+  fusion_notes_path: "research_control/tasks/RT-20260809-008/artifacts/parent_fusion_notes_p2_t03_protocol.md"
+  fusion_notes_sha256: "30c7409cabdffa2b4a427823b64969c9fd4461681e31eff187a51da7fbe0cb00"
+  completion_path: "research_control/tasks/RT-20260809-008/jobs/completions/AJC-AJ-RT-20260809-008-001.yaml"
+  completion_sha256: "610c657dff855065bbefd208afbba216e1c57ba17c6ebd84895485b7cb1ac973"
+  handoff_id: "handoff-0978"
+  handoff_path: "research_control/handoffs/handoff-0978.yaml"
+  handoff_sha256: "13dca24ba535b09c98dfdfa9eb7886015b1b3b613a7249041802e29ea3db64bf"
+  maximum_material_family_count: 3
+  preregistered_family_count: 3
+  active_family_limit: 1
+  active_family_count: 0
+  gate_b_criterion_count: 8
+  hard_fail_trigger_count: 8
+  supplemental_positive_packet_field_count: 5
+  terminal_template_count: 4
+  fixture_case_count: 30
+  fixture_failure_count: 0
+  focused_check_count: 67
+  focused_check_failure_count: 0
+  new_mathematical_payload_count: 4
+  resolved_parent_conflict_count: 4
+  proof_assistant_kernel_used: false
+  v22_p2_t03_executed: true
+  v22_p2_t04_selected: true
+  v22_p2_t04_executed: false
+  v22_p2_t02_external_review_completed: false
+  canonical_science_modified: false
+  source_extension_adopted: false
+  canonical_ontology_modified: false
+  effective_metric_constructed_or_adopted: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  protected_gate_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  reviewer_contact_authorized: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P2-T04"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P2-T04"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "theoretical-continuation-selector@0.1.0"
+  selected_next_supporting_perspective: "smuggling-auditor@0.2.0"
+  selected_next_packet_type: "theoretical_candidate_selection"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "select_v22_p2_t04_primary_and_fallback_candidate_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  p2_t02_not_selected_reason: "External specialist review requires reviewer-contact authority; internal same-context review does not satisfy P2-T02."
+  successor_requested: false
 
 v22_p2_t01_six_eof_checkpoint_recovery:
   task_id: "RT-20260809-007"

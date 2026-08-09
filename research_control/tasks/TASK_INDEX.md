@@ -2,7 +2,7 @@
 
 Generated navigation support only. This index is not task authority, physics proof authority, benchmark authority, Gate Chair authority, or completed-derivation evidence.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-09T07:36:24Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"b1dd6195bb963ab02780e24c089d545cb8319cee","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"cb173c8c36bd5528acb47b5e65e88d8be7f8b497164a878d4c356f0cbfb59bb8"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"29b5583cfe50e28e7206cf8c5f7d0cf9633e3088c3196690c2cb8a6c0d9d9699"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"c5d011d8ce616938668491f3134d6d61936a87ea6edea5c2d3791cd0d00e739b"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"e90700e0a8e63f9d2f6c35d919cb9fa95b80ecc1d978c0a42bc453f44928a6a6","source_path_count":"4938","task_count":"1236"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-09T08:40:37Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"488a7f2dd8a18075644d59ed497f3698ead9ee82","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"adc87f13e3f6270fc1a24791f19bc042a750676fb1e83be8e9603409632393ff"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"c5193068b028b0435385411ea6f6ee85a6f820fd00c3bb99311c7152c9fd05da"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"0b7793b089f9a70dddfd6c558c2295b6158067880bc0861499af58535ad76a79"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"1f52062a7ce14309110cd8a293325469f9e101eb3782ce327ba4e40185fe15ba","source_path_count":"4942","task_count":"1237"} -->
 
 ## Generated-Report Provenance
 
@@ -11,21 +11,21 @@ Generated navigation support only. This index is not task authority, physics pro
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_task_index` |
-| Source commit | `b1dd6195bb963ab02780e24c089d545cb8319cee` |
-| Source-derived generation time | `2026-08-09T07:36:24Z` |
-| Tracked task count | 1236 |
-| Exact source-path count | 4938 |
-| Source manifest SHA-256 | `e90700e0a8e63f9d2f6c35d919cb9fa95b80ecc1d978c0a42bc453f44928a6a6` |
+| Source commit | `488a7f2dd8a18075644d59ed497f3698ead9ee82` |
+| Source-derived generation time | `2026-08-09T08:40:37Z` |
+| Tracked task count | 1237 |
+| Exact source-path count | 4942 |
+| Source manifest SHA-256 | `1f52062a7ce14309110cd8a293325469f9e101eb3782ce327ba4e40185fe15ba` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `cb173c8c36bd5528acb47b5e65e88d8be7f8b497164a878d4c356f0cbfb59bb8`
+- `registries/AGENT_JOB_REGISTRY.csv`: `adc87f13e3f6270fc1a24791f19bc042a750676fb1e83be8e9603409632393ff`
 - `registries/AGENT_ROLE_REGISTRY.csv`: `847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `29b5583cfe50e28e7206cf8c5f7d0cf9633e3088c3196690c2cb8a6c0d9d9699`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `c5d011d8ce616938668491f3134d6d61936a87ea6edea5c2d3791cd0d00e739b`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `c5193068b028b0435385411ea6f6ee85a6f820fd00c3bb99311c7152c9fd05da`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `0b7793b089f9a70dddfd6c558c2295b6158067880bc0861499af58535ad76a79`
 - `research_control/design/task_index_schema_v2.md`: `4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f`
 - `research_control/design/v21_recommendation_backlog.yaml`: `849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f`
 - `research_control/design/v21_task_taxonomy_policy.md`: `7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b`
@@ -41,9 +41,9 @@ or claim-promotion authority.
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `540c5e0faccadf4101acb82f56466103e31216c78f4ad299a9d9a2f71db26847`
-- Generated-at source timestamp: `2026-08-09T07:36:24Z`
-- Row count: `1236`
+- Source fingerprint: `a8139f0d7787211d80edc46726368038eb5b3bf06f52c58a2838620190d34419`
+- Generated-at source timestamp: `2026-08-09T08:40:37Z`
+- Row count: `1237`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -51,6 +51,7 @@ or claim-promotion authority.
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260809-008|RT-20260809-007|2026-08-09T08:40:37Z|2026-08-09T08:56:40Z|Pre-register the source-extension budget and hard-fail protocol|v22_p2_t03_source_extension_budget_hard_fail_protocol|integration_or_selection|effective_metric_g_eff|v22_p2_t03_source_extension_budget_protocol_v1|completed_or_precisely_blocked|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Metric law; pre-register a maximum three-family source-extension budget, sequential activation, and scoped hard-fail criteria before candidate selection.|refuter@0.2.0|false|false|13|After checkpoint, use one bounded theoretical-continuation-selector packet to compare concrete source-side bridge candidate proposals under the fixed P2-T03 family fingerprints and select exactly one primary and one fallback without ontology adoption.|PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260809-008/jobs/completions/AJC-AJ-RT-20260809-008-001.yaml|
 |RT-20260809-007|RT-20260809-006|2026-08-09T07:36:24Z|2026-08-09T07:41:18Z|Repair six V22 P2-T01 EOF blank lines and recover the cumulative checkpoint|v22_p2_t01_six_eof_checkpoint_recovery|benchmark_or_recovery|effective_metric_g_eff|v22_p2_t01_six_eof_checkpoint_recovery_v1|implemented_and_validated_or_precisely_blocked|project_control|project_system|explicit|high|completed|none|Project-system EOF normalization and checkpoint eligibility only; the effective-metric scientific burden, P2-T01 theorem payload, and Distance-to-GR state do not advance.|process-integrity-auditor@0.1.0|false|false|6|Invoke the one fresh governed checkpoint for AJ-RT-20260809-007-001. After a valid commit, claim P2-T03 separately through continue-research.|PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260809-007/jobs/completions/AJC-AJ-RT-20260809-007-001.yaml|
 |RT-20260809-006|RT-20260809-005|2026-08-09T06:43:58Z|2026-08-09T06:51:03Z|Recover the V22 P2-T01 checkpoint from one inherited taxonomy defect|v22_p2_t01_inherited_task_taxonomy_checkpoint_recovery|benchmark_or_recovery|effective_metric_g_eff|v22_p2_t01_inherited_task_taxonomy_checkpoint_recovery_v1|implemented_and_validated_or_precisely_blocked|process_control|project_system|explicit|high|completed|none|Project-system taxonomy and checkpoint eligibility only; the effective-metric scientific burden, P2-T01 theorem payload, and Distance-to-GR state do not advance.|process-integrity-auditor@0.1.0|false|false|6|Invoke the one fresh governed checkpoint for AJ-RT-20260809-006-001. After a valid commit, claim P2-T03 separately through continue-research.|PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260809-006/jobs/completions/AJC-AJ-RT-20260809-006-001.yaml|
 |RT-20260809-005|RT-20260809-004|2026-08-09T05:23:44Z|2026-08-09T05:38:27Z|Prove the local source information-capacity theorem|v22_p2_t01_local_source_information_capacity_theorem|formalization_or_theorem|effective_metric_g_eff|v22_p2_t01_local_source_information_capacity_theorem_v1|theorem_or_precise_obstruction|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Metric law; prove a coordinate- and gauge-aware source information-capacity necessary condition and classify escape routes without importing target geometry.|ontology-formalizer@0.2.0|false|false|13||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260809-005/jobs/completions/AJC-AJ-RT-20260809-005-001.yaml|

@@ -1,0 +1,283 @@
+% authority: science_draft
+% claim_status: draft/control
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,array,longtable,enumitem,hyperref}
+\hypersetup{hidelinks}
+\setlist{nosep}
+
+\title{V22 P2-T03 Source-Extension Budget and Hard-Fail Protocol v1\\
+\large Prospective family identity, sequential activation, monotone failure, and scoped terminal wording}
+\author{Refuter parent with Physicist-Mathematician and Smuggling-Auditor perspectives}
+\date{2026-08-09}
+
+\newcommand{\Fam}{\mathcal{F}}
+\newcommand{\Act}{\mathsf{Active}}
+\newcommand{\Term}{\mathsf{Terminated}}
+\newcommand{\Qual}{\mathsf{Qualifying}}
+\newcommand{\Fail}{\mathsf{HardFail}}
+\newcommand{\Ledger}{\mathcal{L}}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{Status and authority.} This task-local draft/control packet
+pre-registers the V22 P2-T03 extension budget before candidate selection. It
+does not select or activate a candidate, adopt a source extension, define an
+unscoped effective metric, pass Gate B, contact an external reviewer, promote a
+benchmark, or complete a derivation. Internal role diversity is not external
+review or independent replication.
+}}
+\end{center}
+
+\section{Authority, scope, and prospective timing}
+
+The active roadmap milestone is \texttt{effective\_metric\_g\_eff}; its local
+burden is a source-derived metric law. P2-T01 supplies a conditional quotient
+information-capacity necessary condition, not a candidate metric. P1-T04 keeps
+Gate B as the sole active physics gate and parks downstream physics. This
+packet fixes the permitted source-extension family universe and failure
+language before P2-T04 sees a candidate result.
+
+All objects below are prospective control objects. A family descriptor is not
+a source law, an ontology object, or evidence that the family can satisfy Gate
+B. The current ontology is not modified. The exact P2-T02 external-review
+route remains separately gated and is not executed here.
+
+\section{Candidate and family identity}
+
+\paragraph{Candidate descriptor.}
+A candidate packet $C$ must declare
+\[
+ C=(X_C,A_C,D_C,O_C,P_C,R_C,Q_C),
+\]
+where $X_C$ is the source field/state content, $A_C$ is the explicit
+assumption multiset, $D_C$ is the source dynamics or transition law, $O_C$ is
+the source-to-operational interface, $P_C$ is the proposed principal-structure
+mechanism, $R_C$ is its continuum or refinement contract, and $Q_C$ is its
+source-provenance and no-target-import receipt. Missing fields fail closed.
+
+\paragraph{Prospective family fingerprint.}
+Let $N$ normalize notation, field renamings, invertible parameter changes, and
+presentation-only auxiliary variables. Define
+\[
+ \iota(C)=N(X_C,A_C,D_C,O_C,P_C,R_C,Q_C).
+\]
+Two packets are family-equivalent, $C\sim_{\rm fam}C'$, when their normalized
+fingerprints have the same source primitives, assumption cost, dynamics,
+operational interface, principal mechanism, refinement burden, and forbidden
+target-provenance profile. A renamed route, reparameterized coefficients, a
+new file layout, or additional validator does not create a new family.
+
+\paragraph{Material distinction.}
+Packets are materially distinct only when a prospective difference in source
+field content, source law, principal mechanism, operational interface, or
+continuum/refinement construction changes at least one falsifiable Gate B
+burden without importing target data. The difference and its assumption delta
+must be declared before results. Familiarity, implementation language, author,
+role, or label is never material distinction.
+
+\section{Exactly three preregistered families}
+
+The family universe is fixed to the following three identities:
+
+\begin{longtable}{p{0.12\textwidth}p{0.27\textwidth}p{0.52\textwidth}}
+\toprule
+Slot & Family & Prospective identity and lawful burden\\
+\midrule
+1 & Local multi-field continuum dynamics & Adds a finite source-local
+multi-field state and hyperbolic candidate dynamics from which a reduced
+principal polynomial and operational response would have to be derived. It
+cannot assume a metric, coframe, cone, clock, rod, or target coefficient.\\
+2 & Matter-principal-polynomial reconstruction & Starts from the exact bounded
+Position-A source-matter input and attempts to derive a common reduced
+principal polynomial across declared sectors. Matter labels or a desired GR
+cone cannot be used as premises.\\
+3 & Controlled discrete-to-continuum refinement & Starts from an explicitly
+new $K_n$-type source family and requires convergence, error, boundary,
+universality, and principal/signature preservation. An unchanged frozen graph
+decoder or zero finite remainder is not a continuum argument.\\
+\bottomrule
+\end{longtable}
+
+The identities are preregistered, but P2-T04 alone selects one primary and one
+fallback. Slot 3 remains reserved and unallocated unless a later independent
+review identifies a genuinely distinct hypothesis and a new explicit program
+decision allocates it. No fourth family exists under this protocol.
+
+\paragraph{Lawful overlap.}
+One concrete candidate may combine mechanisms from more than one family only
+if it supplies a single source law, declares one primary family, proves the
+material overlap prospectively, and debits every implicated family slot. Only
+the primary family is active; secondary implicated slots become consumed by
+that same activation and cannot be reused as fallbacks. Overlap never enlarges
+the budget.
+
+\section{Sequential activation state machine}
+
+Let the protocol state be
+\[
+ S=(a,U,H,E),
+\]
+where $a\in\Fam\cup\{\bot\}$ is the sole active primary family, $U$ is the
+set of unused or reserved slots, $H$ is an append-only activation and
+termination history, and $E$ is the immutable evidence map for every state
+transition. The invariant is $|\{a\}|\leq 1$.
+
+Allowed transitions are:
+\begin{enumerate}
+  \item \textbf{Select.} P2-T04 records one primary and one fallback; no
+  candidate runs merely because it is selected.
+  \item \textbf{Activate primary.} Activate the selected primary only after
+  its complete descriptor, assumption ledger, family fingerprint, and test
+  plan are sealed.
+  \item \textbf{Terminate.} Record either qualifying-for-protected-review or
+  a named hard failure. The record and all negative results are append-only.
+  \item \textbf{Activate fallback.} Require a terminated primary, a preserved
+  termination receipt, and a fresh selector decision that names the exact
+  preregistered fallback.
+  \item \textbf{Allocate slot 3.} Require both a qualifying independent-review
+  finding of material distinctness and a new explicit program decision. The
+  decision cannot erase prior failures or create a fourth slot.
+  \item \textbf{Terminalize.} When all allocated slots are consumed without a
+  qualifying candidate, use only the scoped insufficiency template below.
+\end{enumerate}
+
+Forbidden transitions include concurrent activation, fallback activation
+before primary termination, deletion or weakening of a failure, post-result
+family definition, renamed reuse of a frozen family, silent slot-3 allocation,
+and budget growth.
+
+\paragraph{Finite-budget termination theorem.}
+Assume every activation terminates in finite control time as either
+$\Qual$ or $\Term$, every overlap debits all implicated slots, and family
+equivalence is enforced by $\iota$. Then the protocol admits at most three
+primary activations and no infinite sequence of renamed fallbacks.
+
+\paragraph{Proof.}
+Each lawful activation consumes at least one previously unused slot from the
+three-element set $\Fam$. The append-only ledger prevents consumption from
+being reversed. A family-equivalent rename has the same fingerprint and hence
+cannot enter $U$ as a new element. An overlapping candidate consumes rather
+than creates its secondary slots. Therefore after at most three activations no
+unused slot remains, so a fourth activation is impossible without a new
+explicit program decision outside this protocol. $\square$
+
+\paragraph{Failure-monotonicity lemma.}
+If $H_t$ is the ledger after transition $t$, every lawful transition satisfies
+$H_t\subseteq H_{t+1}$. Consequently a failed premise, countermodel, instability,
+or target-import finding cannot be erased by later selection or renaming.
+
+\section{Gate B eligibility predicate}
+
+A candidate is eligible only for later protected Gate B review when every
+criterion is supported by source provenance:
+\begin{enumerate}
+  \item target-atlas-free construction;
+  \item gauge- and constraint-reduced hyperbolic principal polynomial;
+  \item one stable Lorentzian cone or a physically derived equivalence class;
+  \item universal compatibility across declared matter sectors;
+  \item operational clock and rod calibration and physical scale;
+  \item tensorial transformation and local-to-global gluing;
+  \item finite-variation and coarse-graining robustness; and
+  \item no hidden metric, tetrad, coframe, or equivalent constitutive primitive.
+\end{enumerate}
+It must also report regularity, time orientation, nondegeneracy, conditioning,
+and second-clock-effect analysis. Passing this predicate means only
+\emph{eligible for protected review}; it is not a positive Gate B verdict.
+
+\section{Hard-fail predicate}
+
+Terminate and preserve the candidate when any disjunct of $\Fail(C)$ holds:
+\begin{enumerate}
+  \item an underived metric, tetrad, coframe, Lorentzian constitutive tensor,
+  or equivalent quadratic structure is inserted;
+  \item source labels are identified with clocks, rods, locations, cones, or
+  target observables by fiat;
+  \item free coefficients are selected by fitting GR targets;
+  \item universal propagation is abandoned or inequivalent physical cones are
+  tolerated without a derived selector or quotient;
+  \item ghosts, instability, nonhyperbolicity, degeneracy, or uncontrolled
+  signature change are accepted;
+  \item a controlled continuum or refinement limit is absent;
+  \item the Einstein--Hilbert action or Einstein equations are postulated as a
+  derivation; or
+  \item an information-deficient frozen route is repeated under a new name.
+\end{enumerate}
+Hard failure is candidate-local. It cannot be converted into a global no-go
+claim without a separate theorem and applicable protected authority.
+
+\section{Pre-registered terminal templates}
+
+\begin{longtable}{p{0.20\textwidth}p{0.70\textwidth}}
+\toprule
+Outcome & Exact scoped template\\
+\midrule
+First-principles route & Within the declared source ontology and tested
+extension family, the candidate satisfied the preregistered scientific
+criteria and may proceed only to the separately authorized protected review;
+no Gate verdict is implied here.\\
+Controlled approximation & Within the declared regime and error bounds, the
+candidate supplies a controlled approximate recovery result; every exact,
+global, coupling, field-equation, and benchmark claim remains separately
+burdened.\\
+Budget exhausted & Within the current ontology and the preregistered three-family
+extension budget, no tested candidate satisfied all required criteria. Current
+adoption is blocked; a new family requires a new explicit program decision.
+This is not a global impossibility theorem or future-extension closure.\\
+Exact-GR interpretation retained & The exact-GR target-side interpretation is
+retained without a source derivation under the tested budget. This preserves
+the benchmark distinction and does not convert inherited GR agreement into
+source-ontology evidence.\\
+\bottomrule
+\end{longtable}
+
+\section{Expanded Distance-to-GR matrix}
+
+\begin{longtable}{p{0.27\textwidth}p{0.62\textwidth}}
+\toprule
+Burden & Status after P2-T03\\
+\midrule
+Source ontology primitives & unchanged; the protocol defines no source primitive\\
+Source equivalence $\mathrm{EqSrc}$ & unchanged\\
+$\mathrm{RetainH}$ & unchanged\\
+$\mathrm{GenH}$ & unchanged\\
+$\mathrm{ObsLoc}_{\rm lc}$ & unchanged; no operational witness is supplied\\
+$\mathrm{Resp}_{\rm lc}$ & unchanged; no universal response law is supplied\\
+$M_{\rm src}$ & unchanged within its historical scoped status\\
+$g_{\rm eff}$ & active burden; candidate families and failure rules are bounded,
+but no candidate metric is selected, constructed, or adopted\\
+Matter coupling & unchanged; Position-A input is not target coupling\\
+Einstein equations & blocked; no action or field equation is supplied\\
+Finite-variation robustness & preregistered as a mandatory future criterion,
+not discharged\\
+Benchmark promotion & blocked\\
+Gate Chair status & unchanged; no protected review is requested\\
+Current route freeze or hard-fail & not triggered; no candidate has run and the
+three-family budget is unused\\
+\bottomrule
+\end{longtable}
+
+The physical Distance-to-GR delta is zero. The new mathematical payload is the
+prospective family-equivalence relation, the finite sequential state machine,
+the finite-budget termination theorem, and failure monotonicity. These narrow
+candidate proliferation without supplying the metric law.
+
+\section{Internal review and non-conclusions}
+
+The Physicist-Mathematician perspective checks the state machine, family
+fingerprint, slot accounting, and monotonicity results. The
+Physicist-Philosopher/Smuggling-Auditor perspective checks target import,
+postulate laundering, global-no-go wording, and process-as-science overread.
+Their separation is task-local same-model internal review only.
+
+No result in this packet authorizes canonical ontology change, source-law
+adoption, candidate activation, unscoped $g_{\rm eff}$, target matter coupling,
+Einstein equations, Gate B, benchmark promotion, external review, publication,
+release, push, or completed derivation. P2-T04 may select one primary and one fallback only after this packet checkpoints; selection remains a separate
+AgentJob.
+
+\end{document}

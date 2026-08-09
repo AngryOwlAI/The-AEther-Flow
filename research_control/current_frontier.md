@@ -3,14 +3,14 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260809-007` and `handoff-0977`.
+`RT-20260809-008` and `handoff-0978`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-09T07:41:18Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"b1dd6195bb963ab02780e24c089d545cb8319cee","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"c5d011d8ce616938668491f3134d6d61936a87ea6edea5c2d3791cd0d00e739b"},{"path":"research_control/handoffs/handoff-0977.yaml","sha256":"9145365ac95d3dccd0ecca8fbe584814a81a59d7ea781a5147766c2dd86bf8c4"},{"path":"research_control/program_state.yaml","sha256":"f1c5b301a40459a6bb214fe0a16bcd2a821f17c71993e50426b2e03e55fb329b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"7f033e73e93d0c231f7174d12a49f3ab3d4b2c76ec204d841abe6c597e08ba14","source_path_count":"12","task_count":"1232"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-09T08:56:40Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"488a7f2dd8a18075644d59ed497f3698ead9ee82","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"0b7793b089f9a70dddfd6c558c2295b6158067880bc0861499af58535ad76a79"},{"path":"research_control/handoffs/handoff-0978.yaml","sha256":"13dca24ba535b09c98dfdfa9eb7886015b1b3b613a7249041802e29ea3db64bf"},{"path":"research_control/program_state.yaml","sha256":"90175fa7881a111e12d6fc75d63712d8edff0bd12c9fda3ef68f1f670a2598ff"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"8c1f71e502afacf1b751819d918a236e48feb5947c8903929719ecba1764fb7a","source_path_count":"12","task_count":"1233"} -->
 
 ## Generated-Report Provenance
 
@@ -19,11 +19,11 @@ tracked authority files govern.
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `current_frontier` |
-| Source commit | `b1dd6195bb963ab02780e24c089d545cb8319cee` |
-| Source-derived generation time | `2026-08-09T07:41:18Z` |
-| Tracked task count | 1232 |
+| Source commit | `488a7f2dd8a18075644d59ed497f3698ead9ee82` |
+| Source-derived generation time | `2026-08-09T08:56:40Z` |
+| Tracked task count | 1233 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `7f033e73e93d0c231f7174d12a49f3ab3d4b2c76ec204d841abe6c597e08ba14` |
+| Source manifest SHA-256 | `8c1f71e502afacf1b751819d918a236e48feb5947c8903929719ecba1764fb7a` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -31,9 +31,9 @@ tracked authority files govern.
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `c5d011d8ce616938668491f3134d6d61936a87ea6edea5c2d3791cd0d00e739b`
-- `research_control/handoffs/handoff-0977.yaml`: `9145365ac95d3dccd0ecca8fbe584814a81a59d7ea781a5147766c2dd86bf8c4`
-- `research_control/program_state.yaml`: `f1c5b301a40459a6bb214fe0a16bcd2a821f17c71993e50426b2e03e55fb329b`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `0b7793b089f9a70dddfd6c558c2295b6158067880bc0861499af58535ad76a79`
+- `research_control/handoffs/handoff-0978.yaml`: `13dca24ba535b09c98dfdfa9eb7886015b1b3b613a7249041802e29ea3db64bf`
+- `research_control/program_state.yaml`: `90175fa7881a111e12d6fc75d63712d8edff0bd12c9fda3ef68f1f670a2598ff`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_current_frontier.py`: `62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6`
@@ -47,15 +47,15 @@ or claim-promotion authority.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260809-007` |
-| Latest handoff ID | `handoff-0977` |
-| Current status | `v22_p2_t01_six_eof_repaired_p2_t03_selected_fresh_checkpoint_pending` |
+| Active task ID | `RT-20260809-008` |
+| Latest handoff ID | `handoff-0978` |
+| Current status | `v22_p2_t03_protocol_complete_p2_t04_selected_checkpoint_pending` |
 | V16 completed | false |
-| Current route family | benchmark or recovery (project system) |
+| Current route family | integration or selection (scientific) |
 | Target derivation milestone | `effective_metric_g_eff` |
 | Current burden | `g_eff` |
-| Required next authority | One fresh governed recovery checkpoint followed by one separately admitted V22 P2-T03 source-extension budget and hard-fail protocol packet. |
-| Next recommended action | Run the single fresh governed checkpoint for AJ-RT-20260809-007-001. After it commits, execute exactly one separately admitted V22 P2-T03 continue-research AgentJob; do not contact reviewers or take any protected or external action. |
+| Required next authority | One separately admitted V22 P2-T04 theoretical-continuation-selector AgentJob may compare fully specified source-side candidate packets against the fixed three-family protocol, choose exactly one primary and one fallback, leave family slot 3 unallocated, and route activation without canonical ontology adoption. |
+| Next recommended action | After the single governed checkpoint for AJ-RT-20260809-008-001 execute exactly one separately admitted V22 P2-T04 theoretical-continuation-selector AgentJob to compare source-side bridge candidate packets, select one primary and one fallback, leave the third slot unallocated, and preserve every adoption and protected-authority block. |
 
 ## Active-State Bifurcation
 
@@ -66,9 +66,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260809-007` |
-| Latest research handoff ID | `handoff-0977` |
-| Latest research next action | Run the single fresh governed checkpoint for AJ-RT-20260809-007-001. After it commits, execute exactly one separately admitted V22 P2-T03 continue-research AgentJob; do not contact reviewers or take any protected or external action. |
+| Latest research task ID | `RT-20260809-008` |
+| Latest research handoff ID | `handoff-0978` |
+| Latest research next action | After the single governed checkpoint for AJ-RT-20260809-008-001 execute exactly one separately admitted V22 P2-T04 theoretical-continuation-selector AgentJob to compare source-side bridge candidate packets, select one primary and one fallback, leave the third slot unallocated, and preserve every adoption and protected-authority block. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -101,12 +101,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260809-007/00_TASK.yaml`.
-- Active task objective: Under the sealed 76-path inherited dirty manifest, delete exactly one terminal newline from each of six checkpoint-named P2-T01 YAML files, prove zero repair-boundary drift across all 70 non-target paths, preserve the scientific payload, synchronize ordinary control and generated derivatives, and invoke at most one fresh governed cumulative checkpoint.
-- Latest handoff path: `research_control/handoffs/handoff-0977.yaml`.
-- Latest handoff summary: The consumed AJ-RT-20260809-006-001 checkpoint failed only on six new blank lines at EOF. Exactly one terminal newline was deleted from each named P2-T01 supporting YAML artifact. Every postimage reconstructs its exact preimage by appending one newline, every YAML file parses, and the sealed 76-path receipt proves zero drift across all 70 non-target paths at the repair boundary. Critical scientific and prior-control hashes remain intact. The consumed checkpoint was not replayed. P2-T03 remains selected but unexecuted, and P2-T02 remains externally gated.
-- Current route family: benchmark or recovery (project system).
-- Next recommended action: Run the single fresh governed checkpoint for AJ-RT-20260809-007-001. After it commits, execute exactly one separately admitted V22 P2-T03 continue-research AgentJob; do not contact reviewers or take any protected or external action.
+- Active task path: `research_control/tasks/RT-20260809-008/00_TASK.yaml`.
+- Active task objective: Pre-register exactly three materially distinct source-extension family classes, one-at-a-time activation, append-only failure history, all Gate B criteria and hard-fail triggers, nonrepackaging rules, reopening evidence, and exact scoped terminal wording before any P2-T04 candidate is selected.
+- Latest handoff path: `research_control/handoffs/handoff-0978.yaml`.
+- Latest handoff summary: V22 P2-T03 passes its bounded pre-registration packet: exactly three materially distinct prospective family classes are fingerprinted; only one primary may be active; lawful overlap debits every implicated slot; failure history is append-only; all eight Gate B criteria, eight hard-fail triggers, five supplemental fields, and four scoped terminal templates are fixed before candidate results. The finite-budget termination theorem and failure-monotonicity lemma prevent silent growth, reset, renaming, or repackaging. Thirty adversarial cases pass. All three classes remain inactive, no extension is adopted, and Gate B and Distance-to-GR status are unchanged. P2-T04 is selected but unexecuted. P2-T02 remains unsatisfied because no external reviewer authority or review exists.
+- Current route family: integration or selection (scientific).
+- Next recommended action: After the single governed checkpoint for AJ-RT-20260809-008-001 execute exactly one separately admitted V22 P2-T04 theoretical-continuation-selector AgentJob to compare source-side bridge candidate packets, select one primary and one fallback, leave the third slot unallocated, and preserve every adoption and protected-authority block.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -336,7 +336,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the single fresh governed checkpoint for AJ-RT-20260809-007-001. After it commits, execute exactly one separately admitted V22 P2-T03 continue-research AgentJob; do not contact reviewers or take any protected or external action.
+After the single governed checkpoint for AJ-RT-20260809-008-001 execute exactly one separately admitted V22 P2-T04 theoretical-continuation-selector AgentJob to compare source-side bridge candidate packets, select one primary and one fallback, leave the third slot unallocated, and preserve every adoption and protected-authority block.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -354,27 +354,28 @@ Layer status summary:
 
 | Status | Count | Meaning |
 | --- | --- | --- |
-| `PASS` | 6 | receipt complete |
+| `PASS` | 5 | receipt complete |
+| `PASS_WITH_WARNINGS` | 1 | receipt complete with stated warnings |
 | `PENDING` | 1 | open item; evidence must explain why |
 
 Validation layers:
 
 | Validation layer | Status | Meaning | Evidence |
 | --- | --- | --- | --- |
-| `pre_execution` | PASS | receipt complete | Memory, classifier, resolver, signal, role-fit, checkpoint-receipt, Git, and exact-manifest preflight passed. |
-| `completion_internal` | PASS | receipt complete | The sealed receipt proves six exact one-byte EOF repairs and zero repair-boundary drift across 70 non-target paths. |
-| `post_write` | PASS | receipt complete | The six source repairs and recovery packet are complete before checkpoint. |
-| `post_checkpoint` | PENDING | open item; evidence must explain why | Exactly one fresh governed AJ-RT-20260809-007-001 checkpoint remains. |
-| `renderer` | PASS | receipt complete | Approved frontier, task-index, dependency-graph, claim-graph, wiki, and compact-frontier projections are synchronized. |
+| `pre_execution` | PASS | receipt complete | Memory preflight exact plan P2-T01 P1-T04 checklist burden-map ledger and handoff-0977 route admission passed. |
+| `completion_internal` | PASS | receipt complete | All 67 focused checks and 30 adversarial cases pass; both child records are complete and four parent conflicts are resolved. |
+| `post_write` | PASS_WITH_WARNINGS | receipt complete with stated warnings | The affected profile passes all 16 gates; the bounded research-control diff has zero errors and 1838 historical warnings. |
+| `post_checkpoint` | PENDING | open item; evidence must explain why | Exactly one governed AJ-RT-20260809-008-001 checkpoint remains. |
+| `renderer` | PASS | receipt complete | Generated frontier task-index compact-frontier dependency-graph and claim-graph projections are synchronized; all four generated-report freshness classes pass. |
 | `memory_bootstrap` | PASS | receipt complete | Tracked memory bootstrap and validate-only verification pass after source synchronization. |
-| `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation passes with historical warnings only. |
+| `claim_language_linter` | PASS | receipt complete | Changed-source claim-language validation has zero hard failures; warnings are historical repository findings only. |
 
 Authorization layers:
 
 | Authorization field | Value | Meaning |
 | --- | --- | --- |
 | `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
-| `protected_scoped_gate_review_scope` | Project-system EOF normalization and checkpoint recovery only; no protected Gate review is authorized. | exact scope of protected review authority |
+| `protected_scoped_gate_review_scope` | No protected Gate review is authorized. | exact scope of protected review authority |
 | `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
 | `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
 | `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
@@ -382,20 +383,12 @@ Authorization layers:
 | `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
 | `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
 | `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
-| `Gate_Chair_verdict_authorized` | False | extension authorization field |
-| `canonical_ontology_edit_authorized` | False | extension authorization field |
-| `external_outreach_authorized` | False | extension authorization field |
-| `external_publication_authorized` | False | extension authorization field |
-| `global_no_go_claim_authorized` | False | extension authorization field |
-| `push_authorized` | False | extension authorization field |
-| `reviewer_contact_authorized` | False | extension authorization field |
-| `source_law_adoption_authorized` | False | extension authorization field |
 
 Legacy compatibility records:
 
-- active task: `RT-20260809-007`;
-- latest handoff: `handoff-0977`;
-- current status: `v22_p2_t01_six_eof_repaired_p2_t03_selected_fresh_checkpoint_pending`;
+- active task: `RT-20260809-008`;
+- latest handoff: `handoff-0978`;
+- current status: `v22_p2_t03_protocol_complete_p2_t04_selected_checkpoint_pending`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -405,8 +398,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-0977.yaml`
-- `research_control/tasks/RT-20260809-007/00_TASK.yaml`
+- `research_control/handoffs/handoff-0978.yaml`
+- `research_control/tasks/RT-20260809-008/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -422,7 +415,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 0977*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 0978*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

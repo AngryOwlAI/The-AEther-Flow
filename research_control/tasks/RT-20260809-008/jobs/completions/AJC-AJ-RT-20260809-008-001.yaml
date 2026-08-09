@@ -1,0 +1,614 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260809-008-001"
+completion_id: "AJC-AJ-RT-20260809-008-001"
+task_id: "RT-20260809-008"
+task_type: "v22_p2_t03_source_extension_budget_hard_fail_protocol"
+decision_id: "DDR-20260809-008"
+role_id: "refuter"
+source_role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260809-008"
+status: "completed"
+created_at: "2026-08-09T08:40:37Z"
+started_at: "2026-08-09T08:40:37Z"
+completed_at: "2026-08-09T08:56:40Z"
+objective: "Implement the exact V22 P2-T03 maximum three-family source-extension budget, material-family equivalence, sequential activation, permanent failure history, Gate B and hard-fail matrix, scoped verdict templates, adversarial fixtures, internal parent-child review, and one bounded next-route handoff."
+completion_summary: "P2-T03 fixes exactly three materially distinct prospective family classes, at most one active primary, append-only failures, all-slot debit for lawful overlap, complete Gate B and hard-fail matrices, evidence-based reopening, and four scoped terminal templates before candidate results. A normalized source-side fingerprint makes renamed or repackaged candidates the same family. A finite-state termination theorem and failure-monotonicity lemma prevent silent budget growth or reset. Thirty adversarial cases and 67 focused checks pass. All families remain inactive, no extension is adopted, Gate B remains NOT READY, and Distance-to-GR is unchanged. P2-T04 is selected but unexecuted; P2-T02 remains externally gated."
+objective_result: "implemented_and_validated_v22_p2_t03_source_extension_budget_hard_fail_protocol"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "completed_precheckpoint"
+work_item_status: "completed_checkpoint_pending"
+milestone_disposition: "three_family_pre_result_budget_and_scoped_hard_fail_protocol_fixed_without_candidate_activation_or_gate_delta"
+
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260809-008-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+legacy_validation_reason: ""
+
+is_physics_task: true
+payload_class: "source_extension_budget_route_decision_and_finite_protocol"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+external_red_team_finding_requires_integration: false
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  plan_phase_id: "P2"
+  plan_task_id: "P2-T03"
+  work_kind: "integration_or_selection"
+  task_class: "science"
+  expected_result_kind: "completed_or_precisely_blocked"
+  dependency_task_ids:
+    - "P2-T01"
+  dependency_checkpoint_commits:
+    - "488a7f2dd8a18075644d59ed497f3698ead9ee82"
+  recommendation_ids:
+    - "V22-R13"
+  sequence_step_ids:
+    - "S4"
+  cross_cutting_directive_ids:
+    - "V22-X02"
+  work_item_status: "completed_checkpoint_pending"
+  next_plan_task_id: "P2-T04"
+  p2_t03_executed: true
+  p2_t04_selected: true
+  p2_t04_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+result:
+  status: "PASS_V22_P2_T03_SOURCE_EXTENSION_BUDGET_HARD_FAIL_PROTOCOL"
+  strategy_id: "preregister_v22_p2_t03_source_extension_budget_hard_fail_v1"
+  source_handoff_id: "handoff-0977"
+  source_handoff_sha256: "9145365ac95d3dccd0ecca8fbe584814a81a59d7ea781a5147766c2dd86bf8c4"
+  maximum_material_family_count: 3
+  preregistered_family_count: 3
+  active_family_limit: 1
+  active_family_count: 0
+  family_fingerprint_count: 3
+  gate_b_criterion_count: 8
+  hard_fail_trigger_count: 8
+  supplemental_positive_packet_field_count: 5
+  terminal_template_count: 4
+  finite_fixture_count: 30
+  finite_fixture_failure_count: 0
+  exact_source_snapshot_count: 7
+  new_mathematical_payload_count: 4
+  focused_check_count: 67
+  focused_check_failure_count: 0
+  resolved_parent_conflict_count: 4
+  proof_assistant_kernel_used: false
+  source_extension_adoption_count: 0
+  candidate_selection_count: 0
+  candidate_activation_count: 0
+  canonical_science_file_change_count: 0
+  p2_t03_executed: true
+  p2_t04_selected: true
+  p2_t04_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1144
+    relationship_row_count: 5762
+    semantic_row_count: 1144
+    vault_row_count: 1144
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'v22 p2 t03 source extension budget hard fail protocol' --limit 10 --json"
+      query_type: "search"
+      query_text: "v22 p2 t03 source extension budget hard fail protocol"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  authority_note: "Tracked registered source and control records govern; generated wiki semantic Obsidian SQLite and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "V22-P2-T03-SOURCE-EXTENSION-BUDGET-PROTOCOL-V1"
+  decision_identity: "V22-P2-T03-THREE-FAMILY-SEQUENTIAL-BUDGET-DECISION-V1"
+  maximum_material_family_count: 3
+  active_family_limit: 1
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physical_status_changed_by_admission: false
+  distance_to_gr_changed_by_admission: false
+  physics_promotion_authorized_by_admission: false
+
+family_freeze_admission_result:
+  status: "admitted_unfrozen"
+  route_kind: "theorem_investigation"
+  family_id: "V22-P2-T03-SOURCE-EXTENSION-BUDGET-PROTOCOL-V1"
+  family_identity_sha256: "8dae2c65ed5806d30d1ca619b8f8c449b5c98abfeaee0124255d02c4f09148d5"
+  detected_match_basis: []
+  reopening_requested: false
+  local_family_freeze_preserved: true
+  global_no_go_inferred: false
+  physics_promotion_authorized_by_admission: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0977"
+  source_handoff_sha256_at_intake: "9145365ac95d3dccd0ecca8fbe584814a81a59d7ea781a5147766c2dd86bf8c4"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P2-T03"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P2-T03"
+  guard_outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one registered source-extension budget and hard-fail protocol source"
+      - "one exact three-family registry and sequential activation state machine"
+      - "one complete Gate B hard-fail matrix and four scoped verdict templates"
+    project_system:
+      - "one thirty-case adversarial fixture set and deterministic validator receipt"
+      - "parent-child synthesis and standard control records"
+  accepted_criteria:
+    physics:
+      - "exactly three materially distinct family classes are fixed before candidate results"
+      - "only one primary can be active and failure history is permanent"
+      - "renaming repackaging target import instability and target fitting fail closed"
+      - "budget exhaustion wording is scoped and never asserts global impossibility"
+    project_system:
+      - "all focused source hash family state matrix fixture synthesis and scope checks pass"
+      - "registered source hashes and generated derivatives synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-008/artifacts/child_phys_math_p2_t03_budget_protocol.yaml"
+      output_sha256: "17488ac65b211b801a15d9f299b23083e12aa18342f563fda62d801a753c5e3a"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-008/artifacts/child_phys_phil_p2_t03_smuggling_scope_audit.yaml"
+      output_sha256: "7eb6502939af95c1a37cdbd57619004f1a3fcd736ccd4d44ecb40ca02c6a889d"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260809-008/artifacts/parent_conflict_review_p2_t03_protocol.yaml"
+    review_sha256: "3a8fc4a4f76ea11a432f80004536b4e40b14f379393b0c836ae353a566b8196b"
+    resolution_rounds: 1
+    resolved_conflict_count: 4
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260809-008/artifacts/parent_fusion_notes_p2_t03_protocol.md"
+    fusion_notes_sha256: "30c7409cabdffa2b4a427823b64969c9fd4461681e31eff187a51da7fbe0cb00"
+    shared_consensus_summary: "Both perspectives require exactly three preregistered family classes one active primary append-only failures fail-closed target imports and scoped terminal wording."
+    novelty_preservation_summary: "The fusion preserves the normalized family fingerprint finite state machine all-slot overlap debit termination theorem failure-monotonicity lemma and complete Gate B and hard-fail matrices."
+    claim_boundary_preservation_summary: "The packet selects or activates no candidate changes no ontology source law metric coupling Einstein Gate benchmark review or completed-derivation status and remains internal nonexternal evidence."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260809-008-001"
+    payload_type: "definition"
+    name: "Normalized material-family equivalence"
+    summary: "Prospective candidates occupy one family exactly when presentation-only normalizations preserve source fields domains symmetries locality dynamics observables refinement assumptions principal operational structure and forbidden-import provenance."
+  - payload_id: "NMP-RT-20260809-008-002"
+    payload_type: "definition"
+    name: "Three-slot sequential activation state machine"
+    summary: "A protocol state records one active primary or none, consumed unused or reserved slots, append-only history, and immutable evidence; lawful overlap consumes all implicated slots without activating multiple primaries."
+  - payload_id: "NMP-RT-20260809-008-003"
+    payload_type: "theorem"
+    name: "Finite-budget termination theorem"
+    summary: "With three fixed family slots, irreversible slot consumption, one active primary, and no identity mutation after outcomes, protocol v1 admits at most three primary activation episodes before a scoped terminal disposition."
+  - payload_id: "NMP-RT-20260809-008-004"
+    payload_type: "lemma"
+    name: "Failure-monotonicity lemma"
+    summary: "Every lawful transition preserves prior failed-family entries and hard-fail evidence, so no rename, fallback transition, reopening audit, or program-state rewrite can erase a negative result."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260809-008-001"
+    payload_type: "definition"
+    object_name: "V22 P2-T03 normalized material-family equivalence"
+    claim_status: "draft/control prospective definition"
+    source_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex"
+    burden_effect: "narrows"
+    summary: "Makes renaming repackaging and auxiliary elimination debit the same family slot unless a material source-side distinction is proved."
+  - payload_id: "PAYLOAD-RT-20260809-008-002"
+    payload_type: "definition"
+    object_name: "V22 P2-T03 three-slot sequential activation state machine"
+    claim_status: "draft/control prospective protocol"
+    source_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_extension_budget_protocol_v1.yaml"
+    burden_effect: "preconditions"
+    summary: "Fixes one active primary, reserved and consumed slot behavior, append-only evidence, overlap debit, fallback conditions, and no automatic fourth slot."
+  - payload_id: "PAYLOAD-RT-20260809-008-003"
+    payload_type: "theorem"
+    object_name: "V22 P2-T03 finite-budget termination theorem"
+    claim_status: "draft/control protocol theorem"
+    source_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex"
+    burden_effect: "bounds_search"
+    summary: "Proves finite control-state termination for the preregistered three-family search without making a physical or global impossibility claim."
+  - payload_id: "PAYLOAD-RT-20260809-008-004"
+    payload_type: "lemma"
+    object_name: "V22 P2-T03 failure-monotonicity lemma"
+    claim_status: "draft/control protocol lemma"
+    source_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex"
+    burden_effect: "preserves_negative_results"
+    summary: "Makes family failure and hard-fail evidence permanent across every lawful protocol transition."
+
+physics_progress_status:
+  status: "selector_only_no_distance_delta"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Metric law; pre-register a maximum three-family source-extension budget, sequential activation, and scoped hard-fail criteria before candidate selection."
+  explanation: "The plan-level pre-registration obligation is met, but the packet selects and activates zero candidates, adopts no source extension, constructs no source-derived geometry, and establishes none of the eight Gate B criteria for any concrete candidate."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "Gate B NOT READY with no selected source-extension candidate, unscoped Lorentzian metric, matter coupling, or Einstein-equation derivation"
+  new_status: "the same scientific status; exactly three prospective family classes and pre-result failure rules are registered with zero active candidates"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P2-T03 is a pre-result route and failure protocol; it creates no source object, candidate evidence, Gate result, or scientific burden discharge."
+  downstream_unlocked:
+    - "one separately admitted P2-T04 theoretical candidate-selection packet after checkpoint"
+  downstream_still_blocked:
+    - "P2-T02 external-review completion without real reviewer-contact authority"
+    - "candidate construction or activation until P2-T04 selects one primary and one fallback"
+    - "effective metric target matter coupling and Einstein equations"
+    - "Gate B and every downstream Gate or benchmark promotion"
+    - "completed first-principles GR derivation"
+  explanation: "The protocol makes a finite candidate-selection route auditable but supplies no candidate and no physical evidence."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; three family classes are proposal-only routing categories and no primitive is adopted"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; normalized family equivalence is a candidate-routing definition rather than canonical EqSrc"
+  - burden: "RetainH"
+    status: "unchanged; no retention law is derived or adopted"
+  - burden: "GenH"
+    status: "unchanged; no generator law is derived or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; protocol fields require future source-derived observables but admit none"
+  - burden: "Resp_lc"
+    status: "unchanged; no universal physical response semantics is derived"
+  - burden: "M_src"
+    status: "blocked; no source manifold or physical spacetime identification is constructed or adopted"
+  - burden: "g_eff"
+    status: "active burden; bounded candidate selection is now preconditioned but no metric candidate is selected constructed or adopted"
+  - burden: "matter coupling"
+    status: "unchanged; matter-family naming is not universal target matter coupling"
+  - burden: "Einstein equations"
+    status: "blocked; no target action or field equation is supplied"
+  - burden: "finite-variation robustness"
+    status: "unchanged; instability is preregistered as a hard fail but no concrete model is tested"
+  - burden: "benchmark promotion"
+    status: "blocked; target or benchmark fitting is a hard fail and no benchmark is executed"
+  - burden: "Gate Chair status"
+    status: "unchanged; protocol eligibility is not a protected Gate review or verdict"
+  - burden: "current route freeze or hard-fail status"
+    status: "not triggered; no candidate has run and P2-T04 is a dependency-distinct theoretical selection packet"
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: ""
+  prior_attempts_considered:
+    - "RT-20260726-001"
+    - "RT-20260727-006"
+    - "RT-20260809-004"
+    - "RT-20260809-005"
+  freeze_if:
+    - "A later route renames or repackages a failed family without material source-side evidence."
+    - "A later route silently adds a fourth slot erases failure history or imports target geometry or fit as source merit."
+  do_not_freeze_if:
+    - "A separately admitted P2-T04 selector compares materially distinct source-side candidate packets under the fixed protocol and selects exactly one primary and one fallback."
+  freeze_decision: "not_frozen"
+  decision_reason: "P2-T03 adds the new finite-budget protocol and no candidate cycle has begun; P2-T04 is the distinct selection step required to instantiate the first branch."
+  next_allowed_route: "theoretical_selector"
+
+route_cycle_control:
+  cycle_family: "v22_source_adequacy_and_extension_budget"
+  current_cycle_step: "three_family_budget_and_hard_fail_preregistration"
+  prior_related_tasks:
+    - "RT-20260726-001"
+    - "RT-20260727-006"
+    - "RT-20260809-004"
+    - "RT-20260809-005"
+  cycle_risk: "low"
+  orbit_avoidance_reason: "The next job must compare concrete source-side packets against the frozen three-family fingerprints and select exactly one primary and one fallback rather than alter the budget or restate the protocol."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0"
+
+loop_risk_decision:
+  category: "bridge_facing_candidate_path"
+  next_route: "theoretical_decision_role_selection"
+  rationale: "The new finite protocol clears the process precondition for one bounded theoretical selector to compare concrete bridge candidate packets; no candidate evidence exists yet and no protected decision is implied."
+  repeated_burdens: []
+  obstruction_summary: ""
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  records:
+    - classification_id: "SEC-RT-20260809-008-001"
+      classification: "status_boundary_evidence_only"
+      relation_to_current_ontology: "evidence_only"
+      subject: "three inactive prospective source-extension family classes and their control protocol"
+      claim_boundary_id: "CB-V22-P2-T03-SOURCE-EXTENSION-BUDGET-PROTOCOL-001"
+      protected_authority_required: false
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+      blocked_overreads:
+        - "family registration is ontology adoption or source-law adoption"
+        - "a family class is a selected or active candidate"
+        - "protocol completion changes Gate B or Distance-to-GR status"
+        - "budget exhaustion is a global ontology or all-extension no-go theorem"
+      continuation_status: "blocked_adoption_open_continuation"
+      note: "Concrete P2-T04 candidates must receive their own source-extension classifications; this receipt classifies only the inactive registry and protocol as boundary evidence."
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "family class registration treated as candidate selection activation adoption or scientific evidence"
+    - "renaming repackaging or auxiliary elimination treated as a new family slot"
+    - "target atlas metric coframe constitutive tensor GR coefficient benchmark or desired-result fit imported as source merit"
+    - "protocol eligibility promoted to a positive Gate verdict"
+    - "budget exhaustion promoted to global ontology or future-extension impossibility"
+    - "P2-T02 external review completed or internal review counted as external"
+    - "effective metric target matter coupling Einstein equation benchmark pass or completed derivation"
+    - "canonical ontology or source-law adoption"
+    - "M_src adoption or identification of a source class with physical spacetime"
+    - "g_eff construction or adoption"
+    - "global theory rejection"
+    - "publication release push reviewer contact or other external action"
+  summary: "The protocol, validator, internal audit, TeX compile, route selection, and checkpoint are bounded draft/control evidence and cannot promote scientific or protected status."
+
+artifact_receipts:
+  - artifact_id: "TEX-V22-P2-T03-SOURCE-EXTENSION-BUDGET-HARD-FAIL-PROTOCOL-V1"
+    path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex"
+    sha256: "287b96db21bf3a95e03d2027810be94a535bed8f5f6f2961394e709bfe6f25d3"
+    status_label: "draft/control"
+  - artifact_id: "V22-P2-T03-EXTENSION-BUDGET-PROTOCOL-V1"
+    path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_extension_budget_protocol_v1.yaml"
+    sha256: "736c9914a287863f5bad7d456e20f2a67520ad377b95dca89027c7323fc4b1d7"
+    status_label: "draft/control"
+  - artifact_id: "V22-P2-T03-CANDIDATE-FAMILY-REGISTRY-V1"
+    path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_candidate_family_registry_v1.yaml"
+    sha256: "af294001a2773735e5a4ab94bed0f5eccb3f72ce089e95afc99832f6fc835d5c"
+    status_label: "status_boundary_evidence_only"
+  - artifact_id: "V22-P2-T03-HARD-FAIL-MATRIX-V1"
+    path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_hard_fail_matrix_v1.yaml"
+    sha256: "f362ba5f52d472a02d2345760f9ad80b05af31b9973cb5d264ba1929ad16c9d0"
+    status_label: "draft/control"
+  - artifact_id: "V22-P2-T03-PROTOCOL-ADVERSARIAL-CASES-V1"
+    path: "research_control/tasks/RT-20260809-008/artifacts/fixtures/v22_p2_t03_protocol_adversarial_cases.yaml"
+    sha256: "5cf3ad7996b54944c1bb806ee189586372944e78e3fb03eb8a1827f1da474f42"
+    status_label: "operational_evidence"
+  - artifact_id: "V22-P2-T03-PROTOCOL-VALIDATION-V1"
+    path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_protocol_validation.json"
+    sha256: "6fc580db8e8202c213ee9a5225fc9475ad8f5e97144e486520ac3e055e8ace13"
+    status_label: "operational_evidence"
+  - artifact_id: "V22-P2-T03-COMPACT-RECEIPT-V1"
+    path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_compact_receipt.json"
+    sha256: "8672047f1ba2af36092726c14a0def0a6253663de9cac953dfa80e2dcbd35c06"
+    status_label: "operational_evidence"
+
+command_results:
+  - command: "validate_v22_p2_t03_protocol.py --write --json; validate_v22_p2_t03_protocol.py --json"
+    status: "PASS"
+    summary: "All 67 exact source family budget state matrix fixture synthesis and scope checks pass; all 30 adversarial cases pass."
+  - command: "latex-compile bundled Tectonic scratch build"
+    status: "PASS"
+    summary: "The fused TeX source compiles to a five-page scratch PDF with no tracked PDF output."
+  - command: "validate_task_taxonomy.py --scope repository"
+    status: "PASS"
+    summary: "All 1237 task records pass taxonomy validation with zero required errors."
+  - command: "scripts.validation.cli run --profile affected --paths <P2-T03 affected paths>"
+    status: "PASS"
+    summary: "All 16 affected-profile gates pass with zero warnings failures or blocked gates."
+  - command: "classify_project_changes.py --json; validate_documentation_impact.py --json; collect_project_improvement_signals.py --json"
+    status: "PASS"
+    summary: "Change classification documentation-impact evidence and the empty project-improvement-signal result pass; no sidecar is required."
+  - command: "validate_claim_language.py --changed --json; validate_research_control.py --check-diff --job-id AJ-RT-20260809-008-001 --json-summary"
+    status: "PASS_WITH_HISTORICAL_WARNINGS"
+    summary: "Changed-source claim-language validation and the bounded research-control diff have zero hard errors; 1838 research-control warnings are historical repository findings."
+  - command: "bootstrap_memory_system.py; bootstrap_memory_system.py --validate-only; validate_generated_report_freshness.py"
+    status: "PASS"
+    summary: "Tracked memory regeneration validate-only replay and all four generated-report freshness classes pass after fixed-point synchronization."
+  - command: "checkpoint_research_transaction.py --job-id AJ-RT-20260809-008-001"
+    status: "PENDING_SINGLE_INVOCATION"
+    summary: "One governed checkpoint remains; no legacy mode retry push publication or external action is authorized."
+
+selected_next_route:
+  route_id: "v22_p2_t04_primary_and_fallback_candidate_selection"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P2-T04"
+  work_item_id: "P2-T04"
+  work_kind: "integration_or_selection"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  supporting_perspective: "smuggling-auditor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "theoretical_candidate_selection"
+  task_type: "v22_p2_t04_primary_fallback_candidate_selection"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Metric law; choose the smallest source extension with a plausible path to a principal polynomial and operational geometry while keeping only one primary active and one fallback preregistered."
+  expected_result_kind: "completed_or_precisely_blocked"
+  strategy_id: "select_v22_p2_t04_primary_and_fallback_candidate_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  requires_human_gate: false
+  human_gate_if: "Only a later request to adopt or modify canonical ontology requires protected human authority; ordinary comparison and proposal-only selection do not."
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+  p2_t02_not_selected_reason: "P2-T02 acceptance requires a real external mathematical specialist and reviewer contact. No reviewer-contact or external-action authority exists; same-context children do not satisfy it. P2-T04 is independently dependency-ready after P2-T03 checkpoints."
+
+next_recommendation: "After checkpoint, use one bounded theoretical-continuation-selector packet to compare concrete source-side bridge candidate proposals under the fixed P2-T03 family fingerprints and select exactly one primary and one fallback without ontology adoption."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight, exact plan, handoff-0977, P2-T01, P1-T04, source-extension checklist, burden-map, and Distance-to-GR inspections passed before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 67 focused checks and 30 adversarial cases pass; both child records are complete and all four parent conflicts are resolved."
+  post_write:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "The affected profile passes all 16 gates; the bounded research-control diff has zero errors and 1838 historical warnings."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier task-index compact-frontier dependency-graph and claim-graph projections are synchronized and all four generated-report freshness classes pass."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory regeneration and validate-only replay pass after registered-source synchronization."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures; reported warnings are historical repository findings and carry no promotion authority."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review was requested or authorized for V22 P2-T03."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+project_improvement_signal_count: 0
+project_improvement_sidecar_required: false
+
+protected_authority:
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_extension_adopted: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  reviewer_contact_authorized: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+
+handoff_id: "handoff-0978"
+handoff_path: "research_control/handoffs/handoff-0978.yaml"
+handoff_authority_boundary: "This completion records only the P2-T03 draft/control three-family budget equivalence state-machine hard-fail and scoped-verdict protocol and selects P2-T04 for a separate AgentJob after checkpoint. It creates no candidate activation ontology metric coupling Einstein Gate benchmark external-review publication release push or external-action authority."

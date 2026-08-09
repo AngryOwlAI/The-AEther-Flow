@@ -451,6 +451,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P1-T03-MATTER-POSITION-NO-POSTULATE-GATE-POLICY-V1` `research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex`
 - `TEX-V22-P1-T04-GATE-B-ONLY-PHYSICS-LOCK-V1` `research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex`
 - `TEX-V22-P2-T01-LOCAL-SOURCE-INFORMATION-CAPACITY-THEOREM-V1` `research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex`
+- `TEX-V22-P2-T03-SOURCE-EXTENSION-BUDGET-HARD-FAIL-PROTOCOL-V1` `research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex`
 
 ## superseded
 

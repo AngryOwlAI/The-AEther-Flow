@@ -1,0 +1,137 @@
+schema_id: "v22_p2_t03_candidate_family_registry_v1"
+status: "draft/control"
+authority: "science_draft"
+registry_id: "V22-P2-T03-CANDIDATE-FAMILY-REGISTRY-V1"
+plan_task_id: "P2-T03"
+protocol_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_extension_budget_protocol_v1.yaml"
+maximum_material_family_count: 3
+active_family_limit: 1
+current_active_family_id: ""
+candidate_result_count_at_registration: 0
+family_identity_defined_before_results: true
+
+families:
+  - slot: 1
+    family_id: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+    title: "Local multi-field continuum dynamics"
+    identity_basis: "FAM-V22-B1|finite source-local multi-field state|source-local continuum dynamics|reduced principal polynomial from field equations|source operational interface required|no target atlas metric cone coefficient or clock import"
+    family_identity_sha256: "6c5388fe6f9d0fcc3f7fe36a48061ddb5fb6f48f011099be61a93694391ceee0"
+    family_status: "preregistered_inactive"
+    allocation_status: "eligible_for_primary_or_fallback_selection"
+    active: false
+    primary_mechanism: "derive a gauge-reduced principal polynomial from explicit source-local multi-field dynamics"
+    material_assumption_delta:
+      - "adds finitely many explicit source-local field components beyond the frozen one-amplitude route"
+      - "adds a local source dynamics candidate with constraints and gauge reduction"
+      - "requires an operational interface and continuum regularity without assuming target geometry"
+    mandatory_evidence:
+      - "complete field and state definitions"
+      - "locality symmetry dynamics and constraint declarations"
+      - "principal-symbol derivation"
+      - "source-to-operational typing"
+      - "assumption-cost ledger"
+    forbidden_shortcuts:
+      - "metric tetrad coframe cone or constitutive tensor as a source premise"
+      - "GR coefficients selected by target fitting"
+      - "one-amplitude route renamed as multi-field"
+    classification_if_instantiated: "new_ontology_primitive_candidate"
+    adopted: false
+  - slot: 2
+    family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+    title: "Matter-principal-polynomial reconstruction"
+    identity_basis: "FAM-V22-B2|exact bounded Position-A source-matter input|sector-common source equations|principal polynomial reconstructed from declared matter propagation|universality proof required|no desired target cone detector or GR fit"
+    family_identity_sha256: "29aea5784c6c057b42ba60fdf85148d4a05f8307b57ac0a84be9fd0e244ebae8"
+    family_status: "preregistered_inactive"
+    allocation_status: "eligible_for_primary_or_fallback_selection"
+    active: false
+    primary_mechanism: "derive a common reduced principal polynomial from the declared source-matter sector equations"
+    material_assumption_delta:
+      - "uses only the exact bounded Position-A source-matter input"
+      - "adds a candidate source propagation law across declared matter sectors"
+      - "requires universality rather than inferring it from matter labels"
+    mandatory_evidence:
+      - "exact source-matter input manifest"
+      - "sector equations and constraint reduction"
+      - "common-principal-polynomial derivation"
+      - "cone equivalence or selector proof"
+      - "source-only operational semantics"
+    forbidden_shortcuts:
+      - "physical matter labels treated as a target coupling law"
+      - "desired GR cone used to choose the polynomial"
+      - "detector clock or rod semantics imported by name"
+    classification_if_instantiated: "new_ontology_primitive_candidate"
+    adopted: false
+  - slot: 3
+    family_id: "FAM-V22-B3-CONTROLLED-DISCRETE-CONTINUUM"
+    title: "Controlled discrete-to-continuum refinement"
+    identity_basis: "FAM-V22-B3|materially new Kn source family|explicit refinement maps and boundary data|controlled convergence and error|principal and signature preservation|no unchanged graph decoder zero-remainder or target manifold import"
+    family_identity_sha256: "74fbf753bfed978bb14c6dec77c9e53bf11945f1cb1ee9797c7dc1697f9b0a67"
+    family_status: "preregistered_reserved"
+    allocation_status: "reserved_unallocated_pending_independent_review_and_program_decision"
+    active: false
+    primary_mechanism: "derive continuum principal and signature structure through controlled source refinement"
+    material_assumption_delta:
+      - "adds a materially new indexed source family rather than the unchanged frozen graph decoder"
+      - "adds explicit refinement coarse-graining boundary and universality maps"
+      - "requires quantitative convergence and preservation estimates"
+    mandatory_evidence:
+      - "indexed source family and refinement maps"
+      - "topology or norm for convergence"
+      - "error and boundary estimates"
+      - "principal-polynomial and signature-preservation proof"
+      - "universality across admissible refinements"
+    forbidden_shortcuts:
+      - "zero finite remainder treated as zero continuum correction"
+      - "target manifold atlas topology or metric used to define convergence"
+      - "unchanged frozen graph decoder renamed as a new family"
+    classification_if_instantiated: "new_ontology_primitive_candidate"
+    adopted: false
+
+family_equivalence:
+  comparison_fields:
+    - "source state and field content"
+    - "assumption multiset"
+    - "source dynamics"
+    - "operational interface"
+    - "principal mechanism"
+    - "continuum or refinement contract"
+    - "source provenance"
+  presentation_only_changes_do_not_create_family: true
+  ambiguous_equivalence_result: "fail_closed_pending_bounded_audit"
+  renamed_frozen_route_result: "hard_fail_repackaging"
+
+overlap_accounting:
+  combination_allowed: true
+  maximum_active_primary_families: 1
+  secondary_slots_debited: true
+  secondary_slots_reusable: false
+  overlap_requires_prospective_evidence: true
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "V22-P2-T03-CANDIDATE-FAMILY-REGISTRY-V1"
+  item_kind: "route registry"
+  classification: "status_boundary_evidence_only"
+  relation_to_current_ontology: "evidence_only"
+  allowed_conclusion: "three proposal-only source-extension family identities are preregistered for later bounded selection"
+  forbidden_overreads:
+    - "family registry as source-law adoption"
+    - "family identity as candidate construction or activation"
+    - "budget registration as Gate B evidence"
+    - "source-extension family as canonical ontology"
+    - "terminal template as a present scientific verdict"
+  next_route_if_blocked: "P2-T04 theoretical-continuation selector after checkpoint"
+  protected_authority_required: false
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+
+authority_limits:
+  source_law_adopted: false
+  ontology_modified: false
+  family_selected: false
+  candidate_constructed: false
+  candidate_activated: false
+  third_slot_allocated: false
+  gate_b_positive: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

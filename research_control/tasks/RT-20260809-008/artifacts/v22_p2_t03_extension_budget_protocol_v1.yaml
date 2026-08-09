@@ -1,0 +1,205 @@
+schema_id: "v22_p2_t03_extension_budget_protocol_v1"
+status: "draft/control"
+authority: "science_draft"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P2-T03"
+protocol_id: "V22-P2-T03-EXTENSION-BUDGET-PROTOCOL-V1"
+preregistered_before_candidate_results: true
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Metric law; pre-register a maximum three-family source-extension budget sequential activation and scoped hard-fail criteria before candidate selection."
+
+budget:
+  maximum_material_family_count: 3
+  preregistered_family_count: 3
+  active_family_limit: 1
+  active_candidate_limit: 1
+  current_active_family_id: ""
+  current_active_candidate_id: ""
+  current_consumed_slot_count: 0
+  current_failure_record_count: 0
+  fourth_slot_available: false
+  automatic_budget_growth: false
+  failures_append_only: true
+  family_identity_defined_post_result: false
+  activation_mode: "sequential_only"
+
+slot_policy:
+  primary:
+    selection_authority: "separate_P2_T04_AgentJob"
+    selection_status: "not_selected"
+    activation_status: "inactive"
+  fallback:
+    selection_authority: "separate_P2_T04_AgentJob"
+    selection_status: "not_selected"
+    activation_status: "inactive"
+    activation_requires:
+      - "recorded primary termination"
+      - "append-only preservation of every primary failure"
+      - "fresh selector decision naming the exact preregistered fallback"
+  third_slot:
+    allocation_status: "reserved_unallocated"
+    activation_status: "inactive"
+    allocation_requires:
+      - "qualifying independent-review evidence of a materially distinct hypothesis"
+      - "new explicit program decision naming the exact family and evidence"
+      - "preservation of all prior activation and failure records"
+    reviewer_contact_authorized_here: false
+  fourth_slot:
+    allocation_status: "forbidden_under_v1"
+    activation_status: "forbidden"
+
+family_identity_rule:
+  fingerprint_fields:
+    - "source field and state content"
+    - "explicit assumption multiset"
+    - "source dynamics or transition law"
+    - "source-to-operational interface"
+    - "principal-structure mechanism"
+    - "continuum or refinement contract"
+    - "source-provenance and no-target-import receipt"
+  presentation_normalizations:
+    - "field renaming"
+    - "invertible parameter re-expression"
+    - "file or module relocation"
+    - "presentation-only auxiliary variables"
+    - "validator or role changes with unchanged scientific payload"
+  material_difference_requires:
+    - "prospectively declared change in source field content source law principal mechanism operational interface or refinement construction"
+    - "a changed falsifiable Gate B burden or prediction"
+    - "an explicit assumption delta"
+    - "no target data used to manufacture the difference"
+  renamed_or_repackaged_candidate_creates_new_family: false
+  ambiguous_equivalence_fails_closed: true
+
+overlap_policy:
+  one_concrete_candidate_may_combine_families: true
+  requires_single_source_law: true
+  requires_declared_primary_family: true
+  requires_prospective_overlap_evidence: true
+  debits_every_implicated_family_slot: true
+  secondary_implicated_slot_status: "consumed_by_same_activation"
+  secondary_family_active: false
+  overlap_grows_budget: false
+
+state_machine:
+  state_fields:
+    - "active_primary_family_or_none"
+    - "unused_or_reserved_family_slots"
+    - "append_only_activation_and_termination_history"
+    - "immutable_transition_evidence"
+  allowed_transitions:
+    - transition_id: "SELECT_PRIMARY_AND_FALLBACK"
+      authority: "P2-T04"
+      preconditions:
+        - "this P2-T03 protocol checkpointed"
+        - "candidate descriptors and family fingerprints sealed before results"
+      effects:
+        - "one primary selected"
+        - "one fallback selected"
+        - "third slot remains reserved unallocated"
+    - transition_id: "ACTIVATE_PRIMARY"
+      authority: "separate candidate AgentJob"
+      preconditions:
+        - "complete descriptor"
+        - "assumption ledger"
+        - "family fingerprint"
+        - "test plan"
+        - "zero other active family"
+      effects:
+        - "primary becomes sole active family"
+    - transition_id: "TERMINATE_ACTIVE"
+      authority: "candidate result plus required reviews"
+      preconditions:
+        - "one active family"
+      effects:
+        - "qualifying-for-protected-review or named hard-fail result appended"
+        - "active family cleared"
+        - "negative results preserved"
+    - transition_id: "ACTIVATE_FALLBACK"
+      authority: "fresh selector decision"
+      preconditions:
+        - "primary termination receipt"
+        - "exact preregistered fallback"
+        - "all primary failures preserved"
+        - "zero other active family"
+      effects:
+        - "fallback becomes sole active family"
+    - transition_id: "ALLOCATE_THIRD_SLOT"
+      authority: "new explicit program decision"
+      preconditions:
+        - "qualifying independent-review material-distinctness evidence"
+        - "exact decision identity"
+        - "all prior failures preserved"
+      effects:
+        - "reserved third slot allocated once"
+    - transition_id: "TERMINALIZE_BUDGET"
+      authority: "separate final program decision"
+      preconditions:
+        - "every allocated slot consumed"
+        - "no qualifying candidate"
+      effects:
+        - "use scoped budget-exhaustion template only"
+  forbidden_transitions:
+    - "concurrent activation"
+    - "fallback activation before primary termination"
+    - "failure deletion weakening or replacement"
+    - "post-result family definition"
+    - "renamed reuse of a frozen route"
+    - "silent third-slot allocation"
+    - "fourth-family allocation"
+    - "candidate result converted directly into a Gate verdict"
+
+theorems:
+  - theorem_id: "V22-P2-T03-FINITE-BUDGET-TERMINATION-THEOREM-V1"
+    hypotheses:
+      - "each activation terminates in finite control time"
+      - "each activation consumes at least one previously unused slot"
+      - "overlap debits all implicated slots"
+      - "family equivalence rejects renamed duplicates"
+      - "failure history is append-only"
+    conclusion: "at most three primary activations and no infinite sequence of renamed fallbacks are admitted under protocol v1"
+    proof_status: "draft/control proof in fused TeX artifact"
+  - theorem_id: "V22-P2-T03-FAILURE-MONOTONICITY-LEMMA-V1"
+    hypotheses:
+      - "every lawful transition appends or preserves history"
+    conclusion: "a failed premise countermodel instability or target-import finding cannot be erased by later selection renaming or overlap"
+    proof_status: "draft/control proof in fused TeX artifact"
+
+freeze_and_reopening:
+  freeze_active_candidate_when:
+    - "any hard-fail trigger is established"
+    - "family identity is a renamed or repackaged frozen route"
+    - "family equivalence remains ambiguous after bounded audit"
+  do_not_freeze_entire_program_when:
+    - "an unused preregistered slot remains"
+    - "a materially distinct family can be proposed only through a new explicit program decision"
+    - "the local result does not prove a global no-go theorem"
+  reopen_family_only_with:
+    - "new source primitive"
+    - "new theorem changing the exact failed premise"
+    - "new variation class"
+    - "protected decision where protected authority is actually required"
+  current_freeze_decision: "not_frozen_no_candidate_executed"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+terminal_outcome_ids:
+  - "FIRST_PRINCIPLES_WITHIN_SCOPE"
+  - "CONTROLLED_APPROXIMATE_RECOVERY"
+  - "CURRENT_ONTOLOGY_INSUFFICIENT_UNDER_PREREGISTERED_BUDGET"
+  - "EXACT_GR_INTERPRETATION_RETAINED_WITHOUT_SOURCE_DERIVATION"
+
+authority_limits:
+  candidate_selected: false
+  candidate_activated: false
+  source_extension_adopted: false
+  canonical_ontology_modified: false
+  unscoped_g_eff_constructed: false
+  gate_b_verdict_issued: false
+  external_review_completed: false
+  reviewer_contact_authorized: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  global_no_go_claim_authorized: false
+  publication_or_push_authorized: false

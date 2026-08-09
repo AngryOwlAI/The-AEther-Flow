@@ -1,0 +1,114 @@
+schema_id: "v22_p2_t03_hard_fail_matrix_v1"
+status: "draft/control"
+authority: "science_draft"
+matrix_id: "V22-P2-T03-GATE-B-HARD-FAIL-MATRIX-V1"
+plan_task_id: "P2-T03"
+evaluation_status: "preregistered_no_candidate_evaluated"
+
+gate_b_criteria:
+  - criterion_id: "GB01_TARGET_ATLAS_FREE"
+    requirement: "construction is target-atlas-free"
+    evidence_required: "complete source provenance for every construction input"
+    fail_closed_when_missing: true
+  - criterion_id: "GB02_REDUCED_HYPERBOLIC_PRINCIPAL"
+    requirement: "gauge- and constraint-reduced principal polynomial is hyperbolic"
+    evidence_required: "explicit reduction and hyperbolicity proof"
+    fail_closed_when_missing: true
+  - criterion_id: "GB03_STABLE_LORENTZIAN_CONE"
+    requirement: "one stable Lorentzian cone or a physically derived equivalence class exists"
+    evidence_required: "cone proof stability domain and derived selector or quotient where needed"
+    fail_closed_when_missing: true
+  - criterion_id: "GB04_UNIVERSAL_MATTER_COMPATIBILITY"
+    requirement: "declared matter sectors share universal propagation compatibility"
+    evidence_required: "sector-complete comparison and common-cone or derived-equivalence proof"
+    fail_closed_when_missing: true
+  - criterion_id: "GB05_OPERATIONAL_SCALE"
+    requirement: "operational clocks rods calibration and physical scale are source-derived"
+    evidence_required: "preparation comparison calibration units and domain semantics"
+    fail_closed_when_missing: true
+  - criterion_id: "GB06_TENSORIAL_GLUING"
+    requirement: "tensorial transformation and local-to-global gluing are proved"
+    evidence_required: "transition inverse cocycle regularity and global compatibility checks"
+    fail_closed_when_missing: true
+  - criterion_id: "GB07_VARIATION_COARSE_GRAINING_ROBUSTNESS"
+    requirement: "finite-variation and coarse-graining robustness are controlled"
+    evidence_required: "declared variation class stability estimates convergence and error bounds"
+    fail_closed_when_missing: true
+  - criterion_id: "GB08_NO_HIDDEN_METRIC_EQUIVALENT"
+    requirement: "no hidden metric tetrad coframe constitutive or equivalent quadratic primitive is used"
+    evidence_required: "smuggling audit across premises definitions coefficients and validation targets"
+    fail_closed_when_missing: true
+
+supplemental_positive_packet_fields:
+  - "regularity"
+  - "time orientation"
+  - "nondegeneracy"
+  - "conditioning"
+  - "second-clock-effect analysis"
+
+hard_fail_triggers:
+  - trigger_id: "HF01_METRIC_EQUIVALENT_IMPORT"
+    trigger: "underived metric tetrad coframe Lorentzian constitutive tensor or equivalent quadratic structure is inserted"
+    consequence: "terminate_candidate_preserve_result"
+    repair_route: "source-side reconstruction or smuggling audit"
+  - trigger_id: "HF02_OBSERVABLE_LABEL_BY_FIAT"
+    trigger: "source labels are identified with clocks rods locations cones or target observables by fiat"
+    consequence: "terminate_candidate_preserve_result"
+    repair_route: "derive source-to-operational semantics"
+  - trigger_id: "HF03_GR_TARGET_FITTING"
+    trigger: "free coefficients are selected by matching GR target values or benchmark behavior"
+    consequence: "terminate_candidate_preserve_result"
+    repair_route: "derive coefficients from source laws or classify reconstruction"
+  - trigger_id: "HF04_NONUNIVERSAL_OR_UNSELECTED_MULTICONE"
+    trigger: "universal propagation is abandoned or inequivalent physical cones are tolerated without a derived selector or quotient"
+    consequence: "terminate_candidate_preserve_result"
+    repair_route: "derive universality selector or equivalence proof"
+  - trigger_id: "HF05_INSTABILITY_NONHYPERBOLICITY_DEGENERACY"
+    trigger: "ghosts instability nonhyperbolicity degeneracy or uncontrolled signature change are accepted"
+    consequence: "terminate_candidate_preserve_result"
+    repair_route: "materially different dynamics or bounded obstruction"
+  - trigger_id: "HF06_NO_CONTROLLED_CONTINUUM_LIMIT"
+    trigger: "controlled continuum or refinement limit is absent"
+    consequence: "terminate_candidate_preserve_result"
+    repair_route: "derive convergence error boundary and universality controls"
+  - trigger_id: "HF07_EINSTEIN_STRUCTURE_POSTULATED"
+    trigger: "Einstein-Hilbert action or Einstein equations are postulated as a derivation"
+    consequence: "terminate_candidate_preserve_result"
+    repair_route: "return to source-derived Gate B and later conditional Gate D route"
+  - trigger_id: "HF08_FROZEN_ROUTE_REPACKAGED"
+    trigger: "an information-deficient frozen route is repeated under a new name"
+    consequence: "terminate_candidate_preserve_result"
+    repair_route: "supply a materially new primitive theorem variation class or protected decision"
+
+decision_order:
+  - "evaluate family identity and budget admission"
+  - "evaluate hard-fail triggers"
+  - "evaluate all eight Gate B criteria"
+  - "evaluate supplemental positive-packet fields"
+  - "classify eligible for protected review or terminate"
+  - "never infer a Gate verdict from this matrix"
+
+final_verdict_templates:
+  - outcome_id: "FIRST_PRINCIPLES_WITHIN_SCOPE"
+    template: "Within the declared source ontology and tested extension family, the candidate satisfied the preregistered scientific criteria and may proceed only to separately authorized protected review; no Gate verdict is implied here."
+    global_no_go_claimed: false
+  - outcome_id: "CONTROLLED_APPROXIMATE_RECOVERY"
+    template: "Within the declared regime and error bounds, the candidate supplies a controlled approximate recovery result; exact global coupling field-equation and benchmark claims remain separately burdened."
+    global_no_go_claimed: false
+  - outcome_id: "CURRENT_ONTOLOGY_INSUFFICIENT_UNDER_PREREGISTERED_BUDGET"
+    template: "Within the current ontology and the preregistered three-family extension budget, no tested candidate satisfied all required criteria. Current adoption is blocked; a new family requires a new explicit program decision. This is not a global impossibility theorem or future-extension closure."
+    global_no_go_claimed: false
+  - outcome_id: "EXACT_GR_INTERPRETATION_RETAINED_WITHOUT_SOURCE_DERIVATION"
+    template: "The exact-GR target-side interpretation is retained without a source derivation under the tested budget. Inherited GR agreement is not source-ontology evidence."
+    global_no_go_claimed: false
+
+authority_limits:
+  candidate_evaluated: false
+  gate_b_verdict_issued: false
+  source_extension_adopted: false
+  ontology_modified: false
+  unscoped_g_eff_constructed: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

@@ -1,0 +1,609 @@
+{
+  "active_family_count": 0,
+  "artifact_hashes": {
+    "research_control/tasks/RT-20260809-008/artifacts/child_phys_math_p2_t03_budget_protocol.yaml": "17488ac65b211b801a15d9f299b23083e12aa18342f563fda62d801a753c5e3a",
+    "research_control/tasks/RT-20260809-008/artifacts/child_phys_phil_p2_t03_smuggling_scope_audit.yaml": "7eb6502939af95c1a37cdbd57619004f1a3fcd736ccd4d44ecb40ca02c6a889d",
+    "research_control/tasks/RT-20260809-008/artifacts/fixtures/v22_p2_t03_protocol_adversarial_cases.yaml": "5cf3ad7996b54944c1bb806ee189586372944e78e3fb03eb8a1827f1da474f42",
+    "research_control/tasks/RT-20260809-008/artifacts/parent_conflict_review_p2_t03_protocol.yaml": "3a8fc4a4f76ea11a432f80004536b4e40b14f379393b0c836ae353a566b8196b",
+    "research_control/tasks/RT-20260809-008/artifacts/parent_fusion_notes_p2_t03_protocol.md": "30c7409cabdffa2b4a427823b64969c9fd4461681e31eff187a51da7fbe0cb00",
+    "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_candidate_family_registry_v1.yaml": "af294001a2773735e5a4ab94bed0f5eccb3f72ce089e95afc99832f6fc835d5c",
+    "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_extension_budget_protocol_v1.yaml": "736c9914a287863f5bad7d456e20f2a67520ad377b95dca89027c7323fc4b1d7",
+    "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_hard_fail_matrix_v1.yaml": "f362ba5f52d472a02d2345760f9ad80b05af31b9973cb5d264ba1929ad16c9d0",
+    "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex": "287b96db21bf3a95e03d2027810be94a535bed8f5f6f2961394e709bfe6f25d3"
+  },
+  "authority_limits": {
+    "candidate_activated": false,
+    "candidate_selected": false,
+    "canonical_ontology_modified": false,
+    "distance_to_gr_changed": false,
+    "external_review_completed": false,
+    "gate_b_verdict_issued": false,
+    "global_no_go_claim_authorized": false,
+    "physics_promotion_authorized": false,
+    "publication_or_push_authorized": false,
+    "reviewer_contact_authorized": false,
+    "scientific_status_changed": false,
+    "source_extension_adopted": false,
+    "unscoped_g_eff_constructed": false
+  },
+  "checks": [
+    {
+      "check_id": "path_exists:v22_p2_t03_extension_budget_protocol_v1.yaml",
+      "detail": "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_extension_budget_protocol_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "path_exists:v22_p2_t03_candidate_family_registry_v1.yaml",
+      "detail": "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_candidate_family_registry_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "path_exists:v22_p2_t03_hard_fail_matrix_v1.yaml",
+      "detail": "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_hard_fail_matrix_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "path_exists:v22_p2_t03_protocol_adversarial_cases.yaml",
+      "detail": "research_control/tasks/RT-20260809-008/artifacts/fixtures/v22_p2_t03_protocol_adversarial_cases.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "path_exists:v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex",
+      "detail": "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "path_exists:child_phys_math_p2_t03_budget_protocol.yaml",
+      "detail": "research_control/tasks/RT-20260809-008/artifacts/child_phys_math_p2_t03_budget_protocol.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "path_exists:child_phys_phil_p2_t03_smuggling_scope_audit.yaml",
+      "detail": "research_control/tasks/RT-20260809-008/artifacts/child_phys_phil_p2_t03_smuggling_scope_audit.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "path_exists:parent_conflict_review_p2_t03_protocol.yaml",
+      "detail": "research_control/tasks/RT-20260809-008/artifacts/parent_conflict_review_p2_t03_protocol.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "path_exists:parent_fusion_notes_p2_t03_protocol.md",
+      "detail": "research_control/tasks/RT-20260809-008/artifacts/parent_fusion_notes_p2_t03_protocol.md",
+      "status": "PASS"
+    },
+    {
+      "check_id": "budget_max_three",
+      "detail": "maximum_material_family_count must equal 3",
+      "status": "PASS"
+    },
+    {
+      "check_id": "budget_three_preregistered",
+      "detail": "preregistered_family_count must equal 3",
+      "status": "PASS"
+    },
+    {
+      "check_id": "single_active_family",
+      "detail": "active_family_limit must equal 1",
+      "status": "PASS"
+    },
+    {
+      "check_id": "current_zero_active",
+      "detail": "P2-T03 must not activate a family",
+      "status": "PASS"
+    },
+    {
+      "check_id": "append_only_failures",
+      "detail": "failure history must be append-only",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_budget_growth",
+      "detail": "automatic budget growth must be false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fourth_slot_forbidden",
+      "detail": "fourth slot must be unavailable",
+      "status": "PASS"
+    },
+    {
+      "check_id": "third_slot_reserved",
+      "detail": "third slot must remain reserved and unallocated",
+      "status": "PASS"
+    },
+    {
+      "check_id": "third_slot_no_reviewer_contact",
+      "detail": "P2-T03 does not authorize reviewer contact",
+      "status": "PASS"
+    },
+    {
+      "check_id": "overlap_debits_all_slots",
+      "detail": "lawful overlap must debit every implicated family slot",
+      "status": "PASS"
+    },
+    {
+      "check_id": "overlap_secondary_not_active",
+      "detail": "secondary overlap family must not become concurrently active",
+      "status": "PASS"
+    },
+    {
+      "check_id": "overlap_no_growth",
+      "detail": "overlap must not grow the budget",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_family_ids",
+      "detail": "family ids must equal ['FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM', 'FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL', 'FAM-V22-B3-CONTROLLED-DISCRETE-CONTINUUM']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_family_slots",
+      "detail": "family slots must be 1, 2, 3 in order",
+      "status": "PASS"
+    },
+    {
+      "check_id": "family_hash:FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM",
+      "detail": "identity hash must be 6c5388fe6f9d0fcc3f7fe36a48061ddb5fb6f48f011099be61a93694391ceee0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "family_inactive:FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM",
+      "detail": "all P2-T03 family records must be inactive",
+      "status": "PASS"
+    },
+    {
+      "check_id": "family_not_adopted:FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM",
+      "detail": "family registration cannot adopt an extension",
+      "status": "PASS"
+    },
+    {
+      "check_id": "family_hash:FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL",
+      "detail": "identity hash must be 29aea5784c6c057b42ba60fdf85148d4a05f8307b57ac0a84be9fd0e244ebae8",
+      "status": "PASS"
+    },
+    {
+      "check_id": "family_inactive:FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL",
+      "detail": "all P2-T03 family records must be inactive",
+      "status": "PASS"
+    },
+    {
+      "check_id": "family_not_adopted:FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL",
+      "detail": "family registration cannot adopt an extension",
+      "status": "PASS"
+    },
+    {
+      "check_id": "family_hash:FAM-V22-B3-CONTROLLED-DISCRETE-CONTINUUM",
+      "detail": "identity hash must be 74fbf753bfed978bb14c6dec77c9e53bf11945f1cb1ee9797c7dc1697f9b0a67",
+      "status": "PASS"
+    },
+    {
+      "check_id": "family_inactive:FAM-V22-B3-CONTROLLED-DISCRETE-CONTINUUM",
+      "detail": "all P2-T03 family records must be inactive",
+      "status": "PASS"
+    },
+    {
+      "check_id": "family_not_adopted:FAM-V22-B3-CONTROLLED-DISCRETE-CONTINUUM",
+      "detail": "family registration cannot adopt an extension",
+      "status": "PASS"
+    },
+    {
+      "check_id": "registry_status_boundary_only",
+      "detail": "registry must be classification evidence only",
+      "status": "PASS"
+    },
+    {
+      "check_id": "registry_no_promotion",
+      "detail": "registry classification cannot promote physics",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_gate_b_criteria",
+      "detail": "all eight Gate B criteria must be preregistered in order",
+      "status": "PASS"
+    },
+    {
+      "check_id": "all_gate_b_fail_closed",
+      "detail": "every missing Gate B criterion must fail closed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_hard_fail_triggers",
+      "detail": "all eight hard-fail triggers must be preregistered in order",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_supplemental_fields",
+      "detail": "all five supplemental positive-packet fields must be present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_terminal_outcomes",
+      "detail": "all four scoped terminal outcomes must be present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "scoped_budget_exhaustion_wording",
+      "detail": "budget-exhaustion wording must name current ontology and the preregistered budget",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_global_impossibility_template",
+      "detail": "terminal wording must explicitly block global impossibility overread",
+      "status": "PASS"
+    },
+    {
+      "check_id": "all_templates_no_global_no_go",
+      "detail": "every final template must keep global_no_go_claimed false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_count",
+      "detail": "fixture case_count and list length must both equal 30",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_ids_unique",
+      "detail": "fixture IDs must be unique",
+      "status": "PASS"
+    },
+    {
+      "check_id": "all_fixtures_pass",
+      "detail": "all adversarial fixtures must match their preregistered decisions",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_math_complete",
+      "detail": "Physicist-Mathematician child must be complete",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_phil_complete",
+      "detail": "Physicist-Philosopher child must be complete",
+      "status": "PASS"
+    },
+    {
+      "check_id": "children_nonexternal",
+      "detail": "both internal children must be classified nonexternal",
+      "status": "PASS"
+    },
+    {
+      "check_id": "conflicts_resolved",
+      "detail": "parent conflict review must resolve all blocking conflicts",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fusion_preserves_limitations",
+      "detail": "fusion notes must preserve remaining limitations",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_fragment:Finite-budget termination theorem",
+      "detail": "TeX must include fragment: Finite-budget termination theorem",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_fragment:Failure-monotonicity lemma",
+      "detail": "TeX must include fragment: Failure-monotonicity lemma",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_fragment:Exactly three preregistered families",
+      "detail": "TeX must include fragment: Exactly three preregistered families",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_fragment:Sequential activation state machine",
+      "detail": "TeX must include fragment: Sequential activation state machine",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_fragment:Gate B eligibility predicate",
+      "detail": "TeX must include fragment: Gate B eligibility predicate",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_fragment:Hard-fail predicate",
+      "detail": "TeX must include fragment: Hard-fail predicate",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_fragment:not a global impossibility theorem",
+      "detail": "TeX must include fragment: not a global impossibility theorem",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_fragment:physical Distance-to-GR delta is zero",
+      "detail": "TeX must include fragment: physical Distance-to-GR delta is zero",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_fragment:P2-T04 may select one primary and one fallback only after this packet checkpoints",
+      "detail": "TeX must include fragment: P2-T04 may select one primary and one fallback only after this packet checkpoints",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:implementations_plans/recommendations_implementation_plan_continue_task-v22.md",
+      "detail": "source snapshot must remain 04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/handoffs/handoff-0977.yaml",
+      "detail": "source snapshot must remain 9145365ac95d3dccd0ecca8fbe584814a81a59d7ea781a5147766c2dd86bf8c4",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex",
+      "detail": "source snapshot must remain 2ba813e4e961b9ea2709a31c6e06152b1cb4d50ebd90185c2ed93d7aeb132439",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex",
+      "detail": "source snapshot must remain 28334e08c64cdf7ea5588e553a974eb7c37114e6792b8dcb98ea9b6b259a6408",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/design/source_extension_classification_checklist_v1.md",
+      "detail": "source snapshot must remain ecf6db3bd8372801e6c7ac12d6727e7eb270d1605747af77194b90815faaf6c0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:research_control/design/gr_derivation_burden_map.md",
+      "detail": "source snapshot must remain 8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_hash:registries/DISTANCE_TO_GR_LEDGER.csv",
+      "detail": "source snapshot must remain 8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642",
+      "status": "PASS"
+    },
+    {
+      "check_id": "authority_limits_false",
+      "detail": "forbidden authority flags must be false: ",
+      "status": "PASS"
+    }
+  ],
+  "error_count": 0,
+  "errors": [],
+  "family_count": 3,
+  "fixture_count": 30,
+  "fixture_failure_count": 0,
+  "fixture_pass_count": 30,
+  "fixture_results": [
+    {
+      "case_id": "CASE-001-IDLE-PREREGISTRATION",
+      "expected_decision": "PROTOCOL_VALID_IDLE",
+      "observed_decision": "PROTOCOL_VALID_IDLE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-002-PRIMARY-FALLBACK-SELECTION",
+      "expected_decision": "SELECTION_VALID_NO_ACTIVATION",
+      "observed_decision": "SELECTION_VALID_NO_ACTIVATION",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-003-SOLE-PRIMARY-ACTIVE",
+      "expected_decision": "ACTIVATION_VALID_SINGLE_FAMILY",
+      "observed_decision": "ACTIVATION_VALID_SINGLE_FAMILY",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-004-CONCURRENT-FAMILIES",
+      "expected_decision": "REJECT_CONCURRENT_ACTIVATION",
+      "observed_decision": "REJECT_CONCURRENT_ACTIVATION",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-005-FOURTH-FAMILY",
+      "expected_decision": "REJECT_BUDGET_GROWTH",
+      "observed_decision": "REJECT_BUDGET_GROWTH",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-006-RENAMED-FAMILY",
+      "expected_decision": "HARD_FAIL_HF08_FROZEN_ROUTE_REPACKAGED",
+      "observed_decision": "HARD_FAIL_HF08_FROZEN_ROUTE_REPACKAGED",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-007-UNCHANGED-ASSUMPTIONS-NEW-LABEL",
+      "expected_decision": "HARD_FAIL_HF08_FROZEN_ROUTE_REPACKAGED",
+      "observed_decision": "HARD_FAIL_HF08_FROZEN_ROUTE_REPACKAGED",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-008-LAWFUL-OVERLAP",
+      "expected_decision": "OVERLAP_VALID_SINGLE_ACTIVE",
+      "observed_decision": "OVERLAP_VALID_SINGLE_ACTIVE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-009-OVERLAP-BUDGET-EVASION",
+      "expected_decision": "REJECT_OVERLAP_BUDGET_EVASION",
+      "observed_decision": "REJECT_OVERLAP_BUDGET_EVASION",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-010-FALLBACK-BEFORE-TERMINATION",
+      "expected_decision": "REJECT_FALLBACK_WITHOUT_TERMINATION",
+      "observed_decision": "REJECT_FALLBACK_WITHOUT_TERMINATION",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-011-FALLBACK-WITHOUT-SELECTOR",
+      "expected_decision": "REJECT_FALLBACK_WITHOUT_FRESH_SELECTOR",
+      "observed_decision": "REJECT_FALLBACK_WITHOUT_FRESH_SELECTOR",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-012-LAWFUL-FALLBACK",
+      "expected_decision": "FALLBACK_ACTIVATION_VALID",
+      "observed_decision": "FALLBACK_ACTIVATION_VALID",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-013-FAILURE-ERASURE",
+      "expected_decision": "REJECT_FAILURE_LEDGER_MUTATION",
+      "observed_decision": "REJECT_FAILURE_LEDGER_MUTATION",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-014-THIRD-SLOT-NO-INDEPENDENT-REVIEW",
+      "expected_decision": "REJECT_THIRD_SLOT_WITHOUT_INDEPENDENT_REVIEW",
+      "observed_decision": "REJECT_THIRD_SLOT_WITHOUT_INDEPENDENT_REVIEW",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-015-THIRD-SLOT-NO-PROGRAM-DECISION",
+      "expected_decision": "REJECT_THIRD_SLOT_WITHOUT_PROGRAM_DECISION",
+      "observed_decision": "REJECT_THIRD_SLOT_WITHOUT_PROGRAM_DECISION",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-016-LAWFUL-THIRD-SLOT",
+      "expected_decision": "THIRD_SLOT_ALLOCATION_VALID",
+      "observed_decision": "THIRD_SLOT_ALLOCATION_VALID",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-017-AMBIGUOUS-FAMILY-EQUIVALENCE",
+      "expected_decision": "REJECT_AMBIGUOUS_EQUIVALENCE_FAIL_CLOSED",
+      "observed_decision": "REJECT_AMBIGUOUS_EQUIVALENCE_FAIL_CLOSED",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-018-HIDDEN-METRIC-IMPORT",
+      "expected_decision": "HARD_FAIL_HF01_METRIC_EQUIVALENT_IMPORT",
+      "observed_decision": "HARD_FAIL_HF01_METRIC_EQUIVALENT_IMPORT",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-019-LABEL-TO-CLOCK-BY-FIAT",
+      "expected_decision": "HARD_FAIL_HF02_OBSERVABLE_LABEL_BY_FIAT",
+      "observed_decision": "HARD_FAIL_HF02_OBSERVABLE_LABEL_BY_FIAT",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-020-GR-TARGET-FIT",
+      "expected_decision": "HARD_FAIL_HF03_GR_TARGET_FITTING",
+      "observed_decision": "HARD_FAIL_HF03_GR_TARGET_FITTING",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-021-UNSELECTED-MULTICONE",
+      "expected_decision": "HARD_FAIL_HF04_NONUNIVERSAL_OR_UNSELECTED_MULTICONE",
+      "observed_decision": "HARD_FAIL_HF04_NONUNIVERSAL_OR_UNSELECTED_MULTICONE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-022-NONHYPERBOLIC-UNSTABLE",
+      "expected_decision": "HARD_FAIL_HF05_INSTABILITY_NONHYPERBOLICITY_DEGENERACY",
+      "observed_decision": "HARD_FAIL_HF05_INSTABILITY_NONHYPERBOLICITY_DEGENERACY",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-023-NO-CONTINUUM-LIMIT",
+      "expected_decision": "HARD_FAIL_HF06_NO_CONTROLLED_CONTINUUM_LIMIT",
+      "observed_decision": "HARD_FAIL_HF06_NO_CONTROLLED_CONTINUUM_LIMIT",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-024-EINSTEIN-ACTION-POSTULATED",
+      "expected_decision": "HARD_FAIL_HF07_EINSTEIN_STRUCTURE_POSTULATED",
+      "observed_decision": "HARD_FAIL_HF07_EINSTEIN_STRUCTURE_POSTULATED",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-025-FROZEN-DECODER-RENAMED",
+      "expected_decision": "HARD_FAIL_HF08_FROZEN_ROUTE_REPACKAGED",
+      "observed_decision": "HARD_FAIL_HF08_FROZEN_ROUTE_REPACKAGED",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-026-CRITERIA-PASS-SUPPLEMENT-MISSING",
+      "expected_decision": "INELIGIBLE_INCOMPLETE_GATE_B_PACKET",
+      "observed_decision": "INELIGIBLE_INCOMPLETE_GATE_B_PACKET",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-027-ALL-CRITERIA-PASS",
+      "expected_decision": "ELIGIBLE_FOR_PROTECTED_REVIEW_NOT_GATE_B_POSITIVE",
+      "observed_decision": "ELIGIBLE_FOR_PROTECTED_REVIEW_NOT_GATE_B_POSITIVE",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-028-ONE-GATE-B-CRITERION-MISSING",
+      "expected_decision": "INELIGIBLE_INCOMPLETE_GATE_B_PACKET",
+      "observed_decision": "INELIGIBLE_INCOMPLETE_GATE_B_PACKET",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-029-POST-RESULT-FAMILY-DEFINITION",
+      "expected_decision": "REJECT_POST_RESULT_FAMILY_DEFINITION",
+      "observed_decision": "REJECT_POST_RESULT_FAMILY_DEFINITION",
+      "status": "PASS"
+    },
+    {
+      "case_id": "CASE-030-INCOMPLETE-ACTIVATION-DESCRIPTOR",
+      "expected_decision": "REJECT_INCOMPLETE_ACTIVATION_PACKET",
+      "observed_decision": "REJECT_INCOMPLETE_ACTIVATION_PACKET",
+      "status": "PASS"
+    }
+  ],
+  "focused_check_count": 67,
+  "focused_check_failure_count": 0,
+  "gate_b_criterion_count": 8,
+  "hard_fail_trigger_count": 8,
+  "job_id": "AJ-RT-20260809-008-001",
+  "plan_task_id": "P2-T03",
+  "schema_id": "v22_p2_t03_protocol_validation_v1",
+  "source_hashes": [
+    {
+      "expected_sha256": "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65",
+      "match": true,
+      "observed_sha256": "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65",
+      "path": "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    },
+    {
+      "expected_sha256": "9145365ac95d3dccd0ecca8fbe584814a81a59d7ea781a5147766c2dd86bf8c4",
+      "match": true,
+      "observed_sha256": "9145365ac95d3dccd0ecca8fbe584814a81a59d7ea781a5147766c2dd86bf8c4",
+      "path": "research_control/handoffs/handoff-0977.yaml"
+    },
+    {
+      "expected_sha256": "2ba813e4e961b9ea2709a31c6e06152b1cb4d50ebd90185c2ed93d7aeb132439",
+      "match": true,
+      "observed_sha256": "2ba813e4e961b9ea2709a31c6e06152b1cb4d50ebd90185c2ed93d7aeb132439",
+      "path": "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex"
+    },
+    {
+      "expected_sha256": "28334e08c64cdf7ea5588e553a974eb7c37114e6792b8dcb98ea9b6b259a6408",
+      "match": true,
+      "observed_sha256": "28334e08c64cdf7ea5588e553a974eb7c37114e6792b8dcb98ea9b6b259a6408",
+      "path": "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex"
+    },
+    {
+      "expected_sha256": "ecf6db3bd8372801e6c7ac12d6727e7eb270d1605747af77194b90815faaf6c0",
+      "match": true,
+      "observed_sha256": "ecf6db3bd8372801e6c7ac12d6727e7eb270d1605747af77194b90815faaf6c0",
+      "path": "research_control/design/source_extension_classification_checklist_v1.md"
+    },
+    {
+      "expected_sha256": "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e",
+      "match": true,
+      "observed_sha256": "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e",
+      "path": "research_control/design/gr_derivation_burden_map.md"
+    },
+    {
+      "expected_sha256": "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642",
+      "match": true,
+      "observed_sha256": "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642",
+      "path": "registries/DISTANCE_TO_GR_LEDGER.csv"
+    }
+  ],
+  "source_snapshot_count": 7,
+  "status": "PASS",
+  "task_id": "RT-20260809-008",
+  "terminal_template_count": 4
+}

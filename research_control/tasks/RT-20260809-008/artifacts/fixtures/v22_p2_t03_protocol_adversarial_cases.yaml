@@ -1,0 +1,223 @@
+schema_id: "v22_p2_t03_protocol_adversarial_cases_v1"
+status: "task_local_validation_fixture"
+case_count: 30
+
+cases:
+  - case_id: "CASE-001-IDLE-PREREGISTRATION"
+    candidate_family_count: 3
+    active_family_count: 0
+    expected_decision: "PROTOCOL_VALID_IDLE"
+  - case_id: "CASE-002-PRIMARY-FALLBACK-SELECTION"
+    candidate_family_count: 3
+    selection_requested: true
+    primary_selected: true
+    fallback_selected: true
+    third_slot_allocated: false
+    active_family_count: 0
+    expected_decision: "SELECTION_VALID_NO_ACTIVATION"
+  - case_id: "CASE-003-SOLE-PRIMARY-ACTIVE"
+    candidate_family_count: 3
+    activation_requested: true
+    active_family_count: 1
+    descriptor_complete: true
+    assumption_ledger_complete: true
+    family_fingerprint_sealed: true
+    test_plan_sealed: true
+    expected_decision: "ACTIVATION_VALID_SINGLE_FAMILY"
+  - case_id: "CASE-004-CONCURRENT-FAMILIES"
+    candidate_family_count: 3
+    activation_requested: true
+    active_family_count: 2
+    expected_decision: "REJECT_CONCURRENT_ACTIVATION"
+  - case_id: "CASE-005-FOURTH-FAMILY"
+    candidate_family_count: 4
+    active_family_count: 0
+    expected_decision: "REJECT_BUDGET_GROWTH"
+  - case_id: "CASE-006-RENAMED-FAMILY"
+    candidate_family_count: 3
+    renamed_identity_matches_existing: true
+    expected_decision: "HARD_FAIL_HF08_FROZEN_ROUTE_REPACKAGED"
+  - case_id: "CASE-007-UNCHANGED-ASSUMPTIONS-NEW-LABEL"
+    candidate_family_count: 3
+    assumption_signature_matches_existing: true
+    material_difference_proved: false
+    expected_decision: "HARD_FAIL_HF08_FROZEN_ROUTE_REPACKAGED"
+  - case_id: "CASE-008-LAWFUL-OVERLAP"
+    candidate_family_count: 3
+    overlap_requested: true
+    overlap_family_count: 2
+    active_family_count: 1
+    single_source_law: true
+    primary_family_declared: true
+    prospective_overlap_evidence: true
+    all_implicated_slots_debited: true
+    expected_decision: "OVERLAP_VALID_SINGLE_ACTIVE"
+  - case_id: "CASE-009-OVERLAP-BUDGET-EVASION"
+    candidate_family_count: 3
+    overlap_requested: true
+    overlap_family_count: 2
+    active_family_count: 1
+    single_source_law: true
+    primary_family_declared: true
+    prospective_overlap_evidence: true
+    all_implicated_slots_debited: false
+    expected_decision: "REJECT_OVERLAP_BUDGET_EVASION"
+  - case_id: "CASE-010-FALLBACK-BEFORE-TERMINATION"
+    candidate_family_count: 3
+    fallback_activation_requested: true
+    primary_terminated: false
+    fresh_selector_decision: true
+    expected_decision: "REJECT_FALLBACK_WITHOUT_TERMINATION"
+  - case_id: "CASE-011-FALLBACK-WITHOUT-SELECTOR"
+    candidate_family_count: 3
+    fallback_activation_requested: true
+    primary_terminated: true
+    failure_history_preserved: true
+    fresh_selector_decision: false
+    expected_decision: "REJECT_FALLBACK_WITHOUT_FRESH_SELECTOR"
+  - case_id: "CASE-012-LAWFUL-FALLBACK"
+    candidate_family_count: 3
+    fallback_activation_requested: true
+    primary_terminated: true
+    failure_history_preserved: true
+    fresh_selector_decision: true
+    active_family_count: 1
+    expected_decision: "FALLBACK_ACTIVATION_VALID"
+  - case_id: "CASE-013-FAILURE-ERASURE"
+    candidate_family_count: 3
+    deletes_or_weakens_failure_record: true
+    expected_decision: "REJECT_FAILURE_LEDGER_MUTATION"
+  - case_id: "CASE-014-THIRD-SLOT-NO-INDEPENDENT-REVIEW"
+    candidate_family_count: 3
+    third_slot_allocation_requested: true
+    qualifying_independent_review: false
+    explicit_program_decision: true
+    expected_decision: "REJECT_THIRD_SLOT_WITHOUT_INDEPENDENT_REVIEW"
+  - case_id: "CASE-015-THIRD-SLOT-NO-PROGRAM-DECISION"
+    candidate_family_count: 3
+    third_slot_allocation_requested: true
+    qualifying_independent_review: true
+    explicit_program_decision: false
+    expected_decision: "REJECT_THIRD_SLOT_WITHOUT_PROGRAM_DECISION"
+  - case_id: "CASE-016-LAWFUL-THIRD-SLOT"
+    candidate_family_count: 3
+    third_slot_allocation_requested: true
+    qualifying_independent_review: true
+    explicit_program_decision: true
+    failure_history_preserved: true
+    expected_decision: "THIRD_SLOT_ALLOCATION_VALID"
+  - case_id: "CASE-017-AMBIGUOUS-FAMILY-EQUIVALENCE"
+    candidate_family_count: 3
+    ambiguous_family_equivalence: true
+    expected_decision: "REJECT_AMBIGUOUS_EQUIVALENCE_FAIL_CLOSED"
+  - case_id: "CASE-018-HIDDEN-METRIC-IMPORT"
+    candidate_family_count: 3
+    hard_fail_triggers:
+      - "HF01_METRIC_EQUIVALENT_IMPORT"
+    expected_decision: "HARD_FAIL_HF01_METRIC_EQUIVALENT_IMPORT"
+  - case_id: "CASE-019-LABEL-TO-CLOCK-BY-FIAT"
+    candidate_family_count: 3
+    hard_fail_triggers:
+      - "HF02_OBSERVABLE_LABEL_BY_FIAT"
+    expected_decision: "HARD_FAIL_HF02_OBSERVABLE_LABEL_BY_FIAT"
+  - case_id: "CASE-020-GR-TARGET-FIT"
+    candidate_family_count: 3
+    hard_fail_triggers:
+      - "HF03_GR_TARGET_FITTING"
+    expected_decision: "HARD_FAIL_HF03_GR_TARGET_FITTING"
+  - case_id: "CASE-021-UNSELECTED-MULTICONE"
+    candidate_family_count: 3
+    hard_fail_triggers:
+      - "HF04_NONUNIVERSAL_OR_UNSELECTED_MULTICONE"
+    expected_decision: "HARD_FAIL_HF04_NONUNIVERSAL_OR_UNSELECTED_MULTICONE"
+  - case_id: "CASE-022-NONHYPERBOLIC-UNSTABLE"
+    candidate_family_count: 3
+    hard_fail_triggers:
+      - "HF05_INSTABILITY_NONHYPERBOLICITY_DEGENERACY"
+    expected_decision: "HARD_FAIL_HF05_INSTABILITY_NONHYPERBOLICITY_DEGENERACY"
+  - case_id: "CASE-023-NO-CONTINUUM-LIMIT"
+    candidate_family_count: 3
+    hard_fail_triggers:
+      - "HF06_NO_CONTROLLED_CONTINUUM_LIMIT"
+    expected_decision: "HARD_FAIL_HF06_NO_CONTROLLED_CONTINUUM_LIMIT"
+  - case_id: "CASE-024-EINSTEIN-ACTION-POSTULATED"
+    candidate_family_count: 3
+    hard_fail_triggers:
+      - "HF07_EINSTEIN_STRUCTURE_POSTULATED"
+    expected_decision: "HARD_FAIL_HF07_EINSTEIN_STRUCTURE_POSTULATED"
+  - case_id: "CASE-025-FROZEN-DECODER-RENAMED"
+    candidate_family_count: 3
+    hard_fail_triggers:
+      - "HF08_FROZEN_ROUTE_REPACKAGED"
+    expected_decision: "HARD_FAIL_HF08_FROZEN_ROUTE_REPACKAGED"
+  - case_id: "CASE-026-CRITERIA-PASS-SUPPLEMENT-MISSING"
+    candidate_family_count: 3
+    gate_b_passed_ids:
+      - "GB01_TARGET_ATLAS_FREE"
+      - "GB02_REDUCED_HYPERBOLIC_PRINCIPAL"
+      - "GB03_STABLE_LORENTZIAN_CONE"
+      - "GB04_UNIVERSAL_MATTER_COMPATIBILITY"
+      - "GB05_OPERATIONAL_SCALE"
+      - "GB06_TENSORIAL_GLUING"
+      - "GB07_VARIATION_COARSE_GRAINING_ROBUSTNESS"
+      - "GB08_NO_HIDDEN_METRIC_EQUIVALENT"
+    supplemental_fields_present:
+      - "regularity"
+      - "time orientation"
+      - "nondegeneracy"
+      - "conditioning"
+    expected_decision: "INELIGIBLE_INCOMPLETE_GATE_B_PACKET"
+  - case_id: "CASE-027-ALL-CRITERIA-PASS"
+    candidate_family_count: 3
+    gate_b_passed_ids:
+      - "GB01_TARGET_ATLAS_FREE"
+      - "GB02_REDUCED_HYPERBOLIC_PRINCIPAL"
+      - "GB03_STABLE_LORENTZIAN_CONE"
+      - "GB04_UNIVERSAL_MATTER_COMPATIBILITY"
+      - "GB05_OPERATIONAL_SCALE"
+      - "GB06_TENSORIAL_GLUING"
+      - "GB07_VARIATION_COARSE_GRAINING_ROBUSTNESS"
+      - "GB08_NO_HIDDEN_METRIC_EQUIVALENT"
+    supplemental_fields_present:
+      - "regularity"
+      - "time orientation"
+      - "nondegeneracy"
+      - "conditioning"
+      - "second-clock-effect analysis"
+    expected_decision: "ELIGIBLE_FOR_PROTECTED_REVIEW_NOT_GATE_B_POSITIVE"
+  - case_id: "CASE-028-ONE-GATE-B-CRITERION-MISSING"
+    candidate_family_count: 3
+    gate_b_passed_ids:
+      - "GB01_TARGET_ATLAS_FREE"
+      - "GB02_REDUCED_HYPERBOLIC_PRINCIPAL"
+      - "GB03_STABLE_LORENTZIAN_CONE"
+      - "GB04_UNIVERSAL_MATTER_COMPATIBILITY"
+      - "GB05_OPERATIONAL_SCALE"
+      - "GB06_TENSORIAL_GLUING"
+      - "GB08_NO_HIDDEN_METRIC_EQUIVALENT"
+    supplemental_fields_present:
+      - "regularity"
+      - "time orientation"
+      - "nondegeneracy"
+      - "conditioning"
+      - "second-clock-effect analysis"
+    expected_decision: "INELIGIBLE_INCOMPLETE_GATE_B_PACKET"
+  - case_id: "CASE-029-POST-RESULT-FAMILY-DEFINITION"
+    candidate_family_count: 3
+    family_identity_defined_after_result: true
+    expected_decision: "REJECT_POST_RESULT_FAMILY_DEFINITION"
+  - case_id: "CASE-030-INCOMPLETE-ACTIVATION-DESCRIPTOR"
+    candidate_family_count: 3
+    activation_requested: true
+    active_family_count: 1
+    descriptor_complete: true
+    assumption_ledger_complete: false
+    family_fingerprint_sealed: true
+    test_plan_sealed: true
+    expected_decision: "REJECT_INCOMPLETE_ACTIVATION_PACKET"
+
+authority_limits:
+  fixtures_are_scientific_results: false
+  gate_b_verdict_issued: false
+  source_extension_adopted: false
+  global_no_go_claim_authorized: false

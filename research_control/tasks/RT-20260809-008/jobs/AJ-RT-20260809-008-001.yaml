@@ -1,0 +1,429 @@
+job_id: "AJ-RT-20260809-008-001"
+task_id: "RT-20260809-008"
+decision_id: "DDR-20260809-008"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260809-008"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-09T08:40:37Z"
+started_at: "2026-08-09T08:40:37Z"
+completed_at: "2026-08-09T08:56:40Z"
+completion_path: "research_control/tasks/RT-20260809-008/jobs/completions/AJC-AJ-RT-20260809-008-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal, committed RT-20260809-007 checkpoint, and handoff-0977 authorize this one P2-T03 pre-registration packet and one checkpoint only. No candidate selection, activation, protected Gate review, ontology adoption, reviewer contact, or external action is authorized."
+objective: "Implement the exact V22 P2-T03 maximum three-family source-extension budget, material-family equivalence, sequential activation, permanent failure history, Gate B and hard-fail matrix, scoped verdict templates, adversarial fixtures, internal parent-child review, and one bounded next-route handoff."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Metric law; pre-register a maximum three-family source-extension budget, sequential activation, and scoped hard-fail criteria before candidate selection."
+route_label: "ordinary-research-packet"
+route_reason: "handoff_0977_selects_dependency_ready_v22_p2_t03_after_the_committed_rt007_checkpoint"
+route_strategy_id: "preregister_v22_p2_t03_source_extension_budget_hard_fail_v1"
+immutable_route_sha256: "9145365ac95d3dccd0ecca8fbe584814a81a59d7ea781a5147766c2dd86bf8c4"
+source_head: "488a7f2dd8a18075644d59ed497f3698ead9ee82"
+source_tree: "8d427f3f770cf371cc0f9faf7be08be5052575a3"
+assembly_parent_head: "488a7f2dd8a18075644d59ed497f3698ead9ee82"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P2-T03"
+recommendation_ids:
+  - "V22-R13"
+declared_coverage_ids:
+  - "V22-R13"
+  - "S4"
+sequence_step_ids:
+  - "S4"
+cross_cutting_directive_ids:
+  - "V22-X02"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P2-T04"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0977"
+  source_handoff_path: "research_control/handoffs/handoff-0977.yaml"
+  source_handoff_sha256: "9145365ac95d3dccd0ecca8fbe584814a81a59d7ea781a5147766c2dd86bf8c4"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P2-T03"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P2-T03"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1144
+    relationship_row_count: 5762
+    semantic_row_count: 1144
+    vault_row_count: 1144
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'v22 p2 t03 source extension budget hard fail protocol' --limit 10 --json"
+      query_type: "search"
+      query_text: "v22 p2 t03 source extension budget hard fail protocol"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  additional_control_inspections:
+    - object_id: "HANDOFF-0977"
+      control_path: "research_control/handoffs/handoff-0977.yaml"
+      source_hash: "9145365ac95d3dccd0ecca8fbe584814a81a59d7ea781a5147766c2dd86bf8c4"
+    - object_id: "TEX-V22-P2-T01-LOCAL-SOURCE-INFORMATION-CAPACITY-THEOREM-V1"
+      control_path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex"
+      source_hash: "2ba813e4e961b9ea2709a31c6e06152b1cb4d50ebd90185c2ed93d7aeb132439"
+    - object_id: "TEX-V22-P1-T04-GATE-B-ONLY-PHYSICS-LOCK-V1"
+      control_path: "research_control/tasks/RT-20260809-004/artifacts/v22_p1_t04_gate_b_only_physics_lock_v1.tex"
+      source_hash: "28334e08c64cdf7ea5588e553a974eb7c37114e6792b8dcb98ea9b6b259a6408"
+    - object_id: "V22-SOURCE-EXTENSION-CLASSIFICATION-CHECKLIST-V1"
+      control_path: "research_control/design/source_extension_classification_checklist_v1.md"
+      source_hash: "ecf6db3bd8372801e6c7ac12d6727e7eb270d1605747af77194b90815faaf6c0"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      control_path: "research_control/design/gr_derivation_burden_map.md"
+      source_hash: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    - object_id: "DISTANCE-TO-GR-LEDGER"
+      control_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      source_hash: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+  authority_note: "Tracked registered source and control records govern. Generated wiki semantic Obsidian SQLite and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "V22-P2-T03-SOURCE-EXTENSION-BUDGET-PROTOCOL-V1"
+  assumption_delta:
+    - "Exactly three prospective material family classes bound the P2 source-extension search; a fourth slot is unavailable without a new explicit program decision."
+    - "Family equivalence is evaluated from source-side fields, domains, symmetries, locality, dynamics, observables, refinement behavior, assumptions, and principal operational structure rather than names or target agreement."
+    - "At most one primary family is active, failures are append-only, and a combined candidate debits every materially implicated slot without simultaneous activation."
+    - "All eight Gate B criteria and eight hard-fail triggers apply fail closed before candidate results, while terminal conclusions remain scoped to the current ontology and preregistered budget."
+  materiality_basis: "V22 encodes the need for bounded extension search but had no immutable three-family identity registry, sequential state machine, permanent-failure rule, complete Gate B and hard-fail matrix, or exact scoped terminal templates before P2-T04 selection."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "V22-P2-T03-THREE-FAMILY-SEQUENTIAL-BUDGET-DECISION-V1"
+    not_already_encoded_evidence: "P2-T01 supplies a capacity theorem and P1-T04 supplies the Gate-B-only lock, but neither fixes the exact family fingerprints, slot debits, state transitions, hard-fail matrix, reopening proof, or terminal wording implemented here."
+    maximum_material_family_count: 3
+    active_family_limit: 1
+    p2_t03_active_family_count: 0
+    gate_b_criterion_count: 8
+    hard_fail_trigger_count: 8
+    terminal_template_count: 4
+    ontology_adoption_count: 0
+    global_no_go_claimed: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P2-T01-LOCAL-SOURCE-INFORMATION-CAPACITY-THEOREM-V1"
+    - "TEX-V22-P1-T04-GATE-B-ONLY-PHYSICS-LOCK-V1"
+    - "research_control/design/source_extension_classification_checklist_v1.md"
+    - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex"
+    - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_extension_budget_protocol_v1.yaml"
+    - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_candidate_family_registry_v1.yaml"
+    - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_hard_fail_matrix_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v22_p2_t03_source_extension_budget_protocol"
+  family_id: "V22-P2-T03-SOURCE-EXTENSION-BUDGET-PROTOCOL-V1"
+  family_identity_sha256: "8dae2c65ed5806d30d1ca619b8f8c449b5c98abfeaee0124255d02c4f09148d5"
+  assumption_sha256es:
+    - "868a12d20c5560e754e029c1ea8bb9e6de48975feb2bef6d713a0aff36fc3a1d"
+    - "324e7ecfe05c9a9d65a8cb594e68af534497be460a2ba3f149a11118efed1f2d"
+    - "827beaa7cbbe25c1598b9f52846c7eb998308c37521021a4cbe40220f649235b"
+  route_kind: "theorem_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V22-P2-T03-FINITE-SOURCE-EXTENSION-BUDGET-BRANCH"
+    material_difference_basis: "This packet defines a prospective family-equivalence relation, finite activation state machine, termination theorem, failure-monotonicity lemma, and hard-fail protocol rather than reconstructing any frozen source or geometry candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex"
+      - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_candidate_family_registry_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered source-extension budget and hard-fail protocol source"
+      - "one exact three-family registry and sequential activation state machine"
+      - "one complete Gate B hard-fail matrix and four scoped verdict templates"
+    project_system:
+      - "one thirty-case adversarial fixture set and deterministic validator receipt"
+      - "parent-child synthesis and standard control records"
+  acceptance_criteria:
+    physics:
+      - "exactly three materially distinct family classes are fixed before candidate results"
+      - "only one primary can be active and failure history is permanent"
+      - "renaming repackaging target import instability and target fitting fail closed"
+      - "budget exhaustion wording is scoped and never asserts global impossibility"
+    project_system:
+      - "all focused source hash family state matrix fixture synthesis and scope checks pass"
+      - "registered source hashes and generated derivatives synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "bind family identity state transitions hard fails and terminal wording to exact pre-result assumptions"
+      - "fuse finite-state formalization with adversarial source-smuggling review"
+      - "resolve overlap slot debit reopening ambiguity and scoped-failure tensions"
+      - "preserve every candidate activation ontology metric coupling Einstein Gate benchmark and completed-derivation block"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-008/artifacts/child_phys_math_p2_t03_budget_protocol.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-008/artifacts/child_phys_phil_p2_t03_smuggling_scope_audit.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260809-008/artifacts/parent_conflict_review_p2_t03_protocol.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260809-008/artifacts/parent_fusion_notes_p2_t03_protocol.md"
+    fused_output_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/**"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/**"
+  - "registries/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0978.yaml"
+  - "research_control/handoffs/handoff-0978.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260809-008/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "README.md"
+  - "implementations_plans/**"
+  - ".codex/skills/**"
+  - ".agents/roles/**"
+  - "html/**"
+  - "pdf/**"
+  - "research_control/tasks/RT-20260809-004/**"
+  - "research_control/tasks/RT-20260809-005/**"
+  - "research_control/tasks/RT-20260809-006/**"
+  - "research_control/tasks/RT-20260809-007/**"
+allowed_source_classes:
+  - "registered canonical TeX and Markdown sources"
+  - "tracked research-control state and immutable prior task artifacts"
+  - "task-local draft/control artifacts and internal review records"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "M_src_or_g_eff_adoption"
+  - "candidate_reconstruction"
+  - "candidate_reconstruction_or_activation"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "generated_derivative_authority"
+  - "target_atlas_or_metric_import"
+  - "target_fit_as_source_merit"
+  - "renamed_or_repackaged_family_as_new_slot"
+  - "concurrent_family_activation"
+  - "silent_budget_growth"
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260809-008/artifacts/validate_v22_p2_t03_protocol.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260809-008/artifacts/validate_v22_p2_t03_protocol.py --json"
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260809-008/artifacts/validate_v22_p2_t03_protocol.py"
+  - "python3 /Users/alex.omegapy/.codex/plugins/cache/openai-bundled/latex/0.2.4/scripts/compile_latex.py <P2-T03 TeX> --output-directory <scratch> --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <P2-T03 affected paths>"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260809-008-001 --json-summary"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260809-008-001"
+required_validators:
+  - "V22 P2-T03 focused source family state hard-fail fixture and scope validator"
+  - "TeX scratch compilation"
+  - "task taxonomy and affected repository validation"
+  - "documentation impact and claim-language validation"
+  - "bounded research-control diff validation"
+  - "memory bootstrap and generated-freshness validation"
+  - "one governed checkpoint"
+expected_outputs:
+  - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_source_extension_budget_hard_fail_protocol_v1.tex"
+  - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_extension_budget_protocol_v1.yaml"
+  - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_candidate_family_registry_v1.yaml"
+  - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_hard_fail_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260809-008/artifacts/fixtures/v22_p2_t03_protocol_adversarial_cases.yaml"
+  - "research_control/tasks/RT-20260809-008/artifacts/child_phys_math_p2_t03_budget_protocol.yaml"
+  - "research_control/tasks/RT-20260809-008/artifacts/child_phys_phil_p2_t03_smuggling_scope_audit.yaml"
+  - "research_control/tasks/RT-20260809-008/artifacts/parent_conflict_review_p2_t03_protocol.yaml"
+  - "research_control/tasks/RT-20260809-008/artifacts/parent_fusion_notes_p2_t03_protocol.md"
+  - "research_control/tasks/RT-20260809-008/artifacts/validate_v22_p2_t03_protocol.py"
+  - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_protocol_validation.json"
+  - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_compact_receipt.json"
+  - "research_control/tasks/RT-20260809-008/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260809-008/jobs/completions/AJC-AJ-RT-20260809-008-001.yaml"
+  - "research_control/handoffs/handoff-0978.yaml"
+  - "research_control/handoffs/handoff-0978.md"
+  - "research_control/program_state.yaml"
+claim_boundary:
+  claim_boundary_id: "CB-V22-P2-T03-SOURCE-EXTENSION-BUDGET-PROTOCOL-001"
+  allowed_claims:
+    - "Exactly three material family classes bound this preregistered extension search and only one primary may be active."
+    - "Renaming equivalent repackaging and auxiliary elimination do not create a new family slot."
+    - "Failures are append-only and a lawful overlap debits every implicated slot without concurrent primary activation."
+    - "All eight Gate B criteria and eight hard-fail triggers are fixed before candidate results."
+    - "Budget-exhaustion wording is scoped to the current ontology and preregistered family budget."
+    - "P2-T04 may be selected but not executed."
+  forbidden_claims:
+    - "a family class is a selected activated adopted or canonical source extension"
+    - "a target metric atlas benchmark or desired result may define source merit"
+    - "a fourth slot appears automatically or a failed family can be silently reset"
+    - "budget exhaustion proves global ontology or all-extension impossibility"
+    - "effective metric target coupling Einstein equation Gate benchmark external review or completed derivation"
+    - "ontology adoption source-law adoption publication release push reviewer contact or external action"
+  requires_gate_for:
+    - "any canonical ontology source-law metric coupling Einstein benchmark or completed-derivation promotion"
+    - "any protected Gate verdict or family adoption"
+    - "any external reviewer contact publication release tag push or submission"

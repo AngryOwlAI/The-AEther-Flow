@@ -830,7 +830,7 @@ items:
     review.
   stop_conditions: Unlimited fallback language, a family defined only after seeing
     results, or global no-go wording unsupported by theorem.
-  implementation_status: pending
+  implementation_status: completed_checkpoint_pending
   expected_result_kind: completed_or_precisely_blocked
   requires_human_gate: false
   dependency_independent_after_other_human_gates: true
@@ -848,6 +848,17 @@ items:
   track: B
   owner: theoretical-continuation selector followed by protected human selection only
     if required
+  work_kind: integration_or_selection
+  task_class: science
+  role_family: theoretical-continuation-selector@0.1.0
+  supporting_perspective: smuggling-auditor@0.2.0
+  controlling_launcher: continue-research-goal@v4
+  worker_skill: continue-research
+  route_label: ordinary-research-packet
+  target_derivation_milestone: effective_metric_g_eff
+  milestone_burden: Metric law; choose the smallest source extension with a plausible
+    path to a principal polynomial and operational geometry while keeping only one
+    primary active and one fallback preregistered.
   declared_coverage_ids:
   - V22-R05
   - V22-R08
@@ -890,6 +901,10 @@ items:
     ontology adoption without protected authority. ## P3. Build the local matter-first
     source theory and continuum control'
   implementation_status: pending
+  expected_result_kind: completed_or_precisely_blocked
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  allow_scope_expansion: false
   requires_separate_agentjob: true
   max_outer_agentjobs_per_invocation: 1
   automatic_execution_authorized: false

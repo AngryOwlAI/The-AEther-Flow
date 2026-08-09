@@ -1,0 +1,82 @@
+task_id: "RT-20260809-008"
+task_type: "v22_p2_t03_source_extension_budget_hard_fail_protocol"
+title: "Pre-register the source-extension budget and hard-fail protocol"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "integration_or_selection"
+  milestone: "effective_metric_g_eff"
+  candidate_family: "v22_p2_t03_source_extension_budget_protocol_v1"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "science_draft"
+  scope: "scientific"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+closure_status: "v22_p2_t03_protocol_complete_p2_t04_selected_checkpoint_pending"
+created_at: "2026-08-09T08:40:37Z"
+updated_at: "2026-08-09T08:56:40Z"
+closed_at: "2026-08-09T08:56:40Z"
+parent_task_id: "RT-20260809-007"
+parent_handoff_id: "handoff-0977"
+current_decision_id: "DDR-20260809-008"
+current_job_id: "AJ-RT-20260809-008-001"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260809-008"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal, committed RT-20260809-007 checkpoint, and handoff-0977 authorize exactly one bounded P2-T03 pre-registration packet. No candidate selection, activation, ontology adoption, Gate verdict, external review, reviewer contact, publication, push, or external action is authorized."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  phase_id: "P2"
+  plan_task_id: "P2-T03"
+  recommendation_ids:
+    - "V22-R13"
+  declared_coverage_ids:
+    - "V22-R13"
+    - "S4"
+  sequence_step_ids:
+    - "S4"
+  cross_cutting_directive_ids:
+    - "V22-X02"
+  dependency_task_ids:
+    - "P2-T01"
+objective: "Pre-register exactly three materially distinct source-extension family classes, one-at-a-time activation, append-only failure history, all Gate B criteria and hard-fail triggers, nonrepackaging rules, reopening evidence, and exact scoped terminal wording before any P2-T04 candidate is selected."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Metric law; pre-register a maximum three-family source-extension budget, sequential activation, and scoped hard-fail criteria before candidate selection."
+route_label: "ordinary-research-packet"
+route_strategy_id: "preregister_v22_p2_t03_source_extension_budget_hard_fail_v1"
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-V22-P2-T03-SOURCE-EXTENSION-BUDGET-PROTOCOL-001"
+claim_boundary:
+  allowed_scope: "Task-local draft/control family-equivalence definitions, finite budget state machine, termination and failure-monotonicity results, three inactive family-class slots, Gate B and hard-fail matrices, adversarial fixtures, two internal perspectives, validation, ordinary control-state updates, and one next-route handoff."
+  forbidden_scope: "Concrete candidate selection or activation; fourth family slot; erased failure; target atlas, metric, GR benchmark, or desired-result fit imported into a source definition; canonical ontology or source-law adoption; protected Gate verdict; external specialist review; publication, release, push, global impossibility, or completed derivation."
+  authority_source: "research_control/handoffs/handoff-0977.yaml"
+  boundary_status: "completed"
+completion_contract:
+  exact_preregistered_family_count: 3
+  maximum_material_family_count: 3
+  active_family_limit: 1
+  p2_t03_active_family_count: 0
+  append_only_failure_history: true
+  lawful_overlap_debits_all_implicated_slots: true
+  automatic_budget_growth_forbidden: true
+  gate_b_criterion_count: 8
+  hard_fail_trigger_count: 8
+  scoped_terminal_template_count: 4
+  renamed_or_repackaged_cases_fail_closed: true
+  target_import_and_target_fit_fail_closed: true
+  parent_child_parallel_synthesis_required: true
+  no_unresolved_blocking_parent_conflict: true
+  p2_t04_selection_not_executed: true
+notes: "This task executes only P2-T03. P2-T02 remains externally gated; P2-T04 and every later V22 package remain separate AgentJobs."
