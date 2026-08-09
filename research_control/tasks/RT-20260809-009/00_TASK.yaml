@@ -1,0 +1,88 @@
+task_id: "RT-20260809-009"
+task_type: "v22_p2_t04_primary_fallback_candidate_selection"
+title: "Select one primary local matter-first candidate and one fallback"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "integration_or_selection"
+  milestone: "effective_metric_g_eff"
+  candidate_family: "v22_b1_local_six_field_response_seed_v1"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "science_draft"
+  scope: "scientific"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+closure_status: "v22_p2_t04_primary_fallback_selected_p3_t01_routed_checkpoint_pending"
+created_at: "2026-08-09T09:41:17Z"
+updated_at: "2026-08-09T09:59:45Z"
+closed_at: "2026-08-09T09:59:45Z"
+parent_task_id: "RT-20260809-008"
+parent_handoff_id: "handoff-0978"
+current_decision_id: "DDR-20260809-009"
+current_job_id: "AJ-RT-20260809-009-001"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260809-009"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal, committed RT-20260809-008 checkpoint, and handoff-0978 authorize exactly one bounded P2-T04 selection packet. No scientific activation, canonical ontology or source-law adoption, Gate verdict, external review, reviewer contact, publication, push, or external action is authorized."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  phase_id: "P2"
+  plan_task_id: "P2-T04"
+  recommendation_ids:
+    - "V22-R05"
+    - "V22-R08"
+    - "V22-R09"
+    - "V22-R13"
+  declared_coverage_ids:
+    - "V22-R05"
+    - "V22-R08"
+    - "V22-R09"
+    - "V22-R13"
+    - "S4"
+  sequence_step_ids:
+    - "S4"
+  cross_cutting_directive_ids:
+    - "V22-X03"
+  dependency_task_ids:
+    - "P1-T03"
+    - "P2-T01"
+    - "P2-T03"
+objective: "Choose the smallest admitted source extension with a plausible source-only path to a principal polynomial and operational geometry, select one primary and one exact fallback without parallel scientific activation, leave slot 3 unallocated, and preserve the frozen scalar and graph routes."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Metric law; choose the smallest source extension with a plausible path to a principal polynomial and operational geometry while keeping only one primary route active and one fallback preregistered."
+route_label: "ordinary-research-packet"
+route_strategy_id: "select_v22_p2_t04_primary_and_fallback_candidate_v1"
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-V22-P2-T04-PRIMARY-FALLBACK-SELECTION-001"
+claim_boundary:
+  allowed_scope: "Task-local draft/control descriptors for the B1 primary and B2 fallback, noncompensatory comparison, local rank-two necessary-condition certificate, assumption delta, family identities, frozen-route map, activation handoff, adversarial fixtures, internal perspectives, validation, ordinary control-state updates, and one P3-T01 next-route handoff."
+  forbidden_scope: "Scientific candidate activation; canonical ontology, bundle, or source-law adoption; target atlas, metric, coframe, cone, detector, or GR fit as a premise; automatic fallback activation; third-slot allocation; protected Gate verdict; external review; publication, release, push, global impossibility, or completed derivation."
+  authority_source: "research_control/handoffs/handoff-0978.yaml"
+  boundary_status: "completed"
+completion_contract:
+  selected_primary_candidate_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+  preregistered_fallback_candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  active_program_route_count: 1
+  scientific_candidate_activation_count: 0
+  third_slot_status: "reserved_unallocated"
+  minimum_adequacy_verdict: "necessary_condition_met_not_sufficient"
+  metric_equivalent_input_count: 0
+  gr_target_fit_count: 0
+  frozen_route_count: 2
+  fallback_automatic_activation: false
+  parent_child_parallel_synthesis_required: true
+  no_unresolved_blocking_parent_conflict: true
+  p3_t01_activation_not_executed: true
+notes: "This task executes only P2-T04. P2-T02 remains external-review/contact gated; P3-T01 and every later V22 package remain separate AgentJobs."

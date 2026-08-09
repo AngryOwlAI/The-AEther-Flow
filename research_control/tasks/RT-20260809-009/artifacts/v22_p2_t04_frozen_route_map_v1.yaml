@@ -1,0 +1,36 @@
+schema_id: "v22_p2_t04_frozen_route_map_v1"
+status: "draft/control"
+authority: "science_draft"
+plan_task_id: "P2-T04"
+
+frozen_routes:
+  - route_id: "FROZEN-V22-SCALAR-AMPLITUDE-FACTOR-THROUGH"
+    source_basis: "V22-P2-T01-P5-SCALAR-AMPLITUDE-COROLLARY-V1"
+    freeze_reason: "rank at most one on the exact quotient-local factor-through route; insufficient for any fully typed requirement with n at least 2"
+    preserved_status: "frozen_negative"
+    selected_candidate_repackages_route: false
+    reopening_requires:
+      - "materially new source channels"
+      - "changed factor statistic with explicit assumption delta"
+      - "fresh source-operational typing"
+  - route_id: "FROZEN-V22-UNCHANGED-FINITE-GRAPH-DECODER"
+    source_basis: "V22-X03 and P1-T04 downstream lock"
+    freeze_reason: "unchanged finite decoder supplies no controlled continuum, new source information, or target-free principal reconstruction"
+    preserved_status: "frozen_negative"
+    selected_candidate_repackages_route: false
+    reopening_requires:
+      - "materially new indexed source family"
+      - "refinement maps, topology or norm, error and boundary estimates"
+      - "principal and signature preservation proof"
+      - "independent material-distinctness review and explicit third-slot decision"
+
+selection_checks:
+  primary_is_not_scalar_repackaging: true
+  fallback_is_not_unchanged_graph_decoder: true
+  third_slot_not_allocated_to_frozen_route: true
+  family_identity_ambiguity_count: 0
+
+authority_limits:
+  frozen_negative_means_global_no_go: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false

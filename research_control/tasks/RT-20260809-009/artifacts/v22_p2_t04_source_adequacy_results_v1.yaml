@@ -1,0 +1,51 @@
+schema_id: "v22_p2_t04_source_adequacy_results_v1"
+status: "draft/control"
+authority: "science_draft"
+plan_task_id: "P2-T04"
+checklist_id: "v22_p2_t01_source_adequacy_checklist_v1"
+
+results:
+  - candidate_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+    verdict: "necessary_condition_met_not_sufficient"
+    source_state_and_domain: "complete for one rank-two regular first-jet patch"
+    regularity: "complete for the declared patch with explicit singular strata"
+    source_equivalence: "source-chart vertical directions declared"
+    output_equivalence: "ordered token pair has no output redundancy"
+    reconstruction: "R_B1 = (logistic(q1/q6), logistic(q2/q6))"
+    factor_statistic: "I_B1 = (q1/q6, q2/q6)"
+    computed_capacity_rank: 2
+    required_response_rank: 2
+    operational_typing: "two proposal-only dimensionless P7-token bridges specified with domains, invariant readouts, and falsifiers"
+    independence: "d(q1/q6) wedge d(q2/q6) nonzero and logistic derivatives nonzero"
+    stochastic_scope: "source-independent Bernoulli postprocessing after I_B1; no hidden source channel"
+    escape_and_global_scope: "local regular patch only; singular, gluing, scale, and geometry burdens remain open"
+    sufficient_for_geometry: false
+    gate_b_credit: false
+  - candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+    verdict: "outside_differential_scope"
+    source_state_and_domain: "exact finite P7 state only"
+    regularity: "no continuum differential state yet"
+    source_equivalence: "finite P7 relabeling only"
+    output_equivalence: "finite protocol equivalence only"
+    reconstruction: "not constructed"
+    factor_statistic: "finite P7 records"
+    computed_capacity_rank: 0
+    required_response_rank: 0
+    operational_typing: "finite source-operational meanings present; continuum target typing absent"
+    independence: "not evaluated"
+    stochastic_scope: "exact finite transition kernel only"
+    escape_and_global_scope: "requires explicit continuum lift before differential adequacy evaluation"
+    sufficient_for_geometry: false
+    gate_b_credit: false
+
+minimum_screen_summary:
+  primary_clears_minimum_screen: true
+  fallback_clears_minimum_screen: false
+  fallback_may_be_preregistered_inactive: true
+  no_candidate_claims_geometry_sufficiency: true
+  no_candidate_claims_gate_b: true
+
+authority_limits:
+  theorem_truth_promoted: false
+  external_review_completed: false
+  physics_promotion_authorized: false

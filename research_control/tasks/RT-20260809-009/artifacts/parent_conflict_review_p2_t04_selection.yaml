@@ -1,0 +1,49 @@
+schema_id: "v22_p2_t04_parent_conflict_review_v1"
+status: "resolved"
+authority: "task_local_synthesis_control"
+task_id: "RT-20260809-009"
+agent_job_id: "AJ-RT-20260809-009-001"
+resolution_rounds: 1
+
+conflicts:
+  - conflict_id: "CONFLICT-P2T04-001"
+    source_a: "P2-T04 acceptance says one and only one primary is active."
+    source_b: "The newer checkpointed P2-T03 state machine separates SELECT_PRIMARY_AND_FALLBACK from ACTIVATE_PRIMARY."
+    resolution: "Exactly one program route is active after selection, zero scientific candidates are activated, and P3-T01 alone may execute ACTIVATE_PRIMARY."
+    precedence_basis: "handoff-0978 and the P2-T03 protocol are the live implementation authority for the plan wording."
+    status: "resolved"
+  - conflict_id: "CONFLICT-P2T04-002"
+    source_a: "The primary must be matter-first."
+    source_b: "The exact P7 package is only finite conditional input and cannot be promoted to continuum matter."
+    resolution: "B1 uses two explicitly proposal-only P7 response-token bridges while keeping the six-field continuum source state distinct from P7 and from target matter."
+    precedence_basis: "P1-T03 conditional-input contract and V22-X05."
+    status: "resolved"
+  - conflict_id: "CONFLICT-P2T04-003"
+    source_a: "A smallest extension is preferred."
+    source_b: "The six-field bundle carries more explicit primitive cost than the incomplete B2 fallback."
+    resolution: "Minimality is noncompensatory and burden-relative: B1 is the smallest compared packet that has native continuum locality, rank-two adequacy, and a direct principal calculation target without metric debt."
+    precedence_basis: "minimum adequacy and dependency readiness outrank a scalar assumption count."
+    status: "resolved"
+  - conflict_id: "CONFLICT-P2T04-004"
+    source_a: "The B1 determinant offers a plausible path to geometry."
+    source_b: "Principal-polynomial language can smuggle the desired Lorentzian cone."
+    resolution: "Only det(K(x,q,xi)) is declared; its coefficients, factorization, hyperbolicity, signature, cone selection, stability, and universality are open fail-closed burdens."
+    precedence_basis: "source-only construction and hard-fail rules."
+    status: "resolved"
+  - conflict_id: "CONFLICT-P2T04-005"
+    source_a: "The fallback should be objective and ready."
+    source_b: "B2 currently has no continuum differential object."
+    resolution: "B2 is preregistered by exact identity but remains ineligible for activation until a continuum-lift descriptor and reevaluated adequacy result exist after an append-only B1 termination."
+    precedence_basis: "no automatic activation and fail-closed adequacy."
+    status: "resolved"
+
+unresolved_conflicts: []
+blocking_conflict_count: 0
+fusion_authorized: true
+
+authority_limits:
+  conflict_resolution_is_external_review: false
+  protected_human_selection_required_now: false
+  candidate_activation_authorized: false
+  proof_authority: false
+  physics_promotion_authorized: false

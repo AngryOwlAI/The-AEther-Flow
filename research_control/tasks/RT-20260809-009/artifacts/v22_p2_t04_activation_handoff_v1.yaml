@@ -1,0 +1,48 @@
+schema_id: "v22_p2_t04_activation_handoff_v1"
+status: "draft/control"
+authority: "science_draft"
+handoff_id: "V22-P2-T04-TO-P3-T01-ACTIVATION-HANDOFF-V1"
+selected_primary_candidate_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+selected_primary_family_id: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+preregistered_fallback_candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+preregistered_fallback_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+third_slot_status: "reserved_unallocated"
+
+current_state:
+  selected_primary_program_route_count: 1
+  scientific_candidate_activation_count: 0
+  active_source_extension_count: 0
+  fallback_active: false
+  third_slot_allocated: false
+  gate_b_status: "NOT_READY"
+
+next_transition:
+  transition_id: "ACTIVATE_PRIMARY"
+  executing_plan_task_id: "P3-T01"
+  role_family: "candidate-constructor@0.2.0"
+  supporting_perspective: "ontology-formalizer@0.2.0"
+  objective: "Define the exact B1 local source state, domains, restrictions, gluing, variations, boundary data, and source symmetries while preserving the selected fingerprint and all target-import blocks."
+  preconditions:
+    - "P2-T04 checkpoint succeeds"
+    - "B1 identity and assumption delta remain exact"
+    - "zero other active candidate"
+    - "complete P3-T01 test plan and no-target-import receipt"
+  activation_effect: "B1 becomes the sole active candidate research packet; this is not source-law or ontology adoption"
+
+primary_termination_and_fallback_rule:
+  primary_hard_fail_source: "V22-P2-T03-GATE-B-HARD-FAIL-MATRIX-V1"
+  append_only_failure_required: true
+  automatic_fallback_activation: false
+  fresh_selector_required: true
+  fallback_exact_identity_required: true
+  fallback_additional_preconditions:
+    - "continuum lift constructed"
+    - "sector equations and reduced common-principal target declared"
+    - "P2-T01 adequacy reevaluated"
+    - "zero target metric or desired GR cone import"
+
+authority_limits:
+  activation_executed_here: false
+  source_extension_adopted: false
+  canonical_ontology_modified: false
+  physics_promotion_authorized: false

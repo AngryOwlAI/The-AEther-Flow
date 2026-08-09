@@ -1,0 +1,138 @@
+schema_id: "v22_p2_t04_candidate_comparison_selection_v1"
+status: "draft/control"
+authority: "science_draft"
+decision_id: "V22-P2-T04-PRIMARY-FALLBACK-SELECTION-V1"
+plan_task_id: "P2-T04"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Metric law; choose the smallest source extension with a plausible path to a principal polynomial and operational geometry while keeping only one primary route active and one fallback preregistered."
+
+selection_method:
+  order:
+    - "family identity and budget admission"
+    - "hard-fail precheck"
+    - "P2-T01 minimum source-adequacy screen"
+    - "target-import and assumption-cost audit"
+    - "noncompensatory comparison vector"
+    - "minimality and dependency decision"
+  vector_dimensions:
+    - "information_capacity"
+    - "no_hidden_metric_debt"
+    - "universality_path"
+    - "calculability"
+    - "falsifiability"
+    - "continuum_control"
+    - "difference_from_frozen_routes"
+    - "assumption_cost"
+  scalar_total_used: false
+  target_agreement_used_as_merit: false
+  gr_benchmark_used_as_merit: false
+
+candidate_rows:
+  - candidate_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+    family_id: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+    family_slot: 1
+    descriptor_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_primary_local_multifield_candidate_v1.yaml"
+    budget_admission: "PASS"
+    hard_fail_precheck: "PASS_NO_TRIGGER_ESTABLISHED_WITH_OPEN_LATER_TESTS"
+    adequacy_result: "necessary_condition_met_not_sufficient"
+    vector:
+      information_capacity: 4
+      no_hidden_metric_debt: 4
+      universality_path: 3
+      calculability: 3
+      falsifiability: 4
+      continuum_control: 3
+      difference_from_frozen_routes: 4
+      assumption_cost: 2
+    disposition: "selected_primary_for_p3_construction"
+    rationale: "Only row with native continuum locality, explicit rank-two source-response certificate, direct principal-polynomial calculation target, and no target metric premise."
+  - candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+    family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+    family_slot: 2
+    descriptor_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_fallback_matter_principal_candidate_v1.yaml"
+    budget_admission: "PASS"
+    hard_fail_precheck: "PASS_NO_TRIGGER_ESTABLISHED_WITH_OPEN_LATER_TESTS"
+    adequacy_result: "outside_differential_scope"
+    vector:
+      information_capacity: 2
+      no_hidden_metric_debt: 4
+      universality_path: 3
+      calculability: 2
+      falsifiability: 3
+      continuum_control: 1
+      difference_from_frozen_routes: 4
+      assumption_cost: 1
+    disposition: "preregistered_fallback_inactive"
+    rationale: "Exact P7 operational and sector content is valuable, but a continuum lift and common principal structure must exist before activation."
+  - candidate_id: "UNALLOCATED"
+    family_id: "FAM-V22-B3-CONTROLLED-DISCRETE-CONTINUUM"
+    family_slot: 3
+    descriptor_path: ""
+    budget_admission: "RESERVED"
+    hard_fail_precheck: "NOT_EVALUATED"
+    adequacy_result: "NOT_EVALUATED"
+    vector:
+      information_capacity: 0
+      no_hidden_metric_debt: 0
+      universality_path: 0
+      calculability: 0
+      falsifiability: 0
+      continuum_control: 0
+      difference_from_frozen_routes: 0
+      assumption_cost: 0
+    disposition: "reserved_unallocated"
+    rationale: "No qualifying independent review or explicit program decision allocates the third slot; the unchanged finite graph-decoder route remains frozen."
+
+selection_result:
+  selected_primary_candidate_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+  selected_primary_family_id: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+  preregistered_fallback_candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  preregistered_fallback_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  third_family_id: "FAM-V22-B3-CONTROLLED-DISCRETE-CONTINUUM"
+  third_slot_status: "reserved_unallocated"
+  selected_primary_program_route_count: 1
+  scientific_candidate_activation_count: 0
+  concurrent_candidate_count: 0
+  selection_complete: true
+  candidate_execution_complete: false
+  gate_b_status: "NOT_READY"
+
+selection_activation_distinction:
+  selected_primary_is_sole_active_program_route: true
+  selected_primary_is_adopted_source_law: false
+  selected_primary_is_scientifically_activated: false
+  activation_authority: "separate P3-T01 candidate-construction AgentJob under the P2-T03 state machine"
+  rationale: "The checkpointed P2-T03 protocol separates SELECT_PRIMARY_AND_FALLBACK from ACTIVATE_PRIMARY; this selector executes only the former and routes the latter."
+
+minimal_sufficiency_not_familiarity:
+  evidence:
+    - "rank-two quotient statistic and source-response bridge are explicit rather than inferred from six written components"
+    - "principal polynomial is a calculable determinant target of source-local first-order equations rather than an imported Lorentzian form"
+    - "six scalar fields avoid pre-installing metric-equivalent tensor data while leaving enough local capacity for later typed probes"
+    - "every stronger physical requirement remains an open fail-closed burden"
+  familiarity_or_target_fit_basis_used: false
+
+theoretical_decision_output:
+  selected_next_packet_type: "source_extension_candidate"
+  decision_basis: "The B1 candidate is the only admissible packet with native continuum locality, an explicit minimum source-adequacy certificate, a direct principal-polynomial target, and no target-metric premise; B2 remains an objective fallback after continuum construction."
+  theoretical_method: "noncompensatory family-admission, quotient-capacity, target-import, assumption-delta, and construction-dependency comparison"
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "No human gate is required to construct or test the proposal-only B1 packet; any canonical ontology or source-law adoption remains separately human-gated."
+  source_extension_category: "local_multi_field_continuum_dynamics"
+  source_extension_import_classification: "new_ontology_primitive_candidate"
+  next_execution_role_family: "candidate-constructor@0.2.0"
+  next_supporting_perspective: "ontology-formalizer@0.2.0"
+  next_plan_task_id: "P3-T01"
+
+authority_limits:
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  candidate_selected: true
+  source_extension_adopted: false
+  canonical_ontology_modified: false
+  effective_metric_constructed_or_adopted: false
+  gate_b_verdict_issued: false
+  physics_promotion_authorized: false
+  proof_authority: false

@@ -1,0 +1,196 @@
+schema_id: "v22_p2_t04_primary_local_multifield_candidate_v1"
+status: "draft/control"
+authority: "science_draft"
+candidate_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+candidate_title: "Local six-field source response seed"
+plan_task_id: "P2-T04"
+family_id: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+family_slot: 1
+selection_role: "primary"
+selection_status: "selected_for_next_construction"
+program_route_active: true
+scientific_candidate_activated: false
+source_extension_adopted: false
+candidate_identity_basis: "CAND-V22-B1|six source-scalar sections on the primitive smooth source arena|first-jet quasilinear source equations with source-covariant coefficient map|degree-six reduced principal-polynomial target|two dimensionless P7-token response channels with rank-two local certificate|no metric coframe cone target atlas detector or GR-fit premise"
+candidate_identity_sha256: "32110632f8832091d69ca52e96dfdf99c26087bfc75575b77a466631eca9d051"
+
+source_state_and_domain:
+  source_arena_symbol: "A"
+  source_arena_status: "existing canonical primitive debt; not physical spacetime"
+  source_arena_dimension: 4
+  field_bundle_symbol: "E_B1 = A x R^6"
+  field_bundle_status: "proposal-only new ontology primitive candidate"
+  local_state_symbol: "q = (q^1,...,q^6)"
+  local_state_kind: "six smooth source-scalar sections"
+  finite_jet_order: 1
+  local_domain: "one open source patch U subset A"
+  candidate_output_patch: "two-channel dimensionless response patch Y_B1 subset (0,1)^2"
+
+regularity:
+  field_regularities:
+    q: "C2 on U"
+    K: "C1 in q and smooth in source position"
+    F: "C1 in q and smooth in source position"
+  constant_rank_patch:
+    condition: "q^6 is nonzero and d(q^1/q^6) and d(q^2/q^6) are linearly independent on the tested quotient tangent"
+    singular_strata:
+      - "q^6 = 0"
+      - "rank dI_B1 < 2"
+      - "principal determinant identically zero"
+    disposition: "excluded from the rank-two certificate and separately testable; never silently regularized"
+
+locality:
+  class: "source-local first-jet continuum"
+  dependence: "equations at x use x, q(x), and first derivatives at x only"
+  target_causal_locality_claimed: false
+  physical_propagation_locality_claimed: false
+
+symmetry_and_equivalence:
+  source_redundancy: "smooth source-chart relabeling only"
+  internal_gauge_assumed: false
+  output_redundancy: "none for the ordered two-token probability pair"
+  quotient_source_tangent: "Q_src = T(J1 E_B1) modulo source-chart vertical directions"
+  quotient_output_tangent: "Q_out = T Y_B1"
+  representative_selection_required: false
+
+dynamics:
+  equation_symbol: "K_A^{B mu}(x,q) partial_mu q^B = F_A(x,q), A=1,...,6"
+  coefficient_map_type: "K(x,q): T_x^* A tensor R^6 -> R^6"
+  source_law_status: "proposal-only; exact coefficients are a P3-T02 burden"
+  metric_used_to_contract_derivatives: false
+  connection_used: false
+  volume_or_measure_used: false
+  initial_value_or_evolution_claimed: false
+  constraints_and_reduction: "no gauge constraints in the seed; any discovered algebraic constraints must be reduced before principal analysis"
+
+expected_principal_structure:
+  covector_symbol: "xi in T_x^* A"
+  principal_symbol: "P_B1(x,q,xi)_A^B = K_A^{B mu}(x,q) xi_mu"
+  principal_polynomial: "mathcal P_B1(x,q,xi) = det P_B1(x,q,xi)"
+  homogeneous_degree: 6
+  derivation_status: "structural target only; coefficients, reduction, hyperbolicity, cone stability, and universality remain unproved"
+  target_metric_used_to_choose_polynomial: false
+
+source_operational_interface:
+  exact_conditional_input: "P7-CONDITIONAL-INPUT-CONTRACT-V1"
+  response_channels:
+    - channel_id: "B1-READOUT-01"
+      invariant_statistic: "O1 = q^1/q^6"
+      source_device_bridge: "proposal-only P7 binary response token with probability p1 = logistic(O1)"
+      scale_and_units: "dimensionless ratio"
+      domain: "q^6 nonzero and 0 < p1 < 1"
+      invariant_readout: "ordered probability of the exact P7 success token under source-chart relabeling"
+      falsifier: "the response kernel is not Bernoulli with parameter logistic(O1), or dp1 vanishes on the claimed direction"
+    - channel_id: "B1-READOUT-02"
+      invariant_statistic: "O2 = q^2/q^6"
+      source_device_bridge: "proposal-only P7 binary response token with probability p2 = logistic(O2)"
+      scale_and_units: "dimensionless ratio"
+      domain: "q^6 nonzero and 0 < p2 < 1"
+      invariant_readout: "ordered probability of the exact P7 failure token under source-chart relabeling"
+      falsifier: "the response kernel is not Bernoulli with parameter logistic(O2), or dp2 is dependent on dp1"
+  source_independent_postprocessing_after_statistic: true
+  target_clock_rod_detector_or_location_semantics_claimed: false
+
+source_adequacy_screen:
+  checklist_id: "v22_p2_t01_source_adequacy_checklist_v1"
+  reconstruction_map: "R_B1 maps the source quotient patch to the ordered pair (p1,p2)"
+  factor_statistic: "I_B1 = (O1,O2)"
+  computed_capacity_rank: 2
+  required_response_rank: 2
+  independence_witness: "dO1 wedge dO2 is nonzero on the declared regular patch; logistic derivatives are nonzero for interior probabilities"
+  stochastic_scope: "two conditionally independent Bernoulli response tokens with no additional source-dependent latent parameter"
+  theorem_result: "necessary_condition_met_not_sufficient"
+  exact_scope: "rank-two source-response seed only"
+  geometry_sufficiency_claimed: false
+  gate_b_credit_claimed: false
+  unresolved_fields:
+    - "full six-channel physical typing"
+    - "principal-symbol coefficient construction"
+    - "hyperbolicity and one stable Lorentzian cone"
+    - "universal matter compatibility"
+    - "operational physical scale"
+    - "tensorial gluing"
+    - "variation and coarse-graining robustness"
+
+continuum_and_refinement:
+  continuum_status: "native smooth-source candidate"
+  discrete_refinement_required_for_family_identity: false
+  convergence_claimed: false
+  boundary_control_claimed: false
+
+assumption_delta:
+  - assumption_id: "B1-A01"
+    assumption: "a trivial rank-six source-scalar bundle over the existing primitive source arena"
+    class: "new_ontology_primitive_candidate"
+  - assumption_id: "B1-A02"
+    assumption: "a source-covariant first-jet quasilinear coefficient map K and source term F"
+    class: "new_ontology_primitive_candidate"
+  - assumption_id: "B1-A03"
+    assumption: "two proposal-only P7-token response bridges depending only on dimensionless source ratios"
+    class: "new_ontology_primitive_candidate"
+  - assumption_id: "B1-A04"
+    assumption: "rank-two regularity on the selected local patch"
+    class: "candidate_domain_restriction"
+
+selection_vector:
+  scale: "0 unavailable; 1 weak; 2 bounded; 3 strong; 4 strongest within compared packets"
+  information_capacity: 4
+  no_hidden_metric_debt: 4
+  universality_path: 3
+  calculability: 3
+  falsifiability: 4
+  continuum_control: 3
+  difference_from_frozen_routes: 4
+  assumption_cost: 2
+  aggregation_rule: "noncompensatory vector; no scalar total"
+
+minimality_rationale:
+  - "six scalar channels add explicit local source capacity without assuming a metric-bearing tensor, coframe, connection, or target cone"
+  - "the first-order coefficient map supplies a direct principal-polynomial calculation target without importing the desired polynomial"
+  - "the rank-two token interface is the smallest explicit certificate that escapes the frozen one-amplitude rank-one obstruction"
+  - "the candidate postpones rather than assumes hyperbolicity, scale, gluing, and physical geometry"
+
+hard_fail_precheck:
+  triggered_ids: []
+  not_yet_evaluable_ids:
+    - "HF04_NONUNIVERSAL_OR_UNSELECTED_MULTICONE"
+    - "HF05_INSTABILITY_NONHYPERBOLICITY_DEGENERACY"
+    - "HF06_NO_CONTROLLED_CONTINUUM_LIMIT"
+  pass_is_gate_verdict: false
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+  item_source_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_primary_local_multifield_candidate_v1.yaml"
+  item_kind: "source_extension_candidate"
+  classification: "new_ontology_primitive_candidate"
+  relation_to_current_ontology: "missing_primitive"
+  protected_authority_required: false
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "proposal-only local multi-field primary selected for bounded P3 construction"
+  forbidden_overreads:
+    - "source-law or ontology adoption"
+    - "effective metric construction"
+    - "Gate B passage"
+    - "matter coupling or Einstein equations"
+    - "benchmark promotion or completed derivation"
+  next_route_if_blocked: "P3-T01 candidate construction or append-only primary termination followed by fresh fallback decision"
+
+activation_boundary:
+  selected_as_primary: true
+  sole_active_program_route: true
+  candidate_activation_requires_separate_agentjob: true
+  candidate_activation_authorized_here: false
+  canonical_adoption_authorized_here: false
+  next_plan_task_id: "P3-T01"
+
+authority_limits:
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  source_extension_adopted: false
+  effective_metric_constructed_or_adopted: false
+  gate_b_verdict_issued: false
+  proof_authority: false
+  physics_promotion_authorized: false

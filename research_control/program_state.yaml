@@ -1,12 +1,120 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260809-008"
-active_agent_job_id: "AJ-RT-20260809-008-001"
-latest_handoff_id: "handoff-0978"
-current_status: "v22_p2_t03_protocol_complete_p2_t04_selected_checkpoint_pending"
-claim_boundary_summary: "RT-20260809-008 fixes exactly three inactive prospective source-extension family classes, one active primary limit, all-slot overlap debit, append-only failure history, all eight Gate B criteria, all eight hard-fail triggers, and four scoped terminal templates before candidate results. Thirty adversarial cases and 67 focused checks pass. No candidate is selected or activated, no source extension is adopted, and Gate B and Distance-to-GR status are unchanged. P2-T04 is selected but unexecuted; P2-T02 remains externally gated."
-next_plan_task_id: "P2-T04"
+active_task_id: "RT-20260809-009"
+active_agent_job_id: "AJ-RT-20260809-009-001"
+latest_handoff_id: "handoff-0979"
+current_status: "v22_p2_t04_primary_fallback_selected_p3_t01_routed_checkpoint_pending"
+claim_boundary_summary: "RT-20260809-009 selects B1 as the sole active program route, B2 as the exact inactive fallback, and leaves B3 unallocated. B1 clears only a local rank-two necessary response screen. Scientific activation remains zero; no source extension, metric, Gate result, external review, or Distance-to-GR delta occurs. P3-T01 is selected but unexecuted; P2-T02 remains externally gated."
+next_plan_task_id: "P3-T01"
 next_worker_skill: "continue-research"
-next_recommended_action: "After the single governed checkpoint for AJ-RT-20260809-008-001 execute exactly one separately admitted V22 P2-T04 theoretical-continuation-selector AgentJob to compare source-side bridge candidate packets, select one primary and one fallback, leave the third slot unallocated, and preserve every adoption and protected-authority block."
+next_recommended_action: "After the single governed checkpoint for AJ-RT-20260809-009-001 execute exactly one separately admitted V22 P3-T01 candidate-constructor AgentJob with an ontology-formalizer perspective to define and activate only the sealed B1 local source state and operational syntax without canonical ontology adoption."
+
+v22_p2_t04_primary_fallback_selection:
+  task_id: "RT-20260809-009"
+  parent_task_id: "RT-20260809-008"
+  parent_handoff_id: "handoff-0978"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P2-T04"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P3-T01"
+  claim_boundary_id: "CB-V22-P2-T04-PRIMARY-FALLBACK-SELECTION-001"
+  status: "PASS_V22_P2_T04_PRIMARY_FALLBACK_SELECTION"
+  work_item_status: "completed_checkpoint_pending"
+  route_label: "ordinary-research-packet"
+  selected_role_family: "theoretical-continuation-selector@0.1.0"
+  supporting_perspective: "smuggling-auditor@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "select_v22_p2_t04_primary_and_fallback_candidate_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Metric law; one source-only B1 construction route is selected, but no source law, physical principal polynomial, operational geometry, or effective metric is constructed or adopted."
+  source_head: "ad006a7562aabe360469c1f83a32e9c7febc4115"
+  source_tree: "7835142c8d831af1ea6602dbde5dd5273ca687e9"
+  agent_job_id: "AJ-RT-20260809-009-001"
+  decision_id: "DDR-20260809-009"
+  execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260809-009"
+  source_handoff_id: "handoff-0978"
+  source_handoff_path: "research_control/handoffs/handoff-0978.yaml"
+  source_handoff_sha256: "13dca24ba535b09c98dfdfa9eb7886015b1b3b613a7249041802e29ea3db64bf"
+  prior_checkpoint_commit: "ad006a7562aabe360469c1f83a32e9c7febc4115"
+  prior_checkpoint_job_id: "AJ-RT-20260809-008-001"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "169b65d8ce82d0545650163c65eff341a4e984206c86929bf44229363b34b939"
+  fused_selection_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_primary_fallback_selection_v1.tex"
+  fused_selection_sha256: "401d61983df0032bb1da92f786941f089f92da280180bff25409161864e8b031"
+  primary_candidate_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_primary_local_multifield_candidate_v1.yaml"
+  primary_candidate_sha256: "5d8a332c6aa05d85260a14af777a1d3f43015ba48980493acfa4c584bec75132"
+  fallback_candidate_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_fallback_matter_principal_candidate_v1.yaml"
+  fallback_candidate_sha256: "11917a5c868b6ed50633e1b7528b59079db40f10c003c32176d1887df5dae6e5"
+  comparison_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_candidate_comparison_selection_v1.yaml"
+  comparison_sha256: "87376f615ef09ac536026cab34a95b5d0289d7a78305e28aa626cb3e5e55acf1"
+  activation_handoff_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_activation_handoff_v1.yaml"
+  activation_handoff_sha256: "4fddf53e2f072825081c0412023a6ce5ce24f633e6f6b6464e81606143ab1fc0"
+  fixture_path: "research_control/tasks/RT-20260809-009/artifacts/fixtures/v22_p2_t04_selection_adversarial_cases.yaml"
+  fixture_sha256: "d3b72a212ae33aa18be522121fdd747acf8746d3968ee7fb0fe4449d6282658b"
+  validation_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_selection_validation.json"
+  validation_sha256: "bebceb6b5d4bf876aa2ca8c6ffdebcc5ea4eb396bb1071936a1a47dbb3ad2bb4"
+  compact_receipt_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_compact_receipt.json"
+  compact_receipt_sha256: "a366fda62f9cb4bb31d5161c4819279075d4f21d2b3da4b725bf3038bf9fdd28"
+  completion_path: "research_control/tasks/RT-20260809-009/jobs/completions/AJC-AJ-RT-20260809-009-001.yaml"
+  completion_sha256: "7be3d3930f24aa6ba35f0131bf792fbdb386a5475e843883df999c1fc1845fae"
+  handoff_id: "handoff-0979"
+  handoff_path: "research_control/handoffs/handoff-0979.yaml"
+  handoff_sha256: "8cf1a9a5f17ba985c7200ad13223752ac7d7ff1e140f41c747d7ae808ed91957"
+  selected_primary_candidate_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+  selected_primary_candidate_identity_sha256: "32110632f8832091d69ca52e96dfdf99c26087bfc75575b77a466631eca9d051"
+  preregistered_fallback_candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  preregistered_fallback_candidate_identity_sha256: "9d8691e21e36bac63185d4ee6bf530f768e5952d202bc4dea374d9cc4aead8eb"
+  active_program_route_count: 1
+  scientific_candidate_activation_count: 0
+  third_slot_status: "reserved_unallocated"
+  primary_capacity_rank: 2
+  primary_required_response_rank: 2
+  primary_adequacy_verdict: "necessary_condition_met_not_sufficient"
+  fallback_adequacy_verdict: "outside_differential_scope"
+  fixture_case_count: 30
+  fixture_failure_count: 0
+  focused_check_count: 78
+  focused_check_failure_count: 0
+  resolved_parent_conflict_count: 5
+  p2_t04_executed: true
+  p3_t01_selected: true
+  p3_t01_executed: false
+  v22_p2_t02_external_review_completed: false
+  canonical_science_modified: false
+  source_extension_adopted: false
+  canonical_ontology_modified: false
+  effective_metric_constructed_or_adopted: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  protected_gate_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  reviewer_contact_authorized: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P3-T01"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P3-T01"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_supporting_perspective: "ontology-formalizer@0.2.0"
+  selected_next_packet_type: "source_extension_candidate"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "construct_v22_p3_t01_b1_local_state_and_operational_syntax_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  p2_t02_not_selected_reason: "External specialist review requires reviewer-contact authority; internal same-context review does not satisfy P2-T02."
+  successor_requested: false
 
 v22_p2_t03_source_extension_budget_hard_fail_protocol:
   task_id: "RT-20260809-008"

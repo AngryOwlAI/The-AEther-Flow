@@ -1,0 +1,152 @@
+schema_id: "v22_p2_t04_selection_adversarial_cases_v1"
+status: "completed"
+authority: "task_local_validation_fixture"
+case_count: 30
+cases:
+  - case_id: "SEL-001"
+    primary_selected: true
+    fallback_selected: true
+    third_slot_allocated: false
+    active_program_routes: 1
+    scientific_activations: 0
+    expected: "PASS_SELECTION"
+  - case_id: "SEL-002"
+    primary_selected: false
+    fallback_selected: true
+    third_slot_allocated: false
+    active_program_routes: 0
+    scientific_activations: 0
+    expected: "REJECT_MISSING_PRIMARY"
+  - case_id: "SEL-003"
+    primary_selected: true
+    fallback_selected: false
+    third_slot_allocated: false
+    active_program_routes: 1
+    scientific_activations: 0
+    expected: "REJECT_MISSING_FALLBACK"
+  - case_id: "SEL-004"
+    primary_selected: true
+    fallback_selected: true
+    third_slot_allocated: true
+    active_program_routes: 1
+    scientific_activations: 0
+    expected: "REJECT_THIRD_SLOT_ALLOCATION"
+  - case_id: "SEL-005"
+    primary_selected: true
+    fallback_selected: true
+    third_slot_allocated: false
+    active_program_routes: 2
+    scientific_activations: 0
+    expected: "REJECT_PARALLEL_PROGRAM_ROUTES"
+  - case_id: "SEL-006"
+    primary_selected: true
+    fallback_selected: true
+    third_slot_allocated: false
+    active_program_routes: 1
+    scientific_activations: 1
+    expected: "REJECT_PREMATURE_SCIENTIFIC_ACTIVATION"
+  - case_id: "IMP-001"
+    target_metric_imported: true
+    expected: "HARD_FAIL_TARGET_IMPORT"
+  - case_id: "IMP-002"
+    target_coframe_imported: true
+    expected: "HARD_FAIL_TARGET_IMPORT"
+  - case_id: "IMP-003"
+    gr_target_fit_used: true
+    expected: "HARD_FAIL_GR_TARGET_FIT"
+  - case_id: "IMP-004"
+    target_observable_labels_by_fiat: true
+    expected: "HARD_FAIL_OBSERVABLE_FIAT"
+  - case_id: "FRZ-001"
+    scalar_amplitude_repackaged: true
+    expected: "HARD_FAIL_FROZEN_ROUTE_REPACKAGED"
+  - case_id: "FRZ-002"
+    unchanged_graph_decoder_repackaged: true
+    expected: "HARD_FAIL_FROZEN_ROUTE_REPACKAGED"
+  - case_id: "ADQ-001"
+    primary_capacity_rank: 1
+    required_response_rank: 2
+    expected: "REJECT_INADEQUATE_PRIMARY"
+  - case_id: "ADQ-002"
+    primary_capacity_rank: 2
+    required_response_rank: 2
+    expected: "PASS_MINIMUM_ADEQUACY_ONLY"
+  - case_id: "ADQ-003"
+    fallback_continuum_state_present: false
+    differential_adequacy_claimed: true
+    expected: "REJECT_FALLBACK_SCOPE_OVERREACH"
+  - case_id: "FBK-001"
+    fallback_autoactivation: true
+    expected: "REJECT_AUTOMATIC_FALLBACK"
+  - case_id: "FBK-002"
+    fallback_activation_requested: true
+    primary_terminated: false
+    expected: "REJECT_FALLBACK_WITHOUT_PRIMARY_TERMINATION"
+  - case_id: "FBK-003"
+    fallback_activation_requested: true
+    primary_terminated: true
+    exact_fallback_identity: false
+    expected: "REJECT_FALLBACK_IDENTITY_DRIFT"
+  - case_id: "FBK-004"
+    fallback_activation_requested: true
+    primary_terminated: true
+    exact_fallback_identity: true
+    continuum_lift_present: true
+    adequacy_reevaluated: true
+    fresh_selector_decision: true
+    expected: "PASS_FALLBACK_ELIGIBILITY_NOT_ACTIVATION"
+  - case_id: "IDN-001"
+    family_name_changed_only: true
+    material_difference_proved: false
+    expected: "REJECT_RENAMED_FAMILY"
+  - case_id: "IDN-002"
+    b3_descriptor_present: false
+    third_slot_allocated: false
+    expected: "PASS_B3_RESERVED_UNALLOCATED"
+  - case_id: "AUT-001"
+    protected_p7_postulate_used_as_gate_credit: true
+    expected: "REJECT_PROTECTED_POSTULATE_LAUNDERING"
+  - case_id: "PRI-001"
+    determinant_of_source_coefficient_matrix: true
+    desired_lorentzian_factor_imposed: false
+    expected: "PASS_STRUCTURAL_PRINCIPAL_TARGET_ONLY"
+  - case_id: "PRI-002"
+    determinant_of_source_coefficient_matrix: true
+    desired_lorentzian_factor_imposed: true
+    expected: "HARD_FAIL_TARGET_IMPORT"
+  - case_id: "REV-001"
+    internal_review_claimed_external: true
+    expected: "REJECT_INTERNAL_AS_EXTERNAL_REVIEW"
+  - case_id: "AUT-002"
+    canonical_adoption_claimed: true
+    protected_authority_present: false
+    expected: "REJECT_UNAUTHORIZED_ADOPTION"
+  - case_id: "ASM-001"
+    primary_assumption_count: 4
+    assumptions_individually_classified: true
+    expected: "PASS_ASSUMPTION_DELTA"
+  - case_id: "DSC-001"
+    fields_present: true
+    locality_present: true
+    symmetry_present: true
+    dynamics_present: false
+    observables_present: true
+    continuum_present: true
+    assumptions_present: true
+    principal_present: true
+    expected: "REJECT_INCOMPLETE_DESCRIPTOR"
+  - case_id: "SCR-001"
+    target_agreement_used_as_merit: false
+    scalar_score_total_used: false
+    expected: "PASS_NONCOMPENSATORY_SOURCE_MERIT"
+  - case_id: "STA-001"
+    active_program_routes: 1
+    scientific_activations: 0
+    selection_activation_distinction_explicit: true
+    expected: "PASS_SELECTION_ACTIVATION_DISTINCTION"
+
+authority_limits:
+  fixture_pass_is_scientific_truth: false
+  fixture_pass_is_external_review: false
+  fixture_pass_is_gate_b: false
+  physics_promotion_authorized: false

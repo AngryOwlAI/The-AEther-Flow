@@ -1,0 +1,80 @@
+schema_id: "v22_p2_t04_assumption_delta_v1"
+status: "draft/control"
+authority: "science_draft"
+plan_task_id: "P2-T04"
+baseline:
+  current_ontology_changed: false
+  primitive_source_arena_retained: true
+  p7_conditional_input_retained_exactly: true
+  target_metric_or_target_atlas_present: false
+
+primary_delta:
+  candidate_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+  assumptions:
+    - assumption_id: "B1-A01"
+      proposition: "A trivial rank-six source-scalar bundle exists over the existing primitive source arena."
+      cost_class: "new_ontology_primitive_candidate"
+      eliminable_now: false
+      adoption_status: "proposal-only"
+      falsifier: "No source-native interpretation or consistent restriction/gluing law can be supplied for the six sections."
+    - assumption_id: "B1-A02"
+      proposition: "A source-covariant first-jet quasilinear coefficient map K and source term F can be constructed."
+      cost_class: "new_ontology_primitive_candidate"
+      eliminable_now: false
+      adoption_status: "proposal-only"
+      falsifier: "Every construction imports metric-equivalent data or has identically degenerate reduced principal determinant."
+    - assumption_id: "B1-A03"
+      proposition: "Two dimensionless source ratios can type two proposal-only P7 response-token channels."
+      cost_class: "new_ontology_primitive_candidate"
+      eliminable_now: false
+      adoption_status: "proposal-only"
+      falsifier: "The response bridge requires target detector, clock, rod, location, or geometry semantics."
+    - assumption_id: "B1-A04"
+      proposition: "A nonempty local patch has q6 nonzero and rank d(q1/q6,q2/q6) equal to two."
+      cost_class: "candidate_domain_restriction"
+      eliminable_now: false
+      adoption_status: "testable-restriction"
+      falsifier: "The declared regular patch is empty or the quotient differential has rank below two everywhere."
+  assumption_count: 4
+  open_theorem_burdens:
+    - "construct exact coefficients and reduce all constraints"
+    - "prove hyperbolicity and a stable selected Lorentzian cone without target import"
+    - "prove universal matter compatibility and operational scale"
+    - "prove gluing, boundary, variation, and robustness control"
+
+fallback_delta:
+  candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  assumptions:
+    - assumption_id: "B2-A01"
+      proposition: "The exact finite P7 package is retained only as protected conditional input."
+      cost_class: "protected_conditional_input"
+      adoption_status: "adopted_not_derived"
+    - assumption_id: "B2-A02"
+      proposition: "Continuum sector fields and equations can be constructed from the finite P7 records."
+      cost_class: "new_ontology_primitive_candidate"
+      adoption_status: "proposal-only"
+    - assumption_id: "B2-A03"
+      proposition: "A common principal polynomial or equivalence selector can be derived rather than imposed."
+      cost_class: "open_theorem_burden"
+      adoption_status: "unproved"
+    - assumption_id: "B2-A04"
+      proposition: "The finite-to-continuum interface admits explicit convergence and boundary control."
+      cost_class: "open_convergence_burden"
+      adoption_status: "unproved"
+  assumption_count: 4
+  activation_blocked_until_continuum_lift: true
+
+comparison:
+  scalar_cost_total_used: false
+  primary_selected_despite_more_explicit_primitive_cost: true
+  reason: "B1 exposes its source-side cost while supplying the only native continuum state, rank-two minimum adequacy certificate, and direct principal-polynomial construction target; B2 hides less initial structure but lacks the continuum object needed for evaluation."
+  metric_equivalent_input_count: 0
+  gr_target_fit_count: 0
+  protected_postulate_gate_credit_count: 0
+
+authority_limits:
+  assumption_record_is_adoption: false
+  source_law_adopted: false
+  gate_b_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
