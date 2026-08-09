@@ -1,0 +1,84 @@
+task_id: "RT-20260809-012"
+task_type: "v22_p3_t02_source_dynamics_without_hidden_geometry"
+title: "Construct source dynamics without hidden geometry"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "effective_metric_g_eff"
+  candidate_family: "v22_b1_local_six_field_response_seed_v1"
+  result_kind: "candidate_or_precise_obstruction"
+  authority: "science_draft"
+  scope: "scientific"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+closure_status: "v22_p3_t02_source_dynamics_constructed_p3_t03_routed_checkpoint_pending"
+created_at: "2026-08-09T13:26:29Z"
+updated_at: "2026-08-09T13:42:25Z"
+closed_at: "2026-08-09T13:42:25Z"
+parent_task_id: "RT-20260809-011"
+parent_handoff_id: "handoff-0981"
+current_decision_id: "DDR-20260809-012"
+current_job_id: "AJ-RT-20260809-012-001"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260809-012"
+supporting_perspective: "refuter@0.2.0"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal, committed RT-20260809-011 recovery checkpoint, and tracked handoff-0981 authorize exactly one bounded P3-T02 construction packet and one checkpoint. Canonical ontology or source-law adoption, target geometry, Gate review, reviewer contact, publication, push, and external action remain unauthorized."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  phase_id: "P3"
+  plan_task_id: "P3-T02"
+  recommendation_ids:
+    - "V22-R03"
+    - "V22-R05"
+    - "V22-R08"
+  declared_coverage_ids:
+    - "V22-R05"
+    - "V22-R08"
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+    - "V22-X05"
+  dependency_task_ids:
+    - "P3-T01"
+objective: "Construct one explicit deterministic source-native six-field local dynamics law, derive its equations, principal symbol, admissible data, constraints, identities, regular background, linearization, conditional matter-token update, coefficient provenance, units/debt, well-posedness statement, and failure cases without importing a metric, measure, connection, target atlas, or GR fit."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Construct one source-native local B1 dynamics law, equations, coefficient provenance, admissible background, constraints, boundary data, and linearization without metric, measure, connection, or target-fit imports."
+route_label: "ordinary-research-packet"
+route_strategy_id: "construct_v22_p3_t02_b1_source_dynamics_without_hidden_geometry_v1"
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-V22-P3-T02-B1-SOURCE-DYNAMICS-001"
+claim_boundary:
+  allowed_scope: "Task-local proposal-only source evolution label, six source vector fields, diagonal first-order transport law, equations, principal polynomial, local flow solution, admissible regular background, linearization, value data, inflow boundary rule, conditional identities and P7 token update, coefficient provenance, units/debt, counterexamples, internal refuter synthesis, validation, ordinary control-state updates, and one P3-T03 route."
+  forbidden_scope: "Canonical ontology or source-law adoption; action measure; metric, coframe, connection, Hodge star, divergence, unit normal, causal cone, physical clock, target atlas, target detector, realistic matter law, GR target fit, unique cone, scale, g_eff, matter coupling, Einstein equations, protected Gate verdict, external review, publication, release, push, global impossibility, or completed derivation."
+  authority_source: "research_control/handoffs/handoff-0981.yaml"
+  boundary_status: "completed"
+completion_contract:
+  dynamics_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-DYNAMICS-V1"
+  coefficient_datum_id: "COEF-V22-B1-SIX-TRANSPORT-V1"
+  source_extension_status: "proposal-only"
+  deterministic_local_law_required: true
+  source_selected_coefficient_provenance_required: true
+  nontrivial_regular_background_required: true
+  linearization_required: true
+  principal_polynomial_required: true
+  well_posedness_statement_required: true
+  explicit_or_numerical_witness_required: true
+  parent_child_parallel_synthesis_required: true
+  independent_source_purity_audit_required: true
+  no_unresolved_blocking_parent_conflict: true
+  source_law_adopted: false
+  effective_metric_constructed: false
+notes: "This task executes only P3-T02. P3-T03 continuum control, any later principal reduction, P2-T02 external review, and all protected or outward actions remain separate AgentJobs."

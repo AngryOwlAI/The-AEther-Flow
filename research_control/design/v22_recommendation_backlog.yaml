@@ -1030,7 +1030,7 @@ items:
   stop_conditions: Measure or derivative requires an unexplained metric, coefficient
     fitting to GR, no admissible solution/background, ill-posed law without a controlled
     repair, or dynamics that collapses back to one amplitude.
-  implementation_status: pending
+  implementation_status: completed_checkpoint_pending
   expected_result_kind: candidate_or_precise_obstruction
   requires_human_gate: false
   dependency_independent_after_other_human_gates: true
@@ -1048,6 +1048,20 @@ items:
   track: B
   owner: candidate constructor, refuter, and validator engineer for computational
     evidence
+  work_kind: construction_or_implementation
+  task_class: science
+  role_family: candidate-constructor@0.2.0
+  supporting_perspective: refuter@0.2.0
+  validation_perspective: validator-engineer@0.2.0
+  controlling_launcher: continue-research-goal@v4
+  worker_skill: continue-research
+  route_label: ordinary-research-packet
+  target_derivation_milestone: effective_metric_g_eff
+  milestone_burden: Construct one controlled finite-to-continuum refinement model
+    for the P3-T02 proposal-only source dynamics with exact comparison maps,
+    convergence or bounded-error criteria, irregular and adaptive cases, and no
+    target-geometry interpolation.
+  expected_result_kind: candidate_or_precise_obstruction
   declared_coverage_ids:
   - V22-R10
   - V22-R13

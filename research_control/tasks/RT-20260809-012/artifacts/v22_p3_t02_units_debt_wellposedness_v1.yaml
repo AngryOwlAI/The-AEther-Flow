@@ -1,0 +1,121 @@
+schema_id: "v22_p3_t02_units_debt_wellposedness_v1"
+artifact_id: "V22-P3-T02-UNITS-DEBT-WELLPOSEDNESS-V1"
+task_id: "RT-20260809-012"
+status: "draft/control"
+dynamics_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-DYNAMICS-V1"
+formal_units:
+  source_flow_label:
+    symbol: "T_s"
+    applies_to:
+      - "tau"
+      - "local flow parameter t"
+    physical_time: false
+  state_channels:
+    symbols:
+      - "Q_1"
+      - "Q_2"
+      - "Q_3"
+      - "Q_4"
+      - "Q_5"
+      - "Q_6"
+    relation_for_ratios: "Q_1=Q_6 and Q_2=Q_6 on the operational patch"
+  vector_field_action:
+    rule: "X_A(q^A) has formal unit Q_A/T_s"
+    normalization: "d tau(X_A) is dimensionless"
+  ratios:
+    rho1: "dimensionless"
+    rho2: "dimensionless"
+    p1: "dimensionless"
+    p2: "dimensionless"
+  physical_length_assigned: false
+  physical_mass_assigned: false
+  detector_calibration_assigned: false
+
+well_posedness:
+  theorem_scope: "local fixed-coefficient characteristic initial-value problem"
+  state_regularities:
+    coefficient_label: "tau in C3"
+    coefficient_vectors: "X_A in C2"
+    initial_data: "f_A in C2"
+    solution: "q^A in C2 on a sufficiently small flow box"
+  data_surface: "Sigma_t0=tau^(-1)(t0)"
+  transversality: "d tau(X_A)=1"
+  exact_solution: "q^A(Phi_A^t(y))=f_A(y)"
+  existence: "proved locally by the C2 flow theorem"
+  uniqueness: "proved locally because each characteristic meets Sigma_t0 once"
+  continuous_dependence: "inherited from local flow dependence on C2 coefficient and initial data in a fixed flow box"
+  boundary_rule: "optional values only on source-scalar inflow subsets"
+  energy_estimate_used: false
+  metric_norm_used: false
+  physical_hyperbolicity_claimed: false
+  global_existence_claimed: false
+  nonlinear_shock_control_claimed: false
+
+debt_ledger:
+  - debt_id: "DEBT-P3T02-SOURCE-ARENA"
+    object: "smooth four-dimensional source arena A"
+    status: "inherited primitive debt"
+    adoption: false
+    consequence: "cannot interpret source chart as physical spacetime"
+  - debt_id: "DEBT-P3T02-TAU"
+    object: "source evolution label tau"
+    status: "new proposal-only primitive debt"
+    adoption: false
+    consequence: "source solvability does not establish a physical time"
+  - debt_id: "DEBT-P3T02-X-FAMILY"
+    object: "six normalized source vector fields X_A"
+    status: "new proposal-only primitive debt"
+    adoption: false
+    consequence: "coefficient selection and equivalence remain underived"
+  - debt_id: "DEBT-P3T02-CHANNEL-UNITS"
+    object: "formal units Q_A and their ratio compatibility"
+    status: "bookkeeping convention"
+    adoption: false
+    consequence: "no physical dimensions or calibration follow"
+  - debt_id: "DEBT-P3T02-REGULAR-PERSISTENCE"
+    object: "global persistence of q6 nonzero and response rank two"
+    status: "unproved beyond a local witness"
+    adoption: false
+    consequence: "operational interpretation remains patchwise"
+  - debt_id: "DEBT-P3T02-CONE-REDUCTION"
+    object: "source-derived reduction from six linear factors to one robust physical cone"
+    status: "missing"
+    adoption: false
+    consequence: "g_eff and Gate B remain blocked"
+  - debt_id: "DEBT-P3T02-SCALE"
+    object: "physical scale or conformal normalization"
+    status: "missing"
+    adoption: false
+    consequence: "even a later cone would not yet determine a metric scale"
+  - debt_id: "DEBT-P3T02-REFINEMENT"
+    object: "controlled continuum refinement and error bounds"
+    status: "P3-T03 burden"
+    adoption: false
+    consequence: "finite P7 and continuum relations remain conditional"
+
+freeze_evaluation:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "V22-B1-SOURCE-DYNAMICS-TO-UNIQUE-CONE"
+  prior_attempts_considered:
+    - "RT-20260809-009"
+    - "RT-20260809-010"
+  freeze_if:
+    - "the same six-factor principal structure is repackaged without new refinement, reduction, or counterexample payload"
+    - "future work changes coefficients only to match a target geometry"
+  do_not_freeze_if:
+    - "P3-T03 supplies a concrete controlled refinement model and error criterion"
+    - "a later packet constructs or refutes a named source-derived cone-reduction map"
+  freeze_decision: "not_frozen"
+  decision_reason: "This task adds a materially new differential law, exact local solution, regular background, and principal polynomial; P3-T03 has a distinct controlled-refinement burden."
+  next_allowed_route: "candidate_constructor"
+
+authority_limits:
+  formal_units_are_physical_units: false
+  local_well_posedness_is_physical_hyperbolicity: false
+  debt_ledger_is_ontology_adoption: false
+  source_law_adopted: false
+  effective_metric_constructed: false
+  global_no_go_claimed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

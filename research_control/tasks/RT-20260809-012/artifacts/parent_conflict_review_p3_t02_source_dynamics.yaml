@@ -1,0 +1,51 @@
+schema_id: "parent_conflict_review_v1"
+review_id: "PCR-V22-P3-T02-SOURCE-DYNAMICS-V1"
+task_id: "RT-20260809-012"
+job_id: "AJ-RT-20260809-012-001"
+status: "resolved"
+resolution_rounds: 1
+child_outputs:
+  - "research_control/tasks/RT-20260809-012/artifacts/child_phys_math_p3_t02_source_dynamics.yaml"
+  - "research_control/tasks/RT-20260809-012/artifacts/child_phys_phil_p3_t02_source_purity.yaml"
+conflicts:
+  - conflict_id: "CONFLICT-P3T02-001"
+    mathematical_position: "d tau(X_A)=1 supplies an evolution normalization"
+    philosophical_risk: "normalization could be read as a physical clock or unit speed"
+    resolution: "call tau a source label, give it only a formal bookkeeping unit, and explicitly deny physical time, norm, and unit-speed semantics"
+    status: "resolved"
+  - conflict_id: "CONFLICT-P3T02-002"
+    mathematical_position: "the diagonal system is locally strongly solvable with real source velocities"
+    philosophical_risk: "strong solvability could be overread as physical hyperbolicity or causality"
+    resolution: "limit the theorem to fixed-datum source flow boxes and block all physical cone language"
+    status: "resolved"
+  - conflict_id: "CONFLICT-P3T02-003"
+    mathematical_position: "the principal polynomial is a concrete degree-six characteristic object"
+    philosophical_risk: "any characteristic set could be mislabeled emergent geometry"
+    resolution: "state the source principal map positively and the absent unique quadratic cone/scale map decisively"
+    status: "resolved"
+  - conflict_id: "CONFLICT-P3T02-004"
+    mathematical_position: "X_A(h(qA))=0 resembles a balance law"
+    philosophical_risk: "it could be promoted to an independent conservation law"
+    resolution: "label it an on-equation chain-rule identity and state that no integrated form exists without a measure"
+    status: "resolved"
+  - conflict_id: "CONFLICT-P3T02-005"
+    mathematical_position: "the P7 token equation is a continuum update"
+    philosophical_risk: "continuum wording could imply realistic matter or a proven finite-to-continuum limit"
+    resolution: "call it a conditional update only and leave controlled refinement to P3-T03"
+    status: "resolved"
+resolved_conflict_count: 5
+unresolved_conflicts: []
+shared_consensus:
+  - "the declared source transport equations are exactly typed without hidden geometry"
+  - "the explicit background is nonconstant, regular, and solves all six equations"
+  - "the local flow theorem and principal factorization are valid under stated hypotheses"
+  - "tau and X_A remain proposal-only primitive debt"
+  - "no unique physical cone, scale, g_eff, matter law, Gate result, or Distance-to-GR delta follows"
+parent_decision: "fuse both child outputs into one constructed-candidate result and route P3-T03 after checkpoint"
+authority_limits:
+  conflict_resolution_is_external_review: false
+  ontology_adopted: false
+  source_law_adopted: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

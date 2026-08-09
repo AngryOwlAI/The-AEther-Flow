@@ -1,0 +1,122 @@
+schema_id: "v22_p3_t02_constraint_identity_ledger_v1"
+artifact_id: "V22-P3-T02-CONSTRAINT-IDENTITY-LEDGER-V1"
+task_id: "RT-20260809-012"
+status: "draft/control"
+dynamics_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-DYNAMICS-V1"
+constraint_records:
+  - constraint_id: "CON-P3T02-TAU-SUBMERSION"
+    class: "coefficient_admissibility"
+    statement: "d tau is nowhere zero on the local domain"
+    purpose: "make tau-level initial surfaces regular"
+    preservation: "fixed coefficient datum; not a field evolution constraint"
+    failure_consequence: "declared initial-value formulation invalid"
+  - constraint_id: "CON-P3T02-TRANSVERSALITY"
+    class: "coefficient_admissibility"
+    statement: "d tau(X_A)=1 for all six channels"
+    purpose: "normalize flow parameter and ensure transversality"
+    preservation: "fixed coefficient datum; not a field evolution constraint"
+    failure_consequence: "channel may be tangent to initial surface"
+  - constraint_id: "CON-P3T02-COEFFICIENT-REGULARITY"
+    class: "coefficient_admissibility"
+    statement: "each X_A is C2"
+    purpose: "obtain unique C2 local characteristic flows"
+    preservation: "fixed coefficient datum"
+    failure_consequence: "existence, uniqueness, or claimed solution regularity can fail"
+  - constraint_id: "CON-P3T02-Q6-REGULAR"
+    class: "operational_patch"
+    statement: "q6 is nonzero"
+    purpose: "define rho1, rho2, p1, p2, and the conditional token update"
+    preservation: "local for data whose transported q6 stays nonzero; no global guarantee"
+    failure_consequence: "operational observables undefined"
+  - constraint_id: "CON-P3T02-RANK-TWO"
+    class: "operational_patch"
+    statement: "d rho1 wedge d rho2 is nonzero"
+    purpose: "retain two independent local response directions"
+    preservation: "verified on an explicit background and open neighborhood only"
+    failure_consequence: "P2-T01 necessary response-capacity screen fails"
+  - constraint_id: "CON-P3T02-INFLOW-ONLY"
+    class: "boundary_admissibility"
+    statement: "independent lateral values are prescribed only where d b(X_A)<0"
+    purpose: "avoid overdetermining the characteristic solution"
+    preservation: "boundary rule"
+    failure_consequence: "outflow prescription can be inconsistent"
+constraint_summary:
+  algebraic_field_constraint_count: 0
+  gauge_constraint_count: 0
+  secondary_constraint_count: 0
+  coefficient_admissibility_count: 3
+  operational_patch_count: 2
+  boundary_admissibility_count: 1
+  global_constraint_propagation_claimed: false
+
+identity_records:
+  - identity_id: "ID-P3T02-EQUATION-COMPOSITION"
+    class: "conditional_on_equations"
+    statement: "X_A(h_A(q^A))=h'_A(q^A) X_A(q^A)=0 for C1 h_A"
+    derivation: "scalar chain rule plus E_A=0"
+    independent_postulate: false
+    integrated_conservation: false
+    physical_conservation_claimed: false
+    measure_required_for_stronger_form: true
+  - identity_id: "ID-P3T02-RATIO-UPDATE"
+    class: "conditional_on_equations_and_regular_patch"
+    statement: "X_6(rho_i)=((X_6-X_i)q^i)/q6 for i=1,2"
+    derivation: "quotient rule, X_6(q6)=0, and X_i(qi)=0"
+    independent_postulate: false
+    realistic_matter_claimed: false
+  - identity_id: "ID-P3T02-TOKEN-UPDATE"
+    class: "conditional_on_equations_and_regular_patch"
+    statement: "X_6(p_i)=p_i(1-p_i)((X_6-X_i)q^i)/q6 for i=1,2"
+    derivation: "logistic chain rule plus ratio-update identity"
+    independent_postulate: false
+    continuum_limit_claimed: false
+    realistic_matter_claimed: false
+  - identity_id: "ID-P3T02-PRINCIPAL-DETERMINANT"
+    class: "algebraic_identity"
+    statement: "det diag(xi(X_1),...,xi(X_6))=product_A xi(X_A)"
+    derivation: "determinant of a diagonal matrix"
+    independent_postulate: false
+    physical_cone_claimed: false
+
+composition_records:
+  - record_id: "COMP-P3T02-RESTRICTION"
+    statement: "a fixed-datum solution restricts to every open subset"
+    status: "proved by locality"
+  - record_id: "COMP-P3T02-GLUING"
+    statement: "compatible fixed-datum solutions glue uniquely componentwise"
+    status: "proved by inherited C2 sheaf gluing and local equations"
+  - record_id: "COMP-P3T02-MULTI-DOMAIN"
+    statement: "coefficient data must agree on overlaps before solution gluing is asserted"
+    status: "explicit compatibility burden"
+
+failure_ledger:
+  - finding_id: "FAIL-P3T02-Q6-ZERO"
+    exact_failure: "rho_i and p_i are undefined"
+    scope: "operational patch"
+    disposition: "reject patch; do not infer dynamics failure globally"
+  - finding_id: "FAIL-P3T02-RANK-COLLAPSE"
+    exact_failure: "d rho1 wedge d rho2 vanishes"
+    scope: "P2-T01 response-capacity acceptance"
+    disposition: "reject one-amplitude or dependent-response subfamily"
+  - finding_id: "FAIL-P3T02-TANGENT-DATA"
+    exact_failure: "characteristics need not cross the declared initial surface"
+    scope: "initial-value theorem"
+    disposition: "coefficient datum inadmissible for stated theorem"
+  - finding_id: "FAIL-P3T02-OUTFLOW-OVERDETERMINATION"
+    exact_failure: "independent outflow values can conflict with transported initial data"
+    scope: "boundary problem"
+    disposition: "permit only inflow data"
+  - finding_id: "FAIL-P3T02-CONE-REDUCTION"
+    exact_failure: "six distinct linear characteristic factors do not select one quadratic physical cone or scale"
+    scope: "current candidate and current source assumptions"
+    disposition: "g_eff remains blocked; no global no-go inferred"
+
+authority_limits:
+  constraint_ledger_is_adoption: false
+  identity_ledger_is_independent_physics: false
+  physical_conservation_law_adopted: false
+  realistic_matter_law_adopted: false
+  global_no_go_claimed: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

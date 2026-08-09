@@ -1,0 +1,62 @@
+schema_id: "physics_child_execution_unit_v1"
+execution_unit_id: "child_phys_math"
+task_id: "RT-20260809-012"
+job_id: "AJ-RT-20260809-012-001"
+perspective: "physicist_mathematician_refuter"
+status: "completed"
+scope: "derive and adversarially test the six-channel source transport candidate"
+inputs:
+  - "sealed P3-T01 B1 C2 six-scalar source state"
+  - "proposal-only datum D=(tau,X_1,...,X_6) with d tau(X_A)=1"
+questions:
+  - "Are all objects, maps, equations, and data well typed without a metric or connection?"
+  - "Does a nonconstant regular background solve every channel equation?"
+  - "Is the local initial-value problem actually well posed under stated regularity?"
+  - "What is the exact linearization and principal polynomial?"
+  - "Which countercases invalidate a stronger conclusion?"
+findings:
+  - finding_id: "MATH-P3T02-001"
+    disposition: "accept"
+    statement: "A source vector field acting on a source scalar gives a typed first-order equation E_A=X_A(q^A) with no metric, connection, or measure."
+    evidence: "scalar directional derivative and equation-map type"
+  - finding_id: "MATH-P3T02-002"
+    disposition: "accept"
+    statement: "The six rational witness vectors satisfy d tau(X_A)=1 and the proposed background has six exact zero residuals."
+    evidence: "exact-arithmetic executable model"
+  - finding_id: "MATH-P3T02-003"
+    disposition: "accept"
+    statement: "The background has q6 nonzero and a nonzero d rho1 wedge d rho2 coefficient epsilon1 epsilon2/c6^2, retaining response rank two."
+    evidence: "explicit two-form calculation"
+  - finding_id: "MATH-P3T02-004"
+    disposition: "accept_scoped"
+    statement: "C2 characteristic flows transverse to a tau-level surface give local existence, uniqueness, continuous dependence, restriction, and compatible gluing for fixed coefficients."
+    evidence: "local flow-box construction"
+  - finding_id: "MATH-P3T02-005"
+    disposition: "accept"
+    statement: "The linearization is diagonal and the principal determinant is the homogeneous degree-six product of the six linear forms xi(X_A)."
+    evidence: "exact symbol calculation"
+  - finding_id: "MATH-P3T02-006"
+    disposition: "reject_overread"
+    statement: "Six distinct linear characteristic factors do not by themselves select one quadratic physical cone, conformal class, scale, or g_eff."
+    evidence: "factor-type mismatch and absent reduction map"
+  - finding_id: "MATH-P3T02-007"
+    disposition: "reject"
+    statement: "Tangent coefficients, non-Lipschitz coefficients, unrelated outflow data, q6 zero, and one-amplitude restrictions fail named acceptance conditions."
+    evidence: "ten explicit countercases"
+unique_contribution:
+  - "exact local characteristic theorem with flow formula"
+  - "degree-six factorization and precise no-cone limitation"
+  - "inflow-only boundary rule stated by source conormal pairing"
+bridge_attempt_status:
+  constructed_map: "D -> sigma_D(xi) -> product_A xi(X_A)"
+  missing_map: "principal product -> unique robust physical cone and scale"
+  effective_metric_constructed: false
+recommendation: "accept the candidate as a proposal-only P3-T02 source model and route P3-T03 controlled refinement; retain g_eff block"
+authority_limits:
+  theorem_scope: "local fixed-coefficient source flow only"
+  ontology_adopted: false
+  physical_hyperbolicity_claimed: false
+  effective_metric_constructed: false
+  global_no_go_claimed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

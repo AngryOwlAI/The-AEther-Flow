@@ -7,50 +7,50 @@ generated_from:
   - "research_control/current_frontier.md"
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
-  - "research_control/handoffs/handoff-0981.yaml"
+  - "research_control/handoffs/handoff-0983.yaml"
   - "research_control/program_state.yaml"
 report_provenance:
   schema_id: "generated_report_provenance_v1"
   policy_id: "p13_t07_live_generated_report_freshness_v1"
   report_class: "compact_current_frontier"
-  source_commit: "f97ecc4c4889df82d688b5892b88f8f0a171fd84"
+  source_commit: "d18637379d0dbde560f1b910255f370fe0c1ce54"
   source_hashes:
     - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
       sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
     - path: "registries/RESEARCH_TASK_REGISTRY.csv"
-      sha256: "98764b278382a7c7fb2648a4c07d56237e71c3d0ef7f4785583ddd34852f0bca"
+      sha256: "ce9b2c29bc6fed43a2aacf8d261f523ff26d30c8c94de00581c19980aaa13523"
     - path: "research_control/current_frontier.md"
-      sha256: "aa72f9d9a7419b6eee58d3e914f9df390e730293f4cd4e7573b34185f25695bc"
-    - path: "research_control/handoffs/handoff-0981.yaml"
-      sha256: "711311d64b59c28d7c2c79166d567489b9254d0feacd2e2b39790179229e2031"
+      sha256: "89cec2eac84aa1c6937e6dde98c8790e1a10a3f22cce1d02dd0bd4f05c44d95b"
+    - path: "research_control/handoffs/handoff-0983.yaml"
+      sha256: "974c3913f14c7c00ed4a3ce2dcccbe5d0a86a7e891116db41c99b290969c9055"
     - path: "research_control/program_state.yaml"
-      sha256: "0b85ce0b6c32c59cf791c48876248577cd86d3424252f2e0dcfcba8fab73c90e"
+      sha256: "25041ad2e21b3788d5671d35cd45e60fa7d1cf89d8256d7bdb1c7b4971b44257"
     - path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml"
       sha256: "dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"
     - path: "scripts/research_control/generated_report_provenance.py"
       sha256: "af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"
     - path: "scripts/research_control/render_compact_current_frontier_v16.py"
       sha256: "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
-  source_manifest_sha256: "63846bf44d7a70d201dae31753b5bf2fd9577cf9e0f6ef3efe332f510b6f043f"
+  source_manifest_sha256: "ac6d86ef2acd78a8ef538cc774d4e1e705b84ce4938b27292bfcae1e19f17832"
   source_path_count: "12"
-  generation_time: "2026-08-09T12:26:15Z"
-  task_count: "1236"
+  generation_time: "2026-08-09T14:28:16Z"
+  task_count: "1238"
   maximum_commit_lag: "1"
   freshness_status: "fresh_at_generation"
   generated_view_is_authority: false
   physics_promotion_authorized: false
   proof_authority: false
 active_state:
-  active_task_id: "RT-20260809-011"
-  latest_handoff_id: "handoff-0981"
-  current_status: "v22_p3_t01_ten_eof_repaired_p3_t02_selected_fresh_checkpoint_pending"
+  active_task_id: "RT-20260809-013"
+  latest_handoff_id: "handoff-0983"
+  current_status: "v22_p3_t02_staged_acceptance_repaired_p3_t03_selected_fresh_checkpoint_pending"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260809-011"
-  latest_research_handoff_id: "handoff-0981"
-  latest_research_next_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-011-001. After it commits, execute exactly one separately admitted V22 P3-T02 Candidate Constructor AgentJob with a mathematical-refuter perspective; do not contact reviewers or take any protected or external action."
+  latest_research_task_id: "RT-20260809-013"
+  latest_research_handoff_id: "handoff-0983"
+  latest_research_next_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-013-001. After it commits, execute exactly one separately admitted V22 P3-T03 Candidate Constructor AgentJob with Refuter and Validator Engineer perspectives; do not contact reviewers or take any protected or external action."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -58,10 +58,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v22_p3_t02_source_dynamics_without_hidden_geometry"
+  route_id: "v22_p3_t03_controlled_refinement_or_continuum_limit"
   role_family: "candidate-constructor@0.2.0"
   target_derivation_milestone: "effective_metric_g_eff"
-  milestone_burden: "Construct one source-native local B1 dynamics law, equations, coefficient provenance, admissible background, constraints, boundary data, and linearization without metric, measure, connection, or target-fit imports."
+  milestone_burden: "Construct one controlled finite-to-continuum refinement model for the P3-T02 proposal-only source dynamics with exact comparison maps, convergence or bounded-error criteria, irregular and adaptive cases, and no target-geometry interpolation."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -371,7 +371,7 @@ blocked_physical_targets:
       - "no_global_theory_rejection"
 distance_to_gr:
   delta:
-    effect: "no_distance_delta_project_system_eof_recovery_only"
+    effect: "no_distance_delta_project_system_staged_acceptance_recovery_only"
     changed: false
     milestone: "effective_metric_g_eff"
     burden_id: "g_eff"
@@ -641,6 +641,6 @@ validation:
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "Exactly one fresh governed AJ-RT-20260809-011-001 checkpoint remains."
+        - "Exactly one fresh governed AJ-RT-20260809-013-001 checkpoint remains."
 authority_warning:
   snapshot_only_not_authority: true

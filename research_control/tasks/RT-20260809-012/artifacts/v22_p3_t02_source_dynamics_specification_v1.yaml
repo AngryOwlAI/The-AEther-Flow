@@ -1,0 +1,327 @@
+schema_id: "v22_p3_t02_source_dynamics_specification_v1"
+artifact_id: "V22-P3-T02-SOURCE-DYNAMICS-SPECIFICATION-V1"
+task_id: "RT-20260809-012"
+job_id: "AJ-RT-20260809-012-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P3-T02"
+status: "draft/control"
+claim_status: "proposal-only source-extension data"
+dynamics_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-DYNAMICS-V1"
+coefficient_datum_id: "COEF-V22-B1-SIX-TRANSPORT-V1"
+candidate_family_id: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+source_state_candidate_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+candidate_identity_sha256: "32110632f8832091d69ca52e96dfdf99c26087bfc75575b77a466631eca9d051"
+created_at: "2026-08-09T13:26:29Z"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Construct one source-native local B1 dynamics law, equations, coefficient provenance, admissible background, constraints, boundary data, and linearization without metric, measure, connection, or target-fit imports."
+
+source_bindings:
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  - object_id: "TEX-V22-P3-T01-B1-LOCAL-MULTIFIELD-SOURCE-STATE-V1"
+    path: "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_multifield_source_state_v1.tex"
+    sha256: "ce1b852b7ea178dd5d42a204e9cc63fb2c11e9987e8ac0fc733267eb04dbb6db"
+  - object_id: "V22-P3-T01-B1-LOCAL-STATE-SPECIFICATION-V1"
+    path: "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_state_specification_v1.yaml"
+    sha256: "961636349d8bfe73f5f13d33953f92d2a07d7d567f836e8f217dfeef7bb30813"
+  - object_id: "V22-P3-T01-P7-REFINEMENT-INTERFACE-V1"
+    path: "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_p7_refinement_interface_v1.yaml"
+    sha256: "cfda8abd1905d04d3ec806c4178ad7c2f620f82a736ed6316e0768c17c143baa"
+  - object_id: "HANDOFF-0981"
+    path: "research_control/handoffs/handoff-0981.yaml"
+    sha256: "711311d64b59c28d7c2c79166d567489b9254d0feacd2e2b39790179229e2031"
+
+law_choice:
+  class: "deterministic_first_order_local_transport"
+  action_used: false
+  stochastic_kernel_used: false
+  Hamiltonian_used: false
+  variational_density_used: false
+  selection_reason: "A scalar directional derivative is defined from source tangent data alone, whereas an action or divergence would require an undeclared source measure or additional geometric structure."
+
+formal_objects:
+  source_arena:
+    symbol: "A"
+    type: "smooth four-dimensional primitive source arena"
+    status: "inherited primitive debt; not physical spacetime"
+  open_domain:
+    symbol: "U"
+    type: "open subset of A"
+  state:
+    symbol: "q"
+    type: "C2(U,R6)"
+    components: 6
+    inherited: true
+  evolution_label:
+    symbol: "tau"
+    type: "C3(U,R) source scalar submersion"
+    physical_clock: false
+    status: "new proposal-only source-extension datum"
+  coefficient_fields:
+    symbols:
+      - "X_1"
+      - "X_2"
+      - "X_3"
+      - "X_4"
+      - "X_5"
+      - "X_6"
+    type: "C2 sections of TU"
+    normalization: "d tau(X_A)=1 for A=1,...,6"
+    frame_claimed: false
+    cone_claimed: false
+    status: "new proposal-only source-extension data"
+
+equations:
+  equation_map: "E_D: C2(U,R6) -> C1(U,R6)"
+  component_rule: "E_A[D,q]=X_A(q^A)=0"
+  index_convention: "no sum over A"
+  coupling_structure: "diagonal six-channel transport"
+  scalar_free_coefficients: []
+  derivative_order: 1
+  local: true
+  deterministic: true
+
+passive_source_naturality:
+  chart_transition: "phi: U' -> U"
+  transformed_scalar: "q'^A=q^A composed with phi"
+  transformed_label: "tau'=tau composed with phi"
+  transformed_vector: "X'_A=(d phi)^(-1) X_A composed with phi"
+  equation_identity: "X'_A(q'^A)=X_A(q^A) composed with phi"
+  normalization_identity: "d tau'(X'_A)=1"
+  target_diffeomorphism_claimed: false
+  active_physical_gauge_claimed: false
+
+initial_data:
+  source_surface: "Sigma_t0=tau^(-1)(t0)"
+  transversality: "d tau(X_A)=1"
+  prescribed_data: "one C2 scalar f_A on an open subset of Sigma_t0 for each A"
+  normal_derivative_prescribed: false
+  metric_normal_used: false
+  compatibility: "only agreement on overlaps for data describing the same channel"
+
+boundary_data:
+  boundary_definition: "source scalar b with boundary b=0"
+  inflow_rule: "prescribe channel A only where d b(X_A)<0 relative to the declared domain orientation"
+  outflow_rule: "do not prescribe independent outflow values"
+  unit_normal_used: false
+  boundary_measure_used: false
+
+local_solution_theorem:
+  flow_symbol: "Phi_A^t"
+  solution_formula: "q^A(Phi_A^t(y))=f_A(y)"
+  hypotheses:
+    - "tau is C3 with d tau nowhere zero"
+    - "X_A is C2 and d tau(X_A)=1"
+    - "f_A is C2 on a local tau-level surface"
+  conclusions:
+    - "local existence"
+    - "local uniqueness"
+    - "continuous dependence in local flow charts"
+    - "componentwise restriction and compatible gluing"
+  physical_hyperbolicity_claimed: false
+  physical_causality_claimed: false
+
+explicit_witness:
+  chart_labels:
+    - "s0"
+    - "s1"
+    - "s2"
+    - "s3"
+  tau: "s0"
+  vector_components_by_channel:
+    X_1: [1, 1, 0, 0]
+    X_2: [1, 0, 1, 0]
+    X_3: [1, 0, 0, 1]
+    X_4: [1, 1, 1, 0]
+    X_5: [1, 0, 1, 2]
+    X_6: [1, 2, 0, 1]
+  target_fitted: false
+  fixture_values_promoted_to_law_constants: false
+  background:
+    q1: "a1+epsilon1*(s1-s0)"
+    q2: "a2+epsilon2*(s2-s0)"
+    q3: "c3"
+    q4: "c4"
+    q5: "c5"
+    q6: "c6"
+    assumptions:
+      - "epsilon1 != 0"
+      - "epsilon2 != 0"
+      - "c6 != 0"
+  equation_residuals:
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+    - 0
+  regularity_witness: "d rho1 wedge d rho2=(epsilon1*epsilon2/c6^2)*(ds1-ds0) wedge (ds2-ds0) != 0"
+  response_rank: 2
+  one_amplitude_collapse: false
+  explicit_solution: "q^A(s0,s)=f_A(s-v_A*s0) after t0 is translated to zero"
+
+linearization:
+  background_dependence: "none because coefficient datum is fixed independently of q"
+  rule: "delta E_A=X_A(delta q^A)"
+  principal_symbol: "sigma_D(xi)_A^B=delta_A^B*xi(X_A)"
+  principal_polynomial: "P_D(xi)=product_A xi(X_A)"
+  polynomial_degree: 6
+  witness_distinct_linear_factors: 6
+  reduced_quadratic_cone_constructed: false
+  physical_scale_constructed: false
+  effective_metric_constructed: false
+
+operational_observables:
+  ratios:
+    rho1: "q1/q6"
+    rho2: "q2/q6"
+  tokens:
+    p1: "logistic(rho1)"
+    p2: "logistic(rho2)"
+  conditional_update:
+    ratio_rule: "X_6(rho_i)=((X_6-X_i)q^i)/q6 for i=1,2"
+    token_rule: "X_6(p_i)=p_i*(1-p_i)*((X_6-X_i)q^i)/q6 for i=1,2"
+  continuum_limit_claimed: false
+  realistic_matter_claimed: false
+  detector_semantics_claimed: false
+  universal_coupling_claimed: false
+
+constraints:
+  coefficient:
+    - "d tau is nowhere zero"
+    - "X_A is C2"
+    - "d tau(X_A)=1"
+  operational:
+    - "q6 is nonzero"
+    - "d rho1 wedge d rho2 is nonzero"
+  algebraic_field_constraints: []
+  gauge_constraints: []
+  secondary_constraints: []
+  global_regular_locus_preservation_proved: false
+
+conditional_identities:
+  - identity_id: "ID-V22-P3-T02-TRANSPORT-COMPOSITION"
+    rule: "X_A(h_A(q^A))=h'_A(q^A)*X_A(q^A)=0"
+    independent_physical_law: false
+    integrated_conservation_law: false
+  - identity_id: "ID-V22-P3-T02-P7-TOKEN-UPDATE"
+    rule: "X_6(p_i)=p_i*(1-p_i)*((X_6-X_i)q^i)/q6"
+    independent_physical_law: false
+    realistic_matter_law: false
+
+composition_and_locality:
+  restriction: "fixed-datum solutions restrict componentwise"
+  gluing: "compatible fixed-datum local solutions glue uniquely componentwise"
+  solution_assignment: "sheaf for a fixed coefficient datum"
+  interaction_between_channels: "none in P3-T02 candidate"
+  later_coupling_inferred: false
+
+bridge_attempt_status:
+  status: "source_principal_map_constructed_reduction_missing"
+  candidate_map: "(D,q) -> sigma_D(xi) -> product_A xi(X_A)"
+  constructed_objects:
+    - "diagonal principal symbol"
+    - "homogeneous degree-six principal polynomial"
+  missing_object: "source-derived robust reduction selecting one physical cone and one physical scale"
+  effective_metric_constructed: false
+  obstruction_scope: "this candidate and current P3-T02 payload only"
+  global_no_go_claimed: false
+
+refuter_cases:
+  - case_id: "REF-P3T02-Q6-ZERO"
+    mutation: "q6=0"
+    expected: "operational ratios and token update rejected"
+  - case_id: "REF-P3T02-RANK-COLLAPSE"
+    mutation: "q2=H(q1) on a patch"
+    expected: "rank-two operational acceptance rejected"
+  - case_id: "REF-P3T02-TANGENT-INITIAL"
+    mutation: "d tau(X_A)=0"
+    expected: "declared Cauchy theorem rejected"
+  - case_id: "REF-P3T02-NONLIPSCHITZ"
+    mutation: "X_A not locally Lipschitz"
+    expected: "uniqueness claim rejected"
+  - case_id: "REF-P3T02-OUTFLOW-DATA"
+    mutation: "independent value imposed on outflow boundary"
+    expected: "overdetermined boundary prescription rejected"
+  - case_id: "REF-P3T02-TARGET-FIT"
+    mutation: "X_A changed after GR target comparison"
+    expected: "source-purity acceptance rejected"
+  - case_id: "REF-P3T02-HIDDEN-METRIC"
+    mutation: "derivatives contracted with undeclared inverse tensor"
+    expected: "candidate rejected"
+  - case_id: "REF-P3T02-HIDDEN-MEASURE"
+    mutation: "action or divergence uses undeclared density"
+    expected: "candidate rejected"
+  - case_id: "REF-P3T02-CONSTANT-ONLY"
+    mutation: "only constant witness supplied"
+    expected: "nontrivial-background acceptance rejected"
+  - case_id: "REF-P3T02-ONE-AMPLITUDE"
+    mutation: "all qA restricted to functions of one amplitude"
+    expected: "rank-two acceptance rejected"
+  - case_id: "REF-P3T02-CONSERVATION-OVERREAD"
+    mutation: "conditional identity called an independent physical law"
+    expected: "claim-language acceptance rejected"
+
+source_purity:
+  imported_target_structures: []
+  prohibited_count: 0
+  absent_structures:
+    - "metric"
+    - "inverse metric"
+    - "coframe"
+    - "connection"
+    - "measure"
+    - "volume form"
+    - "action density"
+    - "divergence"
+    - "Hodge star"
+    - "derivative contraction"
+    - "unit normal"
+    - "target atlas"
+    - "physical clock"
+    - "target detector"
+    - "GR target fit"
+  exposed_source_debt:
+    - "existence and selection of tau"
+    - "existence and selection of six distinct X_A"
+    - "source equivalence class of coefficient data"
+    - "robust reduction to one cone and scale"
+    - "controlled continuum refinement"
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_without_hidden_geometry_v1.tex"
+  formal_objects:
+    - "proposal-only admissible transport datum D_U=(tau,X_1,...,X_6)"
+    - "six-channel equation map E_D"
+    - "fixed-datum local solution sheaf"
+    - "diagonal principal symbol and degree-six principal polynomial"
+  maps:
+    - "(D,q) to E_D[q]"
+    - "initial data f_A to characteristic solution q^A"
+    - "D to sigma_D(xi) to P_D(xi)"
+    - "q to inherited ratios and conditional P7 token update"
+  proof_obligations:
+    - "P3-T03 controlled continuum refinement and error bounds"
+    - "later source-derived reduction to one robust physical cone and scale"
+    - "independent smuggling audit before any adoption or Gate route"
+  next_required_role: "candidate-constructor"
+  no_fog_check: true
+  no_fog_explanation: "The packet constructs a locally well-posed six-channel source transport candidate with an exact regular background and degree-six principal polynomial; it does not construct a unique physical cone, scale, or effective metric."
+  claim_boundary_preserved: true
+
+authority_limits:
+  ontology_modified: false
+  source_law_adopted: false
+  coefficient_datum_adopted: false
+  target_geometry_imported: false
+  target_fit_used: false
+  physical_hyperbolicity_claimed: false
+  conservation_law_adopted: false
+  realistic_matter_law_adopted: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  gate_chair_verdict_authorized: false
+  completed_derivation_authorized: false

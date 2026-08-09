@@ -1,0 +1,261 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+handoff_id: "handoff-0983"
+handoff_number: 983
+handoff_kind: "project_system_v22_p3_t02_staged_acceptance_checkpoint_recovery"
+task_id: "RT-20260809-013"
+decision_id: "DDR-20260809-013"
+job_id: "AJ-RT-20260809-013-001"
+completion_id: "AJC-AJ-RT-20260809-013-001"
+completion_path: "research_control/tasks/RT-20260809-013/jobs/completions/AJC-AJ-RT-20260809-013-001.yaml"
+completion_sha256: "f25ba5f311c04a00dee341363ee9d0c5c208d0d851179c4276155666d4edbd22"
+status: "ready_for_v22_p3_t03_after_fresh_checkpoint"
+created_at: "2026-08-09T14:28:16Z"
+parent_handoff_id: "handoff-0982"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P3-T03"
+recovery_for_plan_task_id: "P3-T02"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260809-013"
+summary: "The consumed AJ-RT-20260809-012-001 checkpoint failed only on 28 deterministic research-control acceptance findings. The 65-path inherited working and restored-index boundary is sealed, including the checkpoint's working-only FOLDER_MAP refresh. Exact job, completion, role-registry, and active-state corrections eliminate the findings. Every P3-T02 scientific artifact and handoff-0982 retain their sealed hashes. The predecessor checkpoint was not replayed. P3-T03 remains selected but unexecuted, and P2-T02 remains externally gated."
+next_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-013-001. After it commits, execute exactly one separately admitted V22 P3-T03 Candidate Constructor AgentJob with Refuter and Validator Engineer perspectives; do not contact reviewers or take any protected or external action."
+current_claim_boundary: "CB-V22-P3-T02-STAGED-ACCEPTANCE-RECOVERY-001"
+loop_risk_route: "construct_v22_p3_t03_controlled_refinement_and_error_model_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260809-013"
+  latest_research_handoff_id: "handoff-0983"
+  latest_research_next_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-013-001. After it commits, execute exactly one separately admitted V22 P3-T03 Candidate Constructor AgentJob with Refuter and Validator Engineer perspectives; do not contact reviewers or take any protected or external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One fresh governed recovery checkpoint followed by one separately admitted V22 P3-T03 controlled-refinement construction or precise obstruction packet."
+  completed_task: "RT-20260809-013"
+  completed_completion_path: "research_control/tasks/RT-20260809-013/jobs/completions/AJC-AJ-RT-20260809-013-001.yaml"
+  completed_completion_sha256: "f25ba5f311c04a00dee341363ee9d0c5c208d0d851179c4276155666d4edbd22"
+  source_task_id: "RT-20260809-012"
+  source_job_id: "AJ-RT-20260809-012-001"
+  source_handoff_id: "handoff-0982"
+  source_handoff_path: "research_control/handoffs/handoff-0982.yaml"
+  source_handoff_sha256: "385886fa86770d3c671307847aaaeb2900db3df2a4aaf62c98708feb0515f8b6"
+  repaired_source_job_path: "research_control/tasks/RT-20260809-012/jobs/AJ-RT-20260809-012-001.yaml"
+  repaired_source_job_sha256: "2bc3a3341ed1f9328b7efae01ed302451c51cc7b846aec1b005c9b80d125d4c8"
+  repaired_source_completion_path: "research_control/tasks/RT-20260809-012/jobs/completions/AJC-AJ-RT-20260809-012-001.yaml"
+  repaired_source_completion_sha256: "05876b197f58341726d7495da3ed327eb3751459b53e93b62eae01ccf1fc0551"
+  immutable_route_sha256: "9a46d5e22e293581d0091470fae36873c29a9bbc97ed6e7a71b1d32bda97d1ce"
+  route_blocker_fingerprint: "c3be636592e18112e60af6a2b7dd9439afec1d083a8961822a5d78779644adf1"
+  inherited_manifest_path: "research_control/tasks/RT-20260809-013/artifacts/inherited_dirty_manifest_v22_p3_t02_staged_acceptance.json"
+  inherited_manifest_sha256: "5cecce1202562261c78477d31a4ec25c10b959ebc45c48d47c07800f8d24cc1c"
+  blocker_path: "research_control/tasks/RT-20260809-013/artifacts/p3_t02_staged_acceptance_checkpoint_blocker.yaml"
+  blocker_sha256: "f2f1536a9e8a072b79abccd1b42bece2d3dd7110eab31914954a2d2b9861fc97"
+  inherited_file_count: 65
+  failed_finding_count: 28
+  corrected_finding_count: 28
+  protected_p3_t02_failure_count: 0
+  prior_checkpoint_job_id: "AJ-RT-20260809-012-001"
+  prior_checkpoint_run_id: "RUN-CHECKPOINT-1f74f450980b9360"
+  prior_checkpoint_consumed: true
+  prior_checkpoint_replayed: false
+  p3_t02_replayed: false
+  p3_t03_selected: true
+  p3_t03_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "the fresh recovery checkpoint described as a replay or retry of the consumed AJ-RT-20260809-012-001 checkpoint"
+    - "record alignment or checkpoint PASS described as physics evidence"
+    - "P3-T03 selection described as execution"
+    - "P2-T02 described as externally reviewed or satisfied"
+    - "P3-T02 described as an effective metric Gate result benchmark promotion or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P3"
+  plan_task_id: "P3-T03"
+  title: "Construct a controlled refinement or continuum-limit model"
+  work_item_status: "not_executed_recovery_checkpoint_pending"
+  result_status: "P3_T03_READY_AFTER_FRESH_RECOVERY_CHECKPOINT"
+  recovery_for_plan_task_id: "P3-T02"
+  next_plan_task_id: "P3-T03"
+  p3_t02_executed: true
+  p3_t02_checkpoint_recovered_precheckpoint: true
+  p3_t03_dependency_ready_after_checkpoint: true
+  p3_t03_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta_project_system_staged_acceptance_recovery_only"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Control-record alignment supplies no controlled refinement, cone, scale, effective metric, coupling, field equation, or Gate evidence."
+  downstream_unlocked:
+    - "P3-T03 after a valid recovery checkpoint"
+  downstream_still_blocked:
+    - "P2-T02 external review without reviewer-contact authority"
+    - "canonical ontology or source-law adoption"
+    - "controlled continuum convergence principal geometry effective metric matter coupling Einstein equations and Gate B"
+    - "downstream Gates benchmark promotion and completed derivation"
+
+selected_next_route:
+  route_id: "v22_p3_t03_controlled_refinement_or_continuum_limit"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P3-T03"
+  work_item_id: "P3-T03"
+  work_kind: "construction_or_implementation"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "candidate-constructor@0.2.0"
+  supporting_perspective: "refuter@0.2.0"
+  validation_perspective: "validator-engineer@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "controlled_refinement_candidate"
+  source_extension_category: "controlled_continuum_refinement"
+  source_extension_import_classification: "proposal_only_controlled_refinement_data"
+  task_type: "v22_p3_t03_controlled_refinement_or_continuum_limit"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Construct one controlled finite-to-continuum refinement model for the P3-T02 proposal-only source dynamics with exact comparison maps, convergence or bounded-error criteria, irregular and adaptive cases, and no target-geometry interpolation."
+  expected_result_kind: "candidate_or_precise_obstruction"
+  strategy_id: "construct_v22_p3_t03_controlled_refinement_and_error_model_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  selected_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-DYNAMICS-V1"
+  transition_id: "CONSTRUCT_CONTROLLED_REFINEMENT"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0983"
+  ordinary_handoff_id: "handoff-0983"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids:
+    - "P3-T03"
+  ready_science_plan_task_refs:
+    - "recommendations_implementation_plan_continue_task-v22:P3-T03"
+  ready_project_system_plan_task_ids: []
+  selected_plan_task_id: "P3-T03"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  selection_reason: "The exact acceptance recovery preserves handoff-0982's dependency-ready P3-T03 selection; P2-T02 still requires unavailable external-review authority."
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260809-013"
+  active_job_id: "AJ-RT-20260809-013-001"
+  current_status: "v22_p3_t02_staged_acceptance_repaired_pending_fresh_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  prior_checkpoint_invocation_count: 1
+  prior_checkpoint_replayed: false
+  p3_t02_replayed: false
+  p3_t03_executed: false
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P3-T03"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_supporting_perspective: "refuter@0.2.0"
+  selected_next_validation_perspective: "validator-engineer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "construct_v22_p3_t03_controlled_refinement_and_error_model_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory classifier resolver signal role-fit checkpoint-receipt Git and exact-manifest preflight passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The sealed manifest binds all 65 inherited paths and the recovery validator protects every P3-T02 scientific artifact."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The exact control-record alignment and recovery packet are complete before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one fresh governed AJ-RT-20260809-013-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Approved frontier task-index graph wiki and registry projections are regenerated from canonical sources before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only verification pass."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failures; historical calibration findings remain warnings."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  reviewer_contact_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+
+handoff_authority_boundary: "This handoff records bounded project-system staged-acceptance alignment and checkpoint recovery only. It changes no science, ontology, metric, coupling, Einstein equation, Gate, benchmark, proof, external review, publication, release, push, external action, or completed-derivation authority."

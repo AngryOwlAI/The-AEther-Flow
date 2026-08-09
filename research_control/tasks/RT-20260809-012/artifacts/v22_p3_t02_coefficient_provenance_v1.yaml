@@ -1,0 +1,90 @@
+schema_id: "v22_p3_t02_coefficient_provenance_v1"
+artifact_id: "V22-P3-T02-COEFFICIENT-PROVENANCE-V1"
+task_id: "RT-20260809-012"
+status: "draft/control"
+coefficient_datum_id: "COEF-V22-B1-SIX-TRANSPORT-V1"
+adoption_status: "proposal-only"
+selected_before_target_comparison: true
+target_fit_used: false
+free_scalar_coefficient_count: 0
+records:
+  - coefficient_id: "COEF-P3T02-TAU"
+    symbol: "tau"
+    type: "C3 source scalar submersion U -> R"
+    selection_basis: "new task-local source-evolution ordering datum required to state a transverse initial-value problem"
+    derived_from_current_ontology: false
+    primitive_debt: true
+    physical_clock: false
+    target_source: ""
+  - coefficient_id: "COEF-P3T02-X1"
+    symbol: "X_1"
+    type: "C2 source vector field with d tau(X_1)=1"
+    selection_basis: "new task-local channel-one transport direction"
+    derived_from_current_ontology: false
+    primitive_debt: true
+    target_source: ""
+  - coefficient_id: "COEF-P3T02-X2"
+    symbol: "X_2"
+    type: "C2 source vector field with d tau(X_2)=1"
+    selection_basis: "new task-local channel-two transport direction"
+    derived_from_current_ontology: false
+    primitive_debt: true
+    target_source: ""
+  - coefficient_id: "COEF-P3T02-X3"
+    symbol: "X_3"
+    type: "C2 source vector field with d tau(X_3)=1"
+    selection_basis: "new task-local channel-three transport direction"
+    derived_from_current_ontology: false
+    primitive_debt: true
+    target_source: ""
+  - coefficient_id: "COEF-P3T02-X4"
+    symbol: "X_4"
+    type: "C2 source vector field with d tau(X_4)=1"
+    selection_basis: "new task-local channel-four transport direction"
+    derived_from_current_ontology: false
+    primitive_debt: true
+    target_source: ""
+  - coefficient_id: "COEF-P3T02-X5"
+    symbol: "X_5"
+    type: "C2 source vector field with d tau(X_5)=1"
+    selection_basis: "new task-local channel-five transport direction"
+    derived_from_current_ontology: false
+    primitive_debt: true
+    target_source: ""
+  - coefficient_id: "COEF-P3T02-X6"
+    symbol: "X_6"
+    type: "C2 source vector field with d tau(X_6)=1"
+    selection_basis: "new task-local channel-six transport direction and conditional token-update direction"
+    derived_from_current_ontology: false
+    primitive_debt: true
+    target_source: ""
+witness_fixture:
+  status: "exact rational executable fixture only"
+  values:
+    X_1: [1, 1, 0, 0]
+    X_2: [1, 0, 1, 0]
+    X_3: [1, 0, 0, 1]
+    X_4: [1, 1, 1, 0]
+    X_5: [1, 0, 1, 2]
+    X_6: [1, 2, 0, 1]
+  target_fitted: false
+  promoted_to_universal_constants: false
+  general_theorem_depends_on_exact_fixture_values: false
+audit:
+  every_differential_coefficient_declared: true
+  derivative_contraction_used: false
+  inverse_tensor_used: false
+  connection_used: false
+  measure_used: false
+  action_used: false
+  divergence_used: false
+  target_prediction_used_to_select_coefficients: false
+  ontology_adoption_count: 0
+  unresolved_debt_count: 7
+authority_limits:
+  source_law_adopted: false
+  coefficient_datum_adopted: false
+  canonical_ontology_modified: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

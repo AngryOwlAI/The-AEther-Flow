@@ -1,0 +1,392 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\U}{\mathcal U}
+\newcommand{\Q}{\mathcal Q}
+\newcommand{\D}{\mathfrak D}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Lie}{\mathcal L}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+
+\title{V22 P3--T02: A Source-Native Six-Channel Transport Candidate\\without Hidden Geometry}
+\author{The \AE ther-Flow Research Project}
+\date{2026-08-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft/control manuscript constructs one deterministic local dynamics law
+for the proposal-only B1 six-scalar source state.  The law uses only a source
+evolution label and six source vector fields; it uses no metric, volume form,
+connection, action, target atlas, physical clock, or GR target fit.  We derive
+the equations, exact local flow solution, admissible data, regular nonconstant
+background, linearization, principal polynomial, conditional identities, and
+a conditional P7 token update.  The construction supplies source-derived
+principal structure but does not select a unique physical cone, scale, or
+effective metric.  The coefficient datum remains proposal-only primitive
+debt; no ontology or source law is adopted and no Distance-to-GR status is
+promoted.
+\end{abstract}
+
+\section{Claim boundary and inherited state}
+
+Let $\A$ be the inherited smooth four-dimensional primitive source arena.  It
+is source-side scaffolding debt, not an already interpreted physical
+spacetime.  On each open $U\subset\A$, the sealed P3--T01 B1 state is
+\begin{equation}
+  q=(q^1,\ldots,q^6)\in\Q_{B1}(U)=C^2(U,\R^6).
+  \label{eq:B1state}
+\end{equation}
+The regular operational locus used below is
+\begin{equation}
+  q^6\ne0,
+  \qquad
+  \dd\rho_1\wedge\dd\rho_2\ne0,
+  \qquad
+  \rho_i=\frac{q^i}{q^6},
+  \qquad
+  p_i=\frac{1}{1+e^{-\rho_i}}quad(i=1,2).
+  \label{eq:regular}
+\end{equation}
+The ratios and $p_i$ are conditional source observables.  They are not target
+coordinates, detector readings, or realistic matter variables.
+
+This packet chooses a deterministic differential law rather than an action.
+That choice is deliberate: an action density would require a source
+integration measure not provided by the inherited B1 syntax.  No measure is
+silently introduced here.
+
+\section{Proposal-only coefficient datum}
+
+\begin{definition}[Admissible transport datum]
+An admissible coefficient datum on $U$ is
+\begin{equation}
+  \D_U=(\tau,X_1,\ldots,X_6),
+  \label{eq:datum}
+\end{equation}
+where $\tau\in C^3(U,\R)$ has nowhere-vanishing differential and each
+$X_A\in\Gamma_{C^2}(TU)$ obeys
+\begin{equation}
+  \dd\tau(X_A)=1,
+  \qquad A=1,\ldots,6.
+  \label{eq:normalization}
+\end{equation}
+The label $\tau$ orders a local source initial-value problem.  It is not a
+physical clock.  The $X_A$ are ordinary source tangent vectors, not a frame,
+coframe, unit flow, or target causal structure.  The datum is fixed before any
+comparison with GR or other target geometry.
+\end{definition}
+
+The normalization in \eqref{eq:normalization} is a parameter convention.  It
+guarantees that every $X_A$ is transverse to each level set of $\tau$ and that
+its local flow parameter equals the change in $\tau$.  It neither compares
+vector lengths nor contracts two derivatives.  All seven objects in
+$\D_U$ are new proposal-only source-extension data.  The current ontology does
+not derive or adopt them.
+
+\section{Dynamics and passive source naturality}
+
+\begin{definition}[Six-channel source transport law]
+For a fixed admissible datum $\D_U$, define
+\begin{equation}
+  E_A[\D_U,q]:=X_A(q^A)=0,
+  \qquad A=1,\ldots,6,
+  \label{eq:eom}
+\end{equation}
+with no sum over $A$.  Equivalently, the equation map is
+$E_{\D_U}:C^2(U,\R^6)\to C^1(U,\R^6)$.
+\end{definition}
+
+Equation \eqref{eq:eom} is local and first order.  A vector field acting on a
+scalar is defined without a metric or affine connection.  There is no free
+scalar coefficient: all differential coefficients are the declared $X_A$.
+There is no cross-channel contraction, determinant, inverse matrix, volume
+form, Hodge star, divergence, or unit normal.
+
+\begin{proposition}[Passive source-chart naturality]
+Let $\varphi:U'\to U$ be a source-chart transition.  With scalar pullback
+$q'^A=q^A\circ\varphi$, $\tau'=\tau\circ\varphi$, and pulled-back vector
+fields $X'_A=(\dd\varphi)^{-1}X_A\circ\varphi$, one has
+\begin{equation}
+  X'_A(q'^A)=\bigl(X_A(q^A)\bigr)\circ\varphi,
+  \qquad
+  \dd\tau'(X'_A)=1.
+\end{equation}
+Thus the law is independent of its source-coordinate representation.
+\end{proposition}
+
+\begin{proof}
+Both statements are the chain rule for a scalar and a covector paired with a
+vector.  No target diffeomorphism or active physical gauge law is inferred.
+\end{proof}
+
+\section{Initial data, boundary data, and local well-posedness}
+
+Fix $t_0$ in the image of $\tau$ and let
+$\Sigma_{t_0}=\tau^{-1}(t_0)$.  By \eqref{eq:normalization}, each $X_A$ is
+transverse to $\Sigma_{t_0}$.  The initial datum is one scalar
+$f_A\in C^2(V_A,\R)$ for each channel on an open
+$V_A\subset\Sigma_{t_0}$:
+\begin{equation}
+  q^A|_{V_A}=f_A.
+  \label{eq:initialdata}
+\end{equation}
+No normal derivative is prescribed.
+
+\begin{theorem}[Exact local characteristic solution]
+Let $\D_U$ be admissible and let $\Phi_A^t$ be the local flow of $X_A$.
+For sufficiently small $|t|$, the maps
+$(t,y)\mapsto\Phi_A^t(y)$ are local product charts about
+$V_A\subset\Sigma_{t_0}$.  The unique local $C^2$ solution of
+\eqref{eq:eom}--\eqref{eq:initialdata} is
+\begin{equation}
+  q^A\bigl(\Phi_A^t(y)\bigr)=f_A(y).
+  \label{eq:flowsolution}
+\end{equation}
+Restriction and compatible gluing of such solutions are componentwise, so
+the fixed-datum solution assignment is a sheaf.
+\end{theorem}
+
+\begin{proof}
+The $C^2$ flow theorem and transversality give the local product charts.
+Along a characteristic,
+$\frac{\dd}{\dd t}q^A(\Phi_A^t(y))=X_A(q^A)=0$, proving existence.
+Every point in the product neighborhood lies on one characteristic meeting
+$\Sigma_{t_0}$ once, proving uniqueness.  Locality of the scalar equations
+gives restriction and gluing.
+\end{proof}
+
+For a source domain with boundary defined locally by a source scalar $b$, an
+optional lateral datum for channel $A$ is allowed only on the inflow subset
+$\{b=0,\ \dd b(X_A)<0\}$ relative to the chosen domain orientation.  No
+metric normal or boundary measure is used.  Prescribing independent outflow
+data generally overdetermines the characteristic solution and is rejected.
+
+The local well-posedness claim is limited to fixed $C^2$ coefficient data and
+$C^2$ componentwise initial data: existence, uniqueness, and continuous
+dependence follow in the usual local flow charts.  It is source-evolution
+well-posedness, not a claim of physical hyperbolicity or causality.
+
+\section{Explicit regular background}
+
+On a source chart with labels $(s^0,s^1,s^2,s^3)$, set $\tau=s^0$ and
+\begin{align}
+ X_1&=\partial_0+\partial_1,&
+ X_2&=\partial_0+\partial_2,&
+ X_3&=\partial_0+\partial_3,\nonumber\\
+ X_4&=\partial_0+\partial_1+\partial_2,&
+ X_5&=\partial_0+\partial_2+2\partial_3,&
+ X_6&=\partial_0+2\partial_1+\partial_3.
+ \label{eq:witnessvectors}
+\end{align}
+These rational source components are an exact fixture, not target-fitted
+numbers.  They obey $\dd\tau(X_A)=1$ and are pairwise distinct.
+
+For constants $a_1,a_2,c_3,c_4,c_5,c_6$ and nonzero
+$\epsilon_1,\epsilon_2,c_6$, define
+\begin{equation}
+ \bar q^1=a_1+\epsilon_1(s^1-s^0),\quad
+ \bar q^2=a_2+\epsilon_2(s^2-s^0),\quad
+ \bar q^3=c_3,\quad \bar q^4=c_4,\quad
+ \bar q^5=c_5,\quad \bar q^6=c_6.
+ \label{eq:background}
+\end{equation}
+Then $X_A(\bar q^A)=0$ for every $A$, and
+\begin{equation}
+ \dd\bar\rho_1\wedge\dd\bar\rho_2
+ =\frac{\epsilon_1\epsilon_2}{c_6^2}
+  (\dd s^1-\dd s^0)\wedge(\dd s^2-\dd s^0)\ne0.
+ \label{eq:rankwitness}
+\end{equation}
+Thus the law has a nonconstant solution on the inherited regular operational
+locus.  The two response directions remain independent; the construction does
+not collapse the state to one amplitude.
+
+In the same chart, write $X_A=\partial_0+v_A^j\partial_j$.  Arbitrary local
+data $f_A$ give the explicit solution
+\begin{equation}
+  q^A(s^0,s)=f_A\bigl(s-v_A s^0\bigr),
+  \label{eq:explicit}
+\end{equation}
+after translating $t_0$ to zero.  Direct substitution verifies
+\eqref{eq:eom}.
+
+\section{Linearization and principal structure}
+
+Because the coefficient datum is independent of $q$, the linearization at
+any background is
+\begin{equation}
+  (\delta E)_A=X_A(\delta q^A).
+  \label{eq:linearization}
+\end{equation}
+For a source covector $\xi\in T_x^*\A$, the principal symbol is
+\begin{equation}
+  \sigma_{\D}(\xi)_A{}^B
+  =\delta_A{}^B\,\xi(X_A),
+  \qquad
+  \mathcal P_{\D}(\xi)
+  =\det\sigma_{\D}(\xi)
+  =\prod_{A=1}^{6}\xi(X_A).
+  \label{eq:principal}
+\end{equation}
+The polynomial is homogeneous of degree six.  In the explicit fixture the six
+linear factors are distinct.  This discharges the narrow P3--T02 requirement
+to generate source-derived principal structure.  It also gives the decisive
+limitation: a product of six unrelated linear factors does not, without a new
+source-side reduction theorem or selector, determine one quadratic cone,
+physical scale, or Lorentzian $g_{\mathrm{eff}}$.
+
+Relative to the proposal-only label $\tau$, the system is diagonal with real
+source characteristic velocities and is locally strongly solvable.  Calling
+this physical hyperbolicity, causality, or a light cone would exceed the claim
+boundary.
+
+\section{Constraints, identities, and conditional token update}
+
+The coefficient constraints are $\dd\tau\ne0$, $X_A\in C^2$, and
+$\dd\tau(X_A)=1$.  The operational solution constraints are
+\eqref{eq:regular}.  There is no algebraic field constraint, gauge constraint,
+secondary constraint, or cross-channel compatibility equation.  Regularity
+is an open condition and can be lost outside a chosen local patch; the law
+does not automatically preserve it globally.
+
+For every $C^1$ scalar function $h_A$, the chain rule gives the conditional
+identity
+\begin{equation}
+  X_A\bigl(h_A(q^A)\bigr)=h_A'(q^A)X_A(q^A)=0.
+  \label{eq:balance}
+\end{equation}
+This is an on-equation transport identity.  Without a source measure or
+divergence it is not an integrated conservation law and is not an independent
+physical postulate.
+
+Since $X_6(q^6)=0$ and $X_i(q^i)=0$ for $i=1,2$, the inherited ratios obey
+\begin{align}
+ X_6(\rho_i)
+ &=\frac{(X_6-X_i)q^i}{q^6},\nonumber\\
+ X_6(p_i)
+ &=p_i(1-p_i)\frac{(X_6-X_i)q^i}{q^6},
+ \qquad i=1,2.
+ \label{eq:tokenupdate}
+\end{align}
+Equation \eqref{eq:tokenupdate} is a derived conditional continuum update for
+the two protected P7 token parameters.  It is not a continuum limit theorem,
+matter equation, detector law, universal coupling law, or adopted physical
+conservation law.
+
+\section{Coefficient provenance, dimensions, and source-purity audit}
+
+The coefficient datum has exactly one provenance class: new proposal-only
+source-extension data introduced by this packet.  The witness components in
+\eqref{eq:witnessvectors} are small rational test values chosen to make the
+construction executable; they are not inferred from a target metric or fit to
+GR.  The general theorem uses arbitrary admissible $X_A$, so no fixture value
+is promoted to a law constant.
+
+Let the source flow parameter and $\tau$ carry a formal label unit $T_s$, and
+let $q^A$ carry a formal channel unit $Q_A$.  Then $X_A(q^A)$ has unit
+$Q_A/T_s$ and $\dd\tau(X_A)$ is dimensionless.  The ratios $\rho_i$ and
+$p_i$ require $Q_i=Q_6$ on the operational patch.  These are bookkeeping
+units, not physical time, length, mass, or detector calibration.
+
+The source-purity audit finds no metric, inverse metric, determinant, volume
+form, connection, Hodge operator, derivative contraction, norm, unit normal,
+target chart, target detector, physical clock, or target-fit coefficient.
+It does find real primitive debt: why $\tau$ exists, why six distinct $X_A$
+are selected, whether their equivalence class is source-derived, whether a
+reduction can select one robust cone and scale, and whether the operational
+regular locus persists under a later coupled law.  Those debts block adoption
+and $g_{\mathrm{eff}}$.
+
+\section{Refuter cases and stop conditions}
+
+The following countercases are part of the result, not deferred prose.
+\begin{enumerate}[leftmargin=*]
+  \item If $q^6=0$, the inherited ratios and token update are undefined.
+  \item If $q^2=H(q^1)$ locally, then
+        $\dd\rho_1\wedge\dd\rho_2$ may vanish and the operational rank screen
+        fails even though the transport equations can still hold.
+  \item If $\dd\tau(X_A)=0$, $X_A$ is tangent to the proposed initial surface
+        and the stated Cauchy construction fails for that channel.
+  \item If an $X_A$ is not locally Lipschitz, uniqueness of characteristics
+        can fail; such data are inadmissible.
+  \item Prescribing unrelated values on an outflow boundary overdetermines the
+        characteristic solution.
+  \item Replacing $X_A$ after comparison with a GR target is target fitting and
+        invalidates the source-purity claim.
+  \item Contracting derivatives with an undeclared inverse tensor or writing
+        an action with an undeclared density imports hidden geometry.
+  \item A constant solution satisfies the equations but, by itself, fails the
+        nontrivial regular-background acceptance burden.
+  \item Restricting all six $q^A$ to functions of one amplitude defeats the
+        rank-two operational witness and is not an accepted subfamily.
+  \item Calling \eqref{eq:balance} a physical conservation law, or
+        \eqref{eq:tokenupdate} a realistic matter law, is an invalid overread.
+\end{enumerate}
+
+\section{Distance-to-GR matrix and bridge status}
+
+\begin{center}
+\small
+\begin{tabular}{p{0.29\linewidth}p{0.64\linewidth}}
+\toprule
+Burden & Status after this packet \\
+\midrule
+Source ontology primitives & B1 state remains proposal-only; $\tau$ and $X_A$ add explicit primitive debt and are not adopted. \\
+Source equivalence $\mathrm{EqSrc}$ & Passive source-chart naturality is exact; no physical equivalence law is adopted. \\
+$\mathrm{RetainH}$ & Unchanged and not derived. \\
+$\mathrm{GenH}$ & Unchanged and not derived. \\
+$\mathrm{ObsLoc}_{\mathrm{lc}}$ & The inherited two-ratio operational patch has a nonconstant dynamical witness. \\
+$\mathrm{Resp}_{\mathrm{lc}}$ & Rank two is retained on the explicit background; this remains necessary, not sufficient. \\
+$M_{\mathrm{src}}$ & The primitive source arena is still scaffolding debt; no manifold adoption occurs. \\
+$g_{\mathrm{eff}}$ & Blocked: the degree-six product of linear factors supplies no unique quadratic cone or scale. \\
+Matter coupling & Blocked; the conditional P7 update is not a matter law. \\
+Einstein equations & Blocked. \\
+Finite-variation robustness & Not established; P3--T03 must define refinement and error control. \\
+Benchmark promotion & Blocked. \\
+Gate Chair status & No protected verdict requested or issued. \\
+Current route freeze & Not frozen: a materially new explicit source model was constructed; next work must test controlled continuum refinement. \\
+Hard-fail status & No hidden target import in the accepted candidate; every listed smuggling variant is rejected. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+The bridge attempt is explicit:
+\begin{equation}
+  (\D_U,q)\longmapsto
+  \sigma_{\D}(\xi)=\operatorname{diag}
+  \bigl(\xi(X_1),\ldots,\xi(X_6)\bigr)
+  \longmapsto
+  \mathcal P_{\D}(\xi)=\prod_A\xi(X_A).
+\end{equation}
+The first map is constructed and source-native.  The attempted continuation
+from $\mathcal P_{\D}$ to one physical cone, scale, and
+$g_{\mathrm{eff}}$ is not constructed: it requires a new source-derived
+reduction/selection object and later robustness evidence.
+
+\section{Decisive result}
+
+The Candidate Constructor result is \emph{constructed candidate}:
+`CAND-V22-B1-SIX-TRANSPORT-DYNAMICS-V1` consists of
+\eqref{eq:datum}--\eqref{eq:eom} with the declared admissibility and data
+rules.  It has a nonconstant regular solution, exact local characteristic
+well-posedness, an exact linearization, and a source-derived degree-six
+principal polynomial.  It neither adopts its coefficient datum nor constructs
+a unique physical cone, scale, or effective metric.  The next admissible V22
+packet after checkpoint is P3--T03, which must define controlled continuum
+refinement and error criteria for this proposal-only dynamics without changing
+its coefficients by target fitting.
+
+In particular, this packet does not construct an effective metric.
+
+\end{document}

@@ -1,0 +1,84 @@
+task_id: "RT-20260809-013"
+task_type: "v22_p3_t02_staged_acceptance_checkpoint_recovery"
+title: "Repair V22 P3-T02 staged acceptance and recover the cumulative checkpoint"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "effective_metric_g_eff"
+  candidate_family: "v22_p3_t02_staged_acceptance_checkpoint_recovery_v1"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+created_at: "2026-08-09T14:28:16Z"
+updated_at: "2026-08-09T14:28:16Z"
+closed_at: "2026-08-09T14:28:16Z"
+parent_task_id: "RT-20260809-012"
+parent_handoff_id: "handoff-0982"
+supersedes_active_routing_task_id: "RT-20260809-012"
+current_decision_id: "DDR-20260809-013"
+current_job_id: "AJ-RT-20260809-013-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260809-013"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal and consumed AJ-RT-20260809-012-001 checkpoint authorize one materially distinct exact control-alignment recovery. No checkpoint replay, P3-T02 reexecution, P3-T03 execution, P2-T02 external review, science mutation, promotion, publication, push, or external action is authorized."
+implementation_plan:
+  plan_id: "project_system_recovery_for_recommendations_implementation_plan_continue_task-v22"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T03"
+  recovery_for_plan_task_id: "P3-T02"
+  next_plan_task_id: "P3-T03"
+  next_plan_task_execution_authorized: false
+objective: "Under the sealed 65-path inherited staged manifest, eliminate exactly the 28 P3-T02 research-control acceptance findings, preserve every scientific artifact hash and the predecessor checkpoint evidence, synchronize ordinary control and generated projections, and invoke at most one fresh governed cumulative checkpoint."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system staged-acceptance alignment and checkpoint eligibility only; the effective-metric scientific burden, P3-T02 mathematical payload, and Distance-to-GR state do not advance."
+route_label: "project-system-checkpoint-recovery"
+route_strategy_id: "repair_v22_p3_t02_staged_acceptance_control_alignment_and_checkpoint_v1"
+immutable_route_sha256: "9a46d5e22e293581d0091470fae36873c29a9bbc97ed6e7a71b1d32bda97d1ce"
+route_blocker_fingerprint: "c3be636592e18112e60af6a2b7dd9439afec1d083a8961822a5d78779644adf1"
+source_head: "d18637379d0dbde560f1b910255f370fe0c1ce54"
+source_tree: "55d849173a1b60a78c52a6961e0abd4b8f6af8f5"
+inherited_manifest_path: "research_control/tasks/RT-20260809-013/artifacts/inherited_dirty_manifest_v22_p3_t02_staged_acceptance.json"
+inherited_manifest_sha256: "5cecce1202562261c78477d31a4ec25c10b959ebc45c48d47c07800f8d24cc1c"
+project_system_change_only: true
+semantic_payload_changed: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-V22-P3-T02-STAGED-ACCEPTANCE-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Correct only the exact P3-T02 job completion and role-registry fields named by the failed research-control gate; create the recovery packet and handoff-0983; update ordinary program state and approved generated derivatives; invoke one fresh checkpoint."
+  forbidden_scope: "Any P3-T02 scientific artifact change; AJ-RT-20260809-012-001 or checkpoint replay; P3-T02 reexecution; P3-T03 execution; P2-T02 external action; validator test schema policy skill base-role science ontology metric coupling Einstein Gate benchmark proof publication release push external action or completed-derivation mutation."
+  source_task_id: "RT-20260809-012"
+  source_job_id: "AJ-RT-20260809-012-001"
+  source_handoff_id: "handoff-0982"
+  prior_checkpoint_invocation_count: 1
+  prior_checkpoint_replayed: false
+  p3_t02_science_replayed: false
+  p3_t03_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+documentation_impact_id: "DI-RT-20260809-013-001"
+completion_id: "AJC-AJ-RT-20260809-013-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260809-013/artifacts/inherited_dirty_manifest_v22_p3_t02_staged_acceptance.json"
+  - "research_control/tasks/RT-20260809-013/artifacts/p3_t02_staged_acceptance_checkpoint_blocker.yaml"
+  - "research_control/tasks/RT-20260809-013/artifacts/v22_p3_t02_staged_acceptance_recovery_validation.json"
+  - "research_control/tasks/RT-20260809-013/jobs/completions/AJC-AJ-RT-20260809-013-001.yaml"
+  - "research_control/handoffs/handoff-0983.yaml"
+  - "research_control/handoffs/handoff-0983.md"
+closure_status: "v22_p3_t02_staged_acceptance_repaired_p3_t03_selected_fresh_checkpoint_pending"
+summary: "The 28 checkpoint findings are resolved through exact control-record alignment. The sealed P3-T02 manuscript, model, fixtures, ledgers, focused validation, and compact receipt are unchanged; P3-T03 stays selected but unexecuted pending one fresh checkpoint."
+next_recommended_action: "Invoke the one fresh governed checkpoint for AJ-RT-20260809-013-001. After a valid commit, claim P3-T03 separately through continue-research."
+project_improvement_signals: []
+notes: "This recovery supplies no theorem, ontology, metric, coupling, Einstein-equation, Gate, benchmark, proof, external-review, publication, release, push, external-action, or completed-derivation authority."
