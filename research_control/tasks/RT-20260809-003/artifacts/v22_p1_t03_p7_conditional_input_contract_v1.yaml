@@ -1,0 +1,94 @@
+schema_id: "v22_p1_t03_p7_conditional_input_contract_v1"
+contract_id: "P7-CONDITIONAL-INPUT-CONTRACT-V1"
+task_id: "RT-20260809-003"
+job_id: "AJ-RT-20260809-003-001"
+status: "active_for_next_geometry_cycle"
+position: "A"
+decision: "fixed_matter_theory_is_conditional_input_to_geometry_reconstruction"
+authority_status: "draft/control integration of exact protected P7 status"
+protected_source_decision:
+  object_id: "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+  path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+  sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+  disposition: "ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE"
+  interpretation_rule: "adopted_not_derived"
+  mathematical_content_changed_by_p1_t03: false
+source_package:
+  exact_package_rule: "Only the unchanged P7-T01 through P7-T06 package and eight P7-T08 meanings may be used."
+  package_members:
+    - object_id: "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+      path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+      sha256: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+    - object_id: "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+      path: "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex"
+      sha256: "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129"
+    - object_id: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+      path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+      sha256: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+    - object_id: "TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+      path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+      sha256: "87014253023cdb8945ed67f606355d762486884ce3a6de4fa2d32e2af32e2b43"
+    - object_id: "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+      path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+      sha256: "5a9a8f5542a7c8b714bbff7ec06c06449b0c66c0196266051562caf9ce602c6b"
+    - object_id: "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+      path: "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex"
+      sha256: "386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7"
+  adopted_meanings:
+    - {postulate_id: "P7-MATTER-POSTULATE-01", meaning: "physical source-matter structure", scope: "declared finite source-state sector occupation defect support charge-chain and representation domains"}
+    - {postulate_id: "P7-MATTER-POSTULATE-02", meaning: "finite source-matter dynamics", scope: "declared finite kernel normalization update and transition domain"}
+    - {postulate_id: "P7-MATTER-POSTULATE-03", meaning: "finite operational meanings", scope: "declared finite protocol roles tokens preparations interventions success failure and response records"}
+    - {postulate_id: "P7-MATTER-POSTULATE-04", meaning: "source-side propagation and accessibility", scope: "declared finite support incidence transition reachability and common-profile subdomains"}
+    - {postulate_id: "P7-MATTER-POSTULATE-05", meaning: "equipped source-matter coupling", scope: "declared equipped sectors controls support classes and coupling maps"}
+    - {postulate_id: "P7-MATTER-POSTULATE-06", meaning: "finite source-matter action", scope: "exact finite symmetric-conductance variational functional and declared variation class"}
+    - {postulate_id: "P7-MATTER-POSTULATE-07", meaning: "source-side stress-energy input or precursor", scope: "first variation source-edge flux and declared finite source-side records"}
+    - {postulate_id: "P7-MATTER-POSTULATE-08", meaning: "componentwise source-side conservation", scope: "exact connected-component balance flux-balance cut-balance and cancellation relations"}
+allowed_uses:
+  - "conditional finite source-matter input to a separately admitted geometry-reconstruction packet"
+  - "finite probe or prototype for testing source-to-geometry constructions"
+  - "source-side operational consistency and finite conservation checks within the exact declared domains"
+  - "matter-side input whose missing source-to-target maps remain explicit obligations"
+required_use_annotations:
+  - "conditional_input"
+  - "finite_scope"
+  - "protected_postulate"
+  - "adopted_not_derived"
+  - "no_gate_credit"
+excluded_outputs:
+  - "realistic continuum matter"
+  - "Standard Model sectors"
+  - "quantum statistics"
+  - "Hilbert or algebraic state structure"
+  - "microcausality"
+  - "target stress tensor T_mu_nu"
+  - "target matter action"
+  - "derived universal target coupling"
+  - "equivalence principle"
+  - "g_eff"
+  - "Einstein-Hilbert action"
+  - "Einstein equations"
+  - "Gate B or Gate D evidence"
+  - "benchmark recovery"
+typed_interface:
+  source_interface: "I_P7"
+  target_types_absent:
+    - "g_eff"
+    - "T_mu_nu"
+    - "target_matter_action"
+    - "Einstein_equations"
+  source_to_target_constructor_present: false
+  non_entailment_rule: "No target-typed term follows from the declared P7 constructors without a separately constructed and evidenced source-to-target bridge."
+open_obstruction:
+  obstruction_id: "OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001"
+  status: "open_derivational_gap_after_constitutive_adoption"
+  changed_by_p1_t03: false
+fail_closed_use_rule: "Any use outside allowed_uses or any inference of an excluded_output is invalid and must stop the consuming task."
+authority_limits:
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  ontology_or_source_law_adopted: false
+  target_matter_coupling_adopted: false
+  gate_b_or_d_credit_authorized: false
+  physics_promotion_authorized: false
+  completed_derivation_authorized: false

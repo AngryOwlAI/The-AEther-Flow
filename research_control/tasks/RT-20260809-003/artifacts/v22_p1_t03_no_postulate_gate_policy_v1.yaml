@@ -1,0 +1,76 @@
+schema_id: "v22_p1_t03_no_postulate_gate_policy_v1"
+policy_id: "NO-POSTULATE-GATE-BD-POLICY-V1"
+task_id: "RT-20260809-003"
+job_id: "AJ-RT-20260809-003-001"
+status: "active_fail_closed_control_policy"
+applies_to:
+  - "Gate B"
+  - "Gate D"
+core_rule: "No protected human decision may turn absent source-to-geometry or source-to-Einstein evidence into a positive derivation gate; humans may select only among evidence-supported candidates."
+result_vocabulary:
+  positive: "POSITIVE"
+  not_ready: "NOT_READY"
+  disqualifying_failure: "CANDIDATE_INSUFFICIENT"
+gate_b_required_evidence:
+  - {criterion_id: "B1", criterion: "target-atlas-free construction"}
+  - {criterion_id: "B2", criterion: "gauge- and constraint-reduced hyperbolic principal polynomial"}
+  - {criterion_id: "B3", criterion: "one stable Lorentzian cone or physically derived equivalence class"}
+  - {criterion_id: "B4", criterion: "universal compatibility across declared matter sectors"}
+  - {criterion_id: "B5", criterion: "operational clock and rod calibration and physical scale"}
+  - {criterion_id: "B6", criterion: "tensorial transformation and local-to-global gluing"}
+  - {criterion_id: "B7", criterion: "finite-variation and coarse-graining robustness"}
+  - {criterion_id: "B8", criterion: "no hidden metric tetrad coframe or equivalent constitutive primitive"}
+gate_b_supplementary_evidence:
+  - "regularity"
+  - "time orientation"
+  - "nondegeneracy"
+  - "conditioning"
+  - "second-clock-effect analysis"
+gate_d_required_evidence:
+  - "positive Gate B evidence record"
+  - "complete tensorial dynamics"
+  - "universal coupling within scope"
+  - "conservation or Ward identities"
+  - "stable physical degrees of freedom"
+  - "controlled corrections and validity regime"
+  - "no unresolved critical independent-review objection"
+invalid_evidence_classes:
+  - "protected postulate by itself"
+  - "target-side GR adoption"
+  - "renamed finite token"
+  - "validator or checkpoint PASS"
+  - "same-context internal review labeled external"
+  - "role or route selection"
+  - "P7 finite conditional input without a source-to-target bridge"
+human_authority:
+  allowed_actions:
+    - "choose among candidates whose required evidence is already admissible"
+    - "select an evidence-grounded positive repair-required candidate-insufficient or ontology-family-insufficient verdict"
+    - "order a bounded repair or decline promotion"
+  forbidden_actions:
+    - "alter an evidence predicate"
+    - "waive a required criterion"
+    - "convert a postulate or process receipt into derivation evidence"
+    - "declare an unsupported candidate positive"
+    - "repair a missing action equation mode stability result geometry bridge or coupling bridge by fiat"
+formal_evaluator:
+  evidence_projection: "pi_E(candidate, evidence, human_decision) = (candidate, evidence)"
+  gate_b_positive_iff: "all B1 through B8 and all supplementary evidence are established by admissible evidence"
+  gate_d_positive_iff: "every Gate D required-evidence item is established by admissible evidence"
+  factorization_rule: "extended_gate = evidence_gate composed with pi_E"
+  theorem_id: "V22-P1-T03-EVIDENCE-PROJECTION-GATE-INVARIANCE-V1"
+  theorem_statement: "For a human decision that adds no independently admissible evidence, Gate G(candidate,evidence,human_decision) equals Gate G(candidate,evidence) for G in {B,D}."
+  missing_required_evidence_result: "NOT_READY"
+  disqualifying_failure_result: "CANDIDATE_INSUFFICIENT"
+conformance:
+  fixture_path: "research_control/tasks/RT-20260809-003/artifacts/fixtures/v22_p1_t03_gate_decision_cases.yaml"
+  every_case_must_pass: true
+  implementation_that_depends_on_human_truth_override: "invalid_evaluator"
+authority_limits:
+  policy_is_gate_verdict: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  protected_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false

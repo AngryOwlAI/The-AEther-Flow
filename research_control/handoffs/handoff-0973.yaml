@@ -1,0 +1,273 @@
+handoff_id: "handoff-0973"
+handoff_number: 973
+handoff_kind: "science_v22_p1_t03_matter_position_no_postulate_gate_policy"
+task_id: "RT-20260809-003"
+decision_id: "DDR-20260809-003"
+job_id: "AJ-RT-20260809-003-001"
+completion_id: "AJC-AJ-RT-20260809-003-001"
+completion_path: "research_control/tasks/RT-20260809-003/jobs/completions/AJC-AJ-RT-20260809-003-001.yaml"
+completion_sha256: "291e2e7e36e87587f44c29a8acc1bff838f1e5e784e80fa28db160ce0ea66634"
+status: "ready_for_v22_p1_t04_after_checkpoint"
+created_at: "2026-08-09T03:30:17Z"
+parent_handoff_id: "handoff-0972"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P1-T03"
+source_role_id: "smuggling-auditor"
+source_role_version: "0.2.0"
+source_execution_role_ref: "smuggling-auditor@0.2.0--RT-20260809-003"
+summary: "V22 P1-T03 passes its bounded integration: the exact six-member and eight-postulate P7 package is Position A conditional input only, Position B remains inactive behind six reopening predicates, the evidence-projection theorem forbids protected truth-value alteration at Gates B/D, and all 62 focused checks plus 14 fixtures pass. P7 status and Distance-to-GR are unchanged. P1-T04 is selected but unexecuted."
+next_action: "After the single governed checkpoint for AJ-RT-20260809-003-001 execute exactly one separately admitted V22 P1-T04 continue-research AgentJob to make Gate B the sole active physics gate and park downstream routes; perform no protected or external action."
+current_claim_boundary: "CB-V22-P1-T03-MATTER-POSITION-NO-POSTULATE-001"
+loop_risk_route: "v22_p1_t04_gate_b_only_physics_lock"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260809-003"
+  latest_research_handoff_id: "handoff-0973"
+  latest_research_next_action: "After the single governed checkpoint for AJ-RT-20260809-003-001 execute exactly one separately admitted V22 P1-T04 continue-research AgentJob to make Gate B the sole active physics gate and park downstream routes; perform no protected or external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One separately admitted V22 P1-T04 continue-research AgentJob may make Gate B the sole active physics gate, build the admission and parking matrices, type physical labels, and preserve historical obstruction evidence without rerunning or promoting downstream physics."
+  completed_task: "RT-20260809-003"
+  completed_completion_path: "research_control/tasks/RT-20260809-003/jobs/completions/AJC-AJ-RT-20260809-003-001.yaml"
+  completed_completion_sha256: "291e2e7e36e87587f44c29a8acc1bff838f1e5e784e80fa28db160ce0ea66634"
+  source_handoff_id: "handoff-0972"
+  source_handoff_path: "research_control/handoffs/handoff-0972.yaml"
+  source_handoff_sha256: "388c591e61d3b68b114efbeba3e22b80f248f4284f1821614014ba4a8195e5eb"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "d1c2df7002a1f03c7a3dcf9fe0a4ff6addcde5f5d5f3aa396af601b125726063"
+  fused_decision_path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex"
+  fused_decision_sha256: "7e2eae747432b1c3931f8edf63012f841cad64863625b0c12839dec8d67817c5"
+  conditional_input_contract_path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_p7_conditional_input_contract_v1.yaml"
+  conditional_input_contract_sha256: "e1acd64ea434f3dc6a0607c17f69162f0e242bc92d5490eb84ff3d3afd92a3c4"
+  position_b_criteria_path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_position_b_reopening_criteria_v1.yaml"
+  position_b_criteria_sha256: "85aa85098b63537ac3160c03fb1935828533552ca28687ce4c98f2a663b8c9df"
+  no_postulate_policy_path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_no_postulate_gate_policy_v1.yaml"
+  no_postulate_policy_sha256: "baad065012c881039648be6de4a1ee3ef5ab3a782d1484289849254282bfd312"
+  validation_path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_gate_policy_validation.json"
+  validation_sha256: "1fe5d834606a665725a75a733682bf8e796cd43a3a4b0a2fb08ec9b5c51e6e1c"
+  compact_receipt_path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_compact_receipt.json"
+  compact_receipt_sha256: "eedfe038ac766714c69ceb7398a50244075c749553b995d342a53873b02714ee"
+  p1_t03_executed: true
+  p1_t04_selected: true
+  p1_t04_executed: false
+  p7_mathematics_changed: false
+  p7_scientific_status_changed: false
+  position_b_opened: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  protected_gate_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "the exact P7 finite package expanded into realistic continuum or Standard Model matter"
+    - "P7 source coupling or precursor expanded into target coupling or target T_mu_nu"
+    - "a protected human decision validator checkpoint role or label counted as Gate B/D evidence"
+    - "Position B described as open adopted or successful"
+    - "g_eff target matter coupling Einstein equations Gate B Gate D benchmark or completed derivation promoted"
+    - "internal child synthesis described as external review or independent replication"
+    - "P1-T04 selection described as execution"
+    - "checkpoint eligibility described as a completed checkpoint before the command succeeds"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P1"
+  plan_task_id: "P1-T03"
+  next_plan_task_id: "P1-T04"
+  title: "Adopt Position A for matter and codify the no-postulate gate rule"
+  result_status: "PASS_V22_P1_T03_POSITION_A_AND_NO_POSTULATE_GATE_POLICY"
+  work_item_status: "completed_checkpoint_pending"
+  exact_p7_package_member_count: 6
+  exact_p7_postulate_count: 8
+  position_b_reopening_predicate_count: 6
+  gate_b_required_evidence_count: 8
+  gate_d_required_evidence_count: 7
+  fixture_case_count: 14
+  fixture_failure_count: 0
+  focused_check_count: 62
+  focused_check_failure_count: 0
+  p7_scope_expansion_count: 0
+  ontology_adoption_count: 0
+  canonical_science_file_change_count: 0
+  p1_t03_executed: true
+  p1_t04_selected: true
+  p1_t04_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  validator_pass_counts_as_physics: false
+  route_selection_counts_as_physics: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "matter_coupling"
+  milestone: "matter_coupling"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P1-T03 creates a transparent conditional-input and evidence-authority contract but no source-to-target matter coupling map or derivational evidence."
+  downstream_unlocked:
+    - "one separately admitted V22 P1-T04 Gate B-only lock and downstream-parking AgentJob after checkpoint"
+  downstream_still_blocked:
+    - "realistic continuum matter emergence"
+    - "g_eff and universal target matter coupling"
+    - "Einstein-leading dynamics and Einstein equations"
+    - "positive Gate B and Gate D verdicts"
+    - "benchmark promotion and completed derivation"
+
+selected_next_route:
+  route_id: "v22_p1_t04_gate_b_only_physics_lock"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P1-T04"
+  work_item_id: "P1-T04"
+  work_kind: "integration_or_selection"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  supporting_perspective: "process-integrity-auditor@0.1.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "gate_b_lock_and_downstream_parking_policy"
+  task_type: "v22_p1_t04_gate_b_only_physics_lock"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Metric law; enforce Gate B as the sole active physics gate and park every downstream Gate C D E Einstein and benchmark route until source-derived prerequisites are satisfied."
+  expected_result_kind: "completed_or_precisely_blocked"
+  strategy_id: "implement_v22_p1_t04_gate_b_only_lock_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+  next_action: "Create the Gate-lock policy physics-admission matrix parked-route registry physical-type checklist and historical-obstruction index without executing or promoting any downstream physics."
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0973"
+  ordinary_handoff_id: "handoff-0973"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P1-T04"
+  ready_science_plan_task_refs:
+    - "recommendations_implementation_plan_continue_task-v22:P1-T04"
+  selected_plan_task_id: "P1-T04"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260809-003"
+  active_job_id: "AJ-RT-20260809-003-001"
+  current_status: "v22_p1_t03_complete_p1_t04_selected_checkpoint_pending"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P1-T04"
+  selected_next_work_item_id: "P1-T04"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "implement_v22_p1_t04_gate_b_only_lock_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight exact P7 source inspection and handoff-0972 route admission passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 62 focused checks and 14 fixtures pass; both child records are complete and four parent conflicts are resolved."
+  post_write:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "The affected profile passed 15 of 16 gates; its sole failure is the inherited RT-20260804-001 result-kind value qualifying_bounded_audit_verdict, while the bounded research-control diff passed with zero errors."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Generated frontier index graph and claim projections were refreshed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only replay passed after source synchronization."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passed with zero hard failures; warnings are historical repository findings and carry no promotion authority."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No new protected Gate review is authorized; the historical P7 decision is preserved unchanged."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+
+project_improvement_signals: []
+project_improvement_signal_count: 0
+project_improvement_sidecar_required: false
+
+authority_limits:
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+  global_no_go_claim_authorized: false

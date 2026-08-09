@@ -1,0 +1,344 @@
+{
+  "artifact_hashes": {
+    "research_control/tasks/RT-20260809-003/artifacts/child_phys_math_p1_t03_gate_invariance.yaml": "0581aa45fcd37f879992b2d0f22814defa02b1d4bfac2d589f9592047bd10e1a",
+    "research_control/tasks/RT-20260809-003/artifacts/child_phys_phil_p1_t03_authority_audit.yaml": "8dce6e0c67cf36567bbda8d85276fd64d03216209a2d8809a0d4d55d86a141b6",
+    "research_control/tasks/RT-20260809-003/artifacts/fixtures/v22_p1_t03_gate_decision_cases.yaml": "2356ede6682115bb9a4734c5e394475d3cf3c8fd14733b9a5984174047cd18e8",
+    "research_control/tasks/RT-20260809-003/artifacts/parent_conflict_review_p1_t03_gate_policy.yaml": "6f792566d261ddf9016781ed91addb47814b6ea94322ead7ec6053f6762dacea",
+    "research_control/tasks/RT-20260809-003/artifacts/parent_fusion_notes_p1_t03_gate_policy.md": "4e271e0ebfce2cc63ff8ed12b5361751211db52baa41db500d710583707e302e",
+    "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex": "7e2eae747432b1c3931f8edf63012f841cad64863625b0c12839dec8d67817c5",
+    "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_no_postulate_gate_policy_v1.yaml": "baad065012c881039648be6de4a1ee3ef5ab3a782d1484289849254282bfd312",
+    "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_p7_conditional_input_contract_v1.yaml": "e1acd64ea434f3dc6a0607c17f69162f0e242bc92d5490eb84ff3d3afd92a3c4",
+    "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_position_b_reopening_criteria_v1.yaml": "85aa85098b63537ac3160c03fb1935828533552ca28687ce4c98f2a663b8c9df",
+    "research_control/tasks/RT-20260809-003/artifacts/validate_v22_p1_t03_gate_policy.py": "9b0d894aaf5dc2cb2dd421753907b2ea604dc364044a4161836f41f33ba64af3"
+  },
+  "authority_limits": {
+    "distance_to_gr_changed": false,
+    "gate_verdict_authorized": false,
+    "physics_promotion_authorized": false,
+    "scientific_status_changed": false,
+    "validator_pass_counts_as_physics": false
+  },
+  "check_count": 62,
+  "checks": [
+    {
+      "check_id": "file_exists::v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex",
+      "evidence": "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file_exists::v22_p1_t03_p7_conditional_input_contract_v1.yaml",
+      "evidence": "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_p7_conditional_input_contract_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file_exists::v22_p1_t03_position_b_reopening_criteria_v1.yaml",
+      "evidence": "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_position_b_reopening_criteria_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file_exists::v22_p1_t03_no_postulate_gate_policy_v1.yaml",
+      "evidence": "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_no_postulate_gate_policy_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file_exists::v22_p1_t03_gate_decision_cases.yaml",
+      "evidence": "research_control/tasks/RT-20260809-003/artifacts/fixtures/v22_p1_t03_gate_decision_cases.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file_exists::child_phys_math_p1_t03_gate_invariance.yaml",
+      "evidence": "research_control/tasks/RT-20260809-003/artifacts/child_phys_math_p1_t03_gate_invariance.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file_exists::child_phys_phil_p1_t03_authority_audit.yaml",
+      "evidence": "research_control/tasks/RT-20260809-003/artifacts/child_phys_phil_p1_t03_authority_audit.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file_exists::parent_conflict_review_p1_t03_gate_policy.yaml",
+      "evidence": "research_control/tasks/RT-20260809-003/artifacts/parent_conflict_review_p1_t03_gate_policy.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "file_exists::parent_fusion_notes_p1_t03_gate_policy.md",
+      "evidence": "research_control/tasks/RT-20260809-003/artifacts/parent_fusion_notes_p1_t03_gate_policy.md",
+      "status": "PASS"
+    },
+    {
+      "check_id": "plan_hash",
+      "evidence": "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65",
+      "status": "PASS"
+    },
+    {
+      "check_id": "plan_position_a",
+      "evidence": "V22-R09 Position A directive present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "plan_no_postulate",
+      "evidence": "V22-R14 truth-value rule present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "backlog_p1_t03",
+      "evidence": "P1-T03 backlog row present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p7_decision_hash",
+      "evidence": "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p7_ledger_hash",
+      "evidence": "e11f5e4ae886932cad618caa3ee97e973bbd38d363db25776fe1fbd2c27451dc",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p7_audit_hash",
+      "evidence": "f6e0b456dcef8ec4285d6293c76ccc6c6fbe04095e3f0d17023565ee9337187c",
+      "status": "PASS"
+    },
+    {
+      "check_id": "p7_postulate_count",
+      "evidence": "8",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_member_count",
+      "evidence": "6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_member::TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1",
+      "evidence": "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_source_hash::TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1",
+      "evidence": "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_member::TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1",
+      "evidence": "research_control/tasks/RT-20260728-001/artifacts/source_matter_finite_transition_kernel_candidate_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_source_hash::TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1",
+      "evidence": "65ac095f5cdf4c2e319365c8b0e024d031b19d9fc2b8102e59997afa1e8f9129",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_member::TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1",
+      "evidence": "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_source_hash::TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1",
+      "evidence": "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_member::TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1",
+      "evidence": "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_source_hash::TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1",
+      "evidence": "87014253023cdb8945ed67f606355d762486884ce3a6de4fa2d32e2af32e2b43",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_member::TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1",
+      "evidence": "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_source_hash::TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1",
+      "evidence": "5a9a8f5542a7c8b714bbff7ec06c06449b0c66c0196266051562caf9ce602c6b",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_member::TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1",
+      "evidence": "research_control/tasks/RT-20260728-005/artifacts/source_kernel_variational_object_candidate_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "live_source_hash::TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1",
+      "evidence": "386769e40167c35604625ef7250c027dc1712c82db4790e2895e0b31ac3cfbf7",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_position_a",
+      "evidence": "fixed_matter_theory_is_conditional_input_to_geometry_reconstruction",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_adopted_meaning_count",
+      "evidence": "8",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_open_obstruction",
+      "evidence": "{'obstruction_id': 'OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001', 'status': 'open_derivational_gap_after_constitutive_adoption', 'changed_by_p1_t03': False}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_exclusions",
+      "evidence": "['Einstein equations', 'Gate B or Gate D evidence', 'Hilbert or algebraic state structure', 'Standard Model sectors', 'derived universal target coupling', 'g_eff', 'microcausality', 'quantum statistics', 'realistic continuum matter', 'target stress tensor T_mu_nu']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_no_target_constructor",
+      "evidence": "{'source_interface': 'I_P7', 'target_types_absent': ['g_eff', 'T_mu_nu', 'target_matter_action', 'Einstein_equations'], 'source_to_target_constructor_present': False, 'non_entailment_rule': 'No target-typed term follows from the declared P7 constructors without a separately constructed and evidenced source-to-target bridge.'}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "contract_authority_false",
+      "evidence": "{'scientific_status_changed': False, 'physical_status_changed': False, 'distance_to_gr_changed': False, 'ontology_or_source_law_adopted': False, 'target_matter_coupling_adopted': False, 'gate_b_or_d_credit_authorized': False, 'physics_promotion_authorized': False, 'completed_derivation_authorized': False}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "position_b_not_open",
+      "evidence": "not_open",
+      "status": "PASS"
+    },
+    {
+      "check_id": "position_b_predicate_count",
+      "evidence": "6",
+      "status": "PASS"
+    },
+    {
+      "check_id": "position_b_obligation_count",
+      "evidence": "10",
+      "status": "PASS"
+    },
+    {
+      "check_id": "position_b_all_required",
+      "evidence": "{'rule': 'open only if every PB-OPEN predicate has admissible tracked evidence', 'missing_predicate_result': 'NOT_OPEN', 'protected_selection_may_change_truth_values': False, 'automatic_ontology_adoption': False}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "position_b_no_truth_override",
+      "evidence": "{'rule': 'open only if every PB-OPEN predicate has admissible tracked evidence', 'missing_predicate_result': 'NOT_OPEN', 'protected_selection_may_change_truth_values': False, 'automatic_ontology_adoption': False}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_gate_scope",
+      "evidence": "['Gate B', 'Gate D']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_b_count",
+      "evidence": "8",
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_b_supplement_count",
+      "evidence": "5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_d_count",
+      "evidence": "7",
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_invalid_evidence",
+      "evidence": "7",
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_factorization",
+      "evidence": "{'evidence_projection': 'pi_E(candidate, evidence, human_decision) = (candidate, evidence)', 'gate_b_positive_iff': 'all B1 through B8 and all supplementary evidence are established by admissible evidence', 'gate_d_positive_iff': 'every Gate D required-evidence item is established by admissible evidence', 'factorization_rule': 'extended_gate = evidence_gate composed with pi_E', 'theorem_id': 'V22-P1-T03-EVIDENCE-PROJECTION-GATE-INVARIANCE-V1', 'theorem_statement': 'For a human decision that adds no independently admissible evidence, Gate G(candidate,evidence,human_decision) equals Gate G(candidate,evidence) for G in {B,D}.', 'missing_required_evidence_result': 'NOT_READY', 'disqualifying_failure_result': 'CANDIDATE_INSUFFICIENT'}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "policy_authority_false",
+      "evidence": "{'policy_is_gate_verdict': False, 'scientific_status_changed': False, 'distance_to_gr_changed': False, 'protected_gate_review_authorized': False, 'downstream_physics_promotion_authorized': False, 'benchmark_promotion_authorized': False, 'completed_derivation_authorized': False}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_count",
+      "evidence": "14",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_unique_ids",
+      "evidence": "['GD-001', 'GD-002', 'GD-003', 'GD-004', 'GD-005', 'GD-006', 'GD-007', 'GD-008', 'GD-009', 'GD-010', 'GD-011', 'GD-012', 'GD-013', 'GD-014']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_evaluator",
+      "evidence": "[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_allowed_selection",
+      "evidence": "at least four allowed selection/route cases",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fixture_forbidden_override",
+      "evidence": "at least nine rejected override cases",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_required_claims",
+      "evidence": "['Position A is adopted as the planning boundary', 'Realistic matter emergence is explicitly outside the current cycle', 'Conditional-input non-entailment lemma', 'Evidence-projection invariance theorem', 'protected selection cannot make the gate positive', 'Position B is not active', 'P1-T04 may separately lock Gate B']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_no_global_no_go",
+      "evidence": "contract-relative limitation present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "tex_no_gate_verdict",
+      "evidence": "non-verdict status present",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_math_complete",
+      "evidence": "completed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_math_payload_count",
+      "evidence": "2",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_phil_complete",
+      "evidence": "completed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "child_review_provenance",
+      "evidence": "{'class': 'same_context_internal_ai_review_only', 'independent_replication': False, 'actual_external_specialist': False, 'epistemic_credit': 'internal_authority_and_claim_boundary_audit_only'}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "conflicts_resolved",
+      "evidence": "resolved",
+      "status": "PASS"
+    },
+    {
+      "check_id": "fusion_internal_only",
+      "evidence": "internal-only and zero-delta language present",
+      "status": "PASS"
+    }
+  ],
+  "errors": [],
+  "failure_count": 0,
+  "fixture_count": 14,
+  "fixture_failure_count": 0,
+  "fixture_failures": [],
+  "generated_at": "2026-08-09T03:30:17Z",
+  "job_id": "AJ-RT-20260809-003-001",
+  "schema_id": "v22_p1_t03_gate_policy_validation_v1",
+  "status": "PASS",
+  "task_id": "RT-20260809-003"
+}

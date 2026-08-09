@@ -187,6 +187,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P16-T06-GOAL-COMPLETION-CANDIDATE` `research_control/tasks/RT-20260804-004/artifacts/v21_p16_t06_goal_completion_candidate.md`
 - `MD-V21-P16-T06-PARENT-FUSION-GOAL-RELAY-CLOSURE-V1` `research_control/tasks/RT-20260804-004/artifacts/parent_fusion_notes_p16_t06_goal_relay_closure.md`
 - `MD-V22-P1-T02-PARENT-FUSION-PRIMITIVE-DEBT-V1` `research_control/tasks/RT-20260809-002/artifacts/parent_fusion_notes_p1_t02_primitive_debt.md`
+- `MD-V22-P1-T03-PARENT-FUSION-GATE-POLICY-V1` `research_control/tasks/RT-20260809-003/artifacts/parent_fusion_notes_p1_t03_gate_policy.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 - `WIKI-HTML-AETHER-FLOW-ONTOLOGY-EXPLAINER` `wiki/html/html-aether-flow-ontology-explainer.md`
 - `WIKI-HTML-AETHER-FLOW-PHYSICS-PROGRAM-EXPLAINER` `wiki/html/html-aether-flow-physics-program-explainer.md`
@@ -860,6 +861,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P9-T08-PARENT-FUSION-BENCHMARK-SUITE-AUDIT-V1` `wiki/markdown/md-v21-p9-t08-parent-fusion-benchmark-suite-audit-v1.md`
 - `WIKI-MD-V21-P9-T09-PARENT-FUSION-GATE-E-REVIEW-V1` `wiki/markdown/md-v21-p9-t09-parent-fusion-gate-e-review-v1.md`
 - `WIKI-MD-V22-P1-T02-PARENT-FUSION-PRIMITIVE-DEBT-V1` `wiki/markdown/md-v22-p1-t02-parent-fusion-primitive-debt-v1.md`
+- `WIKI-MD-V22-P1-T03-PARENT-FUSION-GATE-POLICY-V1` `wiki/markdown/md-v22-p1-t03-parent-fusion-gate-policy-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1326,6 +1328,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P9-T07-FINITE-NONLINEAR-COMPACT-SOURCE-NONSELECTION-V1` `wiki/tex/tex-v21-p9-t07-finite-nonlinear-compact-source-nonselection-v1.md`
 - `WIKI-TEX-V21-P9-T09-PROTECTED-GATE-E-DECISION-V1` `wiki/tex/tex-v21-p9-t09-protected-gate-e-decision-v1.md`
 - `WIKI-TEX-V22-P1-T02-SCIENTIFIC-OBJECTIVE-PRIMITIVE-DEBT-AUDIT-V1` `wiki/tex/tex-v22-p1-t02-scientific-objective-primitive-debt-audit-v1.md`
+- `WIKI-TEX-V22-P1-T03-MATTER-POSITION-NO-POSTULATE-GATE-POLICY-V1` `wiki/tex/tex-v22-p1-t03-matter-position-no-postulate-gate-policy-v1.md`
 
 ## obsidian-wiki
 
@@ -2316,6 +2319,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P9-T07-FINITE-NONLINEAR-COMPACT-SOURCE-NONSELECTION-V1` `research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex`
 - `TEX-V21-P9-T09-PROTECTED-GATE-E-DECISION-V1` `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`
 - `TEX-V22-P1-T02-SCIENTIFIC-OBJECTIVE-PRIMITIVE-DEBT-AUDIT-V1` `research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_scientific_objective_primitive_debt_audit_v1.tex`
+- `TEX-V22-P1-T03-MATTER-POSITION-NO-POSTULATE-GATE-POLICY-V1` `research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex`
 
 ## user-modified-project
 

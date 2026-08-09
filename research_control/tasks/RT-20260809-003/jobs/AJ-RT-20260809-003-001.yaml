@@ -1,0 +1,455 @@
+job_id: "AJ-RT-20260809-003-001"
+task_id: "RT-20260809-003"
+decision_id: "DDR-20260809-003"
+role_id: "smuggling-auditor"
+role_version: "0.2.0"
+execution_role_ref: "smuggling-auditor@0.2.0--RT-20260809-003"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-09T03:21:40Z"
+started_at: "2026-08-09T03:21:40Z"
+completed_at: "2026-08-09T03:30:17Z"
+completion_path: "research_control/tasks/RT-20260809-003/jobs/completions/AJC-AJ-RT-20260809-003-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal and checkpointed handoff-0972 authorize this one P1-T03 integration and one checkpoint only. The existing P7 protected decision is not replayed. No new protected or external action is authorized."
+objective: "Implement the exact V22 P1-T03 Position A matter boundary P7 conditional-input contract inactive Position B reopening criteria evidence-only Gate B/D policy adversarial fixtures and one bounded next-route handoff."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Response semantics; preserve the exact protected P7 finite source-matter package as conditional input while blocking its use as universal target coupling or Gate B/D evidence."
+route_label: "ordinary-research-packet"
+route_reason: "handoff_0972_selects_dependency_ready_v22_p1_t03_after_p1_t02_checkpoint"
+route_strategy_id: "integrate_v22_p1_t03_position_a_no_postulate_gate_policy_v1"
+immutable_route_sha256: "388c591e61d3b68b114efbeba3e22b80f248f4284f1821614014ba4a8195e5eb"
+source_head: "2c63cb6231259a8b836529d6dda8107f79db9afc"
+source_tree: "1a9f2b8237a114b1a364269ee685bdfe71674c77"
+assembly_parent_head: "2c63cb6231259a8b836529d6dda8107f79db9afc"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P1-T03"
+recommendation_ids:
+  - "V22-R08"
+  - "V22-R09"
+  - "V22-R14"
+declared_coverage_ids:
+  - "V22-R09"
+  - "V22-R14"
+cross_cutting_directive_ids:
+  - "V22-X05"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P1-T04"
+next_plan_task_execution_authorized: false
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0972"
+  source_handoff_path: "research_control/handoffs/handoff-0972.yaml"
+  source_handoff_sha256: "388c591e61d3b68b114efbeba3e22b80f248f4284f1821614014ba4a8195e5eb"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P1-T03"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P1-T03"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1138
+    relationship_row_count: 5728
+    semantic_row_count: 1138
+    vault_row_count: 1138
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: true
+  refresh_performed: true
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+        - "MD-RESEARCH-CONTROL-DESIGN-V22-THREE-TRACK-CHARTER-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-V22-THREE-TRACK-CHARTER-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/v22_three_track_charter_v1.md"
+      source_hash: "e5bd43ecd33be61c0f026b1836e414084b9274c3f3867516a7ae48581cb8831d"
+  additional_control_inspections:
+    - object_id: "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+      control_path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+      source_hash: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+    - object_id: "TEX-V21-P7-T07-MATTER-PACKAGE-SMUGGLING-AUDIT-V1"
+      control_path: "research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex"
+      source_hash: "f6e0b456dcef8ec4285d6293c76ccc6c6fbe04095e3f0d17023565ee9337187c"
+    - object_id: "HANDOFF-0972"
+      control_path: "research_control/handoffs/handoff-0972.yaml"
+      source_hash: "388c591e61d3b68b114efbeba3e22b80f248f4284f1821614014ba4a8195e5eb"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      control_path: "research_control/design/gr_derivation_burden_map.md"
+      source_hash: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+  authority_note: "Tracked registered source and control records govern. Generated wiki semantic Obsidian SQLite and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "theorem"
+  candidate_family: "V22-P1-T03-POSITION-A-NO-POSTULATE-GATE-POLICY-V1"
+  assumption_delta:
+    - "The exact protected P7 finite package remains unchanged and is declared only as Position A conditional source-side input for the next geometry cycle."
+    - "No source-to-target constructor is added and every target coupling geometry Einstein and Gate burden remains absent."
+    - "Protected decisions are formally excluded from Gate B and Gate D evidence truth-value computation while evidence-supported selection remains allowed."
+    - "Position B remains inactive and receives explicit criteria for a separate future research program."
+  materiality_basis: "V22 lacked one enforceable contract separating the protected finite P7 input from universal target coupling and lacked a formal test that detects human truth-value alteration. The new typed-interface lemma and evidence-projection invariance theorem supply that missing control-scientific payload."
+  payload_details:
+    theorem_identity: "V22-P1-T03-EVIDENCE-PROJECTION-GATE-INVARIANCE-V1"
+    lemma_identity: "V22-P1-T03-P7-TYPED-CONDITIONAL-NONENTAILMENT-V1"
+    exact_p7_package_member_count: 6
+    exact_p7_postulate_count: 8
+    gate_fixture_count: 14
+    ontology_adoption_count: 0
+    global_no_go_claimed: false
+  source_basis:
+    - "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    - "TEX-V21-P7-T02-SOURCE-MATTER-FINITE-TRANSITION-KERNEL-V1"
+    - "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    - "TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+    - "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    - "TEX-V21-P7-T06-SOURCE-KERNEL-VARIATIONAL-OBJECT-V1"
+    - "TEX-V21-P7-T07-MATTER-PACKAGE-SMUGGLING-AUDIT-V1"
+    - "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "research_control/design/gr_derivation_burden_map.md"
+    - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex"
+    - "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_p7_conditional_input_contract_v1.yaml"
+    - "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_no_postulate_gate_policy_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v22_p1_t03_position_a_no_postulate_gate_policy"
+  family_id: "V22-P1-T03-POSITION-A-NO-POSTULATE-GATE-POLICY-V1"
+  family_identity_sha256: "032860eddecb9523ca66faa4d9b5407b4975ef36404903bf3ffe7e230ffa8534"
+  assumption_sha256es:
+    - "70e63b321a9c9fc22750ad7f860cabaef50c7fe13f716ab87fa191e408189051"
+  route_kind: "theorem_investigation"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V22-P1-T03-EXACT-P7-CONDITIONAL-INPUT-AND-EVIDENCE-GATE-BRANCH"
+    material_difference_basis: "This packet does not reconstruct a frozen EqSrc or geometry candidate. It establishes a distinct matter-input interface and no-postulate evaluator theorem required by the new V22 plan."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex"
+      - "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_no_postulate_gate_policy_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered Position A matter-position and no-postulate decision source"
+      - "one exact P7 conditional-input contract with six members and eight meanings"
+      - "one Position B reopening-criteria record"
+      - "one evidence-only Gate B/D policy with invariance theorem and typed non-entailment lemma"
+    project_system:
+      - "one fourteen-case gate-decision fixture matrix"
+      - "task-local validator and compact receipt"
+      - "parent-child synthesis and standard control records"
+  acceptance_criteria:
+    physics:
+      - "later matter-first tasks may use P7 only within exact finite source-side scope"
+      - "every Gate B/D evaluator rejects postulate-only passage and protected truth-value alteration"
+      - "realistic matter emergence is explicit out of scope and Position B stays inactive"
+      - "no P7 mathematics status or open obstruction changes"
+    project_system:
+      - "all focused source hash contract and fixture checks pass"
+      - "registered source hashes and generated derivatives synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "bind every P7 member meaning and limit to exact source authority"
+      - "fuse typed-interface mathematics with authority and epistemic analysis"
+      - "resolve child differences without hiding scope or adoption limits"
+      - "preserve every target coupling Gate benchmark and completed-derivation block"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-003/artifacts/child_phys_math_p1_t03_gate_invariance.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-003/artifacts/child_phys_phil_p1_t03_authority_audit.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260809-003/artifacts/parent_conflict_review_p1_t03_gate_policy.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260809-003/artifacts/parent_fusion_notes_p1_t03_gate_policy.md"
+    fused_output_path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/**"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/**"
+  - "registries/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0973.yaml"
+  - "research_control/handoffs/handoff-0973.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260809-003/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "README.md"
+  - "implementations_plans/**"
+  - ".codex/skills/**"
+  - ".agents/roles/**"
+  - "html/**"
+  - "pdf/**"
+  - "research_control/tasks/RT-20260727-007/**"
+  - "research_control/tasks/RT-20260728-001/**"
+  - "research_control/tasks/RT-20260728-002/**"
+  - "research_control/tasks/RT-20260728-003/**"
+  - "research_control/tasks/RT-20260728-004/**"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "research_control/tasks/RT-20260728-006/**"
+  - "research_control/tasks/RT-20260729-001/**"
+  - "registries/DISTANCE_TO_GR_LEDGER.csv"
+  - "registries/METRIC_USE_LEDGER.csv"
+allowed_source_classes:
+  - "science_draft"
+  - "science_audit"
+  - "task_local_theorem"
+  - "task_local_definition"
+  - "task_local_audit"
+  - "project_control"
+  - "registry"
+  - "role_contract"
+  - "generated_memory_derivative"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "generated_derivative_authority"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "physical_ontology_adoption"
+  - "p7_scope_or_status_expansion"
+  - "realistic_matter_emergence_claim"
+  - "target_metric_or_equivalent_import"
+  - "target_stress_tensor_or_matter_action"
+  - "universal_target_matter_coupling"
+  - "einstein_action_or_equation_adoption"
+  - "protected_truth_value_alteration"
+  - "external_review_or_replication_claim"
+  - "proof_publication_release_or_push"
+approved_commands:
+  - ".venv/bin/python -m py_compile research_control/tasks/RT-20260809-003/artifacts/validate_v22_p1_t03_gate_policy.py"
+  - ".venv/bin/python research_control/tasks/RT-20260809-003/artifacts/validate_v22_p1_t03_gate_policy.py --write --json"
+  - ".venv/bin/python research_control/tasks/RT-20260809-003/artifacts/validate_v22_p1_t03_gate_policy.py --json"
+  - "python3 /Users/alex.omegapy/.codex/plugins/cache/openai-bundled/latex/0.2.4/skills/../scripts/compile_latex.py research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths research_control/design/v22_recommendation_backlog.yaml research_control/tasks/RT-20260809-003 research_control/handoffs/handoff-0973.yaml research_control/program_state.yaml registries/TEX_SOURCE_REGISTRY.csv registries/MARKDOWN_SOURCE_REGISTRY.csv"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260809-003-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/generate_claim_graph_v1.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/validate_generated_report_freshness.py --json"
+  - "git diff --check"
+  - "git diff --cached --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260809-003-001"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260809-003-001 --legacy-validation"
+required_validators:
+  - "memory_preflight"
+  - "ordinary_route_guard_admission"
+  - "source_registry_and_hash_inspection"
+  - "exact_p7_conditional_input_contract"
+  - "position_a_scope"
+  - "position_b_reopening_criteria"
+  - "gate_b_evidence_completeness"
+  - "gate_d_evidence_completeness"
+  - "evidence_projection_invariance"
+  - "typed_conditional_non_entailment"
+  - "allowed_selection_vs_truth_value_fixtures"
+  - "parent_child_synthesis"
+  - "tex_scratch_compile"
+  - "task_taxonomy"
+  - "project_change_classifier"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "affected_profile"
+  - "generated_report_freshness"
+  - "compact_frontier_freshness"
+  - "dependency_graph_freshness"
+  - "claim_graph_validation"
+  - "memory_sync"
+  - "memory_core"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+expected_outputs:
+  - "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_matter_position_no_postulate_gate_policy_v1.tex"
+  - "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_p7_conditional_input_contract_v1.yaml"
+  - "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_position_b_reopening_criteria_v1.yaml"
+  - "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_no_postulate_gate_policy_v1.yaml"
+  - "research_control/tasks/RT-20260809-003/artifacts/fixtures/v22_p1_t03_gate_decision_cases.yaml"
+  - "research_control/tasks/RT-20260809-003/artifacts/child_phys_math_p1_t03_gate_invariance.yaml"
+  - "research_control/tasks/RT-20260809-003/artifacts/child_phys_phil_p1_t03_authority_audit.yaml"
+  - "research_control/tasks/RT-20260809-003/artifacts/parent_conflict_review_p1_t03_gate_policy.yaml"
+  - "research_control/tasks/RT-20260809-003/artifacts/parent_fusion_notes_p1_t03_gate_policy.md"
+  - "research_control/tasks/RT-20260809-003/artifacts/validate_v22_p1_t03_gate_policy.py"
+  - "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_gate_policy_validation.json"
+  - "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_compact_receipt.json"
+  - "research_control/tasks/RT-20260809-003/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260809-003/jobs/completions/AJC-AJ-RT-20260809-003-001.yaml"
+  - "research_control/handoffs/handoff-0973.yaml"
+  - "research_control/handoffs/handoff-0973.md"
+  - "research_control/program_state.yaml"
+claim_boundary: "CB-V22-P1-T03-MATTER-POSITION-NO-POSTULATE-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260809-003-001"
+completion_id: "AJC-AJ-RT-20260809-003-001"
+notes: "This immutable AgentJob authorizes only P1-T03 and one next-route handoff. Internal perspectives and validator results are same-context operational evidence and cannot alter Gate B/D truth values."

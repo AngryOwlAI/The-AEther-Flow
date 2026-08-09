@@ -595,7 +595,7 @@ items:
     truth-value alteration, plus claim-language and authority review.
   stop_conditions: Expansion of P7 to target coupling by implication, postulated metric/Einstein
     action, or ambiguity about who may change scientific status.
-  implementation_status: pending
+  implementation_status: completed_checkpoint_pending
   expected_result_kind: completed_or_precisely_blocked
   requires_human_gate: false
   dependency_independent_after_other_human_gates: true
@@ -612,6 +612,17 @@ items:
   title: Make Gate B the sole active physics gate and park downstream work
   track: B
   owner: Director of Research
+  work_kind: integration_or_selection
+  task_class: science
+  role_family: smuggling-auditor@0.2.0
+  supporting_perspective: process-integrity-auditor@0.1.0
+  controlling_launcher: continue-research-goal@v4
+  worker_skill: continue-research
+  route_label: ordinary-research-packet
+  target_derivation_milestone: effective_metric_g_eff
+  milestone_burden: Metric law; enforce Gate B as the sole active physics gate and
+    park every downstream Gate C, D, E, Einstein, and benchmark route until source-derived
+    prerequisites are satisfied.
   declared_coverage_ids:
   - V22-R04
   - V22-R11
@@ -651,6 +662,10 @@ items:
     treated as physical typing, or a protected decision substituted for new evidence.
     ## P2. Source-adequacy theorem, extension budget, and candidate selection'
   implementation_status: pending
+  expected_result_kind: completed_or_precisely_blocked
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  allow_scope_expansion: false
   requires_separate_agentjob: true
   max_outer_agentjobs_per_invocation: 1
   automatic_execution_authorized: false

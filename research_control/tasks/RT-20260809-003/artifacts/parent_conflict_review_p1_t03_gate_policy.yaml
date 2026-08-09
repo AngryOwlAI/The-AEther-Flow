@@ -1,0 +1,36 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260809-003"
+job_id: "AJ-RT-20260809-003-001"
+status: "resolved"
+resolution_rounds: 1
+child_outputs:
+  - "research_control/tasks/RT-20260809-003/artifacts/child_phys_math_p1_t03_gate_invariance.yaml"
+  - "research_control/tasks/RT-20260809-003/artifacts/child_phys_phil_p1_t03_authority_audit.yaml"
+conflicts:
+  - conflict_id: "PARENT-P1T03-001"
+    issue: "Whether adopting Position A changes P7 scientific status."
+    math_position: "Position A fixes an input signature and consuming interface."
+    philosophy_position: "The word adoption could be overread as a new physical truth decision."
+    resolution: "Treat Position A as a draft/control program decision that preserves the already protected P7 status byte-for-byte and adds no physical status."
+    status: "resolved"
+  - conflict_id: "PARENT-P1T03-002"
+    issue: "Whether the no-postulate theorem prohibits human Gate authority."
+    math_position: "Evidence projection makes the gate truth value invariant under a non-evidential human record."
+    philosophy_position: "Protected authority still has legitimate selection and adjudication functions."
+    resolution: "Permit candidate and scoped-verdict selection only over evidence-supported alternatives while forbidding predicate waiver or truth-value alteration."
+    status: "resolved"
+  - conflict_id: "PARENT-P1T03-003"
+    issue: "Whether Position B prerequisites should require completed matter emergence evidence."
+    math_position: "A research program can open before its target theorem exists."
+    philosophy_position: "Opening without preregistration could erase Position A and launder the desired conclusion."
+    resolution: "Require a distinct hypothesis, plan, budget, obligations, tests, and boundary at opening; explicitly state that opening authorizes research rather than truth or ontology adoption."
+    status: "resolved"
+  - conflict_id: "PARENT-P1T03-004"
+    issue: "Whether absence of a source-to-target constructor proves global impossibility."
+    math_position: "The typed interface yields a structural non-entailment result."
+    philosophy_position: "The result must not exclude future source extensions."
+    resolution: "State the lemma only for the exact declared P7 signature and call it a contract-relative type obstruction."
+    status: "resolved"
+unresolved_conflicts: []
+blocking_conflict_count: 0
+fusion_authorized: true

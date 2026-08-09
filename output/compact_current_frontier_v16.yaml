@@ -7,50 +7,50 @@ generated_from:
   - "research_control/current_frontier.md"
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
-  - "research_control/handoffs/handoff-0972.yaml"
+  - "research_control/handoffs/handoff-0973.yaml"
   - "research_control/program_state.yaml"
 report_provenance:
   schema_id: "generated_report_provenance_v1"
   policy_id: "p13_t07_live_generated_report_freshness_v1"
   report_class: "compact_current_frontier"
-  source_commit: "c0843359c321cbcb2f5d043153c5f0751376b3b5"
+  source_commit: "2c63cb6231259a8b836529d6dda8107f79db9afc"
   source_hashes:
     - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
       sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
     - path: "registries/RESEARCH_TASK_REGISTRY.csv"
-      sha256: "a863e7b4c9e680a413be7f600cd4734b8fd5bd8502ae9b3f5269b46761c8a4f4"
+      sha256: "4452959adc5e2b66a0dff00718b17e0f9ceadba183f66865092c911267144e4e"
     - path: "research_control/current_frontier.md"
-      sha256: "782727176a9577ce3c2fbbfb64a5751969d054eb86d86bac3d77bc8869d7c923"
-    - path: "research_control/handoffs/handoff-0972.yaml"
-      sha256: "388c591e61d3b68b114efbeba3e22b80f248f4284f1821614014ba4a8195e5eb"
+      sha256: "b151b0b8c5d410ccb69a9caf7fb86f1ceb0d5b3149f1c49cc341b80aadf6564c"
+    - path: "research_control/handoffs/handoff-0973.yaml"
+      sha256: "1b2d55ff17adf67a0620c3e478f9151f6153a7844f5ce4b6bb88e31b901d7e8b"
     - path: "research_control/program_state.yaml"
-      sha256: "a3d250087f73440a0f8f7fe36247b15b26fee12d13ed6437b5f9a33089c369f8"
+      sha256: "aebdda0d3fbd8156a03b0f8ea8149588c7c52ac790a73e235035ee2c7e136289"
     - path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml"
       sha256: "dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"
     - path: "scripts/research_control/generated_report_provenance.py"
       sha256: "af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"
     - path: "scripts/research_control/render_compact_current_frontier_v16.py"
       sha256: "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
-  source_manifest_sha256: "438d887a6987ceea6a596dc0a99159fee776c84b271f03c3a802763928490bf8"
+  source_manifest_sha256: "419910d684797558303a4277f8bfd2190d1bd4d2a25610ac39a457af2cd40551"
   source_path_count: "12"
-  generation_time: "2026-08-09T02:25:04Z"
-  task_count: "1227"
+  generation_time: "2026-08-09T03:30:17Z"
+  task_count: "1228"
   maximum_commit_lag: "1"
   freshness_status: "fresh_at_generation"
   generated_view_is_authority: false
   physics_promotion_authorized: false
   proof_authority: false
 active_state:
-  active_task_id: "RT-20260809-002"
-  latest_handoff_id: "handoff-0972"
-  current_status: "v22_p1_t02_primitive_debt_audit_complete_p1_t03_selected_checkpoint_pending"
+  active_task_id: "RT-20260809-003"
+  latest_handoff_id: "handoff-0973"
+  current_status: "v22_p1_t03_position_a_and_no_postulate_policy_complete_p1_t04_selected_checkpoint_pending"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260809-002"
-  latest_research_handoff_id: "handoff-0972"
-  latest_research_next_action: "After the single governed checkpoint for AJ-RT-20260809-002-001 execute exactly one separately admitted V22 P1-T03 continue-research AgentJob for Position A matter scope and the no-postulate Gate B/D policy; perform no protected or external action."
+  latest_research_task_id: "RT-20260809-003"
+  latest_research_handoff_id: "handoff-0973"
+  latest_research_next_action: "After the single governed checkpoint for AJ-RT-20260809-003-001 execute exactly one separately admitted V22 P1-T04 continue-research AgentJob to make Gate B the sole active physics gate and park downstream routes; perform no protected or external action."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -58,10 +58,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "v22_p1_t03_matter_position_no_postulate_gate_policy"
+  route_id: "v22_p1_t04_gate_b_only_physics_lock"
   role_family: "smuggling-auditor@0.2.0"
-  target_derivation_milestone: "matter_coupling"
-  milestone_burden: "Response semantics; preserve the exact protected P7 finite source-matter package as conditional input while blocking its use as universal target coupling or Gate B/D evidence."
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Metric law; enforce Gate B as the sole active physics gate and park every downstream Gate C D E Einstein and benchmark route until source-derived prerequisites are satisfied."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -373,8 +373,8 @@ distance_to_gr:
   delta:
     effect: "no_distance_delta"
     changed: false
-    milestone: "source_ontology"
-    burden_id: "source_ontology_primitives"
+    milestone: "matter_coupling"
+    burden_id: "matter_coupling"
   high_risk_rows:
     - burden_id: "m_src"
       reader_facing_status: "adopted only as scoped source-only M_src object"
@@ -638,11 +638,9 @@ metric_use_ledger:
 validation:
   latest_required_status: "PASS"
   pending_layers:
-    - layer: "checkpoint"
-      status: "PENDING"
-      evidence: []
     - layer: "post_checkpoint"
       status: "PENDING"
-      evidence: []
+      evidence:
+        - "One governed checkpoint remains."
 authority_warning:
   snapshot_only_not_authority: true

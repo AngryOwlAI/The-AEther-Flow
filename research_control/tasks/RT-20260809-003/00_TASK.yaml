@@ -1,0 +1,75 @@
+task_id: "RT-20260809-003"
+task_type: "v22_p1_t03_matter_position_and_no_postulate_gate_policy"
+title: "Adopt Position A for matter and codify the no-postulate gate rule"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "integration_or_selection"
+  milestone: "matter_coupling"
+  candidate_family: "v22_p1_t03_position_a_no_postulate_gate_policy_v1"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "science_draft"
+  scope: "scientific"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+closure_status: "v22_p1_t03_position_a_and_no_postulate_policy_complete_p1_t04_selected_checkpoint_pending"
+created_at: "2026-08-09T03:21:40Z"
+updated_at: "2026-08-09T03:30:17Z"
+closed_at: "2026-08-09T03:30:17Z"
+parent_task_id: "RT-20260809-002"
+parent_handoff_id: "handoff-0972"
+current_decision_id: "DDR-20260809-003"
+current_job_id: "AJ-RT-20260809-003-001"
+role_id: "smuggling-auditor"
+role_version: "0.2.0"
+execution_role_ref: "smuggling-auditor@0.2.0--RT-20260809-003"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal and checkpointed handoff-0972 authorize exactly one bounded P1-T03 integration packet. The existing protected P7 decision is preserved rather than replayed or expanded. No new protected or external action is authorized."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  phase_id: "P1"
+  plan_task_id: "P1-T03"
+  recommendation_ids:
+    - "V22-R08"
+    - "V22-R09"
+    - "V22-R14"
+  declared_coverage_ids:
+    - "V22-R09"
+    - "V22-R14"
+  cross_cutting_directive_ids:
+    - "V22-X05"
+objective: "Freeze the exact protected finite P7 source-matter package as transparent Position A conditional input for the next geometry cycle while proving and enforcing that protected decisions cannot alter Gate B or Gate D evidential truth values."
+target_derivation_milestone: "matter_coupling"
+milestone_burden: "Response semantics; preserve the exact protected P7 finite source-matter package as conditional input while blocking its use as universal target coupling or Gate B/D evidence."
+route_label: "ordinary-research-packet"
+route_strategy_id: "integrate_v22_p1_t03_position_a_no_postulate_gate_policy_v1"
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-V22-P1-T03-MATTER-POSITION-NO-POSTULATE-001"
+claim_boundary:
+  allowed_scope: "Task-local draft/control Position A decision; exact P7 conditional-input contract; inactive Position B reopening criteria; evidence-only Gate B/D policy; gate-decision fixtures; two internal perspectives; validation; ordinary control-state updates; and one next-route handoff."
+  forbidden_scope: "Any P7 source change or scope expansion; realistic matter-emergence claim; target stress tensor or coupling; g_eff; Einstein action or equation; protected Gate B/D verdict; evidential truth-value alteration; ontology or source-law adoption; benchmark promotion; external review; replication; publication; release; push; or completed derivation."
+  authority_source: "research_control/handoffs/handoff-0972.yaml"
+  boundary_status: "completed"
+completion_contract:
+  exact_p7_package_member_count: 6
+  exact_p7_postulate_count: 8
+  position_a_active_for_next_geometry_cycle: true
+  realistic_matter_emergence_out_of_scope: true
+  position_b_opened: false
+  gate_b_required_evidence_count: 8
+  gate_d_required_evidence_count: 7
+  protected_selection_may_alter_truth_values: false
+  parent_child_parallel_synthesis_required: true
+  no_unresolved_blocking_parent_conflict: true
+  no_p7_status_or_mathematics_change: true
+notes: "This task executes only P1-T03. P1-T04 and every later V22 package remain separate AgentJobs."
