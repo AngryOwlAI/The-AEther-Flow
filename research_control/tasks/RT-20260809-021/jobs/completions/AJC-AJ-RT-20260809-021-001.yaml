@@ -1,0 +1,748 @@
+job_id: "AJ-RT-20260809-021-001"
+completion_id: "AJC-AJ-RT-20260809-021-001"
+task_id: "RT-20260809-021"
+task_type: "v22_p4_t02_b2_continuum_lift_descriptor_formalization"
+decision_id: "DDR-20260809-021"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260809-021"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_READY_FOR_CHECKPOINT"
+created_at: "2026-08-09T22:39:20Z"
+started_at: "2026-08-09T22:39:20Z"
+completed_at: "2026-08-09T22:55:12Z"
+objective: "Formalize the exact ten-component B2 continuum-lift descriptor schema and seven blocking proof-obligation families; prove a target-atlas-free projective gluing theorem and a scoped finite-trace underdetermination theorem; preserve descriptor-instance, activation, adoption, P4-T03, and every physical-geometry block."
+completion_summary: "The ten-component B2 descriptor law, seven obligation families, and 35 atomic obligations are complete as a proposal-only specification. A conditional source-projective gluing theorem and a scoped finite-trace counterpair are proved. No descriptor instance is constructed, finite traces alone do not select a continuum principal class, readiness remains (1,1,1,1,0,0), B2 remains inactive, P4-T03 remains locked, and one future Smuggling Auditor packet is selected."
+objective_result: "b2_descriptor_specification_complete_instance_open_scoped_obstruction_recorded_audit_selected"
+transaction_status: "ready_for_checkpoint"
+result_disposition: "P4_T02_B2_DESCRIPTOR_LAW_FORMALIZATION_PASS_READY_FOR_CHECKPOINT"
+milestone_disposition: "descriptor_specification_narrowed_effective_metric_burden_not_discharged"
+requires_human_gate: false
+human_gate_required: false
+source_head: "bb708f994f611d713efe1f967dba3fe238773d0a"
+source_tree: "d6539b05ef28d06f92b961a7c32367610cd91e72"
+source_handoff_id: "handoff-0990"
+source_handoff_sha256: "59c98cc57da0d44cd8f15231ca11bbac417e048f6b557df680454dd09c539ab4"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P4"
+  plan_task_id: "P4-T02"
+  work_item_status: "b2_descriptor_specification_complete_smuggling_audit_pending"
+  completed_plan_subroute: "P4-T02-B2-DESCRIPTOR-FORMALIZATION"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "B2_DESCRIPTOR_SMUGGLING_AUDIT"
+  recommendation_ids:
+    - "V22-R07"
+    - "V22-R08"
+    - "V22-R10"
+    - "V22-R13"
+  recommendation_coverage_role: "direct_implementation"
+  descriptor_specification_complete: true
+  descriptor_instance_complete: false
+  b1_primary_terminated: true
+  b2_fallback_activated: false
+  adequacy_reevaluated: false
+  p4_t03_unlocked: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  next_dependency_work_item: "P4-T02-B2-SMUGGLING-AUDIT_after_checkpoint"
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one registered draft/control descriptor-law theorem manuscript"
+      - "one typed descriptor specification, proof-obligation matrix, scoped counterpair, and exact adequacy interface"
+    project_system:
+      - "task-local support model, focused validator, compact receipt, LaTeX receipt, parent-child synthesis records, and standard control synchronization"
+  accepted_criteria:
+    physics:
+      - "all ten descriptor components and 35 atomic obligations are typed without target import"
+      - "the projective gluing and finite-trace underdetermination theorems have explicit hypotheses and proofs"
+      - "descriptor specification and instance status remain distinct, B2 inactive, and P4-T03 locked"
+    project_system:
+      - "source hashes, artifacts, registries, backlog, program state, and handoff pass deterministic validation"
+      - "five rendered TeX pages pass visual inspection and one governed checkpoint records the transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "source_law"
+  realized_payload_type: "source_law"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  decision_identity: "V22-P4-T02-B2-DESCRIPTOR-LAW-FORMALIZATION-001"
+  result: "PASS"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v22_p4_t02_b2_continuum_lift_descriptor_formalization"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  family_identity_sha256: "9d8691e21e36bac63185d4ee6bf530f768e5952d202bc4dea374d9cc4aead8eb"
+  detected_match_basis: []
+  reopening_requested: false
+  result: "PASS_DISTINCT_B2_DESCRIPTOR_LAW_BRANCH_B1_FREEZE_PRESERVED"
+  local_family_freeze_preserved: true
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0990"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  guard_outcome: "below_threshold"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1162
+    relationship_row_count: 5944
+    semantic_row_count: 1162
+    vault_row_count: 1162
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1"
+      returned_object_ids:
+        - "TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1"
+      returned_object_ids:
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_fallback_descriptor_selection_v1.tex"
+      source_hash: "544b7a533c47835d3e6173dff35547bf3ce04278085d3b02b1445642001bca02"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-020/artifacts/parent_fusion_notes_p4_t02_b2_selector.md"
+      source_hash: "4a960c423dbe86f4a7adc73704e62fbe96fab86112305953297705c168496909"
+  authority_note: "Tracked registered sources and control records govern; generated wiki, semantic, Obsidian, SQLite, and .local retrieval layers are not authority."
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-021/artifacts/child_phys_math_p4_t02_b2_descriptor.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-021/artifacts/child_phys_phil_p4_t02_b2_descriptor.yaml"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260809-021/artifacts/parent_conflict_review_p4_t02_b2_descriptor.yaml"
+    resolution_rounds: 1
+    resolved_conflict_count: 4
+    unresolved_conflicts: []
+  fusion:
+    fused_output_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md"
+    shared_consensus_summary: "Both perspectives distinguish specification from instance, retain the projective source-only gluing theorem, scope the finite-trace obstruction, and require one separate smuggling audit before any construction."
+    unique_phys_math_contributions: "Exact ten-component typing, seven families and 35 obligations, projective cocycle theorem, and explicit finite-trace perturbation counterpair."
+    unique_phys_phil_contributions: "Source-chart versus target-atlas separation, mathematical-versus-physical characteristic separation, status vocabulary, and scoped-obstruction overread controls."
+    novelty_preservation_summary: "Fusion preserves both the new conditional gluing result and the exact counterpair instead of reducing the task to a checklist."
+    claim_boundary_preservation_summary: "No descriptor instance, source-law adoption, B2 activation, adequacy reevaluation, P4-T03, physical geometry, Gate, benchmark, proof, external review, publication, push, global no-go, or completed derivation is authorized."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  non_trigger_classifications_rejected:
+    - "ordinary_gap"
+    - "workflow_inconvenience"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Formalize the missing target-atlas-free finite-P7-to-continuum lift, reduced sector operators, quotient data, source compatibility law, common projective principal target, operational typing, and adequacy interface while preserving descriptor-instance, activation, and downstream blocks."
+  missing_source_law: "A source-derived selector stronger than finite sampled trace agreement that constructs a lawful finite-P7-to-continuum lift and derives one common reduced projective principal class across every declared sector."
+  underdetermination_statement: "Current ontology does not derive a selector from finite P7 traces to a unique continuum principal class or sector-common principal property."
+  no_go_theorem_status: "scoped_obstruction_only_not_global_no_go"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "draft/control"
+    candidate_status: "proposal-only"
+    material_class: "source-extension data"
+    source_side_definition: "A ten-component source descriptor law on declared source domains: sector set, continuum source-field bundles, finite-to-continuum lift, source and output quotients, reduced sector operators, a source-derived compatibility relation, one common projective principal class, an operational no-import receipt, and a total adequacy interface."
+    formal_objects:
+      - "finite equipped-sector set S"
+      - "source bundles and section families F_s"
+      - "finite-to-continuum lift L"
+      - "source quotient Q_src"
+      - "output quotient Q_out"
+      - "sector equations E_s"
+      - "source compatibility relation C"
+      - "common projective principal class P_src"
+      - "operational no-target receipt Omega"
+      - "P2-T01 adequacy procedure N"
+    domains:
+      - "exact protected finite P7 record package"
+      - "declared smooth source-open patches and their regular strata"
+      - "directed source refinements with a named source norm or topology"
+    maps:
+      - "lift maps from finite P7 records to source sections"
+      - "sampling and refinement maps with recovery and naturality obligations"
+      - "regular tangent descent maps for source and output quotients"
+      - "reduced symbols to projective characteristic classes"
+      - "complete descriptor instances to one allowed P2-T01 verdict"
+    proof_obligations:
+      - "five D1 field and regularity obligations"
+      - "five D2 lift and convergence obligations including defeat of the finite-trace counterpair"
+      - "five D3 quotient and descent obligations"
+      - "five D4 sector-equation and reduction obligations"
+      - "five D5 common-principal and cocycle obligations"
+      - "five D6 operational and no-target-import obligations"
+      - "five D7 exact adequacy-interface obligations"
+  candidate_law_comparison:
+    candidates:
+      - "finite-trace-only selector"
+      - "source-derived refinement or variational selector"
+      - "target-cone selector"
+      - "no continuation"
+    comparison_basis:
+      - "finite-trace counterpair"
+      - "source-only construction"
+      - "target-import prohibition"
+      - "claim-boundary preservation"
+    selection_status: "proposal_only_descriptor_law_survives_audit_pending"
+  candidate_law_refutation:
+    refuted_candidate: "finite-trace-only continuum-principal selector"
+    refutation_basis: "Two continuum operator families have identical admitted finite traces but disagree on sector-common projective principal structure where the perturbation scalar is nonzero."
+    surviving_obligations:
+      - "construct a stronger source-derived lift selector"
+      - "prove all 35 descriptor-instance obligations"
+      - "complete smuggling audit before construction"
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Draft/control specification and audit are unprotected; adoption or canonical ontology modification remains human-gated."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "derive rather than assume one sector-common stable projective characteristic structure"
+      - "supply operational matter compatibility without importing target geometry"
+      - "derive physical cone interpretation, Lorentzian signature, orientation, and scale separately"
+      - "derive g_eff, matter coupling, and Einstein-leading dynamics in later authorized stages"
+      - "retain finite-variation robustness and protected benchmark obligations"
+    distance_to_gr_links:
+      - "effective_metric_g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "finite_variation_robustness"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "target_tetrad"
+      - "target_coframe"
+      - "desired_gr_cone"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  atlas_glue_obligations:
+    profile_law: "local reduced generators are defined only on declared source regular patches"
+    selector_law: "compatibility is equality of reduced projective characteristic hypersurfaces"
+    transition_law: "local generators differ by nowhere-zero source units"
+    inverse_checks: "g_ij times g_ji equals one on overlaps"
+    cocycle_checks: "g_ij g_jk g_ki equals one on every triple overlap"
+    finite_variation_robustness: "unproved and blocking for every descriptor instance"
+  failure_branches:
+    collapse: "the lift erases protected finite distinctions"
+    nonuniqueness: "inequivalent continuum principal classes reproduce the same finite traces"
+    inverse_defect: "lift, sampling, or quotient maps fail recovery or descent"
+    cocycle_defect: "local principal representatives fail inverse or triple-overlap identities"
+    variation_fragility: "small admitted source variations destroy regularity or common projective structure"
+  known_risks:
+    - "source charts silently treated as a target spacetime atlas"
+    - "projective characteristic data silently treated as a Lorentzian physical cone"
+    - "specification completeness silently treated as instance construction"
+  failed_alternatives:
+    - "finite traces used as a unique continuum selector"
+    - "desired GR cone used as a compatibility selector"
+    - "descriptor specification used to activate B2"
+    - "scoped obstruction promoted to a global no-go"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "none; complete one independent smuggling audit before any later construction or adoption request"
+    exact_requested_ontology_edit: "none"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260809-021-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Projective common-principal gluing theorem"
+    summary: "Under source-unit transition and cocycle hypotheses, local reduced common-principal generators glue to a chart-independent projective characteristic hypersurface and source line-bundle section."
+  - payload_id: "NMP-RT-20260809-021-002"
+    payload_type: "countermodel_or_obstruction"
+    name: "Finite-trace principal-class underdetermination counterpair"
+    summary: "A source coefficient vanishing to the admitted finite jet order preserves all finite traces while changing sector principal classes, so finite traces alone do not select the B2 common-principal property."
+  - payload_id: "NMP-RT-20260809-021-003"
+    payload_type: "bridge_map_candidate"
+    name: "B2 ten-component descriptor-law bridge"
+    summary: "Types the exact proposal-only path from finite P7 records through lift, quotients, reduced operators, source compatibility, operational receipt, and the P2-T01 interface."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT021-001"
+    payload_type: "definition"
+    object_name: "DEF-V22-P4T02-B2-TEN-COMPONENT-DESCRIPTOR-LAW"
+    claim_status: "draft/control proposal-only source-extension law specification"
+    source_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex"
+    burden_effect: "narrows"
+    summary: "Defines all ten component types and their source-only interfaces without constructing an instance."
+  - payload_id: "PAYLOAD-RT021-002"
+    payload_type: "theorem"
+    object_name: "THM-V22-P4T02-B2-PROJECTIVE-COMMON-PRINCIPAL-GLUING"
+    claim_status: "draft/control conditional theorem under explicit source-unit and cocycle hypotheses"
+    source_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves local coherent reduced generators define one source-projective characteristic object, without physical interpretation."
+  - payload_id: "PAYLOAD-RT021-003"
+    payload_type: "obstruction"
+    object_name: "OBST-V22-P4T02-B2-FINITE-TRACE-SELECTOR-UNDERDETERMINATION-001"
+    claim_status: "draft/control scoped obstruction for finite sampled interfaces under current ontology"
+    source_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_finite_input_underdetermination_counterpair_v1.yaml"
+    burden_effect: "obstructs"
+    summary: "Shows identical finite traces can support either common or split continuum principal classes."
+  - payload_id: "PAYLOAD-RT021-004"
+    payload_type: "source_extension_classification"
+    object_name: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+    claim_status: "draft/control proposal-only new ontology primitive candidate with adoption blocked"
+    source_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_specification_v1.yaml"
+    burden_effect: "narrows"
+    summary: "Classifies the descriptor law as source-extension data and preserves blocked adoption with open continuation."
+  - payload_id: "PAYLOAD-RT021-005"
+    payload_type: "packet_selection"
+    object_name: "AUDIT-V22-P4T02-B2-DESCRIPTOR-LAW-V1"
+    claim_status: "draft/control next-route selection"
+    source_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_specification_v1.yaml"
+    burden_effect: "selects_next"
+    summary: "Selects one separate Smuggling Auditor ontology-law packet before any descriptor-instance construction."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Formalize the B2 continuum-lift descriptor law and determine whether finite P7 traces suffice to select a common continuum principal structure."
+  explanation: "The descriptor-law specification is complete and the gluing theorem narrows its lawful form. The counterpair precisely obstructs finite-trace-only selection under current ontology, but it neither excludes stronger source extensions nor discharges g_eff."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "obstruction_recorded"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "B2 inactive; descriptor target named but unformalized and uninstantiated"
+  new_status: "B2 inactive; descriptor-law specification complete, instance unconstructed, finite-trace-only selector precisely obstructed, audit pending"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The scoped obstruction narrows the same g_eff burden but constructs no continuum lift, common principal instance, physical cone, scale, metric, coupling, or field equation."
+  downstream_unlocked:
+    - "one P4-T02 B2 descriptor-law smuggling audit after checkpoint"
+  downstream_still_blocked:
+    - "descriptor-instance construction and all 35 instance obligations"
+    - "P2-T01 adequacy reevaluation and B2 activation"
+    - "P4-T03 conformal reconstruction"
+    - "physical scale and effective metric"
+    - "matter coupling and Einstein equations"
+    - "benchmark promotion and completed derivation"
+  explanation: "A specification and scoped obstruction are not a source-law adoption, continuum candidate instance, physical causal structure, effective metric, or Distance-to-GR discharge."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "unchanged; descriptor law is proposal-only source-extension data and no canonical ontology edit or adoption occurred"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; Q_src is typed only as an unconstructed descriptor component"
+  - burden: "RetainH"
+    status: "unchanged"
+  - burden: "GenH"
+    status: "unchanged"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; Omega is an interface specification rather than an operational instance"
+  - burden: "Resp_lc"
+    status: "unchanged"
+  - burden: "M_src"
+    status: "unchanged; finite P7 input and source patches are not an adopted continuum source manifold"
+  - burden: "g_eff"
+    status: "unresolved; projective gluing is conditional, no descriptor instance exists, and finite traces alone do not select a common principal class"
+  - burden: "matter coupling"
+    status: "blocked; no continuum sector equations or universal physical compatibility law is instantiated"
+  - burden: "Einstein equations"
+    status: "blocked"
+  - burden: "finite-variation robustness"
+    status: "unproved and one of the 35 blocking descriptor-instance obligations"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "no protected verdict requested or authorized"
+  - burden: "current route freeze or hard-fail status"
+    status: "B1 remains locally frozen; B2 descriptor law remains open for one distinct smuggling audit while construction and activation stay blocked"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-V22-P4T02-B2-FINITE-TRACE-SELECTOR-UNDERDETERMINATION-001"
+  scope: "source_extension_candidate"
+  failed_object: "finite-trace-only selector for a unique continuum principal class or sector-common principal property"
+  exact_failure: "For any finite admitted sampling set and jet order, a nonzero source scalar may vanish to that jet order while altering continuum principal coefficients away from the sample; common and split sector-principal completions therefore share every admitted finite trace."
+  minimal_counterexample_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_finite_input_underdetermination_counterpair_v1.yaml"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "downstream_block_preserved"
+  forbidden_overread: "This scoped finite-trace result does not imply B2 is globally impossible, exclude dense refinements or nonlocal constructions, reject every future source extension, or establish a completed no-go theorem."
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: "V22-B2-FINITE-TRACE-SELECTOR-UNDERDETERMINATION"
+  prior_attempts_considered:
+    - "RT-20260809-009 preregisters B2 but supplies no continuum descriptor."
+    - "RT-20260809-020 selects the ten-component descriptor target without formalizing it."
+  freeze_if:
+    - "A later packet repeats descriptor definitions or finite-trace underdetermination without an independent audit, construction, or sharper obstruction."
+    - "A later packet treats finite trace agreement as sufficient or activates B2 without a complete audited instance and adequacy reevaluation."
+  do_not_freeze_if:
+    - "The Smuggling Auditor performs a materially new field-by-field target-import and authority audit."
+    - "A later authorized constructor supplies a source-derived selector and concrete evidence for the named instance obligations."
+  criteria_evaluated:
+    - "The current packet adds a new exact specification, conditional theorem, and scoped counterpair."
+    - "The next packet changes role and burden from formalization to independent smuggling audit."
+  freeze_decision: "not_frozen"
+  decision_reason: "Continuation is non-orbital because the descriptor law has not yet received the independently required smuggling audit, and that audit tests distinct source and authority imports before any construction."
+  next_allowed_route: "smuggling_auditor"
+  next_allowed_role: "smuggling-auditor@0.2.0"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_descriptor_law"
+  current_cycle_step: "ontology_formalizer_descriptor_specification_and_scoped_obstruction"
+  prior_related_tasks:
+    - "RT-20260809-009"
+    - "RT-20260809-019"
+    - "RT-20260809-020"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "RT-021 adds the exact descriptor law, 35 obligations, a gluing theorem, and a counterpair; the next role must independently audit every field and proof premise rather than repeat selection or formalization."
+  next_role_consequence: "smuggling-auditor@0.2.0 audits the proposal-only B2 descriptor law before any Candidate Constructor packet"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "descriptor specification as a constructed descriptor instance or source-law adoption"
+    - "M_src adoption or source-side manifold adoption"
+    - "finite-trace obstruction as global theory rejection or future-extension impossibility"
+    - "B2 activation viability adequacy passage or physical causal geometry"
+    - "canonical ontology modification or P4-T03 unlock"
+    - "Lorentzian signature orientation physical scale g_eff matter coupling or Einstein equations"
+    - "protected Gate verdict benchmark promotion proof external review publication release push or completed derivation"
+  summary: "RT-021 formalizes a proposal-only law and records one scoped obstruction; it authorizes no M_src adoption, g_eff, matter coupling, Einstein equation, benchmark, completed derivation, or global theory rejection."
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  category: "source_extension_candidate"
+  import_classification: "proposal-only ten-component descriptor law requiring a source-derived selector stronger than finite sampled traces"
+  status_vocabulary: "draft/control proposal-only source-extension data"
+  current_ontology_derives_candidate: false
+  adoption_status: "blocked"
+  human_gate_required_for_adoption: true
+  canonical_ontology_candidate_status_claimed: false
+  target_atlas_free: true
+  exact_gr_recovery_claimed: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+  records:
+    - classification: "new_ontology_primitive_candidate"
+      claim_boundary_id: "CB-V22-P4-T02-B2-DESCRIPTOR-FORMALIZATION-001"
+      relation_to_current_ontology: "missing_primitive"
+      protected_authority_required: true
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+      blocked_overreads:
+        - "proposal-only descriptor law described as canonical ontology or adopted source law"
+        - "specification described as an instance or B2 activation"
+    - classification: "blocked_adoption_open_continuation"
+      claim_boundary_id: "CB-V22-P4-T02-B2-DESCRIPTOR-FORMALIZATION-001"
+      relation_to_current_ontology: "blocked_open"
+      protected_authority_required: true
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+      blocked_overreads:
+        - "scoped obstruction described as global impossibility"
+        - "audit selection described as g_eff proof Gate authority or completed derivation"
+
+descriptor_formalization_result:
+  descriptor_id: "DEF-V22-P4T02-B2-TEN-COMPONENT-DESCRIPTOR-LAW"
+  descriptor_component_count: 10
+  descriptor_specification_complete: true
+  descriptor_instance_complete: false
+  obligation_family_count: 7
+  atomic_obligation_count: 35
+  projective_gluing_theorem_status: "proved_conditionally_with_explicit_hypotheses"
+  finite_trace_underdetermination_status: "scoped_obstruction_proved"
+  adequacy_interface_status: "defined_not_evaluated"
+  activation_readiness_vector:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 0
+    - 0
+  b2_activated: false
+  p4_t03_unlocked: false
+  next_required_role: "smuggling-auditor@0.2.0"
+  claim_boundary_preserved: true
+
+selected_next_route:
+  route_id: "audit_v22_p4_t02_b2_continuum_lift_descriptor_v1"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-DESCRIPTOR-AUDIT"
+  work_kind: "source_law_smuggling_audit"
+  task_class: "science"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  role_family: "smuggling-auditor@0.2.0"
+  supporting_perspective: "ontology-formalizer@0.2.0 and candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "ontology_law_research_packet"
+  source_extension_category: "source_extension_smuggling_audit"
+  source_extension_import_classification: "proposal-only descriptor law requiring independent target-import and authority audit"
+  task_type: "v22_p4_t02_b2_continuum_lift_descriptor_smuggling_audit"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Audit every descriptor field, theorem hypothesis, counterpair premise, and atomic obligation for hidden target geometry, physical interpretation, or authority import before construction."
+  expected_result_kind: "audited_candidate_law_or_precise_smuggling_obstruction"
+  strategy_id: "audit_v22_p4_t02_b2_continuum_lift_descriptor_v1"
+  transition_id: "AUDIT_B2_DESCRIPTOR_LAW"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  descriptor_instance_construction_authorized: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+artifacts:
+  fused_descriptor_tex: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex"
+  descriptor_specification: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_specification_v1.yaml"
+  proof_obligation_matrix: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_proof_obligation_matrix_v1.yaml"
+  finite_trace_counterpair: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_finite_input_underdetermination_counterpair_v1.yaml"
+  adequacy_interface: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_p2_t01_adequacy_interface_v1.yaml"
+  provenance_manifest: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_source_provenance_manifest_v1.yaml"
+  support_model: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_descriptor_model.py"
+  parent_fusion_notes: "research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md"
+  compile_receipt: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_latex_compile_receipt.json"
+  focused_validator: "research_control/tasks/RT-20260809-021/artifacts/validate_v22_p4_t02_b2_descriptor.py"
+  validation_report: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_descriptor_validation.json"
+  compact_receipt: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_descriptor_compact_receipt.json"
+
+artifact_hashes:
+  fused_descriptor_tex_sha256: "6b3e454048f1645f164e06dbebac08d1bd29b8a61918d98dcbf77d09c82156c0"
+  descriptor_specification_sha256: "82a48f1e82f45012908d9eb8df389ed256bafba937ef6c8de0776b630ab71a65"
+  proof_obligation_matrix_sha256: "53e78abd61db464bd13b666a5cb2351b41877e31b0efac84a00a97333c9378d1"
+  finite_trace_counterpair_sha256: "e3a8d24c5eda70aa5c8a7c389828ddaee58887e90ab9260f381748423460f9a6"
+  adequacy_interface_sha256: "fa667ba7201095411f66d6e29382a23f5de628d75cd57228cf53f4db75eef1ca"
+  provenance_manifest_sha256: "5dfbc5cfeb6f70a74a4ac7c9644ea66052fe56691f20630e5f20dabef1b99275"
+  support_model_sha256: "4c8a36f4b2c606565ecb967281b87801b83e15a4d300f997dab5c2f88415ee3b"
+  child_phys_math_sha256: "66d906950ab299fa73f787bbd260ad5b045aad096278c0f3c3ae54651b550e37"
+  child_phys_phil_sha256: "5ae8661a82230c4ab427a3b998f3ead1d04157514249da8e906d1006590c49be"
+  conflict_review_sha256: "c846a7308293feed970e64a4ee8bf3d0e263fd1896dc4ce9460dc7b5b16836f0"
+  fusion_notes_sha256: "6b241c4fe25ab00c264085ea900ee87a0ba65fd035de843ed414399c1de2cdc8"
+  compile_receipt_sha256: "a2a0d9075af84bbde7a935c57d61f97f712617a382d4ceaa7aaf16df1927af8e"
+  focused_validator_sha256: "0a211efe746a4e906fd3712421c3f7d2ed4ee9082075d6e1768032f1f5a93ff0"
+  validation_report_sha256: "36db036f77a43c1e0139eea666ca3c861bb72f737ed20b9dd35b3137d1a0abcd"
+  compact_receipt_sha256: "04a0bddd9736edc5be6e5649cc1693c4b67c66b82819d5839776fdbaafe57816"
+
+output_paths:
+  - "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex"
+  - "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_specification_v1.yaml"
+  - "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_proof_obligation_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_finite_input_underdetermination_counterpair_v1.yaml"
+  - "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_p2_t01_adequacy_interface_v1.yaml"
+  - "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_source_provenance_manifest_v1.yaml"
+  - "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_descriptor_model.py"
+  - "research_control/tasks/RT-20260809-021/artifacts/child_phys_math_p4_t02_b2_descriptor.yaml"
+  - "research_control/tasks/RT-20260809-021/artifacts/child_phys_phil_p4_t02_b2_descriptor.yaml"
+  - "research_control/tasks/RT-20260809-021/artifacts/parent_conflict_review_p4_t02_b2_descriptor.yaml"
+  - "research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md"
+  - "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260809-021/artifacts/validate_v22_p4_t02_b2_descriptor.py"
+  - "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_descriptor_validation.json"
+  - "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_descriptor_compact_receipt.json"
+  - "research_control/tasks/RT-20260809-021/00_TASK.yaml"
+  - "research_control/tasks/RT-20260809-021/DDR-20260809-021.md"
+  - "research_control/tasks/RT-20260809-021/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260809-021/roles/ontology-formalizer@0.2.0--RT-20260809-021.yaml"
+  - "research_control/tasks/RT-20260809-021/jobs/AJ-RT-20260809-021-001.yaml"
+  - "research_control/tasks/RT-20260809-021/jobs/completions/AJC-AJ-RT-20260809-021-001.yaml"
+  - "research_control/handoffs/handoff-0991.yaml"
+  - "research_control/handoffs/handoff-0991.md"
+
+command_results:
+  - command: "v22_p4_t02_b2_descriptor_model.py --json"
+    status: "PASS"
+    summary: "All 13 executable descriptor-structure checks pass."
+  - command: "validate_v22_p4_t02_b2_descriptor.py --write-report --json"
+    status: "PASS"
+    summary: "All 85 descriptor, theorem, counterpair, obligation, adequacy, provenance, synthesis, and authority checks pass with zero failures or warnings."
+  - command: "bundled Tectonic scratch build and five-page rendered visual review"
+    status: "PASS"
+    summary: "The registered TeX source compiles to a five-page letter-size scratch PDF; every page was visually reviewed with no clipping, overlap, duplicate proof marks, or broken glyphs, and no PDF is tracked."
+  - command: "task taxonomy affected documentation claim research-control memory and generated-freshness validation"
+    status: "PASS"
+    summary: "Focused taxonomy, documentation-impact, signal, claim-language, generated-freshness, memory, affected-profile, and full research-control validation pass after final synchronization."
+  - command: "checkpoint_research_transaction.py --job-id AJ-RT-20260809-021-001 --planner-validation"
+    status: "PENDING_SINGLE_INVOCATION"
+    summary: "One governed checkpoint remains; no retry, push, publication, or external action is authorized."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, plan, milestone, candidate identity, checkpoint, route, payload, freeze, and dual-budget admissions passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 13 model checks and all 85 focused checks pass with exact component, obligation, theorem, counterpair, synthesis, and claim-boundary results."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Registry, generated-memory, affected-profile, documentation-impact, signal, claim-language, freshness, and full research-control validation pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed AJ-RT-20260809-021-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Five letter-size TeX pages and final generated frontier, task-index, claim-graph, wiki, and registry projections pass their required checks."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only verification pass before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation preserves proposal-only, scoped-obstruction, blocked-adoption/open-continuation, and every physical-promotion block."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review is authorized for this P4-T02 descriptor-law formalization packet."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  descriptor_instance_construction_authorized: false
+  b2_activation_authorized: false
+  adequacy_reevaluation_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+checkpoint_status:
+  required: true
+  completed: false
+  invocation_count: 0
+  checkpoint_job_id: "AJ-RT-20260809-021-001"
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+
+authority_note: "This completion records a draft/control descriptor-law specification, one conditional theorem, and one scoped obstruction. It is not a descriptor instance, source-law adoption, B2 activation, adequacy reevaluation, P4-T03 authority, physical geometry, Gate verdict, proof, external review, publication, release, push, global no-go, or completed derivation."

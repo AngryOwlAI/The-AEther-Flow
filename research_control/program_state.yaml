@@ -1,12 +1,141 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260809-020"
-active_agent_job_id: "AJ-RT-20260809-020-001"
-latest_handoff_id: "handoff-0990"
-current_status: "v22_p4_t02_b2_descriptor_path_selected_checkpoint_pending"
-claim_boundary_summary: "RT-20260809-020 evaluates the exact B2 readiness vector as (1,1,1,1,0,0), proves activation false under the preregistered conjunction, and selects one proposal-only Ontology Formalizer descriptor-formalization packet. B1 remains locally frozen, B2 inactive, P4-T03 locked, and no continuum construction, adoption, protected Gate verdict, physical cone, g_eff, global no-go, or Distance-to-GR delta is created."
+active_task_id: "RT-20260809-021"
+active_agent_job_id: "AJ-RT-20260809-021-001"
+latest_handoff_id: "handoff-0991"
+current_status: "v22_p4_t02_b2_descriptor_specification_complete_checkpoint_pending"
+claim_boundary_summary: "RT-20260809-021 formalizes the proposal-only ten-component B2 descriptor-law specification and 35 atomic obligations, proves conditional source-projective gluing, and records a scoped finite-trace selector obstruction. No descriptor instance exists; readiness remains (1,1,1,1,0,0); B1 remains locally frozen; B2 inactive; P4-T03 locked; and no adoption, protected Gate verdict, physical cone, g_eff, global no-go, or Distance-to-GR delta is created."
 next_plan_task_id: "P4-T02"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260809-020-001. After it commits, execute exactly one V22 P4-T02 ontology-law-research-packet under ontology-formalizer@0.2.0 to formalize the B2 continuum-lift descriptor and proof obligations without activating or adopting B2; do not execute P4-T03 or any protected or external action."
+next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260809-021-001. After it commits, execute exactly one V22 P4-T02 ontology-law-research-packet under smuggling-auditor@0.2.0 to audit every descriptor field, theorem hypothesis, counterpair premise, and atomic obligation for hidden target or authority import; do not construct a descriptor instance, reevaluate adequacy, activate B2, execute P4-T03, or take any protected or external action."
+
+v22_p4_t02_b2_descriptor_law_formalization:
+  task_id: "RT-20260809-021"
+  parent_task_id: "RT-20260809-020"
+  parent_handoff_id: "handoff-0990"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "B2_DESCRIPTOR_SMUGGLING_AUDIT"
+  claim_boundary_id: "CB-V22-P4-T02-B2-DESCRIPTOR-FORMALIZATION-001"
+  status: "PASS_V22_P4_T02_B2_DESCRIPTOR_SPECIFICATION_COMPLETE_SCOPED_OBSTRUCTION_AUDIT_SELECTED"
+  work_item_status: "b2_descriptor_specification_complete_smuggling_audit_pending_checkpoint"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  selected_role_family: "ontology-formalizer@0.2.0"
+  supporting_perspective: "candidate-constructor@0.2.0 and smuggling-auditor@0.2.0"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_supporting_perspective: "ontology-formalizer@0.2.0 and candidate-constructor@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "audit_v22_p4_t02_b2_continuum_lift_descriptor_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Audit every proposal-only descriptor field, theorem hypothesis, counterpair premise, and atomic obligation for hidden target geometry, physical interpretation, or authority import before construction."
+  source_head: "bb708f994f611d713efe1f967dba3fe238773d0a"
+  source_tree: "d6539b05ef28d06f92b961a7c32367610cd91e72"
+  prior_checkpoint_job_id: "AJ-RT-20260809-020-001"
+  prior_checkpoint_commit: "bb708f994f611d713efe1f967dba3fe238773d0a"
+  source_handoff_id: "handoff-0990"
+  source_handoff_path: "research_control/handoffs/handoff-0990.yaml"
+  source_handoff_sha256: "59c98cc57da0d44cd8f15231ca11bbac417e048f6b557df680454dd09c539ab4"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "05b6ae34d83163034e9ad872e5409e453038596311d9e6a751c5f85ee4f95437"
+  fused_descriptor_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex"
+  fused_descriptor_sha256: "6b3e454048f1645f164e06dbebac08d1bd29b8a61918d98dcbf77d09c82156c0"
+  descriptor_specification_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_specification_v1.yaml"
+  descriptor_specification_sha256: "82a48f1e82f45012908d9eb8df389ed256bafba937ef6c8de0776b630ab71a65"
+  proof_obligation_matrix_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_proof_obligation_matrix_v1.yaml"
+  proof_obligation_matrix_sha256: "53e78abd61db464bd13b666a5cb2351b41877e31b0efac84a00a97333c9378d1"
+  counterpair_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_finite_input_underdetermination_counterpair_v1.yaml"
+  counterpair_sha256: "e3a8d24c5eda70aa5c8a7c389828ddaee58887e90ab9260f381748423460f9a6"
+  adequacy_interface_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_p2_t01_adequacy_interface_v1.yaml"
+  adequacy_interface_sha256: "fa667ba7201095411f66d6e29382a23f5de628d75cd57228cf53f4db75eef1ca"
+  provenance_manifest_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_source_provenance_manifest_v1.yaml"
+  provenance_manifest_sha256: "5dfbc5cfeb6f70a74a4ac7c9644ea66052fe56691f20630e5f20dabef1b99275"
+  support_model_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_descriptor_model.py"
+  support_model_sha256: "4c8a36f4b2c606565ecb967281b87801b83e15a4d300f997dab5c2f88415ee3b"
+  parent_fusion_path: "research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md"
+  parent_fusion_sha256: "6b241c4fe25ab00c264085ea900ee87a0ba65fd035de843ed414399c1de2cdc8"
+  latex_compile_receipt_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_latex_compile_receipt.json"
+  latex_compile_receipt_sha256: "a2a0d9075af84bbde7a935c57d61f97f712617a382d4ceaa7aaf16df1927af8e"
+  focused_validation_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_descriptor_validation.json"
+  focused_validation_sha256: "36db036f77a43c1e0139eea666ca3c861bb72f737ed20b9dd35b3137d1a0abcd"
+  compact_receipt_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_descriptor_compact_receipt.json"
+  compact_receipt_sha256: "04a0bddd9736edc5be6e5649cc1693c4b67c66b82819d5839776fdbaafe57816"
+  task_sha256: "01ca88bcaef0d9ca22370bfa9678438569d709b1f3ec00e29eb21d7124a0b40c"
+  agent_job_id: "AJ-RT-20260809-021-001"
+  agent_job_sha256: "954c188b31c3f42abdd5ee2fc46a61baa3aa82de9182f2f20fa9debbc8e78058"
+  decision_id: "DDR-20260809-021"
+  decision_sha256: "c9d8c6750a92059c574bc1f16af2551421d3b8bd3a1371300d5e1645c4a06eb1"
+  execution_role_ref: "ontology-formalizer@0.2.0--RT-20260809-021"
+  execution_role_sha256: "2325d5a57bd7f582aadd1f896263d0f60917c45c529d1d8b64d5178a6413654c"
+  completion_path: "research_control/tasks/RT-20260809-021/jobs/completions/AJC-AJ-RT-20260809-021-001.yaml"
+  completion_sha256: "3ecee8e7234e28dd71bdccb6611646a3bd539f22b867418d21a6b3137d453b09"
+  handoff_id: "handoff-0991"
+  handoff_path: "research_control/handoffs/handoff-0991.yaml"
+  handoff_sha256: "d4ca051a725237f9f5c0c2884f0c8df70751a913ae045f5edb79ff2177c70033"
+  selected_candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  descriptor_law_id: "DEF-V22-P4T02-B2-TEN-COMPONENT-DESCRIPTOR-LAW"
+  projective_gluing_theorem_id: "THM-V22-P4T02-B2-PROJECTIVE-COMMON-PRINCIPAL-GLUING"
+  finite_trace_theorem_id: "THM-V22-P4T02-B2-FINITE-TRACE-PRINCIPAL-UNDERDETERMINATION"
+  obstruction_id: "OBST-V22-P4T02-B2-FINITE-TRACE-SELECTOR-UNDERDETERMINATION-001"
+  descriptor_component_count: 10
+  proof_obligation_family_count: 7
+  atomic_obligation_count: 35
+  descriptor_specification_complete: true
+  descriptor_instance_complete: false
+  scoped_obstruction_recorded: true
+  global_no_go_claimed: false
+  readiness_vector:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 0
+    - 0
+  activation_value: false
+  adequacy_reevaluated: false
+  focused_model_check_count: 13
+  focused_check_count: 85
+  focused_check_failure_count: 0
+  focused_warning_count: 0
+  latex_page_count: 5
+  latex_final_overfull_warning_count: 0
+  pdf_pages_visually_reviewed: 5
+  p4_t02_b1_branch_executed: true
+  p4_t02_b2_selector_executed: true
+  p4_t02_b2_descriptor_formalization_executed: true
+  p4_t02_complete_for_plan_dependency: false
+  b1_primary_terminated: true
+  b2_fallback_activated: false
+  p4_t03_unlocked: false
+  ontology_adoption_count: 0
+  distance_to_gr_ledger_unchanged: true
+  generated_derivatives_non_authority: true
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P4-T02-B2-DESCRIPTOR-AUDIT"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "audit_v22_p4_t02_b2_continuum_lift_descriptor_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  descriptor_instance_construction_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  successor_requested: false
 
 v22_p4_t02_b2_descriptor_path_selection:
   task_id: "RT-20260809-020"
@@ -15134,9 +15263,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260809-020"
-  latest_research_handoff_id: "handoff-0990"
-  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-020-001. After it commits, execute exactly one V22 P4-T02 ontology-law-research-packet under ontology-formalizer@0.2.0 to formalize the B2 continuum-lift descriptor and proof obligations without activating or adopting B2; do not execute P4-T03 or any protected or external action."
+  latest_research_task_id: "RT-20260809-021"
+  latest_research_handoff_id: "handoff-0991"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-021-001. After it commits, execute exactly one V22 P4-T02 ontology-law-research-packet under smuggling-auditor@0.2.0 to audit every descriptor field, theorem hypothesis, counterpair premise, and atomic obligation for hidden target or authority import; do not construct a descriptor instance, reevaluate adequacy, activate B2, execute P4-T03, or take any protected or external action."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

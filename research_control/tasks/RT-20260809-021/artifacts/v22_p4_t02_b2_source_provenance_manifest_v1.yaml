@@ -1,0 +1,63 @@
+schema_id: "v22_p4_t02_b2_source_provenance_manifest_v1"
+artifact_id: "V22-P4-T02-B2-SOURCE-PROVENANCE-MANIFEST-V1"
+task_id: "RT-20260809-021"
+status: "draft/control"
+source_count: 8
+sources:
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    authority: "registered Markdown implementation plan"
+    use: "P4-T02 objective, outputs, acceptance, verification, and stop conditions"
+  - object_id: "TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1"
+    path: "research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_fallback_descriptor_selection_v1.tex"
+    sha256: "544b7a533c47835d3e6173dff35547bf3ce04278085d3b02b1445642001bca02"
+    authority: "registered science-draft selector source"
+    use: "selected ten-component descriptor, dependency order, and exact claim boundary"
+  - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1"
+    path: "research_control/tasks/RT-20260809-020/artifacts/parent_fusion_notes_p4_t02_b2_selector.md"
+    sha256: "4a960c423dbe86f4a7adc73704e62fbe96fab86112305953297705c168496909"
+    authority: "registered draft/control fusion record"
+    use: "parent-child consensus and unresolved descriptor burdens"
+  - object_id: "CONTROL-P7-CONDITIONAL-INPUT-CONTRACT-V1"
+    path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_p7_conditional_input_contract_v1.yaml"
+    sha256: "e1acd64ea434f3dc6a0607c17f69162f0e242bc92d5490eb84ff3d3afd92a3c4"
+    authority: "tracked task-local control contract"
+    use: "exact finite protected P7 members, meanings, allowed uses, and excluded outputs"
+  - object_id: "CONTROL-V22-P2-T04-B2-FALLBACK-CANDIDATE-V1"
+    path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_fallback_matter_principal_candidate_v1.yaml"
+    sha256: "11917a5c868b6ed50633e1b7528b59079db40f10c003c32176d1887df5dae6e5"
+    authority: "tracked task-local candidate record"
+    use: "candidate identity, activation rule, missing continuum fields, and source-extension boundary"
+  - object_id: "CONTROL-V22-P2-T01-SOURCE-ADEQUACY-CHECKLIST-V1"
+    path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_source_adequacy_checklist_v1.yaml"
+    sha256: "a9b59df7b5b2d1203fef53cf23817400c6d1511836e97ff1ae21b819dc064e68"
+    authority: "tracked task-local candidate-test interface"
+    use: "ten exact necessary-condition fields and allowed verdict vocabulary"
+  - object_id: "CONTROL-V22-P4-T02-B2-DESCRIPTOR-DEPENDENCY-MAP-V1"
+    path: "research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_descriptor_dependency_map_v1.yaml"
+    sha256: "100160e31e8ffe31a18a9b2160c7dfbda4a946a42c625df570294764d54bd256"
+    authority: "tracked task-local selector record"
+    use: "D1 through D7 scope and fail-closed dependency order"
+  - object_id: "HANDOFF-0990"
+    path: "research_control/handoffs/handoff-0990.yaml"
+    sha256: "59c98cc57da0d44cd8f15231ca11bbac417e048f6b557df680454dd09c539ab4"
+    authority: "ordinary research handoff"
+    use: "exact one-job route authority and downstream blocks"
+retrieval_evidence:
+  memory_status: "PASS"
+  local_retrieval_status: "PASS"
+  retrieval_layers_are_authority: false
+  canonical_bytes_inspected: true
+forbidden_premises:
+  - "generated wiki or semantic derivative"
+  - "registry metadata as scientific authority"
+  - "local cache or validation output as scientific authority"
+  - "target atlas, target metric, target tetrad, target coframe, or desired GR cone"
+  - "benchmark success or Gate verdict"
+authority_limits:
+  provenance_manifest_is_proof: false
+  source_law_adopted: false
+  descriptor_instance_constructed: false
+  b2_activated: false
+  distance_to_gr_changed: false

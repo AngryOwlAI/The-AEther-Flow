@@ -1,0 +1,329 @@
+% authority: science_draft
+% claim_status: draft/control
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,longtable,enumitem,hyperref}
+\hypersetup{hidelinks}
+\setlist{nosep}
+
+\title{V22 P4-T02 B2 Descriptor Formalization v1\\
+\large Typed source-extension law and two conditional results}
+\author{Ontology Formalizer\\\small Internal parent-child synthesis}
+\date{2026-08-09}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Definition}
+\theoremstyle{plain}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{corollary}{Corollary}
+\newcommand{\A}{\mathcal{A}}
+\newcommand{\Sectors}{\mathcal{S}}
+\newcommand{\Desc}{\mathcal{D}_{\mathrm{B2}}}
+\newcommand{\Psrc}{\mathcal{P}_{\mathrm{src}}}
+\newcommand{\Proj}{\mathbb{P}}
+\newcommand{\Char}{\mathcal{C}}
+\newcommand{\J}{\mathrm{J}}
+\setlength{\emergencystretch}{3em}
+
+\begin{document}
+\raggedbottom
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.92\textwidth}{
+\textbf{Status and authority.} This is a task-local \emph{draft/control},
+\emph{proposal-only} item of \emph{source-extension data}. It formalizes a
+descriptor schema and proves conditional mathematical statements about that
+schema. It does not instantiate a B2 continuum lift, adopt a source law, modify
+canonical ontology, activate B2, satisfy P2-T01, unlock P4-T03, derive a
+physical cone or metric, issue a Gate verdict, or authorize promotion or
+external action.
+}}
+\end{center}
+
+\begin{abstract}
+The inactive B2 fallback retains the exact finite P7 matter package but lacks
+a typed continuum lift and sector-common principal law. We define the complete
+ten-component descriptor envelope selected by RT-20260809-020, state seven
+fail-closed proof-obligation families, prove a projective common-principal
+gluing theorem that assumes no quadratic or Lorentzian target, and prove that
+finite sampled traces cannot by themselves determine a continuum principal
+class. The specification is complete; no descriptor instance is constructed.
+Consequently the B2 activation-readiness vector remains
+$(1,1,1,1,0,0)$ and P4-T03 remains locked.
+\end{abstract}
+
+\section{Fixed boundary and missing source law}
+
+Let $\mathfrak P_7$ denote the exact protected finite P7 conditional input,
+including its declared sector, transition, device, propagation-profile,
+coupling, variational, and operational records. Its protected interpretation
+is adopted by explicit human postulate in its finite scope; it is not a
+continuum matter theory and supplies no source-to-target constructor. We do
+not change any member or hash of $\mathfrak P_7$.
+
+The candidate family is
+\nolinkurl{FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL}; its exact candidate identity
+is \nolinkurl{CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1}. The current ontology does
+not derive a target-atlas-free finite-P7-to-continuum lift, continuum sector
+operators, or a source compatibility law selecting one common reduced
+principal target. This is the
+\nolinkurl{derivation_critical_missing_source_law} trigger. It does not say
+that such a law is impossible.
+
+The source arena $\A$ below is the already declared smooth four-dimensional
+source arena or a proposal-only open patch thereof. It is not physical
+spacetime. Source charts are computational presentations and are not target
+atlases.
+
+\section{Typed descriptor law}
+
+\begin{definition}[B2 descriptor envelope]
+A B2 continuum-lift descriptor instance over a source domain $U\subset\A$ is
+the tuple
+\begin{equation}
+\Desc=
+(\Sectors,\{F_s\}_{s\in\Sectors},L,Q_{\rm src},Q_{\rm out},
+\{E_s\}_{s\in\Sectors},C,\Psrc,\Omega,N).
+\label{eq:descriptor}
+\end{equation}
+Its components have the following types.
+\begin{enumerate}[label=\textbf{D\arabic*.}]
+  \item $\Sectors$ is exactly the finite equipped-sector index set exposed by
+  $\mathfrak P_7$; no Standard Model or target matter labels may be added.
+  \item Each $F_s\to U$ is a finite-rank real source bundle with a declared
+  regularity class $C^{r_s}$, $r_s\ge m_s+1$, and a declared regular locus.
+  The lift $L=(L_{s,n})$ is a natural family
+  \[
+    L_{s,n}:\mathfrak P_{7,s}|_{K_n}\longrightarrow
+    \Gamma^{r_s}(U,F_s)
+  \]
+  over a directed source-refinement system $(K_n,\rho_{n+1,n})$, with
+  sampling maps $S_{s,n}$ and an explicit consistency norm or topology.
+  \item $Q_{\rm src}$ and $Q_{\rm out}$ declare the source and output
+  equivalence groupoids, their regular quotient tangents, singular strata,
+  and the descent maps used by the P2-T01 interface. Passive source-coordinate
+  change is representation covariance, not automatically a physical quotient.
+  \item Each sector equation is a local source operator
+  \[
+    E_s:\J^{m_s}(F_s)\longrightarrow W_s
+  \]
+  with constraints, vertical redundancies, equation redundancies, a regular
+  background locus, and the reduced linearized symbol
+  $\bar\sigma_s(x,k):V^{\rm red}_{s,x}\to W^{\rm red}_{s,x}$ declared.
+  \item $C$ is a source-defined compatibility relation on the projective
+  reduced characteristic hypersurfaces of the sectors. It may use only the
+  objects above and source-operational data in $\mathfrak P_7$; it may not
+  select a desired GR cone or target geometry.
+  \item $\Psrc$ is a common projective principal class. Locally it is
+  represented by a reduced homogeneous polynomial $P_i(x,k)$, defined only
+  up to a nowhere-zero source unit. Its zero set must be derived from every
+  sector's reduced symbol through $C$. No degree, quadratic factor,
+  Lorentzian signature, time orientation, or physical scale is assumed.
+  \item $\Omega$ is a source-to-operational typing and no-target-import
+  receipt. $N$ is a total procedure that maps a completed descriptor instance
+  into exactly one allowed P2-T01 verdict while preserving the rule that
+  passage is necessary but not sufficient.
+\end{enumerate}
+\end{definition}
+
+The tuple in \eqref{eq:descriptor} is a \emph{schema} in this packet. A B2
+descriptor instance exists only after every component is supplied and every
+blocking obligation below is evidenced on the same declared domain.
+
+\section{Reduced sector symbols and the common target}
+
+At a regular point $x\in U$, let
+$p_{s,x}(k)=\det\bar\sigma_s(x,k)$ when the reduced symbol is square. More
+generally, the descriptor must name the invariant characteristic ideal used
+when a determinant is not lawful. Write
+\[
+ \Char_{s,x}=Z_{\Proj(T_x^*\A)}(\operatorname{rad}p_{s,x})
+\]
+for the reduced projective characteristic hypersurface in the determinant
+case. It is a source-cotangent object, not yet a physical causal cone.
+
+\begin{definition}[Sector-common projective principal class]
+The relation $C$ succeeds on a regular patch precisely when there is a reduced
+projective hypersurface $\Char_x\subset\Proj(T_x^*\A)$ such that
+\begin{equation}
+  \Char_{s,x}=\Char_x\quad\text{for every declared }s\in\Sectors,
+  \label{eq:commonzero}
+\end{equation}
+and the local defining polynomials transform by nowhere-zero source units on
+overlaps. Any local generator $P_i$ represents $\Psrc=[P]$. Equality of one
+chosen coefficient normalization is not required; equality of the reduced
+projective characteristic set and coherent unit class is required.
+\end{definition}
+
+This definition permits higher-degree and non-quadratic candidates. It also
+fails closed when the declared sectors have inequivalent characteristic sets,
+when a common set is chosen only by discarding a sector, or when the only
+selector is resemblance to the GR target.
+
+% THM-V22-P4T02-B2-PROJECTIVE-COMMON-PRINCIPAL-GLUING
+\begin{theorem}[Projective common-principal gluing]
+Let $\{U_i\}$ cover a regular source domain $U$. Suppose each $U_i$ carries a
+reduced homogeneous polynomial $P_i$ whose projective zero set equals every
+declared sector characteristic set on $U_i$. Suppose further that on every
+nonempty overlap
+\[
+  P_i=g_{ij}P_j,
+  \qquad g_{ij}\in C^{r}(U_i\cap U_j)^{\times},
+\]
+with $g_{ii}=1$, $g_{ij}g_{ji}=1$, and
+$g_{ij}g_{jk}g_{ki}=1$ on triple overlaps. Then the local zero sets glue to a
+unique global projective characteristic hypersurface $\Char\subset
+\Proj(T^*U)$, and the $P_i$ define a section of a source line bundle whose
+projective class $\Psrc$ is independent of source-chart and local-frame
+choice. Any other family with the same reduced local hypersurfaces differs
+locally by nowhere-zero units, subject to the same cocycle law.
+\end{theorem}
+
+\begin{proof}
+Multiplication by a nowhere-zero unit does not change a polynomial's
+projective zero set, so the local sets agree on pairwise overlaps and glue as
+a unique subset $\Char$. The functions $g_{ij}$ satisfy the transition laws
+for a line bundle; the $P_i$ therefore form a section of that bundle. Changing
+a source chart or field/equation frame changes a representative by the
+declared transition unit but not its projective class. The final statement is
+the same overlap argument for the ratio of two reduced local generators.
+No quadratic form, signature, target atlas, or benchmark behavior enters the
+construction.
+\end{proof}
+
+\paragraph{Exact limitation.}
+The theorem is conditional. It proves what coherent local common-principal
+data would mean and how it would descend; it does not prove that the P7 package
+supplies the $F_s$, $E_s$, $C$, $P_i$, or cocycle.
+
+\section{Finite-trace underdetermination}
+
+The finite P7 input cannot be turned into a continuum operator merely by
+renaming finite sectors as fields. The following theorem isolates the missing
+law without asserting a global no-go.
+
+% THM-V22-P4T02-B2-FINITE-TRACE-PRINCIPAL-UNDERDETERMINATION
+\begin{theorem}[Finite traces do not determine the continuum principal class]
+Let $\Xi\subset U$ be a finite source sampling set and let $r\ge0$. Suppose a
+proposed lift constrains continuum data only through $r$-jets on $\Xi$. For
+any local source operator family $E_s$ of order $m$ and any order-$m$ source
+operator family $B_s$, there exists a nonzero smooth source scalar $f$ with
+$j^r_{\Xi}f=0$ such that
+\[
+  \widetilde E_s=E_s+fB_s
+\]
+has the same admitted finite $r$-jet traces on $\Xi$ but may have a different
+principal symbol on an open subset of $U\setminus\Xi$. In particular, choosing
+all $E_s=\partial_0$ and
+$B_s=c_s\partial_1$ with distinct real $c_s$ gives one completion with the
+common representative $k_0$ and another, away from $f=0$, with distinct
+sector representatives $k_0+fc_sk_1$. Hence finite sampled traces alone do not
+select whether \eqref{eq:commonzero} holds.
+\end{theorem}
+
+\begin{proof}
+Because $\Xi$ is finite, choose pairwise source-coordinate neighborhoods and
+a smooth function that vanishes through order $r$ at every point of $\Xi$ but
+is nonzero on some open subset. Leibniz expansion shows that every admitted
+trace through order $r$ of $fB_s$ vanishes on $\Xi$, so $E_s$ and
+$\widetilde E_s$ agree on the declared finite traces. Their principal symbols
+differ by $f\sigma(B_s)$ wherever $f\ne0$. For the explicit first-order
+families, the unperturbed characteristic hyperplane is $k_0=0$ for every
+sector, whereas the perturbed hyperplanes $k_0+fc_sk_1=0$ are pairwise
+distinct when $f\ne0$ and the $c_s$ are distinct. Thus the finite trace cannot
+choose the common-principal property.
+\end{proof}
+
+\begin{corollary}[Missing selector law]
+Any successful B2 instance must add and justify at least one source-side
+condition stronger than finite trace agreement: for example jet-density,
+operator naturality, a source variational construction, refinement stability,
+or an independently motivated compatibility selector. The current ontology
+does not derive which condition is correct.
+\end{corollary}
+
+This is a scoped underdetermination result for finite sampled interfaces. It
+does not exclude nonlocal lifts, dense refinement limits, or future source
+extensions, and it does not refute B2 globally.
+
+\section{Seven blocking proof-obligation families}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.09\textwidth}>{\raggedright\arraybackslash}p{0.29\textwidth}>{\raggedright\arraybackslash}p{0.54\textwidth}}
+\toprule
+ID & Object & Fail-closed obligation\\
+\midrule
+D1 & fields and regularity & Declare every bundle, rank, source domain, differentiability order, regular stratum, singular stratum, and permitted variation.\\
+D2 & finite-to-continuum lift & Prove typed naturality, sampling consistency, refinement or limit control, finite-data recovery, and a non-circular selector stronger than finite trace agreement.\\
+D3 & quotients & Declare source and output equivalences, constant-rank loci, invariant observables, and representative-independent descent.\\
+D4 & sector equations & Construct $E_s$, constraints, redundancies, reduced perturbation spaces, and covariant principal symbols before taking determinants.\\
+D5 & compatibility and $\Psrc$ & Derive $C$, prove sector-common projective equality, unit/cocycle coherence, and finite-variation robustness without imposing a desired cone.\\
+D6 & operational and no-target typing & Bind every response to source type, device bridge, scale status, domain, invariant readout, and falsifier; reject target atlas, metric, tetrad, coframe, benchmark fit, or validator authority as premises.\\
+D7 & adequacy interface & Populate all ten P2-T01 fields and emit exactly one allowed necessary-condition verdict; never infer sufficiency or Gate B passage.\\
+\bottomrule
+\end{longtable}
+
+The task-local proof-obligation matrix records 35 atomic checks under these
+seven families. Every family is blocking for an instantiated descriptor.
+
+\section{P2-T01 interface and activation state}
+
+The $N$ component accepts only an instantiated descriptor and returns exactly
+one of the following verdicts:
+\begin{itemize}[leftmargin=2em]
+  \item \nolinkurl{necessary_condition_met_not_sufficient};
+  \item \nolinkurl{scoped_obstruction} or
+        \nolinkurl{outside_differential_scope};
+  \item \nolinkurl{insufficient_physical_typing} or
+        \nolinkurl{insufficient_equivalence_or_domain_data}.
+\end{itemize}
+It must populate source state/domain, regularity, source equivalence, output
+equivalence, reconstruction, factor statistic, operational typing,
+independence, stochastic scope, and escape/global scope.
+
+This packet completes the \emph{descriptor specification}; it does not
+complete a \emph{descriptor instance}. Thus $R_5=0$ and $R_6=0$ under the
+preregistered activation rule. B1 remains locally frozen, B2 remains inactive,
+and P4-T03 remains locked.
+
+\section{Source-extension classification and next role}
+
+The formal law is a new ontology primitive candidate only in the descriptive
+sense that current ontology does not derive it. Its controlled statuses are
+\emph{draft/control}, \emph{proposal-only}, and \emph{source-extension data}.
+It is not a canonical-ontology candidate, adopted law, physical matter model,
+or metric construction. Current adoption is blocked while same-milestone
+continuation remains open:
+\nolinkurl{blocked_adoption_open_continuation}.
+
+Before a Candidate Constructor may instantiate the law, one separately
+admitted \texttt{smuggling-auditor@0.2.0} packet should audit the descriptor,
+gluing theorem, counterpair, and all 35 atomic obligations for target-atlas,
+target-metric, desired-cone, benchmark-fit, metadata-authority, role-authority,
+and validation-authority imports. A local audit pass would not adopt the law
+or activate B2.
+
+\section{Distance-to-GR and freeze control}
+
+The Distance-to-GR delta is zero. The descriptor law creates no $M_{\rm src}$,
+physical causal structure, signature, scale, $g_{\rm eff}$, matter coupling,
+Einstein equation, Gate evidence, or benchmark status. B2 is not frozen in
+this packet because the projective gluing theorem and finite-trace
+underdetermination theorem are materially new mathematical payload and select
+a concrete audit consequence. Repeating another generic descriptor checklist
+without an audit, a constructed instance, or a precise stronger obstruction
+would require freeze review.
+
+\section{Parent-child synthesis}
+
+The Physicist-Mathematician perspective supplied the typed ten-component law,
+projective gluing theorem, finite-trace theorem, and atomic obligations. The
+Physicist-Philosopher perspective separated finite protected postulate,
+proposal-only continuumization, mathematical characteristic class, physical
+causal interpretation, and protected adoption. Parent review resolved four
+conflicts: source chart versus target atlas, schema completeness versus
+instance existence, common projective zero set versus Lorentzian cone, and
+scoped underdetermination versus impossibility. No conflict remains open.
+
+\end{document}

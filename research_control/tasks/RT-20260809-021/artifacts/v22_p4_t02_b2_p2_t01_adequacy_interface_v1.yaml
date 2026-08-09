@@ -1,0 +1,65 @@
+schema_id: "v22_p4_t02_b2_p2_t01_adequacy_interface_v1"
+artifact_id: "V22-P4-T02-B2-P2-T01-ADEQUACY-INTERFACE-V1"
+task_id: "RT-20260809-021"
+status: "draft/control interface"
+checklist_id: "v22_p2_t01_source_adequacy_checklist_v1"
+checklist_path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_source_adequacy_checklist_v1.yaml"
+checklist_sha256: "a9b59df7b5b2d1203fef53cf23817400c6d1511836e97ff1ae21b819dc064e68"
+descriptor_input_required: "one complete instantiated D_B2 on a declared regular domain"
+descriptor_instance_available: false
+evaluation_executed: false
+required_fields:
+  - field_id: "source_state_and_domain"
+    descriptor_source: "D1 fields, D2 lift, and declared source domain"
+    current_status: "unpopulated_instance"
+  - field_id: "regularity"
+    descriptor_source: "D1 regularity and stratification"
+    current_status: "unpopulated_instance"
+  - field_id: "source_equivalence"
+    descriptor_source: "D3 Q_src"
+    current_status: "unpopulated_instance"
+  - field_id: "output_equivalence"
+    descriptor_source: "D3 Q_out"
+    current_status: "unpopulated_instance"
+  - field_id: "reconstruction"
+    descriptor_source: "D2 lift and D3 quotient descent"
+    current_status: "unpopulated_instance"
+  - field_id: "factor_statistic"
+    descriptor_source: "D3 quotient tangents and D7 rank procedure"
+    current_status: "unpopulated_instance"
+  - field_id: "operational_typing"
+    descriptor_source: "D6 Omega"
+    current_status: "unpopulated_instance"
+  - field_id: "independence"
+    descriptor_source: "D3 output quotient and D6 invariant responses"
+    current_status: "unpopulated_instance"
+  - field_id: "stochastic_scope"
+    descriptor_source: "D1 state class, D2 lift, and D6 latent-channel budget"
+    current_status: "unpopulated_instance"
+  - field_id: "escape_and_global_scope"
+    descriptor_source: "D1 strata, D2 gluing, D3 quotient singularities, and D5 cocycle"
+    current_status: "unpopulated_instance"
+allowed_verdicts:
+  - "necessary_condition_met_not_sufficient"
+  - "scoped_obstruction"
+  - "outside_differential_scope"
+  - "insufficient_physical_typing"
+  - "insufficient_equivalence_or_domain_data"
+current_verdict: "not_evaluated_missing_descriptor_instance"
+forbidden_verdicts:
+  - "adequate_physical_metric_derived"
+  - "global_ontology_impossible"
+  - "all_source_extensions_excluded"
+  - "Gate_B_pass"
+  - "benchmark_pass"
+activation_effect:
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+authority_limits:
+  interface_definition_is_adequacy_evaluation: false
+  passage_is_sufficient: false
+  hard_candidate_filter_authorized: false
+  gate_b_credit_authorized: false
+  physics_promotion_authorized: false

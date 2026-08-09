@@ -1,0 +1,222 @@
+schema_id: "v22_p4_t02_b2_continuum_lift_descriptor_specification_v1"
+artifact_id: "V22-P4-T02-B2-CONTINUUM-LIFT-DESCRIPTOR-SPECIFICATION-V1"
+task_id: "RT-20260809-021"
+job_id: "AJ-RT-20260809-021-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+status: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+descriptor_specification_complete: true
+descriptor_instance_complete: false
+b2_activated: false
+p4_t03_unlocked: false
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+candidate_identity_sha256: "9d8691e21e36bac63185d4ee6bf530f768e5952d202bc4dea374d9cc4aead8eb"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Formalize a target-atlas-free finite-P7-to-continuum lift, reduced sector operators, quotient data, common projective principal law, operational receipt, and P2-T01 interface without constructing or adopting an instance."
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+adoption_status: "blocked_adoption_open_continuation"
+missing_source_law: "A target-atlas-free finite-P7-to-continuum lift and source compatibility law that derives one common reduced projective principal target across every declared sector."
+underdetermination_statement: "Current ontology does not derive the B2 continuum lift, continuum sector equations, compatibility selector, or common projective principal construction."
+no_go_theorem_status: "not_proved"
+
+fixed_input:
+  contract_id: "P7-CONDITIONAL-INPUT-CONTRACT-V1"
+  contract_path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_p7_conditional_input_contract_v1.yaml"
+  contract_sha256: "e1acd64ea434f3dc6a0607c17f69162f0e242bc92d5490eb84ff3d3afd92a3c4"
+  input_scope: "exact protected finite source-matter conditional input"
+  input_interpretation: "adopted_not_derived within declared finite scope"
+  finite_package_changed: false
+  continuum_constructor_present_in_input: false
+  target_types_present_in_input: false
+
+formal_descriptor:
+  descriptor_symbol: "D_B2"
+  component_count: 10
+  ordered_components:
+    - component_id: "D0_SECTOR_SET"
+      symbol: "S"
+      type: "finite equipped-sector index set exposed by the exact P7 package"
+      instance_status: "fixed_finite_input"
+    - component_id: "D1_CONTINUUM_FIELDS"
+      symbol: "{F_s}"
+      type: "finite-rank real source bundles F_s to U with declared C^r_s regularity and strata"
+      instance_status: "unconstructed"
+    - component_id: "D2_FINITE_TO_CONTINUUM_LIFT"
+      symbol: "L"
+      type: "natural family L_s_n from finite P7 records on source refinements K_n to C^r_s source sections"
+      instance_status: "unconstructed"
+    - component_id: "D3_SOURCE_QUOTIENT"
+      symbol: "Q_src"
+      type: "source equivalence groupoid, regular quotient tangents, singular strata, and descent map"
+      instance_status: "unconstructed"
+    - component_id: "D3_OUTPUT_QUOTIENT"
+      symbol: "Q_out"
+      type: "output equivalence groupoid, invariant observables, quotient tangents, and descent map"
+      instance_status: "unconstructed"
+    - component_id: "D4_SECTOR_EQUATIONS"
+      symbol: "{E_s}"
+      type: "local source operators E_s from m_s jets of F_s to equation bundles W_s with lawful reduction"
+      instance_status: "unconstructed"
+    - component_id: "D5_COMPATIBILITY_RELATION"
+      symbol: "C"
+      type: "source-defined relation on reduced projective sector characteristic hypersurfaces"
+      instance_status: "unconstructed"
+    - component_id: "D5_COMMON_PRINCIPAL_TARGET"
+      symbol: "P_src"
+      type: "projective class of reduced homogeneous local generators coherent up to nowhere-zero source units"
+      instance_status: "unconstructed"
+    - component_id: "D6_OPERATIONAL_NO_TARGET_RECEIPT"
+      symbol: "Omega"
+      type: "source-operational typing and forbidden-import receipt"
+      instance_status: "schema_defined_instance_unconstructed"
+    - component_id: "D7_ADEQUACY_PROCEDURE"
+      symbol: "N"
+      type: "total mapping from a complete descriptor instance to one allowed P2-T01 necessary-condition verdict"
+      instance_status: "interface_defined_not_evaluated"
+
+source_domain_contract:
+  arena: "smooth four-dimensional source arena A or declared source-open patch U"
+  physical_spacetime_claimed: false
+  source_chart_use: "computational presentation only"
+  source_chart_is_target_atlas: false
+  regularity_minimum: "r_s greater than or equal to m_s plus one"
+  required_strata:
+    - "regular constant-rank locus"
+    - "constraint-rank change locus"
+    - "quotient-rank change locus"
+    - "operator-degeneracy locus"
+    - "partial-domain and nonlocal replacement classifications"
+
+lift_contract:
+  refinement_system: "directed source-incidence or source-sampling family K_n with transition maps rho_nplus1_n"
+  maps:
+    - "L_s_n from exact finite P7 records on K_n to source sections of F_s"
+    - "S_s_n from source sections of F_s to declared finite traces"
+    - "rho_nplus1_n between finite refinement records"
+  required_equations:
+    - "sampling recovery S_s_n composed with L_s_n equals the declared finite record on the admitted finite domain"
+    - "naturality under exact finite P7 relabelings"
+    - "refinement compatibility up to a stated error epsilon_n"
+    - "epsilon_n tends to zero in a named source norm or topology"
+  forbidden_shortcuts:
+    - "finite sector labels renamed continuum fields by fiat"
+    - "desired target cone used to choose L"
+    - "continuum equations read directly from finite transition names"
+
+quotient_contract:
+  source_equivalence_must_be_justified: true
+  output_equivalence_must_be_justified: true
+  passive_source_coordinates_are_physical_gauge: false
+  required_maps:
+    - "regular source tangent to source quotient tangent"
+    - "regular output tangent to output quotient tangent"
+    - "candidate reconstruction or response map descending between quotients"
+  required_failure_modes:
+    - "nonconstant rank"
+    - "representative dependence"
+    - "missing invariant observables"
+    - "singular or partial-domain behavior"
+
+sector_operator_contract:
+  operator_type: "E_s:J^m_s(F_s) to W_s"
+  required_reductions:
+    - "algebraic field constraints"
+    - "differential constraints"
+    - "vertical field redundancies"
+    - "algebraic equation redundancies"
+  determinant_allowed_only_if_reduced_symbol_square: true
+  nondeterminant_case_requires_characteristic_ideal: true
+  background_or_state_dependence_must_be_explicit: true
+  coefficients_must_be_source_derived: true
+
+common_principal_contract:
+  sector_characteristic_object: "reduced projective characteristic hypersurface C_s_x in projectivized source cotangent"
+  compatibility_success_condition: "C_s_x equals one common C_x for every declared sector on the same regular patch"
+  local_generator_relation: "P_i equals g_ij times P_j on overlaps with nowhere-zero source units g_ij"
+  cocycle_condition: "g_ij g_jk g_ki equals one on triple overlaps"
+  uniqueness_scope: "projective class up to nowhere-zero source units"
+  degree_fixed_in_advance: false
+  quadratic_form_assumed: false
+  lorentzian_signature_assumed: false
+  time_orientation_assumed: false
+  physical_scale_assumed: false
+  desired_gr_cone_used_as_selector: false
+
+new_mathematical_payload:
+  - payload_id: "THM-V22-P4T02-B2-PROJECTIVE-COMMON-PRINCIPAL-GLUING"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    burden_effect: "narrows"
+    statement: "Coherent local reduced common-principal generators related by a source-unit cocycle glue to a chart-independent projective characteristic hypersurface and source line-bundle section."
+    theorem_is_conditional: true
+  - payload_id: "THM-V22-P4T02-B2-FINITE-TRACE-PRINCIPAL-UNDERDETERMINATION"
+    payload_type: "countermodel_or_obstruction"
+    burden_effect: "obstructs"
+    statement: "Finite r-jet traces on a finite source sampling set do not determine the continuum principal class because source operators may be perturbed by coefficients vanishing to order r on that set."
+    obstruction_scope: "finite sampled lift interfaces under current ontology"
+    global_no_go_claimed: false
+  - payload_id: "DEF-V22-P4T02-B2-TEN-COMPONENT-DESCRIPTOR-LAW"
+    payload_type: "bridge_map_candidate"
+    burden_effect: "narrows"
+    statement: "Typed ten-component proposal-only descriptor law with seven blocking proof-obligation families and exact P2-T01 interface."
+
+finite_trace_obstruction:
+  obstruction_id: "OBST-V22-P4T02-B2-FINITE-TRACE-SELECTOR-UNDERDETERMINATION-001"
+  scope: "source_extension_candidate"
+  exact_failure: "Finite sampled traces alone are invariant under principal-part perturbations whose coefficients vanish to the admitted finite jet order, so they do not select a unique continuum principal class or sector-common property."
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "downstream_block_preserved"
+  repair_allowed: true
+  repair_classes:
+    - "jet-density or refinement-density law"
+    - "source variational construction of sector operators"
+    - "operator naturality law"
+    - "finite-variation robustness law"
+    - "independently motivated source compatibility selector"
+  forbidden_overread: "This does not prove that B2 or all future continuum lifts are impossible."
+
+activation_readiness:
+  predicate_order:
+    - "b1_terminated"
+    - "zero_other_active"
+    - "fresh_exact_selector"
+    - "p7_hashes_unchanged"
+    - "descriptor_instance_complete"
+    - "adequacy_reevaluated"
+  vector:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 0
+    - 0
+  activation_value: 0
+  specification_complete_does_not_set_instance_complete: true
+
+next_route:
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  plan_task_id: "P4-T02"
+  objective: "Audit the formal descriptor, gluing theorem, finite-trace theorem, and all atomic obligations for hidden target or authority import before any descriptor instance is constructed."
+  execution_authorized_in_this_task: false
+
+authority_limits:
+  scientific_status_changed: false
+  physical_status_changed: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  descriptor_instance_constructed: false
+  b2_activated: false
+  adequacy_reevaluated: false
+  p4_t03_unlocked: false
+  physical_cone_constructed: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  gate_b_verdict_issued: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  global_no_go_claimed: false

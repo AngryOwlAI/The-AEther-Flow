@@ -1,0 +1,84 @@
+schema_id: "v22_p4_t02_b2_finite_input_underdetermination_counterpair_v1"
+artifact_id: "V22-P4-T02-B2-FINITE-INPUT-UNDERDETERMINATION-COUNTERPAIR-V1"
+task_id: "RT-20260809-021"
+status: "draft/control"
+claim_class: "scoped finite-trace underdetermination"
+obstruction_id: "OBST-V22-P4T02-B2-FINITE-TRACE-SELECTOR-UNDERDETERMINATION-001"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+global_no_go_claimed: false
+source_setup:
+  arena: "one source chart on R4 used only as a local source presentation"
+  sampling_set: "a finite set Xi representing any admitted finite source sampling interface"
+  admitted_jet_order: "r greater than or equal to zero"
+  sector_count: 6
+  target_geometry_used: false
+shared_finite_interface:
+  finite_input: "the same exact P7 records and sector labels"
+  lift_trace_rule: "the two families agree on every admitted r-jet trace on Xi"
+  perturbation_scalar: "a nonzero smooth source scalar f with j^r_Xi f equal to zero"
+  finite_trace_changed: false
+  full_p7_continuum_reproduction_claimed: false
+  scope_note: "The counterpair attacks selection from finite traces; it is not a completed continuum reproduction of every P7 transition record."
+completion_a:
+  completion_id: "B2-TRACE-COMMON-PRINCIPAL-COMPLETION-A"
+  sector_operators:
+    - "E_1=partial_0"
+    - "E_2=partial_0"
+    - "E_3=partial_0"
+    - "E_4=partial_0"
+    - "E_5=partial_0"
+    - "E_6=partial_0"
+  principal_representatives:
+    - "k_0"
+    - "k_0"
+    - "k_0"
+    - "k_0"
+    - "k_0"
+    - "k_0"
+  common_projective_characteristic_exists: true
+  common_representative: "k_0"
+  physical_cone_claimed: false
+completion_b:
+  completion_id: "B2-TRACE-SPLIT-PRINCIPAL-COMPLETION-B"
+  distinct_source_coefficients:
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    - 6
+  sector_operators:
+    - "E_1_tilde=partial_0+f partial_1"
+    - "E_2_tilde=partial_0+2 f partial_1"
+    - "E_3_tilde=partial_0+3 f partial_1"
+    - "E_4_tilde=partial_0+4 f partial_1"
+    - "E_5_tilde=partial_0+5 f partial_1"
+    - "E_6_tilde=partial_0+6 f partial_1"
+  principal_representatives:
+    - "k_0+f k_1"
+    - "k_0+2 f k_1"
+    - "k_0+3 f k_1"
+    - "k_0+4 f k_1"
+    - "k_0+5 f k_1"
+    - "k_0+6 f k_1"
+  common_projective_characteristic_exists_where_f_nonzero: false
+  physical_multicone_claimed: false
+exact_comparison:
+  finite_traces_equal: true
+  sector_principal_classes_equal_in_completion_a: true
+  sector_principal_classes_equal_in_completion_b_where_f_nonzero: false
+  decisive_result: "Finite admitted traces alone do not determine whether the sector-common projective principal condition holds."
+  missing_selector_classes:
+    - "jet-density or refinement-density law"
+    - "source variational construction"
+    - "operator naturality law"
+    - "finite-variation robustness law"
+    - "source compatibility selector"
+interpretation_boundary:
+  current_ontology_does_not_derive_selector: true
+  future_extension_impossible: false
+  b2_refuted_globally: false
+  descriptor_instance_constructed: false
+  target_atlas_or_metric_imported: false
+  physical_causal_interpretation_created: false
+  distance_to_gr_changed: false

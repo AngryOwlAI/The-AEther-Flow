@@ -1,0 +1,457 @@
+{
+  "artifact_sha256": {
+    "research_control/tasks/RT-20260809-021/artifacts/child_phys_math_p4_t02_b2_descriptor.yaml": "66d906950ab299fa73f787bbd260ad5b045aad096278c0f3c3ae54651b550e37",
+    "research_control/tasks/RT-20260809-021/artifacts/child_phys_phil_p4_t02_b2_descriptor.yaml": "5ae8661a82230c4ab427a3b998f3ead1d04157514249da8e906d1006590c49be",
+    "research_control/tasks/RT-20260809-021/artifacts/parent_conflict_review_p4_t02_b2_descriptor.yaml": "c846a7308293feed970e64a4ee8bf3d0e263fd1896dc4ce9460dc7b5b16836f0",
+    "research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md": "6b241c4fe25ab00c264085ea900ee87a0ba65fd035de843ed414399c1de2cdc8",
+    "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex": "6b3e454048f1645f164e06dbebac08d1bd29b8a61918d98dcbf77d09c82156c0",
+    "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_specification_v1.yaml": "82a48f1e82f45012908d9eb8df389ed256bafba937ef6c8de0776b630ab71a65",
+    "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_descriptor_model.py": "4c8a36f4b2c606565ecb967281b87801b83e15a4d300f997dab5c2f88415ee3b",
+    "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_finite_input_underdetermination_counterpair_v1.yaml": "e3a8d24c5eda70aa5c8a7c389828ddaee58887e90ab9260f381748423460f9a6",
+    "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_p2_t01_adequacy_interface_v1.yaml": "fa667ba7201095411f66d6e29382a23f5de628d75cd57228cf53f4db75eef1ca",
+    "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_proof_obligation_matrix_v1.yaml": "53e78abd61db464bd13b666a5cb2351b41877e31b0efac84a00a97333c9378d1",
+    "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_source_provenance_manifest_v1.yaml": "5dfbc5cfeb6f70a74a4ac7c9644ea66052fe56691f20630e5f20dabef1b99275"
+  },
+  "authority_note": "PASS is operational evidence only. It does not construct or adopt a descriptor instance, activate B2, unlock P4-T03, prove physical geometry, or authorize promotion.",
+  "checks": [
+    {
+      "check_id": "FILE-TEX",
+      "detail": "required artifact research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FILE-SPEC",
+      "detail": "required artifact research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_specification_v1.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FILE-MATRIX",
+      "detail": "required artifact research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_proof_obligation_matrix_v1.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FILE-COUNTERPAIR",
+      "detail": "required artifact research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_finite_input_underdetermination_counterpair_v1.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FILE-ADEQUACY",
+      "detail": "required artifact research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_p2_t01_adequacy_interface_v1.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FILE-PROVENANCE",
+      "detail": "required artifact research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_source_provenance_manifest_v1.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FILE-CHILD_MATH",
+      "detail": "required artifact research_control/tasks/RT-20260809-021/artifacts/child_phys_math_p4_t02_b2_descriptor.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FILE-CHILD_PHIL",
+      "detail": "required artifact research_control/tasks/RT-20260809-021/artifacts/child_phys_phil_p4_t02_b2_descriptor.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FILE-CONFLICT",
+      "detail": "required artifact research_control/tasks/RT-20260809-021/artifacts/parent_conflict_review_p4_t02_b2_descriptor.yaml exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FILE-FUSION",
+      "detail": "required artifact research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FILE-MODEL",
+      "detail": "required artifact research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_descriptor_model.py exists",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-SCHEMA",
+      "detail": "descriptor schema identity",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-CANDIDATE",
+      "detail": "exact B2 candidate identity",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-FAMILY",
+      "detail": "exact B2 family identity",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-ROUTE",
+      "detail": "ontology-law route label",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-TRIGGER",
+      "detail": "derivation-critical trigger",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-ADOPTION",
+      "detail": "blocked adoption and open continuation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-SPEC-COMPLETE",
+      "detail": "descriptor specification is complete",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-INSTANCE-OPEN",
+      "detail": "descriptor instance remains unconstructed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-B2-INACTIVE",
+      "detail": "B2 remains inactive",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-P4T03-LOCKED",
+      "detail": "P4-T03 remains locked",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-COMPONENT-COUNT",
+      "detail": "ten descriptor components are typed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-COMPONENT-UNIQUE",
+      "detail": "descriptor component identities are unique",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-COMMON-NO-QUADRATIC",
+      "detail": "no quadratic form is assumed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-COMMON-NO-LORENTZ",
+      "detail": "no Lorentzian signature is assumed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "SPEC-COMMON-NO-SCALE",
+      "detail": "no physical scale is assumed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "PAYLOAD-GLUING",
+      "detail": "gluing theorem payload recorded",
+      "status": "PASS"
+    },
+    {
+      "check_id": "PAYLOAD-UNDERDETERMINATION",
+      "detail": "finite-trace theorem payload recorded",
+      "status": "PASS"
+    },
+    {
+      "check_id": "PAYLOAD-DESCRIPTOR",
+      "detail": "descriptor-law definition recorded",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MATRIX-FAMILY-COUNT",
+      "detail": "seven proof-obligation families",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MATRIX-ATOMIC-COUNT",
+      "detail": "35 atomic proof obligations",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MATRIX-ATOMIC-UNIQUE",
+      "detail": "atomic obligation identities are unique",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MATRIX-INSTANCE-OPEN",
+      "detail": "no instance evidence is claimed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "COUNTERPAIR-TRACE-EQUALITY",
+      "detail": "finite traces are held equal",
+      "status": "PASS"
+    },
+    {
+      "check_id": "COUNTERPAIR-COMMON",
+      "detail": "completion A has a common projective class",
+      "status": "PASS"
+    },
+    {
+      "check_id": "COUNTERPAIR-SPLIT",
+      "detail": "completion B has split projective classes",
+      "status": "PASS"
+    },
+    {
+      "check_id": "COUNTERPAIR-SCOPED",
+      "detail": "counterpair is not a global no-go",
+      "status": "PASS"
+    },
+    {
+      "check_id": "COUNTERPAIR-NO-TARGET",
+      "detail": "counterpair uses no target atlas or metric",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ADEQUACY-FIELD-COUNT",
+      "detail": "ten P2-T01 fields are mapped",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ADEQUACY-FIELD-SET",
+      "detail": "exact P2-T01 field identities are preserved",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ADEQUACY-NOT-RUN",
+      "detail": "adequacy reevaluation has not run",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ADEQUACY-INSTANCE-MISSING",
+      "detail": "adequacy remains blocked by the missing instance",
+      "status": "PASS"
+    },
+    {
+      "check_id": "HASH-RECOMMENDATIONS_IMPLEMENTATION_PLAN_CONTINUE_TASK-V22.MD",
+      "detail": "fixed source hash implementations_plans/recommendations_implementation_plan_continue_task-v22.md",
+      "status": "PASS"
+    },
+    {
+      "check_id": "HASH-V22_P4_T02_B2_FALLBACK_DESCRIPTOR_SELECTION_V1.TEX",
+      "detail": "fixed source hash research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_fallback_descriptor_selection_v1.tex",
+      "status": "PASS"
+    },
+    {
+      "check_id": "HASH-PARENT_FUSION_NOTES_P4_T02_B2_SELECTOR.MD",
+      "detail": "fixed source hash research_control/tasks/RT-20260809-020/artifacts/parent_fusion_notes_p4_t02_b2_selector.md",
+      "status": "PASS"
+    },
+    {
+      "check_id": "HASH-V22_P1_T03_P7_CONDITIONAL_INPUT_CONTRACT_V1.YAML",
+      "detail": "fixed source hash research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_p7_conditional_input_contract_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "HASH-V22_P2_T04_FALLBACK_MATTER_PRINCIPAL_CANDIDATE_V1.YAML",
+      "detail": "fixed source hash research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_fallback_matter_principal_candidate_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "HASH-V22_P2_T01_SOURCE_ADEQUACY_CHECKLIST_V1.YAML",
+      "detail": "fixed source hash research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_source_adequacy_checklist_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "HASH-V22_P4_T02_B2_DESCRIPTOR_DEPENDENCY_MAP_V1.YAML",
+      "detail": "fixed source hash research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_descriptor_dependency_map_v1.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "HASH-HANDOFF-0990.YAML",
+      "detail": "fixed source hash research_control/handoffs/handoff-0990.yaml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "PROVENANCE-COUNT",
+      "detail": "eight fixed source records are preserved",
+      "status": "PASS"
+    },
+    {
+      "check_id": "PROVENANCE-NONAUTHORITY",
+      "detail": "retrieval layers are not authority",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CHILD-MATH-COMPLETE",
+      "detail": "Physicist-Mathematician child completed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CHILD-PHIL-COMPLETE",
+      "detail": "Physicist-Philosopher child completed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CONFLICT-STATUS",
+      "detail": "parent conflict review completed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CONFLICT-EMPTY",
+      "detail": "no unresolved parent-child conflict",
+      "status": "PASS"
+    },
+    {
+      "check_id": "CONFLICT-ROUNDS",
+      "detail": "conflicts resolved within the declared budget",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-01",
+      "detail": "TeX marker present: THM-V22-P4T02-B2-PROJECTIVE-COMMON-PRINCIPAL-GLUING",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-02",
+      "detail": "TeX marker present: THM-V22-P4T02-B2-FINITE-TRACE-PRINCIPAL-UNDERDETERMINATION",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-03",
+      "detail": "TeX marker present: blocked_adoption_open_continuation",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-04",
+      "detail": "TeX marker present: $(1,1,1,1,0,0)$",
+      "status": "PASS"
+    },
+    {
+      "check_id": "TEX-MARKER-05",
+      "detail": "TeX marker present: P4-T03 remains locked",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FUSION-STATUS",
+      "detail": "fusion record preserves schema/instance distinction",
+      "status": "PASS"
+    },
+    {
+      "check_id": "FUSION-NEXT-ROLE",
+      "detail": "fusion record selects a concrete next role",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-EXIT",
+      "detail": "support model exits successfully",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-STATUS",
+      "detail": "support model reports PASS",
+      "status": "PASS"
+    },
+    {
+      "check_id": "MODEL-AUTHORITY",
+      "detail": "support model creates no descriptor instance",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ACTIVATION-VECTOR",
+      "detail": "activation vector remains 1-1-1-1-0-0",
+      "status": "PASS"
+    },
+    {
+      "check_id": "ACTIVATION-FALSE",
+      "detail": "activation remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "NEXT-ROLE",
+      "detail": "next role is the separate smuggling audit",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-SCIENTIFIC_STATUS_CHANGED",
+      "detail": "authority limit scientific_status_changed remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-PHYSICAL_STATUS_CHANGED",
+      "detail": "authority limit physical_status_changed remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-SOURCE_LAW_ADOPTED",
+      "detail": "authority limit source_law_adopted remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-CANONICAL_ONTOLOGY_MODIFIED",
+      "detail": "authority limit canonical_ontology_modified remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-DESCRIPTOR_INSTANCE_CONSTRUCTED",
+      "detail": "authority limit descriptor_instance_constructed remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-B2_ACTIVATED",
+      "detail": "authority limit b2_activated remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-ADEQUACY_REEVALUATED",
+      "detail": "authority limit adequacy_reevaluated remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-P4_T03_UNLOCKED",
+      "detail": "authority limit p4_t03_unlocked remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-PHYSICAL_CONE_CONSTRUCTED",
+      "detail": "authority limit physical_cone_constructed remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-EFFECTIVE_METRIC_CONSTRUCTED",
+      "detail": "authority limit effective_metric_constructed remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-DISTANCE_TO_GR_CHANGED",
+      "detail": "authority limit distance_to_gr_changed remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-GATE_B_VERDICT_ISSUED",
+      "detail": "authority limit gate_b_verdict_issued remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-PROOF_AUTHORITY",
+      "detail": "authority limit proof_authority remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-PHYSICS_PROMOTION_AUTHORIZED",
+      "detail": "authority limit physics_promotion_authorized remains false",
+      "status": "PASS"
+    },
+    {
+      "check_id": "AUTH-GLOBAL_NO_GO_CLAIMED",
+      "detail": "authority limit global_no_go_claimed remains false",
+      "status": "PASS"
+    }
+  ],
+  "counts": {
+    "check_count": 85,
+    "failure_count": 0,
+    "warning_count": 0
+  },
+  "job_id": "AJ-RT-20260809-021-001",
+  "model_summary": {
+    "check_count": 13,
+    "failure_count": 0,
+    "status": "PASS"
+  },
+  "schema_id": "v22_p4_t02_b2_descriptor_validation_v1",
+  "status": "PASS",
+  "task_id": "RT-20260809-021"
+}
