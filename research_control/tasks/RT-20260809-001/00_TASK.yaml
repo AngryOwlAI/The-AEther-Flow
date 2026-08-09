@@ -1,0 +1,77 @@
+task_id: "RT-20260809-001"
+task_type: "project_system_v22_p1_t01_three_track_charter_and_separated_scorecards"
+title: "Establish the V22 three-track charter and separated scorecards"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "construction_or_implementation"
+  milestone: "not_applicable"
+  candidate_family: "not_applicable"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+closure_status: "implemented_v22_p1_t01_three_track_governance_p1_t02_selected_checkpoint_pending"
+created_at: "2026-08-09T00:54:25Z"
+updated_at: "2026-08-09T01:11:32Z"
+closed_at: "2026-08-09T01:11:32Z"
+parent_task_id: "RT-20260808-004"
+parent_handoff_id: "handoff-0970"
+current_decision_id: "DDR-20260809-001"
+current_job_id: "AJ-RT-20260809-001-001"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260809-001"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal and handoff-0970 authorize exactly one bounded P1-T01 project-system AgentJob. No physics promotion, repository split, publication, release, push, or external action is authorized."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  phase_id: "P1"
+  plan_task_id: "P1-T01"
+  recommendation_ids:
+    - "V22-R02"
+    - "V22-R17"
+  cross_cutting_directive_ids:
+    - "V22-X01"
+objective: "Create enforceable and independently testable Track A, Track B, Track C, and shared-control governance with disjoint scorecards, budgets, publication lanes, authority owners, typed non-promotional cross-track links, exact task assignment, and evidence-based repository-separation criteria."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system charter and scorecard separation only; no scientific or Distance-to-GR burden advances."
+route_label: "ordinary-research-packet"
+route_strategy_id: "implement_v22_p1_t01_three_track_charter_v1"
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-PS-V22-P1-T01-THREE-TRACK-CHARTER-001"
+claim_boundary:
+  allowed_scope: "P1-T01 charter, authority matrix, four mutually exclusive assignment classes, separate scorecard schemas, four-dimension budget allocation, typed cross-track references, repository-separation criteria and current retain-monorepo control decision, fixtures, deterministic process-integrity review, validation, and one next-route handoff."
+  forbidden_scope: "Canonical science or ontology edits; scientific claim, Distance-to-GR, Gate, benchmark, review, replication, or proof promotion; actual repository split; submission, publication, tag, release, push, reviewer contact, or any external action."
+  authority_source: "research_control/handoffs/handoff-0970.yaml"
+  boundary_status: "completed_precheckpoint"
+completion_contract:
+  every_v22_package_assigned_exactly_once: true
+  assignment_classes:
+    - "track_a"
+    - "track_b"
+    - "track_c"
+    - "shared_control"
+  separate_scorecard_schema_count: 4
+  required_resource_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "financial_cost"
+  cross_track_authority_effect_must_be_none: true
+  track_a_or_c_distance_to_gr_change_forbidden: true
+  track_b_gate_evidence_from_interpretive_or_workflow_pass_forbidden: true
+  repository_split_execution_authorized: false
+  process_integrity_review_required: true
+notes: "This task implements only P1-T01. Later V22 packages remain separate AgentJobs and protected authority remains unchanged."

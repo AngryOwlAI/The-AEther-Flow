@@ -1,0 +1,59 @@
+schema_id: "v22_track_b_scorecard_schema_v1"
+status: "draft/control"
+track_id: "track_b"
+metric_namespace: "v22.track_b"
+dashboard_id: "v22_track_b_dashboard_v1"
+authority_owner: "director-of-research@0.3.0_for_routing_with_gate_chair_only_under_exact_human_authority"
+publication_lane_id: "track_b_papers_a_b_e_and_conditional_source_derived_gr"
+required_fields:
+  - "scorecard_id"
+  - "track_id"
+  - "as_of"
+  - "assignment_coverage"
+  - "distance_to_gr_status"
+  - "gate_status"
+  - "success_measures"
+  - "failure_measures"
+  - "resource_accounting"
+  - "evidence_refs"
+  - "publication_lane"
+  - "authority_limits"
+resource_fields:
+  - "task_count"
+  - "elapsed_effort"
+  - "compute"
+  - "financial_cost"
+success_measure_ids:
+  - "source_adequacy_theorem_status"
+  - "operational_geometry_status"
+  - "robustness_status"
+  - "authorized_gate_status"
+  - "independently_replicated_benchmark_status"
+failure_measure_ids:
+  - "missing_primitive_count"
+  - "target_import_finding_count"
+  - "nonuniqueness_finding_count"
+  - "nonrobustness_finding_count"
+  - "gate_failure_count"
+  - "benchmark_failure_count"
+allowed_gate_evidence_classes:
+  - "source_side_theorem"
+  - "explicit_source_candidate"
+  - "source_grounded_countermodel_or_robustness_result"
+  - "actual_external_specialist_review_when_exactly_recorded"
+  - "protected_gate_verdict_when_exactly_authorized"
+forbidden_gate_evidence_classes:
+  - "track_a_interpretive_coherence"
+  - "target_side_exact_gr_agreement"
+  - "track_c_methodology_success"
+  - "workflow_pass"
+  - "validator_pass"
+  - "checkpoint_pass"
+  - "control_traceability"
+distance_to_gr_effect_policy: "conditional_authorized_science_only"
+cross_track_link_policy: "typed_context_or_dependency_only_never_gate_credit"
+authority_limits:
+  validator_or_workflow_pass_is_physics: false
+  interpretive_coherence_is_gate_evidence: false
+  scorecard_can_issue_gate_verdict: false
+  scorecard_can_authorize_publication: false

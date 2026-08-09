@@ -1,0 +1,248 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+handoff_id: "handoff-0971"
+handoff_number: 971
+handoff_kind: "project_system_v22_p1_t01_three_track_governance"
+task_id: "RT-20260809-001"
+decision_id: "DDR-20260809-001"
+job_id: "AJ-RT-20260809-001-001"
+completion_id: "AJC-AJ-RT-20260809-001-001"
+completion_path: "research_control/tasks/RT-20260809-001/jobs/completions/AJC-AJ-RT-20260809-001-001.yaml"
+completion_sha256: "95565b2d177bc4db68eff1d07b8131c877dc9c823ee43159f94e7c2f8b788ecf"
+status: "ready_for_v22_p1_t02_after_checkpoint"
+created_at: "2026-08-09T01:11:32Z"
+parent_handoff_id: "handoff-0970"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P1-T01"
+source_role_id: "project-control-maintainer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "project-control-maintainer@0.2.0--RT-20260809-001"
+summary: "V22 P1-T01 passes: all 40 packages have one primary track, four scorecard and publication lanes are disjoint, cross-track promotion and resource double counting fail closed, and repository separation remains measured plus human-gated. P1-T02 is selected but unexecuted."
+next_action: "After the single governed checkpoint for AJ-RT-20260809-001-001 execute exactly one separately admitted V22 P1-T02 continue-research AgentJob for the scientific objective and primitive-debt audit; perform no protected or external action."
+current_claim_boundary: "CB-PS-V22-P1-T01-THREE-TRACK-CHARTER-001"
+loop_risk_route: "v22_p1_t02_source_ontology_primitive_debt_audit"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260809-001"
+  latest_research_handoff_id: "handoff-0971"
+  latest_research_next_action: "After the single governed checkpoint for AJ-RT-20260809-001-001 execute exactly one separately admitted V22 P1-T02 continue-research AgentJob for the scientific objective and primitive-debt audit; perform no protected or external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One separately admitted V22 P1-T02 continue-research AgentJob may audit the existing source ontology primitive debt, formalize the exact scientific objective, produce assumption-cost and metric-equivalence control artifacts, and perform a no-target smuggling audit without ontology adoption."
+  completed_task: "RT-20260809-001"
+  completed_completion_path: "research_control/tasks/RT-20260809-001/jobs/completions/AJC-AJ-RT-20260809-001-001.yaml"
+  completed_completion_sha256: "95565b2d177bc4db68eff1d07b8131c877dc9c823ee43159f94e7c2f8b788ecf"
+  source_handoff_id: "handoff-0970"
+  source_handoff_path: "research_control/handoffs/handoff-0970.yaml"
+  source_handoff_sha256: "deb9d494bd3add5c973cf82135c95f51251d98eb7f676da84807d599dc3d49c4"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  charter_path: "research_control/design/v22_three_track_charter_v1.md"
+  charter_sha256: "e5bd43ecd33be61c0f026b1836e414084b9274c3f3867516a7ae48581cb8831d"
+  assignment_path: "research_control/design/v22_plan_task_track_assignments_v1.yaml"
+  assignment_sha256: "d0054c9754667e0a7296b08ddc3567acb8ddce643e27305e176951c810c35640"
+  validation_path: "research_control/tasks/RT-20260809-001/artifacts/v22_p1_t01_three_track_validation.json"
+  validation_sha256: "7cafee2f9b4062e77cf0b9dd5c4916a857ca0b10c258a98c9e040b4781d6ca12"
+  compact_receipt_path: "research_control/tasks/RT-20260809-001/artifacts/v22_p1_t01_compact_receipt.json"
+  compact_receipt_sha256: "7f061218a50353519792388bc4ab393635acca7a47c18905617a0cae77bea35d"
+  process_integrity_review_path: "research_control/tasks/RT-20260809-001/artifacts/v22_p1_t01_process_integrity_review.yaml"
+  process_integrity_review_sha256: "c2d730b318dd0793858a57919bc148ca918497ce94409e0558bf75f2040d8a99"
+  p1_t01_executed: true
+  p1_t02_selected: true
+  p1_t02_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  repository_split_authorized: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "Track A interpretation or Track C methodology success presented as Track B Gate evidence"
+    - "workflow validator checkpoint or traceability PASS presented as scientific truth or Distance-to-GR progress"
+    - "a cross-track reference presented as evidence authority resource or publication promotion"
+    - "internal deterministic process review presented as external review or independent scientific replication"
+    - "retain-monorepo status presented as permanent architecture or authority to split"
+    - "P1-T02 selection presented as execution"
+    - "checkpoint eligibility presented as a completed checkpoint before the command succeeds"
+    - "P1-T01 completion presented as tag release publication push reviewer contact or external-action authority"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P1"
+  plan_task_id: "P1-T01"
+  next_plan_task_id: "P1-T02"
+  title: "Establish the three-track charter and separated scorecards"
+  result_status: "PASS_V22_P1_T01_THREE_TRACK_GOVERNANCE"
+  work_item_status: "completed_checkpoint_pending"
+  assignment_count: 40
+  track_a_assignment_count: 1
+  track_b_assignment_count: 22
+  track_c_assignment_count: 3
+  shared_control_assignment_count: 14
+  scorecard_schema_count: 4
+  fixture_case_count: 15
+  fixture_failure_count: 0
+  current_repository_decision: "retain_monorepo"
+  p1_t01_executed: true
+  p1_t02_selected: true
+  p1_t02_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_three_track_governance"
+  burden_id: "none"
+  milestone: "none"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P1-T01 changes project-system assignment, scorecard, budget, reference, and repository-separation controls only."
+  downstream_unlocked:
+    - "one separately admitted V22 P1-T02 source-ontology primitive-debt audit AgentJob after checkpoint"
+  downstream_still_blocked:
+    - "P1-T03 and later packages until exact dependencies and runtime routes are admitted"
+    - "ontology or source-law adoption"
+    - "Gate B Gate D and physical benchmark execution"
+    - "repository split tag public release publication push reviewer contact and external action"
+    - "completed first-principles GR derivation"
+
+selected_next_route:
+  route_id: "v22_p1_t02_source_ontology_primitive_debt_audit"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P1-T02"
+  work_item_id: "P1-T02"
+  work_kind: "audit_or_review"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  supporting_perspective: "smuggling-auditor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "scientific_objective_and_primitive_debt_audit"
+  task_type: "v22_p1_t02_scientific_objective_and_primitive_debt_audit"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Explicit primitive debt source-target separation and unresolved Phi_src semantics; audit and formalize the source-only boundary without ontology adoption."
+  expected_result_kind: "audit_verdict_or_precise_repair"
+  strategy_id: "audit_v22_p1_t02_source_ontology_primitive_debt_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+  next_action: "Inventory and classify the existing source primitives and debt, formalize the exact objective and metric-equivalence test, and preserve every unresolved or forbidden target import without adoption."
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0971"
+  ordinary_handoff_id: "handoff-0971"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 6
+  ready_science_plan_task_ids:
+    - "P1-T02"
+  ready_science_plan_task_refs:
+    - "recommendations_implementation_plan_continue_task-v22:P1-T02"
+  selected_plan_task_id: "P1-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260809-001"
+  active_job_id: "AJ-RT-20260809-001-001"
+  current_status: "v22_p1_t01_complete_p1_t02_selected_checkpoint_pending"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P1-T02"
+  selected_next_work_item_id: "P1-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "audit_v22_p1_t02_source_ontology_primitive_debt_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight and handoff-0970 exact route admission passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All governance checks, 15 fixtures, 12 focused tests, and the separate deterministic process-integrity rule path pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Exact source and receipt hashes are recorded and no canonical science source changed."
+  pre_checkpoint:
+    status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    evidence:
+      - "Task, job, role, completion, successor route, registries, and generated projections are assembled for one checkpoint."
+  checkpoint:
+    status: "PENDING"
+    invocation_count: 0
+  post_checkpoint:
+    status: "PENDING"
+
+project_improvement_signals: []
+project_improvement_signal_count: 0
+project_improvement_sidecar_required: false
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  repository_split_authorized: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+
+next_plan_task_id: "P1-T02"
+next_work_item_id: "P1-T02"
+next_plan_task_execution_ready_after_checkpoint: true
+next_plan_task_executed: false
+handoff_authority_boundary: "This handoff records only P1-T01 project-system governance and selects P1-T02 for a separate science AgentJob after checkpoint. It creates no ontology adoption, scientific promotion, protected Gate, repository split, release, publication, push, reviewer-contact, or external-action authority."

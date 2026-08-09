@@ -1,0 +1,402 @@
+{
+  "acceptance_summary": {
+    "fixture_case_count": 15,
+    "fixture_failure_count": 0,
+    "package_assignment_count": 40,
+    "package_assignment_counts": {
+      "shared_control": 14,
+      "track_a": 1,
+      "track_b": 22,
+      "track_c": 3
+    },
+    "repository_decision": "retain_monorepo",
+    "resource_dimensions": [
+      "task_count",
+      "elapsed_effort",
+      "compute",
+      "financial_cost"
+    ],
+    "separate_scorecard_schema_count": 4
+  },
+  "authority_limits": {
+    "distance_to_gr_changed": false,
+    "external_action_authorized": false,
+    "external_review_completed": false,
+    "independent_scientific_replication_completed": false,
+    "physics_promotion_authorized": false,
+    "publication_authorized": false,
+    "repository_split_authorized": false,
+    "scientific_status_changed": false
+  },
+  "created_at": "2026-08-09T00:54:25Z",
+  "job_id": "AJ-RT-20260809-001-001",
+  "plan_id": "recommendations_implementation_plan_continue_task-v22",
+  "plan_task_id": "P1-T01",
+  "process_integrity_review_summary": {
+    "blocking_findings": [],
+    "external_review_completed": false,
+    "independent_scientific_replication": false,
+    "review_class": "deterministic_process_integrity_independent_rule_path",
+    "review_id": "PIR-V22-P1-T01-001",
+    "status": "PASS"
+  },
+  "production_validation": {
+    "authority_limits": {
+      "distance_to_gr_changed": false,
+      "external_action_authorized": false,
+      "external_review_completed": false,
+      "independent_scientific_replication_completed": false,
+      "physics_promotion_authorized": false,
+      "publication_authorized": false,
+      "repository_split_authorized": false,
+      "scientific_status_changed": false
+    },
+    "fixtures": {
+      "authority_limits": {
+        "fixture_pass_changes_distance_to_gr": false,
+        "fixture_pass_is_external_review": false,
+        "fixture_pass_is_science_evidence": false
+      },
+      "failed_case_ids": [],
+      "fixture_case_count": 15,
+      "fixture_failure_count": 0,
+      "fixture_pass_count": 15,
+      "fixture_schema_id": "v22_cross_track_promotion_fixture_suite_v1",
+      "results": [
+        {
+          "actual_valid": true,
+          "case_id": "valid_track_a_scorecard",
+          "errors": [],
+          "expectation_met": true,
+          "expected_errors": [],
+          "expected_valid": true,
+          "kind": "scorecard"
+        },
+        {
+          "actual_valid": true,
+          "case_id": "valid_track_b_scorecard",
+          "errors": [],
+          "expectation_met": true,
+          "expected_errors": [],
+          "expected_valid": true,
+          "kind": "scorecard"
+        },
+        {
+          "actual_valid": true,
+          "case_id": "valid_track_c_scorecard",
+          "errors": [],
+          "expectation_met": true,
+          "expected_errors": [],
+          "expected_valid": true,
+          "kind": "scorecard"
+        },
+        {
+          "actual_valid": true,
+          "case_id": "valid_shared_control_scorecard",
+          "errors": [],
+          "expectation_met": true,
+          "expected_errors": [],
+          "expected_valid": true,
+          "kind": "scorecard"
+        },
+        {
+          "actual_valid": true,
+          "case_id": "valid_nonpromotional_cross_track_reference",
+          "errors": [],
+          "expectation_met": true,
+          "expected_errors": [],
+          "expected_valid": true,
+          "kind": "cross_track_reference"
+        },
+        {
+          "actual_valid": false,
+          "case_id": "reject_ambiguous_primary_assignment",
+          "errors": [
+            "assignment_primary_track_not_exactly_one"
+          ],
+          "expectation_met": true,
+          "expected_errors": [
+            "assignment_primary_track_not_exactly_one"
+          ],
+          "expected_valid": false,
+          "kind": "assignment"
+        },
+        {
+          "actual_valid": false,
+          "case_id": "reject_track_a_distance_to_gr_promotion",
+          "errors": [
+            "track_a_distance_to_gr_effect_forbidden"
+          ],
+          "expectation_met": true,
+          "expected_errors": [
+            "track_a_distance_to_gr_effect_forbidden"
+          ],
+          "expected_valid": false,
+          "kind": "scorecard"
+        },
+        {
+          "actual_valid": false,
+          "case_id": "reject_track_c_distance_to_gr_promotion",
+          "errors": [
+            "track_c_distance_to_gr_effect_forbidden"
+          ],
+          "expectation_met": true,
+          "expected_errors": [
+            "track_c_distance_to_gr_effect_forbidden"
+          ],
+          "expected_valid": false,
+          "kind": "scorecard"
+        },
+        {
+          "actual_valid": false,
+          "case_id": "reject_track_b_interpretive_gate_evidence",
+          "errors": [
+            "track_b_forbidden_gate_evidence:track_a_interpretive_coherence"
+          ],
+          "expectation_met": true,
+          "expected_errors": [
+            "track_b_forbidden_gate_evidence:track_a_interpretive_coherence"
+          ],
+          "expected_valid": false,
+          "kind": "scorecard"
+        },
+        {
+          "actual_valid": false,
+          "case_id": "reject_track_b_workflow_pass_gate_evidence",
+          "errors": [
+            "track_b_forbidden_gate_evidence:workflow_pass"
+          ],
+          "expectation_met": true,
+          "expected_errors": [
+            "track_b_forbidden_gate_evidence:workflow_pass"
+          ],
+          "expected_valid": false,
+          "kind": "scorecard"
+        },
+        {
+          "actual_valid": false,
+          "case_id": "reject_track_b_validator_pass_gate_evidence",
+          "errors": [
+            "track_b_forbidden_gate_evidence:validator_pass"
+          ],
+          "expectation_met": true,
+          "expected_errors": [
+            "track_b_forbidden_gate_evidence:validator_pass"
+          ],
+          "expected_valid": false,
+          "kind": "scorecard"
+        },
+        {
+          "actual_valid": false,
+          "case_id": "reject_cross_track_evidence_promotion",
+          "errors": [
+            "cross_track_promotion_forbidden:evidence_credit"
+          ],
+          "expectation_met": true,
+          "expected_errors": [
+            "cross_track_promotion_forbidden:evidence_credit"
+          ],
+          "expected_valid": false,
+          "kind": "cross_track_reference"
+        },
+        {
+          "actual_valid": false,
+          "case_id": "reject_double_counted_resource_event",
+          "errors": [
+            "resource_event_primary_cost_center_not_exactly_one:EVT-V22-001"
+          ],
+          "expectation_met": true,
+          "expected_errors": [
+            "resource_event_primary_cost_center_not_exactly_one:EVT-V22-001"
+          ],
+          "expected_valid": false,
+          "kind": "resource_events"
+        },
+        {
+          "actual_valid": false,
+          "case_id": "reject_blended_publication_lane",
+          "errors": [
+            "publication_summary_blended_lane_forbidden",
+            "publication_summary_claim_merge_forbidden",
+            "publication_summary_separate_lanes_not_preserved"
+          ],
+          "expectation_met": true,
+          "expected_errors": [
+            "publication_summary_blended_lane_forbidden",
+            "publication_summary_claim_merge_forbidden",
+            "publication_summary_separate_lanes_not_preserved"
+          ],
+          "expected_valid": false,
+          "kind": "publication_summary"
+        },
+        {
+          "actual_valid": false,
+          "case_id": "reject_shared_control_gate_verdict",
+          "errors": [
+            "protected_action_human_authority_missing:gate_verdict",
+            "protected_action_track_forbidden:gate_verdict"
+          ],
+          "expectation_met": true,
+          "expected_errors": [
+            "protected_action_human_authority_missing:gate_verdict",
+            "protected_action_track_forbidden:gate_verdict"
+          ],
+          "expected_valid": false,
+          "kind": "protected_action"
+        }
+      ],
+      "schema_id": "v22_track_governance_fixture_validation_v1",
+      "status": "PASS"
+    },
+    "governance": {
+      "assignment_count": 40,
+      "assignment_counts": {
+        "shared_control": 14,
+        "track_a": 1,
+        "track_b": 22,
+        "track_c": 3
+      },
+      "authority_limits": {
+        "distance_to_gr_changed": false,
+        "external_action_authorized": false,
+        "external_review_completed": false,
+        "independent_scientific_replication_completed": false,
+        "physics_promotion_authorized": false,
+        "publication_authorized": false,
+        "repository_split_authorized": false,
+        "scientific_status_changed": false
+      },
+      "checks": [
+        {
+          "check_id": "assignment_manifest",
+          "errors": [],
+          "status": "PASS"
+        },
+        {
+          "check_id": "authority_matrix",
+          "errors": [],
+          "status": "PASS"
+        },
+        {
+          "check_id": "scorecard_separation",
+          "errors": [],
+          "status": "PASS"
+        },
+        {
+          "check_id": "budget_separation",
+          "errors": [],
+          "status": "PASS"
+        },
+        {
+          "check_id": "cross_track_schema",
+          "errors": [],
+          "status": "PASS"
+        },
+        {
+          "check_id": "repository_separation_decision",
+          "errors": [],
+          "status": "PASS"
+        },
+        {
+          "check_id": "charter_contract",
+          "errors": [],
+          "status": "PASS"
+        }
+      ],
+      "dashboard_ids": [
+        "v22_shared_control_dashboard_v1",
+        "v22_track_a_dashboard_v1",
+        "v22_track_b_dashboard_v1",
+        "v22_track_c_dashboard_v1"
+      ],
+      "errors": [],
+      "metric_namespaces": [
+        "v22.shared_control",
+        "v22.track_a",
+        "v22.track_b",
+        "v22.track_c"
+      ],
+      "plan_id": "recommendations_implementation_plan_continue_task-v22",
+      "plan_task_id": "P1-T01",
+      "publication_lanes": [
+        "shared_control_status_only",
+        "track_a_interpretation_paper_d",
+        "track_b_papers_a_b_e_and_conditional_source_derived_gr",
+        "track_c_methodology_paper_c"
+      ],
+      "repository_decision": "retain_monorepo",
+      "resource_dimensions": [
+        "task_count",
+        "elapsed_effort",
+        "compute",
+        "financial_cost"
+      ],
+      "schema_id": "v22_track_governance_validation_v1",
+      "scorecard_schema_count": 4,
+      "status": "PASS"
+    },
+    "schema_id": "v22_p1_t01_combined_validation_v1",
+    "status": "PASS"
+  },
+  "schema_id": "v22_p1_t01_three_track_validation_v1",
+  "source_hashes": [
+    {
+      "path": "research_control/design/v22_three_track_charter_v1.md",
+      "sha256": "e5bd43ecd33be61c0f026b1836e414084b9274c3f3867516a7ae48581cb8831d"
+    },
+    {
+      "path": "research_control/design/v22_track_authority_matrix_v1.yaml",
+      "sha256": "f836952db7d9137c5ff3d383ccafffb6c93d7f692dc615834e23b7efe848b983"
+    },
+    {
+      "path": "research_control/design/v22_plan_task_track_assignments_v1.yaml",
+      "sha256": "d0054c9754667e0a7296b08ddc3567acb8ddce643e27305e176951c810c35640"
+    },
+    {
+      "path": "research_control/design/v22_track_budget_allocation_v1.yaml",
+      "sha256": "dc8d3166e863143dcf2c52924503a904c018e70be94bd149901d3bc6de621dbe"
+    },
+    {
+      "path": "research_control/design/v22_cross_track_reference_schema_v1.yaml",
+      "sha256": "0793571b54313e4eaacc9bf545dfc364f3fc2faa98296a125a2edb1ceed8f109"
+    },
+    {
+      "path": "research_control/design/v22_repository_separation_decision_v1.yaml",
+      "sha256": "44871d2a176560af48422407b54c03e9daf2f27706c1a82da52825c803674425"
+    },
+    {
+      "path": "research_control/design/v22_recommendation_backlog.yaml",
+      "sha256": "7a8d92ea6cadec351241310185805b16eaa74c6effc60a967e5df08114c3a163"
+    },
+    {
+      "path": "research_control/design/v22_track_a_scorecard_schema_v1.yaml",
+      "sha256": "e109cf144f201d0ecc9d15a0efc1f6d9a132490dd3798da92efa4b1eca1e78df"
+    },
+    {
+      "path": "research_control/design/v22_track_b_scorecard_schema_v1.yaml",
+      "sha256": "9c207a3a748c057f7f5c66dc9e79a984677ec081796478bc7c1e5b3a306b6f5e"
+    },
+    {
+      "path": "research_control/design/v22_track_c_scorecard_schema_v1.yaml",
+      "sha256": "ea20a9a6cf990d0eeb907d10cff71dfb8ddbbcfa494f4a4d4fa5cc43e24fde5e"
+    },
+    {
+      "path": "research_control/design/v22_shared_control_scorecard_schema_v1.yaml",
+      "sha256": "3a21862e8f4814eabb68f369c24abf1896b5748c151838e45e82d1afd2ab52f1"
+    },
+    {
+      "path": "research_control/tasks/RT-20260809-001/artifacts/fixtures/v22_cross_track_promotion_cases.yaml",
+      "sha256": "6cbd4e13dd2e72765e036ecb52c0a7fdaed4f489989335b460ed7c9006479cf0"
+    },
+    {
+      "path": "scripts/research_control/v22_track_governance.py",
+      "sha256": "e1366b51bb887b86a946e5b8322d67087a1f86d87854c7fdeef532d87b4d2eee"
+    },
+    {
+      "path": "tests/test_v22_track_governance.py",
+      "sha256": "93e3ad21eb7dd37dd2fda03db0b100dcc6828e6ea470eedbfad8d51a7ccf7010"
+    }
+  ],
+  "status": "PASS",
+  "task_id": "RT-20260809-001"
+}

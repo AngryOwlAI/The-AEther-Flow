@@ -1,0 +1,120 @@
+schema_id: "v22_track_authority_matrix_v1"
+status: "draft/control"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P1-T01"
+assignment_classes:
+  - "track_a"
+  - "track_b"
+  - "track_c"
+  - "shared_control"
+assignment_rule: "exactly_one_primary_track_or_shared_control"
+tracks:
+  track_a:
+    label: "Exact-GR interpretation"
+    routing_owner: "director-of-research@0.3.0"
+    content_authority: "canonical_source_owner_and_separately_authorized_track_a_review"
+    allowed_claim_classes:
+      - "target_side_exact_gr_agreement"
+      - "interpretive_coherence"
+      - "observer_relative_kinematics"
+      - "philosophy_and_1_plus_3_comparison"
+    forbidden_claim_classes:
+      - "source_derivation"
+      - "novel_physical_prediction"
+      - "gate_b_credit"
+      - "ontology_confirmation"
+    distance_to_gr_effect: "none"
+    may_supply_gate_evidence: false
+    publication_lane_id: "track_a_interpretation_paper_d"
+  track_b:
+    label: "First-principles source reconstruction"
+    routing_owner: "director-of-research@0.3.0"
+    protected_gate_owner: "gate-chair@0.1.0_under_exact_human_authority_only"
+    allowed_claim_classes:
+      - "source_side_theorem"
+      - "explicit_source_candidate"
+      - "robustness_or_countermodel_result"
+      - "scoped_obstruction"
+      - "protected_gate_result_when_separately_authorized"
+    forbidden_gate_evidence_classes:
+      - "track_a_interpretive_coherence"
+      - "target_side_exact_gr_agreement"
+      - "track_c_methodology_success"
+      - "workflow_pass"
+      - "validator_pass"
+      - "checkpoint_pass"
+      - "control_traceability"
+    distance_to_gr_effect: "conditional_authorized_science_only"
+    may_supply_gate_evidence: true
+    gate_evidence_condition: "source_grounded_track_b_evidence_plus_applicable_protected_gate"
+    publication_lane_id: "track_b_papers_a_b_e_and_conditional_source_derived_gr"
+  track_c:
+    label: "AI research-operating-system evaluation"
+    routing_owner: "project-system-director@0.2.0"
+    result_authority: "task_selected_methodology_role_and_separately_authorized_adjudication"
+    allowed_claim_classes:
+      - "descriptive_methodology_result"
+      - "causal_methodology_result_after_preregistration_and_blinded_adjudication"
+      - "efficiency_and_cost_measurement"
+      - "reproducibility_measurement"
+    forbidden_claim_classes:
+      - "physics_truth"
+      - "better_physics_from_workflow_success"
+      - "gate_credit"
+      - "source_derivation"
+    distance_to_gr_effect: "none"
+    may_supply_gate_evidence: false
+    publication_lane_id: "track_c_methodology_paper_c"
+  shared_control:
+    label: "Shared routing validation release and synthesis control"
+    routing_owner: "project-system-director@0.2.0"
+    execution_owner: "task_selected_project_control_role"
+    allowed_claim_classes:
+      - "operational_conformance"
+      - "traceability"
+      - "freshness"
+      - "control_cost"
+      - "internal_reproducibility"
+    forbidden_claim_classes:
+      - "scientific_truth"
+      - "gate_credit"
+      - "source_derivation"
+      - "methodology_superiority"
+      - "external_review_or_replication"
+    distance_to_gr_effect: "none"
+    may_supply_gate_evidence: false
+    publication_lane_id: "shared_control_status_only"
+protected_actions:
+  distance_to_gr_update:
+    permitted_primary_track: "track_b"
+    additional_authority_required: true
+    nonpermitted_tracks:
+      - "track_a"
+      - "track_c"
+      - "shared_control"
+  gate_verdict:
+    permitted_primary_track: "track_b"
+    requires_exact_human_gate: true
+    workflow_or_interpretation_substitution_forbidden: true
+  repository_split:
+    permitted_primary_track: "shared_control"
+    requires_exact_human_authority: true
+    current_authorized: false
+  publication_or_release:
+    requires_exact_human_authority: true
+    current_authorized: false
+cross_track_link_defaults:
+  authority_effect: "none"
+  evidence_credit: "none"
+  distance_to_gr_effect: "none"
+  gate_effect: "none"
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  external_review_completed: false
+  independent_replication_completed: false
+  repository_split_authorized: false
+  publication_authorized: false
+  external_action_authorized: false

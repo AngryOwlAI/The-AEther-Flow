@@ -483,7 +483,7 @@ items:
     tests, and independent process-integrity review.
   stop_conditions: Shared metric with ambiguous authority, double-counted budget,
     or publication language that blends the three programs.
-  implementation_status: pending
+  implementation_status: completed_checkpoint_pending
   expected_result_kind: implemented_and_validated_or_precisely_blocked
   requires_human_gate: false
   dependency_independent_after_other_human_gates: true
@@ -497,9 +497,17 @@ items:
   proof_authority: false
 - plan_task_id: P1-T02
   phase_id: P1
+  work_kind: audit_or_review
+  task_class: science
   title: Rewrite the scientific objective and complete the primitive-debt audit
   track: B
   owner: ontology formalizer with smuggling auditor
+  role_family: ontology-formalizer@0.2.0
+  controlling_launcher: continue-research-goal@v4
+  worker_skill: continue-research
+  route_label: ordinary-research-packet
+  target_derivation_milestone: source_ontology
+  milestone_burden: Explicit primitive debt source-target separation and unresolved Phi_src semantics; audit and formalize the source-only boundary without ontology adoption.
   declared_coverage_ids:
   - V22-R03
   - S2
@@ -531,6 +539,10 @@ items:
   stop_conditions: Hidden target atlas/metric, untyped derivative or measure, or any
     attempt to discharge debt through terminology alone.
   implementation_status: pending
+  expected_result_kind: audit_verdict_or_precise_repair
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  allow_scope_expansion: false
   requires_separate_agentjob: true
   max_outer_agentjobs_per_invocation: 1
   automatic_execution_authorized: false

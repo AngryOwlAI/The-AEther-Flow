@@ -1,0 +1,74 @@
+schema_id: "v22_track_budget_allocation_v1"
+status: "draft/control"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P1-T01"
+total_plan_task_count: 40
+resource_dimensions:
+  - "task_count"
+  - "elapsed_effort"
+  - "compute"
+  - "financial_cost"
+allocation_rule: "each_task_and_resource_event_has_exactly_one_primary_cost_center"
+cross_track_reference_reallocates_cost: false
+missing_measurement_representation: "not_measured_never_zero"
+cost_centers:
+  track_a:
+    planned_task_count: 1
+    elapsed_effort:
+      status: "not_measured"
+      unit: "seconds"
+    compute:
+      status: "not_measured"
+      unit: "provider_native_units"
+    financial_cost:
+      status: "not_measured"
+      currency: "USD"
+    dashboard_id: "v22_track_a_dashboard_v1"
+  track_b:
+    planned_task_count: 22
+    elapsed_effort:
+      status: "not_measured"
+      unit: "seconds"
+    compute:
+      status: "not_measured"
+      unit: "provider_native_units"
+    financial_cost:
+      status: "not_measured"
+      currency: "USD"
+    dashboard_id: "v22_track_b_dashboard_v1"
+  track_c:
+    planned_task_count: 3
+    elapsed_effort:
+      status: "not_measured"
+      unit: "seconds"
+    compute:
+      status: "not_measured"
+      unit: "provider_native_units"
+    financial_cost:
+      status: "not_measured"
+      currency: "USD"
+    dashboard_id: "v22_track_c_dashboard_v1"
+  shared_control:
+    planned_task_count: 14
+    elapsed_effort:
+      status: "not_measured"
+      unit: "seconds"
+    compute:
+      status: "not_measured"
+      unit: "provider_native_units"
+    financial_cost:
+      status: "not_measured"
+      currency: "USD"
+    dashboard_id: "v22_shared_control_dashboard_v1"
+integrity_rules:
+  planned_task_count_sum_must_equal: 40
+  task_count_credit_per_package: 1
+  duplicate_cost_center_credit_forbidden: true
+  duplicate_resource_event_id_forbidden: true
+  aggregate_may_restate_but_not_reallocate: true
+  track_a_or_c_or_shared_control_physics_credit_forbidden: true
+authority_limits:
+  budget_is_science_evidence: false
+  budget_changes_distance_to_gr: false
+  unmeasured_means_zero: false
+  allocation_authorizes_spending: false

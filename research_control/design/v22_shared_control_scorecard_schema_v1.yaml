@@ -1,0 +1,49 @@
+schema_id: "v22_shared_control_scorecard_schema_v1"
+status: "draft/control"
+track_id: "shared_control"
+metric_namespace: "v22.shared_control"
+dashboard_id: "v22_shared_control_dashboard_v1"
+authority_owner: "project-system-director@0.2.0_with_task_selected_project_control_role"
+publication_lane_id: "shared_control_status_only"
+required_fields:
+  - "scorecard_id"
+  - "track_id"
+  - "as_of"
+  - "assignment_coverage"
+  - "control_conformance"
+  - "provenance_and_freshness"
+  - "control_cost"
+  - "resource_accounting"
+  - "evidence_refs"
+  - "publication_lane"
+  - "authority_limits"
+resource_fields:
+  - "task_count"
+  - "elapsed_effort"
+  - "compute"
+  - "financial_cost"
+success_measure_ids:
+  - "routing_conformance"
+  - "traceability_coverage"
+  - "generated_freshness"
+  - "internal_reproducibility"
+  - "control_cost_ratio"
+failure_measure_ids:
+  - "ambiguous_authority_count"
+  - "double_counted_resource_count"
+  - "stale_projection_count"
+  - "unauthorized_external_action_count"
+forbidden_promotions:
+  - "scientific_truth"
+  - "source_derivation"
+  - "gate_credit"
+  - "distance_to_gr_change"
+  - "methodology_superiority"
+  - "external_review_or_replication"
+distance_to_gr_effect_policy: "forbidden"
+cross_track_link_policy: "typed_routing_status_or_dependency_only"
+authority_limits:
+  control_pass_is_physics: false
+  internal_reproducibility_is_independent_replication: false
+  scorecard_can_issue_gate_verdict: false
+  scorecard_can_authorize_external_action: false

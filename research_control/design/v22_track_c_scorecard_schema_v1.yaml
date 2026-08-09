@@ -1,0 +1,52 @@
+schema_id: "v22_track_c_scorecard_schema_v1"
+status: "draft/control"
+track_id: "track_c"
+metric_namespace: "v22.track_c"
+dashboard_id: "v22_track_c_dashboard_v1"
+authority_owner: "project-system-director@0.2.0_for_routing_only"
+publication_lane_id: "track_c_methodology_paper_c"
+required_fields:
+  - "scorecard_id"
+  - "track_id"
+  - "as_of"
+  - "assignment_coverage"
+  - "descriptive_results"
+  - "causal_results"
+  - "success_measures"
+  - "failure_measures"
+  - "resource_accounting"
+  - "evidence_refs"
+  - "publication_lane"
+  - "authority_limits"
+resource_fields:
+  - "task_count"
+  - "elapsed_effort"
+  - "compute"
+  - "financial_cost"
+success_measure_ids:
+  - "mathematical_correctness"
+  - "invalid_claim_rate"
+  - "calibration"
+  - "counterexample_discovery"
+  - "defect_recall"
+  - "false_positive_rate"
+  - "reproducibility"
+  - "cost_efficiency"
+failure_measure_ids:
+  - "preregistration_deviation_count"
+  - "blinding_failure_count"
+  - "unreproduced_analysis_count"
+  - "causal_identification_failure_count"
+causal_claim_condition: "preregistered_comparative_design_plus_blinded_adjudication_plus_supported_analysis"
+forbidden_promotions:
+  - "physics_truth"
+  - "gate_credit"
+  - "distance_to_gr_change"
+  - "better_physics_from_workflow_success"
+distance_to_gr_effect_policy: "forbidden"
+cross_track_link_policy: "typed_nonpromotional_only"
+authority_limits:
+  descriptive_result_is_causal: false
+  methodology_success_is_physics: false
+  gate_evidence_created_by_scorecard: false
+  publication_authorized_by_scorecard: false

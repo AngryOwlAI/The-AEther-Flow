@@ -1,0 +1,68 @@
+schema_id: "v22_plan_task_track_assignments_v1"
+status: "draft/control"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P1-T01"
+assignment_rule: "exactly_one_primary_track_or_shared_control"
+allowed_primary_tracks:
+  - "track_a"
+  - "track_b"
+  - "track_c"
+  - "shared_control"
+expected_package_count: 40
+assignments:
+  - {plan_task_id: "P0-T01", primary_track: "shared_control", control_class: "terminal_and_intake_control"}
+  - {plan_task_id: "P0-T02", primary_track: "shared_control", control_class: "release_control"}
+  - {plan_task_id: "P0-T03", primary_track: "shared_control", control_class: "plan_registration"}
+  - {plan_task_id: "P1-T01", primary_track: "shared_control", control_class: "three_track_governance"}
+  - {plan_task_id: "P1-T02", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P1-T03", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P1-T04", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P2-T01", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P2-T02", primary_track: "track_b", control_class: "publication_support_with_track_b_primary"}
+  - {plan_task_id: "P2-T03", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P2-T04", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P3-T01", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P3-T02", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P3-T03", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P3-T04", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P4-T01", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P4-T02", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P4-T03", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P4-T04", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P4-T05", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P5-T01", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P5-T02", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P5-T03", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P6-T01", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P6-T02", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P6-T03", primary_track: "track_b", control_class: "none"}
+  - {plan_task_id: "P7-T01", primary_track: "track_c", control_class: "none"}
+  - {plan_task_id: "P7-T02", primary_track: "track_c", control_class: "none"}
+  - {plan_task_id: "P7-T03", primary_track: "track_c", control_class: "none"}
+  - {plan_task_id: "P8-T01", primary_track: "shared_control", control_class: "project_system"}
+  - {plan_task_id: "P8-T02", primary_track: "shared_control", control_class: "project_system"}
+  - {plan_task_id: "P8-T03", primary_track: "shared_control", control_class: "project_system"}
+  - {plan_task_id: "P8-T04", primary_track: "shared_control", control_class: "project_system"}
+  - {plan_task_id: "P9-T01", primary_track: "track_a", control_class: "shared_public_control_support"}
+  - {plan_task_id: "P9-T02", primary_track: "shared_control", control_class: "separate_cross_track_external_review_packets", participating_tracks: ["track_a", "track_b", "track_c"]}
+  - {plan_task_id: "P9-T03", primary_track: "shared_control", control_class: "separate_cross_track_publication_readiness", participating_tracks: ["track_a", "track_b", "track_c"]}
+  - {plan_task_id: "P9-T04", primary_track: "shared_control", control_class: "publication_action_control"}
+  - {plan_task_id: "P10-T01", primary_track: "shared_control", control_class: "coverage_audit"}
+  - {plan_task_id: "P10-T02", primary_track: "shared_control", control_class: "separate_scorecard_synthesis", participating_tracks: ["track_a", "track_b", "track_c"]}
+  - {plan_task_id: "P10-T03", primary_track: "shared_control", control_class: "terminal_control"}
+expected_primary_track_counts:
+  track_a: 1
+  track_b: 22
+  track_c: 3
+  shared_control: 14
+integrity_rules:
+  duplicate_plan_task_id_forbidden: true
+  missing_plan_task_id_forbidden: true
+  multiple_primary_tracks_forbidden: true
+  participating_track_creates_primary_credit: false
+  control_class_creates_second_cost_center: false
+authority_limits:
+  assignment_is_completion: false
+  assignment_is_science_evidence: false
+  assignment_changes_distance_to_gr: false
+  assignment_authorizes_external_action: false

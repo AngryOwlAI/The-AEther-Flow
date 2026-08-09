@@ -1,0 +1,252 @@
+schema_id: "v22_cross_track_promotion_fixture_suite_v1"
+status: "draft/control"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P1-T01"
+purpose: "Exercise positive separation cases and prohibited assignment, evidence, authority, budget, and publication promotion cases."
+cases:
+  - case_id: "valid_track_a_scorecard"
+    kind: "scorecard"
+    expected_valid: true
+    expected_errors: []
+    payload:
+      track_id: "track_a"
+      metric_namespace: "v22.track_a"
+      dashboard_id: "v22_track_a_dashboard_v1"
+      publication_lane_id: "track_a_interpretation_paper_d"
+      distance_to_gr_effect: "none"
+      gate_evidence_classes: []
+      claim_classes: ["interpretive_coherence"]
+      resource_accounting:
+        task_count: 1
+        elapsed_effort: "not_measured"
+        compute: "not_measured"
+        financial_cost: "not_measured"
+      gate_verdict_issued: false
+      publication_authorized: false
+
+  - case_id: "valid_track_b_scorecard"
+    kind: "scorecard"
+    expected_valid: true
+    expected_errors: []
+    payload:
+      track_id: "track_b"
+      metric_namespace: "v22.track_b"
+      dashboard_id: "v22_track_b_dashboard_v1"
+      publication_lane_id: "track_b_papers_a_b_e_and_conditional_source_derived_gr"
+      distance_to_gr_effect: "none"
+      gate_evidence_classes: ["source_side_theorem"]
+      claim_classes: ["source_side_theorem"]
+      resource_accounting:
+        task_count: 22
+        elapsed_effort: "not_measured"
+        compute: "not_measured"
+        financial_cost: "not_measured"
+      gate_verdict_issued: false
+      publication_authorized: false
+
+  - case_id: "valid_track_c_scorecard"
+    kind: "scorecard"
+    expected_valid: true
+    expected_errors: []
+    payload:
+      track_id: "track_c"
+      metric_namespace: "v22.track_c"
+      dashboard_id: "v22_track_c_dashboard_v1"
+      publication_lane_id: "track_c_methodology_paper_c"
+      distance_to_gr_effect: "none"
+      gate_evidence_classes: []
+      claim_classes: ["descriptive_methodology_result"]
+      resource_accounting:
+        task_count: 3
+        elapsed_effort: "not_measured"
+        compute: "not_measured"
+        financial_cost: "not_measured"
+      gate_verdict_issued: false
+      publication_authorized: false
+
+  - case_id: "valid_shared_control_scorecard"
+    kind: "scorecard"
+    expected_valid: true
+    expected_errors: []
+    payload:
+      track_id: "shared_control"
+      metric_namespace: "v22.shared_control"
+      dashboard_id: "v22_shared_control_dashboard_v1"
+      publication_lane_id: "shared_control_status_only"
+      distance_to_gr_effect: "none"
+      gate_evidence_classes: []
+      claim_classes: ["operational_conformance"]
+      resource_accounting:
+        task_count: 14
+        elapsed_effort: "not_measured"
+        compute: "not_measured"
+        financial_cost: "not_measured"
+      gate_verdict_issued: false
+      publication_authorized: false
+
+  - case_id: "valid_nonpromotional_cross_track_reference"
+    kind: "cross_track_reference"
+    expected_valid: true
+    expected_errors: []
+    payload:
+      link_id: "XTR-V22-001"
+      source_track: "track_a"
+      target_track: "track_b"
+      relation_type: "context_reference"
+      source_path: "research_control/design/v22_three_track_charter_v1.md"
+      source_sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+      consumer_path: "research_control/tasks/RT-20260809-001/00_TASK.yaml"
+      authority_effect: "none"
+      evidence_credit: "none"
+      distance_to_gr_effect: "none"
+      gate_effect: "none"
+      resource_reattribution: "none"
+
+  - case_id: "reject_ambiguous_primary_assignment"
+    kind: "assignment"
+    expected_valid: false
+    expected_errors: ["assignment_primary_track_not_exactly_one"]
+    payload:
+      plan_task_id: "P1-T02"
+      primary_tracks: ["track_a", "track_b"]
+
+  - case_id: "reject_track_a_distance_to_gr_promotion"
+    kind: "scorecard"
+    expected_valid: false
+    expected_errors: ["track_a_distance_to_gr_effect_forbidden"]
+    payload:
+      track_id: "track_a"
+      metric_namespace: "v22.track_a"
+      dashboard_id: "v22_track_a_dashboard_v1"
+      publication_lane_id: "track_a_interpretation_paper_d"
+      distance_to_gr_effect: "reduced"
+      gate_evidence_classes: []
+      claim_classes: []
+      resource_accounting: {task_count: 1, elapsed_effort: "not_measured", compute: "not_measured", financial_cost: "not_measured"}
+      gate_verdict_issued: false
+      publication_authorized: false
+
+  - case_id: "reject_track_c_distance_to_gr_promotion"
+    kind: "scorecard"
+    expected_valid: false
+    expected_errors: ["track_c_distance_to_gr_effect_forbidden"]
+    payload:
+      track_id: "track_c"
+      metric_namespace: "v22.track_c"
+      dashboard_id: "v22_track_c_dashboard_v1"
+      publication_lane_id: "track_c_methodology_paper_c"
+      distance_to_gr_effect: "reduced"
+      gate_evidence_classes: []
+      claim_classes: []
+      resource_accounting: {task_count: 3, elapsed_effort: "not_measured", compute: "not_measured", financial_cost: "not_measured"}
+      gate_verdict_issued: false
+      publication_authorized: false
+
+  - case_id: "reject_track_b_interpretive_gate_evidence"
+    kind: "scorecard"
+    expected_valid: false
+    expected_errors: ["track_b_forbidden_gate_evidence:track_a_interpretive_coherence"]
+    payload:
+      track_id: "track_b"
+      metric_namespace: "v22.track_b"
+      dashboard_id: "v22_track_b_dashboard_v1"
+      publication_lane_id: "track_b_papers_a_b_e_and_conditional_source_derived_gr"
+      distance_to_gr_effect: "none"
+      gate_evidence_classes: ["track_a_interpretive_coherence"]
+      claim_classes: []
+      resource_accounting: {task_count: 22, elapsed_effort: "not_measured", compute: "not_measured", financial_cost: "not_measured"}
+      gate_verdict_issued: false
+      publication_authorized: false
+
+  - case_id: "reject_track_b_workflow_pass_gate_evidence"
+    kind: "scorecard"
+    expected_valid: false
+    expected_errors: ["track_b_forbidden_gate_evidence:workflow_pass"]
+    payload:
+      track_id: "track_b"
+      metric_namespace: "v22.track_b"
+      dashboard_id: "v22_track_b_dashboard_v1"
+      publication_lane_id: "track_b_papers_a_b_e_and_conditional_source_derived_gr"
+      distance_to_gr_effect: "none"
+      gate_evidence_classes: ["workflow_pass"]
+      claim_classes: []
+      resource_accounting: {task_count: 22, elapsed_effort: "not_measured", compute: "not_measured", financial_cost: "not_measured"}
+      gate_verdict_issued: false
+      publication_authorized: false
+
+  - case_id: "reject_track_b_validator_pass_gate_evidence"
+    kind: "scorecard"
+    expected_valid: false
+    expected_errors: ["track_b_forbidden_gate_evidence:validator_pass"]
+    payload:
+      track_id: "track_b"
+      metric_namespace: "v22.track_b"
+      dashboard_id: "v22_track_b_dashboard_v1"
+      publication_lane_id: "track_b_papers_a_b_e_and_conditional_source_derived_gr"
+      distance_to_gr_effect: "none"
+      gate_evidence_classes: ["validator_pass"]
+      claim_classes: []
+      resource_accounting: {task_count: 22, elapsed_effort: "not_measured", compute: "not_measured", financial_cost: "not_measured"}
+      gate_verdict_issued: false
+      publication_authorized: false
+
+  - case_id: "reject_cross_track_evidence_promotion"
+    kind: "cross_track_reference"
+    expected_valid: false
+    expected_errors: ["cross_track_promotion_forbidden:evidence_credit"]
+    payload:
+      link_id: "XTR-V22-002"
+      source_track: "track_a"
+      target_track: "track_b"
+      relation_type: "context_reference"
+      source_path: "research_control/design/v22_three_track_charter_v1.md"
+      source_sha256: "0000000000000000000000000000000000000000000000000000000000000000"
+      consumer_path: "research_control/tasks/RT-20260809-001/00_TASK.yaml"
+      authority_effect: "none"
+      evidence_credit: "gate_credit"
+      distance_to_gr_effect: "none"
+      gate_effect: "none"
+      resource_reattribution: "none"
+
+  - case_id: "reject_double_counted_resource_event"
+    kind: "resource_events"
+    expected_valid: false
+    expected_errors: ["resource_event_primary_cost_center_not_exactly_one:EVT-V22-001"]
+    payload:
+      events:
+        - resource_event_id: "EVT-V22-001"
+          primary_cost_centers: ["track_b", "shared_control"]
+          dimension: "elapsed_effort"
+
+  - case_id: "reject_blended_publication_lane"
+    kind: "publication_summary"
+    expected_valid: false
+    expected_errors:
+      - "publication_summary_separate_lanes_not_preserved"
+      - "publication_summary_claim_merge_forbidden"
+      - "publication_summary_blended_lane_forbidden"
+    payload:
+      preserves_separate_lanes: false
+      claim_merge: true
+      blended_publication_lane_id: "combined_a_b_c_success"
+      entries:
+        - {track_id: "track_a", publication_lane_id: "track_a_interpretation_paper_d"}
+        - {track_id: "track_b", publication_lane_id: "track_b_papers_a_b_e_and_conditional_source_derived_gr"}
+        - {track_id: "track_c", publication_lane_id: "track_c_methodology_paper_c"}
+
+  - case_id: "reject_shared_control_gate_verdict"
+    kind: "protected_action"
+    expected_valid: false
+    expected_errors:
+      - "protected_action_track_forbidden:gate_verdict"
+      - "protected_action_human_authority_missing:gate_verdict"
+    payload:
+      requested: true
+      action: "gate_verdict"
+      primary_track: "shared_control"
+      exact_human_authority_present: false
+authority_limits:
+  fixture_pass_is_science_evidence: false
+  fixture_pass_changes_distance_to_gr: false
+  fixture_pass_is_external_review: false
+  fixture_pass_authorizes_publication_or_repository_split: false

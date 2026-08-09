@@ -860,6 +860,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `wiki/markdown/md-research-control-design-v21-scientific-status-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY` `wiki/markdown/md-research-control-design-v21-task-taxonomy-policy.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V22-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v22-recommendation-backlog-schema.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-V22-THREE-TRACK-CHARTER-V1` `wiki/markdown/md-research-control-design-v22-three-track-charter-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ASSURANCE-POLICY-V1` `wiki/markdown/md-research-control-design-validation-assurance-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `wiki/markdown/md-research-control-design-validation-cache-contract-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1` `wiki/markdown/md-research-control-design-validation-change-family-taxonomy-v1.md`
@@ -1897,6 +1898,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `research_control/design/v21_scientific_status_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY` `research_control/design/v21_task_taxonomy_policy.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V22-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v22_recommendation_backlog_schema.md`
+- `MD-RESEARCH-CONTROL-DESIGN-V22-THREE-TRACK-CHARTER-V1` `research_control/design/v22_three_track_charter_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ASSURANCE-POLICY-V1` `research_control/design/validation_assurance_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `research_control/design/validation_cache_contract_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CHANGE-FAMILY-TAXONOMY-V1` `research_control/design/validation_change_family_taxonomy_v1.md`

@@ -1,0 +1,67 @@
+schema_id: "v22_repository_separation_decision_v1"
+status: "retain_monorepo_pending_measured_trigger_and_human_authority"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P1-T01"
+current_decision: "retain_monorepo"
+decision_scope: "architecture_control_only"
+decision_owner: "human_project_owner_after_project_system_recommendation"
+automatic_split_authorized: false
+appearance_only_split_forbidden: true
+criteria:
+  coupling:
+    question: "Can the proposed repository own canonical sources without frequent cross-repository atomic transactions?"
+    evidence_fields:
+      - "cross_track_canonical_dependency_count"
+      - "atomic_cross_track_transaction_count"
+      - "shared_registry_dependency_count"
+    favorable_split_condition: "measured_low_coupling_with_stable_content_addressed_interfaces"
+  release_cadence:
+    question: "Do tracks require materially different release cycles that the monorepo cannot support without recurring coordination cost?"
+    evidence_fields:
+      - "release_count_by_track"
+      - "cross_track_release_block_count"
+      - "cadence_divergence_observation_window"
+    favorable_split_condition: "persistent_measured_cadence_divergence_with_no_shared_atomic_release_requirement"
+  access:
+    question: "Does a legal security privacy or participant-data boundary require separate access control?"
+    evidence_fields:
+      - "access_boundary_kind"
+      - "affected_paths"
+      - "required_control"
+    favorable_split_condition: "documented_access_boundary_not_safely_enforceable_in_current_repository"
+  maintenance_cost:
+    question: "Is the measured monorepo maintenance cost higher than a provenance-preserving split after migration and ongoing interface costs?"
+    evidence_fields:
+      - "monorepo_maintenance_cost"
+      - "split_migration_cost"
+      - "split_recurring_interface_cost"
+      - "measurement_window"
+    favorable_split_condition: "measured_net_maintenance_benefit_after_migration_and_interface_cost"
+  provenance_preservation:
+    question: "Can hashes dependencies Gate authority and generated-source lineage remain auditable across repositories?"
+    evidence_fields:
+      - "cross_repository_manifest_design"
+      - "content_addressed_dependency_test"
+      - "rollback_plan"
+    favorable_split_condition: "parity_tested_provenance_and_rollback"
+decision_rule:
+  required_before_proposal:
+    - "measured evidence for every applicable criterion"
+    - "provenance preservation passes"
+    - "no required atomic transaction is broken"
+    - "migration and rollback plans exist"
+  sufficient_for_execution: false
+  execution_requires:
+    - "separate human authorization"
+    - "bounded migration AgentJob"
+    - "parity validation"
+    - "rollback readiness"
+current_evidence:
+  measured_criterion_count: 0
+  split_trigger_satisfied: false
+  rationale: "No measured coupling cadence access or maintenance-cost evidence currently justifies a split; track naming or appearance is insufficient."
+authority_limits:
+  repository_split_authorized: false
+  migration_authorized: false
+  external_action_authorized: false
+  science_authority_changed: false

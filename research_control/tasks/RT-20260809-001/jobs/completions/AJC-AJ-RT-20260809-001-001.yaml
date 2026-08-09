@@ -1,0 +1,419 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260809-001-001"
+completion_id: "AJC-AJ-RT-20260809-001-001"
+task_id: "RT-20260809-001"
+task_type: "project_system_v22_p1_t01_three_track_charter_and_separated_scorecards"
+decision_id: "DDR-20260809-001"
+role_id: "project-control-maintainer"
+source_role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260809-001"
+status: "completed"
+created_at: "2026-08-09T00:54:25Z"
+started_at: "2026-08-09T00:54:25Z"
+completed_at: "2026-08-09T01:11:32Z"
+objective: "Implement V22 P1-T01 as an enforceable three-track and shared-control governance boundary with exact assignment, disjoint scorecards and budgets, typed non-promotional cross-track links, repository-separation criteria, fixtures, and internal process-integrity review."
+completion_summary: "P1-T01 now assigns all 40 V22 packages exactly once, separates Track A, Track B, Track C, and shared-control metrics and publication lanes, blocks cross-track promotion and double counting, retains the monorepo pending measured criteria and separate human authority, and selects P1-T02 without executing it."
+objective_result: "implemented_and_validated_v22_p1_t01_three_track_governance"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "completed_precheckpoint"
+work_item_status: "completed_checkpoint_pending"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P1-T01"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_id: "P1-T02"
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260809-001-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_three_track_governance"
+  summary: "Assignment, scorecard, budget, link, and repository-separation controls add no source law, metric, coupling, Einstein equation, benchmark, Gate, review, replication, or completed-derivation evidence."
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+result:
+  status: "PASS_V22_P1_T01_THREE_TRACK_GOVERNANCE"
+  strategy_id: "implement_v22_p1_t01_three_track_charter_v1"
+  source_handoff_id: "handoff-0970"
+  source_handoff_sha256: "deb9d494bd3add5c973cf82135c95f51251d98eb7f676da84807d599dc3d49c4"
+  assignment_count: 40
+  assignment_counts:
+    track_a: 1
+    track_b: 22
+    track_c: 3
+    shared_control: 14
+  scorecard_schema_count: 4
+  disjoint_metric_namespace_count: 4
+  disjoint_dashboard_count: 4
+  disjoint_publication_lane_count: 4
+  resource_dimension_count: 4
+  fixture_case_count: 15
+  fixture_failure_count: 0
+  process_integrity_review_status: "PASS"
+  process_integrity_review_class: "deterministic_process_integrity_independent_rule_path"
+  external_review_completed: false
+  independent_scientific_replication_completed: false
+  current_repository_decision: "retain_monorepo"
+  repository_split_authorized: false
+  p1_t01_executed: true
+  p1_t02_selected: true
+  p1_t02_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260809-001/jobs/AJ-RT-20260809-001-001.yaml"
+    sha256: "ddc394f89163fdf10d99ead9bfee3c6c0af4b785c5b4d6805623c07df05aa895"
+  - path: "research_control/design/v22_three_track_charter_v1.md"
+    sha256: "e5bd43ecd33be61c0f026b1836e414084b9274c3f3867516a7ae48581cb8831d"
+  - path: "research_control/design/v22_plan_task_track_assignments_v1.yaml"
+    sha256: "d0054c9754667e0a7296b08ddc3567acb8ddce643e27305e176951c810c35640"
+  - path: "research_control/design/v22_track_authority_matrix_v1.yaml"
+    sha256: "f836952db7d9137c5ff3d383ccafffb6c93d7f692dc615834e23b7efe848b983"
+  - path: "research_control/design/v22_track_a_scorecard_schema_v1.yaml"
+    sha256: "e109cf144f201d0ecc9d15a0efc1f6d9a132490dd3798da92efa4b1eca1e78df"
+  - path: "research_control/design/v22_track_b_scorecard_schema_v1.yaml"
+    sha256: "9c207a3a748c057f7f5c66dc9e79a984677ec081796478bc7c1e5b3a306b6f5e"
+  - path: "research_control/design/v22_track_c_scorecard_schema_v1.yaml"
+    sha256: "ea20a9a6cf990d0eeb907d10cff71dfb8ddbbcfa494f4a4d4fa5cc43e24fde5e"
+  - path: "research_control/design/v22_shared_control_scorecard_schema_v1.yaml"
+    sha256: "3a21862e8f4814eabb68f369c24abf1896b5748c151838e45e82d1afd2ab52f1"
+  - path: "research_control/design/v22_track_budget_allocation_v1.yaml"
+    sha256: "dc8d3166e863143dcf2c52924503a904c018e70be94bd149901d3bc6de621dbe"
+  - path: "research_control/design/v22_cross_track_reference_schema_v1.yaml"
+    sha256: "0793571b54313e4eaacc9bf545dfc364f3fc2faa98296a125a2edb1ceed8f109"
+  - path: "research_control/design/v22_repository_separation_decision_v1.yaml"
+    sha256: "44871d2a176560af48422407b54c03e9daf2f27706c1a82da52825c803674425"
+  - path: "research_control/design/v22_recommendation_backlog.yaml"
+    sha256: "7a8d92ea6cadec351241310185805b16eaa74c6effc60a967e5df08114c3a163"
+  - path: "scripts/research_control/v22_track_governance.py"
+    sha256: "e1366b51bb887b86a946e5b8322d67087a1f86d87854c7fdeef532d87b4d2eee"
+  - path: "tests/test_v22_track_governance.py"
+    sha256: "93e3ad21eb7dd37dd2fda03db0b100dcc6828e6ea470eedbfad8d51a7ccf7010"
+  - path: "research_control/tasks/RT-20260809-001/artifacts/fixtures/v22_cross_track_promotion_cases.yaml"
+    sha256: "6cbd4e13dd2e72765e036ecb52c0a7fdaed4f489989335b460ed7c9006479cf0"
+  - path: "research_control/tasks/RT-20260809-001/artifacts/validate_v22_p1_t01_three_track_charter.py"
+    sha256: "413dd68cbd27e20429ebc27dac513ac7ea6e4452282cdcd6c4d67a81429ef369"
+  - path: "research_control/tasks/RT-20260809-001/artifacts/v22_p1_t01_three_track_validation.json"
+    sha256: "7cafee2f9b4062e77cf0b9dd5c4916a857ca0b10c258a98c9e040b4781d6ca12"
+  - path: "research_control/tasks/RT-20260809-001/artifacts/v22_p1_t01_compact_receipt.json"
+    sha256: "7f061218a50353519792388bc4ab393635acca7a47c18905617a0cae77bea35d"
+  - path: "research_control/tasks/RT-20260809-001/artifacts/v22_p1_t01_process_integrity_review.yaml"
+    sha256: "c2d730b318dd0793858a57919bc148ca918497ce94409e0558bf75f2040d8a99"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1134
+    relationship_row_count: 5709
+    semantic_row_count: 1134
+    vault_row_count: 1134
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup implementations_plans/recommendations_implementation_plan_continue_task-v22.md --json"
+      query_type: "lookup"
+      query_text: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  additional_control_inspections:
+    - object_id: "HANDOFF-0970"
+      control_path: "research_control/handoffs/handoff-0970.yaml"
+      source_hash: "deb9d494bd3add5c973cf82135c95f51251d98eb7f676da84807d599dc3d49c4"
+  authority_note: "Tracked plan, backlog, handoff, task, role, and registry sources govern. Generated wiki, semantic, Obsidian, SQLite, and .local receipts remain retrieval or operational evidence only and are not authority."
+
+memory_postflight:
+  core_validation_status: "PASS"
+  freshness_status: "PASS"
+  local_retrieval_status: "PASS"
+  source_object_count: 1135
+  relationship_row_count: 5713
+  semantic_row_count: 1135
+  vault_row_count: 1135
+  blocking_warning_count: 0
+  local_cache_only_warning_count: 0
+  newly_retrievable_object_ids:
+    - "MD-RESEARCH-CONTROL-DESIGN-V22-THREE-TRACK-CHARTER-V1"
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0970"
+  source_handoff_sha256_at_intake: "deb9d494bd3add5c973cf82135c95f51251d98eb7f676da84807d599dc3d49c4"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P1-T01"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P1-T01"
+  guard_outcome: "all_ready_science_blocked_exception"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one control-marked three-track charter"
+      - "one exact 40-package primary-track assignment manifest"
+      - "one authority matrix and typed cross-track reference contract"
+      - "four separate scorecard schemas and one disjoint budget allocation"
+      - "one repository-separation decision record"
+      - "one prohibited-promotion fixture and deterministic review set"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "every V22 package has exactly one primary track or shared-control class"
+      - "Track A and C cannot change Distance-to-GR"
+      - "Track B cannot use interpretive coherence workflow PASS or validator PASS as Gate evidence"
+      - "task-count elapsed-effort compute and financial-cost accounting cannot be double-counted"
+      - "publication lanes and authority owners remain separated"
+      - "repository splitting remains unexecuted and evidence plus human authority gated"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+external_review_class: "deterministic_internal_process_integrity_only"
+replication_class: "none_project_control_governance"
+protected_authority:
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+
+blocked_conclusions:
+  - "Track A interpretation or Track C methodology success as Track B Gate evidence"
+  - "workflow validator checkpoint or traceability PASS as physics or Distance-to-GR progress"
+  - "typed cross-track reference as evidence authority resource or publication promotion"
+  - "retain-monorepo status as permanent architecture or future split authority"
+  - "deterministic process-integrity review as human external review or scientific replication"
+  - "P1-T02 selection as P1-T02 execution"
+  - "project-system PASS as tag release publication push reviewer-contact or external-action authority"
+
+command_results:
+  - command: "validate_v22_p1_t01_three_track_charter.py --write --json; validate_v22_p1_t01_three_track_charter.py --json"
+    status: "PASS"
+    summary: "All seven governance contract groups, 40 assignments, four scorecards, 15 fixtures, and the independent deterministic process rule path pass and reproduce byte-for-byte."
+  - command: "python -m unittest -v tests.test_v22_track_governance"
+    status: "PASS"
+    summary: "All 12 focused P1-T01 governance tests pass."
+  - command: "task_taxonomy.py --validate-repository --json"
+    status: "KNOWN_INHERITED_FAILURE_TASK_LOCAL_PASS"
+    summary: "RT-20260809-001 has a complete high-confidence explicit taxonomy; the repository retains one pre-existing RT-20260804-001 invalid result_kind vocabulary value."
+  - command: "bootstrap_memory_system.py; sync_obsidian_vault.py; bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Generated memory and vault views are fresh at 1135 source, semantic, and vault rows plus 5713 relationship rows with zero validate-only findings."
+  - command: "validate_research_control.py --check-diff --job-id AJ-RT-20260809-001-001 --json-summary"
+    status: "PASS"
+    summary: "Final diff validation passes with zero errors; 1831 inherited nonblocking historical warnings remain visible."
+  - command: "checkpoint_research_transaction.py --job-id AJ-RT-20260809-001-001 --legacy-validation"
+    status: "PENDING_SINGLE_INVOCATION"
+    summary: "Exactly one governed checkpoint remains authorized after final validation. The skill-preserved legacy rollback control is selected because planner preflight classifies nine allowlisted V22 design YAML contracts as unknown paths."
+
+validator_results:
+  - name: "v22_track_assignment_exactness"
+    outcome: "PASS_40_UNIQUE_A1_B22_C3_SHARED14"
+  - name: "v22_scorecard_dashboard_and_publication_separation"
+    outcome: "PASS_FOUR_DISJOINT_NAMESPACES_DASHBOARDS_AND_LANES"
+  - name: "v22_cross_track_nonpromotion_fixtures"
+    outcome: "PASS_15_OF_15_EXPECTATIONS"
+  - name: "v22_budget_non_double_counting"
+    outcome: "PASS_FOUR_DIMENSIONS_ONE_PRIMARY_COST_CENTER"
+  - name: "v22_repository_separation_decision"
+    outcome: "PASS_RETAIN_MONOREPO_MEASURED_TRIGGER_AND_HUMAN_GATE_REQUIRED"
+  - name: "v22_process_integrity_review"
+    outcome: "PASS_INTERNAL_DETERMINISTIC_RULE_PATH_NOT_EXTERNAL_REVIEW"
+  - name: "focused_regression_suite"
+    outcome: "PASS_12_TESTS"
+  - name: "checkpoint_transaction"
+    outcome: "PENDING_SINGLE_INVOCATION"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight, source plan identity, handoff-0970 route admission, physics-payload admission, and dual-budget allocation passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The production governance validator and a separate deterministic process-integrity rule path both pass."
+      - "All 15 positive and prohibited-promotion fixtures match their expected outcomes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "All 12 focused tests pass and deterministic receipts reproduce byte-for-byte."
+      - "No canonical science, ontology, Gate, benchmark, or Distance-to-GR source was edited."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier, task-index, compact-frontier, dependency-graph, and claim-graph projections were regenerated from the assembled source transaction."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Memory bootstrap, Obsidian synchronization, and validate-only pass at 1135 source rows and 5713 relationship rows."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passed and preserves the non-promotion boundary."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains authorized."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "Project-system P1-T01 governance only; no protected Gate review is authorized."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+project_improvement_signal_status: "none"
+documentation_impact_path: "research_control/tasks/RT-20260809-001/documentation_impact.yaml"
+completion_evidence:
+  primary_artifact: "research_control/tasks/RT-20260809-001/artifacts/v22_p1_t01_compact_receipt.json"
+  validation_path: "research_control/tasks/RT-20260809-001/artifacts/v22_p1_t01_three_track_validation.json"
+  process_integrity_review_path: "research_control/tasks/RT-20260809-001/artifacts/v22_p1_t01_process_integrity_review.yaml"
+  charter_path: "research_control/design/v22_three_track_charter_v1.md"
+  assignment_path: "research_control/design/v22_plan_task_track_assignments_v1.yaml"
+  handoff_path: "research_control/handoffs/handoff-0971.yaml"
+  program_state_path: "research_control/program_state.yaml"
+parent_child_synthesis:
+  required: false
+  rationale: "Project-system governance implementation; physics parent-child decomposition is not applicable."
+output_paths:
+  - "research_control/design/v22_three_track_charter_v1.md"
+  - "research_control/design/v22_track_authority_matrix_v1.yaml"
+  - "research_control/design/v22_track_a_scorecard_schema_v1.yaml"
+  - "research_control/design/v22_track_b_scorecard_schema_v1.yaml"
+  - "research_control/design/v22_track_c_scorecard_schema_v1.yaml"
+  - "research_control/design/v22_shared_control_scorecard_schema_v1.yaml"
+  - "research_control/design/v22_track_budget_allocation_v1.yaml"
+  - "research_control/design/v22_cross_track_reference_schema_v1.yaml"
+  - "research_control/design/v22_repository_separation_decision_v1.yaml"
+  - "research_control/design/v22_plan_task_track_assignments_v1.yaml"
+  - "scripts/research_control/v22_track_governance.py"
+  - "tests/test_v22_track_governance.py"
+  - "research_control/tasks/RT-20260809-001/artifacts/fixtures/v22_cross_track_promotion_cases.yaml"
+  - "research_control/tasks/RT-20260809-001/artifacts/validate_v22_p1_t01_three_track_charter.py"
+  - "research_control/tasks/RT-20260809-001/artifacts/v22_p1_t01_three_track_validation.json"
+  - "research_control/tasks/RT-20260809-001/artifacts/v22_p1_t01_compact_receipt.json"
+  - "research_control/tasks/RT-20260809-001/artifacts/v22_p1_t01_process_integrity_review.yaml"
+  - "research_control/tasks/RT-20260809-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260809-001/jobs/completions/AJC-AJ-RT-20260809-001-001.yaml"
+  - "research_control/handoffs/handoff-0971.yaml"
+  - "research_control/handoffs/handoff-0971.md"
+  - "research_control/program_state.yaml"
+out_of_scope_remaining_work:
+  - "V22 P1-T02 requires a separate bounded science AgentJob after this checkpoint."
+  - "The remaining 36 V22 packages stay pending or conditionally locked."
+  - "Each later package must receive explicit runtime routing before selection."
+  - "Repository split, tag, release, publication, reviewer contact, push, and every external action remain separately unauthorized."
+  - "Scientific Gates, benchmark promotion, external review, independent replication, and first-principles GR derivation remain unchanged."
+progress_summary: "V22 P1-T01 governance is implemented and P1-T02 is selected but unexecuted."
+remaining_work: "Run one governed checkpoint and continue in a later goal turn with one separately admitted P1-T02 source-ontology primitive-debt audit AgentJob."
+forbidden_conclusion_summary: "This project-system governance PASS does not establish scientific truth, source-derived geometry, Einstein dynamics, benchmark success, publication readiness, external review, replication, or completed derivation."
+coherent_resolution_summary: "The three programs and shared control now have exact separate assignment, measurement, evidence, resource, publication, and authority contracts with fail-closed promotion checks."
+next_recommendation: "After checkpoint execute exactly one bounded V22 P1-T02 primitive-debt and scientific-objective audit under ontology-formalizer@0.2.0 with smuggling-audit constraints."
+authority_limits:
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false

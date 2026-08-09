@@ -1,0 +1,44 @@
+schema_id: "v22_cross_track_reference_schema_v1"
+status: "draft/control"
+track_ids:
+  - "track_a"
+  - "track_b"
+  - "track_c"
+  - "shared_control"
+allowed_relation_types:
+  - "context_reference"
+  - "dependency_reference"
+  - "artifact_reference"
+  - "review_status_reference"
+  - "budget_attribution_reference"
+required_fields:
+  - "link_id"
+  - "source_track"
+  - "target_track"
+  - "relation_type"
+  - "source_path"
+  - "source_sha256"
+  - "consumer_path"
+  - "authority_effect"
+  - "evidence_credit"
+  - "distance_to_gr_effect"
+  - "gate_effect"
+  - "resource_reattribution"
+fixed_values:
+  authority_effect: "none"
+  evidence_credit: "none"
+  distance_to_gr_effect: "none"
+  gate_effect: "none"
+  resource_reattribution: "none"
+rules:
+  - "source_track and target_track must differ"
+  - "source_path and consumer_path must be repository-relative"
+  - "source_sha256 must be an exact lowercase SHA-256"
+  - "a cross-track link carries context dependency review-status or attribution information only"
+  - "a cross-track link cannot satisfy a success measure Gate burden benchmark review replication or publication condition"
+  - "a cross-track link cannot move task count elapsed effort compute or financial cost"
+authority_limits:
+  cross_track_link_is_evidence_promotion: false
+  cross_track_link_changes_distance_to_gr: false
+  cross_track_link_changes_gate_status: false
+  cross_track_link_changes_publication_authority: false

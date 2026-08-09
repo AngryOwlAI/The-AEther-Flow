@@ -1,0 +1,48 @@
+schema_id: "v22_track_a_scorecard_schema_v1"
+status: "draft/control"
+track_id: "track_a"
+metric_namespace: "v22.track_a"
+dashboard_id: "v22_track_a_dashboard_v1"
+authority_owner: "director-of-research@0.3.0_for_routing_only"
+publication_lane_id: "track_a_interpretation_paper_d"
+required_fields:
+  - "scorecard_id"
+  - "track_id"
+  - "as_of"
+  - "assignment_coverage"
+  - "success_measures"
+  - "failure_measures"
+  - "resource_accounting"
+  - "evidence_refs"
+  - "publication_lane"
+  - "authority_limits"
+resource_fields:
+  - "task_count"
+  - "elapsed_effort"
+  - "compute"
+  - "financial_cost"
+success_measure_ids:
+  - "interpretive_coherence"
+  - "target_side_exact_gr_fidelity"
+  - "observer_relative_claim_calibration"
+  - "one_plus_three_comparison_quality"
+failure_measure_ids:
+  - "target_source_conflation_count"
+  - "ontology_overclaim_count"
+  - "nonunique_flow_overclaim_count"
+allowed_evidence_classes:
+  - "canonical_track_a_source"
+  - "target_side_gr_reference"
+  - "authorized_track_a_review"
+forbidden_promotions:
+  - "source_derivation"
+  - "gate_b_credit"
+  - "distance_to_gr_change"
+  - "novel_prediction"
+distance_to_gr_effect_policy: "forbidden"
+cross_track_link_policy: "typed_nonpromotional_only"
+authority_limits:
+  scientific_status_changed_by_scorecard: false
+  gate_evidence_created_by_scorecard: false
+  distance_to_gr_changed_by_scorecard: false
+  publication_authorized_by_scorecard: false
