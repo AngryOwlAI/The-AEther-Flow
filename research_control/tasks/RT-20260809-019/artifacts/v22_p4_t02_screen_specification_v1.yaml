@@ -1,0 +1,119 @@
+schema_id: "v22_p4_t02_screen_specification_v1"
+artifact_id: "V22-P4-T02-SCREEN-SPECIFICATION-V1"
+task_id: "RT-20260809-019"
+job_id: "AJ-RT-20260809-019-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+status: "draft/control"
+result_classification: "scoped_obstruction"
+candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REDUCED-PRINCIPAL-V1"
+candidate_family_id: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+created_at: "2026-08-09T20:08:07Z"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Stress the exact P4-T01 source principal polynomial for hyperbolicity, strong or symmetric well-posedness, stable time orientation, degeneracy conditioning, common-cone universality across declared sectors, finite-variation robustness, and every preregistered hard-fail trigger without inserting or fitting a target metric."
+
+fixed_source_system:
+  evolution_form: "partial_tau u + sum_i A^i partial_i u = 0"
+  time_matrix: "A^0=I_6"
+  spatial_matrices: "A^i=diag(v_1^i,...,v_6^i)"
+  field_symmetrizer: "H=I_6 on the six-component field fiber"
+  field_symmetrizer_is_source_spacetime_metric: false
+  symmetric_hyperbolic_with_respect_to_source_tau: true
+  strong_hyperbolicity_condition_number: 1
+  physical_hyperbolicity_claimed: false
+  physical_time_orientation_derived: false
+
+polynomial_hyperbolicity:
+  polynomial: "P_D(k)=product_A k(X_A)"
+  hyperbolic_covector: "h=d tau"
+  factor_values_at_h: [1, 1, 1, 1, 1, 1]
+  line_roots: "lambda_A=-k(X_A)/h(X_A)=-k(X_A)"
+  all_line_roots_real: true
+  hyperbolicity_cone_component: "Gamma_tau=intersection_A {k:k(X_A)>0}"
+  cone_kind: "open convex polyhedral source-cotangent cone"
+  physical_causal_cone: false
+  lorentzian_signature: false
+
+quadratic_cone_obstruction:
+  theorem_id: "V22-P4-T02-NO-COMMON-LORENTZIAN-CHARACTERISTIC-QUADRIC-V1"
+  exact_statement: "No nonzero quadratic polynomial vanishes on the full union of the six pairwise distinct characteristic hyperplanes."
+  proof_certificate: "Vanishing on l_A=0 implies divisibility by l_A; a nonzero quadratic cannot be divisible by six pairwise nonassociate linear factors."
+  independent_certificate: "Exact evaluation constraints for a general ten-coefficient quadratic have rank ten on 156 points sampled from the six hyperplanes."
+  common_quadratic_characteristic_cone_exists: false
+  common_lorentzian_characteristic_cone_exists: false
+  physically_derived_generalized_equivalence_exists: false
+  global_no_go_claimed: false
+
+degeneracy_and_conditioning:
+  fixed_global_polynomial_square_free: true
+  nonzero_characteristic_singularities_present: true
+  all_pair_intersections_singular_for_reduced_variety: true
+  maximum_symbol_corank: 4
+  exact_fixed_diagonal_eigenbasis_condition_number: 1
+  repeated_roots_under_fixed_law_controlled: true
+  one_smooth_non_degenerate_lorentzian_null_hypersurface_obtained: false
+
+finite_variation_countermodel:
+  countermodel_id: "V22-P4-T02-CROSS-CHANNEL-COMPLEX-SPEED-COUNTERMODEL-V1"
+  scope: "source_extension_candidate"
+  affected_branches: [1, 2]
+  source_spatial_vector: "Y=partial_1+partial_2"
+  equation_1: "E1_epsilon=X1(q1)+epsilon Y(q2-qbar2)"
+  equation_2: "E2_epsilon=X2(q2)-epsilon Y(q1-qbar1)"
+  background_preserved: true
+  source_local_first_order: true
+  target_atlas_or_metric_used: false
+  crossing_spatial_covector: [1, 1, 0]
+  spatial_block: "[[1,2 epsilon],[-2 epsilon,1]]"
+  characteristic_discriminant: "-16 epsilon^2"
+  complex_characteristic_pair_for_every_nonzero_epsilon: true
+  exact_fixed_law_changed: true
+  interpretation: "The exact diagonal fixed law is symmetric hyperbolic, but the broader B1 family has no source-derived rule protecting diagonal coupling, so family-level finite-variation robustness fails."
+
+refinement_status:
+  p3_t03_controlled_limit_passes_for_fixed_law: true
+  factor_error_levels: [8, 16, 32, 64]
+  maximum_factor_errors: [7.276235525153746, 3.685274453882728, 1.8485698809681474, 0.9250277150014812]
+  errors_strictly_decrease: true
+  limit_preserves_six_branch_structure: true
+  limit_creates_common_quadratic_cone: false
+
+gate_b_screen:
+  GB01_TARGET_ATLAS_FREE: "PASS_HYGIENE_ONLY"
+  GB02_REDUCED_HYPERBOLIC_PRINCIPAL: "PASS_SOURCE_PDE_ONLY"
+  GB03_STABLE_LORENTZIAN_CONE: "FAIL"
+  GB04_UNIVERSAL_MATTER_COMPATIBILITY: "FAIL"
+  GB05_OPERATIONAL_SCALE: "NOT_ESTABLISHED"
+  GB06_TENSORIAL_GLUING: "PARTIAL_SOURCE_PRESENTATION_ONLY"
+  GB07_VARIATION_COARSE_GRAINING_ROBUSTNESS: "FAIL_FAMILY_LEVEL"
+  GB08_NO_HIDDEN_METRIC_EQUIVALENT: "PASS_HYGIENE_ONLY"
+  eligible_for_protected_gate_b_review: false
+  gate_b_verdict_issued: false
+
+hard_fail_screen:
+  triggered_ids:
+    - "HF04_NONUNIVERSAL_OR_UNSELECTED_MULTICONE"
+    - "HF05_INSTABILITY_NONHYPERBOLICITY_DEGENERACY"
+  not_triggered_ids:
+    - "HF01_METRIC_EQUIVALENT_IMPORT"
+    - "HF02_OBSERVABLE_LABEL_BY_FIAT"
+    - "HF03_GR_TARGET_FITTING"
+    - "HF06_NO_CONTROLLED_CONTINUUM_LIMIT"
+    - "HF07_EINSTEIN_STRUCTURE_POSTULATED"
+    - "HF08_FROZEN_ROUTE_REPACKAGED"
+  candidate_disposition: "TERMINATE_B1_PRIMARY_APPEND_ONLY"
+  next_transition: "FRESH_SELECTOR_REQUIRED_FOR_PREREGISTERED_B2_FALLBACK"
+  automatic_fallback_activation: false
+
+authority_limits:
+  exact_fixed_source_hyperbolicity_established: true
+  physical_causal_structure_established: false
+  source_time_as_physical_time_established: false
+  stable_lorentzian_cone_established: false
+  universal_matter_compatibility_established: false
+  effective_metric_constructed: false
+  source_law_adopted: false
+  gate_b_verdict_issued: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  external_review_completed: false

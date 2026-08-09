@@ -1,0 +1,87 @@
+schema_id: "v22_p4_t02_gate_b_hard_fail_disposition_v1"
+artifact_id: "V22-P4-T02-GATE-B-HARD-FAIL-DISPOSITION-V1"
+task_id: "RT-20260809-019"
+job_id: "AJ-RT-20260809-019-001"
+status: "draft/control"
+candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REDUCED-PRINCIPAL-V1"
+evaluation_order:
+  - "family identity and budget admission"
+  - "hard-fail triggers"
+  - "eight Gate B criteria"
+  - "supplemental positive-packet fields"
+  - "candidate disposition without protected Gate verdict"
+family_budget_admission:
+  family_slot: 1
+  family_id: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+  activated_by: "RT-20260809-010 ACTIVATE_PRIMARY"
+  sole_active_family_before_screen: true
+  family_identity_repackaged: false
+  budget_admitted: true
+gate_b_criteria:
+  - criterion_id: "GB01_TARGET_ATLAS_FREE"
+    status: "PASS_HYGIENE_ONLY"
+    evidence: "All fixed-law and countermodel coefficients are source vectors fixed without target atlas, metric, or GR fit."
+  - criterion_id: "GB02_REDUCED_HYPERBOLIC_PRINCIPAL"
+    status: "PASS_SOURCE_PDE_ONLY"
+    evidence: "P_D is hyperbolic with respect to d tau and the exact fixed system is symmetric hyperbolic with H=I_6 on field amplitudes."
+  - criterion_id: "GB03_STABLE_LORENTZIAN_CONE"
+    status: "FAIL"
+    evidence: "Six distinct characteristic hyperplanes admit no nonzero common quadratic vanishing polynomial, and no source-derived selector or quotient is present."
+  - criterion_id: "GB04_UNIVERSAL_MATTER_COMPATIBILITY"
+    status: "FAIL"
+    evidence: "The six B1 channels have distinct source characteristics and no continuum map from the declared finite P7 sectors to the B1 equations exists."
+  - criterion_id: "GB05_OPERATIONAL_SCALE"
+    status: "NOT_ESTABLISHED"
+    evidence: "tau and H are source/field control objects, not physical clock, rod, unit, or scale maps."
+  - criterion_id: "GB06_TENSORIAL_GLUING"
+    status: "PARTIAL_SOURCE_PRESENTATION_ONLY"
+    evidence: "Passive source-chart covariance and local solution gluing hold; physical tensorial and global causal gluing are absent."
+  - criterion_id: "GB07_VARIATION_COARSE_GRAINING_ROBUSTNESS"
+    status: "FAIL_FAMILY_LEVEL"
+    evidence: "The fixed refinement converges to the same six branches, while an arbitrarily small source-only cross-channel mutation creates complex characteristic speeds at a branch crossing."
+  - criterion_id: "GB08_NO_HIDDEN_METRIC_EQUIVALENT"
+    status: "PASS_HYGIENE_ONLY"
+    evidence: "No source-cotangent quadratic, coframe, constitutive tensor, target norm, or target-fit coefficient is used; H=I_6 is only a field-fiber symmetrizer."
+supplemental_fields:
+  regularity: "local C2 fixed-coefficient source system only"
+  time_orientation: "source evolution orientation by d tau; physical time orientation not derived"
+  nondegeneracy: "global factors square-free, but the reduced characteristic variety is singular at all pair crossings"
+  conditioning: "exact diagonal eigenbasis condition number one; broader family not robust at crossings"
+  second_clock_effect_analysis: "undefined because no physical clocks or comparison law exist"
+hard_fail_triggers:
+  - trigger_id: "HF01_METRIC_EQUIVALENT_IMPORT"
+    status: "NOT_TRIGGERED"
+  - trigger_id: "HF02_OBSERVABLE_LABEL_BY_FIAT"
+    status: "NOT_TRIGGERED"
+  - trigger_id: "HF03_GR_TARGET_FITTING"
+    status: "NOT_TRIGGERED"
+  - trigger_id: "HF04_NONUNIVERSAL_OR_UNSELECTED_MULTICONE"
+    status: "TRIGGERED"
+    exact_failure: "The reduced source candidate retains six inequivalent characteristic branches and supplies neither a physical quotient nor a selector that makes them one universal physical causal structure."
+  - trigger_id: "HF05_INSTABILITY_NONHYPERBOLICITY_DEGENERACY"
+    status: "TRIGGERED_FAMILY_LEVEL"
+    exact_failure: "A real source-local arbitrarily small cross-channel coefficient mutation produces negative characteristic discriminant at a base crossing; no source law protects the exact diagonal form."
+  - trigger_id: "HF06_NO_CONTROLLED_CONTINUUM_LIMIT"
+    status: "NOT_TRIGGERED_FOR_FIXED_LAW"
+  - trigger_id: "HF07_EINSTEIN_STRUCTURE_POSTULATED"
+    status: "NOT_TRIGGERED"
+  - trigger_id: "HF08_FROZEN_ROUTE_REPACKAGED"
+    status: "NOT_TRIGGERED"
+disposition:
+  candidate_continue: false
+  primary_terminated: true
+  negative_results_append_only: true
+  p4_t03_unlocked: false
+  fallback_candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  fallback_activated: false
+  fresh_selector_required: true
+  scoped_budget_exhausted: false
+  gate_b_verdict_issued: false
+  exact_scoped_result: "The B1 fixed source PDE is symmetric hyperbolic, but B1 fails the P4-T02 continuation predicate and is terminated under HF04 and family-level HF05."
+authority_limits:
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  source_extension_adopted: false
+  effective_metric_constructed: false
+  gate_b_positive: false
+  physics_promotion_authorized: false

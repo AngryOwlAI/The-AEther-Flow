@@ -1,12 +1,142 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260809-018"
-active_agent_job_id: "AJ-RT-20260809-018-001"
-latest_handoff_id: "handoff-0988"
-current_status: "v22_p4_t01_branch_complete_source_principal_candidate_p4_t02_selected_checkpoint_pending"
-claim_boundary_summary: "RT-20260809-018 lawfully reduces the sealed fixed-law tangent system after recording zero algebraic constraints, differential constraints, internal gauge generators, and equation redundancies. It derives the diagonal source symbol and a square-free degree-six determinant-line polynomial with all six branches, exact crossings, covariance, and independent reproduction. This is proposal-only source-principal data: no physical cone, Lorentzian signature, scale, g_eff, adoption, Gate result, or Distance-to-GR delta is created. P4-T02 is selected but unexecuted pending one checkpoint, and P2-T02 remains externally gated."
+active_task_id: "RT-20260809-019"
+active_agent_job_id: "AJ-RT-20260809-019-001"
+latest_handoff_id: "handoff-0989"
+current_status: "v22_p4_t02_b1_scoped_obstruction_b2_selector_selected_checkpoint_pending"
+claim_boundary_summary: "RT-20260809-019 proves the exact fixed B1 source PDE is symmetric hyperbolic relative to proposal-only tau and its polynomial has a polyhedral source hyperbolicity component, while proving no nonzero quadratic vanishes on the six characteristic hyperplanes, finding no P7-to-B1 continuum sector map, and constructing an arbitrarily small family-level complex-speed countermodel. HF04 and family-level HF05 terminate and locally freeze B1 append-only. This is a scoped obstruction: B2 remains inactive, P4-T03 remains locked, and no protected Gate verdict, global no-go, physical cone, g_eff, adoption, or Distance-to-GR delta is created."
 next_plan_task_id: "P4-T02"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260809-018-001. After it commits, execute exactly one separately admitted V22 P4-T02 Refuter AgentJob with hyperbolic-PDE and Smuggling Auditor pressure; do not contact reviewers or take any protected or external action."
+next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260809-019-001. After it commits, execute exactly one V22 P4-T02 Theoretical Continuation Selector AgentJob to choose one bounded descriptor or activation path for the inactive B2 fallback while preserving B1 termination and P4-T03 lock; do not contact reviewers or take any protected or external action."
+
+v22_p4_t02_b1_scoped_obstruction_and_inactive_b2_selector:
+  task_id: "RT-20260809-019"
+  parent_task_id: "RT-20260809-018"
+  parent_handoff_id: "handoff-0988"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "B2_FALLBACK_SELECTOR"
+  claim_boundary_id: "CB-V22-P4-T02-HYPERBOLICITY-ROBUSTNESS-HARD-FAIL-001"
+  status: "PASS_V22_P4_T02_B1_FIXED_SOURCE_HYPERBOLICITY_AND_SCOPED_OBSTRUCTION"
+  work_item_status: "b1_branch_complete_fallback_selector_pending_checkpoint"
+  route_label: "ordinary-research-packet"
+  selected_role_family: "refuter@0.2.0"
+  supporting_perspective: "hyperbolic-PDE specialist consultation and smuggling-auditor@0.2.0"
+  validation_perspective: "validator-engineer@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "stress_v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Stress the exact P4-T01 source principal polynomial for hyperbolicity strong or symmetric well-posedness stable time orientation degeneracy conditioning common-cone universality declared-sector compatibility finite-variation robustness and every preregistered hard-fail trigger without target import."
+  source_head: "4e87a27cd96ef8497098a65f4e8ff82274350f81"
+  source_tree: "752371cc6204c9943d22e3d14f09be5808dbd39f"
+  prior_checkpoint_job_id: "AJ-RT-20260809-018-001"
+  prior_checkpoint_run_id: "RUN-CHECKPOINT-f8d174857c62577b"
+  prior_checkpoint_receipt_sha256: "90f509f7ef2da01302be6aba56c164332f4d1efd294d79370776ff0204b5e38c"
+  source_handoff_id: "handoff-0988"
+  source_handoff_path: "research_control/handoffs/handoff-0988.yaml"
+  source_handoff_sha256: "41aa74eb541cca5e636539b1056b93c3aa53bcb737601ca9de970d7cfffd45c5"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "e9c20e854c4d93ea166c12be878e5d8d29ae78f09bc5a7975bde7ea38f4526b1"
+  screen_theorem_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex"
+  screen_theorem_sha256: "6eec0961cd84b3ec8f88845de1e5f87c13fee009b151fa557655d09a0fa6b50a"
+  screen_specification_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_screen_specification_v1.yaml"
+  screen_specification_sha256: "5bcf72a42d52351aa5eeb4dd11ab01d7b440c4696ba18156b798c773c51bbd0e"
+  gate_b_hard_fail_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_gate_b_hard_fail_disposition_v1.yaml"
+  gate_b_hard_fail_sha256: "0672ef273e273e4051239411973f6e613b38c1074c259b0d28add578688fe332"
+  sector_universality_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_sector_universality_matrix_v1.yaml"
+  sector_universality_sha256: "5f0dbc514c5a41e942f6314929be76ebbb8d0cf27d53f0597f231a2a2b496055"
+  countermodel_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_robustness_countermodel_v1.yaml"
+  countermodel_sha256: "52ac98cba9ecf2fb0f18e084dfdb582bebebb65c18d21693c95c663220cad32a"
+  obstruction_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_refuter_obstruction_record_v1.yaml"
+  obstruction_sha256: "609a422dc58ac927640c845d96a6846e1f863f625afbd76c1761b019f4e8a2b6"
+  budget_transition_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_candidate_termination_budget_transition_v1.yaml"
+  budget_transition_sha256: "84e7a8c9f94377f6cb6de30e987e442b0381988e40fff2460282451cfaf43e8c"
+  provenance_manifest_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_source_provenance_manifest_v1.yaml"
+  provenance_manifest_sha256: "ebb167314709e0cd03e215aef97f64c9a6a10321d7355486d2b61ca80eb26657"
+  primary_model_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_model.py"
+  primary_model_sha256: "d58428cbf9f8f629dd7bd3278131ac3cd5bf0574db9a9a294bbcf5bc159091e0"
+  independent_reproduction_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_independent_reproduction.py"
+  independent_reproduction_sha256: "73be243d0dd06949dfc9800d86ce104de4db1246bde1316c284b092312cf2bfa"
+  validation_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_screen_validation.json"
+  validation_sha256: "6857f673c539fff555dadab825f0433e32257e5f50c16f7a0bf83278960e3543"
+  compact_receipt_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_compact_receipt.json"
+  compact_receipt_sha256: "a4e514bed627f5fa9d586f6029bad47e5a109250925680215452c2b11fdecda2"
+  latex_compile_receipt_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_latex_compile_receipt.json"
+  latex_compile_receipt_sha256: "47856d5bdb4ce22d02db5677966fb1a0eea4baf657a3f360c0b78ad0d8f936e7"
+  parent_fusion_path: "research_control/tasks/RT-20260809-019/artifacts/parent_fusion_notes_p4_t02_screen.md"
+  parent_fusion_sha256: "d130eee887e254fd5205ef95390a051de7c7d0cb77c28ad5db046b37b0d02786"
+  task_sha256: "9bf21880af5549a2de7cc169201afc16eebac1b02c172c35ce8368169bca471a"
+  agent_job_id: "AJ-RT-20260809-019-001"
+  agent_job_sha256: "8a7b1195544c83ac4595dc08e76c0f3c9022499b9a068ec9307c1466b5a7647b"
+  decision_id: "DDR-20260809-019"
+  decision_sha256: "531bbd5a07613fd53972f0d345b6d12c5757bbc5e90c8ce182adbf34725d7d74"
+  execution_role_ref: "refuter@0.2.0--RT-20260809-019"
+  execution_role_sha256: "d61d90ce4c31b14a82af5b97e8a4f441d72a6cd443662244e57d5d141f57a1a0"
+  completion_path: "research_control/tasks/RT-20260809-019/jobs/completions/AJC-AJ-RT-20260809-019-001.yaml"
+  completion_sha256: "8e8373353f285b870ce9df58395ac6f27a5671a430fb47104842c32b1a99fe08"
+  handoff_id: "handoff-0989"
+  handoff_path: "research_control/handoffs/handoff-0989.yaml"
+  handoff_sha256: "617872c1b63574d036c0505075af879385192293fac672b2f8acd99a3ed3939a"
+  exact_fixed_source_symmetric_hyperbolic: true
+  exact_fixed_polynomial_hyperbolic: true
+  fixed_eigenbasis_condition_number: 1
+  common_nonzero_quadratic_characteristic_polynomial_exists: false
+  quadratic_constraint_count: 156
+  quadratic_constraint_rank: 10
+  distinct_characteristic_branch_count: 6
+  p7_to_b1_continuum_map_count: 0
+  family_countermodel_discriminant: "-16 epsilon^2"
+  broader_b1_family_robustness_passed: false
+  exact_fixed_law_refuted: false
+  gate_b_criterion_count: 8
+  triggered_hard_fail_count: 2
+  focused_check_count: 172
+  focused_check_failure_count: 0
+  latex_page_count: 7
+  latex_final_warning_count: 0
+  pdf_pages_visually_reviewed: 7
+  b1_primary_terminated: true
+  b1_primary_locally_frozen: true
+  b2_fallback_activated: false
+  extension_budget_exhausted: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  canonical_science_modified: false
+  source_extension_adopted: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  protected_gate_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  reviewer_contact_authorized: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P4-T02-B2-SELECTOR"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "theoretical-continuation-selector@0.1.0"
+  selected_next_supporting_perspective: "ontology-formalizer@0.2.0 smuggling-auditor@0.2.0 and refuter@0.2.0"
+  selected_next_packet_type: "source_extension_candidate"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "select_v22_p4_t02_b2_fallback_descriptor_or_activation_path_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
 
 v22_p4_t01_branch_complete_reduced_source_principal_symbol:
   task_id: "RT-20260809-018"
@@ -14914,9 +15044,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260809-014"
-  latest_research_handoff_id: "handoff-0984"
-  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-014-001. After it commits, execute exactly one separately admitted V22 P3-T03 Candidate Constructor AgentJob with Refuter and Validator Engineer perspectives; do not contact reviewers or take any protected or external action."
+  latest_research_task_id: "RT-20260809-019"
+  latest_research_handoff_id: "handoff-0989"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-019-001. After it commits, execute exactly one V22 P4-T02 Theoretical Continuation Selector AgentJob to choose one bounded descriptor or activation path for the inactive B2 fallback while preserving B1 termination and P4-T03 lock; do not contact reviewers or take any protected or external action."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

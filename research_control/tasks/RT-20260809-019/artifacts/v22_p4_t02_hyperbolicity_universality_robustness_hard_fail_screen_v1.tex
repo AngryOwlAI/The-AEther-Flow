@@ -1,0 +1,431 @@
+% authority: science_draft
+% claim_status: draft/control scoped obstruction
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,array,longtable,enumitem,microtype}
+\usepackage[hidelinks]{hyperref}
+\setlist{nosep}
+
+\newcommand{\A}{\mathcal A}
+\newcommand{\R}{\mathbb R}
+\newcommand{\dd}{\mathrm d}
+\newcommand{\Gam}{\Gamma_{\tau}}
+\newcommand{\sigmaL}{\sigma_{L_D}}
+\newcommand{\Char}{\operatorname{Char}}
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+
+\title{V22 P4--T02: Hyperbolicity, Universality, Robustness,\
+and Hard-Fail Screen for the B1 Six-Transport Candidate}
+\author{The \AE ther-Flow Research Project}
+\date{2026-08-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft/control packet stress-tests the exact P4--T01 reduced source
+principal structure.  The fixed diagonal system has a precise positive result:
+with respect to the proposal-only source label $\tau$, it is symmetric
+hyperbolic, its field-fiber symmetrizer is the identity, and
+$P_D=\prod_A k(X_A)$ is hyperbolic on the common algebraic component
+$\Gam=\bigcap_A\{k:k(X_A)>0\}$.  This is source PDE structure, not physical
+causality.  The candidate nevertheless fails the P4--T02 continuation
+predicate.  Its reduced characteristic set is the union of six distinct
+hyperplanes; no nonzero quadratic polynomial, hence no nondegenerate
+Lorentzian quadratic, vanishes on that union.  No physical selector or quotient
+identifies the branches, and the declared finite P7 sectors have no continuum
+map into the B1 equations.  Moreover, an arbitrarily small, real, source-local
+cross-channel mutation preserving the selected background gives
+discriminant $-16\epsilon^2$ at a branch crossing and therefore complex
+characteristic speeds for every $\epsilon\ne0$.  The fixed law remains
+hyperbolic, but the broader B1 family lacks a source-derived rule protecting
+that diagonal form.  We therefore trigger the preregistered HF04 and
+family-level HF05 conditions, terminate B1 append-only, keep the B2 fallback
+inactive, and require a fresh selector packet.  This is a candidate-scoped
+obstruction, not a global no-go theorem, Gate B verdict, effective metric, or
+future-extension closure.
+\end{abstract}
+
+\section{Inherited candidate and exact scope}
+
+Let $\A$ be the proposal-only four-dimensional source arena, let
+$D=(\tau,X_1,\ldots,X_6)$ be the fixed P3--T02 coefficient datum, and let
+$q=(q^1,\ldots,q^6)$.  P4--T01 lawfully reduced the fixed-D tangent equations
+to
+\begin{equation}
+ L_Du=(X_1u^1,\ldots,X_6u^6),
+ \qquad
+ \sigmaL(k)=\operatorname{diag}(k(X_1),\ldots,k(X_6)),
+ \label{eq:fixed}
+\end{equation}
+with zero algebraic constraints, differential constraints, internal field
+gauge, and equation redundancies.  In the declared source chart,
+\begin{align}
+ X_1&=\partial_0+\partial_1,&
+ X_2&=\partial_0+\partial_2,&
+ X_3&=\partial_0+\partial_3,\nonumber\\
+ X_4&=\partial_0+\partial_1+\partial_2,&
+ X_5&=\partial_0+\partial_2+2\partial_3,&
+ X_6&=\partial_0+2\partial_1+\partial_3.
+ \label{eq:vectors}
+\end{align}
+Every channel obeys $\dd\tau(X_A)=1$.  The reduced polynomial is
+\begin{align}
+ P_D(k)&=\prod_{A=1}^{6}k(X_A)\nonumber\\
+ &= (\omega+\kappa_1)(\omega+\kappa_2)(\omega+\kappa_3)
+ (\omega+\kappa_1+\kappa_2)
+ (\omega+\kappa_2+2\kappa_3)
+ (\omega+2\kappa_1+\kappa_3).
+ \label{eq:poly}
+\end{align}
+The six factors are pairwise nonassociate and globally simple.  Directional
+crossings are real and retained; every pair crosses and the maximum nonzero
+symbol corank is four.
+
+This packet asks two different questions and does not conflate them:
+\begin{enumerate}[leftmargin=*]
+  \item Is the exact fixed source evolution hyperbolic and well posed relative
+        to its declared source label?
+  \item Does that result supply one stable, universal, physically typed
+        Lorentzian causal structure with adequate family-level robustness?
+\end{enumerate}
+The first answer is positive.  The second is negative in the exact scope below.
+
+\section{Exact fixed-law source hyperbolicity}
+
+Write $X_A=\partial_\tau+v_A^j\partial_j$.  Then the fixed evolution is
+\begin{equation}
+ \partial_\tau u+\sum_{j=1}^{3}A^j\partial_j u=0,
+ \qquad
+ A^j=\operatorname{diag}(v_1^j,\ldots,v_6^j).
+ \label{eq:evolution}
+\end{equation}
+
+\begin{theorem}[Fixed source symmetric hyperbolicity]
+Equation \eqref{eq:evolution} is symmetric hyperbolic relative to the
+proposal-only source label $\tau$.  The time matrix is $A^0=I_6$, every
+$A^j$ is real diagonal and symmetric, and $H=I_6$ is a positive field-fiber
+symmetrizer.  The spatial symbol has the fixed canonical eigenbasis for every
+$\kappa$, so its eigenvector condition number is one, including at repeated
+directional roots.
+\end{theorem}
+
+\begin{proof}
+The matrices in \eqref{eq:evolution} are diagonal by inspection of
+\eqref{eq:fixed}.  Thus $H A^0=I_6$ is positive definite and each $H A^j$
+is symmetric.  The standard channel basis diagonalizes every spatial symbol
+$A(\kappa)=\sum_j A^j\kappa_j$ simultaneously.  Repeated eigenvalues therefore
+do not destroy diagonalizability or condition the eigenbasis.
+\end{proof}
+
+The identity $H$ acts on six field amplitudes.  It is not a bilinear form on
+$T\A$ or $T^*\A$, does not contract source derivatives, and does not define a
+source-spacetime metric.  Under a field-frame change it transforms as a
+field-energy form.  Treating it as $g_{\rm eff}$ would be a type error.
+
+\begin{proposition}[Polynomial hyperbolicity and common source component]
+The polynomial \eqref{eq:poly} is hyperbolic with respect to
+$h=\dd\tau$.  The component containing $h$ is
+\begin{equation}
+ \Gam=\bigcap_{A=1}^{6}\{k\in T_x^*\A:k(X_A)>0\}.
+ \label{eq:gamma}
+\end{equation}
+It is an open convex polyhedral source-cotangent cone.
+\end{proposition}
+
+\begin{proof}
+Every factor satisfies $h(X_A)=1$.  For arbitrary $k$, the roots of
+\begin{equation}
+ \lambda\longmapsto P_D(k+\lambda h)
+ =\prod_A\bigl(k(X_A)+\lambda h(X_A)\bigr)
+\end{equation}
+are $\lambda_A=-k(X_A)$ and are real.  The sign component containing $h$ is
+exactly the intersection of the six positive factor half-spaces, which proves
+\eqref{eq:gamma} and convexity.
+\end{proof}
+
+This establishes source evolution orientation and algebraic PDE hyperbolicity.
+It does not establish a physical clock, light cone, Lorentzian signature, or
+time orientation.  Those require a lawful source-to-world interpretation that
+the B1 packet does not supply.
+
+\section{No common Lorentzian characteristic quadric}
+
+Let $\ell_A(k)=k(X_A)$.  The reduced characteristic variety is
+\begin{equation}
+ \Char(L_D)_x=\bigcup_{A=1}^{6}\{[k]:\ell_A(k)=0\}.
+ \label{eq:char}
+\end{equation}
+
+\begin{theorem}[No common characteristic quadric]
+There is no nonzero homogeneous quadratic polynomial $Q$ on $T_x^*\A$ that
+vanishes on the full union in \eqref{eq:char}.  In particular, the reduced
+characteristic set is not the null set of one nondegenerate Lorentzian
+quadratic form.
+\end{theorem}
+
+\begin{proof}
+If a polynomial vanishes on the hyperplane $\ell_A=0$, then the linear
+polynomial $\ell_A$ divides it.  Therefore a polynomial vanishing on all six
+hyperplanes is divisible by $\prod_A\ell_A$.  P4--T01 proved the six factors
+pairwise nonassociate, so this divisor has degree six.  A nonzero polynomial
+of degree two cannot contain it.
+\end{proof}
+
+An independent exact calculation represents a general quadratic by its ten
+monomial coefficients.  Evaluating it at 156 integer points on the six
+hyperplanes gives a rational constraint matrix of rank ten.  Hence only the
+zero quadratic vanishes on all six branches.  This is an independent finite
+certificate of the same obstruction, not external replication.
+
+The pair intersections also make the reduced characteristic variety singular:
+if two distinct factors vanish, every term in $\dd P_D$ contains at least one
+vanishing factor.  A source hyperbolicity component still exists, but the
+branch-complete characteristic geometry is reducible and crossing-rich.  No
+candidate-supplied quotient identifies these branches, because P4--T01 found
+zero internal gauge and zero algebraic redundancy.  Discarding a branch would
+change the reduced system rather than reconstruct a physical equivalence.
+
+\section{Universality and declared-sector audit}
+
+The six B1 channels have source velocities
+\begin{equation}
+ (1,0,0),\ (0,1,0),\ (0,0,1),\ (1,1,0),\ (0,1,2),\ (2,0,1).
+ \label{eq:velocities}
+\end{equation}
+They share the noncharacteristic source covector $\dd\tau$ and the common
+component \eqref{eq:gamma}, but they do not share one characteristic
+hypersurface.  For $\kappa=(1,0,0)$, for example, the six $\omega$ roots are
+\begin{equation}
+ (-1,0,0,-1,0,-2),
+\end{equation}
+and for $\kappa=(1,2,3)$ they are
+$(-1,-2,-3,-3,-8,-5)$.  A common Cauchy surface is therefore not a common
+propagation characteristic.
+
+The declared Position-A P7 source input supplies finite charge labels $Q$,
+defect classes $D$, representation grades $M$, and invariant pairs $(Q,D)$.
+It supplies no continuum sector equation, quotient tangent, or map assigning a
+P7 sector to a B1 channel.  Conversely, the B1 component labels are source
+scalars and are not licensed as physical matter sectors.  The complete
+comparison is therefore:
+\begin{center}
+\small
+\begin{tabular}{p{0.25\linewidth}p{0.29\linewidth}p{0.36\linewidth}}
+\toprule
+Object & Principal information & P4--T02 status\\
+\midrule
+B1 channels $q^1,\ldots,q^6$ & six distinct source factors & common source time, no physical sector typing\\
+P7 charge label $Q$ & no continuum equation & fail closed: not mapped\\
+P7 defect class $D$ & no continuum equation & fail closed: not mapped\\
+P7 grade $M$ & no continuum equation & fail closed: not mapped\\
+P7 invariant pair $(Q,D)$ & finite transition invariant only & fail closed: no common-principal proof\\
+\bottomrule
+\end{tabular}
+\end{center}
+Thus the candidate has neither universal declared-matter propagation nor a
+physically derived generalized causal equivalence.  Calling the polyhedral
+source component a universal physical cone would identify source labels with
+physical causal semantics by fiat.
+
+\section{Finite-variation countermodel}
+
+The exact diagonal system is well conditioned, but P3--T04 preserved a
+cross-law selection debt: the current ontology does not derive why the
+diagonal coefficient pattern is protected among the general source-local
+first-jet B1 coefficient class.  The following mutation tests that debt.
+
+Let $Y=\partial_1+\partial_2$ and let $\bar q$ be the selected P3--T04
+background.  For real $\epsilon$, change only the first two equations to
+\begin{align}
+ E_1^\epsilon(q)&=X_1q^1+\epsilon Y(q^2-\bar q^2),\nonumber\\
+ E_2^\epsilon(q)&=X_2q^2-\epsilon Y(q^1-\bar q^1).
+ \label{eq:mutation}
+\end{align}
+The added terms vanish identically at $q=\bar q$, so the background is
+preserved.  The mutation is real, local, first order, and source-only.  It
+uses no metric, target atlas, physical norm, or GR-fit coefficient.  Since $Y$
+is spatial relative to $\tau$, the time matrix remains $I_6$.
+
+\begin{theorem}[Arbitrarily small family-level loss of hyperbolicity]
+At the branch-1/branch-2 crossing $\kappa=(1,1,0)$, the first two spatial
+symbol entries of \eqref{eq:mutation} form
+\begin{equation}
+ B_\epsilon=
+ \begin{pmatrix}1&2\epsilon\\-2\epsilon&1\end{pmatrix}.
+ \label{eq:block}
+\end{equation}
+Its characteristic discriminant is $-16\epsilon^2$.  Thus every nonzero
+$\epsilon$, however small, gives a complex-conjugate characteristic-speed
+pair.
+\end{theorem}
+
+\begin{proof}
+The characteristic polynomial is
+$(\lambda-1)^2+4\epsilon^2$, whose roots are
+$1\pm2i\epsilon$.  Equivalently, the quadratic discriminant is
+$-16\epsilon^2<0$ for $\epsilon\ne0$.
+\end{proof}
+
+This theorem does not refute the immutable exact diagonal law: it changes that
+law.  It refutes family-level finite-variation robustness under the
+prospectively admitted B1 source-local coefficient class unless a new
+source-derived restriction protects simultaneous diagonal coupling.  Such a
+restriction is not present or adopted.
+
+The exact sweep at
+$\epsilon=10^{-5},10^{-4},10^{-3},10^{-2}$ reproduces a negative discriminant
+at every nonzero value.  By contrast, diagonal coefficient variations that
+preserve $\dd\tau(X_A)>0$ retain source symmetric hyperbolicity.  The failure
+is therefore accurately localized to unprotected cross-channel variation at
+branch crossings rather than misreported as fixed-law nonhyperbolicity.
+
+\section{Refinement and conditioning}
+
+P3--T03 proves a controlled upwind refinement limit for the exact fixed law.
+For mode $(1,1,1)$, the maximum discrete factor errors at
+$N=8,16,32,64$ are approximately
+\begin{equation}
+ 7.2762,\quad3.6853,\quad1.8486,\quad0.9250,
+\end{equation}
+and decrease monotonically.  The limit preserves all six factors.  Hence
+HF06 is not triggered for the exact fixed law.  The same result also proves
+that refinement does not merge the factors into one quadratic cone: it
+converges to the branch structure that fails GB03 and GB04.
+
+At the fixed-law level, the canonical eigenbasis has condition number one and
+directional multiplicities are controlled.  At the family level, the
+countermodel \eqref{eq:mutation} shows that arbitrary small cross-channel
+variation can leave the real spectrum.  This distinguishes numerical
+convergence of one sealed discretization from robustness of the scientific
+candidate family.
+
+\section{Hidden-target and hard-fail screen}
+
+No input uses a target atlas, source-cotangent metric, tetrad, coframe,
+Lorentzian constitutive tensor, target detector, GR target value, or Einstein
+action.  The field symmetrizer $H$ and source label $\tau$ are kept in their
+declared types.  Therefore HF01, HF02, HF03, HF07, and HF08 are not triggered;
+absence of those failures is hygiene evidence only.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.12\linewidth}
+                  >{\raggedright\arraybackslash}p{0.20\linewidth}
+                  >{\raggedright\arraybackslash}p{0.58\linewidth}}
+\toprule
+Criterion & Status & Exact reason\\
+\midrule
+GB01 & pass, hygiene only & complete source provenance and no target atlas\\
+GB02 & pass, source PDE only & reduced $P_D$ hyperbolic and fixed system symmetric hyperbolic\\
+GB03 & fail & no nonzero common quadratic characteristic polynomial and no physical selector\\
+GB04 & fail & distinct B1 branches and no P7-to-B1 continuum sector map\\
+GB05 & not established & no physical clock, rod, calibration, units, or scale\\
+GB06 & partial source only & passive covariance and local sheaf gluing, not physical global gluing\\
+GB07 & fail at family level & infinitesimal source-only cross-coupling creates complex speeds\\
+GB08 & pass, hygiene only & no metric-equivalent primitive; field symmetrizer kept typed\\
+\bottomrule
+\end{longtable}
+
+Two preregistered hard-fail triggers control the candidate disposition:
+\begin{enumerate}[leftmargin=*]
+  \item \texttt{HF04\_NONUNIVERSAL\_OR\_UNSELECTED\_MULTICONE}: the reduced
+        source system has six distinct branches and no derived physical
+        selector, quotient, or sector-common characteristic structure;
+  \item \texttt{HF05\_INSTABILITY\_NONHYPERBOLICITY\_DEGENERACY}: the broader
+        B1 coefficient family is not hyperbolicity-robust at crossings because
+        \eqref{eq:mutation} gives complex speeds for arbitrarily small
+        nonzero mutation.
+\end{enumerate}
+The phrase ``multicone'' here names the preregistered trigger.  The six B1
+branches remain source characteristics; this packet does not promote them to
+six physical cones.
+
+\section{Disposition, freeze control, and next lawful route}
+
+The result classification is \texttt{scoped\_obstruction}.  B1 has completed
+the construct, continuum-control, linearize, reduce, and stress cycle.  It is
+terminated and locally frozen under the exact tested assumptions.  The
+termination record is append-only, the active-family slot is cleared, and
+family slot 1 is consumed.
+
+The preregistered B2 candidate
+\texttt{CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1} remains an inactive fallback.
+It is not automatically activated.  Its missing continuum-lift descriptor,
+sector equations, quotient data, common-principal target, no-target-import
+receipt, and post-lift adequacy evaluation still fail closed.  P2--T03
+therefore requires a fresh Theoretical Continuation Selector decision.  That
+decision is a separate AgentJob and may select only one bounded B2 descriptor
+or activation path while preserving B1's negative result.
+
+P4--T03 is not unlocked because P4--T02 did not issue a qualifying continuation
+verdict.  The three-family budget is not exhausted: B2 remains preregistered
+and slot 3 remains reserved and unallocated.  The exact permitted conclusion
+is that this B1 candidate fails under its declared source-family scope.  It is
+not that all source extensions, the global ontology, or all \AE ther theories
+fail.
+
+\section{Distance-to-GR status}
+
+\begin{longtable}{p{0.29\linewidth}p{0.62\linewidth}}
+\toprule
+Burden & Status after P4--T02 B1 screen\\
+\midrule
+Source ontology primitives & unchanged; B1 data remain proposal-only and B1 is locally frozen\\
+Source equivalence $\mathrm{EqSrc}$ & passive source-chart covariance retained; no physical quotient added\\
+$\mathrm{RetainH}$ and $\mathrm{GenH}$ & unchanged and not derived\\
+$\mathrm{ObsLoc}_{\rm lc}$ and $\mathrm{Resp}_{\rm lc}$ & B1 token rank readiness inherited; no physical observer or universal sector map\\
+$M_{\rm src}$ & not adopted or identified with physical spacetime\\
+$g_{\rm eff}$ & blocked; no stable universal Lorentzian cone, scale, or metric exists in this packet\\
+Matter coupling & blocked; finite P7 sectors have no B1 continuum principal map\\
+Einstein equations & blocked\\
+Finite-variation robustness & fixed-law source PDE positive; B1 family-level criterion fails by exact countermodel\\
+Benchmark and Gate status & blocked; no protected verdict or external review requested\\
+Current route freeze & B1 locally frozen; fresh B2 selector route remains open\\
+Hard-fail status & HF04 and family-level HF05 trigger candidate termination\\
+\bottomrule
+\end{longtable}
+
+The physical Distance-to-GR delta is zero.  A negative candidate disposition
+sharpens route state but does not construct $g_{\rm eff}$ or promote a
+downstream physical object.
+
+\section{Executable and review evidence}
+
+The primary standard-library implementation checks exact fixed-law roots,
+source symmetric-hyperbolicity matrices, the hyperbolicity component,
+quadratic divisibility obstruction, exact perturbation discriminants, and
+refinement-factor convergence.  A separate implementation imports no primary
+model.  It constructs a 156-by-10 rational quadratic-constraint matrix of
+rank ten and independently reproduces the negative perturbation discriminants.
+
+The Physicist-Mathematician child owns the PDE proofs, exact countermodel, and
+quadratic obstruction.  The Physicist-Philosopher child owns the source versus
+physical type boundary, sector non-identification, hard-fail scope, and global
+no-go prohibition.  The parent reconciles the apparent tension between
+fixed-law hyperbolicity and candidate failure: both are true because the
+positive result is source-PDE-local while P4--T02 requires a stable universal
+physical structure and family robustness.
+
+Internal role separation and the independent implementation are not external
+PDE review or independent scientific replication.  A validator or checkpoint
+PASS is not proof authority, Gate authority, or physics promotion.
+
+\section{Final statement}
+
+The decisive P4--T02 B1 result is
+\begin{center}
+\fbox{\parbox{0.88\linewidth}{\centering
+fixed source symmetric hyperbolicity\quad $+$\quad
+candidate-scoped universal/robust Lorentzian obstruction.}}
+\end{center}
+B1 terminates under HF04 and family-level HF05.  B2 remains inactive pending a
+fresh selector and its missing construction prerequisites.  No canonical
+ontology edit, source-law adoption, physical time, physical cone, Lorentzian
+signature, scale, effective metric, matter coupling, Einstein equation, Gate
+B verdict, benchmark promotion, publication, push, global no-go theorem, or
+completed derivation follows.
+
+\end{document}

@@ -1,0 +1,23 @@
+schema_id: "validator_engineer_independent_evidence_v1"
+task_id: "RT-20260809-019"
+job_id: "AJ-RT-20260809-019-001"
+status: "completed"
+perspective: "validator-engineer@0.2.0"
+independence:
+  primary_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_model.py"
+  independent_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_independent_reproduction.py"
+  independent_imports_primary: false
+  independent_method: "separately encoded exact rational point constraints for a general homogeneous quadratic plus direct two-by-two characteristic discriminants"
+checks:
+  fixed_root_cases_reproduced: 5
+  quadratic_constraint_point_count: 156
+  quadratic_constraint_rank: 10
+  quadratic_unknown_count: 10
+  only_zero_common_quadratic: true
+  perturbation_parameters_tested: 4
+  all_nonzero_perturbation_discriminants_negative: true
+  primary_and_independent_dispositions_agree: true
+  target_geometry_inputs: 0
+  metric_or_target_fit_inserted: false
+validation_scope: "task-local mathematical and computational evidence only; not proof authority, external PDE review, Gate review, adoption, or physics promotion"
+global_validator_semantics_changed: false

@@ -1,0 +1,61 @@
+schema_id: "v22_p4_t02_stress_cases_v1"
+fixture_id: "V22-P4-T02-STRESS-CASES-V1"
+task_id: "RT-20260809-019"
+job_id: "AJ-RT-20260809-019-001"
+status: "frozen"
+candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REDUCED-PRINCIPAL-V1"
+family_id: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+source_time_covector: [1, 0, 0, 0]
+source_vectors:
+  - [1, 1, 0, 0]
+  - [1, 0, 1, 0]
+  - [1, 0, 0, 1]
+  - [1, 1, 1, 0]
+  - [1, 0, 1, 2]
+  - [1, 2, 0, 1]
+fixed_system_cases:
+  - case_id: "AXIS-X"
+    spatial_covector: [1, 0, 0]
+    omega_roots: [-1, 0, 0, -1, 0, -2]
+  - case_id: "AXIS-Y"
+    spatial_covector: [0, 1, 0]
+    omega_roots: [0, -1, 0, -1, -1, 0]
+  - case_id: "AXIS-Z"
+    spatial_covector: [0, 0, 1]
+    omega_roots: [0, 0, -1, 0, -2, -1]
+  - case_id: "P4-T01-CROSSING"
+    spatial_covector: [1, 2, 3]
+    omega_roots: [-1, -2, -3, -3, -8, -5]
+  - case_id: "BRANCH-1-2-CROSSING"
+    spatial_covector: [1, 1, 0]
+    omega_roots: [-1, -1, 0, -2, -1, -2]
+hyperbolicity_line_cases:
+  - [0, 0, 0, 0]
+  - [2, 1, -3, 4]
+  - [-5, 2, 1, -1]
+  - [1, -2, 3, 5]
+  - [7, -4, -2, 1]
+cross_channel_countermodel:
+  affected_branches: [1, 2]
+  source_spatial_vector: [0, 1, 1, 0]
+  crossing_spatial_covector: [1, 1, 0]
+  perturbation_parameters: ["0", "1/10000", "1/1000", "1/100", "1/10"]
+  equation_1: "E1_epsilon=X1(q1)+epsilon*Y(q2-qbar2)"
+  equation_2: "E2_epsilon=X2(q2)-epsilon*Y(q1-qbar1)"
+  background_preserved: true
+  target_data_used: false
+  physical_metric_used: false
+refinement_case:
+  integer_mode: [1, 1, 1]
+  levels: [8, 16, 32, 64]
+expected_disposition:
+  exact_fixed_source_system_symmetric_hyperbolic: true
+  physical_time_orientation_derived: false
+  common_algebraic_hyperbolicity_cone_exists: true
+  common_lorentzian_characteristic_cone_exists: false
+  derived_generalized_physical_causal_structure_exists: false
+  family_level_finite_variation_robustness_passes: false
+  hard_fail_trigger_ids:
+    - "HF04_NONUNIVERSAL_OR_UNSELECTED_MULTICONE"
+    - "HF05_INSTABILITY_NONHYPERBOLICITY_DEGENERACY"
+  candidate_disposition: "terminate_primary_preserve_result_fresh_fallback_selector_required"

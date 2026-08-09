@@ -1,0 +1,48 @@
+schema_id: "v22_p4_t02_sector_universality_matrix_v1"
+artifact_id: "V22-P4-T02-SECTOR-UNIVERSALITY-MATRIX-V1"
+task_id: "RT-20260809-019"
+job_id: "AJ-RT-20260809-019-001"
+status: "draft/control"
+candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REDUCED-PRINCIPAL-V1"
+b1_channel_rows:
+  - {channel: 1, source_velocity: [1, 0, 0], factor: "w+x", physical_sector_type: "not supplied"}
+  - {channel: 2, source_velocity: [0, 1, 0], factor: "w+y", physical_sector_type: "not supplied"}
+  - {channel: 3, source_velocity: [0, 0, 1], factor: "w+z", physical_sector_type: "not supplied"}
+  - {channel: 4, source_velocity: [1, 1, 0], factor: "w+x+y", physical_sector_type: "not supplied"}
+  - {channel: 5, source_velocity: [0, 1, 2], factor: "w+y+2z", physical_sector_type: "not supplied"}
+  - {channel: 6, source_velocity: [2, 0, 1], factor: "w+2x+z", physical_sector_type: "not supplied"}
+b1_channel_comparison:
+  distinct_global_characteristic_factors: 6
+  common_source_time_covector: true
+  common_characteristic_hypersurface: false
+  derived_channel_equivalence_or_quotient: false
+  channel_labels_may_be_reinterpreted_as_physical_sectors: false
+p7_declared_sector_rows:
+  - sector_record: "charge label Q"
+    continuum_equation_mapped_to_b1: false
+    principal_factor_available: false
+    status: "FAIL_CLOSED_NOT_TYPED"
+  - sector_record: "defect class D"
+    continuum_equation_mapped_to_b1: false
+    principal_factor_available: false
+    status: "FAIL_CLOSED_NOT_TYPED"
+  - sector_record: "representation grade M"
+    continuum_equation_mapped_to_b1: false
+    principal_factor_available: false
+    status: "FAIL_CLOSED_NOT_TYPED"
+  - sector_record: "invariant sector pair (Q,D)"
+    continuum_equation_mapped_to_b1: false
+    principal_factor_available: false
+    status: "FAIL_CLOSED_NOT_TYPED"
+universality_verdict:
+  source_channel_common_initial_surface: true
+  source_channel_common_hyperbolicity_component: true
+  physical_sector_universality_established: false
+  physical_generalized_causal_equivalence_established: false
+  failure_reason: "Common source evolution orientation does not identify distinct characteristic branches, and the finite P7 sector taxonomy has no continuum equation or typed map into the B1 channels."
+authority_limits:
+  realistic_matter_claimed: false
+  physical_sector_semantics_adopted: false
+  matter_coupling_derived: false
+  effective_metric_derived: false
+  distance_to_gr_changed: false

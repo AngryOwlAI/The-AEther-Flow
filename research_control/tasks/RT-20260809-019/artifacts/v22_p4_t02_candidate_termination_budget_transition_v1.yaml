@@ -1,0 +1,53 @@
+schema_id: "v22_p4_t02_candidate_termination_budget_transition_v1"
+transition_id: "TERMINATE_ACTIVE_B1_AFTER_P4_T02"
+task_id: "RT-20260809-019"
+job_id: "AJ-RT-20260809-019-001"
+status: "draft/control append-only transition evidence"
+protocol_id: "V22-P2-T03-EXTENSION-BUDGET-PROTOCOL-V1"
+prior_activation:
+  transition_id: "ACTIVATE_PRIMARY"
+  task_id: "RT-20260809-010"
+  candidate_seed_id: "CAND-V22-B1-LOCAL-SIX-FIELD-RESPONSE-SEED-V1"
+  evolved_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REDUCED-PRINCIPAL-V1"
+  family_id: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+  family_slot: 1
+termination:
+  executed: true
+  candidate_disposition: "TERMINATED_HARD_FAIL_APPEND_ONLY"
+  trigger_ids:
+    - "HF04_NONUNIVERSAL_OR_UNSELECTED_MULTICONE"
+    - "HF05_INSTABILITY_NONHYPERBOLICITY_DEGENERACY"
+  exact_fixed_source_pde_hyperbolic: true
+  p4_t03_qualifying_continuation: false
+  negative_results_preserved: true
+budget_state_after_transition:
+  active_family_id: ""
+  active_candidate_id: ""
+  consumed_family_slots: [1]
+  consumed_family_count: 1
+  fallback_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  fallback_candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  fallback_selection_status: "preregistered_fallback_inactive"
+  fallback_activation_status: "inactive_fresh_selector_and_descriptor_required"
+  third_slot_status: "reserved_unallocated"
+  budget_exhausted: false
+  fourth_slot_available: false
+next_transition:
+  transition_id: "SELECT_B2_DESCRIPTOR_OR_ACTIVATION_PATH"
+  authority: "fresh theoretical-continuation selector AgentJob"
+  automatic: false
+  prerequisites_still_missing:
+    - "B2 continuum-lift descriptor with fields regularity and sector equations"
+    - "quotient data and common-principal target"
+    - "no-target-import receipt"
+    - "post-lift P2-T01 adequacy reevaluation"
+  allowed_result: "one bounded selector decision preserving B1 termination and B2 inactivity until every activation prerequisite is met"
+authority_limits:
+  source_extension_adopted: false
+  b2_activated: false
+  third_slot_allocated: false
+  current_ontology_declared_insufficient: false
+  global_no_go_claim_authorized: false
+  gate_b_verdict_issued: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

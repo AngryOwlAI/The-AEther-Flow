@@ -1,0 +1,466 @@
+job_id: "AJ-RT-20260809-019-001"
+task_id: "RT-20260809-019"
+decision_id: "DDR-20260809-019"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260809-019"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-09T20:08:07Z"
+started_at: "2026-08-09T20:08:07Z"
+completed_at: "2026-08-09T20:31:00Z"
+completion_path: "research_control/tasks/RT-20260809-019/jobs/completions/AJC-AJ-RT-20260809-019-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal, checkpoint commit 4e87a27cd96ef8497098a65f4e8ff82274350f81, and handoff-0988 authorize one P4-T02 B1 Refuter screen and one checkpoint. No B2 activation, P4-T03, ontology adoption, protected Gate review, reviewer contact, publication, push, or external action is authorized."
+objective: "Implement V22 P4-T02 for the exact P4-T01 B1 candidate by proving the fixed source hyperbolicity result, testing common quadratic characteristic geometry and declared-sector universality, constructing an exact family-level robustness countermodel, evaluating refinement consistency and all preregistered Gate B/hard-fail criteria, and issuing an append-only candidate disposition."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Stress the exact P4-T01 source principal polynomial for hyperbolicity, strong or symmetric well-posedness, stable time orientation, degeneracy conditioning, common-cone universality across declared sectors, finite-variation robustness, and every preregistered hard-fail trigger without inserting or fitting a target metric."
+route_label: "ordinary-research-packet"
+route_reason: "handoff_0988_selects_dependency_ready_v22_p4_t02_after_the_committed_rt018_checkpoint"
+route_strategy_id: "stress_v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_v1"
+immutable_route_sha256: "41aa74eb541cca5e636539b1056b93c3aa53bcb737601ca9de970d7cfffd45c5"
+source_head: "4e87a27cd96ef8497098a65f4e8ff82274350f81"
+source_tree: "752371cc6204c9943d22e3d14f09be5808dbd39f"
+assembly_parent_head: "4e87a27cd96ef8497098a65f4e8ff82274350f81"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+recommendation_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R10"
+  - "V22-R13"
+declared_coverage_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R13"
+  - "S5"
+sequence_step_ids:
+  - "S5"
+cross_cutting_directive_ids:
+  - "V22-X02"
+  - "V22-X04"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P4-T02"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0988"
+  source_handoff_path: "research_control/handoffs/handoff-0988.yaml"
+  source_handoff_sha256: "41aa74eb541cca5e636539b1056b93c3aa53bcb737601ca9de970d7cfffd45c5"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite:
+    task_id: "RT-20260809-018"
+    commit: "4e87a27cd96ef8497098a65f4e8ff82274350f81"
+    committed: true
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1158
+    relationship_row_count: 5911
+    semantic_row_count: 1158
+    vault_row_count: 1158
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      query_status: "completed"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex"
+      source_hash: "464743abcc055873b6da41fcab78b4808e86378fc9dd91cfbc9acd0cc22eb151"
+    - object_id: "TEX-V22-P3-T03-CONTROLLED-REFINEMENT-LIMIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex"
+      source_hash: "ba5b815072de442dda7ee2bfb6aba41b7d98082b4f0586df22d9d327c0eda921"
+    - object_id: "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+      source_hash: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+  additional_control_inspections:
+    - object_id: "HANDOFF-0988"
+      control_path: "research_control/handoffs/handoff-0988.yaml"
+      source_hash: "41aa74eb541cca5e636539b1056b93c3aa53bcb737601ca9de970d7cfffd45c5"
+    - object_id: "V22-P2-T03-EXTENSION-BUDGET-PROTOCOL-V1"
+      control_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_extension_budget_protocol_v1.yaml"
+      source_hash: "736c9914a287863f5bad7d456e20f2a67520ad377b95dca89027c7323fc4b1d7"
+    - object_id: "V22-P2-T03-GATE-B-HARD-FAIL-MATRIX-V1"
+      control_path: "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_hard_fail_matrix_v1.yaml"
+      source_hash: "f362ba5f52d472a02d2345760f9ad80b05af31b9973cb5d264ba1929ad16c9d0"
+    - object_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+      control_path: "research_control/tasks/RT-20260809-009/artifacts/v22_p2_t04_fallback_matter_principal_candidate_v1.yaml"
+      source_hash: "11917a5c868b6ed50633e1b7528b59079db40f10c003c32176d1887df5dae6e5"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-GR-DERIVATION-BURDEN-MAP"
+      control_path: "research_control/design/gr_derivation_burden_map.md"
+      source_hash: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    - object_id: "V22-RECOMMENDATION-BACKLOG"
+      control_path: "research_control/design/v22_recommendation_backlog.yaml"
+      source_hash: "cdf54763f349cca5f95e02ceac32882460fac920c484a1e9861106e060d72c02"
+  authority_note: "Tracked registered source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "countermodel"
+  candidate_family: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+  assumption_delta:
+    - "Hold the exact P4-T01 fixed diagonal source law unchanged for the fixed-system hyperbolicity theorem."
+    - "Treat tau d tau Gamma_tau and H only in their declared source or field-fiber types."
+    - "Require a physical selector quotient or typed matter map before identifying distinct branches as one universal causal geometry."
+    - "For family-level robustness only, admit an arbitrarily small source-local first-order cross-channel coefficient mutation that preserves the selected background and time matrix."
+    - "Apply the preregistered P2-T03 Gate B criteria hard-fail triggers and extension-budget transition exactly."
+  materiality_basis: "P4-T01 supplied branch-complete source-principal data but did not determine hyperbolicity, common quadratic geometry, sector universality, or family robustness. P4-T02 adds fixed-law symmetric-hyperbolicity and polynomial-hyperbolicity theorems, a rank-ten no-common-quadratic certificate, an exact negative-discriminant counterfamily, and a controlled candidate termination."
+  payload_details:
+    countermodel_id: "V22-P4-T02-CROSS-CHANNEL-COMPLEX-SPEED-COUNTERMODEL-V1"
+    countermodel_scope: "source_extension_candidate"
+    exact_fixed_law_changed: true
+    global_no_go_claimed: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1"
+    - "TEX-V22-P3-T03-CONTROLLED-REFINEMENT-LIMIT-V1"
+    - "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_extension_budget_protocol_v1.yaml"
+    - "research_control/tasks/RT-20260809-008/artifacts/v22_p2_t03_hard_fail_matrix_v1.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex"
+    - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_screen_specification_v1.yaml"
+    - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_robustness_countermodel_v1.yaml"
+    - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_refuter_obstruction_record_v1.yaml"
+    - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_candidate_termination_budget_transition_v1.yaml"
+    - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_model.py"
+    - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_independent_reproduction.py"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+    - "latex_compile_pass"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "v22_p4_t02_b1_hyperbolicity_universality_robustness_hard_fail_screen"
+  family_id: "FAM-V22-B1-LOCAL-MULTIFIELD-CONTINUUM"
+  family_identity_sha256: "32110632f8832091d69ca52e96dfdf99c26087bfc75575b77a466631eca9d051"
+  assumption_sha256es:
+    - "464743abcc055873b6da41fcab78b4808e86378fc9dd91cfbc9acd0cc22eb151"
+    - "d0ad866ccf9791487e5a7a04d23acf482581609d2a017206799fa13296bd8e62"
+  route_kind: "precise_obstruction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V22-P4-T02-B1-COMMON-QUADRIC-AND-FAMILY-ROBUSTNESS-OBSTRUCTION"
+    material_difference_basis: "This packet supplies a new fixed-law hyperbolicity theorem, independent rank-ten no-quadratic certificate, and exact family-level negative-discriminant countermodel; it does not reconstruct or rename a frozen candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex"
+      - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_robustness_countermodel_v1.yaml"
+      - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_refuter_obstruction_record_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered P4-T02 theorem and scoped-obstruction manuscript with exact fixed source hyperbolicity no-common-quadratic proof sector matrix countermodel and candidate disposition"
+      - "machine-readable Gate B hard-fail sector obstruction countermodel provenance and budget-transition records"
+    project_system:
+      - "primary and independent exact-rational models frozen fixtures deterministic focused validation compact receipt LaTeX receipt and synthesis records"
+      - "standard control records generated derivatives and one governed checkpoint"
+  acceptance_criteria:
+    physics:
+      - "the exact fixed-law positive hyperbolicity result is preserved and typed as source PDE structure only"
+      - "common quadratic geometry sector universality and family robustness are tested without target import"
+      - "HF04 and family-level HF05 produce a candidate-scoped append-only B1 termination without a global no-go"
+      - "B2 remains inactive and P4-T03 remains locked"
+    project_system:
+      - "a separate implementation reproduces rank ten on 156 quadratic constraints and every negative perturbation discriminant"
+      - "registered source hashes generated derivatives and seven rendered TeX pages synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "derive child perspective questions from the Refuter role"
+      - "enforce the shared claim boundary and source restrictions"
+      - "review fixed-law and family-level conclusions for conflicts"
+      - "request bounded conflict resolution when needed"
+      - "fuse child outputs into the final P4-T02 manuscript"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-019/artifacts/child_phys_math_p4_t02_hyperbolicity.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-019/artifacts/child_phys_phil_p4_t02_scope_refutation.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260809-019/artifacts/parent_conflict_review_p4_t02_screen.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260809-019/artifacts/parent_fusion_notes_p4_t02_screen.md"
+    fused_output_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - ".codex/skills/continue-research/**"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/AGENTS.md"
+  - "research_control/design/**"
+  - "research_control/handoffs/handoff-0988.yaml"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260809-008/**"
+  - "research_control/tasks/RT-20260809-009/**"
+  - "research_control/tasks/RT-20260809-010/**"
+  - "research_control/tasks/RT-20260809-012/**"
+  - "research_control/tasks/RT-20260809-015/**"
+  - "research_control/tasks/RT-20260809-016/**"
+  - "research_control/tasks/RT-20260809-018/**"
+  - "research_control/tasks/RT-20260727-007/**"
+  - "registries/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0989.yaml"
+  - "research_control/handoffs/handoff-0989.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260809-019/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+forbidden_paths:
+  - "ontology/**"
+  - "manuscript/**"
+  - "implementations_plans/**"
+  - "research_control/tasks/RT-20260809-018/**"
+  - ".agents/roles/**"
+  - ".agents/schemas/**"
+  - ".codex/skills/**"
+  - "scripts/**"
+  - "tests/**"
+allowed_source_classes:
+  - "registered_canonical_markdown"
+  - "registered_canonical_tex"
+  - "tracked_research_control"
+  - "task_local_source_extension_data"
+  - "task_local_exact_computation"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "physics_claim_promotion"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "generated_derivative_authority"
+  - "target_atlas"
+  - "target_metric"
+  - "target_fit"
+  - "reviewer_contact"
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_model.py"
+  - ".venv/bin/python research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_independent_reproduction.py"
+  - ".venv/bin/python research_control/tasks/RT-20260809-019/artifacts/validate_v22_p4_t02_screen.py --write --json"
+  - "bundled Tectonic compile and rendered-page visual review"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/research_control/task_taxonomy.py --validate-repository --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260809-019-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260809-019-001 --planner-validation"
+required_validators:
+  - "focused P4-T02 validator"
+  - "task taxonomy"
+  - "documentation impact"
+  - "claim language"
+  - "generated freshness"
+  - "memory bootstrap validate-only"
+  - "affected validation profile"
+  - "research-control diff validation"
+  - "git diff checks"
+expected_outputs:
+  - "research_control/tasks/RT-20260809-019/00_TASK.yaml"
+  - "research_control/tasks/RT-20260809-019/DDR-20260809-019.md"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_screen_specification_v1.yaml"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_gate_b_hard_fail_disposition_v1.yaml"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_sector_universality_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_robustness_countermodel_v1.yaml"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_refuter_obstruction_record_v1.yaml"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_candidate_termination_budget_transition_v1.yaml"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_source_provenance_manifest_v1.yaml"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_model.py"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_independent_reproduction.py"
+  - "research_control/tasks/RT-20260809-019/artifacts/fixtures/v22_p4_t02_stress_cases.yaml"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_screen_validation.json"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_compact_receipt.json"
+  - "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260809-019/artifacts/child_phys_math_p4_t02_hyperbolicity.yaml"
+  - "research_control/tasks/RT-20260809-019/artifacts/child_phys_phil_p4_t02_scope_refutation.yaml"
+  - "research_control/tasks/RT-20260809-019/artifacts/validator_engineer_p4_t02_independent_evidence.yaml"
+  - "research_control/tasks/RT-20260809-019/artifacts/parent_conflict_review_p4_t02_screen.yaml"
+  - "research_control/tasks/RT-20260809-019/artifacts/parent_fusion_notes_p4_t02_screen.md"
+  - "research_control/tasks/RT-20260809-019/artifacts/validate_v22_p4_t02_screen.py"
+  - "research_control/tasks/RT-20260809-019/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260809-019/jobs/completions/AJC-AJ-RT-20260809-019-001.yaml"
+  - "research_control/tasks/RT-20260809-019/roles/refuter@0.2.0--RT-20260809-019.yaml"
+  - "research_control/handoffs/handoff-0989.yaml"
+  - "research_control/handoffs/handoff-0989.md"
+claim_boundary:
+  allowed_claims:
+    - "exact fixed B1 source symmetric hyperbolicity relative to proposal-only tau"
+    - "exact polynomial hyperbolicity with an open convex polyhedral source-cotangent component"
+    - "no nonzero quadratic polynomial vanishes on all six fixed characteristic hyperplanes"
+    - "no tracked continuum map identifies finite P7 sector records with B1 channels"
+    - "the broader B1 source-local coefficient family fails finite-variation hyperbolicity robustness under the explicit countermodel"
+    - "HF04 and family-level HF05 terminate and locally freeze B1 append-only"
+    - "B2 remains inactive and P4-T03 remains locked pending a fresh selector"
+  forbidden_claims:
+    - "the exact fixed B1 source law is nonhyperbolic"
+    - "the source hyperbolicity component is a physical Lorentzian cone"
+    - "H or tau is a physical metric clock or time orientation"
+    - "all source extensions or all AEther theories fail"
+    - "B2 is activated viable or adopted"
+    - "P4-T03 conformal reconstruction is unlocked"
+    - "Gate B g_eff matter coupling Einstein equations benchmark promotion or completed derivation"
+  authority_source: "research_control/handoffs/handoff-0988.yaml"

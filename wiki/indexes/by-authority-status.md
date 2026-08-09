@@ -138,6 +138,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P3-T03-PARENT-FUSION-CONTROLLED-REFINEMENT-V1` `research_control/tasks/RT-20260809-015/artifacts/parent_fusion_notes_p3_t03_refinement.md`
 - `MD-V22-P3-T04-PARENT-FUSION-LINEAR-RESPONSE-V1` `research_control/tasks/RT-20260809-016/artifacts/parent_fusion_notes_p3_t04_linear_response.md`
 - `MD-V22-P4-T01-PARENT-FUSION-PRINCIPAL-SYMBOL-V1` `research_control/tasks/RT-20260809-018/artifacts/parent_fusion_notes_p4_t01_principal_symbol.md`
+- `MD-V22-P4-T02-PARENT-FUSION-HARD-FAIL-SCREEN-V1` `research_control/tasks/RT-20260809-019/artifacts/parent_fusion_notes_p4_t02_screen.md`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V2-SMUGGLING-AUDIT` `research_control/tasks/RT-20260718-019/artifacts/eqsrc_closure_source_law_v2_smuggling_audit.tex`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-V3-REFUTER-STRESS` `research_control/tasks/RT-20260718-022/artifacts/eqsrc_closure_source_law_v3_refuter_stress.tex`
@@ -581,6 +582,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P3-T03-CONTROLLED-REFINEMENT-LIMIT-V1` `research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex`
 - `TEX-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-PREPRINCIPAL-V1` `research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex`
 - `TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1` `research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex`
+- `TEX-V22-P4-T02-HYPERBOLICITY-UNIVERSALITY-ROBUSTNESS-HARD-FAIL-SCREEN-V1` `research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex`
 
 ## explanatory_noncanonical
 
@@ -1345,6 +1347,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P3-T03-PARENT-FUSION-CONTROLLED-REFINEMENT-V1` `wiki/markdown/md-v22-p3-t03-parent-fusion-controlled-refinement-v1.md`
 - `WIKI-MD-V22-P3-T04-PARENT-FUSION-LINEAR-RESPONSE-V1` `wiki/markdown/md-v22-p3-t04-parent-fusion-linear-response-v1.md`
 - `WIKI-MD-V22-P4-T01-PARENT-FUSION-PRINCIPAL-SYMBOL-V1` `wiki/markdown/md-v22-p4-t01-parent-fusion-principal-symbol-v1.md`
+- `WIKI-MD-V22-P4-T02-PARENT-FUSION-HARD-FAIL-SCREEN-V1` `wiki/markdown/md-v22-p4-t02-parent-fusion-hard-fail-screen-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -1821,6 +1824,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P3-T03-CONTROLLED-REFINEMENT-LIMIT-V1` `wiki/tex/tex-v22-p3-t03-controlled-refinement-limit-v1.md`
 - `WIKI-TEX-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-PREPRINCIPAL-V1` `wiki/tex/tex-v22-p3-t04-background-linear-response-preprincipal-v1.md`
 - `WIKI-TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1` `wiki/tex/tex-v22-p4-t01-gauge-reduced-source-principal-symbol-v1.md`
+- `WIKI-TEX-V22-P4-T02-HYPERBOLICITY-UNIVERSALITY-ROBUSTNESS-HARD-FAIL-SCREEN-V1` `wiki/tex/tex-v22-p4-t02-hyperbolicity-universality-robustness-hard-fail-screen-v1.md`
 
 ## project_control
 

@@ -1,0 +1,31 @@
+schema_id: "parent_child_execution_unit_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician with hyperbolic-PDE consultation lens"
+task_id: "RT-20260809-019"
+job_id: "AJ-RT-20260809-019-001"
+status: "completed"
+question: "What does the exact B1 reduced principal system establish about source hyperbolicity, common characteristic geometry, degeneracy conditioning, and finite-variation robustness?"
+result:
+  disposition: "fixed_source_hyperbolicity_with_candidate_scoped_obstruction"
+  fixed_system_symmetric_hyperbolic: true
+  field_symmetrizer: "H=I_6"
+  canonical_eigenbasis_condition_number: 1
+  polynomial_hyperbolic_with_respect_to: "d tau"
+  source_hyperbolicity_component: "intersection_A {k:k(X_A)>0}"
+  source_hyperbolicity_component_kind: "open convex polyhedral source-cotangent cone"
+  common_nonzero_quadratic_characteristic_polynomial_exists: false
+  quadratic_constraint_matrix_rank: 10
+  quadratic_constraint_matrix_column_count: 10
+  exact_countermodel_discriminant: "-16 epsilon^2"
+  complex_pair_for_every_nonzero_epsilon: true
+  fixed_refinement_errors_strictly_decrease: true
+  exact_fixed_law_refuted: false
+  broader_b1_family_robustness_refuted: true
+  unresolved:
+    - "whether a materially distinct B2 construction can supply a lawful continuum lift and common principal target"
+    - "whether any later candidate can derive physical time scale matter universality and g_eff"
+new_mathematical_payload:
+  - "theorem with proof that the fixed diagonal source system is symmetric hyperbolic relative to proposal-only tau"
+  - "theorem with algebraic and independent finite certificates excluding a nonzero common quadratic characteristic polynomial"
+  - "exact arbitrarily small cross-channel counterfamily with negative characteristic discriminant at a B1 branch crossing"
+claim_boundary_preserved: true

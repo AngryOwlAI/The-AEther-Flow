@@ -1,0 +1,37 @@
+schema_id: "v22_p4_t02_robustness_countermodel_v1"
+countermodel_id: "V22-P4-T02-CROSS-CHANNEL-COMPLEX-SPEED-COUNTERMODEL-V1"
+task_id: "RT-20260809-019"
+job_id: "AJ-RT-20260809-019-001"
+status: "draft/control exact source-family countermodel"
+scope: "source_extension_candidate"
+base_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REDUCED-PRINCIPAL-V1"
+base_equations:
+  E1: "X1(q1)=0"
+  E2: "X2(q2)=0"
+mutation:
+  source_vector: "Y=partial_1+partial_2"
+  E1_epsilon: "X1(q1)+epsilon Y(q2-qbar2)=0"
+  E2_epsilon: "X2(q2)-epsilon Y(q1-qbar1)=0"
+  other_channels_unchanged: true
+  background_preserved: true
+  time_matrix_unchanged: "I_6"
+  source_local_and_first_order: true
+  metric_or_target_data_used: false
+crossing_test:
+  spatial_covector: [1, 1, 0]
+  base_branch_speeds: [1, 1]
+  mutated_block: "[[1,2 epsilon],[-2 epsilon,1]]"
+  characteristic_polynomial: "(lambda-1)^2+4 epsilon^2"
+  discriminant: "-16 epsilon^2"
+  conclusion: "Every nonzero epsilon creates a complex-conjugate speed pair."
+parameter_sweep:
+  - {epsilon: "1/100000", discriminant: "-1/625000000", complex_pair: true}
+  - {epsilon: "1/10000", discriminant: "-1/6250000", complex_pair: true}
+  - {epsilon: "1/1000", discriminant: "-1/62500", complex_pair: true}
+  - {epsilon: "1/100", discriminant: "-1/625", complex_pair: true}
+scope_guard:
+  exact_fixed_diagonal_law_refuted: false
+  broader_b1_family_robustness_refuted: true
+  reason: "The mutation changes the sealed exact equations but lies within the source-local first-jet coefficient class prospectively admitted for B1; no derived source rule protects diagonal coupling."
+  future_repair_possible: true
+  global_no_go_claimed: false

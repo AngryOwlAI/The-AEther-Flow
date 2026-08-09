@@ -1,0 +1,264 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+handoff_id: "handoff-0989"
+handoff_number: 989
+handoff_kind: "v22_p4_t02_b1_scoped_obstruction_and_inactive_b2_selector"
+task_id: "RT-20260809-019"
+decision_id: "DDR-20260809-019"
+job_id: "AJ-RT-20260809-019-001"
+completion_id: "AJC-AJ-RT-20260809-019-001"
+completion_path: "research_control/tasks/RT-20260809-019/jobs/completions/AJC-AJ-RT-20260809-019-001.yaml"
+completion_sha256: "8e8373353f285b870ce9df58395ac6f27a5671a430fb47104842c32b1a99fe08"
+status: "ready_for_v22_p4_t02_b2_selector_after_checkpoint"
+created_at: "2026-08-09T20:31:00Z"
+parent_handoff_id: "handoff-0988"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+completed_plan_task_id: "P4-T02-B1-BRANCH"
+source_role_id: "refuter"
+source_role_version: "0.2.0"
+source_execution_role_ref: "refuter@0.2.0--RT-20260809-019"
+summary: "P4-T02 proves the exact fixed B1 diagonal source system is symmetric hyperbolic relative to proposal-only tau and that P_D is hyperbolic on an open convex polyhedral source-cotangent component. It also proves no nonzero quadratic vanishes on the six distinct characteristic hyperplanes; an independent 156-by-10 rational constraint matrix has rank ten. P7 sector records have no continuum map into B1. An arbitrarily small background-preserving source-local cross-channel family mutation has discriminant -16 epsilon^2 and complex speeds for every nonzero epsilon. The mutation changes the fixed law, so the fixed-law theorem survives while broader B1 family robustness fails. HF04 and family-level HF05 terminate and locally freeze B1 append-only. P4-T03 stays locked. B2 remains inactive and incomplete. All 172 focused checks and seven warning-free rendered pages pass. This is a scoped obstruction with no protected Gate B verdict, global no-go, or Distance-to-GR delta."
+next_action: "Run the single governed checkpoint for AJ-RT-20260809-019-001. After it commits, execute exactly one V22 P4-T02 Theoretical Continuation Selector AgentJob to choose one bounded descriptor or activation path for the inactive B2 fallback while preserving B1 termination and P4-T03 lock; do not contact reviewers or take any protected or external action."
+current_claim_boundary: "CB-V22-P4-T02-HYPERBOLICITY-ROBUSTNESS-HARD-FAIL-001"
+loop_risk_route: "select_v22_p4_t02_b2_fallback_descriptor_or_activation_path_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260809-019"
+  latest_research_handoff_id: "handoff-0989"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-019-001. After it commits, execute exactly one V22 P4-T02 Theoretical Continuation Selector AgentJob to choose one bounded descriptor or activation path for the inactive B2 fallback while preserving B1 termination and P4-T03 lock; do not contact reviewers or take any protected or external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed P4-T02 B1 checkpoint followed by one separately admitted Theoretical Continuation Selector decision for the inactive preregistered B2 fallback under P4-T02."
+  completed_task: "RT-20260809-019"
+  completed_completion_path: "research_control/tasks/RT-20260809-019/jobs/completions/AJC-AJ-RT-20260809-019-001.yaml"
+  completed_completion_sha256: "8e8373353f285b870ce9df58395ac6f27a5671a430fb47104842c32b1a99fe08"
+  source_task_id: "RT-20260809-018"
+  source_job_id: "AJ-RT-20260809-018-001"
+  source_handoff_id: "handoff-0988"
+  source_handoff_path: "research_control/handoffs/handoff-0988.yaml"
+  source_handoff_sha256: "41aa74eb541cca5e636539b1056b93c3aa53bcb737601ca9de970d7cfffd45c5"
+  immutable_route_sha256: "41aa74eb541cca5e636539b1056b93c3aa53bcb737601ca9de970d7cfffd45c5"
+  prerequisite_checkpoint_commit: "4e87a27cd96ef8497098a65f4e8ff82274350f81"
+  screen_theorem_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex"
+  screen_theorem_sha256: "6eec0961cd84b3ec8f88845de1e5f87c13fee009b151fa557655d09a0fa6b50a"
+  obstruction_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_refuter_obstruction_record_v1.yaml"
+  obstruction_sha256: "609a422dc58ac927640c845d96a6846e1f863f625afbd76c1761b019f4e8a2b6"
+  countermodel_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_robustness_countermodel_v1.yaml"
+  countermodel_sha256: "52ac98cba9ecf2fb0f18e084dfdb582bebebb65c18d21693c95c663220cad32a"
+  budget_transition_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_candidate_termination_budget_transition_v1.yaml"
+  budget_transition_sha256: "84e7a8c9f94377f6cb6de30e987e442b0381988e40fff2460282451cfaf43e8c"
+  validation_path: "research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_screen_validation.json"
+  validation_sha256: "6857f673c539fff555dadab825f0433e32257e5f50c16f7a0bf83278960e3543"
+  p4_t01_executed: true
+  p4_t02_b1_branch_executed: true
+  p4_t02_qualifying_continuation_issued: false
+  p4_t02_b2_selector_selected: true
+  p4_t03_unlocked: false
+  b1_primary_terminated: true
+  b2_fallback_activated: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "the exact fixed B1 source PDE described as nonhyperbolic"
+    - "source tau H or Gamma_tau described as physical time metric or light cone"
+    - "B2 described as activated viable adopted or sufficient"
+    - "P4-T03 described as unlocked or executed"
+    - "candidate-scoped obstruction described as global no-go or future-extension impossibility"
+    - "internal computation described as external review or independent scientific replication"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P4"
+  plan_task_id: "P4-T02"
+  title: "Apply the hyperbolicity, universality, robustness, and hard-fail screen"
+  work_item_status: "b1_branch_complete_fallback_selector_pending"
+  result_status: "P4_T02_B1_SCOPED_OBSTRUCTION_AND_PRIMARY_TERMINATION"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "B2_FALLBACK_SELECTOR"
+  p4_t01_executed: true
+  p4_t02_b1_branch_executed: true
+  p4_t02_dependency_ready_after_checkpoint: true
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  b2_fallback_activated: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "obstruction_recorded_b1_only"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "B1 termination creates no stable universal physical cone signature scale effective metric coupling field equation or protected Gate evidence."
+  downstream_unlocked:
+    - "one P4-T02 B2 fallback theoretical selector after checkpoint"
+  downstream_still_blocked:
+    - "P2-T02 external review without reviewer-contact authority"
+    - "canonical ontology source law B1 or B2 adoption"
+    - "P4-T03 without a qualifying P4-T02 continuation verdict"
+    - "physical scale g_eff matter coupling Einstein equations Gates benchmark promotion and completed derivation"
+
+selected_next_route:
+  route_id: "v22_p4_t02_b2_fallback_descriptor_or_activation_selector"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-SELECTOR"
+  work_kind: "theoretical_selector"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  supporting_perspective: "ontology-formalizer@0.2.0 smuggling-auditor@0.2.0 and refuter@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_extension_candidate"
+  source_extension_category: "source_extension_candidate"
+  source_extension_import_classification: "preregistered inactive B2 fallback requiring source-side descriptor and no-target audit"
+  task_type: "v22_p4_t02_b2_fallback_descriptor_or_activation_selector"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Select one bounded construction or activation path for the preregistered inactive B2 P7 common-principal fallback while preserving B1 termination and requiring a continuum lift sector equations quotient common-principal target no-target receipt and adequacy reevaluation."
+  expected_result_kind: "packet_selection"
+  strategy_id: "select_v22_p4_t02_b2_fallback_descriptor_or_activation_path_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  selected_candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  transition_id: "SELECT_B2_DESCRIPTOR_OR_ACTIVATION_PATH"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0989"
+  ordinary_handoff_id: "handoff-0989"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P4-T02"
+  ready_science_plan_task_refs:
+    - "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  ready_project_system_plan_task_ids: []
+  selected_plan_task_id: "P4-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  selection_reason: "B1 has terminated under the exact P4-T02 stress screen, but the preregistered materially distinct B2 fallback remains inactive and incomplete; a fresh selector is the only honest same-milestone route and P4-T03 remains locked."
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260809-019"
+  active_job_id: "AJ-RT-20260809-019-001"
+  current_status: "v22_p4_t02_b1_scoped_obstruction_b2_selector_selected_checkpoint_pending"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p4_t02_b1_branch_executed: true
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  b2_fallback_activated: false
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "theoretical-continuation-selector@0.1.0"
+  selected_next_supporting_perspective: "ontology-formalizer@0.2.0 smuggling-auditor@0.2.0 and refuter@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "select_v22_p4_t02_b2_fallback_descriptor_or_activation_path_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory plan burden role-fit checkpoint registered-source and route admissions passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 172 focused checks, rank-ten independent certificate, four nonzero perturbations, both child outputs, five conflict resolutions, and seven-page visual review pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Registry documentation claim-language memory renderer affected-profile and research-control checks run before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed AJ-RT-20260809-019-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier compact frontier task index dependency graph claim graph wiki and registry projections regenerate before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only verification run before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source validation preserves fixed-law/family scope and every adoption physical-geometry and global-no-go block."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  b1_candidate_adoption_authorized: false
+  b2_activation_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  reviewer_contact_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+
+handoff_authority_boundary: "This handoff records only P4-T02 B1 draft/control fixed source hyperbolicity candidate-scoped obstruction countermodel sector audit hard-fail disposition local freeze and fresh-selector routing. It changes no ontology or source-law adoption, B2 activation, P4-T03 authority, physical cone signature scale metric coupling Einstein equation Gate benchmark proof external review publication release push external action global impossibility or completed-derivation authority."
