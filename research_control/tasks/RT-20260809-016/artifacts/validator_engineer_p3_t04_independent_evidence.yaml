@@ -1,0 +1,19 @@
+schema_id: "validator_engineer_independent_evidence_v1"
+task_id: "RT-20260809-016"
+job_id: "AJ-RT-20260809-016-001"
+status: "completed"
+perspective: "validator-engineer@0.2.0"
+independence:
+  primary_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_linear_response_model.py"
+  independent_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_independent_linearization.py"
+  independent_imports_primary: false
+  independent_method: "centered residual differences against a separately encoded analytic tangent equation"
+checks:
+  background_residuals_zero: true
+  six_channel_linearization_reproduced: true
+  maximum_linearization_error: 5.794920099333467e-11
+  response_rank_two_reproduced: true
+  target_geometry_inputs: 0
+  fixed_law_background_independence: true
+validation_scope: "task-local mathematical and computational evidence only; not proof, adoption, Gate review, or physics promotion"
+global_validator_semantics_changed: false

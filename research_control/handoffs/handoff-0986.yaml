@@ -1,0 +1,258 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+handoff_id: "handoff-0986"
+handoff_number: 986
+handoff_kind: "v22_p3_t04_background_linear_response_preprincipal_readiness"
+task_id: "RT-20260809-016"
+decision_id: "DDR-20260809-016"
+job_id: "AJ-RT-20260809-016-001"
+completion_id: "AJC-AJ-RT-20260809-016-001"
+completion_path: "research_control/tasks/RT-20260809-016/jobs/completions/AJC-AJ-RT-20260809-016-001.yaml"
+completion_sha256: "000ea94591724880b8236c1dae85629124246e555d9f85009de749fb21bb6606"
+status: "ready_for_v22_p4_t01_after_checkpoint"
+created_at: "2026-08-09T17:19:04Z"
+parent_handoff_id: "handoff-0985"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T01"
+completed_plan_task_id: "P3-T04"
+source_role_id: "candidate-constructor"
+source_role_version: "0.2.0"
+source_execution_role_ref: "candidate-constructor@0.2.0--RT-20260809-016"
+summary: "P3-T04 constructs the fixed-law background and linear-response input required before principal extraction. The rational affine source background qbar=(s1-s0,s2-s0,0,0,0,3) solves all six equations and lies on the rank-two regular patch. The fixed-D Frechet operator, absent field constraints, zero internal field-gauge quotient, two-channel response derivative, P2 necessary-condition verdict, uniform source-grid C1 parity theorem, independent tangent reproduction, passive representation check, and cross-law counterfamily are explicit. All 92 focused checks and all five rendered TeX pages pass. The counterfamily changes the sealed law and records source-law-selection debt rather than physical nonuniqueness. No source law or background is adopted and no physical cone, Lorentzian signature, scale, or effective metric is constructed."
+next_action: "Run the single governed checkpoint for AJ-RT-20260809-016-001. After it commits, execute exactly one separately admitted V22 P4-T01 ontology-formalizer/candidate-constructor AgentJob with hyperbolic-PDE and Refuter pressure to derive or precisely fail the gauge-reduced source principal symbol and polynomial without inserting a quadratic metric or taking any protected or external action."
+current_claim_boundary: "CB-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-001"
+loop_risk_route: "derive_v22_p4_t01_gauge_reduced_source_principal_symbol_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260809-016"
+  latest_research_handoff_id: "handoff-0986"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-016-001. After it commits, execute exactly one separately admitted V22 P4-T01 ontology-formalizer/candidate-constructor AgentJob with hyperbolic-PDE and Refuter pressure to derive or precisely fail the gauge-reduced source principal symbol and polynomial without inserting a quadratic metric or taking any protected or external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed P3-T04 checkpoint followed by one separately admitted V22 P4-T01 gauge-reduced source-principal-symbol and polynomial construction or precise-obstruction packet."
+  completed_task: "RT-20260809-016"
+  completed_completion_path: "research_control/tasks/RT-20260809-016/jobs/completions/AJC-AJ-RT-20260809-016-001.yaml"
+  completed_completion_sha256: "000ea94591724880b8236c1dae85629124246e555d9f85009de749fb21bb6606"
+  source_task_id: "RT-20260809-015"
+  source_handoff_id: "handoff-0985"
+  source_handoff_path: "research_control/handoffs/handoff-0985.yaml"
+  source_handoff_sha256: "60631e71a9842ed0a74ef00322041c39af005c30b547028ace7e510b495d495a"
+  candidate_id: "CAND-V22-B1-SIX-TRANSPORT-PREPRINCIPAL-V1"
+  focused_validation_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_linear_response_validation.json"
+  focused_validation_sha256: "caa4d1130cb23bf133480d8d997c978d34bed0e00a063d3c5367cd75ffbeb4dc"
+  compact_receipt_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_compact_receipt.json"
+  compact_receipt_sha256: "bad862eb7e894658f816e090e9e8881616a6e3500e79928ee30d127ffa5bb97a"
+  manuscript_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex"
+  manuscript_sha256: "f2d4307aeaf746dc5df48c14d6ed8eb59d7c4bbfb8afd1e69c1c8b88aa72d6f6"
+  source_law_adopted: false
+  background_adopted: false
+  target_geometry_imported: false
+  physical_cone_constructed: false
+  lorentzian_signature_constructed: false
+  effective_metric_constructed: false
+  p3_t04_executed: true
+  p4_t01_selected: true
+  p4_t01_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  reviewer_contact_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "source-selected affine background described as physical vacuum Minkowski space or canonical background"
+    - "passive source-chart representation described as physical gauge"
+    - "rank-two necessary adequacy described as sufficient geometry recovery"
+    - "source-coordinate C1 error described as physical metric-norm error"
+    - "cross-law characteristic difference described as within-candidate or physical inequivalence"
+    - "six source principal factors described as one physical cone Lorentzian signature scale or g_eff"
+    - "P4-T01 selection described as execution"
+    - "P2-T02 described as externally reviewed or satisfied"
+    - "validator checkpoint render or internal review PASS described as Gate benchmark or completed-derivation evidence"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P3"
+  plan_task_id: "P3-T04"
+  title: "Establish backgrounds, linear response, and pre-principal-symbol readiness"
+  work_item_status: "completed_checkpoint_pending"
+  result_status: "PASS_V22_P3_T04_BACKGROUND_LINEAR_RESPONSE_PREPRINCIPAL_READINESS"
+  next_plan_task_id: "P4-T01"
+  p3_t02_executed: true
+  p3_t03_executed: true
+  p3_t04_executed: true
+  p4_t01_dependency_ready_after_checkpoint: true
+  p4_t01_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Fixed-law source-principal readiness supplies no source-derived unique physical cone, Lorentzian signature, physical scale, effective metric, coupling, field equation, or Gate evidence."
+  downstream_unlocked:
+    - "P4-T01 after a valid P3-T04 checkpoint"
+  downstream_still_blocked:
+    - "P2-T02 external review without reviewer-contact authority"
+    - "canonical source law background or candidate adoption"
+    - "source-derived physical cone signature scale effective metric matter coupling Einstein equations and Gate B"
+    - "downstream Gates benchmark promotion and completed derivation"
+
+selected_next_route:
+  route_id: "v22_p4_t01_gauge_reduced_source_principal_symbol"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T01"
+  work_item_id: "P4-T01"
+  work_kind: "construction_or_implementation"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  supporting_perspective: "hyperbolic-PDE consultation and refuter@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "gauge_reduced_source_principal_symbol"
+  source_extension_category: "principal_symbol_and_polynomial"
+  source_extension_import_classification: "proposal_only_source_principal_data"
+  task_type: "v22_p4_t01_gauge_reduced_principal_symbol_and_polynomial"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Extract the highest-derivative operator from the fixed-law continuum linearization, remove constraints gauge directions and algebraic redundancies lawfully, and derive the covariant reduced source principal symbol and polynomial with multiplicities branches and independent reproduction without inserting a metric form."
+  expected_result_kind: "candidate_or_precise_obstruction"
+  strategy_id: "derive_v22_p4_t01_gauge_reduced_source_principal_symbol_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  selected_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-PREPRINCIPAL-V1"
+  transition_id: "DERIVE_REDUCED_SOURCE_PRINCIPAL_SYMBOL"
+  dependency_task_ids:
+    - "P3-T04"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0986"
+  ordinary_handoff_id: "handoff-0986"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  ready_science_plan_task_ids:
+    - "P4-T01"
+  ready_science_plan_task_refs:
+    - "recommendations_implementation_plan_continue_task-v22:P4-T01"
+  ready_project_system_plan_task_ids: []
+  selected_plan_task_id: "P4-T01"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  selection_reason: "P3-T04 supplies the prerequisite fixed-law background and tangent quotient, making P4-T01 the next dependency-ready distinct science packet; P2-T02 still requires unavailable reviewer-contact authority."
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260809-016"
+  active_job_id: "AJ-RT-20260809-016-001"
+  current_status: "v22_p3_t04_background_linear_response_completed_pending_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  p3_t04_executed: true
+  p4_t01_executed: false
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T01"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "ontology-formalizer@0.2.0 or candidate-constructor@0.2.0"
+  selected_next_supporting_perspective: "hyperbolic-PDE consultation and refuter@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "derive_v22_p4_t01_gauge_reduced_source_principal_symbol_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, plan, burden, P2 adequacy, registered P3 sources, handoff-0985, RT-015 checkpoint, and role-fit preflight passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 92 focused checks, independent tangent implementation, both child outputs, five conflict resolutions, TeX compile, and five-page visual review pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Affected-profile, taxonomy, documentation-impact, research-control, freshness, signal, graph, claim-language, and diff validation run before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed AJ-RT-20260809-016-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Approved frontier, compact frontier, task-index, graph, wiki, and registry projections regenerate before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only verification run before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation must preserve every adoption and physical-geometry block."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  background_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  reviewer_contact_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+
+handoff_authority_boundary: "This handoff records one proposal-only fixed-law background and linear-response packet and one P4-T01 route only. It changes no ontology, source-law or background adoption, target geometry, physical cone, Lorentzian signature, scale, effective metric, coupling, Einstein equation, Gate, benchmark, proof, external review, publication, release, push, external action, or completed-derivation authority."

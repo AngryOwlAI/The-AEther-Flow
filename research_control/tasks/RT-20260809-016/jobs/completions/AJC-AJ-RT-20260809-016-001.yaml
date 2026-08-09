@@ -1,0 +1,777 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260809-016-001"
+completion_id: "AJC-AJ-RT-20260809-016-001"
+task_id: "RT-20260809-016"
+task_type: "v22_p3_t04_background_linear_response_preprincipal_readiness"
+decision_id: "DDR-20260809-016"
+role_id: "candidate-constructor"
+source_role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260809-016"
+supporting_perspective: "smuggling-auditor@0.2.0 and refuter@0.2.0"
+validation_perspective: "validator-engineer@0.2.0"
+status: "completed"
+created_at: "2026-08-09T17:06:02Z"
+started_at: "2026-08-09T17:06:02Z"
+completed_at: "2026-08-09T17:19:04Z"
+objective: "Implement V22 P3-T04 by constructing and refuting one exact source-selected background and fixed-law linear-response packet for the P3-T02/P3-T03 B1 candidate, including constraints, gauge quotient, response rank, bounded finite-to-continuum parity, independent implementation, counterfamily, adequacy, and precise pre-principal status."
+completion_summary: "P3-T04 selects the exact nonconstant regular background qbar=(s1-s0,s2-s0,0,0,0,3) by a source-only rational rule, derives the fixed-D Frechet operator L_Du=(X_1u1,...,X_6u6), identifies zero algebraic field constraints and zero internal field-gauge generators, and computes a rank-two logistic response derivative. A uniform source-grid commutation theorem upgrades the P3-T03 error control to a bounded C1 comparison for C3 perturbations; both value and derivative errors decrease on four levels. An independent implementation agrees below 5.8e-11. A source-only coupled counterfamily preserves qbar and changes principal zero sets, exposing cross-law selection debt while changing the sealed candidate identity. All 92 focused checks, five conflict resolutions, and the five-page rendered TeX review pass. The fixed law is ready only for a source-principal calculation; no physical cone, signature, scale, metric, adoption, or Distance-to-GR delta is created."
+objective_result: "implemented_and_validated_v22_p3_t04_fixed_law_preprincipal_candidate"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "constructed_candidate_precheckpoint"
+work_item_status: "completed_checkpoint_pending"
+milestone_disposition: "fixed_law_preprincipal_readiness_constructed_physical_geometry_still_blocked"
+
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260809-016-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+legacy_validation_reason: ""
+
+is_physics_task: true
+payload_class: "source_model"
+has_new_mathematical_payload: true
+source_extension_classification_required: true
+external_red_team_finding_requires_integration: false
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  plan_phase_id: "P3"
+  plan_task_id: "P3-T04"
+  work_kind: "construction_or_implementation"
+  task_class: "science"
+  expected_result_kind: "candidate_or_precise_obstruction"
+  dependency_task_ids:
+    - "P3-T02"
+    - "P3-T03"
+  dependency_checkpoint_commits:
+    - "d18637379d0dbde560f1b910255f370fe0c1ce54"
+    - "918cc216b29b83b34eb122c341273dd490657525"
+  recommendation_ids:
+    - "V22-R05"
+    - "V22-R07"
+    - "V22-R10"
+    - "V22-R08"
+    - "V22-R13"
+  declared_coverage_ids:
+    - "V22-R05"
+    - "V22-R07"
+    - "V22-R08"
+    - "V22-R10"
+    - "V22-R13"
+  sequence_step_ids: []
+  cross_cutting_directive_ids:
+    - "V22-X03"
+  work_item_status: "completed_checkpoint_pending"
+  next_plan_task_id: "P4-T01"
+  p3_t02_executed: true
+  p3_t03_executed: true
+  p3_t04_executed: true
+  p4_t01_selected: true
+  p4_t01_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+result:
+  status: "PASS_V22_P3_T04_BACKGROUND_LINEAR_RESPONSE_PREPRINCIPAL_READINESS"
+  strategy_id: "construct_v22_p3_t04_background_linear_response_and_preprincipal_readiness_v1"
+  source_handoff_id: "handoff-0985"
+  source_handoff_sha256: "60631e71a9842ed0a74ef00322041c39af005c30b547028ace7e510b495d495a"
+  candidate_id: "CAND-V22-B1-SIX-TRANSPORT-PREPRINCIPAL-V1"
+  dynamics_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-DYNAMICS-V1"
+  refinement_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REFINEMENT-V1"
+  selected_background: "qbar=(s1-s0,s2-s0,0,0,0,3)"
+  selected_background_nontrivial: true
+  selected_background_residual_count: 6
+  selected_background_nonzero_residual_count: 0
+  selected_background_q6_margin: 3
+  selected_background_wedge_minor: 0.1111111111111111
+  target_convenience_used: false
+  fixed_D_linearization: "L_Du=(X_1u1,...,X_6u6)"
+  algebraic_field_constraint_count: 0
+  secondary_constraint_count: 0
+  internal_field_gauge_generator_count: 0
+  physical_perturbation_quotient: "tangent regular source variations modulo zero internal field-gauge space"
+  response_rank: 2
+  response_rank_minor: 0.006934807593243673
+  response_jacobian_max_error: 2.4119096476982183e-11
+  adequacy_verdict: "necessary_condition_met_not_sufficient"
+  admitted_physical_probe_count: 0
+  finite_levels:
+    - 24
+    - 32
+    - 48
+    - 64
+  maximum_value_errors:
+    - 0.14565437863208408
+    - 0.10928976081749475
+    - 0.07406696753951003
+    - 0.056091595357046664
+  maximum_c1_errors:
+    - 1.8676879164634137
+    - 1.4183245908883153
+    - 0.9734371468567655
+    - 0.7385019479146715
+  value_errors_strictly_decrease: true
+  c1_errors_strictly_decrease: true
+  maximum_source_cfl: 0.3428571428571429
+  independent_max_linearization_error: 5.794920099333467e-11
+  passive_pairing_max_error: 0
+  counterfamily_case_count: 10
+  counterfamily_background_preserved: true
+  counterfamily_zero_sets_differ: true
+  counterfamily_changes_sealed_law: true
+  counterfamily_physical_inequivalence_claimed: false
+  fixed_candidate_frozen: false
+  cross_law_uniqueness_overread_frozen: true
+  focused_check_count: 92
+  focused_check_failure_count: 0
+  resolved_parent_conflict_count: 5
+  unresolved_parent_conflict_count: 0
+  latex_page_count: 5
+  latex_final_overfull_warning_count: 0
+  pdf_pages_visually_reviewed: 5
+  target_atlas_input_count: 0
+  target_metric_input_count: 0
+  target_fit_count: 0
+  source_extension_adoption_count: 0
+  canonical_science_file_change_count: 0
+  source_law_adopted: false
+  background_adopted: false
+  effective_metric_constructed: false
+  physical_cone_constructed: false
+  lorentzian_signature_constructed: false
+  p3_t04_executed: true
+  p4_t01_selected: true
+  p4_t01_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1154
+    relationship_row_count: 5853
+    semantic_row_count: 1154
+    vault_row_count: 1154
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1"
+      returned_object_ids:
+        - "TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1"
+      query_status: "completed"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "TEX-V22-P2-T01-LOCAL-SOURCE-INFORMATION-CAPACITY-THEOREM-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex"
+      source_hash: "2ba813e4e961b9ea2709a31c6e06152b1cb4d50ebd90185c2ed93d7aeb132439"
+    - object_id: "TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_without_hidden_geometry_v1.tex"
+      source_hash: "f26c77a175e7a5783e859eacc5de24270e1089a253e73493114a1403bbd61037"
+    - object_id: "TEX-V22-P3-T03-CONTROLLED-REFINEMENT-LIMIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex"
+      source_hash: "ba5b815072de442dda7ee2bfb6aba41b7d98082b4f0586df22d9d327c0eda921"
+  authority_note: "Tracked registered source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "physics"
+  payload_type: "source_model"
+  candidate_family: "FAM-V22-B1-SIX-TRANSPORT-CONTROLLED-REFINEMENT"
+  construction_identity: "V22-P3-T04-B1-BACKGROUND-LINEAR-RESPONSE-V1"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physical_status_changed_by_admission: false
+  distance_to_gr_changed_by_admission: false
+  physics_promotion_authorized_by_admission: false
+
+family_freeze_admission_result:
+  status: "admitted_unfrozen"
+  route_kind: "candidate_construction"
+  family_id: "FAM-V22-B1-SIX-TRANSPORT-CONTROLLED-REFINEMENT"
+  family_identity_sha256: "32110632f8832091d69ca52e96dfdf99c26087bfc75575b77a466631eca9d051"
+  detected_match_basis: []
+  reopening_requested: false
+  local_family_freeze_preserved: true
+  cross_law_uniqueness_overread_frozen: true
+  global_no_go_inferred: false
+  physics_promotion_authorized_by_admission: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0985"
+  source_handoff_sha256_at_intake: "60631e71a9842ed0a74ef00322041c39af005c30b547028ace7e510b495d495a"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P3-T04"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P3-T04"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite_commit: "918cc216b29b83b34eb122c341273dd490657525"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one registered background and linear-response manuscript with exact selection tangent quotient adequacy parity counterfamily and limitations"
+      - "one machine-readable background linear-response specification and countermodel adequacy ledger"
+    project_system:
+      - "primary and independent executable models frozen fixtures deterministic validation receipt LaTeX receipt and compact receipt"
+      - "parent-child synthesis standard control records regenerated derivatives and one governed checkpoint"
+  accepted_criteria:
+    physics:
+      - "a nontrivial exact background is selected by a source-only rule frozen before target access"
+      - "the fixed-D derivative constraint and internal-gauge spaces quotient and response operator are explicit"
+      - "the P2 adequacy verdict and uniform finite-to-continuum C1 parity are bounded under declared hypotheses"
+      - "counterfamilies preserve candidate identity distinctions and no physical cone signature scale or metric is inferred"
+    project_system:
+      - "primary and independent computations pass fixed predeclared thresholds and all adversarial cases are classified"
+      - "registered source hashes approved generated derivatives and rendered TeX synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-016/artifacts/child_phys_math_p3_t04_linear_response.yaml"
+      output_sha256: "6923ba600cd04605df80c33b4f2311dbe6344aa950f382e7baa811155d1a85c8"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-016/artifacts/child_phys_phil_p3_t04_smuggling_refutation.yaml"
+      output_sha256: "5e11e0a53f3de0e2cdcd4a7b08df09d22e9af6a044e6f0f64cba5b2e682fb43a"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260809-016/artifacts/parent_conflict_review_p3_t04_linear_response.yaml"
+    review_sha256: "3c5c0d844496141b688f4fe654c79e279eda216085a32de2076b0940b05b2a5b"
+    resolution_rounds: 1
+    resolved_conflict_count: 5
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260809-016/artifacts/parent_fusion_notes_p3_t04_linear_response.md"
+    fusion_notes_sha256: "27f15ca1dd64f61d497ea80d50b1d9f2042f54b56805b71d1498db814adab8a9"
+    shared_consensus_summary: "Both perspectives accept the source-selected exact background, fixed-D derivative, zero internal field-gauge quotient, rank-two necessary screen, uniform source C1 bound, and explicit absence of physical geometry."
+    novelty_preservation_summary: "The fusion preserves the exact background proof, Frechet derivative, commutation theorem, independent tangent evidence, passive representation check, and two-covector cross-law zero-set witness."
+    claim_boundary_preservation_summary: "The packet adopts no source law or background, constructs no physical cone signature scale or effective metric, issues no Gate verdict, and changes no Distance-to-GR burden."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260809-016-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Source-selected regular affine background"
+    summary: "Proves that qbar=(s1-s0,s2-s0,0,0,0,3) solves all six fixed-D equations and lies on the rank-two regular patch under a predeclared rational source selection rule."
+  - payload_id: "NMP-RT-20260809-016-002"
+    payload_type: "definition"
+    name: "Fixed-D Frechet derivative and zero-internal-gauge quotient"
+    summary: "Derives L_Du=(X_1u1,...,X_6u6), classifies absent field constraints and internal gauge, and separates passive chart representation from physical gauge."
+  - payload_id: "NMP-RT-20260809-016-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Uniform source-chart C1 parity theorem"
+    summary: "Uses exact shift commutation and the P3-T03 consistency theorem to bound value and backward-difference errors for C3 perturbations under source CFL."
+  - payload_id: "NMP-RT-20260809-016-004"
+    payload_type: "countermodel"
+    name: "Cross-law response and principal-zero-set counterfamily"
+    summary: "Constructs source-only coupled laws preserving qbar and exhibits two covectors proving distinct principal zero sets while preserving candidate-identity and physical-typing limitations."
+  - payload_id: "NMP-RT-20260809-016-005"
+    payload_type: "finite_model"
+    name: "Selected-background P2 rank-two reevaluation"
+    summary: "Computes the response derivative and returns necessary_condition_met_not_sufficient with zero newly admitted physical geometry probes."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260809-016-001"
+    payload_type: "construction"
+    object_name: "V22 P3-T04 fixed-law background and linear response"
+    claim_status: "draft/control proposal-only"
+    source_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex"
+    burden_effect: "narrows"
+    summary: "Constructs the exact fixed-law objects required before source-principal extraction without target geometry."
+  - payload_id: "PAYLOAD-RT-20260809-016-002"
+    payload_type: "theorem"
+    object_name: "Uniform C1 source-linearization comparison"
+    claim_status: "draft/control theorem under declared C3 constant-coefficient periodic source-CFL hypotheses"
+    source_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex"
+    burden_effect: "narrows"
+    summary: "Supplies exact commutation and a bounded finite-to-continuum derivative comparison."
+  - payload_id: "PAYLOAD-RT-20260809-016-003"
+    payload_type: "explicit_witness"
+    object_name: "Independent tangent and cross-law countermodel evidence"
+    claim_status: "draft/control finite computational witness"
+    source_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_linear_response_validation.json"
+    burden_effect: "narrows"
+    summary: "Verifies the derivative response rank parity chart representation and distinct cross-law zero sets without target-derived thresholds."
+  - payload_id: "PAYLOAD-RT-20260809-016-004"
+    payload_type: "source_extension_classification"
+    object_name: "Proposal-only selected background response and alternative-law data"
+    claim_status: "draft/control source-extension data"
+    source_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_specification_v1.yaml"
+    burden_effect: "narrows"
+    summary: "Exposes the background selection fixed-D restriction response interface and cross-law selection debt as unadopted."
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "The fixed P3-T02 proposal-only law now has one exact source-selected regular background, an explicit differentiable tangent operator, a zero-internal-gauge quotient, rank-two response derivative, and bounded uniform source C1 parity; one robust physical cone, Lorentzian signature, scale, and g_eff remain absent."
+  explanation: "P3-T04's fixed-law pre-principal burden is discharged at draft/control candidate level. The effective-metric burden does not advance because P4 has not reduced the six source factors to one physically typed cone, signature, or scale, and alternative unadopted laws remain source-selected debt."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "P3-T03 controlled source refinement existed, but C1 response parity and an integrated source-selected background quotient readiness packet were absent; physical cone scale and effective metric were absent"
+  new_status: "the protected scientific status is unchanged; one proposal-only fixed-law pre-principal packet exists with bounded source C1 parity, but no physical cone scale signature or effective metric is selected"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P3-T04 supplies source-principal readiness but no source-derived unique physical cone, Lorentzian signature, physical scale, g_eff, coupling, field equation, or Gate evidence; proposal-only construction and process validation do not justify ledger promotion."
+  downstream_unlocked:
+    - "one separately admitted P4-T01 gauge-reduced source-principal-symbol and polynomial calculation after checkpoint"
+  downstream_still_blocked:
+    - "P2-T02 external review without real reviewer-contact authority"
+    - "canonical source arena source law background or candidate adoption"
+    - "one source-derived physical cone Lorentzian signature scale and effective metric"
+    - "matter coupling Einstein equations downstream Gates benchmark promotion and completed derivation"
+  explanation: "The packet closes fixed-law pre-principal bookkeeping while precisely preserving every physical-geometry block."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "B1 tau X_A background and response remain proposal-only source-extension data and are not adopted"
+  - burden: "Source equivalence EqSrc"
+    status: "passive source-chart representation parity is checked; no physical or global EqSrc is adopted"
+  - burden: "RetainH"
+    status: "unchanged; no retention law is derived or adopted"
+  - burden: "GenH"
+    status: "unchanged; no generator law is derived or adopted"
+  - burden: "ObsLoc_lc"
+    status: "the two local source response ratios remain defined on the selected regular patch"
+  - burden: "Resp_lc"
+    status: "rank-two necessary condition is met for the sealed local source interface; physical geometry probe typing remains absent"
+  - burden: "M_src"
+    status: "the source chart is a computational fixture; M_src remains primitive scaffolding debt and is not adopted as physical spacetime"
+  - burden: "g_eff"
+    status: "blocked; fixed-law source-principal readiness does not select one physical cone Lorentzian signature scale or effective metric"
+  - burden: "matter coupling"
+    status: "blocked; no realistic matter detector or universal coupling law is constructed"
+  - burden: "Einstein equations"
+    status: "blocked"
+  - burden: "finite-variation robustness"
+    status: "uniform source-grid value and C1 parity is bounded under declared C3 constant-coefficient periodic source-CFL hypotheses; physical robustness is not established"
+  - burden: "benchmark promotion"
+    status: "blocked"
+  - burden: "Gate Chair status"
+    status: "no protected decision requested or issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "fixed-law P3-T04 is not frozen; cross-law uniqueness overread and V22-X03 one-amplitude and unchanged graph routes remain frozen"
+
+bridge_attempt_status:
+  status: "fixed_law_preprincipal_ready_physical_reduction_still_missing"
+  candidate_map: "fixed D and qbar -> L_D -> zero-internal-gauge quotient -> two-channel source response derivative -> source principal symbol input"
+  constructed_object_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex"
+  missing_object: "gauge-reduced source principal polynomial followed by a source-derived robust reduction selecting one physical cone Lorentzian signature and scale"
+  missing_primitive: "physically typed reduction and operational geometry bridge"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  effective_metric_constructed: false
+  global_no_go_claimed: false
+  claim_boundary_preserved: true
+  preserves_blocks: "The physical cone, Lorentzian signature, physical scale, effective metric, coupling, Einstein-equation, Gate, benchmark, adoption, and Distance-to-GR burdens remain blocked."
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex"
+  formal_objects:
+    - "selected regular affine fixed-D background qbar"
+    - "Frechet tangent operator L_D"
+    - "zero internal field-gauge quotient"
+    - "two-channel response derivative"
+    - "uniform source-grid C1 comparison"
+    - "cross-law coupled counterfamily"
+  maps:
+    - "fixed-D regular source section to six equation residuals"
+    - "source tangent variation through L_D to six linearized residuals"
+    - "source tangent quotient through dR_qbar to two response variations"
+    - "finite backward differences through upwind evolution to continuum source derivatives"
+  proof_obligations:
+    - "P4-T01 exact reduced source principal symbol polynomial multiplicity covariance and branch analysis"
+    - "later source-derived reduction to one robust physical cone Lorentzian signature and scale"
+    - "independent smuggling and hyperbolicity audits before any Gate route"
+  next_required_role: "refuter"
+  no_fog_check: true
+  no_fog_explanation: "The packet constructs a complete fixed-law source background and linearization input for P4-T01, while explicitly failing to construct or select any physical cone signature scale or effective metric."
+  claim_boundary_preserved: true
+
+freeze_criteria_status:
+  status: "not_frozen_materially_new_payload"
+  repeated_burden_count: 0
+  scoped_obstruction_count: 0
+  fixed_candidate_freeze_triggered: false
+  cross_law_uniqueness_overread_frozen: true
+  v22_x03_routes_remain_frozen: true
+  next_distinct_payload: "P4-T01 reduced source principal symbol and polynomial"
+  explanation: "P3-T04 adds a materially new fixed-law background quotient and C1 parity object. The counterfamily changes candidate identity and proves no physical nonuniqueness, so the fixed candidate remains eligible for one exact P4-T01 calculation."
+
+route_cycle_control:
+  cycle_family: "v22_b1_source_to_effective_metric"
+  current_cycle_step: "background_linear_response_preprincipal_candidate_constructor"
+  prior_related_tasks:
+    - "RT-20260809-010"
+    - "RT-20260809-012"
+    - "RT-20260809-015"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "P3-T04 introduces the exact source-selected regular background, fixed-D tangent operator, zero-internal-gauge quotient, C1 parity theorem, independent tangent evidence, and cross-law counterfamily absent from P3-T01 through P3-T03; P4-T01 must extract a materially distinct reduced source principal symbol and polynomial or return a precise obstruction."
+  next_role_consequence: "ontology-formalizer with hyperbolic-PDE and refuter perspectives"
+
+loop_risk_decision:
+  status: "PASS_MATERIALLY_DISTINCT_SUCCESSOR"
+  route_repetition_detected: false
+  source_law_adoption_required_now: false
+  human_gate_required_now: false
+  selected_successor: "P4-T01"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  candidate_id: "CAND-V22-B1-SIX-TRANSPORT-PREPRINCIPAL-V1"
+  category: "background_linear_response_preprincipal_readiness"
+  import_classification: "new_ontology_primitive_candidate"
+  status_vocabulary: "proposal-only source-extension data"
+  current_ontology_derives_candidate: false
+  adoption_status: "not_adopted"
+  human_gate_required_for_adoption: true
+  canonical_ontology_candidate_status_claimed: false
+  target_atlas_free: true
+  exact_gr_recovery_claimed: false
+  physical_inequivalence_claimed: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+  records:
+    - classification: "blocked_adoption_open_continuation"
+      claim_boundary_id: "CB-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-001"
+      relation_to_current_ontology: "blocked_open"
+      protected_authority_required: true
+      downstream_promotion_authorized: false
+      physics_promotion_authorized: false
+      blocked_overreads:
+        - "proposal-only background response map or cross-law family described as adopted ontology source law or physical microstructure"
+        - "rank-two necessary response adequacy described as sufficient physical geometry"
+        - "source principal zero sets described as physical cones Lorentzian signature scale or effective metric"
+        - "cross-law principal difference described as physical inequivalence without a lawful common physical quotient"
+
+mathematical_refuter_result:
+  status: "PASS_SCOPED_COUNTERFAMILY_CLASSIFIED"
+  counterfamily_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_countermodel_adequacy_ledger_v1.yaml"
+  background_preserved: true
+  cross_response_changed: true
+  principal_zero_sets_differ: true
+  fixed_candidate_identity_preserved_by_counterfamily: false
+  physical_inequivalence_proved: false
+  fixed_candidate_obstructed: false
+  cross_law_uniqueness_overread_blocked: true
+  global_no_go_claimed: false
+  explanation: "The coupled source-only family preserves qbar and changes zero sets, but it changes the sealed law. It records source-law selection debt rather than a within-candidate or physical obstruction."
+
+validation_evidence:
+  focused_validation_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_linear_response_validation.json"
+  focused_validation_sha256: "caa4d1130cb23bf133480d8d997c978d34bed0e00a063d3c5367cd75ffbeb4dc"
+  focused_check_count: 92
+  focused_failure_count: 0
+  compact_receipt_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_compact_receipt.json"
+  compact_receipt_sha256: "bad862eb7e894658f816e090e9e8881616a6e3500e79928ee30d127ffa5bb97a"
+  independent_evidence_path: "research_control/tasks/RT-20260809-016/artifacts/validator_engineer_p3_t04_independent_evidence.yaml"
+  independent_evidence_sha256: "9903dec31094b7c34815bdb2263f18fde0b45b398c1bdf932095b2ed94dfb632"
+  latex_receipt_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_latex_compile_receipt.json"
+  latex_receipt_sha256: "595fe5d4e384460f4cfa4f9695c5ec85c1da4b35075f5c1ac89e70ac35d75319"
+  latex_page_count: 5
+  latex_final_overfull_warning_count: 0
+  visual_review_status: "PASS_ALL_FIVE_PAGES"
+  process_validation_is_physics_proof: false
+
+output_inventory:
+  - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex"
+    sha256: "f2d4307aeaf746dc5df48c14d6ed8eb59d7c4bbfb8afd1e69c1c8b88aa72d6f6"
+    authority: "registered draft/control TeX after registry update"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_specification_v1.yaml"
+    sha256: "644418bf52b2230b8f4504e6ced5f3eae58c58e2cef653d461eb072a1e5bd03b"
+    authority: "task-local specification"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_countermodel_adequacy_ledger_v1.yaml"
+    sha256: "8dd2821b7b9b2cc942b66d61fc05ad964390cf55fe4c0f2d4a5bcad4c7af19eb"
+    authority: "task-local control ledger"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_linear_response_model.py"
+    sha256: "3ca66f6b236124257a6ec46b3a6ee18f2e76d4f9df19d2ef2fcb445319f632b3"
+    authority: "task-local executable evidence"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_independent_linearization.py"
+    sha256: "76abfa2eb37cb873cb294d0f9c9ba461fee704b577afa6cf942dbfe864b0382e"
+    authority: "task-local independent executable evidence"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_linear_response_validation.json"
+    sha256: "caa4d1130cb23bf133480d8d997c978d34bed0e00a063d3c5367cd75ffbeb4dc"
+    authority: "task-local validation receipt"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_compact_receipt.json"
+    sha256: "bad862eb7e894658f816e090e9e8881616a6e3500e79928ee30d127ffa5bb97a"
+    authority: "task-local compact receipt"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/fixtures/v22_p3_t04_background_linear_response_cases.yaml"
+    sha256: "8b9167f561f7eb244d8cdb36d6898858c5709581cc3fa794fd586dcc5c50f715"
+    authority: "task-local frozen fixtures"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/parent_fusion_notes_p3_t04_linear_response.md"
+    sha256: "27f15ca1dd64f61d497ea80d50b1d9f2042f54b56805b71d1498db814adab8a9"
+    authority: "registered draft/control Markdown after registry update"
+
+completion_checks:
+  task_scope_exact: true
+  one_outer_agentjob: true
+  parent_child_parallel_synthesis: true
+  child_count_two: true
+  unresolved_parent_conflicts_zero: true
+  source_selected_nontrivial_background: true
+  fixed_D_linearization_explicit: true
+  constraints_and_gauge_identified: true
+  response_rank_clears_declared_floor: true
+  adequacy_not_overread_as_sufficient: true
+  c1_error_bounded: true
+  independent_linearization_passed: true
+  counterfamily_classified: true
+  target_convenience_absent: true
+  source_purity_passed: true
+  physical_geometry_not_claimed: true
+  distance_to_gr_unchanged: true
+  checkpoint_pending_exactly_once: true
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit"
+    - "M_src adoption"
+    - "source-law background or candidate adoption"
+    - "rank-two necessary response adequacy relabeled as sufficient geometry"
+    - "source principal zero set relabeled as a physical cone"
+    - "physical cone Lorentzian signature scale or g_eff claim"
+    - "matter coupling claim"
+    - "Einstein-equation claim"
+    - "cross-law source characteristic difference relabeled as physical inequivalence"
+    - "benchmark promotion"
+    - "Gate Chair verdict"
+    - "completed derivation"
+    - "global theory rejection"
+  summary: "The selected background, fixed-law linearization, C1 parity theorem, response-rank evidence, counterfamily, parent-child agreement, validator PASS, and checkpoint eligibility are not authority for ontology adoption, physical geometry, downstream GR objects, or scientific promotion."
+
+project_improvement_signals: []
+project_improvement_signal_count: 0
+project_improvement_sidecar_required: false
+
+authorization_matrix:
+  canonical_ontology_edit: false
+  source_law_adoption: false
+  background_adoption: false
+  physical_cone_claim: false
+  lorentzian_signature_claim: false
+  effective_metric_claim: false
+  protected_gate_review: false
+  external_review: false
+  reviewer_contact: false
+  benchmark_promotion: false
+  publication: false
+  release: false
+  push: false
+  external_action: false
+
+command_results:
+  - command: "validate_v22_p3_t04_linear_response.py"
+    status: "PASS"
+    summary: "All 92 source-selection residual tangent quotient response-rank C1 parity independent counterfamily synthesis and authority checks pass."
+  - command: "v22_p3_t04_linear_response_model.py and v22_p3_t04_independent_linearization.py"
+    status: "PASS"
+    summary: "The primary model and separate implementation agree on the six-channel tangent below 5.8e-11 and reproduce the declared finite-to-continuum trends."
+  - command: "bundled Tectonic scratch build and rendered-page visual review"
+    status: "PASS"
+    summary: "The registered TeX source compiles to a five-page letter-size scratch PDF with no final-pass overfull warnings; all five rendered pages were visually reviewed and no PDF is tracked."
+  - command: "prospective physics payload family freeze and ordinary route admissions"
+    status: "PASS"
+    summary: "The source model is admitted on the physics path, P3-T04 is materially distinct, and handoff-0985 binds exactly P3-T04 after commit 918cc216b29b83b34eb122c341273dd490657525."
+  - command: "task taxonomy affected documentation claim research-control memory and generated-freshness validation"
+    status: "PASS"
+    summary: "Task taxonomy, affected-profile, documentation-impact, claim-language, research-control, memory-bootstrap, generated-freshness, signal, graph, and diff validation pass before checkpoint."
+  - command: "checkpoint_research_transaction.py --job-id AJ-RT-20260809-016-001 --planner-validation"
+    status: "PENDING_SINGLE_INVOCATION"
+    summary: "One governed checkpoint remains; no retry push publication or external action is authorized."
+
+selected_next_route:
+  route_id: "v22_p4_t01_gauge_reduced_source_principal_symbol"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T01"
+  work_item_id: "P4-T01"
+  work_kind: "construction_or_implementation"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  supporting_perspective: "hyperbolic-PDE consultation and refuter@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "gauge_reduced_source_principal_symbol"
+  source_extension_category: "principal_symbol_and_polynomial"
+  source_extension_import_classification: "proposal_only_source_principal_data"
+  task_type: "v22_p4_t01_gauge_reduced_principal_symbol_and_polynomial"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Extract the highest-derivative operator from the fixed-law continuum linearization, remove constraints gauge directions and algebraic redundancies lawfully, and derive the covariant reduced source principal symbol and polynomial with multiplicities branches and independent reproduction without inserting a metric form."
+  expected_result_kind: "candidate_or_precise_obstruction"
+  strategy_id: "derive_v22_p4_t01_gauge_reduced_source_principal_symbol_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  selected_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-PREPRINCIPAL-V1"
+  transition_id: "DERIVE_REDUCED_SOURCE_PRINCIPAL_SYMBOL"
+  dependency_task_ids:
+    - "P3-T04"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+next_recommendation: "Run the single governed checkpoint for AJ-RT-20260809-016-001. After it commits, execute exactly one separately admitted V22 P4-T01 ontology-formalizer/candidate-constructor AgentJob with hyperbolic-PDE and Refuter pressure to derive or precisely fail the gauge-reduced source principal symbol and polynomial without inserting a quadratic metric or taking any protected or external action."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, plan, burden, P2 adequacy, registered P3 sources, handoff-0985, RT-015 checkpoint, and role-fit preflight passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 92 focused checks, independent tangent implementation, both child outputs, five conflict resolutions, TeX compile, and five-page visual review pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Registry, generated-memory, affected-profile, documentation-impact, claim-language, and full research-control validation run before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed AJ-RT-20260809-016-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Approved frontier, compact frontier, task-index, graph, wiki, and registry projections regenerate before checkpoint."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only verification run before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation must preserve every adoption and physical-geometry block."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review is authorized for P3-T04."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  background_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  reviewer_contact_authorized: false
+
+protected_authority:
+  human_gate_required: false
+  human_gate_satisfied: false
+  gate_chair_decision_requested: false
+  canonical_adoption_requested: false
+  external_action_requested: false
+  note: "The packet is proposal-only fixed-law research and requires no protected decision to construct or test."
+
+handoff_id: "handoff-0986"
+handoff_path: "research_control/handoffs/handoff-0986.yaml"
+handoff_authority_boundary: "The handoff may record one proposal-only fixed-law background and linear-response packet and select P4-T01 after checkpoint only. It creates no ontology, source-law or background adoption, target geometry, physical cone, Lorentzian signature, scale, effective metric, coupling, Einstein equation, Gate, benchmark, proof, external review, publication, release, push, external action, or completed-derivation authority."

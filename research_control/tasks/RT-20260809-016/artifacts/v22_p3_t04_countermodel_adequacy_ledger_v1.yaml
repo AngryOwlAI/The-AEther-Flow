@@ -1,0 +1,73 @@
+schema_id: "v22_p3_t04_countermodel_adequacy_ledger_v1"
+artifact_id: "V22-P3-T04-COUNTERMODEL-ADEQUACY-LEDGER-V1"
+task_id: "RT-20260809-016"
+job_id: "AJ-RT-20260809-016-001"
+status: "draft/control"
+selected_background:
+  rule: "qbar=(s1-s0,s2-s0,0,0,0,3)"
+  source_selected: true
+  target_selected: false
+  equation_residual_status: "exact_zero"
+  response_regular_status: "rank_two_with_positive_q6_margin"
+adequacy:
+  verdict: "necessary_condition_met_not_sufficient"
+  capacity_rank: 2
+  required_declared_rank: 2
+  admitted_physical_probe_count: 0
+  geometry_sufficiency: false
+countermodel_cases:
+  - case_id: "CM-P3T04-01"
+    mutation: "use the fixed P3-T02 law at any admissible background"
+    result: "same diagonal fixed-D linearization"
+    disposition: "no within-law background nonuniqueness"
+  - case_id: "CM-P3T04-02"
+    mutation: "lambda=1 coupled cross-response family preserving qbar"
+    witness_covector:
+      - 0
+      - 0
+      - 1
+      - 1
+    base_polynomial: 0
+    coupled_polynomial: -3
+    disposition: "zero sets differ across laws"
+  - case_id: "CM-P3T04-03"
+    mutation: "lambda=1 coupled cross-response family preserving qbar"
+    witness_covector:
+      - 0.6180339887498949
+      - 1
+      - 0
+      - 1
+    base_polynomial: 24.798373876248853
+    coupled_polynomial_absolute_bound: 1.0e-12
+    disposition: "zero sets differ across laws"
+  - case_id: "CM-P3T04-04"
+    mutation: "treat coupled family as the sealed P3-T02 law"
+    disposition: "REJECT candidate-identity substitution"
+  - case_id: "CM-P3T04-05"
+    mutation: "call cross-law characteristic difference physical inequivalence"
+    disposition: "REJECT missing physical typing and quotient"
+  - case_id: "CM-P3T04-06"
+    mutation: "count six written scalar components as six physical responses"
+    disposition: "REJECT symbol-count adequacy"
+  - case_id: "CM-P3T04-07"
+    mutation: "count passive chart changes as physical gauge generators"
+    disposition: "REJECT representation/physics conflation"
+  - case_id: "CM-P3T04-08"
+    mutation: "infer one quadratic cone from the degree-six factor product"
+    disposition: "REJECT reduction missing"
+  - case_id: "CM-P3T04-09"
+    mutation: "reactivate one-amplitude or unchanged graph decoder"
+    disposition: "REJECT V22-X03 freeze"
+  - case_id: "CM-P3T04-10"
+    mutation: "promote source-chart C1 convergence to physical norm convergence"
+    disposition: "REJECT no physical norm or metric"
+freeze_evaluation:
+  fixed_candidate_frozen: false
+  cross_law_uniqueness_overread_frozen: true
+  active_reason: "P3-T04 constructs fixed-law pre-principal readiness while preserving unresolved source-law selection debt."
+  no_global_no_go: true
+authority_limits:
+  source_law_adopted: false
+  physical_principal_structure_constructed: false
+  effective_metric_constructed: false
+  gate_b_verdict_authorized: false

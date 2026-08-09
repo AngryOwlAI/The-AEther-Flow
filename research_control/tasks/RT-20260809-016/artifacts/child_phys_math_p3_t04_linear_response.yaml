@@ -1,0 +1,28 @@
+schema_id: "parent_child_execution_unit_output_v1"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+task_id: "RT-20260809-016"
+job_id: "AJ-RT-20260809-016-001"
+status: "completed"
+question: "Does the sealed fixed-D transport candidate admit a source-selected regular background, differentiable tangent operator, reduced perturbation space, and bounded finite-to-continuum linearization error?"
+result:
+  disposition: "constructed_with_declared_hypotheses"
+  background: "qbar=(s1-s0,s2-s0,0,0,0,3)"
+  exact_residual_count: 6
+  exact_nonzero_residual_count: 0
+  linearization: "L_Du=(X_1u1,...,X_6u6)"
+  internal_field_gauge_dimension: 0
+  algebraic_constraint_count: 0
+  response_rank: 2
+  adequacy_verdict: "necessary_condition_met_not_sufficient"
+  finite_continuum_result: "uniform-grid value and backward-difference C1 errors decrease on all four predeclared levels"
+  independent_max_linearization_error: 5.794920099333467e-11
+  unresolved:
+    - "physical typing of any geometry probe"
+    - "one source-derived physical cone, signature, and scale"
+    - "source-law selection across alternative coupled laws"
+new_mathematical_payload:
+  - "fixed-D Frechet derivative and zero-gauge quotient"
+  - "uniform-grid C1 commutation and convergence bound"
+  - "explicit cross-law principal-zero-set counterfamily"
+claim_boundary_preserved: true

@@ -1165,7 +1165,7 @@ items:
     that makes the principal polynomial meaningless, inadequate rank, unbounded refinement
     error, or nonunique physical response with no derived quotient. ## P4. Derive
     principal structure, reconstruct operational geometry, and perform Gate B'
-  implementation_status: pending
+  implementation_status: completed_checkpoint_pending
   requires_human_gate: false
   dependency_independent_after_other_human_gates: true
   allow_scope_expansion: false
@@ -1181,6 +1181,16 @@ items:
   title: Derive the gauge-reduced principal symbol and polynomial
   track: B
   owner: ontology formalizer/candidate constructor with hyperbolic-PDE consultation
+  work_kind: construction_or_implementation
+  task_class: science
+  role_family: ontology-formalizer@0.2.0
+  supporting_perspective: hyperbolic-PDE consultation and refuter@0.2.0
+  controlling_launcher: continue-research-goal@v4
+  worker_skill: continue-research
+  route_label: ordinary-research-packet
+  target_derivation_milestone: effective_metric_g_eff
+  milestone_burden: Extract the highest-derivative operator from the fixed-law continuum linearization, remove constraints gauge directions and algebraic redundancies lawfully, and derive the covariant reduced source principal symbol and polynomial with multiplicities branches and independent reproduction without inserting a metric form.
+  expected_result_kind: candidate_or_precise_obstruction
   declared_coverage_ids:
   - V22-R07
   - V22-R08

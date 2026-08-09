@@ -1,0 +1,350 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260809-017-001"
+completion_id: "AJC-AJ-RT-20260809-017-001"
+task_id: "RT-20260809-017"
+task_type: "v22_p3_t04_eleven_eof_checkpoint_recovery"
+decision_id: "DDR-20260809-017"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260809-017"
+status: "completed"
+created_at: "2026-08-09T18:12:48Z"
+started_at: "2026-08-09T18:12:48Z"
+completed_at: "2026-08-09T18:20:53Z"
+objective: "Remove exactly one terminal newline from each of eleven checkpoint-named P3-T04 files, seal zero non-target repair-boundary drift, synchronize approved control and generated state, and invoke at most one fresh checkpoint."
+completion_summary: "Exactly eleven terminal newlines were removed as eleven one-byte nonsemantic edits. At the sealed repair boundary, appending one newline reconstructs every captured preimage; all six YAML documents and the JSON document parse, the Python document compiles, all three Markdown documents decode, and every target ends in exactly one newline. The sealed 65-path receipt records zero mismatches across all 54 non-target inherited paths, while the P3-T04 manuscript, specification, counterledger, validation, compact receipt, job, completion, YAML handoff, and backlog hashes remain unchanged. After sealing, only the predecessor documentation-impact changed_paths list is extended with the thirteen recovery records required by cumulative documentation validation. AJ-RT-20260809-016-001 and its consumed checkpoint were not replayed; P4-T01 remains selected but unexecuted; P2-T02 remains externally gated."
+objective_result: "implemented_and_validated_eleven_eof_repairs_ready_for_fresh_checkpoint"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated_precheckpoint"
+work_item_status: "completed_precheckpoint"
+
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260809-017-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+prior_checkpoint:
+  job_id: "AJ-RT-20260809-016-001"
+  run_id: "RUN-CHECKPOINT-1ac1a382ca29b5bc"
+  gate_count: 7
+  pass_count: 2
+  failure_count: 1
+  skipped_count: 4
+  test_shard_executed: false
+  consumed: true
+  replayed: false
+  sole_failure_gate: "git_diff_check"
+  finding_count: 11
+
+is_physics_task: false
+payload_class: "project_system_exact_eleven_eof_checkpoint_recovery"
+has_new_mathematical_payload: false
+new_mathematical_payload: []
+project_system_change_only: true
+semantic_payload_changed: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  recovery_plan_id: "project_system_recovery_for_recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T01"
+  recovery_for_plan_task_id: "P3-T04"
+  task_class: "project_system"
+  expected_result_kind: "implemented_and_validated_or_precisely_blocked"
+  work_item_status: "not_executed_recovery_checkpoint_pending"
+  next_plan_task_id: "P4-T01"
+  p3_t04_executed: true
+  p3_t04_replayed: false
+  p4_t01_selected: true
+  p4_t01_executed: false
+  p2_t02_external_review_completed: false
+
+result:
+  status: "PASS_V22_P3_T04_ELEVEN_EOF_CHECKPOINT_RECOVERY"
+  strategy_id: "repair_v22_p3_t04_eleven_eof_blank_lines_and_checkpoint_v1"
+  source_task_id: "RT-20260809-016"
+  source_job_id: "AJ-RT-20260809-016-001"
+  source_handoff_id: "handoff-0986"
+  source_head: "918cc216b29b83b34eb122c341273dd490657525"
+  source_tree: "618dee8bf2cde810c90719b2ab39de8c1bb5d453"
+  inherited_manifest_sha256: "093446a15f2c0557751d04094cd3c1a0116c0c91cbb4a380facd18b73675cc82"
+  inherited_file_count: 65
+  target_file_count: 11
+  non_target_file_count: 54
+  non_target_repair_boundary_mismatch_count: 0
+  target_total_byte_deletion_count: 11
+  target_semantic_change_count: 0
+  immutable_route_sha256: "4e972aeaaaa66e135c4370d950dc74bef7776d54fd2da58c40188a8ee137fa7c"
+  route_blocker_fingerprint: "07df0f98c60ef7e24a1099086ef94cca6eee96fde018201705f6d33a081ec407"
+  target_postimage_hashes:
+    - path: "research_control/handoffs/handoff-0986.md"
+      sha256: "e278ef552370bd5cf73b8aabb7528b733c697d4c675c7780236034a2d5086f18"
+    - path: "research_control/tasks/RT-20260809-016/00_TASK.yaml"
+      sha256: "f3f8ab01dea7a7c46f5024beb6ef29ceb0708cbe4cfdc88fc1addbd69477bf4e"
+    - path: "research_control/tasks/RT-20260809-016/DDR-20260809-016.md"
+      sha256: "d104c444ae92704dc1e9721f8a80a2f11af3f5e93b04569a7093b72a5974ebbe"
+    - path: "research_control/tasks/RT-20260809-016/artifacts/child_phys_math_p3_t04_linear_response.yaml"
+      sha256: "d4cbef1fa21fc8d9963442bf18987f0004847ba6f68b26246f3dd122225e346a"
+    - path: "research_control/tasks/RT-20260809-016/artifacts/child_phys_phil_p3_t04_smuggling_refutation.yaml"
+      sha256: "bcb7874370001300ea3316f55b1ce55a720601eafc783c9b5e0496038dae05a0"
+    - path: "research_control/tasks/RT-20260809-016/artifacts/fixtures/v22_p3_t04_background_linear_response_cases.yaml"
+      sha256: "336f8172a5866000eefa975287fd32b2f9b19c65e27f754f9d80877759a0b6ce"
+    - path: "research_control/tasks/RT-20260809-016/artifacts/parent_conflict_review_p3_t04_linear_response.yaml"
+      sha256: "150d35d19c8738fe4be4b23425b100a58fee11102f8dbe243a578f38ab351428"
+    - path: "research_control/tasks/RT-20260809-016/artifacts/parent_fusion_notes_p3_t04_linear_response.md"
+      sha256: "a2a033d8193242f17d78384f5da45b43b12f090fad70ace4f0a24fd9b4ee0584"
+    - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_latex_compile_receipt.json"
+      sha256: "8a04faccf3c5f07e442a644946b093f98c924c79b5ff6a0b1061747f62f2ea2a"
+    - path: "research_control/tasks/RT-20260809-016/artifacts/validate_v22_p3_t04_linear_response.py"
+      sha256: "1eba6df9868454361d743a475bd3a266c0ef42e37a8d6af1e3eb73de7117fd4d"
+    - path: "research_control/tasks/RT-20260809-016/artifacts/validator_engineer_p3_t04_independent_evidence.yaml"
+      sha256: "d8692e9723895bf3dec2bad20a6c92ee93a8eb373358e16726cb650c8189dce5"
+  p3_t04_preservation_check_count: 12
+  p3_t04_preservation_failure_count: 0
+  p3_t04_replayed: false
+  p4_t01_selected: true
+  p4_t01_executed: false
+  p2_t02_external_review_completed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260809-017/artifacts/inherited_dirty_manifest_v22_p3_t04_eleven_eof_checkpoint.txt"
+    sha256: "093446a15f2c0557751d04094cd3c1a0116c0c91cbb4a380facd18b73675cc82"
+  - path: "research_control/tasks/RT-20260809-017/artifacts/p3_t04_eleven_eof_checkpoint_blocker.yaml"
+    sha256: "56ace0ad0ab24fd89d98584bb9ca6e984b2aa2848544d0c9ef2cc39f7840e330"
+  - path: "research_control/tasks/RT-20260809-017/artifacts/v22_p3_t04_eleven_eof_checkpoint_recovery_receipt.json"
+    sha256: "539dbae6ba8135c23f1b3b193f4c97fb36d6f48eb369b80a83b9ba5b76ab761c"
+  - path: "research_control/tasks/RT-20260809-017/artifacts/v22_p3_t04_eleven_eof_checkpoint_recovery_validation.json"
+    sha256: "86b5d48b6bacf3345334b40136f4532cb55e38b0655c23b0ff61172a110a67c7"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex"
+    sha256: "f2d4307aeaf746dc5df48c14d6ed8eb59d7c4bbfb8afd1e69c1c8b88aa72d6f6"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_specification_v1.yaml"
+    sha256: "3875e2f30c92513b664a11f68001128d5bc675366b92b848ee4850f73a53a464"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_linear_response_validation.json"
+    sha256: "caa4d1130cb23bf133480d8d997c978d34bed0e00a063d3c5367cd75ffbeb4dc"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_compact_receipt.json"
+    sha256: "bad862eb7e894658f816e090e9e8881616a6e3500e79928ee30d127ffa5bb97a"
+  - path: "research_control/tasks/RT-20260809-016/jobs/AJ-RT-20260809-016-001.yaml"
+    sha256: "ab88eaf8f2fdcdee94729dac2d8fb24ba28305c082e1783aa1d5f3664cc2d6bd"
+  - path: "research_control/tasks/RT-20260809-016/jobs/completions/AJC-AJ-RT-20260809-016-001.yaml"
+    sha256: "000ea94591724880b8236c1dae85629124246e555d9f85009de749fb21bb6606"
+  - path: "research_control/handoffs/handoff-0986.yaml"
+    sha256: "7742960f304753054239958a6852980d6ebef608d34c3d67fa370fcf631d6d51"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1156
+    relationship_row_count: 5868
+    semantic_row_count: 1156
+    vault_row_count: 1156
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: '.venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search "checkpoint recovery" --limit 10 --json'
+      query_type: "search"
+      query_text: "checkpoint recovery"
+      returned_object_ids:
+        - "MD-SCHEMA-AGENT-JOB-SCHEMA"
+        - "MD-SKILL-CONTINUE-RESEARCH-CONTINUE-GOAL"
+  canonical_inspections:
+    - object_id: "MD-SCHEMA-AGENT-JOB-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/schemas/AGENT_JOB_SCHEMA.md"
+      source_hash: "d804e9e2138eb24ddfd3c8ee3ab7fc829094d1073b82efe3e32dbe017ed92d75"
+    - object_id: "MD-SKILL-CONTINUE-RESEARCH-CONTINUE-GOAL"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/continue-research-continue-goal/SKILL.md"
+      source_hash: "1c104985bb950cd1e1fe646f69dffce53d466a49b34f228c24f55efb58d0ac54"
+  authority_note: "Tracked canonical source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local retrieval layers are operational navigation only and are not authority."
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0986"
+  source_handoff_sha256_at_intake: "7742960f304753054239958a6852980d6ebef608d34c3d67fa370fcf631d6d51"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T01"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T01"
+  guard_outcome: "project_system_checkpoint_recovery"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "eleven exact one-byte EOF normalizations with preimage reconstruction"
+      - "sealed 65-path repair-boundary receipt with zero drift on 54 non-target paths"
+      - "updated recovery control records and approved generated projections"
+      - "one fresh governed checkpoint outcome"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "each target postimage reconstructs its exact preimage by appending one newline at the sealed repair boundary"
+      - "all eleven documents parse decode or compile and end in exactly one newline"
+      - "all 54 non-target inherited paths match at the sealed repair boundary"
+      - "the P3-T04 scientific manuscript specification validation compact receipt job completion handoff and backlog retain their scientific state and the only post-seal predecessor change is cumulative documentation-impact coverage"
+      - "the consumed AJ-RT-20260809-016-001 checkpoint is not replayed"
+      - "P4-T01 remains unexecuted and P2-T02 remains externally gated"
+      - "at most one fresh governed checkpoint is invoked"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+command_results:
+  - command: "task-local eleven-file EOF repair-boundary validator"
+    status: "PASS"
+    summary: "All eleven postimages reconstruct their exact preimages, all documents parse decode or compile, and all 54 non-target inherited paths match at the sealed repair boundary."
+  - command: "P3-T04 focused validator"
+    status: "PASS"
+    summary: "The live P3-T04 suite passes 92 checks with zero failures while preserving the proposal-only authority boundary."
+  - command: "generated views documentation impact claim language memory and research-control acceptance"
+    status: "PASS_WITH_WARNINGS"
+    summary: "Focused repair and P3 validators, documentation impact, task taxonomy, generated-view freshness, memory bootstrap, claim-language, and research-control acceptance pass; only disclosed historical claim-language and local-cache retrieval warnings remain."
+  - command: "governed cumulative checkpoint AJ-RT-20260809-017-001"
+    status: "PENDING_SINGLE_INVOCATION"
+    summary: "Exactly one fresh invocation remains authorized."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, checkpoint-recovery schema, role-fit, local receipt, Git, and exact-manifest preflight uniquely selected the eleven-file recovery."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The sealed repair-boundary receipt proves eleven exact one-byte deletions and zero drift across 54 non-target paths."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "The eleven source repairs, sealed recovery packet, control records, exact cumulative documentation coverage, and repository acceptance checks are complete."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one fresh governed AJ-RT-20260809-017-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, compact frontier, task index, dependency graph, claim graph, wiki, and registry projections are regenerated from tracked sources and pass freshness checks."
+  memory_bootstrap:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only verification pass; disclosed local-cache-only freshness warnings are nonblocking and do not affect tracked authority."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has zero hard failures; 1538 reported findings are warning-class historical or calibration matches and create no promotion authority."
+
+selected_next_route:
+  route_id: "v22_p4_t01_gauge_reduced_source_principal_symbol"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T01"
+  work_item_id: "P4-T01"
+  work_kind: "construction_or_implementation"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  supporting_perspective: "hyperbolic-PDE consultation and refuter@0.2.0"
+  worker_skill: "continue-research"
+  strategy_id: "derive_v22_p4_t01_gauge_reduced_source_principal_symbol_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta_project_system_eof_recovery_only"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "P3-T04 scientifically complete with fixed-law background and pre-principal readiness; checkpoint pending"
+  new_status: "the same scientific status after exact EOF recovery; one fresh checkpoint remains"
+  ledger_row_updated: false
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review is authorized for this EOF recovery."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  background_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  reviewer_contact_authorized: false

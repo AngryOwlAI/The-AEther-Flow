@@ -1,0 +1,211 @@
+schema_id: "v22_p3_t04_background_linear_response_specification_v1"
+artifact_id: "V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-SPECIFICATION-V1"
+task_id: "RT-20260809-016"
+job_id: "AJ-RT-20260809-016-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P3-T04"
+status: "draft/control"
+claim_status: "proposal-only background and linear-response data"
+candidate_id: "CAND-V22-B1-SIX-TRANSPORT-PREPRINCIPAL-V1"
+dynamics_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-DYNAMICS-V1"
+refinement_candidate_id: "CAND-V22-B1-SIX-TRANSPORT-REFINEMENT-V1"
+candidate_family_id: "FAM-V22-B1-SIX-TRANSPORT-CONTROLLED-REFINEMENT"
+created_at: "2026-08-09T17:06:02Z"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Produce the exact admissible background and linearized operator needed for a lawful principal-symbol calculation, compare finite and continuum linearizations with bounded error, apply the adequacy floor, and stress nonunique response without target convenience."
+
+source_bindings:
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  - object_id: "TEX-V22-P2-T01-LOCAL-SOURCE-INFORMATION-CAPACITY-THEOREM-V1"
+    path: "research_control/tasks/RT-20260809-005/artifacts/v22_p2_t01_local_source_information_capacity_theorem_v1.tex"
+    sha256: "2ba813e4e961b9ea2709a31c6e06152b1cb4d50ebd90185c2ed93d7aeb132439"
+  - object_id: "TEX-V22-P3-T01-B1-LOCAL-MULTIFIELD-SOURCE-STATE-V1"
+    path: "research_control/tasks/RT-20260809-010/artifacts/v22_p3_t01_local_multifield_source_state_v1.tex"
+    sha256: "ce1b852b7ea178dd5d42a204e9cc63fb2c11e9987e8ac0fc733267eb04dbb6db"
+  - object_id: "TEX-V22-P3-T02-B1-SOURCE-DYNAMICS-WITHOUT-HIDDEN-GEOMETRY-V1"
+    path: "research_control/tasks/RT-20260809-012/artifacts/v22_p3_t02_source_dynamics_without_hidden_geometry_v1.tex"
+    sha256: "f26c77a175e7a5783e859eacc5de24270e1089a253e73493114a1403bbd61037"
+  - object_id: "TEX-V22-P3-T03-CONTROLLED-REFINEMENT-LIMIT-V1"
+    path: "research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex"
+    sha256: "ba5b815072de442dda7ee2bfb6aba41b7d98082b4f0586df22d9d327c0eda921"
+  - object_id: "HANDOFF-0985"
+    path: "research_control/handoffs/handoff-0985.yaml"
+    sha256: "60631e71a9842ed0a74ef00322041c39af005c30b547028ace7e510b495d495a"
+
+background_classification:
+  fixed_coefficient_datum: "D=(tau,X_1,...,X_6) from P3-T02"
+  local_solution_class: "qbar^A(Phi_A^t(y))=f_A(y) for arbitrary C2 source data f_A"
+  regular_subclass: "qbar6 nonzero and d(qbar1/qbar6) wedge d(qbar2/qbar6) nonzero"
+  selected_fixture:
+    chart: "(s0,s1,s2,s3)"
+    rule: "qbar=(s1-s0,s2-s0,0,0,0,3)"
+    equation_residuals:
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+      - 0
+    q6_margin: 3
+    response_wedge_minor_s1_s2: "1/9"
+    nontrivial: true
+  selection_rule: "lexicographically fixed rational affine member of the P3-T02 regular solution class"
+  selection_frozen_before_target_access: true
+  target_convenience_used: false
+  canonical_background_adopted: false
+  physical_vacuum_claimed: false
+  minkowski_background_claimed: false
+
+tangent_and_linearized_equations:
+  source_state: "C2(U,R6)"
+  tangent_space: "C2 source variations with the declared initial or inflow trace class"
+  equation_map: "E_D(q)=(X_1q1,...,X_6q6)"
+  derivative: "DE_D|qbar[u]=(X_1u1,...,X_6u6)"
+  background_independent_for_fixed_D: true
+  differentiability: "affine-linear C-infinity map C2 to C1 for fixed D"
+  coefficient_variations_included: false
+  coefficient_variation_reason: "P3-T04 linearizes the sealed P3-T02 fixed-D candidate; varying D would change candidate identity and requires a separate source-law packet"
+
+constraint_and_equivalence_reduction:
+  algebraic_field_constraints: []
+  secondary_field_constraints: []
+  internal_field_gauge_generators: []
+  physical_gauge_generators: []
+  passive_source_chart_generators: "representation changes only, not quotient directions in the six scalar field fiber"
+  open_regularity_conditions:
+    - "q6 nonzero"
+    - "d(q1/q6) wedge d(q2/q6) nonzero"
+  open_conditions_are_linearized_constraints: false
+  physical_perturbation_quotient: "T_qbar Q_reg / {0}, because no internal field-gauge vertical subspace is supplied"
+  unresolved_gauge_degeneracy: false
+  gauge_null_test: "vacuously PASS for the zero internal generator space"
+  constraint_propagation_test: "not applicable to absent algebraic and secondary field constraints; regularity margins are checked separately"
+
+response_operator:
+  map: "R(q)=(logistic(q1/q6),logistic(q2/q6))"
+  derivative_at_selected_background:
+    row_1:
+      - 0.08331018947120462
+      - 0
+      - 0
+      - 0
+      - 0
+      - -0.002777006315706821
+    row_2:
+      - 0
+      - 0.08324080928468688
+      - 0
+      - 0
+      - 0
+      - 0.005549387285645792
+  rank_two_minor: 0.006934807593243673
+  numerical_jacobian_max_error: 2.4119096476982183e-11
+  response_rank: 2
+  local_constant_rank_patch: true
+  detector_semantics_claimed: false
+  physical_geometry_probe_typing_complete: false
+
+finite_to_continuum_linearization_parity:
+  finite_operator: "the P3-T03 monotone backward-upwind U_A,n on uniform periodic source grids"
+  continuum_operator: "the fixed-D diagonal transport derivative L_D"
+  commutation_identity: "Delta_h U_A,n = U_A,n Delta_h for constant source coefficients"
+  analytic_c1_bound: "||Delta_h U_A,n^m I_n u - I_n partial u(t)||inf <= initial backward-difference error + the P3-T03 global bound applied to partial u"
+  hypotheses:
+    - "periodic C3 source perturbations"
+    - "constant P3-T02 fixture velocities"
+    - "uniform source grids"
+    - "source CFL at most one"
+  levels:
+    - 24
+    - 32
+    - 48
+    - 64
+  max_value_errors:
+    - 0.14565437863208408
+    - 0.10928976081749475
+    - 0.07406696753951003
+    - 0.056091595357046664
+  max_c1_errors:
+    - 1.8676879164634137
+    - 1.4183245908883153
+    - 0.9734371468567655
+    - 0.7385019479146715
+  value_orders:
+    - 0.9984418981360618
+    - 0.9594735839794373
+    - 0.9662877579643908
+  c1_orders:
+    - 0.9566982946729076
+    - 0.9283125040137568
+    - 0.9601207216373941
+  all_value_errors_strictly_decrease: true
+  all_c1_errors_strictly_decrease: true
+  maximum_source_cfl: 0.3428571428571429
+  target_metric_norm_used: false
+  physical_derivative_norm_claimed: false
+
+source_adequacy_result:
+  checklist_id: "v22_p2_t01_source_adequacy_checklist_v1"
+  source_statistic: "I_B1=(q1/q6,q2/q6)"
+  response_map: "R_B1=(logistic(I1),logistic(I2))"
+  source_quotient_vertical_space: "zero internal field-gauge space on the selected regular patch"
+  computed_capacity_rank: 2
+  required_declared_response_rank: 2
+  verdict: "necessary_condition_met_not_sufficient"
+  exact_scope: "the sealed two-channel B1 source-response interface on the selected regular patch"
+  physical_probe_admission_count: 0
+  sufficiency_for_geometry: false
+  global_rank_claimed: false
+  singular_strata_excluded: true
+
+counterfamily:
+  family: "E1_lambda=X1q1+lambda*(X1-X2)(q2-qbar2); E2_lambda=X2q2+lambda*(X1-X2)(q1-qbar1); remaining equations unchanged"
+  selected_background_preserved: true
+  source_only: true
+  target_metric_used: false
+  cross_response_changed: true
+  principal_two_by_two_factor: "xi(X1)xi(X2)-lambda^2 xi(X1-X2)^2"
+  principal_zero_sets_differ: true
+  changes_sealed_p3_t02_law: true
+  inside_fixed_candidate_identity: false
+  physical_inequivalence_claimed: false
+  disposition: "source-law-selection debt; blocks uniqueness overread across unadopted laws but does not refute fixed-law P3-T04 readiness"
+  freeze_fixed_candidate: false
+  freeze_reason: "no two physically inequivalent principal structures have been derived from the same sealed law and quotient; no physical principal structure is claimed"
+
+cross_cutting_freeze:
+  directive_id: "V22-X03"
+  one_amplitude_route_status: "frozen"
+  unchanged_graph_decoder_route_status: "frozen"
+  downstream_decoder_added: false
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex"
+  exact_scope: "fixed-law background, tangent operator, zero-gauge quotient, two-channel response derivative, uniform-grid C1 parity, and cross-law nonuniqueness pressure"
+  next_required_role: "ontology-formalizer/candidate-constructor with hyperbolic-PDE consultation"
+  next_plan_task_id: "P4-T01"
+  no_fog_check: true
+  no_fog_explanation: "The fixed P3-T02 law is ready for a lawful source-principal calculation on the selected regular background, but no reduction to one physical cone, signature, scale, or effective metric has been constructed."
+
+source_purity:
+  target_atlas_input_count: 0
+  target_metric_input_count: 0
+  target_fit_count: 0
+  physical_clock_input_count: 0
+  physical_gauge_assumed: false
+  source_extension_status: "proposal-only"
+
+authority_limits:
+  ontology_modified: false
+  source_law_adopted: false
+  background_adopted: false
+  physical_causal_cone_claimed: false
+  lorentzian_signature_claimed: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  gate_chair_verdict_authorized: false
+  completed_derivation_authorized: false

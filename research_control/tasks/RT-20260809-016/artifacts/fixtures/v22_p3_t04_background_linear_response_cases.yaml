@@ -1,0 +1,37 @@
+schema_id: "v22_p3_t04_background_linear_response_cases_v1"
+task_id: "RT-20260809-016"
+job_id: "AJ-RT-20260809-016-001"
+status: "frozen_before_target_access"
+cases:
+  - {case_id: "BLR01", kind: "selected_background_residual", expected: "all_six_zero"}
+  - {case_id: "BLR02", kind: "selected_background_nontrivial", expected: "q1_and_q2_nonconstant"}
+  - {case_id: "BLR03", kind: "selected_background_q6_margin", expected: "margin_three"}
+  - {case_id: "BLR04", kind: "selected_background_rank_wedge", expected: "minor_one_ninth"}
+  - {case_id: "BLR05", kind: "target_convenience_selection", expected: "reject"}
+  - {case_id: "BLR06", kind: "frechet_linearization", expected: "diagonal_transport"}
+  - {case_id: "BLR07", kind: "background_dependence", expected: "none_for_fixed_D"}
+  - {case_id: "BLR08", kind: "independent_centered_difference", expected: "error_below_1e-8"}
+  - {case_id: "BLR09", kind: "internal_field_gauge", expected: "zero_generators"}
+  - {case_id: "BLR10", kind: "passive_chart_relabeling", expected: "representation_only"}
+  - {case_id: "BLR11", kind: "algebraic_field_constraints", expected: "none"}
+  - {case_id: "BLR12", kind: "open_regularity_conditions", expected: "not_linearized_constraints"}
+  - {case_id: "BLR13", kind: "response_jacobian_rank", expected: "rank_two"}
+  - {case_id: "BLR14", kind: "response_numeric_jacobian", expected: "error_below_1e-9"}
+  - {case_id: "BLR15", kind: "p2_adequacy", expected: "necessary_condition_met_not_sufficient"}
+  - {case_id: "BLR16", kind: "physical_probe_typing", expected: "incomplete"}
+  - {case_id: "BLR17", kind: "uniform_value_parity", expected: "strict_decrease"}
+  - {case_id: "BLR18", kind: "uniform_c1_parity", expected: "strict_decrease"}
+  - {case_id: "BLR19", kind: "source_cfl", expected: "at_most_0_35"}
+  - {case_id: "BLR20", kind: "principal_pairing_chart_parity", expected: "exact"}
+  - {case_id: "BLR21", kind: "response_minor_chart_parity", expected: "exact"}
+  - {case_id: "BLR22", kind: "base_zero_coupled_nonzero", expected: "pass"}
+  - {case_id: "BLR23", kind: "coupled_zero_base_nonzero", expected: "pass"}
+  - {case_id: "BLR24", kind: "counterfamily_candidate_identity", expected: "outside_fixed_law"}
+  - {case_id: "BLR25", kind: "counterfamily_physical_inequivalence", expected: "not_claimed"}
+  - {case_id: "BLR26", kind: "one_amplitude_reactivation", expected: "reject"}
+  - {case_id: "BLR27", kind: "unchanged_graph_decoder_reactivation", expected: "reject"}
+  - {case_id: "BLR28", kind: "target_metric_input", expected: "zero"}
+  - {case_id: "BLR29", kind: "physical_cone_claim", expected: "reject"}
+  - {case_id: "BLR30", kind: "lorentzian_signature_claim", expected: "reject"}
+  - {case_id: "BLR31", kind: "effective_metric_claim", expected: "reject"}
+  - {case_id: "BLR32", kind: "distance_to_gr_promotion", expected: "reject"}

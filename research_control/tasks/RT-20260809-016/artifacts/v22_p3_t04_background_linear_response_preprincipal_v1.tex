@@ -1,0 +1,337 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage{microtype}
+
+\newtheorem{definition}{Definition}
+\newtheorem{proposition}{Proposition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\RR}{\mathbb{R}}
+\newcommand{\sigm}{\operatorname{sigm}}
+\newcommand{\rank}{\operatorname{rank}}
+\newcommand{\qbar}{\bar q}
+\newcommand{\Lop}{L_D}
+
+\title{V22 P3-T04: Background, Linear Response, and\\
+Pre-Principal-Symbol Readiness\\
+\large A fixed-law source construction with bounded linearization parity}
+\author{The \AE ther-Flow Research Project}
+\date{Draft/control --- 2026-08-09}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This packet executes only V22 P3-T04 for the proposal-only P3-T02 six-channel
+source transport candidate.  It classifies fixed-datum backgrounds, selects
+one exact nonconstant regular background by a source-side rule, derives the
+Fr\'echet linearization, identifies the absent field constraints and absent
+internal field gauge, computes the two-channel response derivative, and
+establishes a uniform-grid source-coordinate $C^1$ comparison inherited from
+the P3-T03 refinement theorem.  An independent implementation reproduces the
+six tangent channels.  A source-only coupled counterfamily preserves the
+selected background while changing principal zero sets, exposing source-law
+selection debt.  Because that family changes the sealed law, it is not a
+within-candidate obstruction.  The result is readiness for a lawful
+\emph{source-principal} calculation, not a physical cone, Lorentzian
+signature, scale, effective metric, source-law adoption, or Gate verdict.
+\end{abstract}
+
+\section{Authority and exact scope}
+
+The fixed candidate is the P3-T02 datum
+\[
+ D=(\tau,X_1,\ldots,X_6),\qquad
+ E_D(q)_A=X_A(q^A)=0 \quad(A=1,\ldots,6),
+\]
+with no sum over $A$.  On the declared source chart
+$(s^0,s^1,s^2,s^3)$, $\tau=s^0$ and
+\[
+\begin{alignedat}{3}
+X_1&=\partial_0+\partial_1,\qquad&
+X_2&=\partial_0+\partial_2,\qquad&
+X_3&=\partial_0+\partial_3,\\
+X_4&=\partial_0+\partial_1+\partial_2,\qquad&
+X_5&=\partial_0+\partial_2+2\partial_3,\qquad&
+X_6&=\partial_0+2\partial_1+\partial_3.
+\end{alignedat}
+\]
+The source arena, $\tau$, and the six vector fields remain primitive or
+proposal-only source-extension data.  The chart is a computational source
+fixture, not an adopted spacetime chart.  No target atlas, target metric,
+connection, measure, physical clock, detector, or GR-fit datum enters any
+definition below.
+
+\section{Background classification and source-side selection}
+
+\begin{definition}[Fixed-datum background]
+A background is a $C^2$ source section $\qbar:U\to\RR^6$ satisfying
+$X_A(\qbar^A)=0$ for every channel.  It is response-regular on a patch when
+\[
+ \qbar^6\ne0,
+ \qquad
+ d(\qbar^1/\qbar^6)\wedge d(\qbar^2/\qbar^6)\ne0.
+\]
+These are open regularity conditions, not algebraic field constraints.
+\end{definition}
+
+If $\Phi_A^t$ denotes the local flow of $X_A$, every local background has the
+characteristic form
+\[
+ \qbar^A\!\left(\Phi_A^t(y)\right)=f_A(y)
+\]
+for freely supplied $C^2$ initial data $f_A$.  Thus the fixed law contains an
+infinite-dimensional background class.  P3-T04 needs one exact witness but
+does not canonize it.
+
+\begin{proposition}[Selected regular affine witness]
+The source-side rule ``choose the lexicographically fixed rational affine
+member of the declared P3-T02 regular solution class'' selects
+\begin{equation}
+ \qbar=(s^1-s^0,\ s^2-s^0,\ 0,\ 0,\ 0,\ 3).
+ \label{eq:qbar}
+\end{equation}
+It is nonconstant, solves all six equations exactly, has $\qbar^6=3$, and has
+response-wedge minor $1/9$ in the $(s^1,s^2)$ chart pair.
+\end{proposition}
+
+\begin{proof}
+$X_1(s^1-s^0)=0$ and $X_2(s^2-s^0)=0$; the remaining components are constant.
+Therefore $E_D(\qbar)=0$.  Writing
+$\rho_i=\qbar^i/\qbar^6$ gives
+\[
+ d\rho_1=\tfrac13(ds^1-ds^0),\qquad
+ d\rho_2=\tfrac13(ds^2-ds^0),
+\]
+whose $(s^1,s^2)$ minor is $1/9$.  The selection rule and rational
+coefficients were fixed before target access.  Nothing in the proof identifies
+\eqref{eq:qbar} as Minkowski space or a physical vacuum.
+\end{proof}
+
+\section{Tangent equation, constraints, and quotient}
+
+For fixed $D$, the equation map
+\[
+ E_D:C^2(U,\RR^6)\longrightarrow C^1(U,\RR^6)
+\]
+is affine-linear (indeed linear) and hence $C^\infty$.  Its Fr\'echet derivative
+at every background is
+\begin{equation}
+ \Lop u=DE_D|_{\qbar}[u]
+   =(X_1u^1,\ldots,X_6u^6).
+ \label{eq:linearization}
+\end{equation}
+This derivative is background-independent because $D$ is held fixed.
+Variations of $\tau$ or $X_A$ would change the sealed candidate identity and
+belong to a separate source-law packet.
+
+The P3-T02 candidate contains no algebraic field constraints, no secondary
+field constraints, and no internal field-gauge action.  Its passive
+source-chart naturality changes representations of scalars, vectors, and
+covectors together; it is not an active physical gauge direction in the
+six-dimensional field fiber.  Consequently the declared fixed-law tangent
+quotient is
+\[
+ T_{\qbar}{\cal Q}_{\rm reg}/\{0\}.
+\]
+The gauge-null test is therefore vacuous but explicit: the only internal
+vertical vector is zero, and \eqref{eq:linearization} annihilates it.  Constraint
+propagation is not applicable to absent field constraints.  Positivity of
+$q^6$ and nonvanishing of the response wedge are instead controlled by open
+margins; neither is silently promoted to a constraint equation.
+
+\section{Response derivative and the P2 adequacy floor}
+
+On $q^6\ne0$, retain the sealed B1 source response
+\[
+ R(q)=\left(\sigm(q^1/q^6),\sigm(q^2/q^6)\right),
+ \qquad \sigm(z)=\frac{1}{1+e^{-z}}.
+\]
+At the source point $(s^0,s^1,s^2,s^3)=(0.1,0.2,-0.1,0.05)$,
+$\qbar=(0.1,-0.2,0,0,0,3)$.  Its derivative is
+\[
+ dR_{\qbar}=
+ \begin{pmatrix}
+ 0.0833101894712&0&0&0&0&-0.00277700631571\\
+ 0&0.0832408092847&0&0&0&0.00554938728565
+ \end{pmatrix}.
+\]
+The leading two-column minor is
+$0.00693480759324>0$, so $\rank dR_{\qbar}=2$.  A centered numerical
+derivative differs by at most $2.42\times10^{-11}$.
+
+Applied to the sealed statistic
+$I_{\rm B1}=(q^1/q^6,q^2/q^6)$, the P2 information-capacity theorem therefore
+returns exactly
+\[
+ \texttt{necessary\_condition\_met\_not\_sufficient}.
+\]
+The computed capacity rank and the declared source-response rank are both two
+on this regular patch.  This is not a geometry-sufficiency result.  None of the
+P2 physical probe slots has acquired complete source, device, scale, invariant
+readout, domain, and falsifier typing in this packet.  The physical-probe
+admission count remains zero.
+
+\section{Finite-to-continuum linearization parity}
+
+Let $U_{A,h}$ be the constant-coefficient periodic backward-upwind update used
+in P3-T03, and let
+$\Delta_{j,h}z_i=(z_i-z_{i-e_j})/h_j$.  Both are polynomials in commuting
+periodic shifts.
+
+\begin{lemma}[Exact discrete commutation]
+For each constant fixture channel and uniform periodic grid,
+\[
+ \Delta_{j,h}U_{A,h}=U_{A,h}\Delta_{j,h}.
+\]
+\end{lemma}
+
+\begin{proof}
+The update has the form
+$U_{A,h}=I-\Delta t\sum_jv_A^j\Delta_{j,h}$.  Periodic shift operators commute,
+so every $\Delta_{j,h}$ commutes with every term of $U_{A,h}$.
+\end{proof}
+
+\begin{theorem}[Uniform source-chart $C^1$ parity bound]
+Let $u$ be a periodic $C^3$ perturbation and impose the P3-T03 source CFL.
+At $t_m=m\Delta t$, each discrete derivative satisfies
+\begin{align*}
+\|\Delta_{j,h}U_{A,h}^m I_hu-I_h\partial_jS_A(t_m)u\|_\infty
+&\le
+ \|\Delta_{j,h}I_hu-I_h\partial_ju\|_\infty\\
+&\quad+\frac{t_m}{2}\left[
+ \Delta t\,\|(v_A\!\cdot\!\nabla)^2\partial_ju\|_\infty
+ +\sum_kv_A^kh_k\|\partial_{kk}\partial_ju\|_\infty
+ \right].
+\end{align*}
+Hence the fixed-law finite linearization converges in the declared discrete
+$C^1$ source comparison for $\Delta t=O(h)$.
+\end{theorem}
+
+\begin{proof}
+Use the commutation lemma, add and subtract
+$U_{A,h}^mI_h\partial_ju$, apply $\ell_\infty$ contraction to the initial
+backward-difference error, and apply the P3-T03 global consistency bound to the
+$C^2$ datum $\partial_ju$.  This is a source-coordinate scalar norm, not a
+metric-induced physical norm.
+\end{proof}
+
+For a predeclared periodic diagonal-mode fixture, all six channels were tested
+at final source time $0.05$ with source CFL at most $0.342858$:
+\begin{center}
+\begin{tabular}{rrrr}
+\toprule
+$n$ & $h$ & maximum value error & maximum $C^1$ difference error\\
+\midrule
+24 & 0.041667 & 0.145654 & 1.867688\\
+32 & 0.031250 & 0.109290 & 1.418325\\
+48 & 0.020833 & 0.074067 & 0.973437\\
+64 & 0.015625 & 0.056092 & 0.738502\\
+\bottomrule
+\end{tabular}
+\end{center}
+Both series decrease strictly.  Their observed adjacent orders are respectively
+$(0.9984,0.9595,0.9663)$ and $(0.9567,0.9283,0.9601)$.  This evidence checks
+the theorem on a finite fixture; it does not replace the theorem or establish a
+physical derivative norm.
+
+\section{Independent linearization and representation parity}
+
+A separate implementation imports no primary P3-T04 module.  It perturbs each
+background gradient by an analytic trigonometric variation, evaluates the six
+residuals at $\qbar\pm\varepsilon u$, and forms centered differences.  The
+maximum difference from \eqref{eq:linearization} is
+$5.80\times10^{-11}$.  All six background residuals are exactly zero.
+
+As a passive-chart check, use
+\[
+s^{0\prime}=s^0,\quad s^{1\prime}=s^1+s^2,\quad
+s^{2\prime}=s^2,\quad s^{3\prime}=s^3.
+\]
+Transform vectors and covectors dually.  For the test covector
+$(2,-1,3,1)$, all six pairings $\xi(X_A)$ agree exactly before and after the
+change, and the response-wedge minor stays $1/9$.  This verifies representation
+parity only; it does not infer an active gauge symmetry or target
+diffeomorphism.
+
+\section{Counterfamily and the exact freeze boundary}
+
+Let $Z=X_1-X_2$ and, for real $\lambda$, define the source-only mutation
+\begin{align*}
+ E_1^{\lambda}(q)&=X_1q^1+\lambda Z(q^2-\qbar^2),\\
+ E_2^{\lambda}(q)&=X_2q^2+\lambda Z(q^1-\qbar^1),
+\end{align*}
+with $E_A^\lambda=E_A$ for $A\ge3$.  Because every added term vanishes at
+$q=\qbar$, the selected background is preserved.  The tangent two-channel
+factor is
+\begin{equation}
+ p_\lambda(\xi)=\xi(X_1)\xi(X_2)
+       -\lambda^2\xi(Z)^2.
+ \label{eq:counterfactor}
+\end{equation}
+For $\lambda=1$, $\xi=(0,0,1,1)$ gives the base factor zero while the coupled
+full product is $-3$.  Conversely,
+$\xi=((\sqrt5-1)/2,1,0,1)$ makes \eqref{eq:counterfactor} zero while the base
+full product is approximately $24.7984$.  Thus the principal zero sets differ.
+
+This is a counterfamily to a \emph{cross-law uniqueness overread}, not to the
+fixed-law derivative.  It changes the sealed P3-T02 equations and therefore
+lies outside that candidate identity.  Moreover no member has been typed as a
+physical principal structure.  The honest disposition is:
+\begin{itemize}[leftmargin=*]
+  \item preserve source-law-selection debt and freeze claims of uniqueness
+        across unadopted alternative laws;
+  \item do not freeze the fixed-law P3-T04 pre-principal calculation;
+  \item do not infer physical inequivalence, a cone, or a metric; and
+  \item preserve V22-X03: the one-amplitude and unchanged graph-decoder routes
+        remain frozen.
+\end{itemize}
+
+\section{Expanded Distance-to-GR matrix}
+
+\begin{longtable}{p{0.27\textwidth}p{0.64\textwidth}}
+\toprule
+Burden & Status after P3-T04\\
+\midrule
+Source ontology primitives & Unchanged; the B1 bundle, $\tau$, and $X_A$ remain proposal-only or primitive debt.\\
+Source equivalence $\mathrm{EqSrc}$ & Passive source-chart representation parity checked; no physical or global source equivalence adopted.\\
+$\mathrm{RetainH}$ & Unchanged; no retention law is derived or adopted.\\
+$\mathrm{GenH}$ & Unchanged; no generator law is derived or adopted.\\
+$\mathrm{ObsLoc}_{\rm lc}$ & Two local source response ratios remain defined on the selected regular patch.\\
+$\mathrm{Resp}_{\rm lc}$ & Rank-two necessary condition met on the sealed local response interface; physical probe typing remains absent.\\
+$M_{\rm src}$ & The source chart remains a computational fixture and is not adopted as physical spacetime.\\
+$g_{\rm eff}$ & Blocked; fixed-law source-principal readiness exists, but no one physical cone, signature, scale, or metric is selected.\\
+Matter coupling & Blocked; no realistic matter field, detector, action, or universal coupling is constructed.\\
+Einstein equations & Blocked; no source-to-Einstein derivation is supplied.\\
+Finite-variation robustness & Uniform source-grid value and $C^1$ parity is bounded under declared $C^3$, constant-coefficient, and CFL hypotheses; physical robustness is open.\\
+Benchmark promotion & Blocked; no benchmark comparison or promotion is performed.\\
+Gate Chair status & No protected Gate decision is requested or issued.\\
+Current route freeze or hard-fail status & Fixed-law P3-T04 is not frozen; cross-law uniqueness overread and the V22-X03 scalar/graph routes remain frozen.\\
+\bottomrule
+\end{longtable}
+
+\section{Decisive result and next lawful route}
+
+P3-T04 returns \texttt{constructed\_candidate}.  The selected nontrivial
+background, exact derivative, zero internal gauge quotient, response operator,
+rank-two necessary-screen result, uniform source $C^1$ parity bound,
+independent linearization, representation check, and counterfamily are all
+explicit.  This discharges the pre-principal readiness burden for the fixed
+proposal-only candidate.
+
+P4-T01 may next extract and factor the gauge-reduced \emph{source} principal
+symbol with multiplicities and covariance stated.  It must not insert a
+quadratic target metric form, call the six-factor zero set a physical causal
+cone, or bypass the cross-law selection debt.  The current packet modifies no
+canonical ontology, adopts no source law or background, changes no protected
+Distance-to-GR row, and constructs no physical cone, Lorentzian signature,
+scale, $g_{\rm eff}$, matter coupling, Einstein equations, benchmark pass,
+global theory rejection, or completed derivation.
+
+\end{document}

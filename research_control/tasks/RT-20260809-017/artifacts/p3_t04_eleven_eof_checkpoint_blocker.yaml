@@ -1,0 +1,111 @@
+schema_id: "research_checkpoint_blocker_v1"
+blocker_id: "BLOCK-V22-P3-T04-ELEVEN-EOF-CHECKPOINT-001"
+status: "active_blocking"
+job_id: "AJ-RT-20260809-016-001"
+task_id: "RT-20260809-016"
+created_at: "2026-08-09T18:12:48Z"
+source_head: "918cc216b29b83b34eb122c341273dd490657525"
+source_tree: "618dee8bf2cde810c90719b2ab39de8c1bb5d453"
+checkpoint:
+  run_id: "RUN-CHECKPOINT-1ac1a382ca29b5bc"
+  invocation_count: 1
+  consumed: true
+  committed: false
+  staged: false
+  entry_index_restored: true
+  gate_count: 7
+  pass_count: 2
+  failure_count: 1
+  skipped_count: 4
+  failed_gate: "git_diff_check"
+  failed_gate_returncode: 2
+  test_shard_executed: false
+  receipt:
+    path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-1ac1a382ca29b5bc/receipt.json"
+    sha256: "ffd05dd0d023e1d319785cd397d273c65583c3979cbf0a6cf426052d09f112ac"
+  failed_gate_output:
+    path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-1ac1a382ca29b5bc/gates/0006-git_diff_check.stdout"
+    sha256: "137597e27a0e6b2680c9e4db3878b595a7ba45800e73964dcd443fc59513980a"
+sole_failure_class:
+  kind: "eleven_new_blank_lines_at_eof"
+  finding_count: 11
+  semantic_content_error: false
+  validator_or_policy_error: false
+targets:
+  - path: "research_control/handoffs/handoff-0986.md"
+    finding_line: 55
+    document_kind: "markdown"
+    preimage_sha256: "d081cd8b16a564a662326b73f51a581c85a7e6ee04073fe7e6a5fdf8c46dd8f8"
+    required_postimage_sha256: "e278ef552370bd5cf73b8aabb7528b733c697d4c675c7780236034a2d5086f18"
+  - path: "research_control/tasks/RT-20260809-016/00_TASK.yaml"
+    finding_line: 91
+    document_kind: "yaml"
+    preimage_sha256: "a7502e46772aefc260a319f695de8b437499b8c945853d2b89c09a640d808de0"
+    required_postimage_sha256: "f3f8ab01dea7a7c46f5024beb6ef29ceb0708cbe4cfdc88fc1addbd69477bf4e"
+  - path: "research_control/tasks/RT-20260809-016/DDR-20260809-016.md"
+    finding_line: 102
+    document_kind: "markdown"
+    preimage_sha256: "224f05af441bda402ccc3616589a4c6f0101c31540389446eb6b6ce77c42bccb"
+    required_postimage_sha256: "d104c444ae92704dc1e9721f8a80a2f11af3f5e93b04569a7093b72a5974ebbe"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/child_phys_math_p3_t04_linear_response.yaml"
+    finding_line: 29
+    document_kind: "yaml"
+    preimage_sha256: "6923ba600cd04605df80c33b4f2311dbe6344aa950f382e7baa811155d1a85c8"
+    required_postimage_sha256: "d4cbef1fa21fc8d9963442bf18987f0004847ba6f68b26246f3dd122225e346a"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/child_phys_phil_p3_t04_smuggling_refutation.yaml"
+    finding_line: 28
+    document_kind: "yaml"
+    preimage_sha256: "5e11e0a53f3de0e2cdcd4a7b08df09d22e9af6a044e6f0f64cba5b2e682fb43a"
+    required_postimage_sha256: "bcb7874370001300ea3316f55b1ce55a720601eafc783c9b5e0496038dae05a0"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/fixtures/v22_p3_t04_background_linear_response_cases.yaml"
+    finding_line: 38
+    document_kind: "yaml"
+    preimage_sha256: "8b9167f561f7eb244d8cdb36d6898858c5709581cc3fa794fd586dcc5c50f715"
+    required_postimage_sha256: "336f8172a5866000eefa975287fd32b2f9b19c65e27f754f9d80877759a0b6ce"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/parent_conflict_review_p3_t04_linear_response.yaml"
+    finding_line: 31
+    document_kind: "yaml"
+    preimage_sha256: "3c5c0d844496141b688f4fe654c79e279eda216085a32de2076b0940b05b2a5b"
+    required_postimage_sha256: "150d35d19c8738fe4be4b23425b100a58fee11102f8dbe243a578f38ab351428"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/parent_fusion_notes_p3_t04_linear_response.md"
+    finding_line: 53
+    document_kind: "markdown"
+    preimage_sha256: "27f15ca1dd64f61d497ea80d50b1d9f2042f54b56805b71d1498db814adab8a9"
+    required_postimage_sha256: "a2a033d8193242f17d78384f5da45b43b12f090fad70ace4f0a24fd9b4ee0584"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_latex_compile_receipt.json"
+    finding_line: 32
+    document_kind: "json"
+    preimage_sha256: "595fe5d4e384460f4cfa4f9695c5ec85c1da4b35075f5c1ac89e70ac35d75319"
+    required_postimage_sha256: "8a04faccf3c5f07e442a644946b093f98c924c79b5ff6a0b1061747f62f2ea2a"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/validate_v22_p3_t04_linear_response.py"
+    finding_line: 235
+    document_kind: "python"
+    preimage_sha256: "60e772273fcf17a4fed36d2294a23dc6abc96a975f920210fd5f271973c1bedd"
+    required_postimage_sha256: "1eba6df9868454361d743a475bd3a266c0ef42e37a8d6af1e3eb73de7117fd4d"
+  - path: "research_control/tasks/RT-20260809-016/artifacts/validator_engineer_p3_t04_independent_evidence.yaml"
+    finding_line: 20
+    document_kind: "yaml"
+    preimage_sha256: "9903dec31094b7c34815bdb2263f18fde0b45b398c1bdf932095b2ed94dfb632"
+    required_postimage_sha256: "d8692e9723895bf3dec2bad20a6c92ee93a8eb373358e16726cb650c8189dce5"
+recovery:
+  task_id: "RT-20260809-017"
+  job_id: "AJ-RT-20260809-017-001"
+  route_strategy_id: "repair_v22_p3_t04_eleven_eof_blank_lines_and_checkpoint_v1"
+  immutable_route_sha256: "4e972aeaaaa66e135c4370d950dc74bef7776d54fd2da58c40188a8ee137fa7c"
+  route_blocker_fingerprint: "07df0f98c60ef7e24a1099086ef94cca6eee96fde018201705f6d33a081ec407"
+  inherited_manifest_path: "research_control/tasks/RT-20260809-017/artifacts/inherited_dirty_manifest_v22_p3_t04_eleven_eof_checkpoint.txt"
+  inherited_manifest_sha256: "093446a15f2c0557751d04094cd3c1a0116c0c91cbb4a380facd18b73675cc82"
+  prior_job_replay_authorized: false
+  fresh_checkpoint_invocation_limit: 1
+authority_limits:
+  semantic_payload_changed: false
+  p3_t04_replayed: false
+  p4_t01_executed: false
+  p2_t02_external_action_taken: false
+  scientific_claims_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_or_push_authorized: false
+  external_action_authorized: false
+notes: "This blocker binds local operational checkpoint evidence only. It authorizes exactly eleven one-byte terminal-newline deletions and one fresh checkpoint; it supplies no scientific or protected authority."
