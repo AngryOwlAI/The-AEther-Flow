@@ -1,0 +1,342 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\newcommand{\A}{\mathcal A}
+\newcommand{\PhiSrc}{\Phi_{\mathrm{src}}}
+\newcommand{\Qadm}{\mathcal Q_{\mathrm{adm}}}
+\newcommand{\Isosrc}{\mathsf{Iso}_{\mathrm{src}}}
+\newcommand{\Redsrc}{\mathsf{Red}_{\mathrm{src}}}
+\newcommand{\Osrc}{\mathcal O_{\mathrm{src}}}
+\newcommand{\Varsrc}{\mathsf{Var}_{\mathrm{src}}}
+\newcommand{\MGR}{\mathcal M_{\mathrm{GR}}}
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{boundary}{Boundary}
+
+\title{V22 P1-T02: Exact Scientific Objective, Primitive-Debt Ledger,\\
+and Metric-Equivalence Audit}
+\author{Ontology Formalizer parent--child synthesis}
+\date{2026-08-09}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.93\linewidth}{\textbf{Status and authority.}
+This is a task-local \texttt{draft/control} science audit. It records the live
+source boundary, assumption cost, and a metric-equivalence test. It does not
+edit canonical ontology, adopt a source law, establish a physical metric,
+change Distance-to-GR, pass a Gate, promote the exact-GR benchmark, claim
+external review, authorize publication or push, or complete a derivation.}}
+\end{center}
+
+\section{Exact scientific objective}
+
+The V22 scientific objective is adopted at planning and audit scope exactly as
+follows:
+
+\begin{quote}
+Derive a physical Lorentzian conformal and metric structure, universal matter
+coupling, and Einstein-leading dynamics from source fields and laws defined on
+a primitive smooth four-dimensional source manifold, without assuming the
+target metric or its observational predictions.
+\end{quote}
+
+This is not a pregeometry claim. The source program already assumes a smooth
+four-dimensional manifold. Its dimension, topology, compatible atlas,
+differentiability, and mathematical neighborhood locality are explicit
+primitive debt. The objective asks whether physical target geometry and later
+target dynamics can be derived from source fields and laws while keeping that
+debt visible.
+
+\section{Authority and status algebra}
+
+The canonical foundations source fixes only the mainline architecture
+\[
+  \mathfrak O_{\mathrm{main}}
+  =\bigl(\A^{(4)}_{\mathrm{smooth}},
+          [\PhiSrc]_{\mathrm{unresolved}}\bigr).
+\]
+It supplies no equality, embedding, quotient, or reconstruction map from
+\(\A\) to the exact-GR target manifold \(\MGR\). It supplies no source
+measure, affine connection, physical scale, global source dynamics, physical
+gauge group, target clock, or metric.
+
+\begin{definition}[P1-T02 debt status]
+Every audited item has exactly one primary status in
+\[
+\begin{split}
+\{&\mathsf{canonical\ primitive},\ \mathsf{protected\ postulate},
+\ \mathsf{proposal\ only\ extension},\\
+  &\mathsf{derived},\ \mathsf{unresolved},
+\ \mathsf{forbidden\ target\ import}\}.
+\end{split}
+\]
+The status records authority and provenance, not rhetorical familiarity.
+\end{definition}
+
+\begin{definition}[Typed noncompensatory assumption cost]
+Each item carries one of
+\[
+ \mathsf{primitive\ debt},\quad
+ \mathsf{bounded\ postulate},\quad
+ \mathsf{proposal\ debt},\quad
+ \mathsf{zero\ derived},\quad
+ \mathsf{unresolved\ blocker},\quad
+ \mathsf{forbidden\ import}.
+\]
+Costs are not added into a scalar score. A derived convenience cannot cancel
+a primitive, postulate, unresolved, or forbidden-import burden.
+\end{definition}
+
+\section{Populated primitive-debt audit}
+
+Table~\ref{tab:debt} is the human-readable projection of the machine ledger.
+The rationale, source references, downstream use, forbidden overread, and
+removal criterion for every row are recorded in the YAML and CSV companions.
+
+\small
+\begin{longtable}{@{}p{0.13\linewidth}p{0.18\linewidth}p{0.20\linewidth}p{0.39\linewidth}@{}}
+\caption{Required live assumption dimensions.}\label{tab:debt}\\
+\toprule
+Dimension & Source type & Primary status & Exact boundary \\
+\midrule
+\endfirsthead
+\toprule
+Dimension & Source type & Primary status & Exact boundary \\
+\midrule
+\endhead
+Manifold & smooth source arena \(\A\) & canonical primitive & Selected research architecture; not physical spacetime or a derived foundation.\\
+Dimension & \(\dim\A=4\) & canonical primitive & Assumed, not obtained by dimension emergence.\\
+Topology & manifold topology & canonical primitive & Supports neighborhoods and covers; supplies no target global or causal topology.\\
+Smoothness & \(C^\infty\) structure & canonical primitive & Supports smooth source objects; supplies no metric or dynamics.\\
+Charts & smooth-atlas class & canonical primitive & No privileged chart and no target atlas is admitted.\\
+Differentiability & compatible smooth maps & canonical primitive & Gives tangent calculus, not a connection or evolution law.\\
+Locality & open-set locality & canonical primitive & Mathematical locality is distinct from causal, propagation, and operational locality.\\
+Measure & measure/volume slot & unresolved & No canonical density, integration functional, or probability law is selected.\\
+Derivative & derivative/generator slot & unresolved & The exterior derivative is available, but no covariant derivative or \(\PhiSrc\) generator is selected.\\
+Connection & affine/bundle connection & unresolved & Target Levi--Civita, spin, or tetrad connections are forbidden premises.\\
+Matter & exact finite P7 package & protected postulate & Physical only in the exact finite source-side scope; not realistic or target matter derivation.\\
+Dynamics & global source law slot & unresolved & The finite P7 kernel is protected only in its bounded sector; other V21 dynamics remain proposal-only.\\
+Symmetry & source isomorphism/redundancy & unresolved & P5 groupoid types are proposal-only and do not establish physical gauge.\\
+Scale & source normalization & unresolved & No physical length, duration, action, mass, metric normalization, \(c\), or \(G\) is derived.\\
+Operational & finite P7 protocols & protected postulate & Source tokens do not establish target clocks, rods, locations, or detectors.\\
+Metric-equivalent & recoverable Lorentzian data & forbidden target import & Assumed metric-bearing data change the result to postulation or reconstruction.\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+Seven required dimensions are canonical primitive debt, two are bounded
+protected postulates, six are unresolved, and one is an explicit forbidden
+target-import class. This count does not mean that the protected postulates
+discharge first-principles debt.
+
+\section{Every proposed local source-theory symbol}
+
+The live symbol inventory distinguishes the canonical pair from proposal-only
+typing and open targets:
+\begin{enumerate}[label=(\roman*)]
+  \item \(\A\) is canonical primitive debt and \(\PhiSrc\) is a canonical
+  unresolved slot.
+  \item The bundle \(\pi:E_{\mathrm{src}}\to\A\), configuration domain
+  \(\Qadm\), isomorphism groupoid \(\Isosrc\), redundancy subgroupoid
+  \(\Redsrc\), functional algebra \(\Osrc\), variation assignment
+  \(\Varsrc\), and status map \(\tau\) are components of the proposal-only
+  P5 compact source-theory object.
+  \item Its \(S_{\Phi}\), \(S_{\mathrm{dyn}}\), and
+  \(S_{\mathrm{rec}}\) components remain open tagged slots. The V21
+  continuous forward monoid action is one proposal-only value for
+  \(S_{\Phi}\); it is not canonically adopted.
+  \item The exact P7 finite matter package is a protected physical postulate
+  in its fixed source-side domains. It is not derived realistic continuum
+  matter or target coupling.
+  \item A physical \(g_{\mathrm{eff}}\), universal target matter coupling,
+  and Einstein-leading source-derived dynamics remain unresolved targets.
+  Target metric or equivalent data are forbidden as source premises.
+\end{enumerate}
+
+\section{Metric-equivalence decision test}
+
+\begin{definition}[Metric-bearing and metric-completing data]
+Let \(D\) be typed data on the source side. It is \emph{metric-bearing} when
+a recovery map depending on no new physical input determines a Lorentzian
+conformal class \([g(D)]\). It is \emph{metric-completing} when it also
+determines a representative metric, including scale. If \(D\) is assumed
+rather than derived from independently sourced fields and laws, a construction
+from \(D\) is postulation or reconstruction rather than primitive-free
+emergence.
+\end{definition}
+
+\begin{theorem}[Metric-recoverability classification]
+Under the types stated below:
+\begin{enumerate}[label=(\alph*)]
+  \item an invertible coframe \(e^I{}_a\) together with a fixed internal
+  Lorentzian form \(\eta_{IJ}\) is metric-completing;
+  \item a nondegenerate symmetric Lorentzian quadratic form is
+  metric-completing, up to the declared tangent/cotangent variance convention;
+  \item a gauge- and constraint-reduced universal characteristic polynomial
+  whose only physical characteristic factor is a nondegenerate Lorentzian
+  quadratic form, considered up to positive multiplication, is
+  metric-bearing; and
+  \item a constitutive tensor is metric-bearing only when separately proved
+  closure and no-birefringence hypotheses reduce its Fresnel polynomial to the
+  square of one such Lorentzian quadratic factor.
+\end{enumerate}
+Consequently, assuming any of these metric-bearing data without an independent
+source derivation forbids an emergence classification.
+\end{theorem}
+
+\begin{proof}
+For (a), the recovery map is explicit:
+\[
+  g_{ab}=\eta_{IJ}e^I{}_a e^J{}_b.
+\]
+Invertibility of the coframe and Lorentzian signature of \(\eta\) make
+\(g\) a Lorentzian metric. For (b), the quadratic form is already a metric or
+inverse metric after fixing variance. For (c), the null set of one
+nondegenerate Lorentzian quadratic factor determines its cone and hence its
+conformal class; multiplying the polynomial by a positive scalar does not
+change that set. For (d), the stated constitutive hypotheses give
+\[
+  \mathcal P(k)=\bigl(Q^{ab}k_a k_b\bigr)^2,
+\]
+so the same argument recovers \([Q^{-1}]\). Each recovery uses no further
+physical input. Therefore an assumed datum already contains the recovered
+metric content, and changing its name cannot convert postulation into
+emergence.
+\end{proof}
+
+Generic constitutive tensors, higher-degree or multicone polynomials,
+sector-dependent cones, degenerate forms, and unreduced symbols fail closed.
+They do not establish one physical Lorentzian cone.
+
+\subsection{Volume is not a conformal metric}
+
+\begin{proposition}[Same-volume nonconformal counterfamily]
+On a fixed real four-dimensional vector space with ordered basis, define
+\[
+ g_s=\operatorname{diag}(-e^{2s},e^{-2s},1,1),\qquad s\in\mathbb R.
+\]
+Every \(g_s\) is Lorentzian and has determinant \(-1\), hence the same
+oriented volume density. Under the identity comparison,
+\(g_s\) and \(g_r\) are conformally equivalent only when \(s=r\).
+\end{proposition}
+
+\begin{proof}
+The determinant is
+\((-e^{2s})(e^{-2s})(1)(1)=-1\). If
+\(g_s=\Omega^2g_r\) for a positive scalar \(\Omega\), comparison of the
+third diagonal entry gives \(\Omega^2=1\). Comparison of the first entry then
+gives \(e^{2s}=e^{2r}\), hence \(s=r\). Thus one volume density does not
+determine a conformal class.
+\end{proof}
+
+This is a pointwise linear-algebra counterfamily, not a physical spacetime
+model or global impossibility theorem.
+
+\begin{theorem}[Volume completes conformal scale]
+Let \([h]\) be a Lorentzian conformal class on an \(n\)-dimensional vector
+bundle and let \(\omega\) be a positive orientation-compatible volume density.
+For any representative \(h\), there is a unique positive \(\Omega\) such that
+\(g=\Omega^2h\) has volume density \(\omega\). It is
+\[
+  \Omega=\left(\frac{\omega}{\operatorname{vol}_h}\right)^{1/n}.
+\]
+In four dimensions the exponent is \(1/4\).
+\end{theorem}
+
+\begin{proof}
+In dimension \(n\), conformal rescaling gives
+\(\det(\Omega^2h)=\Omega^{2n}\det h\), so
+\(\operatorname{vol}_{\Omega^2h}=\Omega^n\operatorname{vol}_h\).
+The displayed positive factor is therefore necessary and sufficient, and
+positivity makes it unique.
+\end{proof}
+
+Thus volume alone is not metric-equivalent, but volume plus an assumed
+conformal class is metric-completing and carries the corresponding assumption
+cost.
+
+\section{No-target smuggling audit}
+
+The produced objective, ledger, cost baseline, and checklist pass the
+source-target audit as written:
+\begin{enumerate}
+  \item \(\A\neq\MGR\) remains a type guard; no target atlas defines a
+  source chart.
+  \item The target metric, coframe, Levi--Civita connection, metric volume,
+  exact-GR solution, and observational predictions have no incoming edge to a
+  source premise.
+  \item \(\PhiSrc\) is neither a target congruence \(u^\mu\), physical time,
+  a clock, a gauge flow, nor canonical dynamics.
+  \item P7 finite matter and operational labels remain protected postulates in
+  exact scope and are not promoted to target coupling, target stress energy,
+  or realistic-matter derivation.
+  \item Registry metadata, role identity, generated derivatives, internal
+  child review, validator PASS, and checkpoint state are excluded from
+  scientific premises.
+\end{enumerate}
+
+The audit is same-context internal AI review. It is not external review or
+independent replication. Its PASS means only that the P1-T02 artifacts
+preserve their stated source-target boundary.
+
+\section{Expanded Distance-to-GR matrix}
+
+\small
+\begin{longtable}{@{}p{0.21\linewidth}p{0.20\linewidth}p{0.49\linewidth}@{}}
+\toprule
+Milestone & P1-T02 status & Remaining burden \\
+\midrule
+\endhead
+\texttt{source\_ontology} & audit visibility complete; physical burden open & Primitive arena remains assumed, \(\PhiSrc\) remains canonically unresolved, and no ontology law is adopted.\\
+\texttt{source\_equivalence\_eqsrc} & unchanged & General source equivalence and variation robustness remain separate burdens.\\
+\texttt{source\_localization\_obsloc\_lc} & unchanged & Physical localization and exact-branch operational meaning are not derived by manifold locality.\\
+\texttt{response\_localization\_resp\_lc} & unchanged & Selector and response data remain under their existing scoped statuses.\\
+\texttt{source\_manifold\_m\_src} & unchanged & A later source-object bridge cannot identify the primitive arena with target spacetime by fiat.\\
+\texttt{effective\_metric\_g\_eff} & unchanged and blocked & No metric-bearing primitive is admitted; source-derived conformal and scale evidence remain absent.\\
+\texttt{matter\_coupling} & unchanged & P7 is a bounded source-side postulate, not target universal coupling through a derived metric.\\
+\texttt{einstein\_equations} & unchanged and not started & No source-derived action, variation, field equation, or Einstein-leading theorem is supplied.\\
+\texttt{benchmark\_promotion} & unchanged and blocked & All upstream objects, qualifying replication, and protected Gate authority remain absent.\\
+\bottomrule
+\end{longtable}
+\normalsize
+
+The physical Distance-to-GR delta is zero. The audit improves visibility and
+admission discipline; it does not discharge the source-ontology construction
+burden.
+
+\section{Disposition and nonconclusions}
+
+P1-T02 is complete at draft/control audit scope when the machine ledger has all
+sixteen required dimensions, every proposed local source-theory symbol has a
+type and debt status, all twenty-one adversarial fixtures pass, the registered
+source hashes match, the TeX source compiles in scratch space, and the final
+governed checkpoint succeeds.
+
+Nothing in this packet establishes:
+\begin{itemize}
+  \item a true, unique, fundamental, empirical, or pregeometric source
+  ontology;
+  \item adoption of the P5 tuple, the \(\PhiSrc\) semiflow, a measure,
+  connection, physical gauge, global source dynamics, or physical scale;
+  \item a target atlas, effective Lorentzian metric, clocks, rods, target
+  matter coupling, stress-energy tensor, or equivalence-principle result;
+  \item Einstein-leading field equations, Gate B/D/E passage, benchmark
+  promotion, external review, independent replication, publication, push, or
+  a completed derivation; or
+  \item impossibility of a future conservative source extension or rejection
+  of the project as a whole.
+\end{itemize}
+
+After one qualifying checkpoint, P1-T03 may separately formalize Position A
+for matter and the no-postulate Gate rule. It is not executed here.
+
+\end{document}

@@ -1,0 +1,92 @@
+schema_id: "v22_p1_t02_adversarial_classification_fixtures_v1"
+task_id: "RT-20260809-002"
+cases:
+  - case_id: "DEBT-001"
+    category: "debt_status"
+    facts: {canonical_architecture: true, protected_human_postulate: false, proposal_only: false, derivation_certificate: false, target_import: false}
+    expected: "canonical_primitive"
+  - case_id: "DEBT-002"
+    category: "debt_status"
+    facts: {canonical_architecture: false, protected_human_postulate: true, proposal_only: false, derivation_certificate: false, target_import: false}
+    expected: "protected_postulate"
+  - case_id: "DEBT-003"
+    category: "debt_status"
+    facts: {canonical_architecture: false, protected_human_postulate: false, proposal_only: true, derivation_certificate: false, target_import: false}
+    expected: "proposal_only_extension"
+  - case_id: "DEBT-004"
+    category: "debt_status"
+    facts: {canonical_architecture: false, protected_human_postulate: false, proposal_only: false, derivation_certificate: true, target_import: false}
+    expected: "derived"
+  - case_id: "DEBT-005"
+    category: "debt_status"
+    facts: {canonical_architecture: false, protected_human_postulate: false, proposal_only: false, derivation_certificate: false, target_import: false}
+    expected: "unresolved"
+  - case_id: "DEBT-006"
+    category: "debt_status"
+    facts: {canonical_architecture: true, protected_human_postulate: true, proposal_only: true, derivation_certificate: true, target_import: true}
+    expected: "forbidden_target_import"
+  - case_id: "METRIC-001"
+    category: "metric_equivalence"
+    facts: {object_kind: "coframe_plus_fixed_lorentzian_internal_form", source_derived: false, target_matched: false}
+    expected: "metric_completing_postulation"
+  - case_id: "METRIC-002"
+    category: "metric_equivalence"
+    facts: {object_kind: "bare_coframe_without_internal_form", source_derived: false, target_matched: false}
+    expected: "metric_adjacent_unresolved"
+  - case_id: "METRIC-003"
+    category: "metric_equivalence"
+    facts: {object_kind: "nondegenerate_lorentzian_quadratic_form", source_derived: false, target_matched: false}
+    expected: "metric_completing_postulation"
+  - case_id: "METRIC-004"
+    category: "metric_equivalence"
+    facts: {object_kind: "single_cone_principal_polynomial", source_derived: true, target_matched: false}
+    expected: "metric_bearing_derivation_eligible"
+  - case_id: "METRIC-005"
+    category: "metric_equivalence"
+    facts: {object_kind: "single_cone_principal_polynomial", source_derived: false, target_matched: false}
+    expected: "metric_bearing_reconstruction"
+  - case_id: "METRIC-006"
+    category: "metric_equivalence"
+    facts: {object_kind: "multicone_unreduced_principal_polynomial", source_derived: true, target_matched: false}
+    expected: "ambiguous_fail_closed"
+  - case_id: "METRIC-007"
+    category: "metric_equivalence"
+    facts: {object_kind: "nonbirefringent_constitutive_tensor", source_derived: false, target_matched: false}
+    expected: "metric_bearing_reconstruction"
+  - case_id: "METRIC-008"
+    category: "metric_equivalence"
+    facts: {object_kind: "generic_constitutive_tensor", source_derived: true, target_matched: false}
+    expected: "ambiguous_fail_closed"
+  - case_id: "METRIC-009"
+    category: "metric_equivalence"
+    facts: {object_kind: "volume_structure_alone", source_derived: true, target_matched: false}
+    expected: "not_metric_equivalent"
+  - case_id: "METRIC-010"
+    category: "metric_equivalence"
+    facts: {object_kind: "volume_plus_lorentzian_conformal_class", source_derived: false, target_matched: false}
+    expected: "metric_completing_postulation"
+  - case_id: "METRIC-011"
+    category: "metric_equivalence"
+    facts: {object_kind: "volume_plus_lorentzian_conformal_class", source_derived: true, target_matched: false}
+    expected: "metric_completing_derivation_eligible"
+  - case_id: "METRIC-012"
+    category: "metric_equivalence"
+    facts: {object_kind: "single_cone_principal_polynomial", source_derived: true, target_matched: true}
+    expected: "forbidden_target_import"
+  - case_id: "SCOPE-001"
+    category: "scope_guard"
+    facts: {object_kind: "P7_finite_detector_tokens", claimed_as: "target_clocks_and_rods"}
+    expected: "reject_scope_laundering"
+  - case_id: "SCOPE-002"
+    category: "scope_guard"
+    facts: {object_kind: "Phi_src_semiflow_candidate", claimed_as: "canonical_physical_time"}
+    expected: "reject_proposal_and_clock_laundering"
+  - case_id: "SCOPE-003"
+    category: "scope_guard"
+    facts: {object_kind: "validator_pass", claimed_as: "metric_derivation"}
+    expected: "reject_process_as_science"
+expected_counts:
+  total: 21
+  debt_status: 6
+  metric_equivalence: 12
+  scope_guard: 3

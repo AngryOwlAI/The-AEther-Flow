@@ -1,0 +1,40 @@
+schema_id: "v22_p1_t02_assumption_cost_schema_v1"
+plan_task_id: "P1-T02"
+authority_status: "draft_control_audit_schema"
+scalar_total_authorized: false
+noncompensatory_typed_costs: true
+required_fields:
+  - "entry_id"
+  - "subject"
+  - "source_type"
+  - "debt_status"
+  - "cost_class"
+  - "rationale"
+  - "downstream_use"
+  - "removal_or_derivation_criterion"
+  - "source_ref"
+  - "forbidden_overread"
+allowed_debt_status:
+  - "canonical_primitive"
+  - "protected_postulate"
+  - "proposal_only_extension"
+  - "derived"
+  - "unresolved"
+  - "forbidden_target_import"
+allowed_cost_class:
+  - "primitive_debt"
+  - "bounded_postulate"
+  - "proposal_debt"
+  - "zero_derived"
+  - "unresolved_blocker"
+  - "forbidden_import"
+ordering_policy:
+  type: "partial_noncompensatory"
+  rule: "No low-cost or derived entry can cancel a primitive, protected-postulate, unresolved, or forbidden-import entry."
+  zero_is_permitted_only_for: "A structure with a source-side derivation certificate whose premises and authority are independently valid."
+metric_equivalence_effect:
+  metric_bearing_assumed: "reclassify outcome as postulation_or_reconstruction"
+  metric_completing_assumed: "reclassify outcome as metric_postulation_or_reconstruction"
+  metric_bearing_derived: "retain derivation eligibility subject to provenance and Gate checks"
+  ambiguous: "fail_closed_no_emergence_credit"
+baseline_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_assumption_cost_baseline_v1.csv"

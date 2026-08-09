@@ -447,6 +447,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P9-T06-FINITE-RADIATIVE-COMPLETION-NONSELECTION-V1` `research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex`
 - `TEX-V21-P9-T07-FINITE-NONLINEAR-COMPACT-SOURCE-NONSELECTION-V1` `research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex`
 - `TEX-V21-P9-T09-PROTECTED-GATE-E-DECISION-V1` `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`
+- `TEX-V22-P1-T02-SCIENTIFIC-OBJECTIVE-PRIMITIVE-DEBT-AUDIT-V1` `research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_scientific_objective_primitive_debt_audit_v1.tex`
 
 ## superseded
 

@@ -1,0 +1,581 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260809-002-001"
+completion_id: "AJC-AJ-RT-20260809-002-001"
+task_id: "RT-20260809-002"
+task_type: "v22_p1_t02_scientific_objective_and_primitive_debt_audit"
+decision_id: "DDR-20260809-002"
+role_id: "ontology-formalizer"
+source_role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260809-002"
+status: "completed"
+created_at: "2026-08-09T02:08:07Z"
+started_at: "2026-08-09T02:08:07Z"
+completed_at: "2026-08-09T02:25:04Z"
+objective: "Implement the exact V22 P1-T02 scientific objective, live primitive-debt inventory, assumption-cost schema and populated baseline, metric-equivalence decision test, no-target smuggling audit, adversarial fixtures, and one bounded next-route handoff."
+completion_summary: "P1-T02 preserves the exact V22 scientific objective on a registered draft/control planning surface, inventories all 16 required source-debt dimensions and 16 live symbols, populates 24 assumption-cost entries, and fail-closes five metric-equivalence classes. A recoverability theorem, same-volume nonconformal Lorentzian counterfamily, and volume-plus-conformal scale theorem sharpen the source-target boundary without adopting ontology or changing Distance-to-GR. P1-T03 is selected but unexecuted."
+objective_result: "implemented_and_validated_v22_p1_t02_primitive_debt_and_metric_equivalence_audit"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "completed_precheckpoint"
+work_item_status: "completed_checkpoint_pending"
+milestone_disposition: "source_ontology_debt_audited_without_discharge_or_adoption"
+
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260809-002-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+
+is_physics_task: true
+payload_class: "theorem_and_countermodel_source_ontology_audit"
+has_new_mathematical_payload: true
+source_extension_classification_required: false
+external_red_team_finding_requires_integration: false
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  plan_phase_id: "P1"
+  plan_task_id: "P1-T02"
+  work_kind: "audit_or_review"
+  task_class: "science"
+  expected_result_kind: "audit_verdict_or_precise_repair"
+  dependency_task_ids:
+    - "P1-T01"
+  dependency_checkpoint_commits:
+    - "c0843359c321cbcb2f5d043153c5f0751376b3b5"
+  recommendation_ids:
+    - "V22-R03"
+  sequence_step_ids:
+    - "S2"
+  cross_cutting_directive_ids:
+    - "V22-X01"
+  work_item_status: "completed_checkpoint_pending"
+  next_plan_task_id: "P1-T03"
+  p1_t02_executed: true
+  p1_t03_selected: true
+  p1_t03_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+result:
+  status: "PASS_V22_P1_T02_PRIMITIVE_DEBT_AND_METRIC_EQUIVALENCE_AUDIT"
+  strategy_id: "audit_v22_p1_t02_source_ontology_primitive_debt_v1"
+  source_handoff_id: "handoff-0971"
+  source_handoff_sha256: "e7fb4e79df2536f92709fe38319868e817272142078607dd1ac50d660d7e1a46"
+  required_dimension_count: 16
+  audited_dimension_count: 16
+  symbol_inventory_count: 16
+  status_counts:
+    canonical_primitive: 7
+    protected_postulate: 2
+    proposal_only_extension: 0
+    derived: 0
+    unresolved: 6
+    forbidden_target_import: 1
+  assumption_cost_entry_count: 24
+  metric_equivalence_case_count: 5
+  adversarial_fixture_count: 21
+  adversarial_fixture_failure_count: 0
+  exact_source_snapshot_count: 8
+  new_mathematical_payload_count: 2
+  focused_check_count: 51
+  focused_check_failure_count: 0
+  ontology_adoption_count: 0
+  canonical_science_file_change_count: 0
+  p1_t02_executed: true
+  p1_t03_selected: true
+  p1_t03_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1135
+    relationship_row_count: 5713
+    semantic_row_count: 1135
+    vault_row_count: 1135
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+        - "MD-RESEARCH-CONTROL-DESIGN-V22-THREE-TRACK-CHARTER-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "MD-RESEARCH-CONTROL-DESIGN-V22-THREE-TRACK-CHARTER-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/design/v22_three_track_charter_v1.md"
+      source_hash: "e5bd43ecd33be61c0f026b1836e414084b9274c3f3867516a7ae48581cb8831d"
+  authority_note: "Tracked registered source and control records govern; generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "physics"
+  payload_type: "theorem"
+  candidate_family: "V22-P1-T02-PRIMITIVE-DEBT-AND-METRIC-EQUIVALENCE-AUDIT-V1"
+  theorem_identity: "V22-P1-T02-METRIC-RECOVERABILITY-CLASSIFICATION-THEOREM-V1"
+  countermodel_identity: "V22-P1-T02-SAME-VOLUME-LORENTZIAN-NON-EQUIVALENCE-COUNTERFAMILY-V1"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physical_status_changed_by_admission: false
+  distance_to_gr_changed_by_admission: false
+  physics_promotion_authorized_by_admission: false
+
+family_freeze_admission_result:
+  status: "admitted_distinct_branch"
+  route_kind: "theorem_investigation"
+  family_id: "V22-P1-T02-PRIMITIVE-DEBT-AND-METRIC-EQUIVALENCE-AUDIT-V1"
+  family_identity_sha256: "18f20d8aad56ef6a1ff217019c2d87eb0f206fbe5edcc161faaed325ea77ba60"
+  detected_match_basis: []
+  reopening_requested: false
+  local_family_freeze_preserved: true
+  global_no_go_inferred: false
+  physics_promotion_authorized_by_admission: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0971"
+  source_handoff_sha256_at_intake: "e7fb4e79df2536f92709fe38319868e817272142078607dd1ac50d660d7e1a46"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P1-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P1-T02"
+  guard_outcome: "physics_bearing_route_selected"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one registered exact-objective and primitive-debt audit source"
+      - "one complete 16-dimension source assumption ledger and cost baseline"
+      - "one metric-recoverability theorem and same-volume counterfamily"
+      - "one source-target smuggling audit with adversarial cases"
+    project_system:
+      - "task-local validator and compact receipt"
+      - "parent-child synthesis records"
+      - "standard control records and generated memory projections"
+  accepted_criteria:
+    physics:
+      - "the exact V22 Section 6.1 objective is byte-for-byte preserved"
+      - "every required dimension has a source type debt status rationale downstream use and removal criterion"
+      - "coframe constitutive quadratic principal-polynomial and volume cases fail closed under the metric-equivalence test"
+      - "unresolved source debt remains visible and no target structure is relabeled emergence"
+    project_system:
+      - "task-local fixtures and exact source/hash checks pass"
+      - "registered source hashes and generated derivatives synchronize"
+      - "one governed checkpoint records the bounded transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_execution_unit_count: 2
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260809-002/artifacts/child_phys_math_p1_t02_primitive_debt.yaml"
+      output_sha256: "b485d4cdcd7fed7e2f3d9cfe67afad8e216fe35f934ccf2bfe55f584195d5cfd"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260809-002/artifacts/child_phys_phil_p1_t02_smuggling_audit.yaml"
+      output_sha256: "be4a62b5dd578d021d48b9544db799e24a0d7a501446c09d0bfafb455ac21d9e"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260809-002/artifacts/parent_conflict_review_p1_t02_primitive_debt.yaml"
+    review_sha256: "11f2d03f9796e2bbf50f1c403a62bdc498d499607d2102bf797e89f60e686852"
+    resolution_rounds: 1
+    resolved_conflict_count: 4
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_scientific_objective_primitive_debt_audit_v1.tex"
+    fusion_notes_path: "research_control/tasks/RT-20260809-002/artifacts/parent_fusion_notes_p1_t02_primitive_debt.md"
+    fusion_notes_sha256: "b8685727fad170dba13c705cefe5559a8e52ec8b50166f5ed222127f80c81951"
+    shared_consensus_summary: "Both perspectives preserve the explicit smooth four-manifold debt, unresolved source-law slots, protected finite-matter scope, and the prohibition on relabeling target-equivalent input as emergence."
+    novelty_preservation_summary: "The fusion preserves the recoverability classification mathematics, same-volume counterfamily, volume-plus-conformal scale theorem, and the distinct provenance and authority analysis."
+    claim_boundary_preservation_summary: "The audit changes neither canonical ontology nor physical status and supplies no g_eff, universal matter coupling, Einstein equation, Gate verdict, benchmark promotion, or completed derivation."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260809-002-001"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    name: "Metric-recoverability classification theorem"
+    summary: "Under explicit algebraic hypotheses, a nondegenerate coframe plus fixed Lorentz form and a Lorentzian quadratic form determine a full metric, while a reduced universal single-cone principal polynomial and suitable constitutive tensor determine at least a conformal class."
+  - payload_id: "NMP-RT-20260809-002-002"
+    payload_type: "countermodel_or_obstruction"
+    name: "Same-volume nonconformal Lorentzian counterfamily and scale-completion theorem"
+    summary: "The family diag(-exp(2s), exp(-2s), 1, 1) has fixed volume density but pairwise nonconformal metrics under the identity, while a positive volume density plus a Lorentzian conformal class uniquely fixes scale in four dimensions."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT-20260809-002-001"
+    payload_type: "theorem"
+    object_name: "V22 P1-T02 metric-recoverability classification theorem"
+    claim_status: "draft/control theorem with explicit hypotheses and proof"
+    source_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_scientific_objective_primitive_debt_audit_v1.tex"
+    burden_effect: "audits"
+    summary: "Classifies when an assumed source object already determines conformal or full Lorentzian metric data, so that its provenance must be counted as postulation or reconstruction."
+  - payload_id: "PAYLOAD-RT-20260809-002-002"
+    payload_type: "countermodel"
+    object_name: "same-volume nonconformal Lorentzian counterfamily"
+    claim_status: "draft/control local algebraic countermodel"
+    source_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_scientific_objective_primitive_debt_audit_v1.tex"
+    burden_effect: "narrows"
+    summary: "Shows that volume density alone is not metric-equivalent, without making a global no-go claim about source-side geometric emergence."
+  - payload_id: "PAYLOAD-RT-20260809-002-003"
+    payload_type: "theorem"
+    object_name: "volume-plus-conformal scale completion theorem"
+    claim_status: "draft/control theorem with explicit hypotheses and proof"
+    source_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_scientific_objective_primitive_debt_audit_v1.tex"
+    burden_effect: "audits"
+    summary: "Shows that a positive volume density combined with a Lorentzian conformal class fixes a unique representative metric through the fourth-root scale factor."
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Explicit primitive debt source-target separation and unresolved Phi_src semantics; audit and formalize the source-only boundary without ontology adoption."
+  explanation: "The packet sharpens and verifies the source-only debt boundary but does not derive or adopt any missing source primitive, law, target geometry, coupling, or Einstein-leading dynamics."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "source_ontology_primitives"
+  milestone: "source_ontology"
+  old_status: "continuum-first architecture with explicit primitive debt and unresolved source-law slots"
+  new_status: "continuum-first architecture with audited explicit primitive debt and unresolved source-law slots"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "P1-T02 audits existing assumptions and target-smuggling boundaries; it adds no adopted source object or discharged derivational burden."
+  downstream_unlocked:
+    - "one separately admitted V22 P1-T03 matter-position and no-postulate policy packet after checkpoint"
+  downstream_still_blocked:
+    - "canonical Phi_src or source dynamics"
+    - "source-derived measure, connection, and physical scale"
+    - "M_src and g_eff"
+    - "universal target matter coupling"
+    - "Einstein equations"
+    - "Gate B, Gate D, and benchmark promotion"
+    - "completed first-principles GR derivation"
+  explanation: "The audit makes debt legible but does not pay it; the Distance-to-GR ledger therefore remains unchanged."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "audited but unchanged; the primitive smooth four-dimensional source manifold and its topology, charts, differentiability, and locality remain explicit architecture debt"
+  - burden: "Source equivalence EqSrc"
+    status: "unchanged; no new source-equivalence theorem is adopted"
+  - burden: "RetainH"
+    status: "unchanged; no canonical retention law is derived or adopted"
+  - burden: "GenH"
+    status: "unchanged; no canonical generator law is derived or adopted"
+  - burden: "ObsLoc_lc"
+    status: "unchanged; operational localization remains unresolved beyond protected finite scope"
+  - burden: "Resp_lc"
+    status: "unchanged; no universal physical response semantics is derived"
+  - burden: "M_src"
+    status: "blocked; the primitive source manifold is not promoted to physical spacetime"
+  - burden: "g_eff"
+    status: "blocked; metric-equivalent inputs are classified but no effective metric is constructed or adopted"
+  - burden: "matter coupling"
+    status: "unchanged; the protected finite P7 package remains conditional source-side input and not universal target coupling"
+  - burden: "Einstein equations"
+    status: "blocked; no source-to-Einstein dynamics is supplied"
+  - burden: "finite-variation robustness"
+    status: "unchanged; no target variational principle or stress tensor is derived"
+  - burden: "benchmark promotion"
+    status: "blocked; the audit is not benchmark evidence"
+  - burden: "Gate Chair status"
+    status: "unchanged; no protected Gate verdict is requested or issued"
+  - burden: "current route freeze or hard-fail status"
+    status: "not triggered; P1-T03 is a dependency-distinct matter-scope control packet rather than a repeat of this audit"
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: ""
+  prior_attempts_considered:
+    - "RT-20260720-030"
+    - "RT-20260724-010"
+    - "RT-20260725-003"
+    - "RT-20260725-007"
+  freeze_if:
+    - "A later packet repeats the same primitive-debt classification without new mathematical payload or a distinct dependency burden."
+    - "A later packet relabels a frozen or unresolved target-equivalent premise without new source-side evidence."
+  do_not_freeze_if:
+    - "The next package addresses a distinct declared dependency or supplies a new theorem, construction, countermodel, or authorized protected decision."
+  freeze_decision: "not_frozen"
+  decision_reason: "P1-T02 provides new recoverability and countermodel payload, and P1-T03 addresses the distinct matter-position and no-postulate policy dependency."
+  next_allowed_route: "smuggling_auditor"
+
+route_cycle_control:
+  cycle_family: "v22_source_ontology_and_gate_scope"
+  current_cycle_step: "primitive_debt_audit"
+  prior_related_tasks:
+    - "RT-20260720-030"
+    - "RT-20260724-010"
+    - "RT-20260725-003"
+    - "RT-20260725-007"
+  cycle_risk: "low"
+  orbit_avoidance_reason: "The packet adds a formal metric-recoverability test and same-volume counterfamily; the next role must bind the already protected P7 matter package to an exact conditional-input and no-postulate Gate policy rather than repeat source-debt inventory."
+  next_role_consequence: "smuggling-auditor@0.2.0"
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology or source-law adoption"
+    - "primitive source manifold identified with physical spacetime"
+    - "Phi_src semantics resolved"
+    - "M_src or g_eff constructed or adopted"
+    - "universal matter coupling or target stress tensor derived"
+    - "Einstein equations derived"
+    - "Gate B, Gate D, or Gate Chair verdict"
+    - "benchmark promotion"
+    - "external review or independent replication"
+    - "completed first-principles GR derivation"
+    - "global theory rejection"
+    - "publication, release, push, or other external action"
+  summary: "Theorem, fixture, validator, TeX-compile, route, and checkpoint success are bounded draft/control evidence and do not promote scientific or protected status."
+
+artifact_receipts:
+  - artifact_id: "MD-RESEARCH-CONTROL-DESIGN-V22-SCIENTIFIC-OBJECTIVE-AND-PRIMITIVE-DEBT-V1"
+    path: "research_control/design/v22_scientific_objective_and_primitive_debt_v1.md"
+    sha256: "bd8bd6f92fc20c05be6391dd113a7c9d3b04df6c6d0e5f03dfddc6a17fd590ef"
+    status_label: "draft/control"
+  - artifact_id: "TEX-V22-P1-T02-SCIENTIFIC-OBJECTIVE-PRIMITIVE-DEBT-AUDIT-V1"
+    path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_scientific_objective_primitive_debt_audit_v1.tex"
+    sha256: "a2611e9b6f257e52978e9589212dc4dd340ae161f9e2fe87f68244eb0395e46d"
+    status_label: "draft/control"
+  - artifact_id: "V22-P1-T02-PRIMITIVE-DEBT-LEDGER-V1"
+    path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_primitive_debt_ledger_v1.yaml"
+    sha256: "7f46c9bf22916b6b3f0b78c331070124047d7ea62b4de65543e8489972c8de70"
+    status_label: "draft/control"
+  - artifact_id: "V22-P1-T02-ASSUMPTION-COST-SCHEMA-V1"
+    path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_assumption_cost_schema_v1.yaml"
+    sha256: "a71c201fc80f5396b78f1e81f599e3a132050ce24d243c946ef9358b53ae89a0"
+    status_label: "draft/control"
+  - artifact_id: "V22-P1-T02-ASSUMPTION-COST-BASELINE-V1"
+    path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_assumption_cost_baseline_v1.csv"
+    sha256: "eb23b56ab005e77bb17db6d6ccb120a376116ddfa36338547dc0244b1745c841"
+    status_label: "draft/control"
+  - artifact_id: "V22-P1-T02-METRIC-EQUIVALENCE-CHECKLIST-V1"
+    path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_metric_equivalence_checklist_v1.yaml"
+    sha256: "a6ae99aac268c18f2dbd54ab4e618e82074ad1d0cc9740dc8f6ebb8e3d6d286e"
+    status_label: "draft/control"
+  - artifact_id: "V22-P1-T02-SMUGGLING-AUDIT-V1"
+    path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_smuggling_audit_v1.yaml"
+    sha256: "6595130540667c683eb236d15eeb620eea414189df1add9c3847b75c68256b4f"
+    status_label: "internal_audit"
+  - artifact_id: "V22-P1-T02-ADVERSARIAL-FIXTURES-V1"
+    path: "research_control/tasks/RT-20260809-002/artifacts/fixtures/v22_p1_t02_metric_equivalence_cases.yaml"
+    sha256: "f13c881698a9f3ecf557b95fde929b0403e08c3778abb1e0f28c6cb9afb2f135"
+    status_label: "operational_evidence"
+  - artifact_id: "V22-P1-T02-VALIDATION-V1"
+    path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_primitive_debt_validation.json"
+    sha256: "749ffe11484b7b1b0ed71778dc6012ba383fadd7a546474ec25c0cae33ad60f9"
+    status_label: "operational_evidence"
+  - artifact_id: "V22-P1-T02-COMPACT-RECEIPT-V1"
+    path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_compact_receipt.json"
+    sha256: "1fdcafa7fc568684ce49b84a1ac160467e520a120a57d1fb604ce437bd6bc82b"
+    status_label: "operational_evidence"
+
+command_results:
+  - command: "validate_v22_p1_t02_primitive_debt.py --write --json; validate_v22_p1_t02_primitive_debt.py --json"
+    status: "PASS"
+    summary: "All 51 source, objective, ledger, cost, metric-equivalence, fixture, smuggling, synthesis, and receipt checks pass; all 21 adversarial fixtures pass."
+  - command: "latex-compile bundled Tectonic scratch build"
+    status: "PASS_WITH_NONBLOCKING_LAYOUT_WARNINGS"
+    summary: "The fused TeX source compiles to a six-page scratch PDF with no tracked PDF output; underfull and overfull box warnings do not change the mathematical or registry result."
+  - command: "task_taxonomy.py --validate-repository --json"
+    status: "FAIL_INHERITED_KNOWN"
+    summary: "RT-20260809-002 declares a valid complete taxonomy; repository-wide task-index validation retains only the pre-existing RT-20260804-001 invalid result kind qualifying_bounded_audit_verdict."
+  - command: "scripts.validation.cli run --profile affected --paths <P1-T02 affected paths>"
+    status: "PASS_TASK_LOCAL_WITH_ONE_INHERITED_FAILURE"
+    summary: "15 of 16 affected gates pass; only task_index_freshness fails on the pre-existing RT-20260804-001 taxonomy value. Receipt: .local/validation-receipts/a84904b1636216bf5b93c66debde34fcb76d220134913d32b91f810d41c90f69/RUN-6b51da59c7abe658/receipt.json."
+  - command: "bootstrap_memory_system.py; bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+    summary: "Registered source regeneration passed; one final validate-only replay follows the hash-bound completion update before checkpoint."
+  - command: "validate_research_control.py --check-diff --job-id AJ-RT-20260809-002-001 --json-summary"
+    status: "PASS_WITH_HISTORICAL_WARNINGS"
+    summary: "The bounded diff has zero errors and only repository-historical warnings. Receipt: .local/validation-receipts/working-sha256-d924c77399b9df13a151ac9bad6cd914e8ceca23e84f9791fb6eaaa9b00220d0/RESEARCH-CONTROL-DIFF-D924C77399B9DF13/full.json."
+  - command: "checkpoint_research_transaction.py --job-id AJ-RT-20260809-002-001"
+    status: "PENDING_SINGLE_INVOCATION"
+    summary: "One governed checkpoint remains; no retry, push, publication, or external action is authorized."
+
+selected_next_route:
+  route_id: "v22_p1_t03_matter_position_no_postulate_gate_policy"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P1-T03"
+  work_item_id: "P1-T03"
+  work_kind: "integration_or_selection"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  supporting_perspective: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "matter_position_and_no_postulate_gate_policy"
+  task_type: "v22_p1_t03_matter_position_and_no_postulate_gate_policy"
+  target_derivation_milestone: "matter_coupling"
+  milestone_burden: "Response semantics; preserve the exact protected P7 finite source-matter package as conditional input while blocking its use as universal target coupling or Gate B/D evidence."
+  expected_result_kind: "completed_or_precisely_blocked"
+  strategy_id: "integrate_v22_p1_t03_position_a_no_postulate_gate_policy_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight, exact source inspection, and handoff-0971 route admission passed before execution."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "All 51 focused checks and 21 adversarial fixtures pass; both child records are complete and all four parent conflicts are resolved."
+  post_write:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "The affected profile passed 15 of 16 gates; its sole failure is the inherited RT-20260804-001 result-kind value qualifying_bounded_audit_verdict, while the bounded research-control diff passed with zero errors."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains and no push or external action is authorized."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current-frontier, task-index, compact-frontier, dependency-graph, and claim-graph projections were refreshed."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only checks passed after source synchronization."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passed without a blocking finding."
+
+authorization_layers:
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  submission_authorized: false
+  public_release_authorized: false
+  reviewer_contact_authorized: false
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review was requested or authorized for V22 P1-T02."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+project_improvement_signal_count: 0
+project_improvement_sidecar_required: false
+
+protected_authority:
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  benchmark_promotion_authorized: false
+  external_review_completed: false
+  independent_replication_completed: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_authorized: false
+
+handoff_id: "handoff-0972"
+handoff_path: "research_control/handoffs/handoff-0972.yaml"
+handoff_authority_boundary: "This completion records only P1-T02 draft/control audit results and selects P1-T03 for a separate AgentJob after checkpoint. It creates no ontology adoption, scientific promotion, protected Gate, release, publication, push, reviewer-contact, or external-action authority."

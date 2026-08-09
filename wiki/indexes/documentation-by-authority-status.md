@@ -108,6 +108,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P9-T07-PARENT-FUSION-NONLINEAR-COMPACT-V1` `research_control/tasks/RT-20260730-015/artifacts/parent_fusion_notes_p9_t07_nonlinear_compact.md`
 - `MD-V21-P9-T08-PARENT-FUSION-BENCHMARK-SUITE-AUDIT-V1` `research_control/tasks/RT-20260731-001/artifacts/parent_fusion_notes_p9_t08_benchmark_audit.md`
 - `MD-V21-P9-T09-PARENT-FUSION-GATE-E-REVIEW-V1` `research_control/tasks/RT-20260731-004/artifacts/parent_fusion_notes_p9_t09_gate_e_review.md`
+- `MD-V22-P1-T02-PARENT-FUSION-PRIMITIVE-DEBT-V1` `research_control/tasks/RT-20260809-002/artifacts/parent_fusion_notes_p1_t02_primitive_debt.md`
 
 ## explanatory_noncanonical
 
@@ -393,6 +394,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `wiki/markdown/md-research-control-design-v21-scientific-status-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY` `wiki/markdown/md-research-control-design-v21-task-taxonomy-policy.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V22-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v22-recommendation-backlog-schema.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-V22-SCIENTIFIC-OBJECTIVE-AND-PRIMITIVE-DEBT-V1` `wiki/markdown/md-research-control-design-v22-scientific-objective-and-primitive-debt-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V22-THREE-TRACK-CHARTER-V1` `wiki/markdown/md-research-control-design-v22-three-track-charter-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ASSURANCE-POLICY-V1` `wiki/markdown/md-research-control-design-validation-assurance-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `wiki/markdown/md-research-control-design-validation-cache-contract-v1.md`
@@ -844,6 +846,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P9-T08-BENCHMARK-SUITE-AUDIT-RECEIPT-V1` `wiki/markdown/md-v21-p9-t08-benchmark-suite-audit-receipt-v1.md`
 - `WIKI-MD-V21-P9-T08-PARENT-FUSION-BENCHMARK-SUITE-AUDIT-V1` `wiki/markdown/md-v21-p9-t08-parent-fusion-benchmark-suite-audit-v1.md`
 - `WIKI-MD-V21-P9-T09-PARENT-FUSION-GATE-E-REVIEW-V1` `wiki/markdown/md-v21-p9-t09-parent-fusion-gate-e-review-v1.md`
+- `WIKI-MD-V22-P1-T02-PARENT-FUSION-PRIMITIVE-DEBT-V1` `wiki/markdown/md-v22-p1-t02-parent-fusion-primitive-debt-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 
 ## project_control
@@ -967,6 +970,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `research_control/design/v21_scientific_status_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY` `research_control/design/v21_task_taxonomy_policy.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V22-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v22_recommendation_backlog_schema.md`
+- `MD-RESEARCH-CONTROL-DESIGN-V22-SCIENTIFIC-OBJECTIVE-AND-PRIMITIVE-DEBT-V1` `research_control/design/v22_scientific_objective_and_primitive_debt_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V22-THREE-TRACK-CHARTER-V1` `research_control/design/v22_three_track_charter_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ASSURANCE-POLICY-V1` `research_control/design/validation_assurance_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `research_control/design/validation_cache_contract_v1.md`

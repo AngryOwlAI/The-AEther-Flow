@@ -226,6 +226,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `research_control/design/v21_scientific_status_schema.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY` `research_control/design/v21_task_taxonomy_policy.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V22-RECOMMENDATION-BACKLOG-SCHEMA` `research_control/design/v22_recommendation_backlog_schema.md`
+- `MD-RESEARCH-CONTROL-DESIGN-V22-SCIENTIFIC-OBJECTIVE-AND-PRIMITIVE-DEBT-V1` `research_control/design/v22_scientific_objective_and_primitive_debt_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-V22-THREE-TRACK-CHARTER-V1` `research_control/design/v22_three_track_charter_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ASSURANCE-POLICY-V1` `research_control/design/validation_assurance_policy_v1.md`
 - `MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `research_control/design/validation_cache_contract_v1.md`
@@ -677,6 +678,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V21-P9-T08-BENCHMARK-SUITE-AUDIT-RECEIPT-V1` `research_control/tasks/RT-20260731-001/artifacts/p9_t08_benchmark_audit_receipt.md`
 - `MD-V21-P9-T08-PARENT-FUSION-BENCHMARK-SUITE-AUDIT-V1` `research_control/tasks/RT-20260731-001/artifacts/parent_fusion_notes_p9_t08_benchmark_audit.md`
 - `MD-V21-P9-T09-PARENT-FUSION-GATE-E-REVIEW-V1` `research_control/tasks/RT-20260731-004/artifacts/parent_fusion_notes_p9_t09_gate_e_review.md`
+- `MD-V22-P1-T02-PARENT-FUSION-PRIMITIVE-DEBT-V1` `research_control/tasks/RT-20260809-002/artifacts/parent_fusion_notes_p1_t02_primitive_debt.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
 
 ## pdf
@@ -1148,6 +1150,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V21-P9-T06-FINITE-RADIATIVE-COMPLETION-NONSELECTION-V1` `research_control/tasks/RT-20260730-013/artifacts/finite_radiative_completion_nonselection_v1.tex`
 - `TEX-V21-P9-T07-FINITE-NONLINEAR-COMPACT-SOURCE-NONSELECTION-V1` `research_control/tasks/RT-20260730-015/artifacts/finite_nonlinear_compact_source_nonselection_v1.tex`
 - `TEX-V21-P9-T09-PROTECTED-GATE-E-DECISION-V1` `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`
+- `TEX-V22-P1-T02-SCIENTIFIC-OBJECTIVE-PRIMITIVE-DEBT-AUDIT-V1` `research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_scientific_objective_primitive_debt_audit_v1.tex`
 
 ## wiki_markdown
 
@@ -1370,6 +1373,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-SCIENTIFIC-STATUS-SCHEMA` `wiki/markdown/md-research-control-design-v21-scientific-status-schema.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V21-TASK-TAXONOMY-POLICY` `wiki/markdown/md-research-control-design-v21-task-taxonomy-policy.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V22-RECOMMENDATION-BACKLOG-SCHEMA` `wiki/markdown/md-research-control-design-v22-recommendation-backlog-schema.md`
+- `WIKI-MD-RESEARCH-CONTROL-DESIGN-V22-SCIENTIFIC-OBJECTIVE-AND-PRIMITIVE-DEBT-V1` `wiki/markdown/md-research-control-design-v22-scientific-objective-and-primitive-debt-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-V22-THREE-TRACK-CHARTER-V1` `wiki/markdown/md-research-control-design-v22-three-track-charter-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-ASSURANCE-POLICY-V1` `wiki/markdown/md-research-control-design-validation-assurance-policy-v1.md`
 - `WIKI-MD-RESEARCH-CONTROL-DESIGN-VALIDATION-CACHE-CONTRACT-V1` `wiki/markdown/md-research-control-design-validation-cache-contract-v1.md`
@@ -1821,6 +1825,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V21-P9-T08-BENCHMARK-SUITE-AUDIT-RECEIPT-V1` `wiki/markdown/md-v21-p9-t08-benchmark-suite-audit-receipt-v1.md`
 - `WIKI-MD-V21-P9-T08-PARENT-FUSION-BENCHMARK-SUITE-AUDIT-V1` `wiki/markdown/md-v21-p9-t08-parent-fusion-benchmark-suite-audit-v1.md`
 - `WIKI-MD-V21-P9-T09-PARENT-FUSION-GATE-E-REVIEW-V1` `wiki/markdown/md-v21-p9-t09-parent-fusion-gate-e-review-v1.md`
+- `WIKI-MD-V22-P1-T02-PARENT-FUSION-PRIMITIVE-DEBT-V1` `wiki/markdown/md-v22-p1-t02-parent-fusion-primitive-debt-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-CONSISTENCY` `wiki/pdf/pdf-legacy-ontology-aether-flow-consistency.md`
 - `WIKI-PDF-LEGACY-ONTOLOGY-AETHER-FLOW-DYNAMICS` `wiki/pdf/pdf-legacy-ontology-aether-flow-dynamics.md`
@@ -2286,3 +2291,4 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V21-P9-T06-FINITE-RADIATIVE-COMPLETION-NONSELECTION-V1` `wiki/tex/tex-v21-p9-t06-finite-radiative-completion-nonselection-v1.md`
 - `WIKI-TEX-V21-P9-T07-FINITE-NONLINEAR-COMPACT-SOURCE-NONSELECTION-V1` `wiki/tex/tex-v21-p9-t07-finite-nonlinear-compact-source-nonselection-v1.md`
 - `WIKI-TEX-V21-P9-T09-PROTECTED-GATE-E-DECISION-V1` `wiki/tex/tex-v21-p9-t09-protected-gate-e-decision-v1.md`
+- `WIKI-TEX-V22-P1-T02-SCIENTIFIC-OBJECTIVE-PRIMITIVE-DEBT-AUDIT-V1` `wiki/tex/tex-v22-p1-t02-scientific-objective-primitive-debt-audit-v1.md`

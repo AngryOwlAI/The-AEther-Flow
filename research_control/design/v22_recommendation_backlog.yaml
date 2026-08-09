@@ -538,7 +538,7 @@ items:
     assumption-ledger cross-check, and adversarial classification fixtures.
   stop_conditions: Hidden target atlas/metric, untyped derivative or measure, or any
     attempt to discharge debt through terminology alone.
-  implementation_status: pending
+  implementation_status: completed_checkpoint_pending
   expected_result_kind: audit_verdict_or_precise_repair
   requires_human_gate: false
   dependency_independent_after_other_human_gates: true
@@ -552,9 +552,18 @@ items:
   proof_authority: false
 - plan_task_id: P1-T03
   phase_id: P1
+  work_kind: integration_or_selection
+  task_class: science
   title: Adopt Position A for matter and codify the no-postulate gate rule
   track: B
   owner: Director of Research; protected human authority only where required
+  role_family: smuggling-auditor@0.2.0
+  supporting_perspective: ontology-formalizer@0.2.0
+  controlling_launcher: continue-research-goal@v4
+  worker_skill: continue-research
+  route_label: ordinary-research-packet
+  target_derivation_milestone: matter_coupling
+  milestone_burden: Response semantics; preserve the exact protected P7 finite source-matter package as conditional input while blocking its use as universal target coupling or Gate B/D evidence.
   declared_coverage_ids:
   - V22-R09
   - V22-R14
@@ -587,6 +596,10 @@ items:
   stop_conditions: Expansion of P7 to target coupling by implication, postulated metric/Einstein
     action, or ambiguity about who may change scientific status.
   implementation_status: pending
+  expected_result_kind: completed_or_precisely_blocked
+  requires_human_gate: false
+  dependency_independent_after_other_human_gates: true
+  allow_scope_expansion: false
   requires_separate_agentjob: true
   max_outer_agentjobs_per_invocation: 1
   automatic_execution_authorized: false

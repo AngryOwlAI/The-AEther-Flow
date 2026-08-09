@@ -1,12 +1,111 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260809-001"
-active_agent_job_id: "AJ-RT-20260809-001-001"
-latest_handoff_id: "handoff-0971"
-current_status: "v22_p1_t01_three_track_governance_complete_p1_t02_selected_checkpoint_pending"
-claim_boundary_summary: "RT-20260809-001 implements exact separated Track A Track B Track C and shared-control governance. P1-T02 is selected but unexecuted. No science Distance-to-GR protected or external-action authority changes."
-next_plan_task_id: "P1-T02"
+active_task_id: "RT-20260809-002"
+active_agent_job_id: "AJ-RT-20260809-002-001"
+latest_handoff_id: "handoff-0972"
+current_status: "v22_p1_t02_primitive_debt_audit_complete_p1_t03_selected_checkpoint_pending"
+claim_boundary_summary: "RT-20260809-002 audits the exact V22 objective, 16 source-debt dimensions, 24 cost entries, and five metric-equivalence cases with new draft/control theorem and countermodel payload. P1-T03 is selected but unexecuted. No ontology, Distance-to-GR, protected, or external-action authority changes."
+next_plan_task_id: "P1-T03"
 next_worker_skill: "continue-research"
-next_recommended_action: "After the single governed checkpoint for AJ-RT-20260809-001-001 execute exactly one separately admitted V22 P1-T02 continue-research AgentJob for the scientific objective and primitive-debt audit; perform no protected or external action."
+next_recommended_action: "After the single governed checkpoint for AJ-RT-20260809-002-001 execute exactly one separately admitted V22 P1-T03 continue-research AgentJob for Position A matter scope and the no-postulate Gate B/D policy; perform no protected or external action."
+
+v22_p1_t02_primitive_debt_audit:
+  task_id: "RT-20260809-002"
+  parent_task_id: "RT-20260809-001"
+  parent_handoff_id: "handoff-0971"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P1-T02"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P1-T03"
+  claim_boundary_id: "CB-V22-P1-T02-SCIENTIFIC-OBJECTIVE-PRIMITIVE-DEBT-001"
+  status: "PASS_V22_P1_T02_PRIMITIVE_DEBT_AND_METRIC_EQUIVALENCE_AUDIT"
+  work_item_status: "completed_checkpoint_pending"
+  route_label: "ordinary-research-packet"
+  selected_role_family: "ontology-formalizer@0.2.0"
+  supporting_perspective: "smuggling-auditor@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "audit_v22_p1_t02_source_ontology_primitive_debt_v1"
+  target_derivation_milestone: "source_ontology"
+  milestone_burden: "Explicit primitive debt source-target separation and unresolved Phi_src semantics; audit and formalize the source-only boundary without ontology adoption."
+  source_head: "c0843359c321cbcb2f5d043153c5f0751376b3b5"
+  source_tree: "ae4880e4ef2a1dcf612c2de46e352ac83486fc13"
+  agent_job_id: "AJ-RT-20260809-002-001"
+  decision_id: "DDR-20260809-002"
+  execution_role_ref: "ontology-formalizer@0.2.0--RT-20260809-002"
+  source_handoff_id: "handoff-0971"
+  source_handoff_path: "research_control/handoffs/handoff-0971.yaml"
+  source_handoff_sha256: "e7fb4e79df2536f92709fe38319868e817272142078607dd1ac50d660d7e1a46"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  backlog_path: "research_control/design/v22_recommendation_backlog.yaml"
+  backlog_sha256: "10d597e84da3ea08182b9053937be82b7da0ee3939eb0a47742afd3f7d3d2bb3"
+  exact_objective_path: "research_control/design/v22_scientific_objective_and_primitive_debt_v1.md"
+  exact_objective_sha256: "bd8bd6f92fc20c05be6391dd113a7c9d3b04df6c6d0e5f03dfddc6a17fd590ef"
+  fused_audit_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_scientific_objective_primitive_debt_audit_v1.tex"
+  fused_audit_sha256: "a2611e9b6f257e52978e9589212dc4dd340ae161f9e2fe87f68244eb0395e46d"
+  debt_ledger_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_primitive_debt_ledger_v1.yaml"
+  debt_ledger_sha256: "7f46c9bf22916b6b3f0b78c331070124047d7ea62b4de65543e8489972c8de70"
+  cost_schema_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_assumption_cost_schema_v1.yaml"
+  cost_schema_sha256: "a71c201fc80f5396b78f1e81f599e3a132050ce24d243c946ef9358b53ae89a0"
+  cost_baseline_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_assumption_cost_baseline_v1.csv"
+  cost_baseline_sha256: "eb23b56ab005e77bb17db6d6ccb120a376116ddfa36338547dc0244b1745c841"
+  metric_checklist_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_metric_equivalence_checklist_v1.yaml"
+  metric_checklist_sha256: "a6ae99aac268c18f2dbd54ab4e618e82074ad1d0cc9740dc8f6ebb8e3d6d286e"
+  smuggling_audit_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_smuggling_audit_v1.yaml"
+  smuggling_audit_sha256: "6595130540667c683eb236d15eeb620eea414189df1add9c3847b75c68256b4f"
+  fixture_path: "research_control/tasks/RT-20260809-002/artifacts/fixtures/v22_p1_t02_metric_equivalence_cases.yaml"
+  fixture_sha256: "f13c881698a9f3ecf557b95fde929b0403e08c3778abb1e0f28c6cb9afb2f135"
+  validation_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_primitive_debt_validation.json"
+  validation_sha256: "749ffe11484b7b1b0ed71778dc6012ba383fadd7a546474ec25c0cae33ad60f9"
+  compact_receipt_path: "research_control/tasks/RT-20260809-002/artifacts/v22_p1_t02_compact_receipt.json"
+  compact_receipt_sha256: "1fdcafa7fc568684ce49b84a1ac160467e520a120a57d1fb604ce437bd6bc82b"
+  completion_path: "research_control/tasks/RT-20260809-002/jobs/completions/AJC-AJ-RT-20260809-002-001.yaml"
+  completion_sha256: "bd65b310d55eebda252ac6c3f91da6f4cdb106fba8423ec00b9ec0dfbe7d85dd"
+  handoff_id: "handoff-0972"
+  handoff_path: "research_control/handoffs/handoff-0972.yaml"
+  handoff_sha256: "388c591e61d3b68b114efbeba3e22b80f248f4284f1821614014ba4a8195e5eb"
+  required_dimension_count: 16
+  audited_dimension_count: 16
+  symbol_inventory_count: 16
+  assumption_cost_entry_count: 24
+  metric_equivalence_case_count: 5
+  fixture_case_count: 21
+  fixture_failure_count: 0
+  focused_check_count: 51
+  focused_check_failure_count: 0
+  theorem_payload_count: 2
+  countermodel_payload_count: 1
+  v22_p1_t02_executed: true
+  v22_p1_t03_selected: true
+  v22_p1_t03_executed: false
+  canonical_science_modified: false
+  ontology_or_source_law_adopted: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  tag_creation_authorized: false
+  public_release_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P1-T03"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P1-T03"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_supporting_perspective: "ontology-formalizer@0.2.0"
+  selected_next_packet_type: "matter_position_and_no_postulate_gate_policy"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "integrate_v22_p1_t03_position_a_no_postulate_gate_policy_v1"
+  selected_next_target_derivation_milestone: "matter_coupling"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
 
 v22_p1_t01_three_track_governance:
   task_id: "RT-20260809-001"

@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-0971.yaml",
+    "research_control/handoffs/handoff-0972.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "128459dca4353f7fe5518b58d36cdd5b9ebf4ea3",
+    "source_commit": "c0843359c321cbcb2f5d043153c5f0751376b3b5",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "44dec1d251b1bf2e29e69f230194b4a2fd2955c3a82d81cb32236c9a700a871e"
+        "sha256": "a863e7b4c9e680a413be7f600cd4734b8fd5bd8502ae9b3f5269b46761c8a4f4"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "d4826b8c12600bc6cf077c43c7d25347882925393ad6c21f7685d46c36a095df"
+        "sha256": "782727176a9577ce3c2fbbfb64a5751969d054eb86d86bac3d77bc8869d7c923"
       },
       {
-        "path": "research_control/handoffs/handoff-0971.yaml",
-        "sha256": "e7fb4e79df2536f92709fe38319868e817272142078607dd1ac50d660d7e1a46"
+        "path": "research_control/handoffs/handoff-0972.yaml",
+        "sha256": "388c591e61d3b68b114efbeba3e22b80f248f4284f1821614014ba4a8195e5eb"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "1ca7b636074d110f1eb8e97f4a006d5ac1d368f0a476bfdde930c631ffc55397"
+        "sha256": "a3d250087f73440a0f8f7fe36247b15b26fee12d13ed6437b5f9a33089c369f8"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "67fd8d4143e92cef7b0b4928e01704570586be902a75271c3a0dc4628e8633c1",
+    "source_manifest_sha256": "438d887a6987ceea6a596dc0a99159fee776c84b271f03c3a802763928490bf8",
     "source_path_count": "12",
-    "generation_time": "2026-08-09T01:11:32Z",
-    "task_count": "1226",
+    "generation_time": "2026-08-09T02:25:04Z",
+    "task_count": "1227",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260809-001",
-    "latest_handoff_id": "handoff-0971",
-    "current_status": "v22_p1_t01_three_track_governance_complete_p1_t02_selected_checkpoint_pending",
+    "active_task_id": "RT-20260809-002",
+    "latest_handoff_id": "handoff-0972",
+    "current_status": "v22_p1_t02_primitive_debt_audit_complete_p1_t03_selected_checkpoint_pending",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260809-001",
-    "latest_research_handoff_id": "handoff-0971",
-    "latest_research_next_action": "After the single governed checkpoint for AJ-RT-20260809-001-001 execute exactly one separately admitted V22 P1-T02 continue-research AgentJob for the scientific objective and primitive-debt audit; perform no protected or external action.",
+    "latest_research_task_id": "RT-20260809-002",
+    "latest_research_handoff_id": "handoff-0972",
+    "latest_research_next_action": "After the single governed checkpoint for AJ-RT-20260809-002-001 execute exactly one separately admitted V22 P1-T03 continue-research AgentJob for Position A matter scope and the no-postulate Gate B/D policy; perform no protected or external action.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "v22_p1_t02_source_ontology_primitive_debt_audit",
-    "role_family": "ontology-formalizer@0.2.0",
-    "target_derivation_milestone": "source_ontology",
-    "milestone_burden": "Explicit primitive debt source-target separation and unresolved Phi_src semantics; audit and formalize the source-only boundary without ontology adoption.",
+    "route_id": "v22_p1_t03_matter_position_no_postulate_gate_policy",
+    "role_family": "smuggling-auditor@0.2.0",
+    "target_derivation_milestone": "matter_coupling",
+    "milestone_burden": "Response semantics; preserve the exact protected P7 finite source-matter package as conditional input while blocking its use as universal target coupling or Gate B/D evidence.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -445,10 +445,10 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "none_project_system_three_track_governance",
+      "effect": "no_distance_delta",
       "changed": false,
-      "milestone": "none",
-      "burden_id": "none"
+      "milestone": "source_ontology",
+      "burden_id": "source_ontology_primitives"
     },
     "high_risk_rows": [
       {
@@ -748,7 +748,7 @@
     }
   },
   "validation": {
-    "latest_required_status": "PASS_PRECHECKPOINT_STAGING_REQUIRED",
+    "latest_required_status": "PASS",
     "pending_layers": [
       {
         "layer": "checkpoint",

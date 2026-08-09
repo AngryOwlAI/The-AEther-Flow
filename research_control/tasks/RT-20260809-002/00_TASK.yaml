@@ -1,0 +1,100 @@
+task_id: "RT-20260809-002"
+task_type: "v22_p1_t02_scientific_objective_and_primitive_debt_audit"
+title: "Rewrite the scientific objective and complete the primitive-debt audit"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "audit_or_review"
+  milestone: "source_ontology"
+  candidate_family: "v22_p1_t02_primitive_debt_and_metric_equivalence_audit_v1"
+  result_kind: "audit_verdict_or_precise_repair"
+  authority: "science_draft"
+  scope: "scientific"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+closure_status: "v22_p1_t02_primitive_debt_audit_complete_p1_t03_selected_checkpoint_pending"
+created_at: "2026-08-09T02:08:07Z"
+updated_at: "2026-08-09T02:25:04Z"
+closed_at: "2026-08-09T02:25:04Z"
+parent_task_id: "RT-20260809-001"
+parent_handoff_id: "handoff-0971"
+current_decision_id: "DDR-20260809-002"
+current_job_id: "AJ-RT-20260809-002-001"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260809-002"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal and checkpointed handoff-0971 authorize exactly one bounded P1-T02 source-ontology audit. No ontology adoption, canonical science edit, physics promotion, publication, push, or external action is authorized."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  phase_id: "P1"
+  plan_task_id: "P1-T02"
+  recommendation_ids:
+    - "V22-R03"
+  sequence_step_ids:
+    - "S2"
+  cross_cutting_directive_ids:
+    - "V22-X01"
+objective: "State exactly what the program assumes and what it still seeks to derive by adopting the V22 Section 6.1 objective at draft/control planning scope, inventorying every live source primitive and unresolved slot, assigning assumption cost and removal criteria, and fail-closing metric-equivalent target imports."
+target_derivation_milestone: "source_ontology"
+milestone_burden: "Explicit primitive debt source-target separation and unresolved Phi_src semantics; audit and formalize the source-only boundary without ontology adoption."
+route_label: "ordinary-research-packet"
+route_strategy_id: "audit_v22_p1_t02_source_ontology_primitive_debt_v1"
+project_system_change_only: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-V22-P1-T02-SCIENTIFIC-OBJECTIVE-PRIMITIVE-DEBT-001"
+claim_boundary:
+  allowed_scope: "Task-local draft/control exact-objective source, primitive-debt ledger, assumption-cost schema and baseline, metric-equivalence decision test, source-target smuggling audit, adversarial fixtures, parent-child synthesis, validation, ordinary control-state updates, and one next-route handoff."
+  forbidden_scope: "Canonical ontology or benchmark-source mutation; ontology or source-law adoption; identification of the source manifold with physical spacetime; physical-time, target metric, coframe, connection, measure, matter-coupling, Einstein-equation, Gate, benchmark, proof, external-review, replication, publication, release, push, or completed-derivation promotion."
+  authority_source: "research_control/handoffs/handoff-0971.yaml"
+  boundary_status: "completed"
+completion_contract:
+  exact_objective_matches_v22_section_6_1: true
+  required_inventory_dimensions:
+    - "manifold"
+    - "dimension"
+    - "topology"
+    - "smoothness"
+    - "charts"
+    - "differentiability"
+    - "locality"
+    - "measure"
+    - "derivative"
+    - "connection"
+    - "matter"
+    - "dynamics"
+    - "symmetry"
+    - "scale"
+    - "operational"
+    - "metric_equivalent"
+  required_status_vocabulary:
+    - "canonical_primitive"
+    - "protected_postulate"
+    - "proposal_only_extension"
+    - "derived"
+    - "unresolved"
+    - "forbidden_target_import"
+  assumption_cost_fields:
+    - "cost_class"
+    - "rationale"
+    - "downstream_use"
+    - "removal_or_derivation_criterion"
+  metric_equivalence_cases:
+    - "coframe"
+    - "constitutive_tensor"
+    - "quadratic_form"
+    - "principal_polynomial"
+    - "volume_structure"
+  parent_child_parallel_synthesis_required: true
+  no_unresolved_blocking_parent_conflict: true
+  no_ontology_adoption: true
+notes: "This task executes only P1-T02. P1-T03 and every later V22 package remain separate AgentJobs."

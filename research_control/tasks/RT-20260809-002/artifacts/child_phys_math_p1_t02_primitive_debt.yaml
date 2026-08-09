@@ -1,0 +1,57 @@
+schema_id: "parent_child_execution_unit_output_v1"
+task_id: "RT-20260809-002"
+job_id: "AJ-RT-20260809-002-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+authority_inherited_from: "ontology-formalizer@0.2.0--RT-20260809-002"
+independent_agentjob: false
+external_review: false
+source_findings:
+  - finding_id: "PM-P1T02-001"
+    finding: "A smooth four-dimensional source manifold makes manifold, dimension, topology, atlas compatibility, differentiability, and mathematical neighborhood locality explicit primitive debt."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS", "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"]
+  - finding_id: "PM-P1T02-002"
+    finding: "Smooth structure supplies tangent calculus and the exterior derivative but does not select a measure, affine connection, physical locality, physical scale, dynamics, or gauge group."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS", "TEX-V21-P4-T01-COMPREHENSIVE-SOURCE-ASSUMPTION-LEDGER"]
+  - finding_id: "PM-P1T02-003"
+    finding: "The P5 source-theory tuple and Phi_src semiflow are typed proposal-only extensions; they do not fill canonical slots."
+    source_refs: ["TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1", "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1"]
+metric_recoverability:
+  definition: "Data are metric-bearing when they determine a Lorentzian conformal class without new physical input and metric-completing when they also determine scale."
+  coframe_formula: "g_ab = eta_IJ e^I_a e^J_b"
+  quadratic_form_result: "A nondegenerate Lorentzian quadratic form is a metric or inverse metric under the declared variance convention."
+  principal_polynomial_result: "A universal nondegenerate Lorentzian quadratic characteristic factor determines a conformal class when the reduced symbol is considered up to positive multiplication."
+  constitutive_result: "A constitutive tensor is only conditionally metric-bearing after closure and single-cone/no-birefringence hypotheses are proved."
+  volume_result: "A volume density alone does not determine a conformal class; volume plus a conformal class uniquely fixes scale."
+proofs:
+  - theorem_id: "V22-P1-T02-METRIC-RECOVERABILITY-CLASSIFICATION-THEOREM-V1"
+    proof_outline:
+      - "Contract the coframe with eta to construct g explicitly."
+      - "Read a Lorentzian quadratic form directly as g or g inverse."
+      - "Use the zero set of one nondegenerate Lorentzian quadratic characteristic factor to identify its conformal class."
+      - "Conclude that assuming any recoverable datum assumes corresponding metric content."
+    proof_status: "proved_within_stated_algebraic_hypotheses"
+  - theorem_id: "V22-P1-T02-VOLUME-CONFORMAL-SCALE-COMPLETION-V1"
+    proof_outline:
+      - "For g'=Omega^2 h in dimension n, det(g')=Omega^(2n) det(h)."
+      - "Therefore vol(g')=Omega^n vol(h)."
+      - "Set Omega=(omega/vol(h))^(1/n); positivity gives uniqueness."
+    proof_status: "proved_within_stated_pointwise_hypotheses"
+countermodel:
+  countermodel_id: "V22-P1-T02-SAME-VOLUME-LORENTZIAN-NON-EQUIVALENCE-COUNTERFAMILY-V1"
+  family: "g_s = diag(-exp(2s), exp(-2s), 1, 1)"
+  determinant_check: "det(g_s)=-1 for every real s"
+  nonconformal_check: "If g_s=Omega^2 g_r, the y coefficient gives Omega^2=1 and the time coefficient gives s=r."
+  conclusion: "One volume density admits infinitely many pairwise nonconformal Lorentzian forms under identity comparison."
+new_mathematical_payload:
+  - payload_type: "theorem_with_hypotheses_and_proof"
+    identity: "V22-P1-T02-METRIC-RECOVERABILITY-CLASSIFICATION-THEOREM-V1"
+    materiality: "Formalizes the exact boundary between metric-bearing assumptions and derivation eligibility."
+  - payload_type: "countermodel_or_obstruction"
+    identity: "V22-P1-T02-SAME-VOLUME-LORENTZIAN-NON-EQUIVALENCE-COUNTERFAMILY-V1"
+    materiality: "Prevents volume structure alone from being falsely classified as a recovered conformal metric."
+limitations:
+  - "The algebraic recoverability result does not establish physical admissibility, hyperbolicity, universality, robustness, or operational calibration."
+  - "No source dynamics or source-to-target bridge is constructed."
+  - "The pointwise counterfamily is not a global no-go theorem."

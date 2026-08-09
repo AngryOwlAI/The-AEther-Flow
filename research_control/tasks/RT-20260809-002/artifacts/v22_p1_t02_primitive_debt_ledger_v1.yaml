@@ -1,0 +1,236 @@
+schema_id: "v22_p1_t02_primitive_debt_ledger_v1"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P1-T02"
+task_id: "RT-20260809-002"
+authority_status: "draft_control_science_audit"
+adoption_status: "no_ontology_or_source_law_adoption"
+exact_objective: "Derive a physical Lorentzian conformal and metric structure, universal matter coupling, and Einstein-leading dynamics from source fields and laws defined on a primitive smooth four-dimensional source manifold, without assuming the target metric or its observational predictions."
+status_vocabulary:
+  - "canonical_primitive"
+  - "protected_postulate"
+  - "proposal_only_extension"
+  - "derived"
+  - "unresolved"
+  - "forbidden_target_import"
+source_snapshots:
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+    path: "ontology/tex/aether_flow_foundations.tex"
+    sha256: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+    path: "ontology/tex/aether_flow_dynamics.tex"
+    sha256: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+  - object_id: "TEX-ONTOLOGY-AETHER-FLOW-GEOMETRY"
+    path: "ontology/tex/aether_flow_geometry.tex"
+    sha256: "f60a81b63f814b03cca7190b3ac6285842a55317f4aed058cc6e75154cc0b4d7"
+  - object_id: "TEX-V21-P4-T01-COMPREHENSIVE-SOURCE-ASSUMPTION-LEDGER"
+    path: "research_control/tasks/RT-20260720-030/artifacts/comprehensive_source_assumption_ledger_v1.tex"
+    sha256: "e50fb9458ee601563a0decc8dc809e719ec4e1d6b62c0682d1175ad2f91a1d90"
+  - object_id: "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"
+    path: "research_control/tasks/RT-20260724-010/artifacts/selected_ontology_regime_integration_v1.tex"
+    sha256: "02e624b1e79f0212c5c295ec2df9a9d4d42720708e724101194090175e5bc03e"
+  - object_id: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1"
+    path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    sha256: "2520f82e54edcb2668446579ceed7a7dfc7a8abf995572aa9889a3d9a3a4467c"
+  - object_id: "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1"
+    path: "research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex"
+    sha256: "60f7358e0643195d4e2b79f7fda921da223ef940d00968588a4175d23cc0b70f"
+  - object_id: "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"
+    path: "research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex"
+    sha256: "85fbf32fb9b02aeae556149cbc5c6b51bd6fedf278a3bc401545c93e29fc4827"
+
+assumption_dimensions:
+  - dimension_id: "manifold"
+    subject: "A"
+    source_type: "smooth_source_manifold"
+    debt_status: "canonical_primitive"
+    cost_class: "primitive_debt"
+    rationale: "The protected mainline architecture starts from a smooth source manifold rather than deriving it."
+    downstream_use: "Base domain for every continuum source field, bundle, chart, and local construction."
+    removal_or_derivation_criterion: "A source-side construction theorem must recover a manifold arena from weaker adopted data without target-atlas input."
+    forbidden_overread: "The source manifold is not physical spacetime, M_GR, unique, fundamental, or empirically established."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS", "TEX-V21-P4-T06-SELECTED-ONTOLOGY-REGIME-INTEGRATION-V1"]
+  - dimension_id: "dimension"
+    subject: "dim(A)=4"
+    source_type: "source_dimension"
+    debt_status: "canonical_primitive"
+    cost_class: "primitive_debt"
+    rationale: "Four-dimensionality is selected with the continuum-first arena and is not an emergence result."
+    downstream_use: "Constrains bundles, local coordinates, differential forms, and later reconstruction candidates."
+    removal_or_derivation_criterion: "Derive four-dimensionality from weaker source data with a theorem whose premises contain no target dimension."
+    forbidden_overread: "Equality with target dimension does not identify source and target manifolds."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"]
+  - dimension_id: "topology"
+    subject: "topology(A)"
+    source_type: "manifold_topology"
+    debt_status: "canonical_primitive"
+    cost_class: "primitive_debt"
+    rationale: "A manifold includes a Hausdorff second-countable local-Euclidean topology, while no global topology is selected beyond the live source."
+    downstream_use: "Supports neighborhoods, continuity, covers, gluing questions, and source-field domains."
+    removal_or_derivation_criterion: "Construct the topology from weaker source relations and prove the required manifold properties without target topology."
+    forbidden_overread: "No target spacetime topology, global hyperbolicity, orientation, or causal order follows."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS", "TEX-V21-P4-T01-COMPREHENSIVE-SOURCE-ASSUMPTION-LEDGER"]
+  - dimension_id: "smoothness"
+    subject: "C-infinity structure on A"
+    source_type: "smooth_structure"
+    debt_status: "canonical_primitive"
+    cost_class: "primitive_debt"
+    rationale: "Smoothness is part of the selected source arena."
+    downstream_use: "Permits smooth bundles, sections, tangent spaces, differential forms, and local PDE proposals."
+    removal_or_derivation_criterion: "Recover a compatible smooth structure from weaker source data without borrowing target differentiability."
+    forbidden_overread: "Smoothness is not proof of continuum fundamentality or physical spacetime structure."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"]
+  - dimension_id: "charts"
+    subject: "smooth atlas class on A"
+    source_type: "compatible_source_charts"
+    debt_status: "canonical_primitive"
+    cost_class: "primitive_debt"
+    rationale: "Compatible charts are included through the primitive smooth-manifold structure; no privileged chart is selected."
+    downstream_use: "Provides local representations and coordinate-independent transition laws."
+    removal_or_derivation_criterion: "Derive the atlas equivalence class from weaker source data; any particular chart must remain auxiliary and removable."
+    forbidden_overread: "A target atlas, preferred target coordinate system, or observational chart cannot define source charts."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"]
+  - dimension_id: "differentiability"
+    subject: "smooth compatibility and differentiable source maps"
+    source_type: "differentiable_structure"
+    debt_status: "canonical_primitive"
+    cost_class: "primitive_debt"
+    rationale: "Differentiability is inherited from the primitive smooth structure, not established dynamically."
+    downstream_use: "Types tangent vectors, variations, smooth sections, and any later source law."
+    removal_or_derivation_criterion: "Recover differentiability from weaker source primitives with an explicit limit or reconstruction theorem."
+    forbidden_overread: "Differentiability supplies neither a connection nor a metric-compatible derivative."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"]
+  - dimension_id: "locality"
+    subject: "source neighborhood locality"
+    source_type: "topological_and_sheaf_locality_only"
+    debt_status: "canonical_primitive"
+    cost_class: "primitive_debt"
+    rationale: "Manifold neighborhoods support mathematical locality, while causal, propagation, and operational locality are not supplied by topology alone."
+    downstream_use: "Supports local fields, patches, restrictions, and gluing obligations."
+    removal_or_derivation_criterion: "Derive physical localization and propagation from a source law and operational map; do not equate them with open-set locality."
+    forbidden_overread: "No Lorentzian cone, finite signal speed, causal relation, clock, or detector follows."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS", "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"]
+    scoped_exception: "The P7 finite package has protected source-side support and reachability semantics only in its declared finite domain."
+  - dimension_id: "measure"
+    subject: "mu_src or volume density"
+    source_type: "untyped_measure_slot"
+    debt_status: "unresolved"
+    cost_class: "unresolved_blocker"
+    rationale: "The canonical source architecture selects no measure, density, integration functional, or probability law."
+    downstream_use: "Would be needed for actions, averaging, normalization, probability, and some continuum limits."
+    removal_or_derivation_criterion: "Derive a measure from source fields/laws with transformation and normalization rules, or declare it transparently as a new proposal-only primitive."
+    forbidden_overread: "Target metric volume, Haar measure, or benchmark normalization cannot be imported silently."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS", "TEX-V21-P4-T01-COMPREHENSIVE-SOURCE-ASSUMPTION-LEDGER"]
+  - dimension_id: "derivative"
+    subject: "D_src"
+    source_type: "untyped_derivative_or_generator_slot"
+    debt_status: "unresolved"
+    cost_class: "unresolved_blocker"
+    rationale: "Smoothness supplies tangent calculus and the exterior derivative, but no privileged covariant derivative, generator, or evolution derivative."
+    downstream_use: "Would type field equations, linearization, transport, conservation, and principal symbols."
+    removal_or_derivation_criterion: "Specify a source-side operator, domain, covariance, and provenance; prove any connection or generator it uses rather than importing target structure."
+    forbidden_overread: "The target Levi-Civita derivative and the proposal-only Phi_src generator are unavailable as canonical premises."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS", "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1"]
+    available_derived_structure: "The exterior derivative on differential forms is canonical to smooth structure but is not an affine connection or dynamics."
+  - dimension_id: "connection"
+    subject: "nabla_src"
+    source_type: "affine_or_bundle_connection_slot"
+    debt_status: "unresolved"
+    cost_class: "unresolved_blocker"
+    rationale: "No source affine, gauge, or bundle connection is canonically selected."
+    downstream_use: "Would support covariant transport, curvature, kinetic terms, and compatible differentiation."
+    removal_or_derivation_criterion: "Construct the connection from source data and prove its covariance; if postulated, record it as proposal-only debt."
+    forbidden_overread: "The target Levi-Civita connection, spin connection, or tetrad connection is a forbidden target import."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS", "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"]
+  - dimension_id: "matter"
+    subject: "P7SourceMatterPackage_v1"
+    source_type: "finite_source_matter_package"
+    debt_status: "protected_postulate"
+    cost_class: "bounded_postulate"
+    rationale: "Protected human authority adopts the exact finite P7 package as physical source matter in its declared scope; the current ontology does not derive it."
+    downstream_use: "Provides bounded matter-side input for later geometry work under Position A, subject to P1-T03."
+    removal_or_derivation_criterion: "Supply a source-side derivation of the adopted meanings and a lawful bridge to realistic continuum matter; otherwise retain the postulate label."
+    forbidden_overread: "No Standard Model, quantum statistics, target stress tensor, target matter coupling, or equivalence principle follows."
+    source_refs: ["TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"]
+  - dimension_id: "dynamics"
+    subject: "S_dyn"
+    source_type: "global_source_dynamics_slot"
+    debt_status: "unresolved"
+    cost_class: "unresolved_blocker"
+    rationale: "The compact source-theory dynamics slot remains open; later cubic-amplitude and finite kernels are proposal-only or protected only in bounded sector scope."
+    downstream_use: "Required for backgrounds, perturbations, principal polynomials, robustness, and any source-to-geometry response."
+    removal_or_derivation_criterion: "Adopt only through the applicable gate or derive a source law with domain, variations, stability, and provenance; preserve bounded P7 dynamics as a scoped postulate."
+    forbidden_overread: "Target Einstein-Hilbert dynamics or the target Einstein equations cannot define source dynamics."
+    source_refs: ["TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1", "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1"]
+    scoped_exception: "The P7 finite transition kernel is a protected postulate only within its exact finite matter domain."
+  - dimension_id: "symmetry"
+    subject: "Iso_src and Red_src"
+    source_type: "source_isomorphism_and_redundancy_slots"
+    debt_status: "unresolved"
+    cost_class: "unresolved_blocker"
+    rationale: "Smooth diffeomorphisms are mathematically definable, but no canonical physical gauge group or redundancy class is selected by the source architecture."
+    downstream_use: "Needed for constraint reduction, observable equivalence, principal-polynomial reduction, and covariance."
+    removal_or_derivation_criterion: "Define and justify the physical symmetry/redundancy action from source law; prove quotient and observable invariance."
+    forbidden_overread: "Target diffeomorphism invariance or a coordinate relabeling cannot be declared source gauge by fiat."
+    source_refs: ["TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1"]
+    proposal_only_structure: "The P5-T01 groupoid and wide subgroupoid are draft/control proposal-only types."
+  - dimension_id: "scale"
+    subject: "ell_src or physical normalization"
+    source_type: "physical_scale_slot"
+    debt_status: "unresolved"
+    cost_class: "unresolved_blocker"
+    rationale: "The source architecture supplies no physical length, duration, action, mass, or metric normalization."
+    downstream_use: "Required to move from conformal to metric structure and to calibrate clocks, rods, and couplings."
+    removal_or_derivation_criterion: "Derive a source-intrinsic normalization with operational calibration and robustness, or disclose it as a postulate."
+    forbidden_overread: "Target c, G, metric volume, benchmark units, or fitted GR coefficients cannot set source scale."
+    source_refs: ["TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS", "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1"]
+  - dimension_id: "operational"
+    subject: "preparation intervention detector readout clocks rods"
+    source_type: "finite_source_protocols_and_open_target_calibration"
+    debt_status: "protected_postulate"
+    cost_class: "bounded_postulate"
+    rationale: "P7 operational meanings are protected postulates in a finite source domain; target-spacetime clocks, rods, detectors, and calibration remain open."
+    downstream_use: "Provides bounded source probes while preserving the later operational-geometry burden."
+    removal_or_derivation_criterion: "Derive target-facing operational calibration from source dynamics and a lawful geometry bridge with external empirical support where required."
+    forbidden_overread: "Token labels do not establish physical spacetime locations, null signals, rods, clocks, or detector response."
+    source_refs: ["TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1", "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"]
+  - dimension_id: "metric_equivalent"
+    subject: "coframe constitutive quadratic principal-polynomial and volume data"
+    source_type: "target_metric_recoverability_guard"
+    debt_status: "forbidden_target_import"
+    cost_class: "forbidden_import"
+    rationale: "Assumed data that already recover a Lorentzian conformal class or metric cannot be counted as primitive-free emergence."
+    downstream_use: "Fail-closed admission test for P2 through P4 source-to-geometry work."
+    removal_or_derivation_criterion: "Derive the metric-bearing data from independently sourced fields/laws and audit recoverability before claiming emergence."
+    forbidden_overread: "Renaming a metric, tetrad, coframe, Lorentzian constitutive tensor, quadratic form, or equivalent principal structure does not remove its metric content."
+    source_refs: ["MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22", "TEX-V21-P4-T01-COMPREHENSIVE-SOURCE-ASSUMPTION-LEDGER"]
+
+symbol_inventory:
+  - {symbol: "A", source_type: "smooth_source_manifold", debt_status: "canonical_primitive", provenance: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS", downstream_use: "base source arena"}
+  - {symbol: "Phi_src", source_type: "abstract_source_order_or_evolution_slot", debt_status: "unresolved", provenance: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS", downstream_use: "future source-order/evolution semantics"}
+  - {symbol: "pi:E_src->A", source_type: "smooth_source_bundle", debt_status: "proposal_only_extension", provenance: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1", downstream_use: "types source fields"}
+  - {symbol: "Q_adm", source_type: "admissible_smooth_sections", debt_status: "proposal_only_extension", provenance: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1", downstream_use: "source configuration domain"}
+  - {symbol: "Iso_src", source_type: "source_isomorphism_groupoid", debt_status: "proposal_only_extension", provenance: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1", downstream_use: "declared source equivalences"}
+  - {symbol: "Red_src", source_type: "wide_source_redundancy_subgroupoid", debt_status: "proposal_only_extension", provenance: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1", downstream_use: "candidate quotient only"}
+  - {symbol: "O_src", source_type: "redundancy_invariant_functional_algebra", debt_status: "proposal_only_extension", provenance: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1", downstream_use: "candidate source observables"}
+  - {symbol: "Var_src", source_type: "admissible_variation_assignment", debt_status: "proposal_only_extension", provenance: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1", downstream_use: "candidate variation domain"}
+  - {symbol: "S_Phi", source_type: "tagged_Phi_src_semantics_slot", debt_status: "unresolved", provenance: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1", downstream_use: "keeps canonical Phi_src unfilled"}
+  - {symbol: "Phi_src_semiflow_candidate", source_type: "continuous_forward_monoid_action", debt_status: "proposal_only_extension", provenance: "TEX-V21-P5-T02-PHI-SRC-SEMIFLOW-SEMANTICS-V1", downstream_use: "one source-extension candidate only"}
+  - {symbol: "S_dyn", source_type: "tagged_source_dynamics_slot", debt_status: "unresolved", provenance: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1", downstream_use: "future source law"}
+  - {symbol: "S_rec", source_type: "tagged_reconstruction_interface_slot", debt_status: "unresolved", provenance: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1", downstream_use: "future source-to-target bridge"}
+  - {symbol: "tau", source_type: "component_status_and_provenance_record", debt_status: "proposal_only_extension", provenance: "TEX-V21-P5-T01-COMPACT-SOURCE-THEORY-OBJECT-V1", downstream_use: "audit metadata only"}
+  - {symbol: "P7SourceMatterPackage_v1", source_type: "finite_source_matter_package", debt_status: "protected_postulate", provenance: "TEX-V21-P7-T08-PHYSICAL-MATTER-ADOPTION-DECISION-V1", downstream_use: "bounded matter input subject to Position A"}
+  - {symbol: "g_eff", source_type: "physical_effective_Lorentzian_metric_target", debt_status: "unresolved", provenance: "registries/DISTANCE_TO_GR_LEDGER.csv", downstream_use: "future source-derived geometry target"}
+  - {symbol: "target_metric_or_equivalent", source_type: "target_geometry_premise", debt_status: "forbidden_target_import", provenance: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22", downstream_use: "none as a source premise"}
+
+audit_counts:
+  required_dimension_count: 16
+  actual_dimension_count: 16
+  symbol_count: 16
+  canonical_primitive_dimension_count: 7
+  protected_postulate_dimension_count: 2
+  proposal_only_symbol_count: 7
+  unresolved_dimension_count: 6
+  forbidden_target_import_dimension_count: 1
+  ontology_adoption_count: 0
+  distance_to_gr_delta_count: 0
+result: "PASS_COMPLETE_VISIBILITY_ZERO_DISTANCE_DELTA"
