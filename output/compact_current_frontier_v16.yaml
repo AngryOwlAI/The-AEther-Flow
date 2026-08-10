@@ -7,50 +7,50 @@ generated_from:
   - "research_control/current_frontier.md"
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
-  - "research_control/handoffs/handoff-1007.yaml"
+  - "research_control/handoffs/handoff-1008.yaml"
   - "research_control/program_state.yaml"
 report_provenance:
   schema_id: "generated_report_provenance_v1"
   policy_id: "p13_t07_live_generated_report_freshness_v1"
   report_class: "compact_current_frontier"
-  source_commit: "bbb17abc6b7edeeae01026884fba6d277d4ace93"
+  source_commit: "0e1a32899fb3bd431efb9cb5205d0fbf086fb130"
   source_hashes:
     - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
       sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
     - path: "registries/RESEARCH_TASK_REGISTRY.csv"
-      sha256: "034c1a3b131b6afa10a530069d2e6937d4b103eb34962c942890da32659fe975"
+      sha256: "856db6c320a753c30cd91f19084c7971fdb7ac57bafc0449a9d5e92df631bdc7"
     - path: "research_control/current_frontier.md"
-      sha256: "c0ee075014e8dc94b03a15e7a2a79b7a5b400ffda5c403981041c0b073b5ea2e"
-    - path: "research_control/handoffs/handoff-1007.yaml"
-      sha256: "5e7cab444d0db4b373a619f59e4d9228a4e5add26ab9245c8d717905cc396a3c"
+      sha256: "62fb45d04b1c976d99a73354843a47d0d5058e07cdf532916ca29cbda62d508e"
+    - path: "research_control/handoffs/handoff-1008.yaml"
+      sha256: "589603e620e819bd184ce860d5bec20067bc29712a6d491eb6227a353e979a99"
     - path: "research_control/program_state.yaml"
-      sha256: "eb0411122cd544ae363ad665c4d629d5417363ef6511b9b18caeae15166a466b"
+      sha256: "88e84089d91202927f45cfb8b78a6e11d6708dac623e5444b7bab6a54cf74de1"
     - path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml"
       sha256: "dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"
     - path: "scripts/research_control/generated_report_provenance.py"
       sha256: "af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"
     - path: "scripts/research_control/render_compact_current_frontier_v16.py"
       sha256: "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
-  source_manifest_sha256: "b108c26bb3f3b0b237a8aee0914e0647b8660edd6dcf5e5c515d8872f380fc23"
+  source_manifest_sha256: "ac908b147be8b4c4ceecbaceae0ae493daee1f5c36ff793b3e0d889c45e0949c"
   source_path_count: "12"
-  generation_time: "2026-08-10T18:31:15Z"
-  task_count: "1262"
+  generation_time: "2026-08-10T19:50:54Z"
+  task_count: "1263"
   maximum_commit_lag: "1"
   freshness_status: "fresh_at_generation"
   generated_view_is_authority: false
   physics_promotion_authorized: false
   proof_authority: false
 active_state:
-  active_task_id: "RT-20260810-010"
-  latest_handoff_id: "handoff-1007"
-  current_status: "v22_p4_t02_b2_common_character_candidate_constructed_audit_pending_checkpoint"
+  active_task_id: "RT-20260810-011"
+  latest_handoff_id: "handoff-1008"
+  current_status: "v22_p4_t02_b2_common_character_source_pure_refuter_stress_pending_checkpoint"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260810-010"
-  latest_research_handoff_id: "handoff-1007"
-  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260810-010-001. After it commits, admit exactly one fresh smuggling-auditor@0.2.0 packet for PKT-V22-P4T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT-V1. Audit whether the pointed source frames, a_s(0)=1 anchors, universal character, cochain arrays, shared source state, and independent variation roots are conservative source-side primitives or hidden goal-selected imports. Do not execute the audit before checkpoint, infer source legitimacy or adoption, replay either frozen route, assign physical or empirical meaning, reevaluate D7, activate or dispose B2, unlock P4-T03, or take protected or external action."
+  latest_research_task_id: "RT-20260810-011"
+  latest_research_handoff_id: "handoff-1008"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260810-011-001. After it commits, admit exactly one fresh refuter@0.2.0 packet for PKT-V22-P4T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-REFUTER-STRESS-V1. Stress the unchanged candidate against arbitrarily small H1 holonomy perturbations, the t=-1/2 transition collapse, reanchoring and source-presentation enlargement, point and frame nonselection, alternative covectors, rank-preserving balance variations, inverse branches, and frozen-route controls. Do not execute the stress before checkpoint, infer adoption or physical meaning, reevaluate D7, activate or dispose B2, unlock P4-T03, or take protected or external action."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -58,10 +58,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "audit_v22_p4_t02_b2_common_character_independent_variation_source_purity_v1"
-  role_family: "smuggling-auditor@0.2.0"
+  route_id: "stress_v22_p4_t02_b2_common_character_independent_variation_v1"
+  role_family: "refuter@0.2.0"
   target_derivation_milestone: "effective_metric_g_eff"
-  milestone_burden: "Audit source legitimacy and hidden-import risk of the exact common-character and independent-variation candidate."
+  milestone_burden: "Stress whether the locally source-pure common-character law and nontrivial variation content survive target-free perturbations or yield a precise scoped obstruction."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -371,7 +371,7 @@ blocked_physical_targets:
       - "no_global_theory_rejection"
 distance_to_gr:
   delta:
-    effect: "proposal_candidate_constructed_no_ledger_delta"
+    effect: "source_purity_classified_no_ledger_delta"
     changed: false
     milestone: "effective_metric_g_eff"
     burden_id: "g_eff"
@@ -641,6 +641,6 @@ validation:
     - layer: "post_checkpoint"
       status: "PENDING"
       evidence:
-        - "Exactly one governed AJ-RT-20260810-010-001 checkpoint remains."
+        - "Exactly one governed AJ-RT-20260810-011-001 checkpoint remains."
 authority_warning:
   snapshot_only_not_authority: true
