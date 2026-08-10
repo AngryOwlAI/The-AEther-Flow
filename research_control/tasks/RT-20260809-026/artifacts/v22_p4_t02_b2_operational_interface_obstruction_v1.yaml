@@ -1,0 +1,41 @@
+schema_id: "v22_p4_t02_b2_operational_interface_obstruction_v1"
+authority: "science_draft"
+task_id: "RT-20260809-026"
+job_id: "AJ-RT-20260809-026-001"
+obstruction_id: "OBST-V22-P4T02-B2-OPERATIONAL-TYPE-001"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+obstruction_scope: "D6 operational receipt composition"
+sampling_map:
+  notation: "S_s0"
+  domain: "Gamma(U,R^3)"
+  codomain: "(R^3)^{G_0}"
+protected_response:
+  source_record: "P7-T03"
+  domain_summary:
+    - "declared preparation"
+    - "declared intervention or history"
+    - "guarded protocol token"
+    - "admissible readout context"
+  arbitrary_real_grid_array_accepted: false
+missing_interface:
+  notation: "B_s"
+  required_type: "(R^3)^{G_0} -> Dom(P7Response_s), or an explicitly typed span with the same effect"
+  declared_in_subject: false
+  properties_not_proved:
+    - "normalization"
+    - "positivity or admissible range"
+    - "preparation provenance"
+    - "intervention or history provenance"
+    - "guarded-token provenance"
+    - "readout admissibility"
+exact_result: "composition_undefined_under_declared_types"
+repair_contract:
+  - "Declare B_s or a faithful typed span."
+  - "Prove that the sampling image lies in its domain."
+  - "Trace every protected protocol argument to source-side data."
+  - "Do not infer physical operational meaning from notation-level juxtaposition."
+claim_effects:
+  direct_authority_import_detected: false
+  operational_derivation_established: false
+  descriptor_instance_credit: false
+  global_no_go_claimed: false

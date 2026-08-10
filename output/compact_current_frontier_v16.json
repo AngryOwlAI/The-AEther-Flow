@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-0995.yaml",
+    "research_control/handoffs/handoff-0997.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "6a585fc6fa73c8bc326e2d1c4e087317c747698d",
+    "source_commit": "8348a5412c1defd80e028c9efbb5efc2e7498913",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "2eb3065744340cca97d4251a695d1cd7c06f5c50d8aa10e1f3ddf63ad2329e01"
+        "sha256": "5a9eeb4abd60d2ecc1a632cf36b47fd3d9607f5b33fc3d75c91f37f2b2800a57"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "f04fc7b0aec44bbbcaaa231b04fe5ac1a3b5aec2843e0b90b407285ce70894c5"
+        "sha256": "398dae7e8709677b927617f5dddca4d6cbcd52fc54045248a136cb8c302e4b93"
       },
       {
-        "path": "research_control/handoffs/handoff-0995.yaml",
-        "sha256": "14ecd144792ed6292b4b17407be243e023897e1aa09943af92ae39891444039f"
+        "path": "research_control/handoffs/handoff-0997.yaml",
+        "sha256": "13f4e4a8c62510dbaea44600ba5257a91e264f2beb3a133ce609bf19e8057a5f"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "336032278edd8d4ced25b95a388b9c9226171ed15241770b9c24d9922a6b6fd4"
+        "sha256": "f480b515ca7e559c1605e9affc445dc3c17f25d88afe02e275bf5bb07f367401"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "3599ff23325d0cf0645a6cc3c20a8adc303225db87ac588eb607797b560a7e38",
+    "source_manifest_sha256": "9013d8da85db1c4fbdbc2d32f19f30e1b4c8b2f083b077990617b68fc4a51ac9",
     "source_path_count": "12",
-    "generation_time": "2026-08-10T03:09:36Z",
-    "task_count": "1250",
+    "generation_time": "2026-08-10T05:06:11Z",
+    "task_count": "1252",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260809-025",
-    "latest_handoff_id": "handoff-0995",
-    "current_status": "rt024_two_eof_repaired_populated_instance_audit_selected_fresh_checkpoint_pending",
+    "active_task_id": "RT-20260809-027",
+    "latest_handoff_id": "handoff-0997",
+    "current_status": "v22_p4_t02_b2_ten_eof_repaired_source_intrinsic_interface_repair_selected_fresh_checkpoint_pending",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260809-025",
-    "latest_research_handoff_id": "handoff-0995",
-    "latest_research_next_action": "Run the single fresh governed checkpoint for AJ-RT-20260809-025-001. After it commits, execute exactly one fresh V22 P4-T02 populated-instance packet under smuggling-auditor@0.2.0 to audit U, tau, the source norm, lift and sampler, affine coefficients, quotient groupoids, compatibility relation, principal generator, operational bridge, and explicit cocycle; do not evaluate adequacy, activate B2, execute P4-T03, or take any protected or external action.",
+    "latest_research_task_id": "RT-20260809-027",
+    "latest_research_handoff_id": "handoff-0997",
+    "latest_research_next_action": "Run the single fresh governed checkpoint for AJ-RT-20260809-027-001. After it commits, execute exactly one fresh V22 P4-T02 Candidate Constructor ontology-law packet with Refuter support to repair all-sector typing, source-intrinsic topology or a delimited presentation group, independent sector leading-coefficient selection, a sector-split variation stress, and a typed operational bridge B_s, or return one precise scoped obstruction. Do not evaluate D7 adequacy, activate B2, execute P4-T03, or take any protected or external action.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "audit_v22_p4_t02_b2_populated_equipped_chain_descriptor_v1",
-    "role_family": "smuggling-auditor@0.2.0",
+    "route_id": "repair_v22_p4_t02_b2_populated_descriptor_source_intrinsic_interfaces_v1",
+    "role_family": "candidate-constructor@0.2.0",
     "target_derivation_milestone": "effective_metric_g_eff",
-    "milestone_burden": "Audit every populated source primitive and map before any D7 adequacy or B2 activation decision.",
+    "milestone_burden": "Repair the five populated-instance source-interface defects or return one precise scoped obstruction.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -754,7 +754,7 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "Exactly one fresh governed AJ-RT-20260809-025-001 checkpoint remains."
+          "Exactly one fresh governed AJ-RT-20260809-027-001 checkpoint remains."
         ]
       }
     ]

@@ -1,0 +1,258 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+handoff_id: "handoff-0997"
+handoff_number: 997
+handoff_kind: "project_system_v22_p4_t02_b2_ten_eof_checkpoint_recovery"
+task_id: "RT-20260809-027"
+decision_id: "DDR-20260809-027"
+job_id: "AJ-RT-20260809-027-001"
+completion_id: "AJC-AJ-RT-20260809-027-001"
+completion_path: "research_control/tasks/RT-20260809-027/jobs/completions/AJC-AJ-RT-20260809-027-001.yaml"
+completion_sha256: "deacda159451e1a8b2f86f0bd71e3f28a018386c1599ff181e6d8da902eea42d"
+status: "ready_for_v22_p4_t02_b2_source_intrinsic_interface_repair_after_fresh_checkpoint"
+created_at: "2026-08-10T05:06:11Z"
+parent_handoff_id: "handoff-0996"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+recovery_for_plan_task_id: "P4-T02"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260809-027"
+summary: "The consumed RT026 checkpoint is sealed and was not replayed. Its sole failed gate named exactly ten new EOF blank lines. All ten exact one-byte postimages were observed with zero drift across the other 53 inherited paths and twelve protected hashes exact at the boundary; the RT026 documentation receipt was then extended only for cumulative RT027 coverage, while the other eleven protected artifacts remain exact. The populated-instance verdict remains repair_required_no_instance_credit; B2 remains inactive; P4-T03 remains locked; and Distance-to-GR is unchanged."
+next_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-027-001. After it commits, execute exactly one fresh V22 P4-T02 Candidate Constructor ontology-law packet with Refuter support to repair all-sector typing, source-intrinsic topology or a delimited presentation group, independent sector leading-coefficient selection, a sector-split variation stress, and a typed operational bridge B_s, or return one precise scoped obstruction. Do not evaluate D7 adequacy, activate B2, execute P4-T03, or take any protected or external action."
+current_claim_boundary: "CB-PS-V22-P4-T02-B2-TEN-EOF-CHECKPOINT-RECOVERY-001"
+loop_risk_route: "repair_v22_p4_t02_b2_populated_descriptor_source_intrinsic_interfaces_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260809-027"
+  latest_research_handoff_id: "handoff-0997"
+  latest_research_next_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-027-001. After it commits, execute exactly one fresh V22 P4-T02 Candidate Constructor ontology-law packet with Refuter support to repair all-sector typing, source-intrinsic topology or a delimited presentation group, independent sector leading-coefficient selection, a sector-split variation stress, and a typed operational bridge B_s, or return one precise scoped obstruction. Do not evaluate D7 adequacy, activate B2, execute P4-T03, or take any protected or external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One fresh governed RT027 recovery checkpoint followed by one separately admitted P4-T02 Candidate Constructor repair packet over the exact five failed source interfaces."
+  completed_task: "RT-20260809-027"
+  completed_completion_path: "research_control/tasks/RT-20260809-027/jobs/completions/AJC-AJ-RT-20260809-027-001.yaml"
+  completed_completion_sha256: "deacda159451e1a8b2f86f0bd71e3f28a018386c1599ff181e6d8da902eea42d"
+  source_task_id: "RT-20260809-026"
+  source_job_id: "AJ-RT-20260809-026-001"
+  source_handoff_id: "handoff-0996"
+  source_handoff_path: "research_control/handoffs/handoff-0996.yaml"
+  source_handoff_sha256: "1d92ae1b5e42630069dd04af7c72cb0eeb0d5cb8bf4884f17f4cdd0b0ce2a674"
+  source_completion_path: "research_control/tasks/RT-20260809-026/jobs/completions/AJC-AJ-RT-20260809-026-001.yaml"
+  source_completion_sha256: "0277ebaecf44e169adc43c1de26d4dc2e6da7cccc9bbf3a2081c888d4d58ad4e"
+  immutable_route_sha256: "30a238248dba89c595f528b25ca302a862a78fa4fd3c45c0f42113c1c7474412"
+  route_blocker_fingerprint: "76138b25d3fde9453766e11d7c4031425c31e2a7240fd9dcd71c247bcaf988ef"
+  inherited_manifest_path: "research_control/tasks/RT-20260809-027/artifacts/inherited_dirty_manifest_v22_p4_t02_b2_ten_eof_checkpoint_recovery.json"
+  inherited_manifest_sha256: "4e400c87485b4b843218e3ed7a67057fbe86f3c8c14582bc89ece8c21e945806"
+  blocker_path: "research_control/tasks/RT-20260809-027/artifacts/v22_p4_t02_b2_ten_eof_checkpoint_blocker.yaml"
+  blocker_sha256: "76138b25d3fde9453766e11d7c4031425c31e2a7240fd9dcd71c247bcaf988ef"
+  repair_boundary_receipt_path: "research_control/tasks/RT-20260809-027/artifacts/v22_p4_t02_b2_ten_eof_repair_boundary_receipt.json"
+  repair_boundary_receipt_sha256: "6707f7dede7424eb82f7a0e43ce964d0806723cc9daf93e7ffd10f4debddce84"
+  inherited_file_count: 63
+  target_file_count: 10
+  non_target_file_count: 53
+  failed_finding_count: 10
+  corrected_finding_count: 10
+  protected_rt026_failure_count: 0
+  prior_checkpoint_job_id: "AJ-RT-20260809-026-001"
+  prior_checkpoint_run_id: "RUN-CHECKPOINT-7742e8345c578971"
+  prior_checkpoint_consumed: true
+  prior_checkpoint_replayed: false
+  prior_recovery_replayed: false
+  populated_instance_audit_replayed: false
+  source_intrinsic_interface_repair_selected: true
+  source_intrinsic_interface_repair_executed: false
+  p4_t03_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "the fresh recovery checkpoint described as a replay of RT026 or its failed checkpoint"
+    - "EOF normalization, receipt alignment, or checkpoint PASS described as physics evidence"
+    - "the populated descriptor described as complete or adequate"
+    - "B2 described as active, adopted, rejected, or viable"
+    - "P4-T03 described as unlocked or executed"
+    - "Gate, benchmark, promotion, publication, push, or completed derivation described as authorized"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P4"
+  plan_task_id: "P4-T02"
+  title: "Apply the hyperbolicity, universality, robustness, and hard-fail screen"
+  work_item_status: "source_intrinsic_interface_repair_not_executed_ten_eof_recovery_checkpoint_pending"
+  result_status: "P4_T02_B2_TEN_EOF_CHECKPOINT_RECOVERY_READY"
+  recovery_for_plan_task_id: "P4-T02"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "B2_SOURCE_INTRINSIC_INTERFACE_REPAIR"
+  populated_instance_audit_executed: true
+  populated_instance_audit_replayed: false
+  prior_recovery_replayed: false
+  source_intrinsic_interface_repair_selected: true
+  source_intrinsic_interface_repair_executed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  b2_fallback_activated: false
+  adequacy_reevaluated: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "no_distance_delta_project_system_checkpoint_recovery_only"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Whitespace normalization and cumulative control receipts supply no adequacy, cone, scale, effective metric, coupling, field equation, or Gate evidence."
+  downstream_unlocked:
+    - "one source-intrinsic interface repair packet after a valid recovery checkpoint"
+  downstream_still_blocked:
+    - "D7 rank evaluation and adequacy verdict"
+    - "complete descriptor instance and B2 activation"
+    - "P4-T03 conformal reconstruction"
+    - "physical scale, g_eff, coupling, Einstein equations, Gates, benchmark promotion, and completed derivation"
+
+selected_next_route:
+  route_id: "repair_v22_p4_t02_b2_populated_descriptor_source_intrinsic_interfaces_v1"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR"
+  work_kind: "source_extension_candidate_repair"
+  task_class: "science"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  role_family: "candidate-constructor@0.2.0"
+  supporting_perspective: "refuter@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_extension_candidate"
+  source_extension_category: "source_extension_candidate"
+  source_extension_import_classification: "repair exact all-sector typing source topology leading-coefficient selection sector-split variation and operational bridge without target imports"
+  task_type: "v22_p4_t02_b2_populated_descriptor_source_intrinsic_interface_repair"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Repair the five populated-instance source-interface defects or return one precise scoped obstruction."
+  expected_result_kind: "repaired_proposal_only_candidate_or_precise_scoped_obstruction"
+  strategy_id: "repair_v22_p4_t02_b2_populated_descriptor_source_intrinsic_interfaces_v1"
+  source_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  source_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  selected_candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  transition_id: "REPAIR_POPULATED_B2_DESCRIPTOR_BEFORE_ADEQUACY"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  adequacy_reevaluation_authorized: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-0997"
+  ordinary_handoff_id: "handoff-0997"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 1
+  ready_science_plan_task_ids: []
+  ready_science_plan_task_refs: []
+  ready_project_system_plan_task_ids: []
+  selected_plan_task_id: "P4-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  selection_reason: "The exact recovery preserves handoff-0996's materially distinct Candidate Constructor repair selection; its fresh checkpoint is the only remaining prerequisite."
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260809-027"
+  active_job_id: "AJ-RT-20260809-027-001"
+  current_status: "rt026_ten_eof_repaired_source_intrinsic_interface_repair_selected_fresh_checkpoint_pending"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  prior_checkpoint_invocation_count: 1
+  prior_checkpoint_replayed: false
+  prior_recovery_replayed: false
+  populated_instance_audit_replayed: false
+  source_intrinsic_interface_repair_executed: false
+  p4_t03_executed: false
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_supporting_perspective: "refuter@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "repair_v22_p4_t02_b2_populated_descriptor_source_intrinsic_interfaces_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, resolver, signal, receipt, role-fit, and exact-manifest preflight passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The boundary receipt proves ten exact postimages, zero non-target drift, and twelve protected science/control hashes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Recovery control records are complete before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one fresh governed AJ-RT-20260809-027-001 checkpoint remains."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  reviewer_contact_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false

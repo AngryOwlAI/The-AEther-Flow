@@ -1,0 +1,50 @@
+{
+  "schema_id": "latex_compile_and_visual_inspection_receipt_v1",
+  "task_id": "RT-20260809-026",
+  "job_id": "AJ-RT-20260809-026-001",
+  "status": "PASS",
+  "created_at": "2026-08-10T04:18:08Z",
+  "source_path": "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.tex",
+  "source_sha256": "8404fc7bd3586c353155cdce00bbede9e107ed4b38231b69953f4242bc5d90f0",
+  "compiler": "bundled Tectonic 0.16.9",
+  "compiler_exit_code": 0,
+  "scratch_pdf_path": ".local/rt026-audit-build/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.pdf",
+  "scratch_pdf_sha256": "7a0940314b96648a23249b80db5e880e357a33e32708ea87745205cc77ebe1f7",
+  "pdf_tracked": false,
+  "page_count": 8,
+  "page_size": "letter",
+  "render_command": "pdftoppm -png -r 135 <scratch-pdf> .local/rt026-audit-render/page",
+  "visual_inspection_status": "PASS",
+  "visual_inspection_scope": "all_pages",
+  "inspected_pages": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+  ],
+  "inspection_findings": {
+    "clipped_text": false,
+    "overlapping_elements": false,
+    "broken_tables": false,
+    "unreadable_glyphs": false,
+    "missing_equation_numbers": false,
+    "unresolved_reference_tokens_visible": false,
+    "placeholder_tokens_visible": false,
+    "layout_defects": false
+  },
+  "render_sha256es": {
+    "page_1": "f01aacefa31ecbe883e5a36ce35601e561306cc34d6a00048212a8ada5008275",
+    "page_2": "5848271320428e7cd0af83a2807c771358ba0501e6e56ca0ea835e1bed41bb6d",
+    "page_3": "7fcd70a9375d9adde19adbe54058e7093f9d99947ef581a4539b0631e4407146",
+    "page_4": "68f4221ca82ce19190bcebc3769cc287362f90549efc3ce27828e1cd7ed040a8",
+    "page_5": "108d120693cdc08646139246369781ddbe2a2cdadb828f2ba539a5861af181ad",
+    "page_6": "5e5470ea4e79ee73f22a4785a0b1eb3dbbe01ab90ec87009b00900872e5dacf5",
+    "page_7": "054d434049a6103c1f5b33dfced9f82cd6bcb3cc8f2ce44c33cae49b65a72e04",
+    "page_8": "0b0c7219c76271deddae01715268ddf827401a76ec00112f2d2031b9069cd636"
+  },
+  "authority_note": "The scratch PDF and rendered PNGs are verification derivatives only. The registered TeX source remains authoritative for this draft/control audit."
+}

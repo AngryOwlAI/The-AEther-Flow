@@ -1,0 +1,535 @@
+{
+  "authority": "operational_validation_only",
+  "checkpoint_evidence": {
+    "consumed": true,
+    "exit_code": 1,
+    "failed_gate_id": "git_diff_check",
+    "failed_gate_output_path": ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-7742e8345c578971/gates/0006-git_diff_check.stdout",
+    "failed_gate_output_sha256": "d3815fc6bf218213c7e39c1a9346bff2c48207f51ee7e5e79eaeab9a98e37fc5",
+    "failed_gate_returncode": 2,
+    "failure_count": 1,
+    "final_plan_hash": "cd44288ec34993f5fa94d31e713143ed51273f21c837b0399c3fa3d41a1d3e7a",
+    "finding_count": 10,
+    "gate_count": 7,
+    "pass_count": 2,
+    "receipt_path": ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-7742e8345c578971/receipt.json",
+    "receipt_sha256": "b1cd97fd2f327ed1ee63b1526b7a26a1b0db0baf5af40394128cee6ad3a0df39",
+    "replayed": false,
+    "run_id": "RUN-CHECKPOINT-7742e8345c578971",
+    "skipped_count": 4,
+    "status": "FAIL"
+  },
+  "entry_index_tree": "d466c8e253e112293f3d5e9dc4fa0c485899bf61",
+  "error_count": 0,
+  "errors": [],
+  "job_id": "AJ-RT-20260809-027-001",
+  "path_count": 63,
+  "paths": [
+    {
+      "index_bytes": 1435913,
+      "index_sha256": "1e99fc98602bcc116287b73231d99b800b2d32a6a9365a9cd1adf7495e458ef4",
+      "path": "FOLDER_MAP.md",
+      "status": " M",
+      "working_bytes": 1437133,
+      "working_sha256": "dfcd9f3a4e03a5d505d66607c95f96d3c3357c200a652354c276e44b1d40cb17"
+    },
+    {
+      "index_bytes": 41195,
+      "index_sha256": "dbce85cabbf9ebefafee93ba6287b55738644919eeed5a657bf20bbb752debe5",
+      "path": "output/compact_current_frontier_v16.json",
+      "status": " M",
+      "working_bytes": 41219,
+      "working_sha256": "af0734cd95588872c4ffeb92122aaa0d259da65f8446f1bc684a9e6e5f0a1535"
+    },
+    {
+      "index_bytes": 38283,
+      "index_sha256": "059faff16400808495098258faa5e5fb2bf622bb5f13515823995340f860e0be",
+      "path": "output/compact_current_frontier_v16.yaml",
+      "status": " M",
+      "working_bytes": 38307,
+      "working_sha256": "669fe928ceb9cdf6b08722eae8369cedb29fbc9f156f8bbf15fb270b9ad4433f"
+    },
+    {
+      "index_bytes": 18451363,
+      "index_sha256": "1c643f92b05cebf8e20a14c67d069d0d78cd718a500faed7be4dad6bee23a491",
+      "path": "output/research_dependency_graph.dot",
+      "status": " M",
+      "working_bytes": 18469280,
+      "working_sha256": "3b3d723bcf9e6a9bb1abe69da0e2355e4d789f804c987653a37a3c0e8055473d"
+    },
+    {
+      "index_bytes": 133,
+      "index_sha256": "d6334e987f9523930ced8f8bcc7eea4e0f34cbd709e72085f5a65cb80aae3896",
+      "path": "output/research_dependency_graph.json",
+      "status": " M",
+      "working_bytes": 69295085,
+      "working_sha256": "211a2cd92457c557e821a7a63482a934962a8995cd762fae06680d8c8d6ae0b2"
+    },
+    {
+      "index_bytes": 2790557,
+      "index_sha256": "8e8064b6cbcd781cc8f880725d959cbb8944e71688fdd2211f3ce17e0dc95b88",
+      "path": "registries/AGENT_JOB_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 2793484,
+      "working_sha256": "e35df939d983c97f2a35157e612efad315ddaee4765021a5d54efa419fdfa60e"
+    },
+    {
+      "index_bytes": 1864069,
+      "index_sha256": "8579471d402b75026a2d0e59dc8aaab009fb520e3fbabc73f190e757fa82253f",
+      "path": "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 1865475,
+      "working_sha256": "aa37ac2bdefc171b7319989a5132fb45dd7f6eec8da606be5f45675c321ba49b"
+    },
+    {
+      "index_bytes": 1561026,
+      "index_sha256": "ab71547acaaf56a6de5b8ba08894662409ba90b8d41d6daa477c769533c013d9",
+      "path": "registries/CONTENT_SEMANTIC_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 1563356,
+      "working_sha256": "4e2aa091a828397488223e3addba4a08cd87281b7c1c5897f2a1d81d618b7b52"
+    },
+    {
+      "index_bytes": 809,
+      "index_sha256": "e03dbca1509df57a1aa61d8f462e6bd62622b8dda0edd503a7b77922c631c49f",
+      "path": "registries/CONTENT_SEMANTIC_REGISTRY.meta.json",
+      "status": " M",
+      "working_bytes": 809,
+      "working_sha256": "f1ebcfd5583024a43c8fbc92918fea82948878b78db62f113829e4cbf1d0279b"
+    },
+    {
+      "index_bytes": 539616,
+      "index_sha256": "befb60592ec8d3fe912dbbd871f485195823690584c5d04d88f6da4eb7287d25",
+      "path": "registries/DIRECTOR_DECISION_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 540147,
+      "working_sha256": "7c93fbca20a4e3c49fbcf469d3ba467e135b994f7c320a9eb344dbeb993fc21d"
+    },
+    {
+      "index_bytes": 5680429,
+      "index_sha256": "838ab8401024d73d1dd07488143ca81545169d4949294e9f9d436dd3d9d29e1c",
+      "path": "registries/FILE_OBJECT_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 5690737,
+      "working_sha256": "a68fff267b3082600a4c85b29daea363a835ff786a90c923438d5fd152dbe883"
+    },
+    {
+      "index_bytes": 1151,
+      "index_sha256": "53ffffc29ee187891a5fe6a1ec74d9fcf58fbfc54b1973f8e2dbf8eb0b45e025",
+      "path": "registries/FILE_OBJECT_REGISTRY.meta.json",
+      "status": " M",
+      "working_bytes": 1151,
+      "working_sha256": "0347e6c62ed1c6538a289690bb164a4501ebdcc973e16345bd9d0451804e82ea"
+    },
+    {
+      "index_bytes": 419412,
+      "index_sha256": "14c4696db63c50c9b396ea818c2a3acd5b8be68981e2cbeb6194ff3695cfd189",
+      "path": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 420195,
+      "working_sha256": "6e0b15189290d10e0d07ac54047a94a3b35089fe88214a76c71d70e123bc81fa"
+    },
+    {
+      "index_bytes": 5380172,
+      "index_sha256": "46c7cce23893d791f61918cbac386eee7be4cf17bab06a3da19f406cdb23a7a8",
+      "path": "registries/OBJECT_RELATIONSHIP_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 5390530,
+      "working_sha256": "59d726274495fc5af15943a5c8a9f1d10402ba06f8d2f8b493eda8ad3be0647e"
+    },
+    {
+      "index_bytes": 812,
+      "index_sha256": "3db85d69857c974dac303755171be8b023e9bbf1bcf2dc971fc152d566191129",
+      "path": "registries/OBJECT_RELATIONSHIP_REGISTRY.meta.json",
+      "status": " M",
+      "working_bytes": 812,
+      "working_sha256": "37c30b38c3d03a292484fe3e5cdb2f1ae4f3802581cb960badd00e686b3d9940"
+    },
+    {
+      "index_bytes": 1270375,
+      "index_sha256": "27920db96b9d982cd6e1a264503366c26416cba81de5ef0a9714ec12c34df197",
+      "path": "registries/OBSIDIAN_VAULT_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 1272320,
+      "working_sha256": "7648f4182519ec1716bd99703ee298efad809c0320af59d3b735d47d7ef9ef8f"
+    },
+    {
+      "index_bytes": 807,
+      "index_sha256": "3c0f42397ff63355a60e0b92b2bb71f7178e9827689442b9e1774efb70a5360d",
+      "path": "registries/OBSIDIAN_VAULT_REGISTRY.meta.json",
+      "status": " M",
+      "working_bytes": 807,
+      "working_sha256": "de506634cb4fb1b0795d0cacfac6c9d0fa50bc1de8e1b086735a06cbd5d01443"
+    },
+    {
+      "index_bytes": 618640,
+      "index_sha256": "2eb3065744340cca97d4251a695d1cd7c06f5c50d8aa10e1f3ddf63ad2329e01",
+      "path": "registries/RESEARCH_TASK_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 619133,
+      "working_sha256": "e1e4f31d3a3bcb4e96169ffaa12b9f0b13be2ff31bb4844f71d4afb9e1bad5aa"
+    },
+    {
+      "index_bytes": 3299023,
+      "index_sha256": "c997ce56af8718bf4c3a10a5e9d890079da6a18a9b43ac0d307ec4aa773a689b",
+      "path": "registries/ROLE_EXECUTION_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 3301079,
+      "working_sha256": "72a87d0eecc2a552cbd836ef38dc289ec8dd7f7ece8db03d7df4318f484d76cb"
+    },
+    {
+      "index_bytes": 494454,
+      "index_sha256": "0ded2fc682796a3c311e6838bdcc198dfdd8753151e66ccd37a1eb38660e3b3a",
+      "path": "registries/TEX_SOURCE_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 495357,
+      "working_sha256": "657cf3e81137ff9f4011718bc8922b8516a06f86a420a765f27f4855b8a88dee"
+    },
+    {
+      "index_bytes": 1023872,
+      "index_sha256": "e77588621c48fc6ff03327f70fc1d0f5eee86e8870c89947548a1907cd8de2b8",
+      "path": "registries/WIKI_ARTIFACT_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 1025483,
+      "working_sha256": "3142109f509cdcda3e09371a37346199d4d8bef9ec7ded9f911db526bbc0420b"
+    },
+    {
+      "index_bytes": 691,
+      "index_sha256": "a3a47e05b7f287b0b3bcec3cf82061b06d2ee833243d9eea85ed4dbc05351af5",
+      "path": "registries/WIKI_ARTIFACT_REGISTRY.meta.json",
+      "status": " M",
+      "working_bytes": 691,
+      "working_sha256": "683da27a479b8c506ddb8d3939320bd53aa43e9ae887045bffa46280689eb7f7"
+    },
+    {
+      "index_bytes": 42382,
+      "index_sha256": "f04fc7b0aec44bbbcaaa231b04fe5ac1a3b5aec2843e0b90b407285ce70894c5",
+      "path": "research_control/current_frontier.md",
+      "status": " M",
+      "working_bytes": 43458,
+      "working_sha256": "a4a7005593446427901d707122d4c4c50b08057d8ef3d2a9d466ebf31a137d91"
+    },
+    {
+      "index_bytes": 113598,
+      "index_sha256": "9d5b763a9453876d751c87888050433b86186f2e05bb0037d7eca7ca6ce2099b",
+      "path": "research_control/design/v22_recommendation_backlog.yaml",
+      "status": " M",
+      "working_bytes": 114196,
+      "working_sha256": "d4a3968e6844e260e2cd577b89b01d517a82876fc101b2073103e7986d493b22"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/handoffs/handoff-0996.md",
+      "status": "??",
+      "working_bytes": 3238,
+      "working_sha256": "ea718c8e6c8c841ad1b0dbf929a986db0fcb52c844f5cafbfbbc630942a9733e"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/handoffs/handoff-0996.yaml",
+      "status": "??",
+      "working_bytes": 15760,
+      "working_sha256": "1d92ae1b5e42630069dd04af7c72cb0eeb0d5cb8bf4884f17f4cdd0b0ce2a674"
+    },
+    {
+      "index_bytes": 891131,
+      "index_sha256": "336032278edd8d4ced25b95a388b9c9226171ed15241770b9c24d9922a6b6fd4",
+      "path": "research_control/program_state.yaml",
+      "status": " M",
+      "working_bytes": 898857,
+      "working_sha256": "5949b05a25c87ac5daad99437e6f58eb76266ebb93047d1182256507e52ad4e9"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/00_TASK.yaml",
+      "status": "??",
+      "working_bytes": 7367,
+      "working_sha256": "4ae68095712daa222f0b73ad024458aa834614efa2371bc79a2440ca914bdb34"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/DDR-20260809-026.md",
+      "status": "??",
+      "working_bytes": 6115,
+      "working_sha256": "216dfc3c2d2664b0c3af5843791ebf74e840ee2a43ec85c1fb53c4570fd6addb"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/child_phys_math_p4_t02_b2_populated_instance_audit.yaml",
+      "status": "??",
+      "working_bytes": 2160,
+      "working_sha256": "37b944c10d6787bfcce4a052a23115ba4fe2ed4d021b4eafbaea6269ad453da3"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/child_phys_phil_p4_t02_b2_populated_instance_audit.yaml",
+      "status": "??",
+      "working_bytes": 1899,
+      "working_sha256": "aa1d92f45b7535d630c6316088893f6cd22145f133d2eaf7ca51d73b46dd3db6"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/parent_conflict_review_p4_t02_b2_populated_instance_audit.yaml",
+      "status": "??",
+      "working_bytes": 1629,
+      "working_sha256": "e9690cd5a012111cb27cb73b53ebc983ac11b1c09526549ce5836c8b77f7f833"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/parent_fusion_notes_p4_t02_b2_populated_instance_audit.md",
+      "status": "??",
+      "working_bytes": 1957,
+      "working_sha256": "5fb075ba9d67bf1d1e4abbe794acb8839101b1ac5d9de4a4cb0dfc43d74de85c"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_operational_interface_obstruction_v1.yaml",
+      "status": "??",
+      "working_bytes": 1533,
+      "working_sha256": "5334e01aaacfde9839ef5ccf16654155ab8ad0eca0fc2ee2f306b861dbc9b008"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_audit_compact_receipt.json",
+      "status": "??",
+      "working_bytes": 524,
+      "working_sha256": "15612099504dbe40bb632085a7307ca650fbbfb8db8042d808f952d170a3772c"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_audit_disposition_v1.yaml",
+      "status": "??",
+      "working_bytes": 3417,
+      "working_sha256": "5bc10f3bb42506a7e17a356152af1b66685fcb36a694d3a014a1c53aeab9b8b4"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_audit_latex_compile_receipt.json",
+      "status": "??",
+      "working_bytes": 2161,
+      "working_sha256": "c1e6d65e8458fb392cc9a39c6d23361aab7df7805a985f9f348cb2e52a7d85d9"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_audit_matrix_v1.yaml",
+      "status": "??",
+      "working_bytes": 5209,
+      "working_sha256": "c15224b8bbb7adbdd9f8841990481fcd371e31fec61a6872d94d8a12aa448a08"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_audit_model.py",
+      "status": "??",
+      "working_bytes": 4747,
+      "working_sha256": "27c12967db0b553174a2e1b29a5f43eb06bafb0dee83e4ae414ac4b367c18146"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_audit_validation.json",
+      "status": "??",
+      "working_bytes": 5707,
+      "working_sha256": "cc47831ffa49fb7ed0fca35a7937d3ef3af3fa4fe59b3740fb1d812f11a6b26f"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.tex",
+      "status": "??",
+      "working_bytes": 19707,
+      "working_sha256": "8404fc7bd3586c353155cdce00bbede9e107ed4b38231b69953f4242bc5d90f0"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_sector_split_and_presentation_countermodels_v1.yaml",
+      "status": "??",
+      "working_bytes": 2721,
+      "working_sha256": "118fed7897bf2650df14546e902aaa185f9cb27720ccd7e6ecb975263aab7dff"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/artifacts/validate_v22_p4_t02_b2_populated_instance_audit.py",
+      "status": "??",
+      "working_bytes": 15153,
+      "working_sha256": "a0e5757d775f8a6965f0c3e241dd749bd50c130593c7cb87f66c10ec58ea145c"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/documentation_impact.yaml",
+      "status": "??",
+      "working_bytes": 10403,
+      "working_sha256": "eb20c378a79258c607065ece6eae4d57117c3d5a0a6a2288df72bc92a15fba14"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/jobs/AJ-RT-20260809-026-001.yaml",
+      "status": "??",
+      "working_bytes": 26139,
+      "working_sha256": "d6a52a21630348c8a6e85b479541e1f05ba4be0e4dfaf49a4baf23cec4c69381"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/jobs/completions/AJC-AJ-RT-20260809-026-001.yaml",
+      "status": "??",
+      "working_bytes": 36558,
+      "working_sha256": "0277ebaecf44e169adc43c1de26d4dc2e6da7cccc9bbf3a2081c888d4d58ad4e"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-026/roles/smuggling-auditor@0.2.0--RT-20260809-026.yaml",
+      "status": "??",
+      "working_bytes": 2675,
+      "working_sha256": "8e6992890626a8c39661884db6060bd3c64f930f5f9bba91dcfe36d2fa0e6bc2"
+    },
+    {
+      "index_bytes": 977824,
+      "index_sha256": "d3b9395d73ae4283113da9254275226cd3e583d40ec9af8c4eec9c3d4fa35e80",
+      "path": "research_control/tasks/TASK_INDEX.csv",
+      "status": " M",
+      "working_bytes": 978750,
+      "working_sha256": "6038821284695cc3106b29b37e176bcf467cb6b9e08b0405e607da21752c782f"
+    },
+    {
+      "index_bytes": 1016937,
+      "index_sha256": "c8577a59ed02f03d326cd0addcb68cbd637294634b611e4a8e90f8052494bd4b",
+      "path": "research_control/tasks/TASK_INDEX.md",
+      "status": " M",
+      "working_bytes": 1017863,
+      "working_sha256": "d6c5a29f1eb74c8fe357d9ccda2258ea188523a3416264fc7ee4d331cfcea3b8"
+    },
+    {
+      "index_bytes": 407477,
+      "index_sha256": "41cd39c7c11359d6ff743aef575fcdf0486bd6e41649a009e689addf7109931e",
+      "path": "wiki/indexes/by-authority-status.md",
+      "status": " M",
+      "working_bytes": 408097,
+      "working_sha256": "195e8bb6c850508319ae18ebf8c9bba2a8fa8e9ff59cf6bc6de24f0442bbd901"
+    },
+    {
+      "index_bytes": 407348,
+      "index_sha256": "028c825f117339034cd48b69a0f726f82065a5715f86b41c3940d128f0d8a787",
+      "path": "wiki/indexes/by-format.md",
+      "status": " M",
+      "working_bytes": 407968,
+      "working_sha256": "5a99a16f416db240a0d6eed7a3e42df0ee24ebf63ba38cd0bb8a446c2756f55e"
+    },
+    {
+      "index_bytes": 99949,
+      "index_sha256": "4187df6600a66c3e4f89ecf7ba153bc5f51b9379b859c981efa9ce6c852e7659",
+      "path": "wiki/indexes/by-ontology-promotion-status.md",
+      "status": " M",
+      "working_bytes": 100116,
+      "working_sha256": "5db33a1d26083af1ca22a97a7f5894e76822abdb1393aa2ee862ea2c61ae28fd"
+    },
+    {
+      "index_bytes": 407675,
+      "index_sha256": "690c48ffd4519c648eac8128f1f0753d3f6de1b871a7678ed705f43f81da45a8",
+      "path": "wiki/indexes/by-owner-skill.md",
+      "status": " M",
+      "working_bytes": 408295,
+      "working_sha256": "4d7d60c0746ad9c1e106846de1da140b4d402a3bfa6bd19eeecc223f82c86cf6"
+    },
+    {
+      "index_bytes": 11089,
+      "index_sha256": "a8aa4b73a607f6b02a4f373457da74019d59479c0a79305b222e883886583a3f",
+      "path": "wiki/indexes/compact_current_frontier_v16.md",
+      "status": " M",
+      "working_bytes": 11179,
+      "working_sha256": "ff1be4206b3fe46afe85eae6911f288ed87f082fae82e745effbac4e40a85f09"
+    },
+    {
+      "index_bytes": 213917,
+      "index_sha256": "f5de5dd02a4761e1ffafba135e73d1ee37f566d5ad109ef7ce1c1106fd620ff3",
+      "path": "wiki/indexes/documentation-by-authority-status.md",
+      "status": " M",
+      "working_bytes": 214235,
+      "working_sha256": "eebe3a242792c81fa65d5f1b636c5e91bdbf2ac4ccddee06d9896583621e02b7"
+    },
+    {
+      "index_bytes": 213785,
+      "index_sha256": "43aa8050b22eb471571b9c704e444abd59fac81869e8a8a5940713330b161924",
+      "path": "wiki/indexes/documentation-by-format.md",
+      "status": " M",
+      "working_bytes": 214103,
+      "working_sha256": "9cecad998302f7c62fe19e73085503c7ad4da669f2941a1829c360baa8e46593"
+    },
+    {
+      "index_bytes": 214130,
+      "index_sha256": "c4ead7de4b1c4b083c007a5b1c022410389c934de1bf88135033e8fabf84b495",
+      "path": "wiki/indexes/documentation-by-owner-skill.md",
+      "status": " M",
+      "working_bytes": 214448,
+      "working_sha256": "f964faff4322872bbd9081b70c47fca0c832c61a7f6783dbd1ac2839764fd2e6"
+    },
+    {
+      "index_bytes": 1016937,
+      "index_sha256": "c8577a59ed02f03d326cd0addcb68cbd637294634b611e4a8e90f8052494bd4b",
+      "path": "wiki/indexes/research_control_task_index.md",
+      "status": " M",
+      "working_bytes": 1017863,
+      "working_sha256": "d6c5a29f1eb74c8fe357d9ccda2258ea188523a3416264fc7ee4d331cfcea3b8"
+    },
+    {
+      "index_bytes": 21932,
+      "index_sha256": "e52291b4af92fa2eca63446416a03bf664ab1aab7581f43a37d2d55f9d5fa669",
+      "path": "wiki/indexes/research_dependency_graph.md",
+      "status": " M",
+      "working_bytes": 22007,
+      "working_sha256": "4d0ffd44998ae953cd851d69795bc4e5510bb98a361a1059ae4964beda2f618e"
+    },
+    {
+      "index_bytes": 679,
+      "index_sha256": "72c63834ac28b8a1ec7dcbc4808f46bdd0606424150d80e7d49bae1c3bdf40a3",
+      "path": "wiki/markdown/md-research-control-current-frontier.md",
+      "status": " M",
+      "working_bytes": 679,
+      "working_sha256": "e1319dcef87cd24db6c41cd6d941b562675edac9d96b8644aadfd1d7cb47678a"
+    },
+    {
+      "index_bytes": 919,
+      "index_sha256": "ce706b5ce27f963f13de0c68de68bc7272cf5be787b40a82841a7ed1e9a9c2a7",
+      "path": "wiki/markdown/md-research-control-task-index.md",
+      "status": " M",
+      "working_bytes": 919,
+      "working_sha256": "bce2b8cff3cb41b76ef85c0277b862b47f6cc84d8fd390f686e233f6b6271a86"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "wiki/markdown/md-v22-p4-t02-b2-parent-fusion-populated-instance-audit-v1.md",
+      "status": "??",
+      "working_bytes": 987,
+      "working_sha256": "bd2f88c9d3cb8e39f6ed835cb73cbe5b8c3c93f64dceeef3bbde4d7f8f5dc921"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "wiki/tex/tex-v22-p4-t02-b2-populated-instance-smuggling-audit-v1.md",
+      "status": "??",
+      "working_bytes": 1149,
+      "working_sha256": "e668a208fd383bb4e8ccf5b4679529d95c7162396af0307975f732a5f9fbaedc"
+    }
+  ],
+  "source_head": "8348a5412c1defd80e028c9efbb5efc2e7498913",
+  "source_tree": "d466c8e253e112293f3d5e9dc4fa0c485899bf61"
+}

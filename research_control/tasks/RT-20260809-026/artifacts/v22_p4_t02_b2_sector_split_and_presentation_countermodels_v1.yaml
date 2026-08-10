@@ -1,0 +1,62 @@
+schema_id: "v22_p4_t02_b2_sector_split_and_presentation_countermodels_v1"
+authority: "science_draft"
+task_id: "RT-20260809-026"
+job_id: "AJ-RT-20260809-026-001"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+countermodels:
+  - countermodel_id: "CM-V22-P4T02-B2-PRESENTATION-RESCALE-001"
+    finding_id: "F2-PRESENTATION-NORM"
+    scope: "declared componentwise C1 sup neighborhood"
+    source_patch: "U=(-1,1)^4"
+    original_coordinates: "xi"
+    reparametrization:
+      equation: "eta^0=2 xi^0; eta^i=xi^i for i=1,2,3"
+      lawful_as_smooth_source_reparametrization: true
+    perturbation:
+      original: "delta_tau=a partial_xi0"
+      transformed: "delta_tau=2a partial_eta0"
+      witness_value: "a=3/8"
+    result:
+      original_component_threshold: "3/8 < 1/2"
+      transformed_component_threshold: "3/4 > 1/2"
+      conclusion: "Membership in the declared neighborhood is presentation-dependent."
+    target_geometry_used: false
+    global_no_go_claimed: false
+  - countermodel_id: "CM-V22-P4T02-B2-SECTOR-SPLIT-001"
+    finding_id: "F4-SECTOR-SPLIT-VARIATION"
+    scope: "robust common radical principal ideal"
+    parameter: "0 < |epsilon| < 1/2"
+    sector_fields:
+      R: "tau_R=partial_0+epsilon partial_1"
+      S: "tau_S=partial_0"
+      D: "tau_D=partial_0-epsilon partial_1"
+    regularity:
+      smooth: true
+      nowhere_zero: true
+      arbitrarily_close_to_shared_tau: true
+    radical_principal_ideals:
+      R: "<k_0+epsilon k_1>"
+      S: "<k_0>"
+      D: "<k_0-epsilon k_1>"
+    nonassociation_witness: "Coefficient comparison shows no two generators differ by a nonzero scalar unit when epsilon is nonzero."
+    result:
+      commonity: false
+      conclusion: "The diagonal shared-tau variation class preserves the desired commonity by construction and excludes a decisive arbitrarily small stress."
+    target_geometry_used: false
+    global_no_go_claimed: false
+  - countermodel_id: "CM-V22-P4T02-B2-ZERO-ORDER-INDEPENDENCE-001"
+    finding_id: "F3-SHARED-LEADING-PRELOAD"
+    scope: "claimed P7 carrier contribution to characteristic commonity"
+    family: "E_s=tau(u_s)+Z_s(u_s), with Z_s any zero-order operator"
+    principal_symbol: "sigma_s(k)=k(tau) I"
+    radical_ideal: "<k(tau)>"
+    result:
+      depends_on_zero_order_carrier: false
+      conclusion: "The common ideal follows entirely from the shared leading field, not from M_B or the finite P7 chain."
+    target_geometry_used: false
+    global_no_go_claimed: false
+repair_scope:
+  materially_distinct_route_available: true
+  route_strategy_id: "repair_v22_p4_t02_b2_populated_descriptor_source_intrinsic_interfaces_v1"
+  freeze_now: false
+  future_scoped_freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"

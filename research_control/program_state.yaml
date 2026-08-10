@@ -1,12 +1,213 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260809-025"
-active_agent_job_id: "AJ-RT-20260809-025-001"
-latest_handoff_id: "handoff-0995"
-current_status: "rt024_two_eof_repaired_populated_instance_audit_selected_fresh_checkpoint_pending"
-claim_boundary_summary: "RT-20260809-025 seals the consumed RT024 checkpoint and exact 78-path inherited transaction, observes both one-byte EOF postimages with zero drift across the other 76 paths, synchronizes cumulative documentation coverage, and preserves all nine protected RT023 scientific artifact hashes. RT024 was not replayed. The descriptor remains incomplete; readiness remains (1,1,1,1,0,0); B2 remains inactive; P4-T03 remains locked; and Distance-to-GR is unchanged."
+active_task_id: "RT-20260809-027"
+active_agent_job_id: "AJ-RT-20260809-027-001"
+latest_handoff_id: "handoff-0997"
+current_status: "v22_p4_t02_b2_ten_eof_repaired_source_intrinsic_interface_repair_selected_fresh_checkpoint_pending"
+claim_boundary_summary: "RT-20260809-027 is an exact project-system recovery of the consumed RT026 checkpoint. Ten terminal blank-line bytes were removed under a sealed 63-path preimage with zero non-target drift and twelve protected RT026 hashes exact at the repair boundary; the RT026 documentation receipt was then extended only for cumulative RT027 path coverage, while the other eleven protected artifacts remain exact. The scientific verdict remains repair_required_no_instance_credit; the five source-interface defects remain open, B2 remains inactive, P4-T03 remains locked, and Distance-to-GR is unchanged."
 next_plan_task_id: "P4-T02"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-025-001. After it commits, execute exactly one fresh V22 P4-T02 populated-instance packet under smuggling-auditor@0.2.0 to audit U, tau, the source norm, lift and sampler, affine coefficients, quotient groupoids, compatibility relation, principal generator, operational bridge, and explicit cocycle; do not evaluate adequacy, activate B2, execute P4-T03, or take any protected or external action."
+next_recommended_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-027-001. After it commits, execute exactly one fresh V22 P4-T02 Candidate Constructor ontology-law packet with Refuter support to repair all-sector typing, source-intrinsic topology or a delimited presentation group, independent sector leading-coefficient selection, a sector-split variation stress, and a typed operational bridge B_s, or return one precise scoped obstruction. Do not evaluate D7 adequacy, activate B2, execute P4-T03, or take any protected or external action."
+
+v22_p4_t02_b2_ten_eof_checkpoint_recovery:
+  task_id: "RT-20260809-027"
+  parent_task_id: "RT-20260809-026"
+  parent_handoff_id: "handoff-0996"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "B2_SOURCE_INTRINSIC_INTERFACE_REPAIR"
+  claim_boundary_id: "CB-PS-V22-P4-T02-B2-TEN-EOF-CHECKPOINT-RECOVERY-001"
+  status: "PASS_V22_P4_T02_B2_TEN_EOF_CHECKPOINT_RECOVERY_CONSTRUCTOR_SELECTED"
+  work_item_status: "rt026_ten_eof_repaired_source_intrinsic_interface_repair_pending_fresh_checkpoint"
+  route_label: "project-system-checkpoint-recovery"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_supporting_perspective: "refuter@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "repair_v22_p4_t02_b2_ten_eof_blank_lines_and_checkpoint_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system checkpoint eligibility only; no scientific burden advances."
+  source_head: "8348a5412c1defd80e028c9efbb5efc2e7498913"
+  source_tree: "d466c8e253e112293f3d5e9dc4fa0c485899bf61"
+  source_handoff_id: "handoff-0996"
+  source_handoff_path: "research_control/handoffs/handoff-0996.yaml"
+  source_handoff_sha256: "1d92ae1b5e42630069dd04af7c72cb0eeb0d5cb8bf4884f17f4cdd0b0ce2a674"
+  source_completion_path: "research_control/tasks/RT-20260809-026/jobs/completions/AJC-AJ-RT-20260809-026-001.yaml"
+  source_completion_sha256: "0277ebaecf44e169adc43c1de26d4dc2e6da7cccc9bbf3a2081c888d4d58ad4e"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  inherited_manifest_path: "research_control/tasks/RT-20260809-027/artifacts/inherited_dirty_manifest_v22_p4_t02_b2_ten_eof_checkpoint_recovery.json"
+  inherited_manifest_sha256: "4e400c87485b4b843218e3ed7a67057fbe86f3c8c14582bc89ece8c21e945806"
+  blocker_path: "research_control/tasks/RT-20260809-027/artifacts/v22_p4_t02_b2_ten_eof_checkpoint_blocker.yaml"
+  blocker_sha256: "76138b25d3fde9453766e11d7c4031425c31e2a7240fd9dcd71c247bcaf988ef"
+  repair_boundary_receipt_path: "research_control/tasks/RT-20260809-027/artifacts/v22_p4_t02_b2_ten_eof_repair_boundary_receipt.json"
+  repair_boundary_receipt_sha256: "6707f7dede7424eb82f7a0e43ce964d0806723cc9daf93e7ffd10f4debddce84"
+  failed_checkpoint_canonical_run_id: "RUN-CHECKPOINT-7742e8345c578971"
+  failed_checkpoint_receipt_count: 1
+  failed_checkpoint_replayed: false
+  inherited_path_count: 63
+  target_path_count: 10
+  non_target_path_count: 53
+  failed_finding_count: 10
+  corrected_finding_count: 10
+  protected_boundary_hash_count: 12
+  protected_final_immutable_hash_count: 11
+  task_path: "research_control/tasks/RT-20260809-027/00_TASK.yaml"
+  task_sha256: "994df06405e649408af404964e8301a0220429ff64aecdf1fc00fe38649aa6ed"
+  agent_job_id: "AJ-RT-20260809-027-001"
+  agent_job_sha256: "bf936e077173c2d1bc7de6578c249c7be8ac413e9c9e17b5f928e037bfa575f4"
+  decision_id: "DDR-20260809-027"
+  decision_sha256: "e2a082957efad97095010808b2200e1f9d59bf26bc47f8353d0ff3fad839d723"
+  execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260809-027"
+  execution_role_sha256: "8bcb2cb8e02e80a982200d4f46f19fa1fa1a3465770e1e4a2ac53d62ddc5082a"
+  completion_path: "research_control/tasks/RT-20260809-027/jobs/completions/AJC-AJ-RT-20260809-027-001.yaml"
+  completion_sha256: "deacda159451e1a8b2f86f0bd71e3f28a018386c1599ff181e6d8da902eea42d"
+  handoff_id: "handoff-0997"
+  handoff_path: "research_control/handoffs/handoff-0997.yaml"
+  handoff_sha256: "13f4e4a8c62510dbaea44600ba5257a91e264f2beb3a133ce609bf19e8057a5f"
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_fallback_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  ontology_adoption_count: 0
+  scientific_claims_changed: false
+  distance_to_gr_ledger_unchanged: true
+  generated_derivatives_non_authority: true
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_supporting_perspective: "refuter@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "repair_v22_p4_t02_b2_populated_descriptor_source_intrinsic_interfaces_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+v22_p4_t02_b2_populated_instance_smuggling_audit:
+  task_id: "RT-20260809-026"
+  parent_task_id: "RT-20260809-025"
+  parent_handoff_id: "handoff-0995"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "B2_SOURCE_INTRINSIC_INTERFACE_REPAIR"
+  claim_boundary_id: "CB-V22-P4-T02-B2-POPULATED-INSTANCE-AUDIT-001"
+  status: "PASS_V22_P4_T02_B2_POPULATED_INSTANCE_REPAIR_REQUIRED_CONSTRUCTOR_SELECTED"
+  work_item_status: "b2_populated_instance_audit_repair_required_no_instance_credit"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  selected_role_family: "smuggling-auditor@0.2.0"
+  supporting_perspective: "refuter@0.2.0"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_supporting_perspective: "refuter@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "repair_v22_p4_t02_b2_populated_descriptor_source_intrinsic_interfaces_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Repair the five populated-instance source-interface defects or return one precise scoped obstruction."
+  source_head: "8348a5412c1defd80e028c9efbb5efc2e7498913"
+  source_tree: "d466c8e253e112293f3d5e9dc4fa0c485899bf61"
+  prior_checkpoint_job_id: "AJ-RT-20260809-025-001"
+  prior_checkpoint_commit: "8348a5412c1defd80e028c9efbb5efc2e7498913"
+  source_handoff_id: "handoff-0995"
+  source_handoff_path: "research_control/handoffs/handoff-0995.yaml"
+  source_handoff_sha256: "14ecd144792ed6292b4b17407be243e023897e1aa09943af92ae39891444039f"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  manuscript_path: "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.tex"
+  manuscript_sha256: "8404fc7bd3586c353155cdce00bbede9e107ed4b38231b69953f4242bc5d90f0"
+  component_matrix_path: "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_audit_matrix_v1.yaml"
+  component_matrix_sha256: "220cf896fbc8fe976c3a2fec357a420247bcf1042808c820683ea6a1161ee95c"
+  countermodels_path: "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_sector_split_and_presentation_countermodels_v1.yaml"
+  countermodels_sha256: "c432cb666385de776e438a09a027ef168f58ebc94bdd992e44f473ae191dd051"
+  operational_obstruction_path: "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_operational_interface_obstruction_v1.yaml"
+  operational_obstruction_sha256: "332d44f0b067c09a9a579c467bfeb8e36583e35d14a4f7aae10c023ac9c35642"
+  disposition_path: "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_audit_disposition_v1.yaml"
+  disposition_sha256: "5e9c2e48c5744f9c764c26b949cd09f4ecab6154d257e9551b1a6a0065dbde89"
+  support_model_path: "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_audit_model.py"
+  support_model_sha256: "1d6d73df17185b4f2b9b271031f03112533cc4c72e4410cc69e9fe1a3c80e1dd"
+  parent_fusion_path: "research_control/tasks/RT-20260809-026/artifacts/parent_fusion_notes_p4_t02_b2_populated_instance_audit.md"
+  parent_fusion_sha256: "b6dba96db8f14e17e56753504653b96707400d5e39ffe24c70ef7c12b3b1cbee"
+  latex_compile_receipt_path: "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_audit_latex_compile_receipt.json"
+  latex_compile_receipt_sha256: "c1e6d65e8458fb392cc9a39c6d23361aab7df7805a985f9f348cb2e52a7d85d9"
+  focused_validation_path: "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_audit_validation.json"
+  compact_receipt_path: "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_audit_compact_receipt.json"
+  task_sha256: "4ae68095712daa222f0b73ad024458aa834614efa2371bc79a2440ca914bdb34"
+  agent_job_id: "AJ-RT-20260809-026-001"
+  agent_job_sha256: "d6a52a21630348c8a6e85b479541e1f05ba4be0e4dfaf49a4baf23cec4c69381"
+  decision_id: "DDR-20260809-026"
+  decision_sha256: "216dfc3c2d2664b0c3af5843791ebf74e840ee2a43ec85c1fb53c4570fd6addb"
+  execution_role_ref: "smuggling-auditor@0.2.0--RT-20260809-026"
+  execution_role_sha256: "8e6992890626a8c39661884db6060bd3c64f930f5f9bba91dcfe36d2fa0e6bc2"
+  completion_path: "research_control/tasks/RT-20260809-026/jobs/completions/AJC-AJ-RT-20260809-026-001.yaml"
+  completion_sha256: "0277ebaecf44e169adc43c1de26d4dc2e6da7cccc9bbf3a2081c888d4d58ad4e"
+  handoff_id: "handoff-0996"
+  handoff_path: "research_control/handoffs/handoff-0996.yaml"
+  handoff_sha256: "1d92ae1b5e42630069dd04af7c72cb0eeb0d5cb8bf4884f17f4cdd0b0ce2a674"
+  selected_candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  obstruction_id: "OBST-V22-P4T02-B2-POPULATED-INSTANCE-001"
+  exact_verdict: "repair_required_no_instance_credit"
+  source_extension_classification: "new_ontology_primitives_with_repairable_goal_property_preload"
+  populated_component_count: 10
+  weak_factorization_pass_count: 10
+  anchored_pass_count: 4
+  anchored_conditional_count: 1
+  anchored_repair_required_count: 5
+  direct_target_import_count: 0
+  direct_authority_import_count: 0
+  descriptor_specification_complete: true
+  descriptor_component_population_complete: true
+  descriptor_instance_complete: false
+  populated_instance_audit_complete: true
+  global_no_go_claimed: false
+  readiness_vector:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 0
+    - 0
+  activation_value: false
+  adequacy_reevaluated: false
+  latex_page_count: 8
+  latex_final_overfull_warning_count: 0
+  pdf_pages_visually_reviewed: 8
+  p4_t02_b1_branch_executed: true
+  p4_t02_b2_selector_executed: true
+  p4_t02_b2_descriptor_formalization_executed: true
+  p4_t02_b2_descriptor_schema_audit_executed: true
+  p4_t02_b2_descriptor_construction_attempt_executed: true
+  p4_t02_b2_populated_instance_audit_executed: true
+  p4_t02_complete_for_plan_dependency: false
+  b1_primary_terminated: true
+  b2_fallback_activated: false
+  p4_t03_unlocked: false
+  ontology_adoption_count: 0
+  distance_to_gr_ledger_unchanged: true
+  generated_derivatives_non_authority: true
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_supporting_perspective: "refuter@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "repair_v22_p4_t02_b2_populated_descriptor_source_intrinsic_interfaces_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 v22_p4_t02_b2_two_eof_checkpoint_recovery:
   task_id: "RT-20260809-025"
@@ -15662,9 +15863,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260809-023"
-  latest_research_handoff_id: "handoff-0993"
-  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-023-001. After it commits, execute exactly one fresh V22 P4-T02 populated-instance packet under smuggling-auditor@0.2.0 without adequacy, activation, P4-T03, protected, or external action."
+  latest_research_task_id: "RT-20260809-027"
+  latest_research_handoff_id: "handoff-0997"
+  latest_research_next_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-027-001. After it commits, execute exactly one fresh V22 P4-T02 Candidate Constructor ontology-law packet with Refuter support to repair all-sector typing, source-intrinsic topology or a delimited presentation group, independent sector leading-coefficient selection, a sector-split variation stress, and a typed operational bridge B_s, or return one precise scoped obstruction. Do not evaluate D7 adequacy, activate B2, execute P4-T03, or take any protected or external action."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
