@@ -1,0 +1,114 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260810-012"
+job_id: "AJ-RT-20260810-012-001"
+review_id: "PCR-RT012-P4T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-REFUTER-STRESS"
+status: "completed"
+created_at: "2026-08-10T21:12:14Z"
+parent_claim_boundary_id: "CB-V22-P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-REFUTER-STRESS-001"
+
+child_inputs:
+  - execution_unit_id: "child_phys_math"
+    perspective: "physicist_mathematician"
+    path: "research_control/tasks/RT-20260810-012/artifacts/child_phys_math_p4_t02_b2_common_character_independent_variation_refuter_stress.yaml"
+    sha256: "fe8d34efdeb42fe55515506036aa5b4bdb99a3d55f4ed2636551cd9defa39b6d"
+    decisive_result: "scoped_obstruction"
+    candidate_local_freeze: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    selected_next_role: "theoretical-continuation-selector@0.1.0"
+    next_packet_executed: false
+  - execution_unit_id: "child_phys_phil"
+    perspective: "physicist_philosopher"
+    path: "research_control/tasks/RT-20260810-012/artifacts/child_phys_phil_p4_t02_b2_common_character_independent_variation_refuter_stress.yaml"
+    sha256: "532b217e7d13cb3b4a1af4ae499b5f68fcc0d56c9721eb2f0b92d8812e12475a"
+    decisive_result: "scoped_obstruction"
+    candidate_local_freeze: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    selected_next_role: "theoretical-continuation-selector@0.1.0"
+    next_packet_executed: false
+
+shared_consensus:
+  exact_candidate_held_fixed: true
+  rt011_source_pure_as_written_preserved: true
+  fixed_conditional_character_algebra_preserved: true
+  decisive_result: "scoped_obstruction"
+  exact_obstruction_id: "OB-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION-001"
+  failed_premise: "The RT010 roots protect equal nontrivial sector holonomy under the independently variable target-free source families required by P4-T02."
+  arbitrarily_small_h1_countermodel_present: true
+  admitted_t_minus_half_collapse_present: true
+  anchor_repair_possible: false
+  bare_point_or_frame_selector_present: false
+  rank_alone_protects_character_relevance: false
+  inverse_or_cocycle_defect_found: false
+  current_ontology_derivation_established: false
+  physical_or_empirical_meaning_established: false
+  all_p7_universality_established: false
+  distance_to_gr_changed: false
+  inherited_freezes_preserved: true
+  active_candidate_local_freeze: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  selected_next_packet: "PKT-V22-P4T02-B2-POST-COMMON-CHARACTER-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  selected_next_role: "theoretical-continuation-selector@0.1.0"
+  selected_next_packet_executed: false
+
+unique_child_contributions:
+  physicist_mathematician:
+    - "In standard log-holonomy coordinates, the squared distance from (h+epsilon,h,h) to the common diagonal is 2 epsilon^2/3; in the four-class space it is 3 epsilon^2/4; fixed-chi distance is absolute epsilon."
+    - "For every r in Row(B), m+r agrees with m on ker(B), so source-root behavior identifies only the covector class modulo Row(B), not an off-root representative."
+    - "The exact B_s family preserves balance rank, gauge, and quotient dimension while the induced m relevance vanishes at s=1."
+    - "Malformed zero-transition and nonadditive controls fail closed; every admitted countermodel retains inverse and cocycle laws."
+  physicist_philosopher:
+    - "The nontrivial part of the admitted positive orbit is disconnected: (-2,-1/2) union (-1/2,1); excluding the identity-character crossing requires a new domain law."
+    - "The per-displayed-edge ell=1 recipe is not subdivision invariant unless ell is retained and transported as added source decoration or a new normalization law is supplied."
+    - "Fixed-equation validity, source purity, enlarged-family robustness, and physical or empirical interpretation form four logically independent levels."
+    - "A formal quotient or representation class records deleted distinctions but does not establish physical gauge equivalence, empirical indistinguishability, or ontology."
+
+branch_enumeration_reconciliation:
+  issue_detected: true
+  issue_kind: "compatible_atomic_grouping"
+  handoff_family_count: 8
+  math_child_grouping: "Eight required families, with inverse and cocycle combined and inherited-freeze controls recorded outside the family list."
+  philosopher_child_grouping: "Nine atomic records, with point/frame nonselection and inherited-freeze controls each explicit."
+  parent_matrix_grouping: "Nine atomic records; point/frame nonselection is explicit, inverse/cocycle are combined, and inherited-freeze controls are explicit."
+  compatibility_proof: "All three groupings cover the same completion-contract branches. The count changes only when a compound family or frozen-route control is split into a separate row."
+  fused_language: "Eight handoff-selected stress families, represented by nine atomic parent-matrix rows."
+  child_revision_required: false
+
+parent_draft_hash_reconciliation:
+  issue_detected: false
+  child_math_reviewed_parent_tex_sha256: "b02853a8033c318d02df21c83800f1cda477d8d53a8f760ab662d5d37a5996cb"
+  child_math_reviewed_parent_matrix_sha256: "b050aaafd66184cb75f5db87150885441b44c081513a406abda169346f960bf8"
+  child_math_reviewed_parent_obstruction_sha256: "8620db89fb68a2246fbc6848d248e943ce6c3c9bfc8dcb8eb9abe30906eb12b7"
+  interpretation: "These hashes identify the concurrent parent drafts reviewed by the child. Parent fusion is expected to create later hashes while preserving the reviewed consensus and unique child contributions."
+
+conflict_policy_result:
+  blocking_conflict_detected: false
+  child_verdict_conflict: false
+  next_route_conflict: false
+  claim_boundary_conflict: false
+  exact_math_conflict: false
+  freeze_conflict: false
+  branch_enumeration_issue_resolved: true
+  parent_draft_hash_issue_resolved: true
+  resolution_rounds_used: 0
+  max_resolution_rounds: 2
+  unresolved_blocking_conflict: false
+
+final_parent_verdict: "scoped_obstruction"
+final_parent_classification: "status_boundary_evidence_only"
+final_parent_adoption_status: "blocked_adoption_open_continuation"
+final_parent_freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+final_parent_next_packet: "PKT-V22-P4T02-B2-POST-COMMON-CHARACTER-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+final_parent_next_role: "theoretical-continuation-selector@0.1.0"
+final_parent_next_packet_executed: false
+
+authority_limits:
+  child_agreement_is_proof: false
+  obstruction_is_global_no_go: false
+  obstruction_reverses_source_purity: false
+  obstruction_refutes_fixed_candidate_algebra: false
+  source_law_adopted_or_rejected: false
+  d7_adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  proof_authority: false
+  future_source_extension_impossibility_claimed: false
+  successor_executed: false

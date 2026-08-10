@@ -1,0 +1,291 @@
+schema_id: "v22_p4_t02_b2_common_character_independent_variation_refuter_stress_matrix_v1"
+task_id: "RT-20260810-012"
+job_id: "AJ-RT-20260810-012-001"
+packet_id: "PKT-V22-P4T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-REFUTER-STRESS-V1"
+candidate_id: "CAND-V22-B2-COMMON-CHARACTER-DESCENT-INDEPENDENT-VARIATION-LAW-V1"
+status: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+candidate_held_fixed: true
+predecessor_source_purity_verdict_preserved: true
+decisive_refuter_class: "scoped_obstruction"
+no_fog_check: true
+no_fog_explanation: "The exact fixed candidate remains conditionally consistent and source-pure as written, but it has no source-derived protection law for equal nontrivial sector holonomy under arbitrarily small independent H1 perturbations or throughout its own admitted affine flow."
+
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Stress whether the locally source-pure common-character law and nontrivial variation content survive target-free perturbations or yield a precise scoped obstruction."
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+missing_source_law: "source_derived_protection_of_equal_nontrivial_sector_holonomy_under_admissible_variation"
+adoption_status: "blocked_adoption_open_continuation"
+
+fixed_candidate_invariants:
+  positive_character_identity_inverse_composition: "PASS"
+  sector_representation_identity_inverse_composition: "PASS"
+  cochain_intertwiner_identity: "PASS"
+  anchored_intertwiner_uniqueness_in_fixed_structured_category: "PASS"
+  balance_rank: 2
+  gauge_generator_in_kernel: true
+  quotient_variation_dimension: 1
+  affine_flow_integrable: true
+  fixed_sector_cycle_log_holonomies: "(3*mu,3*mu,3*mu)"
+  source_pure_as_written: true
+  current_ontology_derivation: false
+  physical_or_empirical_interpretation: false
+
+stress_branches:
+  - branch_id: "STRESS-H1-INDEPENDENT-SECTOR-HOLONOMY"
+    variation: "Multiply only rho_R by exp(epsilon*omega), where omega(e_01)=1 and omega vanishes on the other displayed generators."
+    preserved:
+      - "positive one-dimensional representation syntax"
+      - "identity inverse and composition"
+      - "target-free source presentation"
+    exact_result: "For every epsilon not equal to zero, sector cycle log holonomies are (3*mu+epsilon,3*mu,3*mu), so no common character and no fixed-chi descent exist."
+    limiting_result: "Failure occurs for arbitrarily small absolute epsilon."
+    disposition: "SCOPED_OBSTRUCTION"
+  - branch_id: "STRESS-INTERNAL-T-MINUS-HALF-COLLAPSE"
+    variation: "Use the declared affine flow x(t)=x_*+t*v at t=-1/2."
+    preserved:
+      - "positive source-state coordinates"
+      - "balance-law root condition"
+      - "formal descent identity"
+      - "inverse and cocycle identities"
+    exact_result: "x=(3/2,3/2,3/2,3/2), mu=0, and chi=a_s=rho_s=1 for every declared sector and arrow."
+    limiting_result: "The full declared positive interval contains the collapse point, so mu!=0 is not invariant under the admitted flow."
+    disposition: "NONTRIVIALITY_UNPROTECTED"
+  - branch_id: "STRESS-ANCHOR-ERASURE-AND-REANCHORING"
+    variation: "Erase or change pointed anchor and positive frame representatives."
+    preserved:
+      - "cycle holonomy classes"
+      - "conditional existence of intertwiners when holonomies agree"
+    exact_result: "Object coboundary edge shifts telescope to zero around the cycle. Erasure restores two relative positive moduli; reanchoring selects representatives but cannot repair unequal holonomy."
+    disposition: "REPRESENTATIVE_ONLY"
+  - branch_id: "STRESS-SOURCE-PRESENTATION-ENLARGEMENT"
+    variation: "Forget the transported ell, pointed framed decoration, and anchor normalization, or subdivide one displayed edge and reapply ell=+1 per displayed generator."
+    preserved:
+      - "bare oriented cycle"
+      - "oriented line types"
+      - "fixed structured presentation remains valid"
+    exact_result: "The fixed structured presentation transports coherently, but the per-displayed-edge winding recipe changes cycle winding from three to four after one subdivision unless ell is retained as source decoration or a new normalization law is supplied."
+    disposition: "STRUCTURE_RELATIVE_NATURALITY_ONLY"
+  - branch_id: "STRESS-POINT-AND-FRAME-NONSELECTION"
+    variation: "Retain only the undecorated oriented cycle and abstract oriented line types."
+    preserved:
+      - "orientation of the cycle"
+      - "orientation of each abstract line"
+    exact_result: "The transitive C3 cycle action selects no vertex and positive line automorphisms select no nonzero frame; the fixed point and frames remain disclosed preparation data."
+    disposition: "NONSELECTION_RECORDED"
+  - branch_id: "STRESS-ALTERNATIVE-COVECTOR"
+    variation: "Replace m=(1,-1,0,0) by m0=(1,-1,1,-1)."
+    preserved:
+      - "covector source type"
+      - "m0(d)=0"
+      - "acyclic dependency-graph shape"
+    exact_result: "m0 is a row of B and satisfies m0(v)=m0(x_*)=0, so the character is trivial at the base and throughout the v-flow."
+    disposition: "SOURCE_SELECTOR_MISSING"
+  - branch_id: "STRESS-RANK-PRESERVING-BALANCE-FAMILY"
+    variation: "Use B_s with rows m0 and (1-s)r2+s*m for 0<=s<=1."
+    preserved:
+      - "rank(B_s)=2"
+      - "B_s*d=0"
+      - "one-dimensional quotient ker(B_s)/span(d)"
+    exact_result: "The kernel witness w_s has m(w_s)=4(1-s); at s=1 the balance rank remains two while m vanishes on the quotient."
+    disposition: "BALANCE_RANK_INSUFFICIENT"
+  - branch_id: "STRESS-INVERSE-AND-COCYCLE"
+    variation: "Reverse and compose every fixed, perturbed, reanchored, or collapsed path."
+    preserved:
+      - "log weight negation"
+      - "positive reciprocal transition"
+      - "additive log weights"
+      - "multiplicative positive transitions"
+    exact_result: "No inverse or cocycle defect is found; malformed zero-transition or nonadditive controls fail closed, and the obstruction is common-class equality plus nontriviality protection rather than representation syntax."
+    disposition: "SURVIVES"
+  - branch_id: "STRESS-FROZEN-ROUTE-CONTROLS"
+    variation: "Scan premises and formulas for shared tau, fixed Q_ray, midpoint, rank-two response, sign-cell, or desired-response stabilizer replay."
+    preserved:
+      - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    exact_result: "No frozen-route object is reconstructed and neither inherited freeze is reopened."
+    disposition: "PASS_PRESERVED"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT012-PARENT-001"
+    payload_type: "countermodel"
+    name: "Arbitrarily small independent H1 holonomy countermodel family"
+    statement: "rho_R^epsilon=rho_R*exp(epsilon*omega) remains a positive representation for every epsilon but leaves the common-holonomy diagonal for every nonzero epsilon."
+    burden_effect: "obstructs"
+  - payload_id: "NMP-RT012-PARENT-002"
+    payload_type: "theorem"
+    name: "Admitted-flow transition-collapse theorem"
+    statement: "The positive RT010 orbit crosses mu=0 at t=-1/2, where every character, cochain, and sector transition factor is one while formal descent survives."
+    burden_effect: "obstructs"
+  - payload_id: "NMP-RT012-PARENT-003"
+    payload_type: "theorem"
+    name: "Rank-preserving balance-family relevance collapse"
+    statement: "A continuous rank-two gauge-preserving B_s family retains a one-dimensional quotient while m on its quotient witness equals 4(1-s) and vanishes at s=1."
+    burden_effect: "narrows"
+  - payload_id: "NMP-RT012-PARENT-004"
+    payload_type: "lemma"
+    name: "Anchor coboundary holonomy invariance"
+    statement: "Every objectwise reanchor contributes telescoping edge-log shifts with zero cycle sum and therefore cannot repair a nonzero H1 defect."
+    burden_effect: "narrows"
+  - payload_id: "NMP-RT012-PARENT-005"
+    payload_type: "explicit_witness"
+    name: "Alternative-covector selector witness"
+    statement: "m0=(1,-1,1,-1) has the same declared source-covector type and dependency shape but annihilates d, v, and x_*."
+    burden_effect: "narrows"
+  - payload_id: "NMP-RT012-FUSION-006"
+    payload_type: "exact_transversality_theorem"
+    name: "Coordinate distances to the common-character loci"
+    statement: "In standard log-holonomy coordinates, the squared distances induced by one-sector epsilon stress are 2*epsilon^2/3 to the R3 common diagonal and 3*epsilon^2/4 to the R4 all-equal diagonal; fixed-chi distance is |epsilon|."
+    scope: "A bookkeeping coordinate norm only; not source-derived geometry or a physical metric."
+    burden_effect: "obstructs"
+  - payload_id: "NMP-RT012-FUSION-007"
+    payload_type: "source_solution_locus_nonidentifiability_lemma"
+    name: "Row-space aliasing of the source covector"
+    statement: "For every r in Row(B), m+r agrees with m on ker(B), so root-locus behavior identifies only [m] modulo Row(B), not an off-root representative, sign, normalization, unit, or operational scale."
+    burden_effect: "narrows"
+  - payload_id: "NMP-RT012-FUSION-008"
+    payload_type: "orbit_topology_theorem"
+    name: "Disconnected nontriviality locus"
+    statement: "On the admitted positive orbit, mu!=0 holds on (-2,-1/2) union (-1/2,1); excluding the identity-character crossing requires a new invariant domain or protection law."
+    burden_effect: "obstructs"
+  - payload_id: "NMP-RT012-FUSION-009"
+    payload_type: "presentation_obstruction"
+    name: "Per-edge winding subdivision control"
+    statement: "Reapplying ell=+1 to every displayed generator changes cycle winding from three to four after subdividing one edge; refinement invariance requires transported ell data or a new source normalization rule."
+    burden_effect: "narrows"
+
+refuter_result:
+  classification: "scoped_obstruction"
+  failed_premise: "The fixed balance law, anchors, and pointed framed presentation protect equal nontrivial sector holonomy under the target-free perturbations and finite variations required by P4-T02."
+  exact_scope: "The proposal-only RT010 common-character and independent-variation source-extension candidate under the stress families explicitly selected by handoff-1008."
+  fixed_candidate_invalidated: false
+  enlarged_family_robustness_established: false
+  internal_nontriviality_preserved_globally: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  prior_attempts_considered:
+    - "RT-20260810-010"
+    - "RT-20260810-011"
+    - "RT-20260810-012"
+  freeze_if:
+    - "Independent sector-holonomy perturbations destroy common descent and no materially new source-side protection law controls the transverse directions."
+    - "The admitted flow reaches trivial transition content and no independently justified invariant nontriviality domain is supplied."
+    - "A later packet replays the same common-character axiom or anchors without new source provenance."
+  do_not_freeze_if:
+    - "A future separately selected packet introduces a materially new source-derived protection law, source-side irrelevance theorem, or non-character bridge with independent provenance."
+  freeze_decision: "locally_frozen"
+  decision_reason: "Construction, source-purity audit, and first Refuter stress are complete; the predeclared robustness freeze condition is now met for this candidate family."
+  next_allowed_route: "theoretical_selector"
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_common_character_independent_variation"
+  current_cycle_step: "refuter"
+  prior_related_tasks:
+    - "RT-20260810-009"
+    - "RT-20260810-010"
+    - "RT-20260810-011"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "This stress adds exact H1, internal-collapse, and rank-preserving balance countermodels and freezes the tested branch rather than returning to another generic formalization or audit."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0"
+
+selected_next_route:
+  packet_id: "PKT-V22-P4T02-B2-POST-COMMON-CHARACTER-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  packet_type: "theoretical_continuation_selection"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  objective: "Select one materially distinct same-milestone continuation after the local common-character freeze without replaying any frozen candidate."
+  admissible_comparison_targets:
+    - "source_side_irrelevance_theorem"
+    - "non_character_bridge_facing_candidate"
+    - "independently_provenanced_holonomy_protection_law"
+    - "human_gated_ontology_change_required"
+  selected: true
+  admitted_in_rt012: false
+  executed_in_rt012: false
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "The candidate remains proposal-only underived and unadopted; one candidate route is locally frozen."
+    task_delta: "none"
+  - burden: "Source equivalence EqSrc"
+    status: "No ontology-wide source-equivalence theorem or adoption."
+    task_delta: "none"
+  - burden: "RetainH"
+    status: "No physical retention primitive or theorem."
+    task_delta: "none"
+  - burden: "GenH"
+    status: "No physical generation primitive or theorem."
+    task_delta: "none"
+  - burden: "ObsLoc_lc"
+    status: "Finite source states points frames and anchors are not observations."
+    task_delta: "none"
+  - burden: "Resp_lc"
+    status: "Formal representations holonomies and cohomology classes are not empirical response semantics."
+    task_delta: "none"
+  - burden: "M_src"
+    status: "The pointed finite groupoid is not an adopted source manifold."
+    task_delta: "none"
+  - burden: "g_eff"
+    status: "No physical cone Lorentzian conformal class signature orientation scale or effective metric."
+    task_delta: "none"
+  - burden: "matter coupling"
+    status: "Common representation descent is not universal propagation or matter coupling."
+    task_delta: "none"
+  - burden: "Einstein equations"
+    status: "No action stress tensor correction control or field equation."
+    task_delta: "none"
+  - burden: "finite-variation robustness"
+    status: "Fixed conditional algebra survives but independent H1 stress and the admitted internal collapse obstruct robust nontrivial common descent."
+    task_delta: "none"
+  - burden: "benchmark promotion"
+    status: "No benchmark comparison recovery result or promotion."
+    task_delta: "none"
+  - burden: "Gate Chair status"
+    status: "No protected review or verdict is requested."
+    task_delta: "none"
+  - burden: "current route freeze or hard-fail status"
+    status: "Both inherited freezes remain active and the common-character branch is now locally frozen under its candidate-scoped robustness label."
+    task_delta: "none"
+
+source_hashes:
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  - path: "research_control/handoffs/handoff-1008.yaml"
+    sha256: "589603e620e819bd184ce860d5bec20067bc29712a6d491eb6227a353e979a99"
+  - path: "research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_common_character_independent_variation_law_v1.tex"
+    sha256: "6c81af99ff98b315b3867deed2658ec8123386b7d2f9fbc9517ed80b0c1f695f"
+  - path: "research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_common_character_descent_spec_v1.yaml"
+    sha256: "70f25b557642d9bc4d71b92b9b05cdca045c670df775089058f4b444bfa1a4a2"
+  - path: "research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_independent_variation_law_v1.yaml"
+    sha256: "bb30f36984d97f084a914b07253e872935f8f05190779a5c76a095d03235c774"
+  - path: "research_control/tasks/RT-20260810-011/artifacts/v22_p4_t02_b2_common_character_independent_variation_smuggling_audit_v1.tex"
+    sha256: "73285bd22fbe5c13314ef7a4d00ddabde08da4a34b8fb0596890e2867d6871f3"
+  - path: "research_control/tasks/RT-20260810-011/artifacts/v22_p4_t02_b2_common_character_independent_variation_smuggling_disposition_v1.yaml"
+    sha256: "49db802d9c27b1f608dc2663fe29a4a25d676dde1a1230315650dd2bf9c7e272"
+
+authority_limits:
+  source_purity_verdict_reversed: false
+  fixed_candidate_conditional_algebra_refuted: false
+  current_ontology_derivation_claimed: false
+  source_law_adopted_or_rejected: false
+  physical_or_empirical_meaning_assigned: false
+  all_p7_sector_universality_established: false
+  d7_adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  proof_authority: false
+  benchmark_promoted: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  global_no_go_claimed: false
+  completed_derivation_claimed: false
+  successor_executed: false

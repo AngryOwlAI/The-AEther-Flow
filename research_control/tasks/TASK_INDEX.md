@@ -2,7 +2,7 @@
 
 Generated navigation support only. This index is not task authority, physics proof authority, benchmark authority, Gate Chair authority, or completed-derivation evidence.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-10T19:25:32Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"0e1a32899fb3bd431efb9cb5205d0fbf086fb130","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"0e147c31b57a6d98d855dc5b9490ae08edb96d313641914d4a6e24c829f469be"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"a0df9f2e0a51900e2f0779299709b03fc8396854e1e896fd5cc9961ccb60a603"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"856db6c320a753c30cd91f19084c7971fdb7ac57bafc0449a9d5e92df631bdc7"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"1c808a85c681013552b84cd5fb10f75b9d81540ce621dcb7a4cef19850c1e3a9","source_path_count":"5062","task_count":"1267"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-10T20:41:50Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"1c3cc4df67218c264fb004478c99a704aa6949c2","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"7eeb451b4655fe3a11d6d5cdd1b4545385ad5f8cd4386a202269a318512ec9a0"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"c6cab9832d57bea40558b7df852c75b13aa3feffe2266dfa26849189e3cdd144"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"8848ff9f835aea7d61d58e2492afce19bb7b64afc51bab2ee41addd902ea858a"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"91e351dfa520ef657a5d30b3d87f588e26d91e92413a3ec6cb649901a732fffc","source_path_count":"5066","task_count":"1268"} -->
 
 ## Generated-Report Provenance
 
@@ -11,21 +11,21 @@ Generated navigation support only. This index is not task authority, physics pro
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_task_index` |
-| Source commit | `0e1a32899fb3bd431efb9cb5205d0fbf086fb130` |
-| Source-derived generation time | `2026-08-10T19:25:32Z` |
-| Tracked task count | 1267 |
-| Exact source-path count | 5062 |
-| Source manifest SHA-256 | `1c808a85c681013552b84cd5fb10f75b9d81540ce621dcb7a4cef19850c1e3a9` |
+| Source commit | `1c3cc4df67218c264fb004478c99a704aa6949c2` |
+| Source-derived generation time | `2026-08-10T20:41:50Z` |
+| Tracked task count | 1268 |
+| Exact source-path count | 5066 |
+| Source manifest SHA-256 | `91e351dfa520ef657a5d30b3d87f588e26d91e92413a3ec6cb649901a732fffc` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `0e147c31b57a6d98d855dc5b9490ae08edb96d313641914d4a6e24c829f469be`
+- `registries/AGENT_JOB_REGISTRY.csv`: `7eeb451b4655fe3a11d6d5cdd1b4545385ad5f8cd4386a202269a318512ec9a0`
 - `registries/AGENT_ROLE_REGISTRY.csv`: `847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `a0df9f2e0a51900e2f0779299709b03fc8396854e1e896fd5cc9961ccb60a603`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `856db6c320a753c30cd91f19084c7971fdb7ac57bafc0449a9d5e92df631bdc7`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `c6cab9832d57bea40558b7df852c75b13aa3feffe2266dfa26849189e3cdd144`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `8848ff9f835aea7d61d58e2492afce19bb7b64afc51bab2ee41addd902ea858a`
 - `research_control/design/task_index_schema_v2.md`: `4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f`
 - `research_control/design/v21_recommendation_backlog.yaml`: `849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f`
 - `research_control/design/v21_task_taxonomy_policy.md`: `7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b`
@@ -41,9 +41,9 @@ or claim-promotion authority.
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `0d62ec102c56c536cb80e2cb5ede581d59453f1b81d68b1ebe0b2ff90832e891`
-- Generated-at source timestamp: `2026-08-10T19:25:32Z`
-- Row count: `1267`
+- Source fingerprint: `db2d46872d2a091c2d16bcb4af832eb64db32effd30c9b65261622a68ef23559`
+- Generated-at source timestamp: `2026-08-10T20:41:50Z`
+- Row count: `1268`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -51,6 +51,7 @@ or claim-promotion authority.
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260810-012|RT-20260810-011|2026-08-10T20:41:50Z|2026-08-10T21:22:30Z|Stress the common-character and independent-variation candidate|v22_p4_t02_b2_common_character_independent_variation_source_extension_refuter_stress|audit_or_review|effective_metric_g_eff|v22_b2_matter_principal_polynomial|theorem_or_precise_obstruction|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Stress whether the locally source-pure common-character law and nontrivial variation content survive target-free perturbations or yield a precise scoped obstruction.|refuter@0.2.0|false|false|12||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-012/jobs/completions/AJC-AJ-RT-20260810-012-001.yaml|
 |RT-20260810-011|RT-20260810-010|2026-08-10T19:25:32Z|2026-08-10T19:50:54Z|Audit the common-character and independent-variation candidate for hidden imports|v22_p4_t02_b2_common_character_independent_variation_source_extension_smuggling_audit|audit_or_review|effective_metric_g_eff|v22_b2_matter_principal_polynomial|audit_verdict_or_precise_repair|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Audit source legitimacy and hidden-import risk of the exact common-character descent and independent-variation candidate.|smuggling-auditor@0.2.0|false|false|12|Checkpoint AJ-RT-20260810-011-001 exactly once. After it commits, execute one fresh source-extension Refuter stress with refuter@0.2.0; do not execute that stress in this task.|PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-011/jobs/completions/AJC-AJ-RT-20260810-011-001.yaml|
 |RT-20260810-010|RT-20260810-009|2026-08-10T17:53:54Z|2026-08-10T18:31:15Z|Formalize or precisely obstruct the P4-T02 common-character descent and independent variation law|v22_p4_t02_b2_common_character_descent_independent_variation_law_formalization_or_obstruction|formalization_or_theorem|effective_metric_g_eff|v22_b2_common_character_independent_variation_law_v1|theorem_or_precise_obstruction|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Define or precisely obstruct one source-generated common response-line descent mechanism and one independently generated admissible-variation law, without target import or frozen-route replay.|ontology-formalizer@0.2.0|false|false|15||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-010/jobs/completions/AJC-AJ-RT-20260810-010-001.yaml|
 |RT-20260810-009|RT-20260810-008|2026-08-10T16:13:10Z|2026-08-10T16:54:11Z|Select one materially distinct P4-T02 route after repaired-quotient stress|v22_p4_t02_b2_post_refuter_theoretical_continuation_selector|integration_or_selection|effective_metric_g_eff|v22_b2_matter_principal_polynomial|completed_or_precisely_blocked|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Select one target-atlas-free same-milestone packet that can sharpen whether source-side response data can support a stable common physical causal structure after the repaired quotient fails independent-positive-line descent and arbitrary-variation robustness.|theoretical-continuation-selector@0.1.0|false|false|14||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-009/jobs/completions/AJC-AJ-RT-20260810-009-001.yaml|

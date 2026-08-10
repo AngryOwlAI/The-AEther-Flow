@@ -459,6 +459,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-PREPRINCIPAL-V1` `research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex`
 - `TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1` `research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex`
 - `TEX-V22-P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-LAW-V1` `research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_common_character_independent_variation_law_v1.tex`
+- `TEX-V22-P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-REFUTER-STRESS-V1` `research_control/tasks/RT-20260810-012/artifacts/v22_p4_t02_b2_common_character_independent_variation_refuter_stress_v1.tex`
 - `TEX-V22-P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-011/artifacts/v22_p4_t02_b2_common_character_independent_variation_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-COMMON-ENVELOPE-QUOTIENT-RANK-REPAIR-V1` `research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_v1.tex`
 - `TEX-V22-P4-T02-B2-COMMON-ENVELOPE-REFUTER-STRESS-V1` `research_control/tasks/RT-20260810-008/artifacts/v22_p4_t02_b2_common_envelope_refuter_stress_v1.tex`
