@@ -1,0 +1,90 @@
+schema_id: "v22_p4_t02_b2_common_envelope_refuter_stress_control_matrix_v1"
+task_id: "RT-20260810-008"
+job_id: "AJ-RT-20260810-008-001"
+status: "draft/control"
+candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-QUOTIENT-RANK-REPAIR-V1"
+stress_branches:
+  - branch_id: "collapse"
+    perturbation: "epsilon=0 or z=0 with u nonzero"
+    exact_result: "v_R=v_S=v_D=u; response rank drops from two to one; the positive-projective image has only the two diagonal sheets and the nonzero sign image has only +++ and ---."
+    survives:
+      - "a nonempty common-positive half-space k(u)>0"
+      - "the tautological all-positive preimage identity"
+    fails:
+      - "the one-continuous-coordinate projective atlas"
+      - "the six-cell sign image"
+    disposition: "candidate requires an explicit noncollapse hypothesis"
+  - branch_id: "nonuniqueness"
+    perturbation: "hold the fixed candidate but vary covectors within ann(span{u,z}) and vary loaded response-line relabelings"
+    exact_result: "Each fixed response has a two-dimensional affine covector fiber; positive-ray fibers add a common positive scale and Q_sign cells are open full-dimensional cones."
+    survives:
+      - "formal quotient definitions"
+      - "common-positive membership"
+    fails:
+      - "reconstruction of a unique source covector"
+      - "reconstruction of sector normalization units multiplicity or physical semantics"
+    disposition: "the quotient is a classifier only and not an inverse physical observable"
+  - branch_id: "inverse_defect"
+    perturbation: "compare k=(1,1/2,0,0) and k'=(1,1/2,9,-4)"
+    exact_result: "Both covectors have response (7/6,1,5/6); Resp_prin and both quotients identify them."
+    survives:
+      - "rank-two image theorem"
+      - "kernel ann(span{u,z})"
+    fails:
+      - "injectivity of the response map"
+      - "any inference from response class to full source cotangent data"
+    disposition: "inverse loss is exact and unavoidable for this finite witness"
+  - branch_id: "cocycle_defect"
+    perturbation: "apply independent positive response-line transition factors lambda_R lambda_S lambda_D"
+    exact_result: "Q_sign is invariant, but Q_ray is invariant on the diagonal response only when lambda_R=lambda_S=lambda_D; globalization further requires a common positive transition cocycle."
+    survives:
+      - "orientation-preserving sign classification"
+      - "the +++ common-positive cell"
+    fails:
+      - "presentation independence of Q_ray under arbitrary independent positive trivializations"
+      - "global common-ray descent without a common-line cocycle"
+    disposition: "a new source-derived common response-line descent law is required for global Q_ray semantics"
+  - branch_id: "finite_variation_fragility"
+    perturbation: "v_R -> v_R+delta*w with w outside span{u,z} and arbitrarily small nonzero delta"
+    exact_result: "The midpoint family has codimension four in V^3 and codimension three among h_0-normalized triples; the perturbed response rank is three because an exact minor equals -epsilon*delta; all eight nonzero sign cells occur."
+    survives:
+      - "strict common positivity at k=e^0"
+      - "product hyperbolicity relative to that common-positive witness"
+      - "the two all-positive preimage identities for the perturbed triple"
+    fails:
+      - "the midpoint response plane"
+      - "the one-dimensional projective image"
+      - "the six-cell sign image"
+    disposition: "the exact quotient geometry is stable only under a declared structured variation class"
+cross_branch_findings:
+  source_purity:
+    status: "source_pure_fixed_witness"
+    finding: "No target atlas metric benchmark answer or empirical response is used; the obstruction concerns loaded source-extension data and missing source-derived descent and variation laws."
+  source_side_irrelevance_pressure:
+    status: "proved_for_common_positive_membership_only"
+    finding: "The fine Q_ray coordinate and six-cell image are unnecessary for recognizing the +++ common-positive preimage; Q_sign or the three inequalities suffice. This does not by itself settle every future bridge use."
+  physical_semantics:
+    status: "not_established"
+    finding: "Common positive admissibility is not universal propagation physical causality a Lorentzian cone an empirical P7 response or g_eff."
+  exact_candidate_status:
+    status: "valid_fixed_witness_locally_frozen_as_unstructured_robust_global_law"
+    finding: "RT007 mathematics remains exact on its admitted structured split family; only the stronger descent and arbitrary-variation use is obstructed."
+decisive_classification: "scoped_obstruction"
+freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+next_unexecuted_role: "theoretical-continuation-selector@0.1.0"
+next_selector_question: "Choose exactly one of a source-side irrelevance theorem that discards Q_ray from the common-positive burden or a genuinely new source-extension candidate supplying common-line descent and an admissible structured variation law."
+authority_limits:
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  source_law_adopted: false
+  physical_cone_constructed: false
+  g_eff_constructed: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

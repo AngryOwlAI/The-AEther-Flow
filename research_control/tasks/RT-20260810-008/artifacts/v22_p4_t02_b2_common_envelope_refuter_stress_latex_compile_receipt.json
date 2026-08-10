@@ -1,0 +1,30 @@
+{
+  "schema_id": "latex_compile_receipt_v1",
+  "task_id": "RT-20260810-008",
+  "job_id": "AJ-RT-20260810-008-001",
+  "compiled_at": "2026-08-10T15:04:10Z",
+  "source_path": "research_control/tasks/RT-20260810-008/artifacts/v22_p4_t02_b2_common_envelope_refuter_stress_v1.tex",
+  "source_sha256": "7f860d25cdb6e0578acaf59e70cc745388a2777dbcd2749d3736d6c6e017dea2",
+  "compiler": "bundled Tectonic 0.16.9 via latex-compile skill",
+  "compiler_exit_code": 0,
+  "pdf_path": ".local/rt008_refuter_stress_latex/v22_p4_t02_b2_common_envelope_refuter_stress_v1.pdf",
+  "pdf_sha256": "8d439f427280d2fab53ded3e561d3f3941168801e12e8e72b3dc197bc15e4ad1",
+  "pdf_page_count": 6,
+  "page_size": "612 x 792 pts letter",
+  "final_pass_overfull_hbox_count": 0,
+  "final_pass_undefined_reference_count": 0,
+  "render_command": "pdftoppm -png -r 110 <pdf> .local/rt008_refuter_stress_latex/final-page",
+  "rendered_page_count": 6,
+  "visual_inspection": {
+    "status": "PASS",
+    "pages_inspected": [1, 2, 3, 4, 5, 6],
+    "clipped_text": false,
+    "overlap": false,
+    "broken_tables": false,
+    "unreadable_glyphs": false,
+    "unexpected_blank_pages": false,
+    "notes": "The final six-page render has consistent typography, margins, section hierarchy, equations, long tables, and page numbering."
+  },
+  "authority": "build_and_visual_receipt_only_not_scientific_proof_authority",
+  "status": "PASS"
+}

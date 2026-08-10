@@ -1,0 +1,92 @@
+schema_id: "refuter_obstruction_schema_v1"
+record_id: "V22-P4-T02-B2-COMMON-ENVELOPE-REFUTER-OBSTRUCTION-V1"
+task_id: "RT-20260810-008"
+job_id: "AJ-RT-20260810-008-001"
+status: "draft/control"
+result_classification: "scoped_obstruction"
+refuter_obstruction_record:
+  obstruction_id: "OB-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS-001"
+  target_claim: "The exact RT007 fixed-representative response quotient by itself supplies a presentation-independent and arbitrarily source-local-variation-stable source-operational common-envelope quotient law."
+  target_milestone: "effective_metric_g_eff"
+  failed_premise: "RT007 supplies neither a source-derived common positive response-line transition cocycle nor an admissible variation law restricting independent sector perturbations to the codimension-four midpoint family."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260810-008/artifacts/v22_p4_t02_b2_common_envelope_refuter_stress_v1.tex"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "Missing certificate that independent response-line transitions descend to one common positive ray and missing source-derived certificate that admissible finite variations preserve v_R+v_D=2v_S."
+  source_extension_repair_possible: "repair_possible"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "locally_frozen"
+    decision_reason: "The fixed RT007 witness remains exact, but extending it as a presentation-independent unstructured-robust quotient is barred without new common-line descent and admissible-variation payload."
+    status_update_path: "research_control/design/v22_recommendation_backlog.yaml"
+    next_allowed_route: "theoretical_selector"
+  route_cycle_control:
+    cycle_family: "v22_p4_t02_b2_common_hyperbolicity_envelope"
+    current_cycle_step: "repaired_quotient_refuter_stress"
+    prior_related_tasks:
+      - "RT-20260810-001"
+      - "RT-20260810-002"
+      - "RT-20260810-005"
+      - "RT-20260810-006"
+      - "RT-20260810-007"
+    cycle_risk: "high"
+    orbit_avoidance_reason: "The next packet must choose between proving source-side irrelevance of Q_ray and constructing genuinely new common-line descent plus variation-law data; another fixed-representative quotient repair or audit is barred."
+    next_role_consequence: "theoretical-continuation-selector@0.1.0"
+  forbidden_conclusions:
+    - "No rejection of the exact RT007 fixed equipped-sector witness."
+    - "No global theory rejection or global no-go theorem."
+    - "No future source-extension impossibility."
+    - "No full P7 sector coverage or empirical response semantics."
+    - "No D7 or P2-T01 adequacy verdict."
+    - "No B2 activation adoption viability rejection or sufficiency."
+    - "No P4-T03 conformal reconstruction."
+    - "No physical causal cone effective metric coupling or Einstein equations."
+    - "No canonical ontology edit or source-law adoption."
+    - "No Gate Chair verdict benchmark promotion proof publication push external action or completed derivation."
+minimal_countermodel:
+  ambient_vector_space: "V=R^4 with u=e_0 z=e_1 w=e_2"
+  fixed_parameters: "epsilon=1/3 and any nonzero delta"
+  base_vectors:
+    v_R: "u+epsilon*z"
+    v_S: "u"
+    v_D: "u-epsilon*z"
+  perturbed_vectors:
+    v_R_delta: "u+epsilon*z+delta*w"
+    v_S_delta: "u"
+    v_D_delta: "u-epsilon*z"
+  exact_minor: "det[[1,epsilon,delta],[1,0,0],[1,-epsilon,0]]=-epsilon*delta"
+  response_rank_before: 2
+  response_rank_after: 3
+  midpoint_residual: "v_R_delta+v_D_delta-2*v_S_delta=delta*w"
+  sign_orbits_before: 6
+  sign_orbits_after: 8
+  common_positive_witness: "k=e^0 gives response (1,1,1) before and after"
+  arbitrarily_small: "For every neighborhood of the base triple choose nonzero delta of sufficiently small absolute value."
+  normalized_midpoint_codimension: "Inside the affine space h_0(v_R)=h_0(v_S)=h_0(v_D)=1, the tangent constraint maps (ker h_0)^3 surjectively to ker h_0 and has codimension three."
+  meaning: "Common positivity can remain strict while the one-dimensional projective image and six-cell sign classification disappear."
+presentation_countermodel:
+  fixed_response: "(1,1,1)"
+  positive_transition_factors: "(2,3,5)"
+  transformed_response: "(2,3,5)"
+  Q_sign_preserved: true
+  Q_ray_preserved: false
+  exact_descent_condition: "For the diagonal response to retain its positive ray, lambda_R=lambda_S=lambda_D is necessary and sufficient."
+  cocycle_burden: "The common factor must satisfy the ordinary overlap cocycle on triple intersections."
+authority_limits:
+  candidate_fixed_witness_rejected: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physical_causality_constructed: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

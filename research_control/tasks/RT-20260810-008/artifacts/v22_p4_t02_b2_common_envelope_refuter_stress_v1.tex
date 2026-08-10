@@ -1,0 +1,420 @@
+% object_id: TEX-V22-P4-T02-B2-COMMON-ENVELOPE-REFUTER-STRESS-V1
+% authority: science_draft
+% status: draft/control
+% decisive_result: scoped_obstruction
+% task_id: RT-20260810-008
+% job_id: AJ-RT-20260810-008-001
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,longtable}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newenvironment{boundary}{\par\smallskip\noindent\textbf{Claim boundary.}\ }{\par\smallskip}
+\newenvironment{nonconclusion}{\par\smallskip\noindent\textbf{Non-conclusion.}\ }{\par\smallskip}
+
+\newcommand{\RR}{\mathbb R}
+\newcommand{\Resp}{\operatorname{Resp}_{\mathrm{prin}}}
+\newcommand{\Qray}{Q_{\mathrm{ray}}}
+\newcommand{\Qsign}{Q_{\mathrm{sign}}}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\title{V22 P4--T02 B2 Common-Envelope Refuter Stress:\\
+Collapse, Descent, Inverse Loss, and Finite-Variation Fragility}
+\author{The Aether-Flow Research Project}
+\date{10 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft/control packet executes one bounded Refuter stress of the exact
+proposal-only response quotient repaired in RT-20260810-007.  The fixed
+equipped-sector result survives unchanged: its response image is a rank-two
+plane, its kernel is two-dimensional, its positive-projective image has two
+sheets and one continuous coordinate, and its nonzero sign image has six
+cells.  The stronger use of that object as a presentation-independent and
+arbitrarily source-local-variation-stable operational quotient does not
+survive.  Independent positive response-line transitions preserve the sign
+quotient but generally change the positive ray.  Moreover, an arbitrarily
+small transverse perturbation of one sector raises the response rank to three
+and realizes all eight sign cells while the strict common-positive witness
+remains.  The decisive classification is
+\texttt{scoped\_obstruction}.  Only the stronger descent-and-robustness route is
+locally frozen; the exact fixed witness remains valid, and same-milestone
+continuation remains open through a fresh theoretical selector.  No physical
+causality, empirical P7 semantics, adequacy verdict, B2 activation, effective
+metric, adoption, Gate result, benchmark promotion, global no-go, or
+Distance-to-GR change follows.
+\end{abstract}
+
+\section{Authority and exact target}
+
+This artifact is the fused old-style output of the single outer AgentJob
+\texttt{AJ-RT-20260810-008-001}.  It reads the committed RT007 repair as an
+immutable source.  Its target is not the fixed algebraic witness itself, but
+the stronger claim that the repaired fixed-representative quotient, without
+additional source law, supplies a presentation-independent and arbitrarily
+source-local-variation-stable common-envelope quotient.
+
+The permitted terminal classes are the five controlled tokens
+\begin{itemize}
+  \item \nolinkurl{concrete_witness_path},
+  \item \nolinkurl{source_side_irrelevance_theorem_path},
+  \item \nolinkurl{bridge_facing_candidate_path},
+  \item \nolinkurl{repeated_unmet_burdens_no_new_payload}, and
+  \item \nolinkurl{scoped_obstruction}.
+\end{itemize}
+The calculation below selects the last class.
+
+\begin{boundary}
+All positive statements are restricted to the exact proposal-only Rod,
+Signal, and Detector controls after the declared formal response-line
+relabelings.  Neither the relabelings nor the coordinates are empirical
+calibrations, physical unit maps, target-atlas data, or adopted ontology.
+\end{boundary}
+
+\section{Fixed candidate retained from RT007}
+
+Let $V$ be four-dimensional and let $u,z\in V$ be independent.  Fix
+$0<\epsilon<1$ and set
+\[
+ v_R=u+\epsilon z,\qquad v_S=u,\qquad v_D=u-\epsilon z.
+\]
+After the proposal-only typed relabelings into one bookkeeping line, define
+\[
+ \Resp(k)=\bigl(k(v_R),k(v_S),k(v_D)\bigr).
+\]
+Writing $a=k(u)$ and $b=k(z)$ gives
+\begin{equation}\label{eq:fixed-response}
+ \Resp(k)=(a+\epsilon b,a,a-\epsilon b).
+\end{equation}
+
+\begin{proposition}[Fixed RT007 theorem retained]
+The image of \eqref{eq:fixed-response} is the plane
+\[
+ r_R+r_D=2r_S,
+\]
+$\operatorname{rank}\Resp=2$, and
+$\ker\Resp=\ann(\operatorname{span}\{u,z\})$.  On the domain where all three
+responses are nonzero, the positive-projective image is described by
+\[
+ \sigma=\sgn(a),\qquad
+ t=\epsilon b/a,\qquad
+ [\Resp(k)]_+=[\sigma(1+t),\sigma,\sigma(1-t)]_+.
+\]
+It realizes exactly six nonzero ordered sign cells and excludes the two
+alternating cells.
+\end{proposition}
+
+\begin{proof}
+The first and third coordinates in \eqref{eq:fixed-response} add to $2a$.
+Independence of $u,z$ gives rank two and the stated annihilator kernel.  The
+projective formula follows after division by $|a|$.  For $\sigma=+1$, the
+intervals $t<-1$, $-1<t<1$, and $t>1$ give $-++$, $+++$, and $++-$;
+the negative sheet gives their simultaneous sign reversals.  This is the
+committed RT007 calculation, restated without alteration.
+\end{proof}
+
+The common-positive set is
+\[
+ \Gamma_\cap=\{k:a+\epsilon b>0,\ a>0,\ a-\epsilon b>0\}
+              =\{k:a>\epsilon|b|\}.
+\]
+The fixed product, common cone, covariance statement, and strict-margin local
+witness remain valid in their declared scope.
+
+\section{Collapse stress}
+
+\begin{proposition}[Noncollapse is necessary]
+If $\epsilon=0$ or $z=0$ while $u\ne0$, then
+$v_R=v_S=v_D=u$, the response rank is one, the positive-projective image has
+only the two diagonal sheets, and the nonzero sign image is
+$\{+++,---\}$.
+\end{proposition}
+
+\begin{proof}
+The response becomes $(a,a,a)$.  Its image is the diagonal line and its
+nonzero positive-ray quotient has the two representatives $(1,1,1)$ and
+$(-1,-1,-1)$.  The common-positive set remains the nonempty half-space
+$k(u)>0$.
+\end{proof}
+
+Thus the one-coordinate, six-cell classification needs an explicit
+noncollapse hypothesis.  Collapse does not refute common positivity; it
+refutes treating the fine quotient geometry as automatic.
+
+\section{Nonuniqueness and inverse defect}
+
+\begin{lemma}[Exact quotient fibers]
+For the fixed candidate, every response has a two-dimensional affine covector
+fiber.  A positive-ray class has the preimage
+\[
+ \{c k_0+h:c>0,\ h\in\ann(\operatorname{span}\{u,z\})\},
+\]
+and therefore has three continuous degrees of freedom.  Each nonempty sign
+cell is an open full-dimensional cone in $V^*$.
+\end{lemma}
+
+\begin{proof}
+The kernel has dimension $4-2=2$.  Fixing a response gives one affine coset of
+that kernel.  Fixing only a positive ray permits one additional positive scale.
+Sign conditions are strict inequalities and hence define open subsets of the
+four-dimensional cotangent space.
+\end{proof}
+
+For example, in the coordinate presentation $u=e_0,z=e_1$,
+\[
+ k=(1,1/2,0,0),\qquad k'=(1,1/2,9,-4)
+\]
+give the same response $(7/6,1,5/6)$ when $\epsilon=1/3$.  Hence neither
+$\Resp$, $\Qray$, nor $\Qsign$ reconstructs a unique source covector.  They
+also do not reconstruct physical normalization, empirical response semantics,
+sector multiplicity, units, or coupling.
+
+\section{Positive-line transition and cocycle stress}
+
+The formal response values initially live in three typed one-dimensional
+lines.  RT007 used fixed proposal-only isomorphisms into a common bookkeeping
+line.  Let a change of those local trivializations multiply the three
+coordinates by positive functions $\lambda_R,\lambda_S,\lambda_D$.
+
+\begin{theorem}[Common positive-ray descent condition]
+Independent positive response-line factors preserve $\Qsign$.  They preserve
+$\Qray$ for every response in the fixed image only if
+\[
+ \lambda_R=\lambda_S=\lambda_D.
+\]
+On overlaps, the resulting common factor must additionally satisfy the usual
+triple-overlap cocycle for $\Qray$ to globalize.
+\end{theorem}
+
+\begin{proof}
+Positive coordinate factors cannot change signs.  The fixed image contains
+the diagonal response $(1,1,1)$.  Its transformed response is
+$(\lambda_R,\lambda_S,\lambda_D)$, which lies on the same positive ray as
+$(1,1,1)$ exactly when all three factors agree.  A common factor is sufficient
+because positive projectivization removes it.  Agreement of locally defined
+rays across triple intersections then requires the common transition factors
+to compose to the identity.
+\end{proof}
+
+The explicit countercontrol $(1,1,1)\mapsto(2,3,5)$ preserves the $+++$ sign
+cell but changes the positive ray.  Thus $\Qray$ is valid fixed-presentation
+syntax, not an intrinsic global response quotient, unless a new source-derived
+common-line descent law and cocycle are supplied.  $\Qsign$ avoids positive
+normalization dependence but still needs a coherent orientation convention and
+does not acquire empirical or physical meaning from invariance alone.
+
+\section{Arbitrarily small finite-variation countermodel}
+
+Define the linear midpoint constraint
+\[
+ F:V^3\longrightarrow V,\qquad
+ F(v_R,v_S,v_D)=v_R-2v_S+v_D.
+\]
+
+\begin{theorem}[Codimension of the split midpoint family]
+The exact midpoint-law triples form $\ker F$, a codimension-four linear
+subspace of $V^3$.
+\end{theorem}
+
+\begin{proof}
+$F$ is surjective: every $x\in V$ is $F(x,0,0)$.  Hence
+$\operatorname{rank}F=\dim V=4$.  Rank--nullity gives codimension four.
+\end{proof}
+
+If the sector triples are restricted by
+$h_0(v_R)=h_0(v_S)=h_0(v_D)=1$, their affine tangent space is
+$(\ker h_0)^3$.  The restriction of $F$ is still surjective onto
+$\ker h_0$, so the normalized midpoint family has codimension three.  It too
+has empty interior under arbitrary independent normalized sector variation.
+
+Choose $w\notin\operatorname{span}\{u,z\}$ and, for any nonzero $\delta$, set
+\[
+ v_R^{(\delta)}=u+\epsilon z+\delta w,\qquad
+ v_S^{(\delta)}=u,\qquad
+ v_D^{(\delta)}=u-\epsilon z.
+\]
+
+\begin{theorem}[Arbitrarily small transverse rank jump]
+For every $\delta\ne0$, the perturbed response map has rank three and is
+surjective onto $\RR^3$.  It realizes all eight nonzero ordered sign cells.
+Nevertheless the covector satisfying
+$k(u)=1$, $k(z)=k(w)=0$ remains strictly common positive.
+\end{theorem}
+
+\begin{proof}
+In the basis $u=e_0,z=e_1,w=e_2$, a three-by-three minor of the response-vector
+matrix is
+\[
+ \det\begin{pmatrix}
+ 1&\epsilon&\delta\\
+ 1&0&0\\
+ 1&-\epsilon&0
+ \end{pmatrix}=-\epsilon\delta\ne0.
+\]
+Thus the response rank is three.  For an arbitrary target response
+$(x,y,\zeta)$ choose
+\[
+ a=y,\qquad b=\frac{y-\zeta}{\epsilon},\qquad
+ c=\frac{x-2y+\zeta}{\delta};
+\]
+the covector with $k(u)=a,k(z)=b,k(w)=c$ realizes that response.  Choosing
+$x,y,\zeta\in\{\pm1\}$ realizes all eight sign cells.  The stated
+common-positive covector evaluates to $(1,1,1)$ for every $\delta$.
+\end{proof}
+
+Since $\delta$ may be arbitrarily small, no open neighborhood in the full
+independent-sector product $V^3$ preserves the rank-two plane or six-cell
+image.  Yet common positivity remains open.  This is the decisive separation:
+the candidate's strict common-positive witness is robust, while its fine
+quotient geometry is robust only inside a declared structured variation class.
+
+\begin{corollary}[Common-positive fine-quotient irrelevance]
+For the sole property $k\in\Gamma_\cap$, the continuous coordinate of $\Qray$
+and the five nonpositive sign cells carry no additional decision information.
+The three inequalities, equivalently the $+++$ cell of $\Qsign$, suffice.
+\end{corollary}
+
+This corollary does not prove that every possible bridge use of $\Qray$ is
+irrelevant.  It creates one honest continuation option: a future packet may
+try to prove source-side irrelevance for the exact common-envelope burden.
+
+\section{Five-branch Refuter disposition}
+
+\renewcommand{\arraystretch}{1.25}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.16\textwidth}
+                  >{\raggedright\arraybackslash}p{0.34\textwidth}
+                  >{\raggedright\arraybackslash}p{0.38\textwidth}}
+\toprule
+Branch & Exact finding & Consequence\\
+\midrule
+\endhead
+Collapse & Rank two drops to rank one; six sign cells drop to two. & Add a
+noncollapse hypothesis; common positivity itself survives.\\
+Nonuniqueness & Response and quotient fibers have positive dimension. & The
+quotient is a classifier, not an inverse source or physical observable.\\
+Inverse defect & Covectors differing by
+$\ann(\operatorname{span}\{u,z\})$ are identified. & Full cotangent,
+normalization, unit, multiplicity, and semantic data are unrecoverable.\\
+Cocycle defect & Unequal positive line transitions preserve signs but change
+positive rays. & Global $\Qray$ needs a new common-line descent law and
+cocycle.\\
+Finite variation & The midpoint family has codimension four; arbitrarily small
+transverse variation gives rank three and eight cells. & Fine quotient
+robustness needs a source-derived admissible structured variation class.\\
+\bottomrule
+\end{longtable}
+
+\section{Source purity and semantic boundary}
+
+The countermodels use only $V,u,z,w,\epsilon,\delta$, typed response-line
+coordinates, and source-covector evaluation.  No target atlas, target metric,
+tetrad, coframe, desired GR cone, empirical response, benchmark answer, or
+workflow status selects them.  The stress is therefore source-pure in the same
+bounded sense as the fixed candidate.
+
+Source purity is not derivation.  The current ontology does not derive the
+loaded common response-line relabelings, a common positive transition cocycle,
+or an admissible variation law preserving the midpoint family.  Supplying
+those objects would be new proposal-only source-extension data pending a fresh
+construction, audit, and protected adoption boundary.
+
+\begin{nonconclusion}
+A common-positive covector is weaker than universal propagation, equal
+characteristic boundaries, a physical time orientation, a Lorentzian causal
+cone, empirical Rod, Signal, or Detector response semantics, a conformal
+class, or $g_{\mathrm{eff}}$.
+\end{nonconclusion}
+
+\section{Obstruction and local freeze}
+
+The exact obstruction is
+\begin{quote}
+The repaired fixed-representative quotient does not by itself descend under
+independent positive response-line transitions and is not stable under
+arbitrarily small independent sector variation, even though its strict
+common-positive witness can survive.
+\end{quote}
+
+Its stable identifier is
+\texttt{OB-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS-001}.
+The local freeze label is
+\texttt{NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS}.
+The freeze applies only to promoting this exact repaired quotient as a
+presentation-independent, unstructured-robust source-operational law.  It does
+not reject the fixed witness and does not freeze all same-milestone source
+extension.
+
+The next separately admitted role is a
+\texttt{theoretical-continuation-selector@0.1.0}.  It must choose exactly one
+materially distinct packet: either a source-side irrelevance theorem that
+removes $\Qray$ from the common-positive burden, or a source-extension
+candidate that supplies genuinely new common-line descent and admissible
+structured-variation data.  That selector is not executed here.
+
+\section{Expanded Distance-to-GR status}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.28\textwidth}
+                  >{\raggedright\arraybackslash}p{0.64\textwidth}}
+\toprule
+Burden & Status after this packet\\
+\midrule
+\endhead
+Source ontology primitives & Unchanged; all candidate data remain unadopted
+source-extension inputs.\\
+Source equivalence $\mathrm{EqSrc}$ & Unchanged; no general equivalence theorem
+is added.\\
+$\mathrm{RetainH}$ & Unchanged and blocked by missing primitive.\\
+$\mathrm{GenH}$ & Unchanged and blocked by missing primitive.\\
+$\mathrm{ObsLoc}_{\mathrm{lc}}$ & Unchanged; finite equipped protocol remains
+read-only.\\
+$\mathrm{Resp}_{\mathrm{lc}}$ & Unchanged; formal scores are not empirical P7
+responses.\\
+$M_{\mathrm{src}}$ & Unchanged; patch and overlap descent remain conditional.\\
+$g_{\mathrm{eff}}$ & Unchanged; no physical conformal class, scale, or metric is
+constructed.\\
+Matter coupling & Unchanged; universal propagation and coupling are absent.\\
+Einstein equations & Unchanged; no action, variation, correction control, or
+field equation is supplied.\\
+Finite-variation robustness & Scoped obstruction recorded: common positivity
+survives, fine quotient geometry is transversely fragile.\\
+Benchmark promotion & Blocked and unchanged.\\
+Gate Chair status & Unchanged; no protected review is requested.\\
+Current route freeze or hard-fail status & Prior shared-$\tau$ freeze retained;
+the repaired quotient is locally frozen only for the stronger descent and
+unstructured-robustness use.\\
+\bottomrule
+\end{longtable}
+
+No Distance-to-GR ledger row changes.  The packet constructs no descriptor
+completion, adequacy result, B2 activation, P4--T03 input, physical scale,
+metric, coupling, Einstein equation, or protected benchmark evidence.
+
+\section{Decisive result}
+
+\begingroup\small
+\texttt{scoped\_obstruction}.  The exact RT007 equipped-sector witness remains
+valid, but its fine ray structure is presentation dependent and transversely
+fragile while strict common positivity survives.  Only its attempted promotion
+to a presentation-independent, unstructured-robust operational quotient is
+locally frozen; fresh theoretical selection remains open.
+
+\begin{nonconclusion}
+This is not global no-go, future-extension impossibility, ontology or law
+adoption, empirical P7 semantics, D7 adequacy, B2 disposition, P4--T03,
+physical causality or $g_{\mathrm{eff}}$, coupling, Einstein equations, Gate or
+benchmark action, proof, publication, push, external action, or completed
+derivation.
+\end{nonconclusion}
+\endgroup
+
+\end{document}

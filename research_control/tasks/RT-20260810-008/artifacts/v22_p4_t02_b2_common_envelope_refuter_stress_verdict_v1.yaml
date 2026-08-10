@@ -1,0 +1,189 @@
+schema_id: "v22_p4_t02_b2_common_envelope_refuter_stress_verdict_v1"
+task_id: "RT-20260810-008"
+job_id: "AJ-RT-20260810-008-001"
+candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-QUOTIENT-RANK-REPAIR-V1"
+status: "draft/control"
+decisive_result: "scoped_obstruction"
+no_fog_check: true
+no_fog_explanation: "The exact RT007 fixed witness is valid, but its fine positive-ray quotient cannot serve as a presentation-independent or arbitrarily source-local-variation-stable common-envelope law: unequal positive response-line transitions change Q_ray, and an arbitrarily small transverse sector perturbation raises response rank from two to three and expands the sign image from six to eight while strict common positivity survives."
+source_manifest:
+  - source_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  - source_id: "HANDOFF-1004"
+    path: "research_control/handoffs/handoff-1004.yaml"
+    sha256: "5d357cb6254d91c0437c1988f80de215580c8f4e2b0b8979548a86d550049539"
+  - source_id: "TEX-V22-P4-T02-B2-COMMON-ENVELOPE-QUOTIENT-RANK-REPAIR-V1"
+    path: "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_v1.tex"
+    sha256: "2882fea5872b730d403855ca7b6f06d16526739d1c4ac6a7fb62e3816ce4c052"
+  - source_id: "V22-P4-T02-B2-COMMON-ENVELOPE-QUOTIENT-RANK-REPAIR-RECORD-V1"
+    path: "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_record_v1.yaml"
+    sha256: "fc7446f179fa348cd9cd077b79996f04e91ad872fd74d91fd9062d3680b21aa0"
+  - source_id: "V22-P4-T02-B2-TYPED-RESPONSE-IMAGE-REPAIR-V1"
+    path: "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_typed_response_image_repair_v1.yaml"
+    sha256: "191dedc37210e2d7533b1adbe6f52b07378e4694dc509817c18bd6bc02de1538"
+  - source_id: "V22-P4-T02-B2-COMMON-ENVELOPE-QUOTIENT-RANK-REPAIR-CONTROL-MATRIX-V1"
+    path: "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_control_matrix_v1.yaml"
+    sha256: "adf7bc2a6170899f4fe359e8dc4fae043662697069620efd90c964f6b9f1353b"
+source_extension_category: "source_extension_refuter_stress"
+source_extension_classification:
+  status_label: "proposal-only"
+  relation_to_current_ontology: "current ontology does not derive a common positive response-line descent cocycle or an admissible variation law preserving the midpoint family"
+  adoption_status: "blocked_adoption_open_continuation"
+  source_purity: "source_pure_fixed_witness_no_target_import"
+  target_import_detected: false
+fixed_candidate_results_preserved:
+  response_image_relation: "r_R+r_D=2*r_S"
+  response_rank: 2
+  response_kernel: "ann(span{u,z})"
+  positive_projective_image: "two positive-ray sheets and one continuous coordinate on the nonzero domain"
+  realized_nonzero_sign_orbits: 6
+  all_positive_preimage_identities: true
+  common_positive_cone_nonempty: true
+  strict_margin_local_robustness: true
+  scope: "exact equipped independently split degree-one structured family"
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260810-008-001"
+    payload_type: "theorem"
+    name: "Midpoint-family codimension theorem"
+    summary: "The triples satisfying v_R+v_D=2v_S form the kernel of a surjective map V^3 to V and therefore have codimension four; inside the h_0-normalized affine triple space the same condition has codimension three."
+  - payload_id: "NMP-RT-20260810-008-002"
+    payload_type: "countermodel"
+    name: "Arbitrarily small transverse rank-jump countermodel"
+    summary: "Replacing v_R by v_R+delta*w with w outside span{u,z} gives rank three for every nonzero delta, realizes all eight sign cells, and retains k=e^0 as a strict common-positive witness."
+  - payload_id: "NMP-RT-20260810-008-003"
+    payload_type: "lemma"
+    name: "Common positive-ray descent lemma"
+    summary: "Independent positive response-line factors preserve Q_sign, but Q_ray of the diagonal response descends only when all three factors agree; overlap globalization additionally requires the common-factor cocycle."
+  - payload_id: "NMP-RT-20260810-008-004"
+    payload_type: "lemma"
+    name: "Exact quotient fiber lemma"
+    summary: "Resp_prin has two-dimensional affine fibers, Q_ray fibers add a common positive scale, and Q_sign cells retain full-dimensional source-covector ambiguity."
+  - payload_id: "NMP-RT-20260810-008-005"
+    payload_type: "theorem"
+    name: "Common-positive fine-quotient irrelevance theorem"
+    summary: "Membership in the common-positive cone depends only on the +++ sign cell; the Q_ray continuous coordinate and the other five sign cells are unnecessary for that membership test."
+stress_branch_results:
+  collapse: "rank_one_two_sign_cells_common_positive_half_space_survives"
+  nonuniqueness: "large_quotient_fibers_no_source_or_physical_reconstruction"
+  inverse_defect: "exact_kernel_ann_span_u_z"
+  cocycle_defect: "Q_ray_needs_common_positive_line_transition_and_cocycle"
+  finite_variation_fragility: "codimension_four_midpoint_family_rank_three_transverse_countermodel"
+obstruction_id: "OB-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS-001"
+obstruction_path: "research_control/tasks/RT-20260810-008/artifacts/v22_p4_t02_b2_common_envelope_refuter_obstruction_v1.yaml"
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  preserved_prior_freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  active_freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  prior_attempts_considered:
+    - "RT-20260810-001"
+    - "RT-20260810-002"
+    - "RT-20260810-005"
+    - "RT-20260810-006"
+    - "RT-20260810-007"
+    - "RT-20260810-008"
+  freeze_if:
+    - "The fixed-representative quotient is again relabelled presentation independent without common-line transition and cocycle data."
+    - "The six-cell rank-two image is again labelled robust under arbitrary independent sector variation without an admissible structured variation law."
+    - "Another repair or audit repeats the same candidate without new theorem primitive or variation-class payload."
+  criteria_evaluated:
+    - "new exact codimension theorem supplied"
+    - "new arbitrarily small countermodel supplied"
+    - "new positive-line descent lemma supplied"
+    - "fixed candidate and common-positive survival separated from the failed stronger claim"
+    - "same-milestone continuation has two materially distinct options"
+  do_not_freeze_if:
+    - "A selector chooses and a fresh packet proves Q_ray irrelevant or constructs genuinely new source-derived descent and admissible-variation data."
+  freeze_decision: "locally_frozen"
+  decision_reason: "Freeze only the promotion of this exact repaired quotient to a presentation-independent unstructured-robust law; preserve the fixed witness and open a materially distinct selector decision."
+  status_update_path: "research_control/design/v22_recommendation_backlog.yaml"
+  next_allowed_route: "theoretical_selector"
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_common_hyperbolicity_envelope"
+  current_cycle_step: "repaired_quotient_refuter_stress"
+  prior_related_tasks:
+    - "RT-20260810-001"
+    - "RT-20260810-002"
+    - "RT-20260810-005"
+    - "RT-20260810-006"
+    - "RT-20260810-007"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The next task must decide between a fine-quotient irrelevance theorem and a genuinely new descent-plus-variation primitive; another fixed quotient repair audit or stress is disallowed."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0"
+distance_to_gr_delta:
+  changed: false
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "g_eff depends on M_src; burden is a source-to-metric law with source-derived conformal class and scale"
+  new_status: "g_eff depends on M_src; burden is a source-to-metric law with source-derived conformal class and scale"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "one separately admitted theoretical continuation selector after checkpoint"
+  downstream_still_blocked:
+    - "complete descriptor instance and D7 adequacy"
+    - "B2 activation adoption or sufficiency"
+    - "P4-T03 conformal reconstruction"
+    - "physical scale and effective metric"
+    - "matter coupling Einstein equations benchmark promotion and completed derivation"
+  explanation: "The stress records a proposal-level scoped obstruction and local route freeze; it constructs no physical cone conformal class scale metric coupling equation or protected evidence."
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "No change; u z epsilon line relabelings and variation data remain unadopted source-extension inputs."
+  - burden: "Source equivalence EqSrc"
+    status: "No change; no general source-equivalence theorem is added."
+  - burden: "RetainH"
+    status: "No change; blocked by missing primitive."
+  - burden: "GenH"
+    status: "No change; blocked by missing primitive."
+  - burden: "ObsLoc_lc"
+    status: "No change; the finite equipped protocol scope remains read only."
+  - burden: "Resp_lc"
+    status: "No change; formal response scores remain nonempirical and not protected P7 responses."
+  - burden: "M_src"
+    status: "No change; the smooth source patch and overlap descent remain conditional scaffolding."
+  - burden: "g_eff"
+    status: "No change; neither common positivity nor its quotient is a physical effective metric."
+  - burden: "matter coupling"
+    status: "No change; universal propagation and coupling are not derived."
+  - burden: "Einstein equations"
+    status: "No change; no action variation correction control or field equation is supplied."
+  - burden: "finite-variation robustness"
+    status: "Scoped obstruction recorded; common positivity survives but the rank-two six-cell quotient is fragile under arbitrarily small transverse sector variation."
+  - burden: "benchmark promotion"
+    status: "No change; no benchmark comparison or promotion is performed."
+  - burden: "Gate Chair status"
+    status: "No change; no protected review is requested."
+  - burden: "current route freeze or hard-fail status"
+    status: "The prior shared-tau freeze is preserved and the repaired quotient is locally frozen only as a presentation-independent unstructured-robust law; same-milestone selector continuation remains open."
+selected_next_route:
+  route_id: "select_v22_p4_t02_b2_post_quotient_obstruction_continuation_v1"
+  packet_type: "bounded_theoretical_calculation"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  objective: "Choose exactly one next packet: prove the fine positive-ray quotient source-side irrelevant to the common-positive burden, or construct new source-derived common-line descent and admissible structured-variation data."
+  executed: false
+  requires_human_gate: false
+authority_limits:
+  predecessor_rewritten: false
+  fixed_candidate_rejected: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  physical_causality_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  distance_to_gr_changed: false
+  Gate_Chair_verdict: false
+  benchmark_promoted: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_claimed: false

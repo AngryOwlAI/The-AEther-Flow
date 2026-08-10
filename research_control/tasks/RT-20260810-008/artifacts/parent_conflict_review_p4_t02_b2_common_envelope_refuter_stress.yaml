@@ -1,0 +1,59 @@
+schema_id: "parent_child_conflict_review_v1"
+task_id: "RT-20260810-008"
+job_id: "AJ-RT-20260810-008-001"
+review_path: "research_control/tasks/RT-20260810-008/artifacts/parent_conflict_review_p4_t02_b2_common_envelope_refuter_stress.yaml"
+status: "resolved"
+resolution_rounds: 0
+max_resolution_rounds: 2
+parallel_revision_requested: false
+blocking_conflict_detected: false
+unresolved_conflicts: []
+child_inputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260810-008/artifacts/child_phys_math_p4_t02_b2_common_envelope_refuter_stress.yaml"
+    sha256: "6a86c331a523b7120678a5e78ec99d1507c407716007c7450c93e614af4c8666"
+    result_classification: "scoped_obstruction"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260810-008/artifacts/child_phys_phil_p4_t02_b2_common_envelope_refuter_stress.yaml"
+    sha256: "7dab016e65166f15398333b7b715f90bc081ebcb043b5387daf066878517e122"
+    result_classification: "scoped_obstruction"
+shared_consensus:
+  - "Every fixed RT007 theorem remains valid under the exact supplied assumptions."
+  - "Collapse lowers response rank and sign discrimination without necessarily destroying common positivity."
+  - "Q_ray and Q_sign are many-to-one formal classifiers and provide no inverse or physical-equivalence certificate."
+  - "Presentation-independent Q_ray descent requires one common positive response-line transition and a valid cocycle."
+  - "An arbitrarily small one-sector transverse perturbation preserves h_0 positivity but raises rank from two to three and realizes all eight sign cells."
+  - "The exact result is scoped_obstruction with a candidate-scoped local freeze and an unexecuted theoretical selector next."
+apparent_differences:
+  - topic: "freeze label spelling"
+    child_phys_math: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-ROBUST-DESCENT"
+    child_phys_phil: "NDCL-V22-P4T02-B2-REPAIRED-Q-RAY-DESCENT-ROBUSTNESS"
+    resolution: "Use the parent stable label NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS. It covers both Q_ray descent and the rank-two/six-cell robustness claim without expanding freeze scope."
+  - topic: "midpoint codimension"
+    child_phys_math: "codimension four in V^3 and codimension three inside the h_0-normalized affine triple space"
+    child_phys_phil: "codimension four in V^3"
+    resolution: "Preserve both compatible statements and their distinct ambient spaces."
+  - topic: "source-side irrelevance"
+    child_phys_math: "recommends a materially distinct quotient family as one selector option"
+    child_phys_phil: "rejects source_side_irrelevance_theorem_path as the present completion class because broader quotient irrelevance is not proved"
+    resolution: "Classify the present packet only as scoped_obstruction. Preserve the narrow theorem that Q_ray fine data are unnecessary for +++ membership, and route any broader irrelevance claim to a fresh selector and theorem packet."
+unique_contributions_preserved:
+  child_phys_math:
+    - "exact normalized codimension-three calculation"
+    - "product hyperbolicity preserved under the delta-w countermodel"
+    - "minimality of one changed sector and one new independent direction"
+  child_phys_phil:
+    - "formal quotient information deletion is not physical gauge equivalence"
+    - "visible goal preload is permissible for a conditional witness but supplies no derivation or universality evidence"
+    - "no-target-import hygiene does not establish operational legitimacy empirical meaning or physical truth"
+fused_decision:
+  decisive_result: "scoped_obstruction"
+  obstruction_id: "OB-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS-001"
+  freeze_decision: "locally_frozen"
+  freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  frozen_scope: "promotion of the exact RT007 repaired quotient as a presentation-independent and unrestricted-independent-variation-robust source-operational law"
+  fixed_candidate_rejected: false
+  same_milestone_continuation_open: true
+  next_unexecuted_role: "theoretical-continuation-selector@0.1.0"
+  distance_to_gr_changed: false
+claim_boundary_preserved: true

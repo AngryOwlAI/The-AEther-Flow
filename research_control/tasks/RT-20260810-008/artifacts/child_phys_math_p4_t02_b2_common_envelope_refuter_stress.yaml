@@ -1,0 +1,395 @@
+artifact_id: "child_phys_math_p4_t02_b2_common_envelope_refuter_stress"
+artifact_type: "parent_child_synthesis_child_output"
+schema_id: "v22_p4_t02_b2_common_envelope_refuter_stress_child_math_v1"
+task_id: "RT-20260810-008"
+job_id: "AJ-RT-20260810-008-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+authority: "science_draft"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Stress the repaired typed response image, two-sheet positive-projective atlas, six-orbit sign image, structured robustness scope, source purity, and semantic boundary before any B2 adequacy or physical interpretation."
+
+source_evidence:
+  - path: "research_control/handoffs/handoff-1004.yaml"
+    sha256: "5d357cb6254d91c0437c1988f80de215580c8f4e2b0b8979548a86d550049539"
+    use: "Authority for exactly one separately admitted repaired-quotient Refuter stress."
+  - path: "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_v1.tex"
+    sha256: "2882fea5872b730d403855ca7b6f06d16526739d1c4ac6a7fb62e3816ce4c052"
+    use: "Registered immutable source for the fixed-candidate theorems and declared limits."
+  - path: "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_record_v1.yaml"
+    sha256: "fc7446f179fa348cd9cd077b79996f04e91ad872fd74d91fd9062d3680b21aa0"
+    use: "Exact proposal data, response image, retained conditional results, and authority limits."
+  - path: "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_typed_response_image_repair_v1.yaml"
+    sha256: "191dedc37210e2d7533b1adbe6f52b07378e4694dc509817c18bd6bc02de1538"
+    use: "Typed response-line, quotient, transition, and robustness contract."
+  - path: "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_control_matrix_v1.yaml"
+    sha256: "adf7bc2a6170899f4fe359e8dc4fae043662697069620efd90c964f6b9f1353b"
+    use: "Fourteen-row Distance-to-GR baseline and exact preserved-limit matrix."
+fixed_candidate_snapshot:
+  source_space: "V=T_x U with dim(V)=4"
+  covector_space: "V*=T_x^* U"
+  supplied_data: "h_0 in V*, u in V with h_0(u)=1, nonzero z in ker(h_0), epsilon=1/3"
+  sector_vectors:
+    R: "v_R=u+epsilon z"
+    S: "v_S=u"
+    D: "v_D=u-epsilon z"
+  response_coordinates: "a=k(u), b=k(z), Resp_0(k)=(a+epsilon b,a,a-epsilon b)"
+  response_image: "H={r in L_0^3:r_R+r_D=2r_S}"
+  response_rank: 2
+  response_kernel: "K=ann(span{u,z})"
+  response_kernel_dimension: 2
+  positive_ray_atlas: "(sigma,t) with sigma=sgn(a), t=epsilon b/a, t not in {-1,+1}"
+  positive_ray_dimension_per_sheet: 1
+  positive_ray_sheet_count: 2
+  realized_nonzero_sign_cells: ["---", "--+", "-++", "+--", "++-", "+++"]
+  common_positive_cone: "Gamma_cap={k:a>epsilon|b|}"
+  fixed_candidate_verdict: "Every displayed RT007 statement above remains exact under its declared fixed-data assumptions. The stress does not refute or rewrite those theorems."
+
+stress_branches:
+  collapse:
+    status: "exact_boundary_collapse"
+    construction: "Set epsilon=0 with u fixed, or set z=0, so v_R=v_S=v_D=u and Resp_col(k)=(a,a,a)."
+    assumption_scope: "This is a boundary degeneration of the split-family assumptions, not a counterexample inside the fixed epsilon=1/3, z nonzero candidate."
+    image: "Delta={lambda(1,1,1):lambda in R}"
+    rank: 1
+    kernel: "ann(span{u})"
+    kernel_dimension: 3
+    positive_ray_image: "Two isolated positive rays, [1,1,1]_+ and [-1,-1,-1]_+; continuous dimension zero and two sign sheets."
+    sign_image: ["+++", "---"]
+    product_polynomial: "P_col(k)=a^3"
+    common_positive_cone: "{k:a>0}"
+    preserved_result: "Product hyperbolicity, nonempty strict common positivity, and the appropriately collapsed all-positive preimage identities survive."
+    failed_extension: "Rank two, the one-dimensional t coordinate, and the six-cell sign image do not extend through the collapse point. Rank drops discontinuously when epsilon z reaches zero."
+
+  nonuniqueness:
+    status: "exact_representation_nonuniqueness"
+    formal_line_rescaling: "Replace each bookkeeping isomorphism iota_s by iota'_s=lambda_s iota_s with lambda_s>0."
+    q_sign_result: "Q_sign is identical for every positive triple (lambda_R,lambda_S,lambda_D), so it cannot select any unique relative response-line normalization."
+    q_ray_result: "Q_ray is identical for every common positive rescaling lambda_R=lambda_S=lambda_D, so it retains at least the unavoidable common-normalization nonuniqueness."
+    exact_information_limit: "A Q_sign value retains only one of six sign cells; a Q_ray value retains only sigma and t. Neither value selects unique formal trivializations, a covector request, empirical units, or physical normalization."
+    preserved_result: "Nonuniqueness of the quotient representation does not alter the fixed response-plane, sign-cell, or all-positive-preimage theorems."
+
+  inverse_defect:
+    status: "exact_noninjectivity"
+    full_response_fiber: "For k_0 in V*, Resp_0^{-1}(Resp_0(k_0))=k_0+K, where K=ann(span{u,z}) has dimension two."
+    positive_ray_fiber: "For k_0 in D, Q_ray^{-1}(Q_ray(k_0))={lambda k_0+eta:lambda>0, eta in K}; this is a three-parameter fiber."
+    sign_fiber: "For a realized sign cell c, Q_sign^{-1}(c) is the nonempty intersection of three strict signed half-spaces in V*. It is a full four-dimensional open cone, equivalently an open two-dimensional response cone lifted by the two-dimensional kernel K."
+    exact_loss:
+      - "Resp_0 loses the two annihilator directions before either quotient."
+      - "Q_ray additionally loses one common positive magnitude."
+      - "Q_sign additionally loses the continuous ray coordinate t and all magnitudes."
+    inverse_conclusion: "No inverse from either quotient value to k exists under the proposal data. The fibers are information loss, not a proved gauge orbit or empirical equivalence class."
+
+  positive_line_trivialization_and_cocycle_descent:
+    status: "exact_descent_obstruction"
+    overlap_model: "On an overlap U_alpha intersect U_beta, let relabelled coordinates transform as r_s^(beta)=g_s^(alpha_beta) r_s^(alpha), with every g_s^(alpha_beta)>0."
+    q_sign_descent_condition: "Q_sign is overlap-invariant under independent positive sector factors, provided each sector transition is invertible and satisfies its triple-overlap cocycle."
+    q_ray_descent_condition: "On D, Q_ray is overlap-invariant for every response if and only if g_R^(alpha_beta)=g_S^(alpha_beta)=g_D^(alpha_beta)=g^(alpha_beta)>0. The common factors must themselves satisfy the overlap cocycle."
+    necessity_proof: "The realized response (1,1,1) has the same positive ray after a diagonal transition only when (g_R,g_S,g_D) is a positive multiple of (1,1,1)."
+    midpoint_plane_condition: "A diagonal transition preserves H={r_R+r_D=2r_S} as the same coordinate plane if and only if its three positive factors are equal. Under general factors the transported plane is r'_R/g_R+r'_D/g_D=2r'_S/g_S."
+    arbitrarily_small_transition_counterexample:
+      parameter: "rho>0"
+      transition: "(g_R,g_S,g_D)=(1+rho,1,1)"
+      witness: "k=h_0, whose fixed response is (1,1,1)"
+      transformed_response: "(1+rho,1,1)"
+      midpoint_residual: "rho"
+      q_ray_effect: "[(1+rho,1,1)]_+ differs from [(1,1,1)]_+ for every rho>0."
+      q_sign_effect: "Both responses remain in the +++ sign cell."
+      limit: "rho may be arbitrarily small, so fixed-representative Q_ray descent is not secured by positivity alone."
+    cocycle_defect: "If g_s^(alpha_beta) g_s^(beta_gamma) differs from g_s^(alpha_gamma), no coherent sector-line descent datum exists. Positivity may preserve local signs but does not repair the missing globalization certificate."
+    fail_closed_cases:
+      - "A negative factor changes oriented sign data."
+      - "A zero factor is not a line isomorphism and may leave D."
+      - "A singular source map, missing inverse, or failed cocycle blocks globalization."
+
+  arbitrarily_small_unstructured_finite_variation:
+    status: "minimal_source_local_countermodel"
+    auxiliary_choice: "Choose w in ker(h_0) linearly independent of z; then u,z,w are linearly independent."
+    perturbation: "v_R(delta)=u+epsilon z+delta w, v_S(delta)=u, v_D(delta)=u-epsilon z, with delta nonzero and arbitrarily small."
+    response_coordinates: "a=k(u), b=k(z), c=k(w)"
+    perturbed_response: "Resp_delta(k)=(a+epsilon b+delta c,a,a-epsilon b)"
+    coefficient_matrix: "[[1,epsilon,delta],[1,0,0],[1,-epsilon,0]]"
+    determinant: "-epsilon*delta"
+    rank_for_nonzero_delta: 3
+    kernel_for_nonzero_delta: "ann(span{u,z,w})"
+    kernel_dimension_for_nonzero_delta: 1
+    midpoint_residual: "r_R+r_D-2r_S=delta c"
+    response_image_for_nonzero_delta: "L_0^3"
+    positive_ray_image_for_nonzero_delta: "All positive rays with three nonzero coordinates; two continuous projective dimensions across eight sign components."
+    sign_image_for_nonzero_delta: ["---", "--+", "-+-", "-++", "+--", "+-+", "++-", "+++"]
+    common_positivity_preserved: "Because h_0(w)=h_0(z)=0 and h_0(u)=1, all three perturbed evaluations at h_0 equal one for every delta. The common-positive cone remains nonempty, open, and convex; for sufficiently small delta the prior strict-margin argument persists by continuity."
+    product_hyperbolicity_preserved: "The three factors remain real oriented degree-one forms with p_s(h_0)=1, so their finite product remains hyperbolic with respect to h_0."
+    smallness_statement: "For any auxiliary finite-dimensional norm and any eta>0, choose 0<|delta|<eta/||w||. Then only one sector changes, by less than eta, while rank rises from two to three and both alternating sign cells become realizable. The auxiliary norm is a calculation device, not physical structure."
+    minimality_statement: "One scalar perturbation in one sector along one new source direction is the smallest number of changed sectors and new independent directions that can raise the response span from two to three."
+    codimension_calculation:
+      ambient_map: "F:V^3->V, F(v_R,v_S,v_D)=v_R+v_D-2v_S, is surjective."
+      ambient_midpoint_codimension: 4
+      normalized_affine_space: "A_h0={(v_R,v_S,v_D):h_0(v_R)=h_0(v_S)=h_0(v_D)=1}, of dimension nine."
+      normalized_tangent_codomain: "F maps the tangent space (ker h_0)^3 surjectively to ker h_0, of dimension three."
+      normalized_midpoint_codimension: 3
+      conclusion: "The exact midpoint family has empty interior under arbitrary independent normalized sector variation. It is robust only relative to the structured midpoint-preserving subspace."
+
+source_purity_stress:
+  target_import_detected: false
+  source_local_inputs_only:
+    - "u, z, and the added w in T_x U"
+    - "h_0 in T_x^* U"
+    - "epsilon, delta, and positive response-line transition factors"
+    - "evaluation pairing and finite-dimensional linear algebra"
+  valid_source_purity_result: "The fixed candidate and both countercontrols can be written without a target atlas, target metric, tetrad, coframe, desired GR cone, empirical calibration, or benchmark answer."
+  source_purity_limit: "Source-local syntax is not source derivation. Current ontology does not derive the midpoint law, the three-sector coverage claim, the diagonal common normalization, the transition cocycle, or physical response semantics."
+
+semantic_boundary_stress:
+  established: "A candidate-scoped mathematical obstruction to treating the fixed RT007 quotient as an ambiently robust and presentation-independent source-operational law."
+  preserved_fixed_results:
+    - "rank two and kernel ann(span{u,z}) for the exact noncollapsed split triple"
+    - "two positive-projective sheets with one continuous coordinate t"
+    - "exact six-cell sign image for the midpoint plane"
+    - "finite product hyperbolicity and strict common positivity"
+    - "both all-positive preimage identities within the fixed presentation"
+  not_established:
+    - "D7 or P2-T01 descriptor adequacy"
+    - "B2 activation, viability, adoption, rejection, adequacy, or sufficiency"
+    - "P4-T03 readiness or execution"
+    - "empirical response, universal propagation, or physical causality"
+    - "a Lorentzian conformal class, physical scale, or g_eff"
+    - "matter coupling or Einstein equations"
+    - "ontology or source-law adoption"
+    - "Gate, benchmark, proof, promotion, publication, push, or external action"
+    - "a global no-go or future source-extension impossibility"
+
+refuter_result:
+  classification: "scoped_obstruction"
+  classification_is_exactly_one_allowed_value: true
+  no_fog_check: true
+  no_fog_explanation: "The RT007 theorems survive exactly for the fixed midpoint triple, but the candidate does not supply a source-derived law forcing the codimension-three normalized midpoint constraint or a diagonal positive normalization cocycle. A one-sector perturbation of arbitrarily small size preserves h_0 common positivity and product hyperbolicity while raising response rank to three and realizing all eight sign cells; an arbitrarily small independent positive line transition preserves Q_sign but changes Q_ray. Therefore the fixed quotient is obstructed as an ambiently robust, presentation-independent source-operational law under this candidate scope."
+  obstruction_scope: "source_extension_candidate"
+  current_ontology_statement: "Current ontology does not derive the missing structured-variation and common-line descent primitives."
+  fixed_candidate_rejected: false
+  same_milestone_continuation_open: true
+
+new_mathematical_payload:
+  - payload_id: "PAYLOAD-RT008-MATH-001"
+    payload_type: "theorem"
+    object_name: "Collapse stratification of the repaired response map"
+    burden_effect: "stress_tests"
+    result: "At epsilon z=0 the rank is one, the kernel dimension is three, and the ray/sign images reduce to two isolated all-equal-sign classes."
+  - payload_id: "PAYLOAD-RT008-MATH-002"
+    payload_type: "theorem"
+    object_name: "Exact response, ray, and sign fiber formulas"
+    burden_effect: "narrows"
+    result: "The full response, positive-ray, and sign quotients have respectively two-, three-, and four-dimensional fibers in their regular fixed-candidate strata."
+  - payload_id: "PAYLOAD-RT008-MATH-003"
+    payload_type: "obstruction"
+    object_name: "Diagonal positive-line descent criterion"
+    burden_effect: "obstructs"
+    result: "Q_ray descends across positive line transitions for every nonzero response only under a common diagonal factor and a valid cocycle; Q_sign survives independent positive factors but still needs valid sector cocycles."
+  - payload_id: "PAYLOAD-RT008-MATH-004"
+    payload_type: "countermodel"
+    object_name: "One-sector transverse rank-jump countermodel"
+    burden_effect: "obstructs"
+    result: "Adding delta w to v_R with w in ker(h_0) independent of z preserves exact common positivity at h_0 while changing rank 2 to rank 3 for every nonzero delta and realizing all eight sign cells."
+  - payload_id: "PAYLOAD-RT008-MATH-005"
+    payload_type: "dependency_map_update"
+    object_name: "Ambient and normalized midpoint codimension calculation"
+    burden_effect: "narrows"
+    result: "The midpoint relation has codimension four in V^3 and codimension three in the h_0-normalized affine triple space."
+
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-V22-P4T02-B2-REPAIRED-QUOTIENT-ROBUST-DESCENT-001"
+  scope: "source_extension_candidate"
+  failed_object: "Ambiently robust and presentation-independent common-envelope quotient law"
+  exact_failure: "The candidate supplies neither a source-derived rule that forces v_R+v_D=2v_S under arbitrary independent normalized sector variation nor a diagonal positive response-line normalization cocycle."
+  minimal_counterexample_path: "research_control/tasks/RT-20260810-008/artifacts/child_phys_math_p4_t02_b2_common_envelope_refuter_stress.yaml"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "route_frozen"
+  forbidden_overread: "This candidate-scoped obstruction does not refute the exact fixed RT007 theorems, reject B2, or imply a global no-go or future source-extension impossibility."
+
+refuter_obstruction_record:
+  obstruction_id: "OBST-V22-P4T02-B2-REPAIRED-QUOTIENT-ROBUST-DESCENT-001"
+  target_claim: "The fixed RT007 repaired quotient itself supplies an ambiently robust, presentation-independent source-operational common-envelope quotient under arbitrary sufficiently small independent source-local sector variation and positive response-line presentation changes."
+  target_milestone: "effective_metric_g_eff"
+  failed_premise: "No source-derived primitive or certificate forces both the codimension-three h_0-normalized midpoint constraint v_R+v_D=2v_S and a diagonal positive response-line normalization cocycle; either an arbitrarily small transverse sector perturbation or an independent positive line transition defeats the claimed robust descent while preserving the stated local controls."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260810-008/artifacts/child_phys_math_p4_t02_b2_common_envelope_refuter_stress.yaml"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "Missing source-rooted structured-variation law and missing common positive normalization/transition-cocycle certificate."
+  source_extension_repair_possible: "repair_possible"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    repeated_burden: false
+    freeze_evaluation_required: true
+    active_freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-ROBUST-DESCENT"
+    prior_attempts_considered:
+      - "RT-20260810-005"
+      - "RT-20260810-006"
+      - "RT-20260810-007"
+      - "RT-20260810-008"
+    freeze_if:
+      - "The same fixed midpoint triple is offered again as evidence of ambient independent-variation robustness without a new source-derived structural law."
+      - "The same fixed response-line trivializations are offered again as a global Q_ray law without a diagonal positive transition cocycle."
+    do_not_freeze_if:
+      - "A materially distinct source-only candidate derives and audits the missing structural and cocycle data."
+      - "A distinct quotient construction proves ambient finite-variation stability without importing target geometry."
+    freeze_decision: "locally_frozen"
+    decision_reason: "The exact route has a minimal arbitrarily small countermodel and a positive-line descent obstruction. Repeating the fixed construction cannot discharge robustness; same-milestone continuation remains open only through materially distinct source-side data or a distinct quotient family."
+    status_update_path: "Parent completion and handoff for RT-20260810-008; this child output has no independent registry authority."
+    next_allowed_route: "theoretical_selector"
+  route_cycle_control:
+    cycle_family: "v22_p4_t02_b2_common_envelope_quotient"
+    current_cycle_step: "refuter_stress"
+    prior_related_tasks:
+      - "RT-20260810-005"
+      - "RT-20260810-006"
+      - "RT-20260810-007"
+    cycle_risk: "high"
+    orbit_avoidance_reason: "The countermodel closes repetition of the fixed midpoint/trivialization route. A successor must choose a materially distinct bridge primitive or quotient family and may not send the same object through another generic formalization loop."
+    next_role_consequence: "theoretical-continuation-selector@0.1.0"
+  forbidden_conclusions:
+    - "No D7 or P2-T01 adequacy reevaluation follows."
+    - "No B2 activation, viability, adoption, rejection, adequacy, or sufficiency follows."
+    - "No P4-T03 unlock or execution follows."
+    - "No empirical response, universal propagation, physical causality, conformal geometry, physical scale, or g_eff follows."
+    - "No ontology or source-law adoption or rejection follows."
+    - "No matter-coupling or Einstein-equation derivation follows."
+    - "No Gate Chair verdict, benchmark promotion, proof promotion, publication, push, or external action follows."
+    - "No global theory rejection or global no-go follows."
+    - "No future source-extension impossibility follows."
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-ROBUST-DESCENT"
+  prior_attempts_considered:
+    - "RT-20260810-005"
+    - "RT-20260810-006"
+    - "RT-20260810-007"
+    - "RT-20260810-008"
+  freeze_decision: "locally_frozen"
+  decision_reason: "A new exact perturbation and descent payload proves that this fixed route cannot establish ambient robustness or global Q_ray descent without materially new source-side structure."
+  next_allowed_route: "theoretical_selector"
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_common_envelope_quotient"
+  current_cycle_step: "refuter_stress"
+  prior_related_tasks:
+    - "RT-20260810-005"
+    - "RT-20260810-006"
+    - "RT-20260810-007"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The local freeze bars another fixed-midpoint repair cycle; the next packet must select a materially distinct bridge-facing construction or distinct quotient family."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0"
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "No change; u, z, h_0, epsilon, the midpoint rule, and response-line data remain unadopted proposal-only source-extension inputs."
+    task_delta: "none"
+  - burden: "Source equivalence EqSrc"
+    status: "No change; no source-equivalence theorem or adoption is added."
+    task_delta: "none"
+  - burden: "RetainH"
+    status: "No change; the stress neither constructs nor adopts the missing primitive."
+    task_delta: "none"
+  - burden: "GenH"
+    status: "No change; the stress neither constructs nor adopts the missing primitive."
+    task_delta: "none"
+  - burden: "ObsLoc_lc"
+    status: "No change; no localization semantics are supplied."
+    task_delta: "none"
+  - burden: "Resp_lc"
+    status: "No change; the formal quotient remains distinct from protected P7 response semantics."
+    task_delta: "none"
+  - burden: "M_src"
+    status: "No change; the source patch remains conditional scaffolding."
+    task_delta: "none"
+  - burden: "g_eff"
+    status: "No change; the scoped obstruction constructs no physical cone, conformal class, scale, or effective metric."
+    task_delta: "none"
+  - burden: "matter coupling"
+    status: "No change; no universal propagation or target coupling is derived."
+    task_delta: "none"
+  - burden: "Einstein equations"
+    status: "No change; no action, variation principle, correction control, or field equation is supplied."
+    task_delta: "none"
+  - burden: "finite-variation robustness"
+    status: "The fixed common-positive witness survives, while the rank-two/six-cell quotient fails arbitrary independent variation; this narrows the proposal-only candidate but does not change the protected ledger."
+    task_delta: "none"
+  - burden: "benchmark promotion"
+    status: "No change; no benchmark comparison or promotion occurs."
+    task_delta: "none"
+  - burden: "Gate Chair status"
+    status: "No change; no protected review is requested or issued."
+    task_delta: "none"
+  - burden: "current route freeze or hard-fail status"
+    status: "A task-local freeze of the fixed robust-descent route is recommended; no protected Distance-to-GR ledger row is changed by this child record and same-milestone continuation remains open."
+    task_delta: "none"
+
+distance_to_gr_summary:
+  row_count: 14
+  changed: false
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  explanation: "The new countermodel and descent obstruction sharpen one proposal-only candidate boundary but construct no downstream GR object and authorize no protected status change."
+
+recommended_next_packet:
+  packet_type: "theoretical_continuation_selector"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  target_derivation_milestone: "effective_metric_g_eff"
+  objective: "Select, without constructing or adopting it, between a bridge-facing source candidate that derives a midpoint/structured-variation law plus a diagonal positive normalization cocycle, and a materially distinct source-only quotient family that is robust in the ambient independent-variation class."
+  required_material_difference: "The selected route must not reuse the fixed midpoint triple or fixed trivializations as evidence of the missing robustness/descent law."
+  separately_admitted_required: true
+  executed: false
+  requires_human_gate: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "D7 adequacy or P2-T01 adequacy"
+    - "B2 activation, viability, adoption, rejection, adequacy, or sufficiency"
+    - "P4-T03 unlock or execution"
+    - "physical causality, universal propagation, conformal geometry, scale, or g_eff"
+    - "ontology or source-law adoption or rejection"
+    - "matter coupling or Einstein equations"
+    - "Gate Chair verdict, benchmark promotion, proof promotion, publication, or completed derivation"
+    - "global no-go, global theory rejection, or future source-extension impossibility"
+    - "push or any external action"
+  summary: "The result is a local mathematical obstruction to one proposal-only candidate overread. It preserves all protected downstream blocks."
+
+authority_limits:
+  predecessor_rewrite_performed: false
+  d7_adequacy_reevaluated: false
+  p2_t01_adequacy_reevaluated: false
+  b2_activated: false
+  b2_adopted_or_rejected: false
+  p4_t03_unlocked_or_executed: false
+  empirical_response_derived: false
+  physical_causality_derived: false
+  effective_metric_constructed: false
+  ontology_or_source_law_adopted: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  gate_chair_verdict_issued: false
+  benchmark_promoted: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+validation:
+  yaml_parse: "PASS"
+  unique_keys: "PASS"
+  source_hashes: "PASS"
+  mathematical_semantics: "PASS"
+  distance_to_gr_row_count: 14
+  distance_to_gr_all_task_deltas_none: true
+  git_diff_check: "PASS"

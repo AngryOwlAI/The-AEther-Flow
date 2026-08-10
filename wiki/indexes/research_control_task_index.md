@@ -2,7 +2,7 @@
 
 Generated navigation support only. This index is not task authority, physics proof authority, benchmark authority, Gate Chair authority, or completed-derivation evidence.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-10T13:09:17Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"bb38dd171792bc21fa7fa5791a51f70143a22b17","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"83604b9f14d46b60092f403e45a897c992feba98783220e10b0b59336d5b01fb"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"622ab193949b2e98216c898e3a45dc1b9cf9faf1282ec2e134e7f88186147c85"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"dc1d1845e2e41800475c0bbbc12bab33d75ed1e95e22a3ea70f357049cbe73ff"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"440473f6831a113dc902ea1040871ecfb614c46f6d235f5b77b9a268a199fd37","source_path_count":"5046","task_count":"1263"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-10T14:44:30Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"2b324d544f114ac21d9572b246561f3e7ad5e90f","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"d093d4bb97cd99500856794f7d9401c55a78b52512d0c46db6c1c06675927d61"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"362023d44953f7105995ab144becd8a005f58f677086962b0b6fab398b8f0430"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"6ee379d9f7369435de44cdb7f0172911dc747b0682441f46d9fa2b6df8bae6c8"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"a90a0b9ccda13bdfb7fad95c402d413d911cb39d49faa293917463b3eb51398f","source_path_count":"5050","task_count":"1264"} -->
 
 ## Generated-Report Provenance
 
@@ -11,21 +11,21 @@ Generated navigation support only. This index is not task authority, physics pro
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_task_index` |
-| Source commit | `bb38dd171792bc21fa7fa5791a51f70143a22b17` |
-| Source-derived generation time | `2026-08-10T13:09:17Z` |
-| Tracked task count | 1263 |
-| Exact source-path count | 5046 |
-| Source manifest SHA-256 | `440473f6831a113dc902ea1040871ecfb614c46f6d235f5b77b9a268a199fd37` |
+| Source commit | `2b324d544f114ac21d9572b246561f3e7ad5e90f` |
+| Source-derived generation time | `2026-08-10T14:44:30Z` |
+| Tracked task count | 1264 |
+| Exact source-path count | 5050 |
+| Source manifest SHA-256 | `a90a0b9ccda13bdfb7fad95c402d413d911cb39d49faa293917463b3eb51398f` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `83604b9f14d46b60092f403e45a897c992feba98783220e10b0b59336d5b01fb`
+- `registries/AGENT_JOB_REGISTRY.csv`: `d093d4bb97cd99500856794f7d9401c55a78b52512d0c46db6c1c06675927d61`
 - `registries/AGENT_ROLE_REGISTRY.csv`: `847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `622ab193949b2e98216c898e3a45dc1b9cf9faf1282ec2e134e7f88186147c85`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `dc1d1845e2e41800475c0bbbc12bab33d75ed1e95e22a3ea70f357049cbe73ff`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `362023d44953f7105995ab144becd8a005f58f677086962b0b6fab398b8f0430`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `6ee379d9f7369435de44cdb7f0172911dc747b0682441f46d9fa2b6df8bae6c8`
 - `research_control/design/task_index_schema_v2.md`: `4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f`
 - `research_control/design/v21_recommendation_backlog.yaml`: `849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f`
 - `research_control/design/v21_task_taxonomy_policy.md`: `7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b`
@@ -41,9 +41,9 @@ or claim-promotion authority.
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `f87d623e38d5b294742a56ed0069d52ca9f572b1711128c57a0583b26a52e97d`
-- Generated-at source timestamp: `2026-08-10T13:09:17Z`
-- Row count: `1263`
+- Source fingerprint: `aa05903ef9fe27753c8a8389037fc1de18f61b3c15399e3905212961b5781db7`
+- Generated-at source timestamp: `2026-08-10T14:44:30Z`
+- Row count: `1264`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -51,6 +51,7 @@ or claim-promotion authority.
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260810-008|RT-20260810-007|2026-08-10T14:44:30Z|2026-08-10T15:07:03Z|Stress the repaired B2 common-envelope quotient|v22_p4_t02_b2_common_hyperbolicity_envelope_refuter_stress|audit_or_review|effective_metric_g_eff|v22_b2_matter_principal_polynomial|theorem_or_precise_obstruction|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Stress the repaired typed response image, two-sheet positive-projective atlas, six-orbit sign image, structured robustness scope, source purity, and semantic boundary before any B2 adequacy or physical interpretation.|refuter@0.2.0|false|false|13||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-008/jobs/completions/AJC-AJ-RT-20260810-008-001.yaml|
 |RT-20260810-007|RT-20260810-006|2026-08-10T13:09:17Z|2026-08-10T13:37:15Z|Repair the B2 common-envelope quotient rank record|v22_p4_t02_b2_common_hyperbolicity_envelope_quotient_rank_repair|construction_or_implementation|effective_metric_g_eff|v22_b2_matter_principal_polynomial|candidate_or_precise_obstruction|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Correct the exact response-image information record while preserving every valid conditional common-envelope result and all authority blocks.|candidate-constructor@0.2.0|false|false|13|Checkpoint AJ-RT-20260810-007-001 once, then execute the separately admitted source-extension Refuter stress in a fresh bounded task.|PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-007/jobs/completions/AJC-AJ-RT-20260810-007-001.yaml|
 |RT-20260810-006|RT-20260810-005|2026-08-10T11:50:28Z|2026-08-10T12:17:04Z|Audit the B2 common-hyperbolicity envelope for hidden target imports|v22_p4_t02_b2_common_hyperbolicity_envelope_source_extension_smuggling_audit|audit_or_review|effective_metric_g_eff|v22_b2_matter_principal_polynomial|audit_verdict_or_precise_repair|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Audit whether the constructed common-envelope inputs, orientation, normalization layers, response semantics, sector scope, transitions, and physical interpretation hide target or goal-property imports.|smuggling-auditor@0.2.0|false|false|13|Checkpoint AJ-RT-20260810-006-001 exactly once. After it commits, execute one fresh source-extension candidate repair with candidate-constructor@0.2.0; do not execute that repair in this task.|PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-006/jobs/completions/AJC-AJ-RT-20260810-006-001.yaml|
 |RT-20260810-005|RT-20260810-004|2026-08-10T10:31:53Z|2026-08-10T10:55:24Z|Construct or precisely obstruct the B2 common-hyperbolicity envelope|v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_construction_or_obstruction|construction_or_implementation|effective_metric_g_eff|v22_b2_matter_principal_polynomial|candidate_or_precise_obstruction|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Construct or precisely obstruct a source-covariant common hyperbolicity envelope from independently supplied proposal-only sector principal data, then determine whether a noncircular source-operational quotient can justify that envelope as a generalized causal structure.|candidate-constructor@0.2.0|false|false|14|Checkpoint AJ-RT-20260810-005-001 exactly once. After it commits, execute one fresh source-extension smuggling audit with smuggling-auditor@0.2.0; do not execute that audit in this task.|PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-005/jobs/completions/AJC-AJ-RT-20260810-005-001.yaml|
