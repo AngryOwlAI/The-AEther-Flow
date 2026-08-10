@@ -1,0 +1,207 @@
+schema_id: "v22_p4_t02_b2_common_envelope_quotient_rank_repair_record_v1"
+task_id: "RT-20260810-007"
+job_id: "AJ-RT-20260810-007-001"
+candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-QUOTIENT-RANK-REPAIR-V1"
+predecessor_candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+authority: "science_draft"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+decisive_result: "constructed_candidate"
+no_fog_check: true
+no_fog_explanation: "The exact response image is repaired to a rank-two plane whose positive-projective quotient has one continuous coordinate plus the discrete sign sheet. All six and only six nonzero sign orbits are realized. The valid conditional product, common cone, quotient definitions, positive-preimage identities, covariance, and strict-margin witness are preserved. The packet creates no empirical response, physical causality, all-sector universality, ontology adoption, B2 activation, P4-T03, g_eff, coupling, Einstein-equation, benchmark, proof, promotion, or global-no-go result."
+
+immutable_predecessors:
+  rt005_candidate_path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_v1.tex"
+  rt005_candidate_sha256: "eeac27624e437851726b3865b8900a78f8bed39aa116fc99fd4dfd3a24689152"
+  rt005_envelope_record_sha256: "60fbd716099176e2f9faff5eb70cc1c02336cde2c730fea6719bb0088213c7bf"
+  rt005_quotient_record_sha256: "a9138de596a1810bb5533f47b56a60d2e4f83a54d5e2e4163b3dd25fa322637e"
+  rt006_audit_path: "research_control/tasks/RT-20260810-006/artifacts/v22_p4_t02_b2_common_envelope_smuggling_audit_v1.tex"
+  rt006_audit_sha256: "7acffba7b7798c86bad06e878989028ee70cca478e801c41cb577b615a61f0bd"
+  rt006_disposition_sha256: "0d6ba43aeba87eea272d8ad38eb5a983798524a1ef0973294c1581c6d1d6859f"
+  rewrite_performed: false
+
+exact_equipped_source_data:
+  source_patch: "one declared smooth four-dimensional source patch U"
+  source_point: "x in U"
+  tangent_space: "V=T_x U"
+  covector_space: "V*=T_x^* U"
+  equipped_sector_ids: ["R", "S", "D"]
+  equipped_protocol_roles:
+    R: "Rod_src"
+    S: "Signal_src"
+    D: "Detector_src"
+  supplied_orientation: "h_0 in V*"
+  supplied_vectors:
+    - "u in V with h_0(u)=1"
+    - "z in ker(h_0), z nonzero"
+  split_parameter: "epsilon=1/3"
+  sector_vectors:
+    R: "v_R=u+epsilon z"
+    S: "v_S=u"
+    D: "v_D=u-epsilon z"
+  sector_forms:
+    R: "p_R(k)=k(v_R)"
+    S: "p_S(k)=k(v_S)"
+    D: "p_D(k)=k(v_D)"
+  source_status: "All listed data are explicit proposal-only source-extension inputs and are not derived from current ontology."
+  target_data_used: false
+
+typed_response_repair:
+  response_lines:
+    R: "L_R"
+    S: "L_S"
+    D: "L_D"
+  declared_bookkeeping_line: "L_0"
+  relabelings:
+    R: "iota_R:L_R->L_0"
+    S: "iota_S:L_S->L_0"
+    D: "iota_D:L_D->L_0"
+  cross_sector_equality_rule: "Cross-sector addition or equality is written only after applying every iota_s."
+  unit_status: "The relabelings are fixed proposal-only formal trivializations. They are not empirical calibration, a physical unit law, or an adopted cross-sector commensurability law."
+  relabelled_response_map: "Resp_prin(k)=(iota_R p_R(k),iota_S p_S(k),iota_D p_D(k))"
+  reproduction_coordinates:
+    a: "k(u)"
+    b: "k(z)"
+    response: "(r_R,r_S,r_D)=(a+epsilon b,a,a-epsilon b)"
+
+response_image_theorem:
+  theorem_id: "THM-V22-P4T02-B2-TYPED-RESPONSE-IMAGE-REPAIR-001"
+  image: "im(Resp_prin)={r in L_0^3:r_R+r_D=2r_S}"
+  rank: 2
+  kernel: "ker(Resp_prin)=ann(span{u,z})"
+  kernel_dimension: 2
+  proof_key:
+    - "The displayed response formula gives r_R+r_D=2r_S."
+    - "Because u and z are independent, a=k(u) and b=k(z) range independently; (1,1,1) and (1,0,-1) span the image plane."
+    - "A covector maps to zero exactly when it annihilates both u and z."
+  false_predecessor_information_claim_replaced: "Q_ray does not retain two independent relative response ratios on this exact image. Its image has one continuous projective dimension."
+
+positive_projective_image:
+  domain: "D={k in V*:r_R r_S r_D is nonzero}"
+  quotient: "Q_ray(k)=[Resp_prin(k)]_{R_{>0}}"
+  domain_chart_fact: "On D, a=r_S is nonzero; the excluded values t=+1 and t=-1 are exactly the R or D zero-response boundaries."
+  discrete_sheet: "sigma=sgn(a) in {+1,-1}"
+  continuous_coordinate: "t=epsilon b/a=(r_R-r_D)/(2r_S)"
+  normalized_ray: "[Resp_prin(k)]_+=[sigma(1+t),sigma,sigma(1-t)]_+ after division by |a|"
+  continuous_dimension: 1
+  sheet_count: 2
+  precision_limit: "The bare representative [1+t,1,1-t]_+ covers only sigma=+1. Positive-scale quotienting does not identify the sigma=-1 sheet."
+  all_positive_cell: "sigma=+1 and -1<t<1"
+
+nonzero_sign_image:
+  quotient: "Q_sign(k)=[Resp_prin(k)]_{(R_{>0})^3}"
+  realized_ordered_orbits:
+    - "---"
+    - "--+"
+    - "-++"
+    - "+--"
+    - "++-"
+    - "+++"
+  excluded_ordered_orbits:
+    - "-+-"
+    - "+-+"
+  classification_proof: "For sigma=+1, t<-1, -1<t<1, and t>1 give -++, +++, and ++-. The sigma=-1 sheet reverses those signs and gives +--, ---, and --+. The zero-response boundaries t=+/-1 are outside D."
+  realized_orbit_count: 6
+  total_nonzero_ordered_orbit_count: 8
+
+retained_conditional_results:
+  product_polynomial: "P_product(k)=p_R(k)p_S(k)p_D(k)=k(u)(k(u)^2-epsilon^2 k(z)^2)"
+  product_characteristic_set: "the union of the three distinct sector hyperplanes"
+  common_cone: "Gamma_intersection={k in V*:a>epsilon|b|}"
+  common_cone_properties:
+    - "nonempty"
+    - "open"
+    - "convex"
+    - "contains h_0"
+  positive_preimage_identities:
+    - "Gamma_intersection=Q_ray^{-1}(C_+++)"
+    - "Gamma_intersection=Q_sign^{-1}(O_+++)"
+  local_hyperbolicity_status: "Product hyperbolicity for the explicit oriented degree-one forms is preserved."
+  strict_margin_certificate: "The RT005 independent product-open neighborhood witness and reproduction bound 109/150>0 remain valid."
+  robustness_rank_separation: "Common positivity is open under independent small sector changes, but the exact rank-two plane requires the structured midpoint relation v'_R+v'_D=2v'_S. Unstructured independent forms can have rank three and realize all eight sign cells."
+  physical_status: "Common time admissibility is weaker than universal propagation and is not one physical causal boundary."
+
+source_presentation_and_transition_record:
+  source_presentation_derivative: "For invertible A:V->V', transport v_s to A v_s, pull covectors by A*, and transport the supplied h_0 to h'_0 with A* h'_0=h_0."
+  evaluation_identity: "p'_s(k')=p_s(A* k')"
+  orientation_identity: "p'_s(h'_0)=p_s(h_0)=1"
+  sector_relabeling: "Permitted relabeling simultaneously permutes sector forms, typed lines, relabelings, and response coordinates."
+  response_line_transition: "A coherent common positive factor preserves Q_ray. Independent positive sector factors generally change Q_ray but preserve Q_sign."
+  fail_closed_conditions:
+    - "negative transition factor"
+    - "zero transition factor"
+    - "singular source-presentation map"
+    - "inverse defect"
+    - "cocycle defect"
+    - "non-simultaneous sector relabeling"
+  global_bundle_claimed: false
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  repaired_object: "proposal-only common-envelope response-image record"
+  new_mathematical_payload:
+    - "typed response-line relabeling definition"
+    - "exact response-image plane theorem"
+    - "rank-two and ann(span{u,z}) kernel theorem"
+    - "two-sheet one-continuous-parameter positive-projective atlas"
+    - "complete six-of-eight nonzero sign-orbit classification"
+    - "h_0 and formal-unit transition record"
+  repair_scope_complete: true
+  full_refuter_stress_executed: false
+  next_required_packet: "source_extension_refuter_stress"
+  next_required_role: "refuter@0.2.0"
+
+source_extension_classification:
+  category: "new_ontology_primitive_candidate_repaired_response_image_record"
+  current_ontology_derivation_claimed: false
+  conservative_layer: "The linear image, quotient, sign classification, preimage, and covariance statements follow once the proposal data and typed relabelings are supplied."
+  new_primitive_layer: "Sector principal data, supplied orientation, response-line trivializations, relative normalization status, covector request, and formal response law remain proposal-only source-extension data."
+  forbidden_import_layer: "No target atlas, metric, tetrad, coframe, Lorentzian cone, desired speed, empirical calibration, benchmark result, or process authority is used."
+  target_gr_import_detected: false
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  human_gated: false
+  adoption_status: "blocked_adoption_open_continuation"
+
+freeze_evaluation:
+  prior_freeze_label_preserved: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  current_repair_branch_frozen: false
+  repair_finding_closed: true
+  global_freeze_applied: false
+  reason: "The exact RT006 defect is repaired with new mathematical payload. A materially distinct full Refuter stress remains open and is selected separately."
+
+distance_to_gr:
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Correct the exact response-image information record while preserving every valid conditional common-envelope result and all authority blocks."
+  changed: false
+  ledger_row_updated: false
+  explanation: "A corrected proposal-only source response image supplies no physical causality, all-sector universality, conformal structure, scale, g_eff, matter coupling, Einstein equations, benchmark recovery, or Gate Chair authority."
+
+authority_limits:
+  empirical_response_derived: false
+  physical_operational_quotient_derived: false
+  physical_cone_constructed: false
+  universal_matter_propagation_derived: false
+  full_p7_sector_coverage_derived: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  conformal_structure_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  gate_b_verdict_issued: false
+  benchmark_promoted: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  distance_to_gr_changed: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

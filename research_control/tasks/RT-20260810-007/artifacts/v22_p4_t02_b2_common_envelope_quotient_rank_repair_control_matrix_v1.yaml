@@ -1,0 +1,148 @@
+schema_id: "v22_p4_t02_b2_common_envelope_quotient_rank_repair_control_matrix_v1"
+task_id: "RT-20260810-007"
+job_id: "AJ-RT-20260810-007-001"
+candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-QUOTIENT-RANK-REPAIR-V1"
+authority: "science_draft"
+status_label: "draft/control"
+decisive_result: "constructed_candidate"
+scope: "Exact quotient-rank repair and preserved-limit matrix; not full Refuter stress, adoption, adequacy, B2, physical-cone, P4-T03, g_eff, benchmark, or Gate review."
+
+repair_rows:
+  - control_id: "QR-01-TYPED-RESPONSE-LINES"
+    burden: "Make cross-sector response equality well-typed."
+    construction: "Declare L_R, L_S, L_D and proposal-only relabelings iota_s:L_s->L_0 before forming Resp_prin in L_0^3."
+    exact_result: "constructed"
+    preserved_limit: "The relabelings are not calibration or physical unit identification."
+  - control_id: "QR-02-IMAGE-RELATION"
+    burden: "Replace the false unconstrained three-response information count."
+    construction: "Prove im(Resp_prin)={r:r_R+r_D=2r_S}."
+    exact_result: "rank_two_plane"
+    preserved_limit: "No claim is made for unequipped sectors or a general response law."
+  - control_id: "QR-03-KERNEL"
+    burden: "Identify exactly which covector information is discarded before quotienting."
+    construction: "Prove ker(Resp_prin)=ann(span{u,z}), of dimension two in V*."
+    exact_result: "constructed"
+    preserved_limit: "This is linear information loss, not gauge identification or empirical equivalence."
+  - control_id: "QR-04-POSITIVE-PROJECTIVE-IMAGE"
+    burden: "Correct the number of relative ray parameters."
+    construction: "Use sigma=sgn(a) and t=epsilon b/a; normalize by |a| to sigma(1+t,1,1-t)."
+    exact_result: "one_continuous_dimension_two_discrete_sheets"
+    preserved_limit: "Positive scaling does not identify the sigma sheets; t alone is not globally injective."
+  - control_id: "QR-05-SIGN-IMAGE"
+    burden: "Classify the exact independent-positive-scale quotient image."
+    construction: "Realize ---, --+, -++, +--, ++-, +++; exclude -+- and +-+."
+    exact_result: "six_of_eight_nonzero_ordered_orbits"
+    preserved_limit: "Q_sign discards all relative magnitudes and is not physical response semantics."
+  - control_id: "QR-06-POSITIVE-PREIMAGES"
+    burden: "Preserve the valid common-positive identities after repair."
+    construction: "Prove Gamma_intersection={a>epsilon|b|}=Q_ray^{-1}(C_+++)=Q_sign^{-1}(O_+++)."
+    exact_result: "preserved"
+    preserved_limit: "Common admissibility is weaker than universal propagation."
+  - control_id: "QR-07-PRODUCT-AND-CONE"
+    burden: "Keep the valid finite product construction separate from the repaired quotient information count."
+    construction: "Retain P_product=a(a^2-epsilon^2b^2), its three hyperplanes, and the h_0-containing common cone."
+    exact_result: "preserved"
+    preserved_limit: "Distinct characteristic boundaries do not become one physical causal boundary."
+  - control_id: "QR-08-STRICT-MARGIN"
+    burden: "Preserve finite independent-variation robustness."
+    construction: "Retain the intrinsic product-open neighborhood and exact reproduction bound 109/150>0."
+    exact_result: "preserved_local_witness"
+    preserved_limit: "No global conditioning, strong hyperbolicity, or all-sector robustness follows; the exact rank-two midpoint relation is not open under unrestricted independent sector perturbations."
+  - control_id: "QR-09-H0-AND-SOURCE-TRANSITIONS"
+    burden: "State how supplied orientation and responses transform without target data."
+    construction: "Transport v_s by invertible A, covectors by pullback, and h_0 so A* h'_0=h_0; require simultaneous sector relabeling."
+    exact_result: "local_source_covariance_recorded"
+    preserved_limit: "h_0 remains supplied proposal data; no physical time orientation is derived."
+  - control_id: "QR-10-NORMALIZATION-BOUNDARY"
+    burden: "Separate formal common-scale rays from independently normalized sectors."
+    construction: "Common positive factors preserve Q_ray; independent positive factors generally change Q_ray but preserve Q_sign."
+    exact_result: "boundary_explicit"
+    preserved_limit: "Unequal degree, multiplicity, physical units, transition weights, and representative selection remain unresolved."
+  - control_id: "QR-11-FAIL-CLOSED"
+    burden: "Prevent defective transitions from being silently globalized."
+    construction: "Negative, zero, singular, inverse-defective, noncocyclic, or non-simultaneous transitions fail closed."
+    exact_result: "recorded"
+    preserved_limit: "No global quotient bundle is claimed."
+  - control_id: "QR-12-SECTOR-SCOPE"
+    burden: "Prevent finite-witness universality overread."
+    construction: "Bind every statement to the exactly equipped R/S/D family."
+    exact_result: "finite_scope_preserved"
+    preserved_limit: "An added sector can destroy the common intersection."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "No change; typed relabelings and the repaired response record remain unadopted proposal-only source-extension data."
+    task_delta: "none"
+  - burden: "Source equivalence EqSrc"
+    status: "No change; no general source-equivalence theorem is added."
+    task_delta: "none"
+  - burden: "RetainH"
+    status: "No change; blocked by missing primitive."
+    task_delta: "none"
+  - burden: "GenH"
+    status: "No change; blocked by missing primitive."
+    task_delta: "none"
+  - burden: "ObsLoc_lc"
+    status: "No change; no localization semantics are added."
+    task_delta: "none"
+  - burden: "Resp_lc"
+    status: "No change; the repaired formal response remains distinct from adopted Resp_lc and protected P7 semantics."
+    task_delta: "none"
+  - burden: "M_src"
+    status: "No change; the source patch remains conditional scaffolding and no scope expansion occurs."
+    task_delta: "none"
+  - burden: "g_eff"
+    status: "No change; no physical cone, conformal class, scale, or effective metric is constructed."
+    task_delta: "none"
+  - burden: "matter coupling"
+    status: "No change; no universal propagation or target coupling is derived."
+    task_delta: "none"
+  - burden: "Einstein equations"
+    status: "No change; no action, variation, correction control, or field equation is supplied."
+    task_delta: "none"
+  - burden: "finite-variation robustness"
+    status: "The local RT005 strict-margin witness is preserved without changing the protected ledger status."
+    task_delta: "none"
+  - burden: "benchmark promotion"
+    status: "No change; no comparison or promotion is performed."
+    task_delta: "none"
+  - burden: "Gate Chair status"
+    status: "No change; no protected review is requested."
+    task_delta: "none"
+  - burden: "current route freeze or hard-fail status"
+    status: "The shared-tau selector remains locally frozen; the repaired common-envelope branch remains open only for one separately admitted full Refuter stress."
+    task_delta: "none; prior shared-tau selector freeze preserved and current repaired branch remains open for distinct Refuter stress"
+
+freeze_and_successor:
+  prior_freeze_label_preserved: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  repaired_branch_frozen: false
+  exact_rt006_repair_burden_closed: true
+  successor_packet_type: "source_extension_refuter_stress"
+  successor_role_family: "refuter@0.2.0"
+  successor_executed: false
+
+summary:
+  repair_row_count: 12
+  mathematical_repair_complete: true
+  retained_conditional_result_count: 4
+  full_refuter_stress_executed: false
+  source_law_adopted: false
+  physical_causality_established: false
+  all_sector_universality_established: false
+  distance_to_gr_changed: false
+
+authority_limits:
+  proof_authority: false
+  ontology_or_source_law_adopted: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physical_cone_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_verdict_issued: false
+  global_no_go_claimed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

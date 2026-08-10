@@ -1,0 +1,391 @@
+% authority: science_draft
+% object-id: TEX-V22-P4-T02-B2-COMMON-ENVELOPE-QUOTIENT-RANK-REPAIR-V1
+% task-id: RT-20260810-007
+% agentjob-id: AJ-RT-20260810-007-001
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.78in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newenvironment{nonconclusion}{\par\smallskip\small\noindent\textbf{Non-conclusion.}\ }{\par\smallskip}
+
+\newcommand{\RR}{\mathbb R}
+\newcommand{\Resp}{\operatorname{Resp}_{\mathrm{prin}}}
+\newcommand{\Qray}{Q_{\mathrm{ray}}}
+\newcommand{\Qsign}{Q_{\mathrm{sign}}}
+\newcommand{\GammaInt}{\Gamma_{\cap}}
+\newcommand{\ann}{\operatorname{ann}}
+\newcommand{\sgn}{\operatorname{sgn}}
+
+\title{V22 P4--T02 B2 Common-Envelope Quotient-Rank Repair v1\\
+\large Typed response image, two-sheet projective atlas, and exact sign cells}
+\author{Candidate Constructor Packet RT-20260810-007}
+\date{2026-08-10}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\begin{abstract}
+This draft/control packet repairs one exact information-content defect in the
+proposal-only common-hyperbolicity envelope candidate.  The closed RT005 and
+RT006 artifacts are held byte fixed.  Each sector response is first placed in
+its own formal line $L_s$ and moved by an explicitly supplied bookkeeping
+isomorphism $\iota_s:L_s\to L_0$ before cross-sector equality is written.
+For $a=k(u)$, $b=k(z)$, and $\epsilon=1/3$, the relabelled response is
+$(a+\epsilon b,a,a-\epsilon b)$.  Its image is exactly the plane
+$r_R+r_D=2r_S$, its rank is two, and its kernel is
+$\ann(\operatorname{span}\{u,z\})$.  On the all-components-nonzero domain,
+the positive-scale ray is parameterized by the discrete sheet
+$\sigma=\sgn(a)$ and one continuous coordinate
+$t=\epsilon b/a$; after division by $|a|$ its representative is
+$\sigma(1+t,1,1-t)$.  The independent-positive-scale sign quotient realizes
+exactly six ordered sign cells and excludes the two alternating cells.
+The two quotient definitions and both all-positive preimage identities remain
+valid.  So do the finite product, common cone, source-presentation covariance,
+and strict-margin witness.  The decisive result is
+\texttt{constructed\_candidate}, restricted to the exact equipped
+Rod/Signal/Detector family.  The relabelings are not physical units or
+calibration, the quotient is not empirical or causal semantics, and no
+ontology adoption, universality, B2 activation, P4--T03, $g_{\rm eff}$,
+coupling, field equation, benchmark, proof promotion, or global no-go follows.
+One full Refuter stress remains separately unexecuted.
+\end{abstract}
+
+\section{Repair authority and immutable predecessors}
+
+The repaired object is a new revision.  It does not edit or retroactively
+correct either closed predecessor.  The RT005 candidate has SHA-256
+\texttt{eeac27624e437851726b3865b8900a78f8bed39aa116fc99fd4dfd3a24689152};
+the RT006 audit has SHA-256
+\texttt{7acffba7b7798c86bad06e878989028ee70cca478e801c41cb577b615a61f0bd}.
+RT006 established the narrow repair burden: replace the false claim of two
+independent relative response ratios by the exact image relation, rank, kernel,
+one continuous projective parameter, and realized sign cells.  It retained all
+other conditional statements listed below.
+
+The status vocabulary is exact.  This document is \texttt{draft/control}; the
+construction is \texttt{proposal-only} \texttt{source-extension data}.
+It is not a \texttt{canonical-ontology candidate}, is neither
+\texttt{adopted} nor \texttt{rejected}, and is not a protected
+\texttt{human-gated} decision.  Current adoption is blocked while distinct
+same-milestone continuation remains open.
+
+\section{Fixed equipped source data and typed responses}
+
+Let $x$ lie in one declared smooth four-dimensional source patch $U$, and set
+$V=T_xU$.  The exact equipped sector set is
+${\cal S}_{\rm eq}=\{R,S,D\}$, carrying the local proposal roles
+Rod$_{\rm src}$, Signal$_{\rm src}$, and Detector$_{\rm src}$.
+Supply $h_0\in V^*$ and independent $u,z\in V$ with
+\[
+ h_0(u)=1,\qquad h_0(z)=0,
+\]
+and fix $\epsilon=1/3$.  The proposal-only sector vectors are
+\[
+ v_R=u+\epsilon z,\qquad v_S=u,\qquad v_D=u-\epsilon z.
+\]
+Nothing in current ontology or protected P7 semantics is claimed to derive or
+select these inputs.
+
+Cross-sector scalar comparison requires an explicit type record.  For each
+$s\in\{R,S,D\}$, let $L_s$ be a one-dimensional formal response line with
+chosen generator $e_s$.  Define the tagged evaluation
+\[
+ \widetilde p_s(k)=k(v_s)e_s\in L_s.
+\]
+Supply a bookkeeping line $L_0$ with generator $e_0$ and proposal-only
+isomorphisms
+\[
+ \iota_s:L_s\longrightarrow L_0,\qquad \iota_s(e_s)=e_0.
+\]
+Only after these maps are declared do we set
+\[
+ \bar p_s(k)e_0:=\iota_s\bigl(\widetilde p_s(k)\bigr),
+ \qquad
+ \Resp(k):=(\bar p_R(k),\bar p_S(k),\bar p_D(k)).
+\]
+The $\iota_s$ are formal fixed-trivialization data.  They are not empirical
+calibration, a physical unit conversion, an adopted commensurability law, or
+evidence that the sectors measure one quantity.
+
+\section{Exact response-image repair}
+
+Put
+\[
+ a=k(u),\qquad b=k(z).
+\]
+In the declared bookkeeping trivialization,
+\begin{equation}\label{eq:response}
+ \Resp(k)=(a+\epsilon b,\ a,\ a-\epsilon b).
+\end{equation}
+
+\begin{theorem}[Typed image, rank, and kernel]\label{thm:image}
+The relabelled response map has image
+\[
+ H=\{(r_R,r_S,r_D)\in\RR^3:r_R+r_D=2r_S\},
+\]
+rank two, and kernel
+\[
+ \ker(\Resp)=\ann(\operatorname{span}\{u,z\}).
+\]
+Because $\dim V=4$, the kernel has dimension two.
+\end{theorem}
+
+\begin{proof}
+Equation~\eqref{eq:response} gives
+$(a+\epsilon b)+(a-\epsilon b)=2a$, so the image lies in $H$.
+The conditions $h_0(u)=1$ and $h_0(z)=0$ with $z\ne0$ imply that $u,z$ are
+independent.  Consequently the evaluation map
+$k\mapsto(k(u),k(z))$ is onto $\RR^2$.  The responses at $(a,b)=(1,0)$ and
+$(0,1/\epsilon)$ are $(1,1,1)$ and $(1,0,-1)$, which form a basis of $H$.
+Thus the image equals $H$ and the rank is two.  Equation~\eqref{eq:response}
+vanishes exactly when $a=b=0$, which is precisely the annihilator stated.
+Rank--nullity gives the final dimension.
+\end{proof}
+
+This theorem closes the RT006 repair burden.  The three written response
+coordinates are linearly constrained: the exact candidate image cannot retain
+two independent continuous relative ratios after one common scale is removed.
+
+\section{Positive-projective image: one coordinate and a sign sheet}
+
+Let
+\[
+ D=\{k\in V^*: \bar p_R(k)\bar p_S(k)\bar p_D(k)\ne0\}.
+\]
+Define the fixed-representative positive-scale quotient
+\[
+ \Qray(k)=[\Resp(k)]_{\RR_{>0}}.
+\]
+On $D$, $a=r_S\ne0$.  Therefore the two quantities
+\[
+ \sigma=\sgn(a)\in\{+1,-1\},
+ \qquad
+ t=\epsilon\frac{b}{a}
+   =\frac{r_R-r_D}{2r_S}
+\]
+are defined, and $t\ne\pm1$ because either value makes one outer response
+zero.
+
+\begin{theorem}[Exact positive-ray atlas]\label{thm:ray}
+The image of $\Qray$ on $D$ is in bijection with
+\[
+ \{(\sigma,t):\sigma\in\{+1,-1\},\ t\in\RR\setminus\{-1,+1\}\}.
+\]
+After division by $|a|$, the corresponding ray has representative
+\begin{equation}\label{eq:ray}
+ [\Resp(k)]_+
+   =[\sigma(1+t),\ \sigma,\ \sigma(1-t)]_+.
+\end{equation}
+Hence each sheet has one continuous dimension.  Positive projectivization does
+not identify the two $\sigma$ sheets.
+\end{theorem}
+
+\begin{proof}
+Equation~\eqref{eq:response} equals
+$a(1+t,1,1-t)$.  Dividing by the positive number $|a|$ gives
+Equation~\eqref{eq:ray}.  Conversely, for any admitted $(\sigma,t)$ choose
+$a=\sigma$ and $b=ta/\epsilon$; independence of $u,z$ supplies a realizing
+covector.  If two normalized representatives lie on the same positive ray,
+their middle coordinates force the same $\sigma$ and scale one, after which
+the outer coordinates force the same $t$.
+\end{proof}
+
+The often-written expression $[1+t,1,1-t]_+$ covers only the
+$\sigma=+1$ sheet.  The repaired statement is one continuous projective
+coordinate \emph{plus} the discrete sheet, not a globally sheet-free $t$.
+The locus $a=0$ lies outside $D$ because $r_S=0$.  In the projective closure of
+the full response plane it may be covered by a complementary $b\ne0$ chart,
+where it gives the boundary direction $[1,0,-1]$ or its opposite.  That closure
+record is not part of either quotient on $D$.
+
+\section{Exact six-cell sign image}
+
+The coarser quotient is
+\[
+ \Qsign(k)=[\Resp(k)]_{(\RR_{>0})^3}.
+\]
+It retains only the ordered signs under independent positive sector scaling.
+
+\begin{proposition}[Six and only six nonzero sign cells]
+On $D$, the image of $\Qsign$ is
+\[
+ \{---,\ --+,\ -++,\ +--,\ ++-,\ +++\}.
+\]
+The alternating cells $-+-$ and $+-+$ are not realized.
+\end{proposition}
+
+\begin{proof}
+For $\sigma=+1$, Equation~\eqref{eq:ray} gives
+\[
+ t<-1:\ -++,\qquad -1<t<1:\ +++,\qquad t>1:\ ++-.
+\]
+For $\sigma=-1$, every sign reverses, giving respectively
+$+--$, $---$, and $--+$.  Every interval is nonempty, so all six cells occur.
+At $t=-1$ or $t=+1$ one outer response vanishes and the point leaves $D$.
+The interval classification is exhaustive and contains neither alternating
+pattern.  Equivalently, three nonzero entries satisfying
+$r_R+r_D=2r_S$ cannot have their middle sign opposite to both outer signs.
+\end{proof}
+
+\section{Preserved product, cone, and preimage identities}
+
+The response repair does not change the finite product
+\[
+ P_\Pi(k)=\bar p_R(k)\bar p_S(k)\bar p_D(k)
+          =a(a^2-\epsilon^2b^2).
+\]
+Its zero set remains the union of the three distinct sector hyperplanes.  The
+$h_0$-containing simultaneous-positive component remains
+\begin{equation}\label{eq:cone}
+ \GammaInt
+ =\{k:a+\epsilon b>0,\ a>0,\ a-\epsilon b>0\}
+ =\{k:a>\epsilon|b|\}.
+\end{equation}
+It is nonempty, open, convex, and contains $h_0$.
+
+\clearpage
+\begin{theorem}[Repaired quotient preimages]\label{thm:preimage}
+Let $C_{+++}$ be the all-positive positive-ray cell and let $O_{+++}$ be the
+all-positive independent-scale sign orbit.  Then
+\[
+ \GammaInt=\Qray^{-1}(C_{+++})
+           =\Qsign^{-1}(O_{+++}).
+\]
+In the ray atlas, this is exactly the cell $\sigma=+1$ and $-1<t<1$.
+\end{theorem}
+
+\begin{proof}
+Membership in either inverse image is componentwise positivity of the three
+entries in Equation~\eqref{eq:response}.  This is exactly
+Equation~\eqref{eq:cone}.  Positive common and independent scale actions both
+preserve component signs.  The atlas form follows from
+Equation~\eqref{eq:ray}.
+\end{proof}
+
+The conditional product-hyperbolicity statement also survives: with the
+explicit orientation supplied, the roots of
+$t\mapsto P_\Pi(q+t h_0)$ are real sector by sector.  Repeated roots can still
+occur, so strict, strong, or symmetric hyperbolicity and PDE conditioning do
+not follow.
+
+The RT005 finite-variation result is likewise retained, not enlarged.  Pairing
+continuity supplies independent product-open neighborhoods of $h_0$ and the
+three $v_s$ on which every evaluation stays positive.  In the reproduction
+chart $u=e_0$, $z=e_1$, $h_0=e^0$, the declared
+$\delta=1/10$ coordinate box gives
+\[
+ 1-\left(\frac73\delta+4\delta^2\right)=\frac{109}{150}>0.
+\]
+This is a local calculation witness, not a physical norm, global robustness
+theorem, or all-sector conditioning result.
+
+The two robustness statements must be separated.  Common positivity is open
+under independent small changes of the three sector vectors.  The exact plane
+$r_R+r_D=2r_S$, by contrast, is preserved only by structured changes satisfying
+$v'_R+v'_D=2v'_S$ with two independent spanning directions.  Under unrestricted
+independent changes the response rank can become three; for example the forms
+defined by three independent vectors $e_0,e_1,e_2$ realize all eight nonzero
+ordered sign cells.  Thus the six-cell theorem is exact for the admitted split
+family, not a generic consequence of having three sectors.
+
+\section{Source presentation, orientation, units, and failure controls}
+
+For an invertible source-presentation derivative $A:V\to V'$, transport
+$v_s$ to $v'_s=Av_s$ and pull covectors by $A^*$.  The supplied orientation
+must also transform: choose $h'_0$ so $A^*h'_0=h_0$.  Then
+\[
+ p'_s(k')=k'(Av_s)=p_s(A^*k'),
+ \qquad
+ p'_s(h'_0)=p_s(h_0)=1.
+\]
+The bookkeeping lines and $\iota_s$ transform with the declared source
+presentation; no target atlas is used.  Permitted sector relabelling acts by
+one simultaneous permutation of vectors, response-line tags, trivializations,
+and response coordinates.
+
+A coherent common positive response factor preserves both quotients.
+Independent positive sector factors generally change $\Qray$ but preserve
+$\Qsign$.  Thus $\Qray$ remains fixed-representative formal syntax unless a
+coherent relative normalization law is supplied.  Neither quotient resolves
+unequal homogeneous degree, multiplicity, physical units, transition weights,
+field redefinitions, or component selection.  A negative factor changes a sign
+cell; a zero factor leaves $D$; a singular presentation map prevents pullback
+equivalence; inverse, cocycle, or non-simultaneous relabelling defects block
+globalization.  Each case fails closed.
+
+\section{Scope and physical interpretation boundary}
+
+The exact construction covers only $R,S,D$.  It is not an enumeration of all
+P7 matter sectors.  That restriction is substantive: adding a sector with
+principal vector $-u$ makes simultaneous positivity impossible because the
+equipped cone requires $k(u)>0$ while the added sector requires $k(u)<0$.
+
+The common time-covector cone is also weaker than universal propagation.
+$P_\Pi=0$ is still a union of distinct sector characteristic hyperplanes.
+Neither quotient turns those hyperplanes into one boundary or supplies
+empirical device semantics, a physical future orientation, strong
+hyperbolicity, signal speeds, free fall, Lorentzian conformal structure,
+physical scale, or an effective metric.
+
+\section{Distance-to-GR matrix}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.65\textwidth}}
+\toprule
+Burden & Status after the repair \\
+\midrule
+Source ontology primitives & Typed relabelings and the repaired response record remain unadopted proposal-only inputs; no canonical source law changes. \\
+Source equivalence EqSrc & No general equivalence theorem is added. \\
+RetainH & Unchanged; blocked by missing primitive. \\
+GenH & Unchanged; blocked by missing primitive. \\
+ObsLoc$_{\rm lc}$ & No localization semantics are added. \\
+Resp$_{\rm lc}$ & The repaired formal response remains distinct from adopted Resp$_{\rm lc}$ and protected P7 semantics. \\
+$M_{\rm src}$ & The patch is conditional source scaffolding and receives no scope expansion. \\
+$g_{\rm eff}$ & No physical cone, conformal class, scale, or metric is constructed. \\
+Matter coupling & No universal propagation or target coupling is derived. \\
+Einstein equations & No action, variation, correction control, or field equation is supplied. \\
+Finite-variation robustness & The local RT005 strict-margin witness is preserved; the protected ledger is unchanged. \\
+Benchmark promotion & No comparison or promotion is performed. \\
+Gate Chair status & No protected review is requested. \\
+Current route freeze or hard-fail status & The shared-$\tau$ selector stays locally frozen; this repaired branch remains open only for a separately admitted full Refuter stress. \\
+\bottomrule
+\end{longtable}
+
+The target derivation milestone remains \texttt{effective\_metric\_g\_eff}.
+The Distance-to-GR ledger changes by zero rows.
+
+\section{Decisive result, freeze, and successor}
+
+The Candidate Constructor result is:
+\begin{quote}
+\texttt{constructed\_candidate} --- on the exact equipped independently split
+degree-one witness, the typed response image is a rank-two plane with kernel
+$\ann(\operatorname{span}\{u,z\})$.  Its positive-projective image has one
+continuous coordinate $t$ and the retained discrete sheet $\sigma$; its sign
+image contains six of eight nonzero ordered cells.  The valid product, common
+cone, quotient definitions, preimage identities, covariance, and local
+strict-margin result are preserved.
+\end{quote}
+
+The earlier
+\texttt{NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR} freeze is preserved.  The
+present repair branch is not frozen: it adds the exact payload selected by
+RT006 and closes that one defect.  The next materially distinct packet is one
+\texttt{source\_extension\_refuter\_stress} under
+\texttt{refuter@0.2.0}.  That packet is selected but not executed here.
+
+\begin{nonconclusion}
+No predecessor, ontology, response-semantics, physical-causality, universality,
+B2, P4--T03, $g_{\rm eff}$, coupling, Einstein-equation, Distance-to-GR,
+Gate, benchmark, proof, promotion, external-action, global-no-go,
+future-impossibility, or completed-derivation status changes.
+\end{nonconclusion}
+
+\end{document}

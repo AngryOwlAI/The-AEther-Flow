@@ -689,6 +689,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P3-T03-PARENT-FUSION-CONTROLLED-REFINEMENT-V1` `research_control/tasks/RT-20260809-015/artifacts/parent_fusion_notes_p3_t03_refinement.md`
 - `MD-V22-P3-T04-PARENT-FUSION-LINEAR-RESPONSE-V1` `research_control/tasks/RT-20260809-016/artifacts/parent_fusion_notes_p3_t04_linear_response.md`
 - `MD-V22-P4-T01-PARENT-FUSION-PRINCIPAL-SYMBOL-V1` `research_control/tasks/RT-20260809-018/artifacts/parent_fusion_notes_p4_t01_principal_symbol.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-ENVELOPE-QUOTIENT-RANK-REPAIR-V1` `research_control/tasks/RT-20260810-007/artifacts/parent_fusion_notes_p4_t02_b2_common_envelope_quotient_rank_repair.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-006/artifacts/parent_fusion_notes_p4_t02_b2_common_envelope_smuggling_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-HYPERBOLICITY-ENVELOPE-V1` `research_control/tasks/RT-20260810-005/artifacts/parent_fusion_notes_p4_t02_b2_common_hyperbolicity_envelope.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-AUDIT-V1` `research_control/tasks/RT-20260809-022/artifacts/parent_fusion_notes_p4_t02_b2_descriptor_audit.md`
@@ -1181,6 +1182,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P3-T03-CONTROLLED-REFINEMENT-LIMIT-V1` `research_control/tasks/RT-20260809-015/artifacts/v22_p3_t03_controlled_refinement_limit_v1.tex`
 - `TEX-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-PREPRINCIPAL-V1` `research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex`
 - `TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1` `research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex`
+- `TEX-V22-P4-T02-B2-COMMON-ENVELOPE-QUOTIENT-RANK-REPAIR-V1` `research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_v1.tex`
 - `TEX-V22-P4-T02-B2-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-006/artifacts/v22_p4_t02_b2_common_envelope_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CANDIDATE-V1` `research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_v1.tex`
 - `TEX-V22-P4-T02-B2-CONTINUUM-LIFT-DESCRIPTOR-FORMALIZATION-V1` `research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex`
@@ -1876,6 +1878,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P3-T03-PARENT-FUSION-CONTROLLED-REFINEMENT-V1` `wiki/markdown/md-v22-p3-t03-parent-fusion-controlled-refinement-v1.md`
 - `WIKI-MD-V22-P3-T04-PARENT-FUSION-LINEAR-RESPONSE-V1` `wiki/markdown/md-v22-p3-t04-parent-fusion-linear-response-v1.md`
 - `WIKI-MD-V22-P4-T01-PARENT-FUSION-PRINCIPAL-SYMBOL-V1` `wiki/markdown/md-v22-p4-t01-parent-fusion-principal-symbol-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-ENVELOPE-QUOTIENT-RANK-REPAIR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-common-envelope-quotient-rank-repair-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-common-envelope-smuggling-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-HYPERBOLICITY-ENVELOPE-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-common-hyperbolicity-envelope-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-audit-v1.md`
@@ -2362,6 +2365,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P3-T03-CONTROLLED-REFINEMENT-LIMIT-V1` `wiki/tex/tex-v22-p3-t03-controlled-refinement-limit-v1.md`
 - `WIKI-TEX-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-PREPRINCIPAL-V1` `wiki/tex/tex-v22-p3-t04-background-linear-response-preprincipal-v1.md`
 - `WIKI-TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1` `wiki/tex/tex-v22-p4-t01-gauge-reduced-source-principal-symbol-v1.md`
+- `WIKI-TEX-V22-P4-T02-B2-COMMON-ENVELOPE-QUOTIENT-RANK-REPAIR-V1` `wiki/tex/tex-v22-p4-t02-b2-common-envelope-quotient-rank-repair-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-common-envelope-smuggling-audit-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CANDIDATE-V1` `wiki/tex/tex-v22-p4-t02-b2-common-hyperbolicity-envelope-candidate-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-CONTINUUM-LIFT-DESCRIPTOR-FORMALIZATION-V1` `wiki/tex/tex-v22-p4-t02-b2-continuum-lift-descriptor-formalization-v1.md`

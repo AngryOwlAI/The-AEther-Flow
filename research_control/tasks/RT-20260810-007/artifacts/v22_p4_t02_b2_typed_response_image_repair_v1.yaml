@@ -1,0 +1,156 @@
+schema_id: "v22_p4_t02_b2_typed_response_image_repair_v1"
+task_id: "RT-20260810-007"
+job_id: "AJ-RT-20260810-007-001"
+candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-QUOTIENT-RANK-REPAIR-V1"
+authority: "science_draft"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+
+typing_contract:
+  sector_response_lines:
+    R: "L_R"
+    S: "L_S"
+    D: "L_D"
+  common_bookkeeping_line: "L_0"
+  declared_isomorphisms:
+    R: "iota_R:L_R->L_0"
+    S: "iota_S:L_S->L_0"
+    D: "iota_D:L_D->L_0"
+  comparison_order:
+    - "evaluate p_s(k) in its own L_s"
+    - "apply the declared iota_s"
+    - "form the ordered tuple in L_0^3"
+    - "only then write cross-sector linear relations or quotient coordinates"
+  meaning: "formal proposal bookkeeping only"
+  empirical_calibration_claimed: false
+  physical_unit_identification_claimed: false
+  adopted_commensurability_law_claimed: false
+
+exact_map:
+  source: "V*=T_x^*U"
+  target: "L_0^3"
+  nonzero_domain: "D={k:r_R r_S r_D is nonzero}"
+  formula: "Resp_prin(k)=(a+epsilon b,a,a-epsilon b), where a=k(u), b=k(z), epsilon=1/3"
+  image_equation: "r_R+r_D=2r_S"
+  image_dimension: 2
+  map_rank: 2
+  kernel: "ann(span{u,z})"
+  kernel_dimension: 2
+  converse_image_witnesses:
+    common_direction: "(a,b)=(1,0) gives (1,1,1)"
+    split_direction: "(a,b)=(0,3) gives (1,0,-1)"
+
+positive_ray_layer:
+  quotient_group: "R_{>0}"
+  quotient_action: "lambda.(r_R,r_S,r_D)=(lambda r_R,lambda r_S,lambda r_D)"
+  formula: "Q_ray(k)=[Resp_prin(k)]_{R_{>0}}"
+  chart_domain: "D forces a=r_S nonzero and t not equal to +1 or -1"
+  discrete_sheet: "sigma=sgn(a)"
+  continuous_parameter: "t=epsilon b/a=(r_R-r_D)/(2r_S)"
+  normalized_representative: "sigma(1+t,1,1-t) after division by |a|"
+  continuous_dimension: 1
+  sheet_count: 2
+  retained_information: "one continuous relative-response parameter and one discrete overall sign sheet"
+  removed_information: "one common positive magnitude"
+  not_removed:
+    - "overall sign sheet"
+    - "independent sector normalization"
+    - "unequal homogeneous degree"
+    - "multiplicity"
+    - "physical units"
+    - "transition weights"
+    - "component selection"
+  independent_positive_sector_scale_invariant: false
+
+sign_orbit_layer:
+  quotient_group: "(R_{>0})^3"
+  quotient_action: "(lambda_R,lambda_S,lambda_D).r=(lambda_R r_R,lambda_S r_S,lambda_D r_D)"
+  formula: "Q_sign(k)=[Resp_prin(k)]_{(R_{>0})^3}"
+  independent_positive_sector_scale_invariant: true
+  realized_cells:
+    - sheet: "+"
+      t_interval: "t<-1"
+      sign_orbit: "-++"
+    - sheet: "+"
+      t_interval: "-1<t<1"
+      sign_orbit: "+++"
+    - sheet: "+"
+      t_interval: "t>1"
+      sign_orbit: "++-"
+    - sheet: "-"
+      t_interval: "t<-1"
+      sign_orbit: "+--"
+    - sheet: "-"
+      t_interval: "-1<t<1"
+      sign_orbit: "---"
+    - sheet: "-"
+      t_interval: "t>1"
+      sign_orbit: "--+"
+  excluded_cells:
+    - "+-+"
+    - "-+-"
+  exclusion_basis: "Three nonzero entries in an arithmetic progression cannot have either alternating ordered sign pattern."
+  zero_boundaries:
+    t_minus_one: "r_R=0; outside D"
+    t_plus_one: "r_D=0; outside D"
+  closure_chart_note: "The broadened projective response plane has a complementary b-nonzero chart containing a=0 directions [1,0,-1] and [-1,0,1]; those directions remain outside D because r_S=0."
+
+positive_preimage_theorem:
+  theorem_id: "THM-V22-P4T02-B2-REPAIRED-QUOTIENT-PREIMAGE-001"
+  common_cone: "Gamma_intersection={k:a>epsilon|b|}"
+  ray_cell: "C_+++={positive rays with every component positive}"
+  sign_cell: "O_+++={(+,+,+)}"
+  identities:
+    - "Gamma_intersection=Q_ray^{-1}(C_+++)"
+    - "Gamma_intersection=Q_sign^{-1}(O_+++)"
+  chart_form: "sigma=+1 and -1<t<1"
+  proof_key: "Each identity is componentwise simultaneous positivity of a+epsilon b, a, and a-epsilon b."
+
+transition_contract:
+  source_presentation: "Invertible source derivative A transports v_s to A v_s and covectors by pullback; the typed response values are unchanged after the declared relabelings."
+  supplied_orientation: "h'_0 is transported so A* h'_0=h_0 and remains proposal-only data."
+  simultaneous_sector_relabeling: true
+  common_positive_factor:
+    q_ray: "preserved"
+    q_sign: "preserved"
+  independent_positive_factors:
+    q_ray: "generally changed"
+    q_sign: "preserved"
+  negative_factor: "fails the oriented sign cell"
+  zero_factor: "leaves D"
+  singular_source_map: "fails closed"
+  inverse_or_cocycle_defect: "fails closed"
+
+semantic_boundary:
+  established: "one exact formal source-response image classification under supplied proposal data"
+  not_established:
+    - "existing P7 response semantics"
+    - "empirical detector calibration"
+    - "physical causal quotient"
+    - "one shared characteristic boundary"
+    - "universal propagation"
+    - "all-sector coverage"
+    - "conformal geometry"
+    - "effective metric"
+  target_gr_import_detected: false
+
+robustness_rank_identity_separation:
+  common_positive_property: "product-open under independent sufficiently small changes of the finite supplied sector vectors"
+  rank_two_plane_property: "exact only while the structured midpoint relation v'_R+v'_D=2v'_S is preserved with two independent spanning directions"
+  countercontrol: "three independent response vectors produce rank three and all eight nonzero ordered sign patterns"
+  implication: "The six-cell classification is exact for the admitted split family, not generic three-sector universality."
+
+authority_limits:
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  empirical_response_derived: false
+  physical_causality_derived: false
+  full_p7_sector_coverage_derived: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  proof_authority: false
+  physics_promotion_authorized: false

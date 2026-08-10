@@ -1,0 +1,485 @@
+job_id: "AJ-RT-20260810-007-001"
+task_id: "RT-20260810-007"
+decision_id: "DDR-20260810-007"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260810-007"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-10T13:09:17Z"
+started_at: "2026-08-10T13:09:17Z"
+completed_at: "2026-08-10T13:37:15Z"
+completion_path: "research_control/tasks/RT-20260810-007/jobs/completions/AJC-AJ-RT-20260810-007-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The complete-V22 goal, committed RT006 checkpoint bb38dd171792bc21fa7fa5791a51f70143a22b17, and handoff-1003 authorize one P4-T02 Candidate Constructor quotient-rank repair packet and one checkpoint. Full Refuter stress, adequacy reevaluation, B2 activation, P4-T03, source-law adoption, protected Gate, external review, publication, push, and external action are not authorized."
+objective: "Repair or precisely obstruct the exact proposal-only common-envelope response-image record by proving the typed image relation, rank, kernel, two-sheet positive-projective atlas with one continuous coordinate, six realized sign orbits, formal-unit boundary, h_0 transition behavior, and preserved positive-preimage identities without changing the closed predecessor sources or overreading physical meaning."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Correct the exact response-image information record while preserving every valid conditional common-envelope result and all authority blocks."
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+adoption_status: "blocked_adoption_open_continuation"
+route_reason: "handoff_1003_selects_one_fresh_candidate_constructor_quotient_rank_repair_after_committed_rt006_checkpoint"
+route_strategy_id: "repair_v22_p4_t02_b2_common_hyperbolicity_envelope_quotient_rank_v1"
+immutable_route_sha256: "b7926adde7570d49c8f90b196d03b151f022c324243bfe0b6fe7813d9ba184e8"
+source_head: "bb38dd171792bc21fa7fa5791a51f70143a22b17"
+source_tree: "80a767d0e26d2e139e58b03671a2db4c01babd3c"
+assembly_parent_head: "bb38dd171792bc21fa7fa5791a51f70143a22b17"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+recommendation_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R10"
+  - "V22-R13"
+declared_coverage_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R13"
+  - "S5"
+sequence_step_ids:
+  - "S5"
+cross_cutting_directive_ids:
+  - "V22-X02"
+  - "V22-X04"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P4-T02"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1003"
+  source_handoff_path: "research_control/handoffs/handoff-1003.yaml"
+  source_handoff_sha256: "b7926adde7570d49c8f90b196d03b151f022c324243bfe0b6fe7813d9ba184e8"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite:
+    task_id: "RT-20260810-006"
+    commit: "bb38dd171792bc21fa7fa5791a51f70143a22b17"
+    committed: true
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1178
+    relationship_row_count: 6043
+    semantic_row_count: 1178
+    vault_row_count: 1178
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V22-P4-T02-B2-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V22-P4-T02-B2-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1"
+      returned_object_ids:
+        - "TEX-V22-P4-T02-B2-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1"
+      returned_object_ids:
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "TEX-V22-P4-T02-B2-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260810-006/artifacts/v22_p4_t02_b2_common_envelope_smuggling_audit_v1.tex"
+      source_hash: "7acffba7b7798c86bad06e878989028ee70cca478e801c41cb577b615a61f0bd"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260810-006/artifacts/parent_fusion_notes_p4_t02_b2_common_envelope_smuggling_audit.md"
+      source_hash: "8d61ff9bedddf4d0e834d7c6791019f110df1be359ee212b1ce8fcc9bf7e941c"
+  additional_control_inspections:
+    - object_id: "HANDOFF-1003"
+      control_path: "research_control/handoffs/handoff-1003.yaml"
+      source_hash: "b7926adde7570d49c8f90b196d03b151f022c324243bfe0b6fe7813d9ba184e8"
+    - object_id: "AJC-AJ-RT-20260810-006-001"
+      control_path: "research_control/tasks/RT-20260810-006/jobs/completions/AJC-AJ-RT-20260810-006-001.yaml"
+      source_hash: "8115e7c83edd119610c7281c76705a33b4095ccc349fb43c2ea339332ff24ee0"
+    - object_id: "V22-P4-T02-B2-COMMON-ENVELOPE-AUDIT-DISPOSITION-V1"
+      control_path: "research_control/tasks/RT-20260810-006/artifacts/v22_p4_t02_b2_common_envelope_audit_disposition_v1.yaml"
+      source_hash: "0d6ba43aeba87eea272d8ad38eb5a983798524a1ef0973294c1581c6d1d6859f"
+    - object_id: "TEX-V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CANDIDATE-V1"
+      control_path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_v1.tex"
+      source_hash: "eeac27624e437851726b3865b8900a78f8bed39aa116fc99fd4dfd3a24689152"
+    - object_id: "V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-RECORD-V1"
+      control_path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_record_v1.yaml"
+      source_hash: "60fbd716099176e2f9faff5eb70cc1c02336cde2c730fea6719bb0088213c7bf"
+    - object_id: "V22-P4-T02-B2-OPERATIONAL-RESPONSE-RAY-QUOTIENT-V1"
+      control_path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_operational_response_ray_quotient_v1.yaml"
+      source_hash: "a9138de596a1810bb5533f47b56a60d2e4f83a54d5e2e4163b3dd25fa322637e"
+    - object_id: "DISTANCE-TO-GR-LEDGER"
+      control_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      source_hash: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+  authority_note: "Tracked registered source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  assumption_delta:
+    - "Hold every closed RT005 and RT006 source byte fixed and create a new repair revision."
+    - "Retain the exact equipped Rod Signal Detector sector family and the original proposal-only vectors v_R=u+epsilon z, v_S=u, and v_D=u-epsilon z."
+    - "Introduce declared typed relabelings from each formal response line into one bookkeeping line before writing cross-sector linear identities."
+    - "Replace the false two-independent-ratios claim by the image plane r_R+r_D=2r_S, rank two, kernel ann(span{u,z}), and the two-sheet positive-projective atlas (sigma,t) with sigma=sgn(k(u)) and t=epsilon k(z)/k(u)."
+    - "Record all six and only six realized nonzero sign orbits and preserve both all-positive preimage identities."
+    - "Record h_0 and response transition behavior as source-presentation data and import no target norm, metric, calibration, or empirical semantics."
+  materiality_basis: "RT006 proved one exact repairable rank defect and selected this packet. The repair adds a typed response-image theorem, exact kernel, projective atlas, sign-orbit classification, and transition record absent from RT005 while preserving every valid conditional result."
+  payload_details:
+    construction_identity: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-QUOTIENT-RANK-REPAIR-V1"
+    source_extension_classification: "proposal_only_common_envelope_response_image_record_repair"
+    global_no_go_claimed: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P4-T02-B2-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1"
+    - "MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1"
+    - "TEX-V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CANDIDATE-V1"
+    - "research_control/handoffs/handoff-1003.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_v1.tex"
+    - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_record_v1.yaml"
+    - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_typed_response_image_repair_v1.yaml"
+    - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_control_matrix_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+    - "latex_compile_pass"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "repair_v22_p4_t02_b2_common_hyperbolicity_envelope_quotient_rank_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  family_identity_sha256: "9d8691e21e36bac63185d4ee6bf530f768e5952d202bc4dea374d9cc4aead8eb"
+  assumption_sha256es:
+    - "eeac27624e437851726b3865b8900a78f8bed39aa116fc99fd4dfd3a24689152"
+    - "7acffba7b7798c86bad06e878989028ee70cca478e801c41cb577b615a61f0bd"
+    - "0d6ba43aeba87eea272d8ad38eb5a983798524a1ef0973294c1581c6d1d6859f"
+    - "b7926adde7570d49c8f90b196d03b151f022c324243bfe0b6fe7813d9ba184e8"
+  route_kind: "candidate_construction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-QUOTIENT-RANK-REPAIR"
+    material_difference_basis: "The packet corrects one named false information-content statement using the exact image relation, rank, kernel, projective coordinate, and sign image proved by RT006. It does not replay the frozen shared-tau selector or reconstruct a frozen candidate."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_v1.tex"
+      - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_typed_response_image_repair_v1.yaml"
+      - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_control_matrix_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered draft/control common-envelope quotient-rank repair manuscript"
+      - "one corrected quotient-rank record, typed response-image record, and exact control matrix"
+    project_system:
+      - "task-local executable model, focused validator, compact receipt, LaTeX receipt, parent-child synthesis, and standard control synchronization"
+  acceptance_criteria:
+    physics:
+      - "the response-image relation rank kernel two-sheet projective atlas and six realized sign orbits are formal and reproducible"
+      - "typed relabeling formal-unit h_0 transition and nonempirical semantics are explicit"
+      - "the product common cone quotient definitions positive-preimage identities covariance robustness and finite sector scope are preserved"
+      - "one repaired candidate or precise obstruction is returned without full Refuter stress physical-cone or promotion overread"
+    project_system:
+      - "source hashes artifacts registries backlog program state and handoff pass deterministic validation"
+      - "the rendered TeX derivative passes inspection and one governed checkpoint records the transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the exact predecessor hashes selected repair and downstream blocks fixed"
+      - "require one repaired candidate or precise obstruction with no-fog accounting"
+      - "separate typed mathematics proposal semantics physical interpretation adoption and workflow authority"
+      - "preserve the valid product cone quotient covariance robustness and positive-preimage results"
+      - "review child outputs for conflicts and fuse one final repair artifact"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260810-007/artifacts/child_phys_math_p4_t02_b2_common_envelope_quotient_rank_repair.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260810-007/artifacts/child_phys_phil_p4_t02_b2_common_envelope_quotient_rank_repair.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260810-007/artifacts/parent_conflict_review_p4_t02_b2_common_envelope_quotient_rank_repair.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260810-007/artifacts/parent_fusion_notes_p4_t02_b2_common_envelope_quotient_rank_repair.md"
+    fused_output_path: "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+  rationale: "Two internal child execution units work in parallel under one outer AgentJob, one Candidate Constructor overlay, one claim boundary, and one completion record."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-1003.yaml"
+  - "research_control/handoffs/handoff-1003.md"
+  - "research_control/tasks/RT-20260810-001/**"
+  - "research_control/tasks/RT-20260810-002/**"
+  - "research_control/tasks/RT-20260810-005/**"
+  - "research_control/tasks/RT-20260810-006/**"
+  - "research_control/tasks/RT-20260727-007/**"
+  - "research_control/tasks/RT-20260728-001/**"
+  - "research_control/tasks/RT-20260728-002/**"
+  - "research_control/tasks/RT-20260728-003/**"
+  - "research_control/tasks/RT-20260728-004/**"
+  - "registries/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-1004.yaml"
+  - "research_control/handoffs/handoff-1004.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260810-007/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - ".local/**"
+forbidden_paths:
+  - "ontology/**"
+  - "papers/**"
+  - "manuscripts/**"
+  - "experiments/**"
+  - ".git/**"
+allowed_source_classes:
+  - "registered_tex"
+  - "registered_markdown"
+  - "tracked_control_state"
+  - "task_local_draft_control"
+  - "protected_finite_p7_conditional_input_read_only"
+  - "proposal_only_source_extension_data"
+forbidden_source_classes:
+  - "predecessor_source_rewrite"
+  - "canonical_ontology_write"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "P2_T01_adequacy_reevaluation"
+  - "B2_activation_or_adoption"
+  - "target_atlas"
+  - "target_metric"
+  - "target_tetrad"
+  - "target_coframe"
+  - "desired_gr_cone"
+  - "benchmark_success"
+  - "candidate_reconstruction"
+  - "generated_derivative_authority"
+  - "registry_metadata_authority"
+  - "role_authority"
+  - "validation_authority"
+  - "gate_chair_verdict"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+  - "full_refuter_stress_execution"
+  - "P4_T03_execution"
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup <object-id> --json"
+  - ".venv/bin/python research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_model.py --json"
+  - ".venv/bin/python research_control/tasks/RT-20260810-007/artifacts/validate_v22_p4_t02_b2_common_envelope_quotient_rank_repair.py --write-report --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260810-007-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260810-007-001 --planner-validation"
+  - "bundled Tectonic compile and bundled Poppler render for visual inspection"
+required_validators:
+  - "focused_v22_p4_t02_b2_common_envelope_quotient_rank_repair_validator"
+  - "task_taxonomy"
+  - "project_change_classifier"
+  - "documentation_impact"
+  - "project_improvement_signal_validator"
+  - "claim_language_changed"
+  - "generated_report_freshness"
+  - "affected_validation_profile"
+  - "research_control_diff_validation"
+  - "git_diff_check"
+expected_outputs:
+  - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_v1.tex"
+  - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_record_v1.yaml"
+  - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_typed_response_image_repair_v1.yaml"
+  - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_control_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_model.py"
+  - "research_control/tasks/RT-20260810-007/artifacts/child_phys_math_p4_t02_b2_common_envelope_quotient_rank_repair.yaml"
+  - "research_control/tasks/RT-20260810-007/artifacts/child_phys_phil_p4_t02_b2_common_envelope_quotient_rank_repair.yaml"
+  - "research_control/tasks/RT-20260810-007/artifacts/parent_conflict_review_p4_t02_b2_common_envelope_quotient_rank_repair.yaml"
+  - "research_control/tasks/RT-20260810-007/artifacts/parent_fusion_notes_p4_t02_b2_common_envelope_quotient_rank_repair.md"
+  - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260810-007/artifacts/validate_v22_p4_t02_b2_common_envelope_quotient_rank_repair.py"
+  - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_validation.json"
+  - "research_control/tasks/RT-20260810-007/artifacts/v22_p4_t02_b2_common_envelope_quotient_rank_repair_compact_receipt.json"
+  - "research_control/tasks/RT-20260810-007/00_TASK.yaml"
+  - "research_control/tasks/RT-20260810-007/DDR-20260810-007.md"
+  - "research_control/tasks/RT-20260810-007/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260810-007/roles/candidate-constructor@0.2.0--RT-20260810-007.yaml"
+  - "research_control/tasks/RT-20260810-007/jobs/completions/AJC-AJ-RT-20260810-007-001.yaml"
+  - "research_control/handoffs/handoff-1004.yaml"
+  - "research_control/handoffs/handoff-1004.md"
+  - "research_control/program_state.yaml"
+claim_boundary:
+  boundary_id: "CB-V22-P4-T02-B2-COMMON-ENVELOPE-QUOTIENT-RANK-REPAIR-001"
+  allowed_claims:
+    - "the exact typed-relabelled response image is the plane r_R+r_D=2r_S"
+    - "the response map has rank two and kernel ann(span{u,z})"
+    - "the positive-projective image has discrete sheet sigma=sgn(k(u)) and one continuous coordinate t=epsilon k(z)/k(u) on the k(u)-nonzero chart"
+    - "the nonzero sign image contains exactly six ordered orbits and excludes the two alternating patterns"
+    - "Q_ray Q_sign and both all-positive preimage identities remain valid under their declared representative and scaling conventions"
+    - "typed relabeling formal units h_0 transitions source covariance robustness and the exact equipped finite sector scope are explicit"
+    - "one fresh full Refuter stress or precise obstruction followup is selected according to the decisive result"
+  forbidden_claims:
+    - "the closed RT005 or RT006 source artifact is rewritten or retroactively corrected"
+    - "the response ray retains two independent relative ratios on the exact candidate image"
+    - "the three equipped controls exhaust all P7 matter sectors or establish full B2 universality"
+    - "the product polynomial is every sector's physical characteristic polynomial"
+    - "a common time-covector domain establishes equal characteristic boundaries universal propagation physical causality conformal geometry or g_eff"
+    - "D7 adequacy was evaluated or B2 was activated viable adopted rejected adequate or sufficient"
+    - "P4-T03 is unlocked or a physical signature orientation scale metric coupling or Einstein equation is derived"
+    - "the result is a global no-go or future source-extension impossibility"
+    - "full Refuter stress a protected Gate verdict external review proof publication push or completed derivation exists"
+  authority_source: "research_control/handoffs/handoff-1003.yaml"
+  checkpoint_limit: 1
+project_improvement_signals: []
+notes: "One outer AgentJob is active. The separately admitted Refuter stress successor remains unexecuted until after this repair validates and checkpoints."
