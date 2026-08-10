@@ -1,0 +1,95 @@
+schema_id: "v22_p4_t02_b2_atomic_obligation_construction_matrix_v1"
+artifact_id: "V22-P4-T02-B2-ATOMIC-OBLIGATION-CONSTRUCTION-MATRIX-V1"
+task_id: "RT-20260809-023"
+job_id: "AJ-RT-20260809-023-001"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+instance_attempt_id: "INST-V22-B2-EQUIPPED-CHAIN-TRANSPORT-001"
+status: "draft/control"
+atomic_obligation_count: 35
+discharged_count: 33
+blocked_count: 2
+open_count: 0
+all_obligations_accounted: true
+descriptor_instance_complete: false
+blocking_obligation_ids:
+  - "D7-O2"
+  - "D7-O4"
+families:
+  - family_id: "D1_FIELDS_REGULARITY"
+    discharged_count: 5
+    blocked_count: 0
+    obligations:
+      - {obligation_id: "D1-O1", status: "discharged_proposal_only", evidence: "U=(-1,1)^4; F_s=W_s=U x R3; rank 3; C2 sections."}
+      - {obligation_id: "D1-O2", status: "discharged_proposal_only", evidence: "E_s has order one and C2 exceeds the m+1 minimum."}
+      - {obligation_id: "D1-O3", status: "discharged_proposal_only", evidence: "All U is the constant-rank locus; constraint quotient and operator rank-change strata are empty for nonzero tau."}
+      - {obligation_id: "D1-O4", status: "discharged_proposal_only", evidence: "Deterministic local branch admitted; stochastic marked partial singular and nonlocal replacements typed outside it."}
+      - {obligation_id: "D1-O5", status: "discharged_proposal_only", evidence: "Bundles are trivial source bundles defined from U and B3 address components; no target atlas metric tetrad coframe or physical time enters."}
+  - family_id: "D2_FINITE_TO_CONTINUUM_LIFT"
+    discharged_count: 5
+    blocked_count: 0
+    obligations:
+      - {obligation_id: "D2-O1", status: "discharged_proposal_only", evidence: "K_n=B3 x G_n with dyadic grids and restriction/copy transition maps."}
+      - {obligation_id: "D2-O2", status: "discharged_proposal_only", evidence: "Each exact equipped Rod Signal and Detector record r_s in Q3 has L_s_n and S_s_n."}
+      - {obligation_id: "D2-O3", status: "discharged_proposal_only", evidence: "Sampling recovery is exact and address permutation commutes with lift and sampling."}
+      - {obligation_id: "D2-O4", status: "discharged_proposal_only", evidence: "Declared componentwise C1 sup topology has epsilon_n=0 for every n."}
+      - {obligation_id: "D2-O5", status: "discharged_proposal_only", evidence: "The fixed tau and carrier-matrix operator law is selected before traces; finite trace agreement alone is not used."}
+  - family_id: "D3_SOURCE_OUTPUT_QUOTIENTS"
+    discharged_count: 5
+    blocked_count: 0
+    obligations:
+      - {obligation_id: "D3-O1", status: "discharged_proposal_only", evidence: "Source groupoid is identity because the ordered directed equipped B3 carrier has no nontrivial equipment automorphism."}
+      - {obligation_id: "D3-O2", status: "discharged_proposal_only", evidence: "Output groupoid is identity and all three components plus fixed finite token responses are invariant."}
+      - {obligation_id: "D3-O3", status: "discharged_proposal_only", evidence: "Source and output regular quotient tangents are both R3 on all U."}
+      - {obligation_id: "D3-O4", status: "discharged_proposal_only", evidence: "Sampling and finite readout descend through identity quotients without representative selection."}
+      - {obligation_id: "D3-O5", status: "discharged_proposal_only", evidence: "Nonconstant-rank singular partial and non-differential cases are absent or typed outside the branch."}
+  - family_id: "D4_SECTOR_EQUATIONS_REDUCTION"
+    discharged_count: 5
+    blocked_count: 0
+    obligations:
+      - {obligation_id: "D4-O1", status: "discharged_proposal_only", evidence: "E_s[r](u)=tau(u)+(I-M_B)(u-Lr), domain J1(F_s)xQ3, codomain W_s."}
+      - {obligation_id: "D4-O2", status: "discharged_proposal_only", evidence: "No algebraic or differential field constraints occur in the declared witness."}
+      - {obligation_id: "D4-O3", status: "discharged_proposal_only", evidence: "Vertical field and equation redundancy spaces are both zero."}
+      - {obligation_id: "D4-O4", status: "discharged_proposal_only", evidence: "The reduced linearization is formed after the explicit zero-constraint zero-redundancy reduction."}
+      - {obligation_id: "D4-O5", status: "discharged_proposal_only", evidence: "The reduced symbol is square 3x3, so det sigma=k(tau)^3 is lawful; its radical ideal is explicitly used."}
+  - family_id: "D5_COMMON_PRINCIPAL_COMPATIBILITY"
+    discharged_count: 5
+    blocked_count: 0
+    obligations:
+      - {obligation_id: "D5-O1", status: "discharged_proposal_only", evidence: "C_tau is fixed from the proposal-only source transport field before any sector comparison."}
+      - {obligation_id: "D5-O2", status: "discharged_proposal_only", evidence: "All three reduced radical ideals equal <k(tau)> and hence have one common projective source hyperplane."}
+      - {obligation_id: "D5-O3", status: "discharged_proposal_only", evidence: "Each local generator is the restriction of global p_tau and P_i=1*P_j on overlaps."}
+      - {obligation_id: "D5-O4", status: "discharged_proposal_only", evidence: "g_ji=g_ij^-1=1 and g_ij g_jk g_ki=1; p_tau=k(tau) is source-coordinate scalar."}
+      - {obligation_id: "D5-O5", status: "discharged_proposal_only", evidence: "Shared variations tau'=tau+delta_tau with sup norm below 1/2 preserve nonvanishing and common local principality without quadratic signature or desired cone."}
+  - family_id: "D6_OPERATIONAL_NO_TARGET_RECEIPT"
+    discharged_count: 5
+    blocked_count: 0
+    obligations:
+      - {obligation_id: "D6-O1", status: "discharged_proposal_only", evidence: "For each equipped sector the state u_s finite bridge S_s_0 exact P7 finite readout domain and identity-quotient invariant are named."}
+      - {obligation_id: "D6-O2", status: "discharged_proposal_only", evidence: "Physical scale is explicitly absent; recovery token-partition naturality or source-fiber failure is the source-side falsifier."}
+      - {obligation_id: "D6-O3", status: "discharged_proposal_only", evidence: "Target atlas metric tetrad coframe desired GR cone and benchmark fit are excluded and absent from formulas."}
+      - {obligation_id: "D6-O4", status: "discharged_proposal_only", evidence: "Generated derivatives registry metadata roles validators workflow state and checkpoints are excluded and absent from formulas."}
+      - {obligation_id: "D6-O5", status: "discharged_proposal_only", evidence: "The source hyperplane and finite tokens are explicitly separated from causal clock rod signal detector matter and physical-scale interpretation."}
+  - family_id: "D7_P2_T01_ADEQUACY_INTERFACE"
+    discharged_count: 3
+    blocked_count: 2
+    obligations:
+      - {obligation_id: "D7-O1", status: "discharged_proposal_only", evidence: "All ten P2-T01 input fields are populated as data or explicit formulas on U."}
+      - {obligation_id: "D7-O2", status: "blocked_by_active_claim_boundary", evidence: "Evaluating factor rank operational rank and independence is P2-T01 adequacy reevaluation, forbidden by handoff-0992."}
+      - {obligation_id: "D7-O3", status: "discharged_proposal_only", evidence: "Deterministic identity-quotient local scope is declared; stochastic marked partial singular and nonlocal branches are separately classified."}
+      - {obligation_id: "D7-O4", status: "blocked_by_active_claim_boundary", evidence: "Emitting an allowed necessary-condition verdict is the expressly deferred adequacy reevaluation."}
+      - {obligation_id: "D7-O5", status: "discharged_proposal_only", evidence: "The procedure contract preserves that any later passage is not geometry sufficiency Gate B or benchmark evidence."}
+failure_branches:
+  collapse: "not triggered in the exact constant-copy equipped branch"
+  nonuniqueness: "controlled only by explicit proposal primitives, not resolved by current ontology"
+  inverse_defect: "not triggered; sampling recovery is exact"
+  cocycle_defect: "not triggered; all units and cocycles are one"
+  variation_fragility: "not triggered inside the shared-tau variation class; sector-split variations remain outside the class"
+  adequacy_boundary_defect: "triggered at D7-O2 and D7-O4"
+authority_limits:
+  obligation_evidence_is_adoption: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

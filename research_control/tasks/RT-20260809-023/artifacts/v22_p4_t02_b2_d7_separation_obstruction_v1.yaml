@@ -1,0 +1,64 @@
+schema_id: "v22_p4_t02_b2_d7_separation_obstruction_v1"
+artifact_id: "V22-P4-T02-B2-D7-SEPARATION-OBSTRUCTION-V1"
+task_id: "RT-20260809-023"
+job_id: "AJ-RT-20260809-023-001"
+status: "draft/control"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+instance_attempt_id: "INST-V22-B2-EQUIPPED-CHAIN-TRANSPORT-001"
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-V22-P4T02-B2-D7-SEPARATION-001"
+  scope: "source_extension_candidate"
+  failed_object: "complete B2 descriptor instance certification under the RT-023 claim boundary"
+  failed_components:
+    - "D7_ADEQUACY_PROCEDURE"
+  failed_obligations:
+    - "D7-O2"
+    - "D7-O4"
+  exact_failure: "The immutable RT-021 descriptor law makes factor and operational rank evaluation plus one emitted P2-T01 verdict blocking for instance completeness, while handoff-0992 and AJ-RT-20260809-023-001 forbid adequacy reevaluation. Both requirements cannot be true in this packet."
+  minimal_counterexample_path: ""
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "selector_required"
+  forbidden_overread: "This scoped admission-separation obstruction does not show that B2, the descriptor law, or future source extensions are mathematically impossible."
+logical_witness:
+  descriptor_rule: "complete_instance implies D7-O2 and D7-O4 discharged"
+  d7_o2_semantics: "evaluate factor rank operational rank and independence on the same patch"
+  d7_o4_semantics: "emit exactly one allowed P2-T01 necessary-condition verdict"
+  handoff_rule: "adequacy_reevaluated=false and no P2-T01 reevaluation in this AgentJob"
+  conjunction_satisfiable: false
+  discharged_obligations: 33
+  blocked_obligations: 2
+  descriptor_instance_complete: false
+repair_classes:
+  - "fresh populated-instance smuggling audit of the D0-D7 witness"
+  - "separately admitted P2-T01 adequacy reevaluation only after that audit"
+  - "a future superseding descriptor law that separates construction completeness from adequacy, if independently authorized"
+selected_repair_route:
+  immediate_next_role: "smuggling-auditor@0.2.0"
+  reason: "RT-022 requires a fresh audit for every populated component, coefficient, norm, selector, and unit cocycle before any adequacy use."
+  adequacy_authorized_in_next_role: false
+freeze_criteria:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "none"
+  prior_attempts_considered:
+    - "RT-20260809-020"
+    - "RT-20260809-021"
+    - "RT-20260809-022"
+  freeze_if:
+    - "The same completeness conflict recurs after a populated-instance audit without a distinct authority-safe sequencing repair."
+  do_not_freeze_if:
+    - "The populated witness receives a fresh audit and a separately admitted adequacy packet can discharge D7-O2 and D7-O4."
+  freeze_decision: "not_frozen"
+  decision_reason: "This packet adds a materially new lift, operator family, common radical ideal, and explicit cocycle; the next audit is role-distinct and evidence-bearing."
+  next_allowed_route: "smuggling_auditor"
+authority_limits:
+  global_no_go_claimed: false
+  future_source_extension_impossible_claimed: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

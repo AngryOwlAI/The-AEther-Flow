@@ -1,0 +1,103 @@
+schema_id: "v22_p4_t02_b2_source_factorization_provenance_v1"
+artifact_id: "V22-P4-T02-B2-SOURCE-FACTORIZATION-PROVENANCE-V1"
+task_id: "RT-20260809-023"
+job_id: "AJ-RT-20260809-023-001"
+status: "draft/control"
+criterion_id: "NSC-V22-P4T02-SOURCE-FIBER-FACTORIZATION-001"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+instance_attempt_id: "INST-V22-B2-EQUIPPED-CHAIN-TRANSPORT-001"
+source_input:
+  symbol: "S_dec"
+  components:
+    - "exact unchanged P7 conditional-input contract"
+    - "three explicitly equipped P7-T05 B3 controls"
+    - "proposal-only source patch U=(-1,1)^4"
+    - "proposal-only nowhere-zero source transport field tau=d/dxi0"
+    - "dyadic source-presentation grids G_n"
+    - "componentwise C1 source-presentation sup norm"
+    - "exact P7-T05 common carrier matrix M_B"
+target_input:
+  symbol: "T_target"
+  held_out_classes:
+    - "target atlas metric tetrad coframe connection"
+    - "desired GR cone Lorentzian signature physical time orientation or scale"
+    - "benchmark answer or target fit"
+authority_input:
+  symbol: "A_authority"
+  held_out_classes:
+    - "roles registries validators and generated reports"
+    - "workflow state activation Gate outcome checkpoint or commit"
+factorization_statement: "Every constructed component F satisfies F(S_dec,T_target,A_authority)=F_source(S_dec)."
+component_witnesses:
+  - {component_id: "D0_SECTOR_SET", source_expression: "the three exact P7-T05 equipped controls", target_invariant: true, authority_invariant: true}
+  - {component_id: "D1_CONTINUUM_FIELDS", source_expression: "U x R3 with C2 regularity", target_invariant: true, authority_invariant: true}
+  - {component_id: "D2_FINITE_TO_CONTINUUM_LIFT", source_expression: "constant-copy L and point-sampling S on G_n", target_invariant: true, authority_invariant: true}
+  - {component_id: "D3_SOURCE_QUOTIENT", source_expression: "identity groupoid of fixed equipped B3 carrier", target_invariant: true, authority_invariant: true}
+  - {component_id: "D3_OUTPUT_QUOTIENT", source_expression: "identity output groupoid and fixed finite readouts", target_invariant: true, authority_invariant: true}
+  - {component_id: "D4_SECTOR_EQUATIONS", source_expression: "tau derivative plus (I-M_B) affine residual", target_invariant: true, authority_invariant: true}
+  - {component_id: "D5_COMPATIBILITY_RELATION", source_expression: "equality with the predeclared source ideal <k(tau)>", target_invariant: true, authority_invariant: true}
+  - {component_id: "D5_COMMON_PRINCIPAL_TARGET", source_expression: "projective class [k(tau)] with explicit unit-one overlaps", target_invariant: true, authority_invariant: true}
+  - {component_id: "D6_OPERATIONAL_NO_TARGET_RECEIPT", source_expression: "exact sampling followed by fixed P7 finite token response", target_invariant: true, authority_invariant: true}
+  - {component_id: "D7_ADEQUACY_PROCEDURE", source_expression: "fixed total procedure and populated input formulas; not executed", target_invariant: true, authority_invariant: true}
+component_count: 10
+target_invariant_count: 10
+authority_invariant_count: 10
+explicit_target_import_count: 0
+explicit_authority_import_count: 0
+source_extension_costs:
+  - primitive_id: "SRCEXT-V22-B2-U"
+    primitive: "source presentation patch U"
+    current_ontology_derives: false
+    adoption_status: "proposal-only"
+  - primitive_id: "SRCEXT-V22-B2-TAU"
+    primitive: "nowhere-zero source transport field tau"
+    current_ontology_derives: false
+    adoption_status: "proposal-only"
+  - primitive_id: "SRCEXT-V22-B2-GRID"
+    primitive: "dyadic source-presentation refinement family"
+    current_ontology_derives: false
+    adoption_status: "proposal-only"
+  - primitive_id: "SRCEXT-V22-B2-NORM"
+    primitive: "componentwise C1 source-presentation sup topology"
+    current_ontology_derives: false
+    adoption_status: "proposal-only"
+sources:
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    use: "P4-T02 acceptance and stop boundary"
+  - object_id: "TEX-V22-P4-T02-B2-CONTINUUM-LIFT-DESCRIPTOR-FORMALIZATION-V1"
+    path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex"
+    sha256: "6b3e454048f1645f164e06dbebac08d1bd29b8a61918d98dcbf77d09c82156c0"
+    use: "ten-component descriptor and blocking completeness law"
+  - object_id: "TEX-V22-P4-T02-B2-DESCRIPTOR-SMUGGLING-AUDIT-V1"
+    path: "research_control/tasks/RT-20260809-022/artifacts/v22_p4_t02_b2_descriptor_smuggling_audit_v1.tex"
+    sha256: "9b89c066a18888a1ba28065cdb23e1623d4c2f6f611a0b8d3a7f2a7423231de6"
+    use: "source-fiber factorization and strengthened construction guards"
+  - object_id: "CONTROL-P7-CONDITIONAL-INPUT-CONTRACT-V1"
+    path: "research_control/tasks/RT-20260809-003/artifacts/v22_p1_t03_p7_conditional_input_contract_v1.yaml"
+    sha256: "e1acd64ea434f3dc6a0607c17f69162f0e242bc92d5490eb84ff3d3afd92a3c4"
+    use: "exact finite protected P7 scope and excluded outputs"
+  - object_id: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+    sha256: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+    use: "finite guarded device roles and token-response maps"
+  - object_id: "TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1"
+    path: "research_control/tasks/RT-20260728-003/artifacts/common_source_propagation_profile_candidate_v1.tex"
+    sha256: "87014253023cdb8945ed67f606355d762486884ce3a6de4fa2d32e2af32e2b43"
+    use: "exact three-chain subfamily and full-suite scope limit"
+  - object_id: "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+    sha256: "5a9a8f5542a7c8b714bbff7ec06c06449b0c66c0196266051562caf9ce602c6b"
+    use: "explicit equipment and common B3 carrier matrix"
+retrieval_evidence:
+  memory_status: "PASS"
+  local_retrieval_status: "PASS"
+  retrieval_layers_are_authority: false
+authority_limits:
+  factorization_is_derivation: false
+  source_extension_adopted: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  physical_interpretation_created: false
+  distance_to_gr_changed: false

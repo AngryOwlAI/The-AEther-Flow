@@ -1,0 +1,230 @@
+schema_id: "v22_p4_t02_b2_equipped_chain_descriptor_population_v1"
+artifact_id: "V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-POPULATION-V1"
+task_id: "RT-20260809-023"
+job_id: "AJ-RT-20260809-023-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+status: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+instance_attempt_id: "INST-V22-B2-EQUIPPED-CHAIN-TRANSPORT-001"
+candidate_identity_sha256: "9d8691e21e36bac63185d4ee6bf530f768e5952d202bc4dea374d9cc4aead8eb"
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Populate the audited B2 descriptor from explicit source data under source-fiber factorization and explicit-unit guards, or identify the exact completeness obstruction."
+source_descriptor_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_specification_v1.yaml"
+source_descriptor_sha256: "82a48f1e82f45012908d9eb8df389ed256bafba937ef6c8de0776b630ab71a65"
+source_audit_path: "research_control/tasks/RT-20260809-022/artifacts/v22_p4_t02_b2_descriptor_smuggling_audit_v1.tex"
+source_audit_sha256: "9b89c066a18888a1ba28065cdb23e1623d4c2f6f611a0b8d3a7f2a7423231de6"
+
+decisive_result:
+  result_type: "precise_obstruction"
+  obstruction_id: "OBST-V22-P4T02-B2-D7-SEPARATION-001"
+  no_fog_check: true
+  no_fog_explanation: "All ten descriptor slots are populated and 33 of 35 obligations have task-local source evidence. D7-O2 and D7-O4 require the factor-rank evaluation and adequacy verdict that handoff-0992 forbids, so the witness cannot lawfully be certified as a complete descriptor instance in this AgentJob."
+
+population_summary:
+  descriptor_component_count: 10
+  populated_component_slot_count: 10
+  fully_evidenced_component_count: 9
+  populated_but_blocked_component_count: 1
+  atomic_obligation_count: 35
+  discharged_obligation_count: 33
+  blocked_obligation_count: 2
+  open_unclassified_obligation_count: 0
+  descriptor_component_population_complete: true
+  descriptor_instance_complete: false
+  descriptor_instance_failure_component: "D7_ADEQUACY_PROCEDURE"
+  descriptor_instance_failure_obligations:
+    - "D7-O2"
+    - "D7-O4"
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+
+formal_descriptor:
+  descriptor_symbol: "D_B2_attempt"
+  ordered_components:
+    - component_id: "D0_SECTOR_SET"
+      symbol: "S_eq"
+      population_status: "populated_and_evidenced"
+      value: "three exact explicitly equipped P7-T05 sector-control instances (Rod,sigma_R), (Signal,sigma_S), and (Detector,sigma_D)"
+      exclusion_rule: "Clock and FreeFall are not equipped by P7-T05 and are not silently added."
+      source_provenance: "TEX-V21-P7-T04-COMMON-SOURCE-PROPAGATION-PROFILE-V1;TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    - component_id: "D1_CONTINUUM_FIELDS"
+      symbol: "{F_s}"
+      population_status: "populated_and_evidenced"
+      value: "F_s=U x R^3 and W_s=U x R^3 over U=(-1,1)^4, with C2 sections and full constant-rank regular locus"
+      regularity: "C2"
+      operator_order: 1
+      strata:
+        regular: "all U"
+        constraint_rank_change: "empty"
+        quotient_rank_change: "empty"
+        operator_degeneracy: "empty for the declared nonzero tau"
+        partial_marked_nonlocal: "typed outside this branch"
+      source_extension_cost: "source presentation patch U and nowhere-zero tau are proposal-only primitives"
+    - component_id: "D2_FINITE_TO_CONTINUUM_LIFT"
+      symbol: "L"
+      population_status: "populated_and_evidenced"
+      refinement_system: "K_n=B_3 x G_n for dyadic source presentation grids G_n"
+      finite_record: "r_s in Q^3 in the exact equipped B_3 address order"
+      lift: "L_s_n(r_s)(x)=r_s"
+      sampling: "S_s_n(u)=(u(x)) for x in G_n with address order retained"
+      recovery: "S_s_n L_s_n(r_s)=rho_n r_s exactly"
+      error_sequence: "epsilon_n=0 in the declared componentwise C1 sup topology"
+      naturality: "exact equipment-preserving P7 relabelings act by the same address permutation before and after lift and sampling"
+      counterpair_response: "the operator and lift laws are fixed source primitives before traces; finite trace agreement alone is not used as a selector"
+    - component_id: "D3_SOURCE_QUOTIENT"
+      symbol: "Q_src"
+      population_status: "populated_and_evidenced"
+      groupoid: "identity groupoid of the ordered directed B_3 carrier with fixed M_B"
+      redundancy_justification: "the exact equipment has no nontrivial automorphism; passive coordinate change is covariance and is not declared physical gauge"
+      regular_quotient_tangent: "R^3"
+      descent_map: "identity"
+      singular_classification: "no singular or nonconstant-rank branch; nonidentity and partial proposals fail closed"
+    - component_id: "D3_OUTPUT_QUOTIENT"
+      symbol: "Q_out"
+      population_status: "populated_and_evidenced"
+      groupoid: "identity groupoid"
+      invariant_observables: "all three finite address components and every fixed P7 token-response functional after exact sampling"
+      regular_quotient_tangent: "R^3"
+      descent_map: "identity"
+      singular_classification: "no singular or representative-dependent branch"
+    - component_id: "D4_SECTOR_EQUATIONS"
+      symbol: "{E_s}"
+      population_status: "populated_and_evidenced"
+      carrier_matrix: "M_B=[[1/2,0,0],[1/2,1/2,0],[0,1/2,1]]"
+      zero_order_matrix: "A_B=I_3-M_B"
+      operator: "E_s[r_s](u)=tau(u)+A_B(u-L_s_n r_s)"
+      domain: "J1(F_s) x Q^3"
+      codomain: "W_s"
+      constraints: "none"
+      vertical_field_redundancy: "zero"
+      equation_redundancy: "zero"
+      reduced_symbol: "sigma_bar_s(x,k)=k(tau_x) I_3"
+      determinant: "det sigma_bar_s=k(tau)^3"
+      coefficients_source_provenance: "tau is an explicit proposal-only source primitive; A_B is derived from the exact P7-T05 source carrier matrix"
+    - component_id: "D5_COMPATIBILITY_RELATION"
+      symbol: "C_tau"
+      population_status: "populated_and_evidenced"
+      definition: "Two reduced sector symbols are compatible iff their radical characteristic ideals equal the predeclared source ideal generated by p_tau(x,k)=k(tau_x)."
+      fixed_before_comparison: true
+      forbidden_selector_inputs_used: []
+      variation_class: "one common tau'=tau+delta_tau for all sectors with componentwise sup norm less than 1/2"
+      robustness_result: "tau' remains nowhere zero and the common locally principal hyperplane varies continuously"
+    - component_id: "D5_COMMON_PRINCIPAL_TARGET"
+      symbol: "P_src"
+      population_status: "populated_and_evidenced"
+      value: "projective class [p_tau]"
+      local_principal_ideal: "<p_tau>"
+      local_generator: "p_tau(x,k)=k(tau_x)"
+      overlap_units: "g_ij=1 on every nonempty overlap"
+      inverse_relations: "g_ji=g_ij^-1=1"
+      triple_cocycle: "g_ij g_jk g_ki=1"
+      real_zero_set_uniqueness_used: false
+      quadratic_form_assumed: false
+      lorentzian_signature_assumed: false
+      physical_scale_assumed: false
+    - component_id: "D6_OPERATIONAL_NO_TARGET_RECEIPT"
+      symbol: "Omega"
+      population_status: "populated_and_evidenced"
+      source_state: "u_s with frozen finite record r_s"
+      finite_device_bridge: "S_s_0 followed by the exact P7-T03 protocol map on its declared finite domain"
+      domain: "U and the exact equipped P7 finite history/token domain"
+      invariant_readout: "exact dimensionless P7 token response after identity quotient descent"
+      physical_scale_status: "absent"
+      source_falsifier: "failure of exact sampling recovery, token partition, equipment naturality, or source-fiber invariance"
+      rejected_premises:
+        - "target atlas metric tetrad coframe desired GR cone or benchmark fit"
+        - "generated derivative registry role validator workflow Gate or checkpoint authority"
+      interpretation_boundary: "mathematical characteristic and finite token data only; no physical causal clock rod signal detector or matter interpretation"
+    - component_id: "D7_ADEQUACY_PROCEDURE"
+      symbol: "N"
+      population_status: "procedure_populated_evaluation_blocked"
+      total_procedure: "the exact RT-021 mapping from complete descriptors to one of the five allowed P2-T01 necessary-condition verdicts"
+      input_fields_populated:
+        - "source_state_and_domain"
+        - "regularity"
+        - "source_equivalence"
+        - "output_equivalence"
+        - "reconstruction"
+        - "factor_statistic_formula"
+        - "operational_typing"
+        - "independence_formula"
+        - "stochastic_scope"
+        - "escape_and_global_scope"
+      procedure_executed: false
+      rank_evaluation_performed: false
+      verdict_emitted: false
+      blocked_obligations:
+        - "D7-O2"
+        - "D7-O4"
+      exact_blocker: "Executing the required rank calculation and emitting a verdict would be the P2-T01 adequacy reevaluation expressly forbidden by handoff-0992."
+
+new_mathematical_payload:
+  - payload_id: "DEF-V22-P4T02-B2-EQUIPPED-CHAIN-CONSTANT-LIFT-001"
+    payload_type: "construction"
+    burden_effect: "narrows"
+    statement: "Exact constant-copy C2 lift and sampling family for the three explicitly equipped P7 chain controls with zero refinement error."
+  - payload_id: "THM-V22-P4T02-B2-COMMON-SOURCE-HYPERPLANE-001"
+    payload_type: "theorem"
+    burden_effect: "narrows"
+    statement: "The affine lifted sector laws have square reduced symbols k(tau)I3 and one common locally principal radical characteristic ideal generated by k(tau)."
+  - payload_id: "THM-V22-P4T02-B2-UNIT-ONE-COCYCLE-001"
+    payload_type: "theorem"
+    burden_effect: "narrows"
+    statement: "The global source generator restricts with explicit overlap units one, inverse one, and triple-overlap cocycle one."
+  - payload_id: "OBST-V22-P4T02-B2-D7-SEPARATION-001"
+    payload_type: "obstruction"
+    burden_effect: "obstructs"
+    statement: "The active claim boundary forbids the two adequacy acts that the immutable descriptor law requires for instance completeness."
+
+activation_readiness:
+  predicate_order:
+    - "b1_terminated"
+    - "zero_other_active"
+    - "fresh_exact_selector"
+    - "p7_hashes_unchanged"
+    - "descriptor_instance_complete"
+    - "adequacy_reevaluated"
+  vector:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 0
+    - 0
+  activation_value: 0
+
+source_extension_classification:
+  classification: "proposal_only_new_source_transport_and_lift_primitives"
+  current_ontology_derives_extension: false
+  target_import_detected: false
+  adoption_effect: "none"
+  audit_required: true
+  allowed_conclusion: "maximal pre-adequacy populated witness with a precise D7 claim-boundary obstruction"
+
+next_route:
+  role_family: "smuggling-auditor@0.2.0"
+  route_label: "ontology-law-research-packet"
+  objective: "Audit every populated component, coefficient, norm, variation class, quotient, operational bridge, and explicit unit cocycle for source-fiber invariance before any adequacy packet."
+  execution_authorized_in_this_task: false
+
+authority_limits:
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physical_cone_constructed: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  gate_b_verdict_issued: false
+  global_no_go_claimed: false
+  proof_authority: false
+  physics_promotion_authorized: false

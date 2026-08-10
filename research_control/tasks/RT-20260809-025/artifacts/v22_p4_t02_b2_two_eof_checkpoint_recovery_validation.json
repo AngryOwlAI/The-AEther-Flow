@@ -1,0 +1,158 @@
+{
+  "authority": "operational_validation_only",
+  "check_count": 28,
+  "checks": [
+    {
+      "check_id": "boundary_receipt_hash",
+      "detail": "sealed exact-repair boundary receipt hash",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_receipt_status",
+      "detail": "boundary receipt has no errors",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_non_target_preservation",
+      "detail": "all 76 inherited non-target paths matched at repair boundary",
+      "status": "PASS"
+    },
+    {
+      "check_id": "boundary_exact_postimages",
+      "detail": "both exact one-byte postimages were observed",
+      "status": "PASS"
+    },
+    {
+      "check_id": "current_eof_RT-20260809-023",
+      "detail": "research_control/tasks/RT-20260809-023/documentation_impact.yaml is valid YAML ending in exactly one newline",
+      "status": "PASS"
+    },
+    {
+      "check_id": "current_eof_RT-20260809-024",
+      "detail": "research_control/tasks/RT-20260809-024/documentation_impact.yaml is valid YAML ending in exactly one newline",
+      "status": "PASS"
+    },
+    {
+      "check_id": "protected_v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex",
+      "detail": "protected science hash 6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169",
+      "status": "PASS"
+    },
+    {
+      "check_id": "protected_v22_p4_t02_b2_equipped_chain_descriptor_population_v1.yaml",
+      "detail": "protected science hash fde2dbbfb1622f6877067408db184d24d477d40acaee953d48585385c4ceeed9",
+      "status": "PASS"
+    },
+    {
+      "check_id": "protected_v22_p4_t02_b2_atomic_obligation_construction_matrix_v1.yaml",
+      "detail": "protected science hash ce44c482a60ff04f1228ed68d4adbc510f3c4350c2278927ed38e611e5a19219",
+      "status": "PASS"
+    },
+    {
+      "check_id": "protected_v22_p4_t02_b2_source_factorization_provenance_v1.yaml",
+      "detail": "protected science hash 023084b678b9771796652520e1df0c876f2425f622e6431ff59fc2c95d905245",
+      "status": "PASS"
+    },
+    {
+      "check_id": "protected_v22_p4_t02_b2_explicit_unit_cocycle_v1.yaml",
+      "detail": "protected science hash 1e070af78bcb24d426f44123f3186dfbefb6244192cc77cf1983ec095681f07f",
+      "status": "PASS"
+    },
+    {
+      "check_id": "protected_v22_p4_t02_b2_d7_separation_obstruction_v1.yaml",
+      "detail": "protected science hash 95577e04db61fdc37d8597a367dfd0025fbdeb30f8c9ce9e1d86806cb6b52dc2",
+      "status": "PASS"
+    },
+    {
+      "check_id": "protected_v22_p4_t02_b2_descriptor_construction_model.py",
+      "detail": "protected science hash c5e40b3453b2ecb1b40ce2ddf10caee0984fdc297ecf9a39bff5af6f50cb4660",
+      "status": "PASS"
+    },
+    {
+      "check_id": "protected_v22_p4_t02_b2_descriptor_construction_validation.json",
+      "detail": "protected science hash c9eefc62a41f1aa08f0d834e6887296c9b6b6d98fd142e05cc70c09638b195ab",
+      "status": "PASS"
+    },
+    {
+      "check_id": "protected_v22_p4_t02_b2_descriptor_construction_compact_receipt.json",
+      "detail": "protected science hash f3ada7680813b437f9522aace462a8c6878ac800f1bcd1e07fef4a48d04608cf",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checkpoint_evidence",
+      "detail": "consumed RT024 checkpoint receipt and two findings remain hash-bound",
+      "status": "PASS"
+    },
+    {
+      "check_id": "manifest_and_blocker",
+      "detail": "manifest and blocker hashes match",
+      "status": "PASS"
+    },
+    {
+      "check_id": "write_path_parity",
+      "detail": "job and role allowlist order match",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checkpoint_limit",
+      "detail": "one fresh checkpoint and no replay",
+      "status": "PASS"
+    },
+    {
+      "check_id": "checkpoint_recovery_binding",
+      "detail": "exact atomic recovery binding",
+      "status": "PASS"
+    },
+    {
+      "check_id": "pending_checkpoint_chain",
+      "detail": "prior and recovery completion checkpoint states are pending",
+      "status": "PASS"
+    },
+    {
+      "check_id": "active_state_alignment",
+      "detail": "program state and handoff-0995 agree",
+      "status": "PASS"
+    },
+    {
+      "check_id": "classifier_path_identity",
+      "detail": "classifier covers the exact live transaction",
+      "status": "PASS"
+    },
+    {
+      "check_id": "documentation_coverage_RT-20260809-023",
+      "detail": "RT-20260809-023 documentation receipt exactly covers live classifier output",
+      "status": "PASS"
+    },
+    {
+      "check_id": "documentation_coverage_RT-20260809-024",
+      "detail": "RT-20260809-024 documentation receipt exactly covers live classifier output",
+      "status": "PASS"
+    },
+    {
+      "check_id": "documentation_coverage_RT-20260809-025",
+      "detail": "RT-20260809-025 documentation receipt exactly covers live classifier output",
+      "status": "PASS"
+    },
+    {
+      "check_id": "no_candidate_blank_at_eof",
+      "detail": "candidate blank-at-EOF findings: []",
+      "status": "PASS"
+    },
+    {
+      "check_id": "clean_index",
+      "detail": "Git index remains clean before checkpoint",
+      "status": "PASS"
+    }
+  ],
+  "distance_to_gr_changed": false,
+  "failure_count": 0,
+  "inherited_path_count": 78,
+  "job_id": "AJ-RT-20260809-025-001",
+  "pass_count": 28,
+  "prior_checkpoint_replayed": false,
+  "protected_science_hash_count": 9,
+  "repaired_eof_count": 2,
+  "schema_id": "v22_p4_t02_b2_two_eof_checkpoint_recovery_validation_v1",
+  "scientific_claims_changed": false,
+  "status": "PASS",
+  "task_id": "RT-20260809-025"
+}

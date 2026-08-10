@@ -1,0 +1,62 @@
+{
+  "schema_id": "v22_p4_t02_b2_descriptor_construction_compact_receipt_v1",
+  "task_id": "RT-20260809-023",
+  "job_id": "AJ-RT-20260809-023-001",
+  "status": "PASS_PRECHECKPOINT",
+  "result_type": "precise_obstruction",
+  "candidate_id": "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1",
+  "construction_identity": "INST-V22-B2-EQUIPPED-CHAIN-TRANSPORT-001",
+  "obstruction_id": "OBST-V22-P4T02-B2-D7-SEPARATION-001",
+  "descriptor_component_count": 10,
+  "populated_component_slot_count": 10,
+  "fully_evidenced_component_count": 9,
+  "populated_but_blocked_component_count": 1,
+  "atomic_obligation_count": 35,
+  "discharged_obligation_count": 33,
+  "blocked_obligation_ids": [
+    "D7-O2",
+    "D7-O4"
+  ],
+  "focused_validation": {
+    "status": "PASS",
+    "check_count": 77,
+    "failure_count": 0,
+    "warning_count": 0,
+    "report_path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_validation.json",
+    "report_sha256": "c9eefc62a41f1aa08f0d834e6887296c9b6b6d98fd142e05cc70c09638b195ab"
+  },
+  "executable_model": {
+    "status": "PASS",
+    "check_count": 12,
+    "failure_count": 0,
+    "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_model.py",
+    "sha256": "c5e40b3453b2ecb1b40ce2ddf10caee0984fdc297ecf9a39bff5af6f50cb4660"
+  },
+  "latex_and_visual_review": {
+    "status": "PASS_AFTER_ONE_TABLE_GUTTER_REPAIR",
+    "source_page_count": 6,
+    "pages_visually_reviewed": 6,
+    "clipping_count": 0,
+    "overlap_count": 0,
+    "broken_glyph_count": 0,
+    "unreadable_table_count": 0,
+    "margin_overflow_count": 0,
+    "tracked_pdf_created": false,
+    "source_tex_sha256": "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169",
+    "scratch_pdf_sha256": "7d719aaab81b97dc952ac7890c28a2b1bee243bca9d24ea97c8c70bb46cf929d",
+    "receipt_path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_latex_compile_receipt.json",
+    "receipt_sha256": "24e5b06420650d86c582333453ed465053d7eb7a94f7f2004fee8e1b65e805cd"
+  },
+  "authority_limits": {
+    "adequacy_reevaluated": false,
+    "adequacy_verdict_issued": false,
+    "descriptor_instance_complete": false,
+    "b2_activated": false,
+    "p4_t03_unlocked": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "global_no_go_claimed": false,
+    "validator_is_physics_evidence": false
+  },
+  "next_required_role": "smuggling-auditor@0.2.0"
+}

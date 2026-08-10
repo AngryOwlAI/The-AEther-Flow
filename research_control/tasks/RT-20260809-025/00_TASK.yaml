@@ -1,0 +1,85 @@
+task_id: "RT-20260809-025"
+task_type: "v22_p4_t02_b2_two_eof_checkpoint_recovery"
+title: "Repair two V22 P4-T02 documentation-impact EOF blank lines and recover the cumulative checkpoint"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "effective_metric_g_eff"
+  candidate_family: "v22_p4_t02_b2_two_eof_checkpoint_recovery_v1"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status: "completed"
+created_at: "2026-08-10T03:09:36Z"
+updated_at: "2026-08-10T03:09:36Z"
+closed_at: "2026-08-10T03:09:36Z"
+parent_task_id: "RT-20260809-024"
+parent_handoff_id: "handoff-0994"
+supersedes_active_routing_task_id: "RT-20260809-024"
+current_decision_id: "DDR-20260809-025"
+current_job_id: "AJ-RT-20260809-025-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260809-025"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal and consumed AJ-RT-20260809-024-001 checkpoint authorize one materially distinct exact-whitespace recovery. This task may normalize only the two checkpoint-named documentation-impact files, extend cumulative documentation-impact coverage, create the recovery records, synchronize approved derivatives, and invoke at most one fresh checkpoint; it does not authorize RT024 replay, populated-instance science execution, P4-T03, promotion, publication, push, or external action."
+implementation_plan:
+  plan_id: "project_system_recovery_for_recommendations_implementation_plan_continue_task-v22"
+  source_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T02"
+  recovery_for_plan_task_id: "P4-T02"
+  next_plan_task_id: "P4-T02"
+  next_plan_task_execution_authorized: false
+objective: "Under the sealed 78-path inherited dirty manifest, normalize the two checkpoint-named documentation-impact files to exactly one terminal newline, prove exact postimages and unchanged protected science, extend cumulative documentation-impact coverage, synchronize ordinary control and generated derivatives, and invoke at most one fresh governed cumulative checkpoint."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system EOF normalization and checkpoint eligibility only; the P4-T02 scientific burden and Distance-to-GR state do not advance."
+route_label: "project-system-checkpoint-recovery"
+route_strategy_id: "repair_v22_p4_t02_b2_two_eof_blank_lines_and_checkpoint_v1"
+immutable_route_sha256: "0b14d6c3d1d016ad9f363a153b91df09ff2f3f4b876a43002292f47cb38cd2b9"
+route_blocker_fingerprint: "4b30b0ab8ebc05e0e0cbf6e935e8667ac0dc2f50226305b1ab6a3707ce45b055"
+source_head: "6a585fc6fa73c8bc326e2d1c4e087317c747698d"
+source_tree: "a2136776d8663d9391ca0347a05f2650619b7678"
+inherited_manifest_path: "research_control/tasks/RT-20260809-025/artifacts/inherited_dirty_manifest_v22_p4_t02_b2_two_eof_checkpoint_recovery.json"
+inherited_manifest_sha256: "7beabab32b3d5211f01c13802702aa814cca8b189d0a5f216f8c1331b84d77c8"
+project_system_change_only: true
+semantic_payload_changed: false
+scientific_claims_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-PS-V22-P4-T02-B2-TWO-EOF-CHECKPOINT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Normalize exactly the two checkpoint-named documentation-impact files from two terminal newlines to one while extending only their cumulative live-path coverage; create the RT025 recovery packet; update ordinary control state, registries, and generated derivatives; invoke one fresh checkpoint."
+  forbidden_scope: "Any RT023 or RT024 scientific mutation; AJ-RT-20260809-024-001 or checkpoint replay; populated-instance audit execution; adequacy reevaluation; B2 activation; P4-T03 execution; validator, test, schema, policy, skill, base-role, ontology, metric, coupling, Einstein, Gate, benchmark, proof, publication, push, external action, or completed-derivation mutation."
+  source_task_id: "RT-20260809-024"
+  source_job_id: "AJ-RT-20260809-024-001"
+  source_handoff_id: "handoff-0994"
+  prior_checkpoint_invocation_count: 1
+  prior_checkpoint_replayed: false
+  descriptor_construction_replayed: false
+  populated_instance_audit_executed: false
+  p4_t03_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+documentation_impact_id: "DI-RT-20260809-025-001"
+completion_id: "AJC-AJ-RT-20260809-025-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260809-025/artifacts/inherited_dirty_manifest_v22_p4_t02_b2_two_eof_checkpoint_recovery.json"
+  - "research_control/tasks/RT-20260809-025/artifacts/v22_p4_t02_b2_two_eof_checkpoint_blocker.yaml"
+  - "research_control/tasks/RT-20260809-025/artifacts/v22_p4_t02_b2_two_eof_repair_boundary_receipt.json"
+  - "research_control/tasks/RT-20260809-025/artifacts/validate_v22_p4_t02_b2_two_eof_checkpoint_recovery.py"
+  - "research_control/tasks/RT-20260809-025/artifacts/v22_p4_t02_b2_two_eof_checkpoint_recovery_validation.json"
+  - "research_control/tasks/RT-20260809-025/jobs/completions/AJC-AJ-RT-20260809-025-001.yaml"
+  - "research_control/handoffs/handoff-0995.yaml"
+  - "research_control/handoffs/handoff-0995.md"
+closure_status: "v22_p4_t02_b2_two_eof_repaired_populated_instance_audit_selected_fresh_checkpoint_pending"
+summary: "The two checkpoint-named documentation-impact files are normalized to exactly one terminal newline under a sealed 78-path pre-recovery manifest. All protected RT023 science remains byte-identical, RT024 is not replayed, and the populated-instance audit stays selected but unexecuted pending one fresh checkpoint."
+next_recommended_action: "Invoke the one fresh governed checkpoint for AJ-RT-20260809-025-001. After a valid commit, claim the populated-instance P4-T02 Smuggling Auditor packet separately through continue-research."
+project_improvement_signals: []
+notes: "This recovery changes no scientific payload and supplies no theorem, ontology, metric, coupling, Einstein-equation, Gate, benchmark, proof, publication, push, external-action, or completed-derivation authority."

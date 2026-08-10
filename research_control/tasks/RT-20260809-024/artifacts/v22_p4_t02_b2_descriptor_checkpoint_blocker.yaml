@@ -1,0 +1,64 @@
+authority: "operational_validation_only"
+blocker_id: "BLOCKER-V22-P4-T02-B2-DESCRIPTOR-CHECKPOINT-001"
+task_id: "RT-20260809-024"
+source_task_id: "RT-20260809-023"
+source_job_id: "AJ-RT-20260809-023-001"
+job_id: "AJ-RT-20260809-023-001"
+status: "active_blocking"
+created_at: "2026-08-10T02:17:30Z"
+source_head: "6a585fc6fa73c8bc326e2d1c4e087317c747698d"
+source_tree: "a2136776d8663d9391ca0347a05f2650619b7678"
+entry_index_tree: "a2136776d8663d9391ca0347a05f2650619b7678"
+inherited_manifest_path: "research_control/tasks/RT-20260809-024/artifacts/inherited_dirty_manifest_v22_p4_t02_b2_descriptor_checkpoint_recovery.json"
+inherited_manifest_sha256: "bf81564982e800e0f9f5c03180021d4fa0226c3c9f2362df629d66aeeb1b9759"
+inherited_path_count: 52
+canonical_consumed_run_id: "RUN-CHECKPOINT-98526e01392211f5"
+failed_gate_id: "research_control_diff"
+failed_gate_output_sha256: "50c4b8988edce9b5d4172db9921206f45443401132d45886b64f8e3181454e80"
+final_plan_sha256: "7e538467c7d75033bcd6248ae7a8793da1b95de6763a7e7842c7002c61398b35"
+gate_count: 7
+pass_count: 6
+failure_count: 1
+finding_count: 23
+canonical_checkpoint_consumed: true
+canonical_checkpoint_replayed: false
+redundant_unintended_runs_sealed:
+  - run_id: "RUN-CHECKPOINT-bc05e07710ffd3ae"
+    receipt_sha256: "232f835fe76faf83566523494f902f00e7b9c41b22bfe17868a475f6cd8a0464"
+  - run_id: "RUN-CHECKPOINT-29f02e278335a022"
+    receipt_sha256: "9d18391b61ef15013b11a84dc806a16ff581e11299ec2dda87779e066152e27d"
+  - run_id: "RUN-CHECKPOINT-0e238274095c768c"
+    receipt_sha256: "56f5849e5a6d018695ffa026acff2d5e26fa0cd3ae1222d232527a2cff1d60e6"
+canonical_receipt_sha256: "d942fca046f3f4804f2036a2a5e7b6dae35e96aca947e164d250064edec169e8"
+finding_groups:
+  rt023_agent_job_schema_alignment: 2
+  rt023_completion_bridge_alignment: 1
+  handoff_internal_alignment: 1
+  current_frontier_staleness: 7
+  compact_frontier_staleness: 12
+exact_repairs:
+  - "Remove the empty third retrieval receipt from AJ-RT-20260809-023-001."
+  - "Add candidate_reconstruction to the RT023 forbidden source classes."
+  - "Add the schema-required bridge_attempt_status to the RT023 completion."
+  - "Make handoff-0993 latest_research_next_action byte-equal to its top-level next_action and add its control frontmatter."
+  - "Regenerate current frontier and compact frontier projections from corrected tracked authority."
+protected_science:
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex"
+    sha256: "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_population_v1.yaml"
+    sha256: "fde2dbbfb1622f6877067408db184d24d477d40acaee953d48585385c4ceeed9"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_atomic_obligation_construction_matrix_v1.yaml"
+    sha256: "ce44c482a60ff04f1228ed68d4adbc510f3c4350c2278927ed38e611e5a19219"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_source_factorization_provenance_v1.yaml"
+    sha256: "023084b678b9771796652520e1df0c876f2425f622e6431ff59fc2c95d905245"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_explicit_unit_cocycle_v1.yaml"
+    sha256: "1e070af78bcb24d426f44123f3186dfbefb6244192cc77cf1983ec095681f07f"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_d7_separation_obstruction_v1.yaml"
+    sha256: "95577e04db61fdc37d8597a367dfd0025fbdeb30f8c9ce9e1d86806cb6b52dc2"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_model.py"
+    sha256: "c5e40b3453b2ecb1b40ce2ddf10caee0984fdc297ecf9a39bff5af6f50cb4660"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_validation.json"
+    sha256: "c9eefc62a41f1aa08f0d834e6887296c9b6b6d98fd142e05cc70c09638b195ab"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_compact_receipt.json"
+    sha256: "f3ada7680813b437f9522aace462a8c6878ac800f1bcd1e07fef4a48d04608cf"
+claim_boundary: "This blocker proves only a deterministic project-system recovery need. It supplies no scientific result, adequacy verdict, B2 activation, P4-T03 authority, promotion, checkpoint PASS, publication, push, or external action."

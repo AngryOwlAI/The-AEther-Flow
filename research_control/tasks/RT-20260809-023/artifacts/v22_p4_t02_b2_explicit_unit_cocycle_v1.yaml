@@ -1,0 +1,50 @@
+schema_id: "v22_p4_t02_b2_explicit_unit_cocycle_v1"
+artifact_id: "V22-P4-T02-B2-EXPLICIT-UNIT-COCYCLE-V1"
+task_id: "RT-20260809-023"
+job_id: "AJ-RT-20260809-023-001"
+status: "draft/control"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+instance_attempt_id: "INST-V22-B2-EQUIPPED-CHAIN-TRANSPORT-001"
+source_patch: "U=(-1,1)^4"
+source_cover:
+  - {patch_id: "U0", definition: "xi0 < 3/4"}
+  - {patch_id: "U1", definition: "xi0 > -3/4"}
+  - {patch_id: "U2", definition: "abs(xi0) < 7/8"}
+cover_is_total: true
+triple_overlap_nonempty: true
+global_generator:
+  symbol: "p_tau"
+  definition: "p_tau(x,k)=k(tau_x)"
+  homogeneous_degree: 1
+  nonzero_fiber_polynomial_everywhere: true
+  radical_characteristic_ideal: "<p_tau>"
+  locally_principal: true
+local_generators:
+  - {patch_id: "U0", generator: "P0=p_tau restricted to U0"}
+  - {patch_id: "U1", generator: "P1=p_tau restricted to U1"}
+  - {patch_id: "U2", generator: "P2=p_tau restricted to U2"}
+overlap_relations:
+  - {ordered_pair: "U0,U1", unit: "g_01=1", inverse: "g_10=1", relation: "P0=g_01 P1"}
+  - {ordered_pair: "U0,U2", unit: "g_02=1", inverse: "g_20=1", relation: "P0=g_02 P2"}
+  - {ordered_pair: "U1,U2", unit: "g_12=1", inverse: "g_21=1", relation: "P1=g_12 P2"}
+nowhere_zero_unit_count: 6
+inverse_identity_count: 6
+triple_cocycles:
+  - {ordered_triple: "U0,U1,U2", identity: "g_01 g_12 g_20=1"}
+  - {ordered_triple: "U0,U2,U1", identity: "g_02 g_21 g_10=1"}
+triple_cocycle_count: 2
+chart_covariance: "p_tau is the scalar contraction of a source covector with the source vector tau; coordinate component changes leave its value unchanged"
+uniqueness_guard:
+  real_zero_set_equality_used: false
+  unit_association_inferred: false
+  explicit_unit_data_supplied: true
+  rt022_counterexample_respected: true
+conclusion: "The common radical characteristic ideal glues with explicit unit-one inverse and cocycle evidence on the declared source cover."
+authority_limits:
+  source_line_bundle_trivialization_is_physical_geometry: false
+  lorentzian_signature_claimed: false
+  physical_time_orientation_claimed: false
+  physical_scale_claimed: false
+  effective_metric_claimed: false
+  descriptor_instance_complete: false
+  physics_promotion_authorized: false

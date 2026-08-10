@@ -1,12 +1,284 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260809-022"
-active_agent_job_id: "AJ-RT-20260809-022-001"
-latest_handoff_id: "handoff-0992"
-current_status: "v22_p4_t02_b2_descriptor_audit_complete_checkpoint_pending"
-claim_boundary_summary: "RT-20260809-022 audits all ten proposal-only B2 descriptor fields, six gluing hypotheses, four finite-trace premises, all 35 obligations, and six authority-invariance witnesses. The schema has zero direct target or authority imports as written; source-fiber factorization is proved; the explicit-unit gluing core survives; and a real-projective zero-set counterexample quarantines the uniqueness addendum. No instance or obligation discharge exists; readiness remains (1,1,1,1,0,0); B1 frozen; B2 inactive; P4-T03 locked; and Distance-to-GR unchanged."
+active_task_id: "RT-20260809-025"
+active_agent_job_id: "AJ-RT-20260809-025-001"
+latest_handoff_id: "handoff-0995"
+current_status: "rt024_two_eof_repaired_populated_instance_audit_selected_fresh_checkpoint_pending"
+claim_boundary_summary: "RT-20260809-025 seals the consumed RT024 checkpoint and exact 78-path inherited transaction, observes both one-byte EOF postimages with zero drift across the other 76 paths, synchronizes cumulative documentation coverage, and preserves all nine protected RT023 scientific artifact hashes. RT024 was not replayed. The descriptor remains incomplete; readiness remains (1,1,1,1,0,0); B2 remains inactive; P4-T03 remains locked; and Distance-to-GR is unchanged."
 next_plan_task_id: "P4-T02"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260809-022-001. After it commits, execute exactly one V22 P4-T02 ontology-law-research-packet under candidate-constructor@0.2.0 to construct a complete proposal-only descriptor instance or return a precise construction obstruction under source-fiber factorization, source-provenance, local-principality, and explicit-unit cocycle guards; do not reevaluate adequacy, activate B2, execute P4-T03, or take any protected or external action."
+next_recommended_action: "Run the single fresh governed checkpoint for AJ-RT-20260809-025-001. After it commits, execute exactly one fresh V22 P4-T02 populated-instance packet under smuggling-auditor@0.2.0 to audit U, tau, the source norm, lift and sampler, affine coefficients, quotient groupoids, compatibility relation, principal generator, operational bridge, and explicit cocycle; do not evaluate adequacy, activate B2, execute P4-T03, or take any protected or external action."
+
+v22_p4_t02_b2_two_eof_checkpoint_recovery:
+  task_id: "RT-20260809-025"
+  parent_task_id: "RT-20260809-024"
+  parent_handoff_id: "handoff-0994"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "B2_POPULATED_INSTANCE_SMUGGLING_AUDIT"
+  claim_boundary_id: "CB-PS-V22-P4-T02-B2-TWO-EOF-CHECKPOINT-RECOVERY-001"
+  status: "PASS_V22_P4_T02_B2_TWO_EOF_CHECKPOINT_RECOVERY_SMUGGLING_AUDITOR_SELECTED"
+  work_item_status: "rt024_two_eof_repaired_populated_instance_audit_pending_fresh_checkpoint"
+  route_label: "project-system-checkpoint-recovery"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_supporting_perspective: "refuter@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "repair_v22_p4_t02_b2_two_eof_blank_lines_and_checkpoint_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system checkpoint eligibility only; no scientific burden advances."
+  source_head: "6a585fc6fa73c8bc326e2d1c4e087317c747698d"
+  source_tree: "a2136776d8663d9391ca0347a05f2650619b7678"
+  source_handoff_id: "handoff-0994"
+  source_handoff_path: "research_control/handoffs/handoff-0994.yaml"
+  source_handoff_sha256: "088d91eea391b14c83c55da4bd500daeeeaab95591c6af58de336d946f71398a"
+  source_completion_path: "research_control/tasks/RT-20260809-024/jobs/completions/AJC-AJ-RT-20260809-024-001.yaml"
+  source_completion_sha256: "a5361d49e760e928675198448cc322302a0d1bbd014acadff47170360a04cf61"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  inherited_manifest_path: "research_control/tasks/RT-20260809-025/artifacts/inherited_dirty_manifest_v22_p4_t02_b2_two_eof_checkpoint_recovery.json"
+  inherited_manifest_sha256: "7beabab32b3d5211f01c13802702aa814cca8b189d0a5f216f8c1331b84d77c8"
+  blocker_path: "research_control/tasks/RT-20260809-025/artifacts/v22_p4_t02_b2_two_eof_checkpoint_blocker.yaml"
+  blocker_sha256: "4b30b0ab8ebc05e0e0cbf6e935e8667ac0dc2f50226305b1ab6a3707ce45b055"
+  repair_boundary_receipt_path: "research_control/tasks/RT-20260809-025/artifacts/v22_p4_t02_b2_two_eof_repair_boundary_receipt.json"
+  repair_boundary_receipt_sha256: "4976519a51a31d25c6cc2f46e856981bf87fece10beada28b65733959aac4729"
+  failed_checkpoint_canonical_run_id: "RUN-CHECKPOINT-ccf454970bb530f6"
+  failed_checkpoint_receipt_count: 1
+  failed_checkpoint_replayed: false
+  inherited_path_count: 78
+  target_path_count: 2
+  non_target_path_count: 76
+  failed_finding_count: 2
+  corrected_finding_count: 2
+  protected_science_hash_count: 9
+  task_path: "research_control/tasks/RT-20260809-025/00_TASK.yaml"
+  agent_job_id: "AJ-RT-20260809-025-001"
+  decision_id: "DDR-20260809-025"
+  execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260809-025"
+  completion_path: "research_control/tasks/RT-20260809-025/jobs/completions/AJC-AJ-RT-20260809-025-001.yaml"
+  completion_sha256: "5cfd37047c36cca7294d9190346c7f21113e45d2929d7ed670f9d39f17ae7616"
+  handoff_id: "handoff-0995"
+  handoff_path: "research_control/handoffs/handoff-0995.yaml"
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_fallback_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  ontology_adoption_count: 0
+  scientific_claims_changed: false
+  distance_to_gr_ledger_unchanged: true
+  generated_derivatives_non_authority: true
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "audit_v22_p4_t02_b2_populated_equipped_chain_descriptor_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+v22_p4_t02_b2_descriptor_checkpoint_recovery:
+  task_id: "RT-20260809-024"
+  parent_task_id: "RT-20260809-023"
+  parent_handoff_id: "handoff-0993"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "B2_POPULATED_INSTANCE_SMUGGLING_AUDIT"
+  claim_boundary_id: "CB-PS-V22-P4-T02-B2-DESCRIPTOR-CHECKPOINT-RECOVERY-001"
+  status: "PASS_V22_P4_T02_B2_DESCRIPTOR_CHECKPOINT_RECOVERY_SMUGGLING_AUDITOR_SELECTED"
+  work_item_status: "rt023_acceptance_repaired_populated_instance_audit_pending_fresh_checkpoint"
+  route_label: "project-system-checkpoint-recovery"
+  selected_role_family: "process-integrity-auditor@0.1.0"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_supporting_perspective: "refuter@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "repair_v22_p4_t02_b2_descriptor_checkpoint_acceptance_v1"
+  target_derivation_milestone: "none"
+  milestone_burden: "Project-system checkpoint eligibility only; no scientific burden advances."
+  source_head: "6a585fc6fa73c8bc326e2d1c4e087317c747698d"
+  source_tree: "a2136776d8663d9391ca0347a05f2650619b7678"
+  source_handoff_id: "handoff-0993"
+  source_handoff_path: "research_control/handoffs/handoff-0993.yaml"
+  source_handoff_sha256: "9abe5b14b9d01d100dd287aed352f557cda24b4b8c4491209274a7d37b068a17"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  inherited_manifest_path: "research_control/tasks/RT-20260809-024/artifacts/inherited_dirty_manifest_v22_p4_t02_b2_descriptor_checkpoint_recovery.json"
+  inherited_manifest_sha256: "bf81564982e800e0f9f5c03180021d4fa0226c3c9f2362df629d66aeeb1b9759"
+  blocker_path: "research_control/tasks/RT-20260809-024/artifacts/v22_p4_t02_b2_descriptor_checkpoint_blocker.yaml"
+  blocker_sha256: "3d0f6ddcbf51a100bea353db7bb9f345039a015f2c05b2ccec81a6ffebe03219"
+  failed_checkpoint_canonical_run_id: "RUN-CHECKPOINT-98526e01392211f5"
+  failed_checkpoint_receipt_count: 4
+  failed_checkpoint_replayed: false
+  inherited_path_count: 52
+  failed_finding_count: 23
+  corrected_finding_count: 23
+  protected_science_hash_count: 9
+  task_path: "research_control/tasks/RT-20260809-024/00_TASK.yaml"
+  agent_job_id: "AJ-RT-20260809-024-001"
+  decision_id: "DDR-20260809-024"
+  execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260809-024"
+  completion_path: "research_control/tasks/RT-20260809-024/jobs/completions/AJC-AJ-RT-20260809-024-001.yaml"
+  completion_sha256: "a5361d49e760e928675198448cc322302a0d1bbd014acadff47170360a04cf61"
+  handoff_id: "handoff-0994"
+  handoff_path: "research_control/handoffs/handoff-0994.yaml"
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_fallback_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  ontology_adoption_count: 0
+  scientific_claims_changed: false
+  distance_to_gr_ledger_unchanged: true
+  generated_derivatives_non_authority: true
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "audit_v22_p4_t02_b2_populated_equipped_chain_descriptor_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+v22_p4_t02_b2_descriptor_construction_attempt:
+  task_id: "RT-20260809-023"
+  parent_task_id: "RT-20260809-022"
+  parent_handoff_id: "handoff-0992"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "B2_POPULATED_INSTANCE_SMUGGLING_AUDIT"
+  claim_boundary_id: "CB-V22-P4-T02-B2-DESCRIPTOR-CONSTRUCTION-001"
+  status: "PASS_V22_P4_T02_B2_DESCRIPTOR_POPULATED_D7_SEPARATION_OBSTRUCTION_AUDITOR_SELECTED"
+  work_item_status: "b2_descriptor_population_complete_d7_separation_obstruction_populated_instance_audit_pending_checkpoint"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  selected_role_family: "candidate-constructor@0.2.0"
+  supporting_perspective: "smuggling-auditor@0.2.0 and refuter@0.2.0"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_supporting_perspective: "refuter@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "audit_v22_p4_t02_b2_populated_equipped_chain_descriptor_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Audit every populated source primitive and map before any D7 adequacy or B2 activation decision."
+  source_head: "6a585fc6fa73c8bc326e2d1c4e087317c747698d"
+  source_tree: "a2136776d8663d9391ca0347a05f2650619b7678"
+  prior_checkpoint_job_id: "AJ-RT-20260809-022-001"
+  prior_checkpoint_commit: "6a585fc6fa73c8bc326e2d1c4e087317c747698d"
+  source_handoff_id: "handoff-0992"
+  source_handoff_path: "research_control/handoffs/handoff-0992.yaml"
+  source_handoff_sha256: "2be141beba66b24b1dee0bcd16ea846d7ebf9a1462e91c463add35bd20527aca"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  manuscript_path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex"
+  manuscript_sha256: "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169"
+  population_path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_population_v1.yaml"
+  population_sha256: "fde2dbbfb1622f6877067408db184d24d477d40acaee953d48585385c4ceeed9"
+  obligation_matrix_path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_atomic_obligation_construction_matrix_v1.yaml"
+  obligation_matrix_sha256: "ce44c482a60ff04f1228ed68d4adbc510f3c4350c2278927ed38e611e5a19219"
+  provenance_path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_source_factorization_provenance_v1.yaml"
+  provenance_sha256: "023084b678b9771796652520e1df0c876f2425f622e6431ff59fc2c95d905245"
+  cocycle_path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_explicit_unit_cocycle_v1.yaml"
+  cocycle_sha256: "1e070af78bcb24d426f44123f3186dfbefb6244192cc77cf1983ec095681f07f"
+  obstruction_path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_d7_separation_obstruction_v1.yaml"
+  obstruction_sha256: "95577e04db61fdc37d8597a367dfd0025fbdeb30f8c9ce9e1d86806cb6b52dc2"
+  support_model_path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_model.py"
+  support_model_sha256: "c5e40b3453b2ecb1b40ce2ddf10caee0984fdc297ecf9a39bff5af6f50cb4660"
+  parent_fusion_path: "research_control/tasks/RT-20260809-023/artifacts/parent_fusion_notes_p4_t02_b2_descriptor_construction.md"
+  parent_fusion_sha256: "cb0ac3441ca6a98716f3bf94c379802fce390d0ce3f98332595ed2b690ac648c"
+  latex_compile_receipt_path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_latex_compile_receipt.json"
+  latex_compile_receipt_sha256: "24e5b06420650d86c582333453ed465053d7eb7a94f7f2004fee8e1b65e805cd"
+  focused_validation_path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_validation.json"
+  focused_validation_sha256: "c9eefc62a41f1aa08f0d834e6887296c9b6b6d98fd142e05cc70c09638b195ab"
+  compact_receipt_path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_compact_receipt.json"
+  compact_receipt_sha256: "f3ada7680813b437f9522aace462a8c6878ac800f1bcd1e07fef4a48d04608cf"
+  task_sha256: "26c3e6a48e2b86fee0f3e61f4184f52081adfae914b3794ead46dda7a65dd25c"
+  agent_job_id: "AJ-RT-20260809-023-001"
+  agent_job_sha256: "124ec037aa355dd5dfe0e94d510f906676703ce6f04baa18f9270804191b99fa"
+  decision_id: "DDR-20260809-023"
+  decision_sha256: "a24ab9b13a2f7ef6d5f815e5b8befa7a521cab30ba295f89a41c2faff5405458"
+  execution_role_ref: "candidate-constructor@0.2.0--RT-20260809-023"
+  execution_role_sha256: "25dc1a5c17c768a23d71e83025ea804fb580bf989a707711f139ccc66073a0e4"
+  completion_path: "research_control/tasks/RT-20260809-023/jobs/completions/AJC-AJ-RT-20260809-023-001.yaml"
+  completion_sha256: "a535094b68d88ef3361bcc818296309a72b575ba298702bd13b21543abf74ab1"
+  handoff_id: "handoff-0993"
+  handoff_path: "research_control/handoffs/handoff-0993.yaml"
+  handoff_sha256: "9abe5b14b9d01d100dd287aed352f557cda24b4b8c4491209274a7d37b068a17"
+  selected_candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+  construction_identity: "INST-V22-B2-EQUIPPED-CHAIN-TRANSPORT-001"
+  obstruction_id: "OBST-V22-P4T02-B2-D7-SEPARATION-001"
+  candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  descriptor_component_count: 10
+  populated_component_slot_count: 10
+  fully_evidenced_component_count: 9
+  populated_but_blocked_component_count: 1
+  atomic_obligation_count: 35
+  obligation_discharged_count: 33
+  obligation_blocked_count: 2
+  blocked_obligation_ids:
+    - "D7-O2"
+    - "D7-O4"
+  descriptor_specification_complete: true
+  descriptor_smuggling_audit_complete: true
+  descriptor_component_population_complete: true
+  descriptor_instance_complete: false
+  d7_separation_obstruction_recorded: true
+  global_no_go_claimed: false
+  readiness_vector:
+    - 1
+    - 1
+    - 1
+    - 1
+    - 0
+    - 0
+  activation_value: false
+  adequacy_reevaluated: false
+  focused_model_check_count: 12
+  focused_check_count: 77
+  focused_check_failure_count: 0
+  focused_warning_count: 0
+  latex_page_count: 6
+  latex_final_overfull_warning_count: 0
+  pdf_pages_visually_reviewed: 6
+  p4_t02_b1_branch_executed: true
+  p4_t02_b2_selector_executed: true
+  p4_t02_b2_descriptor_formalization_executed: true
+  p4_t02_b2_descriptor_audit_executed: true
+  p4_t02_b2_descriptor_construction_attempt_executed: true
+  p4_t02_complete_for_plan_dependency: false
+  b1_primary_terminated: true
+  b2_fallback_activated: false
+  p4_t03_unlocked: false
+  ontology_adoption_count: 0
+  distance_to_gr_ledger_unchanged: true
+  generated_derivatives_non_authority: true
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_work_item: "P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "audit_v22_p4_t02_b2_populated_equipped_chain_descriptor_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 v22_p4_t02_b2_descriptor_smuggling_audit:
   task_id: "RT-20260809-022"
@@ -15390,9 +15662,9 @@ project_improvement_bridge:
   resolution_evidence_path: "research_control/tasks/RT-20260803-015/jobs/completions/AJC-AJ-RT-20260803-015-001.yaml"
 
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260809-022"
-  latest_research_handoff_id: "handoff-0992"
-  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-022-001. After it commits, execute exactly one V22 P4-T02 ontology-law-research-packet under candidate-constructor@0.2.0 to construct a complete proposal-only descriptor instance or return a precise construction obstruction under source-fiber factorization, source-provenance, local-principality, and explicit-unit cocycle guards; do not reevaluate adequacy, activate B2, execute P4-T03, or take any protected or external action."
+  latest_research_task_id: "RT-20260809-023"
+  latest_research_handoff_id: "handoff-0993"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-023-001. After it commits, execute exactly one fresh V22 P4-T02 populated-instance packet under smuggling-auditor@0.2.0 without adequacy, activation, P4-T03, protected, or external action."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"

@@ -1,0 +1,716 @@
+{
+  "authority": "operational_validation_only",
+  "checkpoint_evidence": {
+    "canonical_run_id": "RUN-CHECKPOINT-ccf454970bb530f6",
+    "consumed": true,
+    "exit_code": 1,
+    "failed_gate_exit_code": 2,
+    "failed_gate_id": "git_diff_check",
+    "failed_gate_output_path": ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-ccf454970bb530f6/gates/0006-git_diff_check.stdout",
+    "failed_gate_output_sha256": "83727704842057c1b4b4c70c934928106fe548d6ed824ef34cd3769b9280298a",
+    "failure_count": 1,
+    "final_plan_hash": "96ee83ebd1906eb554c78276bc3d87b62f67d83f129da9a3399002c75ece7994",
+    "finding_count": 2,
+    "gate_count": 7,
+    "pass_count": 2,
+    "receipt_path": ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-ccf454970bb530f6/receipt.json",
+    "receipt_sha256": "8289376ceeaf208476bec7986ab10b19dd34cb1d2c1246998fd81d62e8c7b04d",
+    "replayed": false,
+    "skipped_count": 4,
+    "status": "FAIL"
+  },
+  "entry_index_tree": "a2136776d8663d9391ca0347a05f2650619b7678",
+  "error_count": 0,
+  "errors": [],
+  "index_clean": true,
+  "job_id": "AJ-RT-20260809-025-001",
+  "path_count": 78,
+  "paths": [
+    {
+      "index_bytes": 1432537,
+      "index_sha256": "061c53290ed9f39c75452495047ae1894ebce7ffec082c33942050f7a11d96ca",
+      "path": "FOLDER_MAP.md",
+      "status": " M",
+      "working_bytes": 1434835,
+      "working_sha256": "e33471073f3c46f13abe30ee26cb47209385b703d5b22a0b7682b7b28504a5b4"
+    },
+    {
+      "index_bytes": 32457,
+      "index_sha256": "13cd24d23b9099e10b066d4c1707660be01283cc40ca53b1ff76f9d590a47b5f",
+      "path": "output/claim_graph_v1.json",
+      "status": " M",
+      "working_bytes": 32457,
+      "working_sha256": "e92a83af15597b388c57c86e5993b2894301cb5d6d208e1a24ee7b0f6baf4d72"
+    },
+    {
+      "index_bytes": 41277,
+      "index_sha256": "b7cf97db5918c9046302a3874bee0994e21468b5cd98df6e63dcc0ee51692cae",
+      "path": "output/compact_current_frontier_v16.json",
+      "status": " M",
+      "working_bytes": 41209,
+      "working_sha256": "5234a43c34bce1a80922b8a871242958e2f32cb5f5987c0c7c55b936a4406ffd"
+    },
+    {
+      "index_bytes": 38365,
+      "index_sha256": "b25a8edf5959814a38862f06ddb9df834b86de0f9249c876d7b5e06f90e3ff2e",
+      "path": "output/compact_current_frontier_v16.yaml",
+      "status": " M",
+      "working_bytes": 38297,
+      "working_sha256": "35c9a1a70b4e7511017ff99552a3faaa77d8dbe466c4f2551a8471c2df28c230"
+    },
+    {
+      "index_bytes": 18410727,
+      "index_sha256": "15cb46a7219c46305c345bd8285bc9d07c0fd5cff9b93f74cbc88fa1b7261490",
+      "path": "output/research_dependency_graph.dot",
+      "status": " M",
+      "working_bytes": 18441671,
+      "working_sha256": "65033f5b609303d03165e20ffa71c1cf2406774e4700bd966271f37deb77404e"
+    },
+    {
+      "index_bytes": 133,
+      "index_sha256": "6e78ad8d3dd69a30bc400c10d0edf522d9d4dffaede00e6fe070493c31f7fc0f",
+      "path": "output/research_dependency_graph.json",
+      "status": " M",
+      "working_bytes": 69195015,
+      "working_sha256": "c188dea60e0fe2049950b0ec459e87aa92016fa21e7e3b68d292827c1c1fce8c"
+    },
+    {
+      "index_bytes": 2783314,
+      "index_sha256": "9c67ce9df118667adda4f9aff9006191828e818ed85dc8afa4948b3d2f5c6c53",
+      "path": "registries/AGENT_JOB_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 2788341,
+      "working_sha256": "17c77725306d36a23c6e41d1a77d85885cb30abaeabb1ba0f546ce21c47b0420"
+    },
+    {
+      "index_bytes": 1859921,
+      "index_sha256": "e97979169d273d344f34bbd6ee84155e1a2e6aef1726d9cbb38adb033c8e609b",
+      "path": "registries/CLAIM_BOUNDARY_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 1862824,
+      "working_sha256": "3496e76376d96c60d06a1f578eac8b7612244747a14ed20212d21f0bfa889fb3"
+    },
+    {
+      "index_bytes": 1558567,
+      "index_sha256": "1f7e0d90ce79d54bbdfdf84c945f2abf7108f657c94cb064d6d9a40d3f37b612",
+      "path": "registries/CONTENT_SEMANTIC_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 1561026,
+      "working_sha256": "2385456335f85f5111ca9fc3148228f0fdcac55d66a841eacaf5a89a5fabba26"
+    },
+    {
+      "index_bytes": 809,
+      "index_sha256": "cd7bcb7948728362e5e4641791b8f581fa55cc4a8250e8b92ee1ebe746d763cd",
+      "path": "registries/CONTENT_SEMANTIC_REGISTRY.meta.json",
+      "status": " M",
+      "working_bytes": 809,
+      "working_sha256": "b1ec36db086c293039b158036d0062efa5c7907ba89837336d2828ae62b5c759"
+    },
+    {
+      "index_bytes": 538117,
+      "index_sha256": "ddc91228f0571a637e3b2c13e3ff3986ed5efab35155a38f0e47c3acb0025959",
+      "path": "registries/DIRECTOR_DECISION_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 539154,
+      "working_sha256": "13d69b66907f832cc2e379edd3cc2f927abc60471526fb7fef2c16525f71a27c"
+    },
+    {
+      "index_bytes": 5667024,
+      "index_sha256": "3407418f1475f0bbf5f842559263508fbed25c785b48bd69dc871bffe086be39",
+      "path": "registries/FILE_OBJECT_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 5680429,
+      "working_sha256": "c674c65aa6b5693732aa38563eb01e04a648efba5c2cb44b9e138545ab630845"
+    },
+    {
+      "index_bytes": 1151,
+      "index_sha256": "5d1747b2b9eae3f3386fcc8326bda9109ded32a3ecd4ad882c0e9e7341dd70cf",
+      "path": "registries/FILE_OBJECT_REGISTRY.meta.json",
+      "status": " M",
+      "working_bytes": 1151,
+      "working_sha256": "f1dc42722d2c9a7a137a201f04a7b30f4d5d5fde21de3cf7f9b62e5993ab03b3"
+    },
+    {
+      "index_bytes": 418615,
+      "index_sha256": "98fd1174947c00a850b2ea2c6fcc5b43f22d20504f0efd49c037056402860ba7",
+      "path": "registries/MARKDOWN_SOURCE_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 419412,
+      "working_sha256": "73f307e5c0b2ac332b0efa8ffa266408832bd1c5b1ff8cb6f90f674fda6aa4c0"
+    },
+    {
+      "index_bytes": 5365555,
+      "index_sha256": "245ff03947c23abe0033f0aa7c48beb4a964d2fd9673586e056322e4f90e1b91",
+      "path": "registries/OBJECT_RELATIONSHIP_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 5380172,
+      "working_sha256": "46c7cce23893d791f61918cbac386eee7be4cf17bab06a3da19f406cdb23a7a8"
+    },
+    {
+      "index_bytes": 812,
+      "index_sha256": "e31f5f274b7b06e710cab2d2809457cc8eb024234dca97dc5d33b5e43097ee63",
+      "path": "registries/OBJECT_RELATIONSHIP_REGISTRY.meta.json",
+      "status": " M",
+      "working_bytes": 812,
+      "working_sha256": "d3a52466639b2e9c675ae7fa7e9a8366d948ad17c5dc05f3f2c2fb11dcb6a737"
+    },
+    {
+      "index_bytes": 1268444,
+      "index_sha256": "3616ed75422a90616591b9a3be67c33c558c9086436a08bcbb6dfaccca4d1239",
+      "path": "registries/OBSIDIAN_VAULT_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 1270375,
+      "working_sha256": "de5f4c642b1f69dd5f166444361d65539c020bfc84de0ffa4d13a5bc3c24ea34"
+    },
+    {
+      "index_bytes": 807,
+      "index_sha256": "002474f2be9f69068e23428ab7c5d602b81d1a209427151c7668020607a119d0",
+      "path": "registries/OBSIDIAN_VAULT_REGISTRY.meta.json",
+      "status": " M",
+      "working_bytes": 807,
+      "working_sha256": "781cb5a0db5c8bf895b010b006c71519e7938332a4c3f75f0980be1cb124a751"
+    },
+    {
+      "index_bytes": 617099,
+      "index_sha256": "f272b528213e005a5c207029c76c056dd30b779426abb75a3fb3013f5e274d25",
+      "path": "registries/RESEARCH_TASK_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 618158,
+      "working_sha256": "e35e44617e1f57e1f64a86cfc0accee834f8e584d6a7c414ad7a7479cc5ce350"
+    },
+    {
+      "index_bytes": 3291439,
+      "index_sha256": "f0cc08d940351730781d609b9741f97c3c8cefd33bb08a5ae4fe6b20ae375dc3",
+      "path": "registries/ROLE_EXECUTION_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 3296295,
+      "working_sha256": "a9ad7470e6423e86e20a5b0acb921524d14787258cec065355bc7af7e1e1cd21"
+    },
+    {
+      "index_bytes": 493267,
+      "index_sha256": "041a9a0939b931c595007ad996ed4d547b3390973a6129d55dfccbc43d931af9",
+      "path": "registries/TEX_SOURCE_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 494454,
+      "working_sha256": "0ded2fc682796a3c311e6838bdcc198dfdd8753151e66ccd37a1eb38660e3b3a"
+    },
+    {
+      "index_bytes": 1022273,
+      "index_sha256": "cff22eef673f31bc318a228824fb9445e61e2d2d7b6580c811b615e99806ffee",
+      "path": "registries/WIKI_ARTIFACT_REGISTRY.csv",
+      "status": " M",
+      "working_bytes": 1023872,
+      "working_sha256": "5c44eaee31f3b51df081f715f39d5d6325197c71ee58adcee8bd57a60c02bb6b"
+    },
+    {
+      "index_bytes": 691,
+      "index_sha256": "3b753665991168cb5bf95f034b72e0fd1ebb0980d8f2c0ade910d181a0d16a98",
+      "path": "registries/WIKI_ARTIFACT_REGISTRY.meta.json",
+      "status": " M",
+      "working_bytes": 691,
+      "working_sha256": "e2447d6c81a115dfa2f0e2af028411d0b203462db8f68c812aa08e1260c76596"
+    },
+    {
+      "index_bytes": 42952,
+      "index_sha256": "4ec832f19a46e8fa21ff793aba1e1229c106a377667f4ce9c05381b62dd3fdb0",
+      "path": "research_control/current_frontier.md",
+      "status": " M",
+      "working_bytes": 42275,
+      "working_sha256": "096465e4fff0af112af5f4afb9f246705eb15b00057dd52eb2375c77cd5f7402"
+    },
+    {
+      "index_bytes": 113117,
+      "index_sha256": "3a8c62a8f894a16d5dace50149435c6232a6bd6308b11087f18703bcafb98a65",
+      "path": "research_control/design/v22_recommendation_backlog.yaml",
+      "status": " M",
+      "working_bytes": 113598,
+      "working_sha256": "9d5b763a9453876d751c87888050433b86186f2e05bb0037d7eca7ca6ce2099b"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/handoffs/handoff-0993.md",
+      "status": "??",
+      "working_bytes": 2974,
+      "working_sha256": "7212e1d2ed77f08d33873dcea1c9ab71e8e2b10aa8ab6011028d781e4fa57653"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/handoffs/handoff-0993.yaml",
+      "status": "??",
+      "working_bytes": 15214,
+      "working_sha256": "9abe5b14b9d01d100dd287aed352f557cda24b4b8c4491209274a7d37b068a17"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/handoffs/handoff-0994.md",
+      "status": "??",
+      "working_bytes": 1201,
+      "working_sha256": "46f8742d17157bda2d96bf41720a224e78188a39a015e7cb7336babec9ba00a3"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/handoffs/handoff-0994.yaml",
+      "status": "??",
+      "working_bytes": 13374,
+      "working_sha256": "088d91eea391b14c83c55da4bd500daeeeaab95591c6af58de336d946f71398a"
+    },
+    {
+      "index_bytes": 875513,
+      "index_sha256": "8103d080927e45d4bca0facf0add7ce73331f23c809856f04757794cb8d9b7b3",
+      "path": "research_control/program_state.yaml",
+      "status": " M",
+      "working_bytes": 886689,
+      "working_sha256": "cab7e74a5aeafbd3ee7b390ba99ba6bb11a8b4297475e6dde5caa55e651a58fb"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/00_TASK.yaml",
+      "status": "??",
+      "working_bytes": 8067,
+      "working_sha256": "26c3e6a48e2b86fee0f3e61f4184f52081adfae914b3794ead46dda7a65dd25c"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/DDR-20260809-023.md",
+      "status": "??",
+      "working_bytes": 5133,
+      "working_sha256": "a24ab9b13a2f7ef6d5f815e5b8befa7a521cab30ba295f89a41c2faff5405458"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/child_phys_math_p4_t02_b2_descriptor_construction.yaml",
+      "status": "??",
+      "working_bytes": 2844,
+      "working_sha256": "652acb0bcacae64501d0f22f3af1c1a837bad5c36fd340b6683e509ec2d15841"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/child_phys_phil_p4_t02_b2_descriptor_construction.yaml",
+      "status": "??",
+      "working_bytes": 3091,
+      "working_sha256": "c1f17c8e93ae5628e331337fa1d0ecc80fda971ea97137cc361159d6b8df3173"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/parent_conflict_review_p4_t02_b2_descriptor_construction.yaml",
+      "status": "??",
+      "working_bytes": 2489,
+      "working_sha256": "664b3a2e82846109520e687cd2def487ba2be9d82f4b7146ed5195fed7f2743b"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/parent_fusion_notes_p4_t02_b2_descriptor_construction.md",
+      "status": "??",
+      "working_bytes": 3936,
+      "working_sha256": "cb0ac3441ca6a98716f3bf94c379802fce390d0ce3f98332595ed2b690ac648c"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_atomic_obligation_construction_matrix_v1.yaml",
+      "status": "??",
+      "working_bytes": 8417,
+      "working_sha256": "ce44c482a60ff04f1228ed68d4adbc510f3c4350c2278927ed38e611e5a19219"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_d7_separation_obstruction_v1.yaml",
+      "status": "??",
+      "working_bytes": 3336,
+      "working_sha256": "95577e04db61fdc37d8597a367dfd0025fbdeb30f8c9ce9e1d86806cb6b52dc2"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_compact_receipt.json",
+      "status": "??",
+      "working_bytes": 2483,
+      "working_sha256": "f3ada7680813b437f9522aace462a8c6878ac800f1bcd1e07fef4a48d04608cf"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_latex_compile_receipt.json",
+      "status": "??",
+      "working_bytes": 1732,
+      "working_sha256": "24e5b06420650d86c582333453ed465053d7eb7a94f7f2004fee8e1b65e805cd"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_model.py",
+      "status": "??",
+      "working_bytes": 5511,
+      "working_sha256": "c5e40b3453b2ecb1b40ce2ddf10caee0984fdc297ecf9a39bff5af6f50cb4660"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_validation.json",
+      "status": "??",
+      "working_bytes": 17237,
+      "working_sha256": "c9eefc62a41f1aa08f0d834e6887296c9b6b6d98fd142e05cc70c09638b195ab"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex",
+      "status": "??",
+      "working_bytes": 17478,
+      "working_sha256": "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_population_v1.yaml",
+      "status": "??",
+      "working_bytes": 11686,
+      "working_sha256": "fde2dbbfb1622f6877067408db184d24d477d40acaee953d48585385c4ceeed9"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_explicit_unit_cocycle_v1.yaml",
+      "status": "??",
+      "working_bytes": 2223,
+      "working_sha256": "1e070af78bcb24d426f44123f3186dfbefb6244192cc77cf1983ec095681f07f"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_source_factorization_provenance_v1.yaml",
+      "status": "??",
+      "working_bytes": 6449,
+      "working_sha256": "023084b678b9771796652520e1df0c876f2425f622e6431ff59fc2c95d905245"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/artifacts/validate_v22_p4_t02_b2_descriptor_construction.py",
+      "status": "??",
+      "working_bytes": 10893,
+      "working_sha256": "820d4b6c32e275206966f7c3cf25b558d5d49873df8bc4b9c53672339e7d8a37"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/documentation_impact.yaml",
+      "status": "??",
+      "working_bytes": 12597,
+      "working_sha256": "dfdbff9193e6e00a70d79bef1470e5f887b31a112c94e712d2a54637c80b1133"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/jobs/AJ-RT-20260809-023-001.yaml",
+      "status": "??",
+      "working_bytes": 26491,
+      "working_sha256": "124ec037aa355dd5dfe0e94d510f906676703ce6f04baa18f9270804191b99fa"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/jobs/completions/AJC-AJ-RT-20260809-023-001.yaml",
+      "status": "??",
+      "working_bytes": 38834,
+      "working_sha256": "a535094b68d88ef3361bcc818296309a72b575ba298702bd13b21543abf74ab1"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-023/roles/candidate-constructor@0.2.0--RT-20260809-023.yaml",
+      "status": "??",
+      "working_bytes": 3082,
+      "working_sha256": "25dc1a5c17c768a23d71e83025ea804fb580bf989a707711f139ccc66073a0e4"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-024/00_TASK.yaml",
+      "status": "??",
+      "working_bytes": 4139,
+      "working_sha256": "119a5669865044e5ad3062107c82d1ae131bde399751d87c6a2270026f10e843"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-024/DDR-20260809-024.md",
+      "status": "??",
+      "working_bytes": 2453,
+      "working_sha256": "552b39958beff04c7545f09f8257528447ffc3f4a1c5652477e165704d7bbb1e"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-024/artifacts/capture_v22_p4_t02_b2_descriptor_checkpoint_recovery_manifest.py",
+      "status": "??",
+      "working_bytes": 5034,
+      "working_sha256": "5b41ef0a8e68f9cfdf739b7ae5fc2c810133a47bd7637605749f61782ef0b25d"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-024/artifacts/inherited_dirty_manifest_v22_p4_t02_b2_descriptor_checkpoint_recovery.json",
+      "status": "??",
+      "working_bytes": 21302,
+      "working_sha256": "bf81564982e800e0f9f5c03180021d4fa0226c3c9f2362df629d66aeeb1b9759"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-024/artifacts/v22_p4_t02_b2_descriptor_checkpoint_blocker.yaml",
+      "status": "??",
+      "working_bytes": 4342,
+      "working_sha256": "3d0f6ddcbf51a100bea353db7bb9f345039a015f2c05b2ccec81a6ffebe03219"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-024/artifacts/v22_p4_t02_b2_descriptor_checkpoint_recovery_validation.json",
+      "status": "??",
+      "working_bytes": 5190,
+      "working_sha256": "6cd4c71e30f6fd94587f66cc2b3b7d665a7e61e922dcd8df9d7d02d50a524dca"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-024/artifacts/validate_v22_p4_t02_b2_descriptor_checkpoint_recovery.py",
+      "status": "??",
+      "working_bytes": 9701,
+      "working_sha256": "e29ccea45792fdad1521368615e0037574db46885722c02556bc48daad72af3d"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-024/documentation_impact.yaml",
+      "status": "??",
+      "working_bytes": 10505,
+      "working_sha256": "ee0b240ae362e8e7ad0a471851c48ee9426a8fc1a3529f0b90197b580d6c0432"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-024/jobs/AJ-RT-20260809-024-001.yaml",
+      "status": "??",
+      "working_bytes": 13464,
+      "working_sha256": "297af5ecf50125db7199190a9c5bebf9ffbb4b3c86689a61df79d2572b55ad39"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-024/jobs/completions/AJC-AJ-RT-20260809-024-001.yaml",
+      "status": "??",
+      "working_bytes": 16046,
+      "working_sha256": "a5361d49e760e928675198448cc322302a0d1bbd014acadff47170360a04cf61"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "research_control/tasks/RT-20260809-024/roles/process-integrity-auditor@0.1.0--RT-20260809-024.yaml",
+      "status": "??",
+      "working_bytes": 3043,
+      "working_sha256": "a80bbcc441b492bc974feecd90341038dbb0bb3ce52b20e792cc087392584e8f"
+    },
+    {
+      "index_bytes": 974830,
+      "index_sha256": "0064085f75b7663f4067be9a02330661440c4a4df1945c6925bf5d8683b68c3d",
+      "path": "research_control/tasks/TASK_INDEX.csv",
+      "status": " M",
+      "working_bytes": 976916,
+      "working_sha256": "0dacc8e7921fc2f49ab1724960c1e35cfdffda5853e030af30a1f7b1d64a9954"
+    },
+    {
+      "index_bytes": 1013947,
+      "index_sha256": "4872b8508958708fb30091a858ba5728b54ad0b17be90b5c9341b1842dca3900",
+      "path": "research_control/tasks/TASK_INDEX.md",
+      "status": " M",
+      "working_bytes": 1016029,
+      "working_sha256": "c55b15f55992a329c6a74b7666da1b6f8478621204b4f53786749a0f331eaae9"
+    },
+    {
+      "index_bytes": 406865,
+      "index_sha256": "589f57fa402ed8b143458678d44b5b794b788a0c4d25e9d3f5f48a5316e91387",
+      "path": "wiki/indexes/by-authority-status.md",
+      "status": " M",
+      "working_bytes": 407477,
+      "working_sha256": "41cd39c7c11359d6ff743aef575fcdf0486bd6e41649a009e689addf7109931e"
+    },
+    {
+      "index_bytes": 406736,
+      "index_sha256": "00b6833ce3a72f243eafa09bbae37abef0ad7bc1899aeac6321b96e31b01cea2",
+      "path": "wiki/indexes/by-format.md",
+      "status": " M",
+      "working_bytes": 407348,
+      "working_sha256": "028c825f117339034cd48b69a0f726f82065a5715f86b41c3940d128f0d8a787"
+    },
+    {
+      "index_bytes": 99784,
+      "index_sha256": "4f91ce46670eaa0b96f5254a61f1cb8346f9120906d4bfe9c62e07c41100b224",
+      "path": "wiki/indexes/by-ontology-promotion-status.md",
+      "status": " M",
+      "working_bytes": 99949,
+      "working_sha256": "4187df6600a66c3e4f89ecf7ba153bc5f51b9379b859c981efa9ce6c852e7659"
+    },
+    {
+      "index_bytes": 407063,
+      "index_sha256": "67b89c96e5caea215339cebefe51e85ca54439b8e620a99aa9e7c2f866df160d",
+      "path": "wiki/indexes/by-owner-skill.md",
+      "status": " M",
+      "working_bytes": 407675,
+      "working_sha256": "690c48ffd4519c648eac8128f1f0753d3f6de1b871a7678ed705f43f81da45a8"
+    },
+    {
+      "index_bytes": 11231,
+      "index_sha256": "fbe0729706b7f2fbc1b9048f93041d3b3ce054a683216f58abc39c79ae234ae6",
+      "path": "wiki/indexes/compact_current_frontier_v16.md",
+      "status": " M",
+      "working_bytes": 11103,
+      "working_sha256": "3742f99b0c8950e8e256a62df6303c5641d0e3988aa5d7611962b0b2329b0a39"
+    },
+    {
+      "index_bytes": 213603,
+      "index_sha256": "36eab3d59f40905d68fc577164b0a68c1d77d1f948741cd7e29f744078864f60",
+      "path": "wiki/indexes/documentation-by-authority-status.md",
+      "status": " M",
+      "working_bytes": 213917,
+      "working_sha256": "f5de5dd02a4761e1ffafba135e73d1ee37f566d5ad109ef7ce1c1106fd620ff3"
+    },
+    {
+      "index_bytes": 213471,
+      "index_sha256": "7dd73f7a791f9fbe57c110797844fa324020dd1ad43797bab18a1ec7e4d20378",
+      "path": "wiki/indexes/documentation-by-format.md",
+      "status": " M",
+      "working_bytes": 213785,
+      "working_sha256": "43aa8050b22eb471571b9c704e444abd59fac81869e8a8a5940713330b161924"
+    },
+    {
+      "index_bytes": 213816,
+      "index_sha256": "8858e8f33ce3c76122105dc2111b39ae9535f723b97fc54317bdf4fe27c574ec",
+      "path": "wiki/indexes/documentation-by-owner-skill.md",
+      "status": " M",
+      "working_bytes": 214130,
+      "working_sha256": "c4ead7de4b1c4b083c007a5b1c022410389c934de1bf88135033e8fabf84b495"
+    },
+    {
+      "index_bytes": 1013947,
+      "index_sha256": "4872b8508958708fb30091a858ba5728b54ad0b17be90b5c9341b1842dca3900",
+      "path": "wiki/indexes/research_control_task_index.md",
+      "status": " M",
+      "working_bytes": 1016029,
+      "working_sha256": "c55b15f55992a329c6a74b7666da1b6f8478621204b4f53786749a0f331eaae9"
+    },
+    {
+      "index_bytes": 21859,
+      "index_sha256": "443f376193229dc15f9841ce1e359b7522f18bbb3179114ce7493da1771b70be",
+      "path": "wiki/indexes/research_dependency_graph.md",
+      "status": " M",
+      "working_bytes": 21932,
+      "working_sha256": "f0c2122936e862faa2ff71bd048349d50e3a10c5b0cb56397d23ade3efca3704"
+    },
+    {
+      "index_bytes": 679,
+      "index_sha256": "62d7d6e08586ac7daded750f862960aa5000160e55812dfe2d57a70424cb4631",
+      "path": "wiki/markdown/md-research-control-current-frontier.md",
+      "status": " M",
+      "working_bytes": 679,
+      "working_sha256": "b458a74debd41d9bed370e98463b7cd4634562b379682cad8aeb71e8e47e9b88"
+    },
+    {
+      "index_bytes": 919,
+      "index_sha256": "1a622a6867a52cce249d3ba7a07a34c40246d346148feea5a6e0976e558dc67a",
+      "path": "wiki/markdown/md-research-control-task-index.md",
+      "status": " M",
+      "working_bytes": 919,
+      "working_sha256": "8aae7bb95ef504a78de716a212cda83620ff8a9a90434ac45aff103cb65ce642"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-construction-v1.md",
+      "status": "??",
+      "working_bytes": 981,
+      "working_sha256": "5c7d646acf4bbc5babd5c10d5c7700f0f71145dfebc59d8037577ecd135d140d"
+    },
+    {
+      "index_bytes": null,
+      "index_sha256": null,
+      "path": "wiki/tex/tex-v22-p4-t02-b2-equipped-chain-descriptor-attempt-v1.md",
+      "status": "??",
+      "working_bytes": 1297,
+      "working_sha256": "942fb08b7ab538f1383698d65f5b34f31eff132b919464d780c4e8d131f05a75"
+    }
+  ],
+  "prior_job_id": "AJ-RT-20260809-024-001",
+  "protected_science": [
+    {
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex",
+      "sha256": "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169"
+    },
+    {
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_population_v1.yaml",
+      "sha256": "fde2dbbfb1622f6877067408db184d24d477d40acaee953d48585385c4ceeed9"
+    },
+    {
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_atomic_obligation_construction_matrix_v1.yaml",
+      "sha256": "ce44c482a60ff04f1228ed68d4adbc510f3c4350c2278927ed38e611e5a19219"
+    },
+    {
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_source_factorization_provenance_v1.yaml",
+      "sha256": "023084b678b9771796652520e1df0c876f2425f622e6431ff59fc2c95d905245"
+    },
+    {
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_explicit_unit_cocycle_v1.yaml",
+      "sha256": "1e070af78bcb24d426f44123f3186dfbefb6244192cc77cf1983ec095681f07f"
+    },
+    {
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_d7_separation_obstruction_v1.yaml",
+      "sha256": "95577e04db61fdc37d8597a367dfd0025fbdeb30f8c9ce9e1d86806cb6b52dc2"
+    },
+    {
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_model.py",
+      "sha256": "c5e40b3453b2ecb1b40ce2ddf10caee0984fdc297ecf9a39bff5af6f50cb4660"
+    },
+    {
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_validation.json",
+      "sha256": "c9eefc62a41f1aa08f0d834e6887296c9b6b6d98fd142e05cc70c09638b195ab"
+    },
+    {
+      "path": "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_compact_receipt.json",
+      "sha256": "f3ada7680813b437f9522aace462a8c6878ac800f1bcd1e07fef4a48d04608cf"
+    }
+  ],
+  "repair_targets": [
+    {
+      "path": "research_control/tasks/RT-20260809-023/documentation_impact.yaml",
+      "preimage_bytes": 12597,
+      "preimage_ends_with_two_newlines": true,
+      "preimage_sha256": "dfdbff9193e6e00a70d79bef1470e5f887b31a112c94e712d2a54637c80b1133",
+      "required_postimage_bytes": 12596,
+      "required_postimage_ends_with_exactly_one_newline": true,
+      "required_postimage_sha256": "163a7e33f15c66842292110bc925d369f35572d659eba334648a443508236601"
+    },
+    {
+      "path": "research_control/tasks/RT-20260809-024/documentation_impact.yaml",
+      "preimage_bytes": 10505,
+      "preimage_ends_with_two_newlines": true,
+      "preimage_sha256": "ee0b240ae362e8e7ad0a471851c48ee9426a8fc1a3529f0b90197b580d6c0432",
+      "required_postimage_bytes": 10504,
+      "required_postimage_ends_with_exactly_one_newline": true,
+      "required_postimage_sha256": "37b6ce458346fc5f1d240f15955678cd07502127d048ab013b1536ecc1b86e9e"
+    }
+  ],
+  "schema_id": "v22_p4_t02_b2_two_eof_checkpoint_recovery_manifest_v1",
+  "source_head": "6a585fc6fa73c8bc326e2d1c4e087317c747698d",
+  "source_tree": "a2136776d8663d9391ca0347a05f2650619b7678"
+}

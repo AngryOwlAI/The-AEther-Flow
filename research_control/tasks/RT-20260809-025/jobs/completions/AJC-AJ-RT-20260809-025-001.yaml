@@ -1,0 +1,359 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260809-025-001"
+completion_id: "AJC-AJ-RT-20260809-025-001"
+task_id: "RT-20260809-025"
+task_type: "v22_p4_t02_b2_two_eof_checkpoint_recovery"
+decision_id: "DDR-20260809-025"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260809-025"
+status: "completed"
+created_at: "2026-08-10T03:09:36Z"
+started_at: "2026-08-10T03:09:36Z"
+completed_at: "2026-08-10T03:09:36Z"
+objective: "Normalize the exact two checkpoint-named documentation-impact EOF defects, preserve the 78-path inherited transaction and all protected science, synchronize cumulative control and generated state, and invoke at most one fresh checkpoint."
+completion_summary: "The 78-path inherited boundary and consumed RT024 checkpoint receipt are sealed. Both exact one-byte EOF postimages were observed with zero drift across the other 76 inherited paths. Cumulative documentation-impact coverage is synchronized and all nine protected RT023 scientific artifacts remain byte-identical. RT024 was not replayed; the populated-instance Smuggling Auditor route remains selected but unexecuted."
+objective_result: "implemented_and_validated_two_eof_checkpoint_recovery_ready_for_fresh_checkpoint"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated_precheckpoint"
+work_item_status: "completed_precheckpoint"
+
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260809-025-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+prior_checkpoint:
+  job_id: "AJ-RT-20260809-024-001"
+  canonical_run_id: "RUN-CHECKPOINT-ccf454970bb530f6"
+  gate_count: 7
+  pass_count: 2
+  failure_count: 1
+  skipped_count: 4
+  consumed: true
+  replayed: false
+  sole_failure_gate: "git_diff_check"
+  finding_count: 2
+  receipt_sha256: "8289376ceeaf208476bec7986ab10b19dd34cb1d2c1246998fd81d62e8c7b04d"
+  failed_output_sha256: "83727704842057c1b4b4c70c934928106fe548d6ed824ef34cd3769b9280298a"
+  final_plan_hash: "96ee83ebd1906eb554c78276bc3d87b62f67d83f129da9a3399002c75ece7994"
+
+is_physics_task: false
+payload_class: "project_system_exact_rt024_two_eof_checkpoint_recovery"
+has_new_mathematical_payload: false
+new_mathematical_payload: []
+project_system_change_only: true
+semantic_payload_changed: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  recovery_plan_id: "project_system_recovery_for_recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T02"
+  recovery_for_plan_task_id: "P4-T02"
+  task_class: "project_system"
+  expected_result_kind: "implemented_and_validated_or_precisely_blocked"
+  work_item_status: "populated_instance_audit_not_executed_two_eof_recovery_checkpoint_pending"
+  next_plan_task_id: "P4-T02"
+  p4_t02_descriptor_construction_executed: true
+  p4_t02_descriptor_construction_replayed: false
+  rt024_recovery_replayed: false
+  populated_instance_audit_selected: true
+  populated_instance_audit_executed: false
+  p4_t03_executed: false
+
+result:
+  status: "PASS_V22_P4_T02_B2_TWO_EOF_CHECKPOINT_RECOVERY"
+  strategy_id: "repair_v22_p4_t02_b2_two_eof_blank_lines_and_checkpoint_v1"
+  source_task_id: "RT-20260809-024"
+  source_job_id: "AJ-RT-20260809-024-001"
+  source_handoff_id: "handoff-0994"
+  source_head: "6a585fc6fa73c8bc326e2d1c4e087317c747698d"
+  source_tree: "a2136776d8663d9391ca0347a05f2650619b7678"
+  entry_index_tree: "a2136776d8663d9391ca0347a05f2650619b7678"
+  inherited_manifest_sha256: "7beabab32b3d5211f01c13802702aa814cca8b189d0a5f216f8c1331b84d77c8"
+  inherited_file_count: 78
+  target_file_count: 2
+  non_target_file_count: 76
+  failed_finding_count: 2
+  corrected_finding_count: 2
+  protected_rt023_failure_count: 0
+  immutable_route_sha256: "0b14d6c3d1d016ad9f363a153b91df09ff2f3f4b876a43002292f47cb38cd2b9"
+  route_blocker_fingerprint: "4b30b0ab8ebc05e0e0cbf6e935e8667ac0dc2f50226305b1ab6a3707ce45b055"
+  prior_checkpoint_replayed: false
+  prior_recovery_replayed: false
+  descriptor_construction_replayed: false
+  populated_instance_audit_selected: true
+  populated_instance_audit_executed: false
+  p4_t03_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260809-025/artifacts/inherited_dirty_manifest_v22_p4_t02_b2_two_eof_checkpoint_recovery.json"
+    sha256: "7beabab32b3d5211f01c13802702aa814cca8b189d0a5f216f8c1331b84d77c8"
+  - path: "research_control/tasks/RT-20260809-025/artifacts/v22_p4_t02_b2_two_eof_checkpoint_blocker.yaml"
+    sha256: "4b30b0ab8ebc05e0e0cbf6e935e8667ac0dc2f50226305b1ab6a3707ce45b055"
+  - path: "research_control/tasks/RT-20260809-025/artifacts/v22_p4_t02_b2_two_eof_repair_boundary_receipt.json"
+    sha256: "4976519a51a31d25c6cc2f46e856981bf87fece10beada28b65733959aac4729"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex"
+    sha256: "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_population_v1.yaml"
+    sha256: "fde2dbbfb1622f6877067408db184d24d477d40acaee953d48585385c4ceeed9"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_atomic_obligation_construction_matrix_v1.yaml"
+    sha256: "ce44c482a60ff04f1228ed68d4adbc510f3c4350c2278927ed38e611e5a19219"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_source_factorization_provenance_v1.yaml"
+    sha256: "023084b678b9771796652520e1df0c876f2425f622e6431ff59fc2c95d905245"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_explicit_unit_cocycle_v1.yaml"
+    sha256: "1e070af78bcb24d426f44123f3186dfbefb6244192cc77cf1983ec095681f07f"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_d7_separation_obstruction_v1.yaml"
+    sha256: "95577e04db61fdc37d8597a367dfd0025fbdeb30f8c9ce9e1d86806cb6b52dc2"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_model.py"
+    sha256: "c5e40b3453b2ecb1b40ce2ddf10caee0984fdc297ecf9a39bff5af6f50cb4660"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_validation.json"
+    sha256: "c9eefc62a41f1aa08f0d834e6887296c9b6b6d98fd142e05cc70c09638b195ab"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_compact_receipt.json"
+    sha256: "f3ada7680813b437f9522aace462a8c6878ac800f1bcd1e07fef4a48d04608cf"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1168
+    relationship_row_count: 5986
+    semantic_row_count: 1168
+    vault_row_count: 1168
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"checkpoint recovery\" --limit 10 --json"
+      query_type: "search"
+      query_text: "checkpoint recovery"
+      returned_object_ids:
+        - "MD-SCHEMA-AGENT-JOB-SCHEMA"
+        - "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "MD-SCHEMA-AGENT-JOB-SCHEMA"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".agents/schemas/AGENT_JOB_SCHEMA.md"
+      source_hash: "d804e9e2138eb24ddfd3c8ee3ab7fc829094d1073b82efe3e32dbe017ed92d75"
+    - object_id: "MD-RESEARCH-CONTROL-TASKS-RT-20260722-015-ORDINARY-ROUTE-GUARD-POLICY-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260722-015/artifacts/ordinary_route_guard_policy_v1.md"
+      source_hash: "00f34722e9e9f50182acccf9143cc295f4cdf8439321820e41f25b5b0bfbc0c8"
+  authority_note: "Tracked canonical source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local retrieval layers are operational navigation only and are not authority."
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-0994"
+  source_handoff_sha256_at_intake: "088d91eea391b14c83c55da4bd500daeeeaab95591c6af58de336d946f71398a"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "project_system_checkpoint_recovery"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one sealed 78-path inherited manifest and one consumed-checkpoint blocker"
+      - "exact normalization of two documentation-impact EOF defects with protected science unchanged"
+      - "one consistent recovery handoff and synchronized approved projections"
+      - "one fresh governed checkpoint outcome"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "both checkpoint-named files end in exactly one newline and remain valid YAML"
+      - "all nine protected RT023 science hashes remain exact"
+      - "AJ-RT-20260809-024-001 and its checkpoint are not replayed"
+      - "handoff-0995 and generated active-state projections agree"
+      - "at most one fresh governed checkpoint is invoked"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+command_results:
+  - command: "task-local RT025 exact EOF recovery validator"
+    status: "PASS"
+    summary: "The 78-path preimage, two exact postimages, zero non-target boundary drift, checkpoint evidence, and nine protected science hashes are sealed."
+  - command: "generated views documentation impact memory and research-control acceptance"
+    status: "PASS_WITH_WARNINGS"
+    summary: "Approved projections and control gates pass; historical calibration warnings, if any, remain nonblocking."
+  - command: "governed cumulative checkpoint AJ-RT-20260809-025-001"
+    status: "PENDING_SINGLE_INVOCATION"
+    summary: "Exactly one fresh invocation remains authorized."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, classifier, resolver, signal, role-fit, receipt, and exact-manifest preflight uniquely selected this recovery."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The repair-boundary receipt proves two exact postimages, zero drift across 76 non-target paths, and nine protected science hashes."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Cumulative documentation receipts and recovery control records are complete."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one fresh governed AJ-RT-20260809-025-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Current frontier, task index, dependency graph, claim graph, and compact frontier are regenerated from tracked sources."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory bootstrap and validate-only verification pass."
+  claim_language_linter:
+    status: "PASS_WITH_WARNINGS"
+    evidence:
+      - "Changed-source claim-language validation has no hard failure; historical calibration findings remain warnings."
+
+selected_next_route:
+  route_id: "audit_v22_p4_t02_b2_populated_equipped_chain_descriptor_v1"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT"
+  work_kind: "source_extension_smuggling_audit"
+  task_class: "science"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  supporting_perspective: "refuter@0.2.0"
+  worker_skill: "continue-research"
+  strategy_id: "audit_v22_p4_t02_b2_populated_equipped_chain_descriptor_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  adequacy_reevaluation_authorized: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta_project_system_checkpoint_recovery_only"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "Whitespace normalization and cumulative control receipts supply no adequacy, cone, scale, effective metric, coupling, field equation, or Gate evidence."
+  downstream_unlocked:
+    - "one separately admitted populated-instance Smuggling Auditor packet after a valid recovery checkpoint"
+  downstream_still_blocked:
+    - "D7 adequacy and B2 activation"
+    - "P4-T03 and all downstream physics milestones"
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review is authorized for this recovery."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  reviewer_contact_authorized: false
+
+project_improvement_signals: []
+project_improvement_signal_count: 0
+project_improvement_sidecar_required: false
+documentation_impact_id: "DI-RT-20260809-025-001"
+next_recommended_action: "Invoke the single fresh governed checkpoint for AJ-RT-20260809-025-001. After it commits, execute exactly one separately admitted populated-instance Smuggling Auditor AgentJob."
+notes: "Project-system recovery only; no scientific, promotion, publication, push, or external-action authority is created."

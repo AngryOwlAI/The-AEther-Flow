@@ -1,0 +1,59 @@
+schema_id: "parent_child_physics_child_v1"
+task_id: "RT-20260809-023"
+job_id: "AJ-RT-20260809-023-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+authority_inherited_from: "candidate-constructor@0.2.0--RT-20260809-023"
+independent_agentjob_created: false
+subagent_used: false
+inputs_held_fixed:
+  - "exact P7 conditional-input contract"
+  - "P7-T05 three equipped B3 controls and carrier matrix"
+  - "RT-021 ten-component descriptor law and 35 obligations"
+  - "RT-022 source-factorization and explicit-unit audit guards"
+  - "handoff-0992 no-adequacy boundary"
+construction:
+  sector_set: "three tagged exact equipped Rod Signal and Detector sector-control instances"
+  source_patch: "U=(-1,1)^4"
+  bundles: "F_s=W_s=U x R3 with C2 sections"
+  lift: "constant-copy L_s_n over dyadic G_n with exact sampling and epsilon_n=0"
+  quotients: "identity source and output groupoids with regular quotient tangent R3"
+  sector_operator: "E_s[r](u)=tau(u)+(I-M_B)(u-Lr)"
+  reduced_symbol: "k(tau) I3"
+  determinant: "k(tau)^3"
+  radical_ideal: "<k(tau)>"
+  compatibility: "predeclared equality with the source ideal <k(tau)>"
+  overlap_units: "g_ij=1 with inverse and triple cocycle identities"
+proof_results:
+  - payload_id: "THM-V22-P4T02-B2-EXACT-CONSTANT-LIFT-001"
+    result: "sampling recovery, refinement compatibility, zero error, and relabelling naturality hold exactly"
+  - payload_id: "THM-V22-P4T02-B2-COMMON-SOURCE-HYPERPLANE-001"
+    result: "all three square reduced sector symbols have one common locally principal radical ideal"
+  - payload_id: "THM-V22-P4T02-B2-UNIT-ONE-COCYCLE-001"
+    result: "all overlap units, inverses, and triple cocycles are explicitly one"
+obligation_accounting:
+  total: 35
+  discharged: 33
+  blocked: 2
+  blocked_ids:
+    - "D7-O2"
+    - "D7-O4"
+mathematical_conclusion: "The maximal source-only witness is internally coherent and source-factorized, but it is not a complete descriptor instance because the two D7 adequacy obligations are blocking and unexecuted."
+recommended_decisive_result: "precise_obstruction"
+recommended_obstruction_id: "OBST-V22-P4T02-B2-D7-SEPARATION-001"
+next_role: "smuggling-auditor@0.2.0"
+limitations:
+  - "tau, U, grids, and the control topology are proposal-only source primitives not derived by current ontology"
+  - "the admissible variation class changes one shared tau and does not test sector-split transport perturbations"
+  - "the common characteristic hyperplane is not a quadratic or physical cone"
+  - "no adequacy rank or verdict is evaluated"
+authority_limits:
+  descriptor_instance_complete: false
+  source_law_adopted: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false

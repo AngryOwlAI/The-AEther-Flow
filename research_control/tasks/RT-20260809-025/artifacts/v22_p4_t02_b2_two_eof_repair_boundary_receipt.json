@@ -1,0 +1,145 @@
+{
+  "authority": "operational_validation_only",
+  "authority_limits": {
+    "distance_to_gr_changed": false,
+    "external_action_authorized": false,
+    "p4_t03_executed": false,
+    "physics_promotion_authorized": false,
+    "populated_instance_audit_executed": false,
+    "prior_job_replayed": false,
+    "publication_or_push_authorized": false,
+    "semantic_science_changed": false
+  },
+  "error_count": 0,
+  "errors": [],
+  "immutable_route_sha256": "0b14d6c3d1d016ad9f363a153b91df09ff2f3f4b876a43002292f47cb38cd2b9",
+  "inherited_manifest": {
+    "non_target_path_count": 76,
+    "path": "research_control/tasks/RT-20260809-025/artifacts/inherited_dirty_manifest_v22_p4_t02_b2_two_eof_checkpoint_recovery.json",
+    "path_count": 78,
+    "sha256": "7beabab32b3d5211f01c13802702aa814cca8b189d0a5f216f8c1331b84d77c8",
+    "target_path_count": 2
+  },
+  "job_id": "AJ-RT-20260809-025-001",
+  "repair_boundary": {
+    "checkpoint_evidence": {
+      "counts": {
+        "blocked_count": 0,
+        "cache_hit_count": 0,
+        "executed_pass_count": 2,
+        "fail_count": 1,
+        "gate_count": 7,
+        "pass_count": 2,
+        "skipped_count": 4,
+        "warn_count": 0
+      },
+      "failed_gate": {
+        "cache_reason": "gate_policy_ineligible",
+        "cache_status": "NOT_ELIGIBLE",
+        "cache_write_reason": "gate_policy_ineligible",
+        "cache_write_status": "NOT_ATTEMPTED",
+        "child_gates": [],
+        "dependencies": [],
+        "duration_ms": 128,
+        "duration_saved_seconds": 0,
+        "duration_seconds": 0.128428,
+        "exit_code": 2,
+        "finished_at": "2026-08-10T03:01:14.881278Z",
+        "gate_id": "git_diff_check",
+        "plan_reasons": [
+          "condition:checkpoint_selected"
+        ],
+        "reason": "nonzero_exit",
+        "satisfied_obligations": [],
+        "severity": "blocking",
+        "started_at": "2026-08-10T03:01:14.752855Z",
+        "status": "FAIL",
+        "stderr_bytes": 0,
+        "stderr_path": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-ccf454970bb530f6/gates/0006-git_diff_check.stderr",
+        "stdout_bytes": 186,
+        "stdout_path": "/Volumes/P-SSD/AngryOwl/The-AEther-Flow/.local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-ccf454970bb530f6/gates/0006-git_diff_check.stdout"
+      },
+      "failed_output_sha256": "83727704842057c1b4b4c70c934928106fe548d6ed824ef34cd3769b9280298a",
+      "final_plan_hash": "96ee83ebd1906eb554c78276bc3d87b62f67d83f129da9a3399002c75ece7994",
+      "finding_count": 2,
+      "receipt_sha256": "8289376ceeaf208476bec7986ab10b19dd34cb1d2c1246998fd81d62e8c7b04d",
+      "run_id": "RUN-CHECKPOINT-ccf454970bb530f6"
+    },
+    "git_head": "6a585fc6fa73c8bc326e2d1c4e087317c747698d",
+    "git_index_clean": true,
+    "git_tree": "a2136776d8663d9391ca0347a05f2650619b7678",
+    "non_target_hash_mismatch_count": 0,
+    "non_target_hash_mismatches": [],
+    "protected_science": {
+      "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_atomic_obligation_construction_matrix_v1.yaml": {
+        "expected_sha256": "ce44c482a60ff04f1228ed68d4adbc510f3c4350c2278927ed38e611e5a19219",
+        "match": true,
+        "observed_sha256": "ce44c482a60ff04f1228ed68d4adbc510f3c4350c2278927ed38e611e5a19219"
+      },
+      "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_d7_separation_obstruction_v1.yaml": {
+        "expected_sha256": "95577e04db61fdc37d8597a367dfd0025fbdeb30f8c9ce9e1d86806cb6b52dc2",
+        "match": true,
+        "observed_sha256": "95577e04db61fdc37d8597a367dfd0025fbdeb30f8c9ce9e1d86806cb6b52dc2"
+      },
+      "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_compact_receipt.json": {
+        "expected_sha256": "f3ada7680813b437f9522aace462a8c6878ac800f1bcd1e07fef4a48d04608cf",
+        "match": true,
+        "observed_sha256": "f3ada7680813b437f9522aace462a8c6878ac800f1bcd1e07fef4a48d04608cf"
+      },
+      "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_model.py": {
+        "expected_sha256": "c5e40b3453b2ecb1b40ce2ddf10caee0984fdc297ecf9a39bff5af6f50cb4660",
+        "match": true,
+        "observed_sha256": "c5e40b3453b2ecb1b40ce2ddf10caee0984fdc297ecf9a39bff5af6f50cb4660"
+      },
+      "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_validation.json": {
+        "expected_sha256": "c9eefc62a41f1aa08f0d834e6887296c9b6b6d98fd142e05cc70c09638b195ab",
+        "match": true,
+        "observed_sha256": "c9eefc62a41f1aa08f0d834e6887296c9b6b6d98fd142e05cc70c09638b195ab"
+      },
+      "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex": {
+        "expected_sha256": "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169",
+        "match": true,
+        "observed_sha256": "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169"
+      },
+      "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_population_v1.yaml": {
+        "expected_sha256": "fde2dbbfb1622f6877067408db184d24d477d40acaee953d48585385c4ceeed9",
+        "match": true,
+        "observed_sha256": "fde2dbbfb1622f6877067408db184d24d477d40acaee953d48585385c4ceeed9"
+      },
+      "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_explicit_unit_cocycle_v1.yaml": {
+        "expected_sha256": "1e070af78bcb24d426f44123f3186dfbefb6244192cc77cf1983ec095681f07f",
+        "match": true,
+        "observed_sha256": "1e070af78bcb24d426f44123f3186dfbefb6244192cc77cf1983ec095681f07f"
+      },
+      "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_source_factorization_provenance_v1.yaml": {
+        "expected_sha256": "023084b678b9771796652520e1df0c876f2425f622e6431ff59fc2c95d905245",
+        "match": true,
+        "observed_sha256": "023084b678b9771796652520e1df0c876f2425f622e6431ff59fc2c95d905245"
+      }
+    },
+    "target_checks": {
+      "research_control/tasks/RT-20260809-023/documentation_impact.yaml": {
+        "byte_delta": 1,
+        "document_parses": true,
+        "ends_with_exactly_one_newline": true,
+        "exact_one_final_newline_removed": true,
+        "postimage_sha256": "163a7e33f15c66842292110bc925d369f35572d659eba334648a443508236601",
+        "preimage_sha256": "dfdbff9193e6e00a70d79bef1470e5f887b31a112c94e712d2a54637c80b1133"
+      },
+      "research_control/tasks/RT-20260809-024/documentation_impact.yaml": {
+        "byte_delta": 1,
+        "document_parses": true,
+        "ends_with_exactly_one_newline": true,
+        "exact_one_final_newline_removed": true,
+        "postimage_sha256": "37b6ce458346fc5f1d240f15955678cd07502127d048ab013b1536ecc1b86e9e",
+        "preimage_sha256": "ee0b240ae362e8e7ad0a471851c48ee9426a8fc1a3529f0b90197b580d6c0432"
+      }
+    }
+  },
+  "schema_id": "v22_p4_t02_b2_two_eof_repair_boundary_receipt_v1",
+  "source_head": "6a585fc6fa73c8bc326e2d1c4e087317c747698d",
+  "source_tree": "a2136776d8663d9391ca0347a05f2650619b7678",
+  "status": "PASS",
+  "strategy_id": "repair_v22_p4_t02_b2_two_eof_blank_lines_and_checkpoint_v1",
+  "task_id": "RT-20260809-025"
+}

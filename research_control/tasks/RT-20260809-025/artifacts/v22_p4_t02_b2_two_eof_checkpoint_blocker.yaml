@@ -1,0 +1,92 @@
+schema_id: "research_checkpoint_blocker_v1"
+blocker_id: "BLOCK-V22-P4-T02-B2-TWO-EOF-CHECKPOINT-001"
+status: "active_blocking"
+job_id: "AJ-RT-20260809-024-001"
+task_id: "RT-20260809-024"
+created_at: "2026-08-10T03:09:36Z"
+source_head: "6a585fc6fa73c8bc326e2d1c4e087317c747698d"
+source_tree: "a2136776d8663d9391ca0347a05f2650619b7678"
+entry_index_tree: "a2136776d8663d9391ca0347a05f2650619b7678"
+checkpoint:
+  run_id: "RUN-CHECKPOINT-ccf454970bb530f6"
+  invocation_count: 1
+  consumed: true
+  committed: false
+  staged: false
+  entry_index_restored: true
+  gate_count: 7
+  pass_count: 2
+  failure_count: 1
+  skipped_count: 4
+  failed_gate: "git_diff_check"
+  failed_gate_returncode: 2
+  test_shard_executed: false
+  final_plan_hash: "96ee83ebd1906eb554c78276bc3d87b62f67d83f129da9a3399002c75ece7994"
+  receipt:
+    path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-ccf454970bb530f6/receipt.json"
+    sha256: "8289376ceeaf208476bec7986ab10b19dd34cb1d2c1246998fd81d62e8c7b04d"
+  failed_gate_output:
+    path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-ccf454970bb530f6/gates/0006-git_diff_check.stdout"
+    sha256: "83727704842057c1b4b4c70c934928106fe548d6ed824ef34cd3769b9280298a"
+sole_failure_class:
+  kind: "two_new_blank_lines_at_eof"
+  finding_count: 2
+  semantic_content_error: false
+  validator_or_policy_error: false
+targets:
+  - path: "research_control/tasks/RT-20260809-023/documentation_impact.yaml"
+    finding_line: 184
+    document_kind: "yaml"
+    preimage_bytes: 12597
+    preimage_sha256: "dfdbff9193e6e00a70d79bef1470e5f887b31a112c94e712d2a54637c80b1133"
+    required_postimage_bytes: 12596
+    required_postimage_sha256: "163a7e33f15c66842292110bc925d369f35572d659eba334648a443508236601"
+  - path: "research_control/tasks/RT-20260809-024/documentation_impact.yaml"
+    finding_line: 168
+    document_kind: "yaml"
+    preimage_bytes: 10505
+    preimage_sha256: "ee0b240ae362e8e7ad0a471851c48ee9426a8fc1a3529f0b90197b580d6c0432"
+    required_postimage_bytes: 10504
+    required_postimage_sha256: "37b6ce458346fc5f1d240f15955678cd07502127d048ab013b1536ecc1b86e9e"
+recovery:
+  task_id: "RT-20260809-025"
+  job_id: "AJ-RT-20260809-025-001"
+  route_strategy_id: "repair_v22_p4_t02_b2_two_eof_blank_lines_and_checkpoint_v1"
+  immutable_route_sha256: "0b14d6c3d1d016ad9f363a153b91df09ff2f3f4b876a43002292f47cb38cd2b9"
+  inherited_manifest_path: "research_control/tasks/RT-20260809-025/artifacts/inherited_dirty_manifest_v22_p4_t02_b2_two_eof_checkpoint_recovery.json"
+  inherited_manifest_sha256: "7beabab32b3d5211f01c13802702aa814cca8b189d0a5f216f8c1331b84d77c8"
+  inherited_path_count: 78
+  prior_job_replay_authorized: false
+  fresh_checkpoint_invocation_limit: 1
+protected_science:
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex"
+    sha256: "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_population_v1.yaml"
+    sha256: "fde2dbbfb1622f6877067408db184d24d477d40acaee953d48585385c4ceeed9"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_atomic_obligation_construction_matrix_v1.yaml"
+    sha256: "ce44c482a60ff04f1228ed68d4adbc510f3c4350c2278927ed38e611e5a19219"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_source_factorization_provenance_v1.yaml"
+    sha256: "023084b678b9771796652520e1df0c876f2425f622e6431ff59fc2c95d905245"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_explicit_unit_cocycle_v1.yaml"
+    sha256: "1e070af78bcb24d426f44123f3186dfbefb6244192cc77cf1983ec095681f07f"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_d7_separation_obstruction_v1.yaml"
+    sha256: "95577e04db61fdc37d8597a367dfd0025fbdeb30f8c9ce9e1d86806cb6b52dc2"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_model.py"
+    sha256: "c5e40b3453b2ecb1b40ce2ddf10caee0984fdc297ecf9a39bff5af6f50cb4660"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_validation.json"
+    sha256: "c9eefc62a41f1aa08f0d834e6887296c9b6b6d98fd142e05cc70c09638b195ab"
+  - path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_descriptor_construction_compact_receipt.json"
+    sha256: "f3ada7680813b437f9522aace462a8c6878ac800f1bcd1e07fef4a48d04608cf"
+authority_limits:
+  semantic_payload_changed: false
+  descriptor_construction_replayed: false
+  prior_recovery_replayed: false
+  populated_instance_audit_executed: false
+  p4_t03_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_or_push_authorized: false
+  external_action_authorized: false
+notes: "This blocker binds local operational checkpoint evidence only. It authorizes the exact two-file EOF normalization, cumulative documentation-impact coverage, one distinct recovery packet, generated-state synchronization, and one fresh checkpoint; it creates no scientific or protected authority."

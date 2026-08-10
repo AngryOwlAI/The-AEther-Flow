@@ -1,0 +1,419 @@
+% authority: science_draft
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.88in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{obstruction}{Precise obstruction}
+\newenvironment{nonconclusion}{\par\smallskip\noindent\textbf{Non-conclusion.}\ }{\par\smallskip}
+
+\newcommand{\Sectors}{\mathcal S_{\mathrm{eq}}}
+\newcommand{\Bthree}{\mathcal B_3}
+\newcommand{\Psrc}{\mathcal P_{\mathrm{src}}}
+\newcommand{\Char}{\operatorname{Char}}
+\newcommand{\Span}{\operatorname{span}}
+\newcommand{\Id}{\operatorname{id}}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\QQ}{\mathbb Q}
+
+\title{V22 P4-T02 B2 Equipped-Chain Descriptor Construction Attempt v1}
+\author{Candidate Constructor Packet RT-20260809-023}
+\date{2026-08-10}
+
+\begin{document}
+\maketitle
+
+\section{Control status and decisive result}
+
+This task-local artifact executes exactly one
+\texttt{candidate-constructor@0.2.0} ontology-law packet for the fixed
+candidate
+\[
+  \texttt{CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1}.
+\]
+The construction is \emph{draft/control}, \emph{proposal-only}, and
+\emph{source-extension data}. It changes neither canonical ontology nor the
+protected finite P7 package.
+
+The packet populates all ten descriptor slots with one explicit local source
+witness. It constructs a smooth constant-copy lift of the three exact
+P7-T05 equipped chain controls, affine first-order source equations, trivial
+regular quotients, a common locally principal radical characteristic ideal,
+explicit unit-one inverse and cocycle data, a source-operational receipt, and
+a total but unevaluated P2-T01 procedure. Thirty-three of the thirty-five
+atomic obligations receive task-local construction evidence.
+
+The decisive result is nevertheless
+\[
+  \boxed{\texttt{precise\_obstruction}}.
+\]
+The fixed descriptor law makes D7-O2 (evaluate factor and operational ranks)
+and D7-O4 (emit one P2-T01 verdict) blocking conditions for a complete
+descriptor instance. Handoff-0992 and this AgentJob expressly forbid adequacy
+reevaluation. The two conditions therefore cannot be discharged in this
+packet. Calling the maximal witness a complete descriptor would violate both
+the immutable descriptor law and the active claim boundary.
+
+This is obstruction
+\[
+  \texttt{OBST-V22-P4T02-B2-D7-SEPARATION-001}.
+\]
+It is scoped to the present claim boundary. It is not a no-go theorem for B2
+or future source extensions. The witness remains available for a fresh
+populated-instance smuggling audit.
+
+\section{Fixed source basis and explicit extension cost}
+
+The protected conditional input is unchanged. P7-T05 supplies exactly three
+explicitly equipped chain controls: the Rod-, Signal-, and Detector-labelled
+controls transported to the common finite carrier
+\[
+  \Bthree=\{b_0,b_1,b_2\}.
+\]
+Write their tagged equipped-sector set as
+\[
+  \Sectors=\{(R,\sigma_R),(S,\sigma_S),(D,\sigma_D)\}.
+\]
+The tags retain the three exact equipped instances even if two inherited
+sector coordinates happen to coincide. They introduce no target matter label.
+Clock and FreeFall are not silently included: P7-T04 proves that the fixed
+five-role suite lacks one bijectively common finite support relation, and
+P7-T05 equips only the displayed three-chain subfamily.
+
+The common target-row/source-column bookkeeping update is
+\begin{equation}
+ M_{\Bthree}=
+ \begin{pmatrix}
+  1/2&0&0\\
+  1/2&1/2&0\\
+  0&1/2&1
+ \end{pmatrix},
+ \qquad
+ A_{\Bthree}=I_3-M_{\Bthree}.
+ \label{eq:carrier}
+\end{equation}
+These matrices are exact finite source records. They are not transition
+probabilities, a propagator, or physical dynamics.
+
+The new source-extension primitives are declared, not derived:
+\begin{enumerate}[leftmargin=*]
+\item a source presentation patch \(U=(-1,1)^4\) with coordinates
+  \(\xi=(\xi^0,\xi^1,\xi^2,\xi^3)\);
+\item the nowhere-zero source transport field
+  \(\tau=\partial/\partial\xi^0\);
+\item dyadic presentation grids \(G_n\subset U\); and
+\item the componentwise \(C^1\) sup norm in this fixed source presentation,
+  used only for refinement and variation control.
+\end{enumerate}
+The patch is not physical spacetime; its coordinates are not a target atlas;
+\(\tau\) is not physical time orientation; and the control norm is not a
+target metric, clock, rod, or physical distance. Their inclusion is an
+explicit proposal cost and is subject to later audit and stress.
+
+\section{D0--D2: fields and exact constant-copy lift}
+
+\begin{definition}[Sector bundles and refinement records]
+For each \(s\in\Sectors\), let
+\[
+  F_s=U\times\RR^3,\qquad
+  W_s=U\times\RR^3,\qquad
+  \Gamma_s=C^2(U,\RR^3).
+\]
+The full patch is the constant-rank regular locus. No constraint-rank,
+quotient-rank, or operator-rank stratum occurs in this witness.
+Non-smooth, nonlocal, stochastic, marked, and partial-domain replacements are
+typed as outside this local deterministic branch rather than silently
+identified with it.
+
+Let \(K_n=\Bthree\times G_n\). A finite equipped record is
+\(r_s=(r_s(b_0),r_s(b_1),r_s(b_2))\in\QQ^3\). Its refinement record
+\(\rho_{n+1,n}r_s\) copies the same three-vector to every address over every
+grid point. Define
+\[
+ L_{s,n}(r_s)(x)=r_s,\qquad
+ S_{s,n}(u)=\bigl(u(x)\bigr)_{x\in G_n},
+ \]
+where the address components retain their \(\Bthree\) order.
+\end{definition}
+
+\begin{theorem}[Exact recovery, refinement, and relabelling naturality]
+\label{thm:lift}
+For every equipped sector, every \(n\), and every \(r_s\in\QQ^3\):
+\begin{enumerate}[leftmargin=*]
+\item \(S_{s,n}L_{s,n}(r_s)=\rho_n r_s\);
+\item restriction from \(G_{n+1}\) to \(G_n\) commutes with sampling and lift;
+\item the refinement defect is exactly
+  \(\epsilon_n=0\) in the declared \(C^1\) sup topology; and
+\item every exact equipment-preserving P7 relabelling acts by the same
+  permutation on \(r_s\), \(L_{s,n}r_s\), and \(S_{s,n}u\).
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The lift is constant in \(x\), so sampling returns the same address vector at
+every grid point. Restriction deletes fine grid points without changing any
+retained value. Hence the difference between successive lifted sections and
+all of their first source derivatives is zero. Component permutation commutes
+with constant copying and point evaluation.
+\end{proof}
+
+The selector is stronger than finite trace agreement: Equations
+\eqref{eq:carrier} and \eqref{eq:operator} below are stipulated source laws
+before any trace comparison. A perturbation by a coefficient vanishing on
+the finite samples is not another instance of this fixed law. Thus the
+RT-021 finite-trace counterpair is not denied; its freedom is removed here
+only by paying for an explicit source-law primitive.
+
+\section{D3--D4: quotients and affine sector equations}
+
+The ordered directed carrier with matrix \(M_{\Bthree}\) has no nontrivial
+equipment-preserving automorphism. We therefore use identity source and
+output groupoids. Their regular quotient tangents are both \(\RR^3\), their
+descent maps are identities, and all coordinate components are invariant
+observables for this restricted branch. This does not convert passive source
+coordinate covariance into a physical gauge. Nonidentity, partial, singular,
+or non-differential quotient proposals fail closed outside the branch.
+
+\begin{definition}[Affine lifted sector law]
+For the frozen finite record \(r_s\), define
+\begin{equation}
+ E_s[r_s](u)
+ =
+ \tau(u)+A_{\Bthree}\bigl(u-L_{s,n}r_s\bigr).
+ \label{eq:operator}
+\end{equation}
+It is a first-order local source operator
+\(J^1(F_s)\times\QQ^3\to W_s\). There are no algebraic field constraints,
+differential constraints, vertical field redundancies, or algebraic equation
+redundancies in this witness. Its reduced perturbation space and reduced
+equation space are both \(\RR^3\).
+\end{definition}
+
+\begin{theorem}[Lifted solution and reduced principal symbol]
+\label{thm:symbol}
+For every \(s,n,r_s\):
+\[
+ E_s[r_s](L_{s,n}r_s)=0.
+\]
+The linearization in \(u\) is
+\[
+  D E_s[v]=\tau(v)+A_{\Bthree}v,
+\]
+and its square reduced principal symbol at \(k\in T_x^*U\) is
+\[
+  \bar\sigma_s(x,k)=k(\tau_x)I_3.
+\]
+Consequently
+\[
+  \det\bar\sigma_s(x,k)=p_\tau(x,k)^3,\qquad
+  p_\tau(x,k):=k(\tau_x),
+\]
+and the radical characteristic ideal is
+\[
+  \sqrt{\langle\det\bar\sigma_s\rangle}
+  =\langle p_\tau\rangle.
+\]
+\end{theorem}
+
+\begin{proof}
+The lift is constant, so \(\tau(Lr_s)=0\), and the affine difference in
+\eqref{eq:operator} vanishes. Differentiation in \(u\) gives the displayed
+linear operator. Only \(\tau(v)\) contains a derivative, yielding
+\(k(\tau)I_3\). Its determinant is the cube of the scalar factor. The radical
+of the principal ideal generated by \(p_\tau^3\) is generated by \(p_\tau\).
+\end{proof}
+
+\section{D5: common principal class, units, and robustness}
+
+\begin{definition}[Predeclared compatibility relation]
+Before comparing sectors, fix \(C_\tau\) by declaring two reduced sector
+symbols compatible precisely when their radical characteristic ideals are
+both the source ideal \(\langle p_\tau\rangle\) determined by the common
+proposal primitive \(\tau\). The common projective class is
+\[
+  \Psrc=[p_\tau].
+\]
+No polynomial degree, quadratic form, Lorentzian signature, time orientation,
+physical scale, desired GR cone, target fit, activation result, or adequacy
+result selects this relation.
+\end{definition}
+
+\begin{theorem}[Common locally principal source hypersurface]
+\label{thm:common}
+All three equipped sectors satisfy \(C_\tau\). Their reduced projective
+characteristic hypersurfaces are the same source hyperplane
+\[
+ \Char_{s,x}
+ =
+ \{[k]\in\mathbb P(T_x^*U):k(\tau_x)=0\}.
+\]
+The characteristic ideal is locally principal on all of \(U\).
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:symbol} gives the same radical ideal
+\(\langle p_\tau\rangle\) for every sector. Since \(\tau\) is nowhere zero,
+\(p_\tau\) is a nonzero fiber-linear polynomial at every source point and
+generates the radical ideal locally.
+\end{proof}
+
+Use the three-patch source cover
+\[
+ U_0=\{\xi^0<3/4\},\quad
+ U_1=\{\xi^0>-3/4\},\quad
+ U_2=\{|\xi^0|<7/8\}.
+\]
+On every nonempty overlap set \(P_i=p_\tau|_{U_i}\) and
+\[
+ g_{ij}=1,\qquad
+ P_i=g_{ij}P_j,\qquad
+ g_{ji}=g_{ij}^{-1}=1,\qquad
+ g_{ij}g_{jk}g_{ki}=1.
+\]
+These are explicit nowhere-zero degree-zero source units. No inference from
+equal real zero sets is used, so the RT-022 uniqueness counterexample remains
+fully respected.
+
+The admitted finite-variation class changes the common transport primitive
+for all sectors together:
+\[
+ \tau'=\tau+\delta\tau,\qquad
+ \|\delta\tau\|_{\infty}<\tfrac12.
+\]
+Then the \(\xi^0\)-component of \(\tau'\) is greater than \(1/2\), hence
+\(\tau'\) remains nowhere zero, the radical ideal remains locally principal,
+and the common projective hyperplane varies continuously in the fixed source
+presentation. Sector-dependent transport perturbations are not silently
+counted as admissible common-law variations. This is a candidate-relative
+robustness statement, not physical hyperbolicity or causal stability.
+
+\section{D6: source-fiber factorization and operational receipt}
+
+Let the declared source input \(S_{\rm dec}\) contain only the exact P7
+records, \(U,\tau,\{G_n\}\), the fixed source norm, \(M_{\Bthree}\), and the
+definitions above. Let \(T_{\rm target}\) range over arbitrary target atlases,
+metrics, cones, signatures, scales, or benchmark answers, and let
+\(A_{\rm auth}\) range over roles, registries, validators, generated reports,
+workflow states, and Gate outcomes.
+
+\begin{theorem}[Source-fiber factorization of the populated witness]
+\label{thm:fiber}
+Every component D0--D7 constructed in this packet is constant when
+\(S_{\rm dec}\) is fixed and \(T_{\rm target}\) or \(A_{\rm auth}\) varies.
+Therefore each component factors through the projection
+\[
+ S_{\rm dec}\times T_{\rm target}\times A_{\rm auth}
+ \longrightarrow S_{\rm dec}.
+\]
+\end{theorem}
+
+\begin{proof}
+Inspection of the formulas shows that every bundle, map, operator,
+coefficient, quotient, ideal, overlap unit, norm, variation class, and
+operational bridge is a function only of the enumerated source input. Target
+and authority variables occur only in the forbidden-input audit and never on
+the right-hand side of a construction formula. The RT-022 factorization
+criterion then applies.
+\end{proof}
+
+For each \(s\in\Sectors\), the source state is \(u_s\), the finite bridge is
+\(S_{s,0}\), and the invariant readout is the exact P7-T03 finite token
+response applied after that bridge on its declared preparation, intervention,
+history, and token domain. The readout is dimensionless bookkeeping only.
+Physical scale is absent. A counted response is falsified within this
+candidate if exact sampling recovery, P7 token partition, equipment
+naturality, or source-fiber invariance fails. Rod, Signal, and Detector remain
+guarded source labels; none becomes a physical rod, signal, or detector.
+
+\section{D7 and the exact completeness obstruction}
+
+The tenth slot \(N\) is populated as the total P2-T01 decision procedure
+specified by RT-021. Its input record names all ten required fields:
+\begin{enumerate}[leftmargin=*]
+\item state/domain: \((U,\{u_s,r_s\})\);
+\item regularity: \(C^2\) on the full constant-rank patch;
+\item source equivalence: the identity equipment groupoid;
+\item output equivalence: the identity output groupoid;
+\item reconstruction: sampling followed by the exact P7 finite readout;
+\item factor statistic: the derivative of that reconstruction on the regular
+  quotient tangent;
+\item operational typing: the source-only D6 receipt above;
+\item independence: the realized readout subspace on the same patch;
+\item stochastic scope: deterministic in this branch, with stochastic
+  replacements typed outside it; and
+\item escape/global scope: local constant-copy, with partial, marked,
+  singular, nonlocal, and gluing replacements explicitly classified.
+\end{enumerate}
+The procedure's codomain is exactly the five allowed P2-T01 verdicts. It
+preserves that even a positive necessary-condition verdict would not establish
+geometry, Gate B, or benchmark evidence.
+
+\begin{obstruction}[D7 admission separation]
+\label{obst:d7}
+Under the immutable RT-021 descriptor law and handoff-0992, no complete B2
+descriptor instance can be certified in this AgentJob.
+\end{obstruction}
+
+\begin{proof}
+The descriptor law states that every one of its thirty-five atomic
+obligations blocks instance completeness. D7-O2 requires evaluation of factor
+rank, operational rank, and independence on the same patch. D7-O4 requires
+the emission of exactly one allowed P2-T01 verdict. Both acts are an adequacy
+reevaluation. Handoff-0992, the DDR, AgentJob, and execution-role overlay all
+forbid that reevaluation and reserve it for a later packet. Hence D7-O2 and
+D7-O4 cannot lawfully be discharged here. Thirty-three obligations are
+evidenced and two remain blocked, so the conjunction defining a complete
+descriptor is false. The result follows without any claim about mathematical
+impossibility outside this claim boundary.
+\end{proof}
+
+\section{Distance-to-GR and freeze disposition}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.28\textwidth}>{\raggedright\arraybackslash}p{0.20\textwidth}>{\raggedright\arraybackslash}p{0.35\textwidth}}
+\toprule
+Burden & Status & Effect of this packet\\
+\midrule
+Source ontology primitives & blocked by missing primitive & proposal-only \(\tau\), lift, and control norm are not adopted\\
+Source equivalence EqSrc & draft object exists & unchanged\\
+RetainH / GenH & draft object exists & unchanged\\
+ObsLoc\(_{\rm lc}\) / Resp\(_{\rm lc}\) & blocked by missing primitive & unchanged\\
+\(M_{\rm src}\) & blocked by missing primitive & no construction\\
+\(g_{\rm eff}\) & blocked by missing primitive & source hyperplane is not a metric or cone\\
+Matter coupling & not started & blocked\\
+Einstein equations & not started & blocked\\
+Finite-variation robustness & draft object exists & candidate-relative shared-\(\tau\) bound only\\
+Benchmark promotion & human-gated & blocked\\
+Gate Chair status & human-gated & blocked\\
+Current route freeze & not frozen & a materially new populated witness exists for instance audit\\
+\bottomrule
+\end{longtable}
+
+The route is not frozen because the packet adds a new explicit lift, operator
+family, common radical ideal, and unit cocycle. The next allowed role is one
+fresh Smuggling Auditor packet over the populated witness. That audit cannot
+execute adequacy, activate B2, or unlock P4-T03.
+
+\section{No-fog conclusion}
+
+Exactly this was constructed: a ten-slot, source-factorized, proposal-only
+equipped-chain witness with 33/35 obligation evidence and a common projective
+source hyperplane generated by \(k(\tau)\). Exactly this failed: D7-O2 and
+D7-O4 cannot be discharged without performing the adequacy reevaluation that
+the active handoff forbids. Therefore the result is a precise scoped
+construction obstruction, not a complete descriptor instance.
+
+\begin{nonconclusion}
+The source hyperplane is not a physical cone; \(\tau\) is not physical time;
+the control norm is not a target metric; the P7 labels are not continuum
+matter semantics; the witness is not adopted; B2 is inactive; P4-T03 is
+locked; and no effective metric, coupling, Einstein equation, Gate verdict,
+benchmark result, global no-go theorem, proof, publication, push, or completed
+derivation follows.
+\end{nonconclusion}
+
+\end{document}
