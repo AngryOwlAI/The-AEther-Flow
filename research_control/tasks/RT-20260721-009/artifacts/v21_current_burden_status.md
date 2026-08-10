@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `264b55eb4554b4b0903a253b6cf3d20601692385` |
-| Status generation time | `2026-07-28T13:07:27Z` |
-| Tracked task count | 1135 |
+| Source commit at generation | `665d41f35cb30fbe72289f51017448897dd491bc` |
+| Status generation time | `2026-08-10T12:17:04Z` |
+| Tracked task count | 1258 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -23,21 +23,21 @@ state, or latest handoff, those sources govern and this file is stale.
 
 ### Exact source hashes
 
-- `registries/DISTANCE_TO_GR_LEDGER.csv`: `ba9241c4a57b1c308c2e3d38724014c55c2cabc97d8c8b5c10b7f2de87e424d6`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `f54c80785b18d48689069f3ac27d661f8c6d6e908d35bf1d844b2f220d27adc2`
+- `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `d62db01b44278e32205b08ac77696f28bd4fc3a63c1aecf11fb5ca8d8a46c18b`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-0896.yaml`: `67793f272db6c82209c263a2aca371dd63ed6e95cd2bee1899d77be0be07b281`
-- `research_control/program_state.yaml`: `806e926b9b8a15f511e26eb8d25e6832696ceb63ca34ac7fa07893d49880d5fb`
+- `research_control/handoffs/handoff-1003.yaml`: `b7926adde7570d49c8f90b196d03b151f022c324243bfe0b6fe7813d9ba184e8`
+- `research_control/program_state.yaml`: `ee05980382ca365837f21518b02d0a00027d1d116ae6c4785708f66950f38ef0`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260728-006` |
-| Latest handoff | `handoff-0896` |
-| Current status | `p7_t07_gate_c_readiness_blocked_textual_purity_pass_p7_t08_human_gate_pending_checkpoint` |
-| Next recommended action | Run one governed checkpoint for AJ-RT-20260728-006-001. After it commits, P7-T08 remains a protected human Gate C review and may execute only if a nonblank exact human authorization record is present. If no such authorization exists, record deferred_human_gate and select only a dependency-independent included work item without overreading or repairing the unchanged P7 package. |
+| Active task | `RT-20260810-006` |
+| Latest handoff | `handoff-1003` |
+| Current status | `v22_p4_t02_b2_common_envelope_audit_repair_required_quotient_rank_repair_selected_checkpoint_pending` |
+| Next recommended action | Run the single governed checkpoint for AJ-RT-20260810-006-001. After it commits, execute exactly one fresh candidate-constructor@0.2.0 source_extension_candidate repair packet. Correct the response rank, kernel, one-parameter ray coordinate, and six-orbit sign-image record while preserving the product, common cone, quotient definitions, preimage identities, finite sector scope, and all downstream blocks. Do not execute Refuter stress, reevaluate D7, activate B2, execute P4-T03, adopt source law or ontology, or take protected or external action in the repair packet. |
 
 ## Authored stable definitions with generated current values
 
@@ -205,15 +205,15 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `matter_coupling` | universal coupling | `draft object exists` | `accepted_as_scoped_evidence_precondition` | `parameterized_finite_local_witness_precondition` | `not_matter_coupling_not_stress_energy_not_matter_action_not_detector_semantics` | `scoped_source_evidence_only` | `2026-07-28T13:07:27Z` |
+| `matter_coupling` | universal coupling | `accepted` | `gate_review_completed` | `parameterized_finite_local_witness_precondition` | `not_target_matter_coupling_source_side_postulate_adoption_only` | `scoped_source_postulate_adoption_only` | `2026-07-29T03:22:54Z` |
 
 #### `matter_coupling` generated detail
 
-- Current blocking burden: The exact unchanged P7-T01 through P7-T06 package passes bounded textual no-target-import hygiene and preserves its candidate-relative finite mathematics but P7T07-THM-TYPED-INTERFACE-CUTSET-001 finds no total positively source-derived semantically licensed composition through selected dynamics operational systems common physical geometry universal coupling physical action stress energy and physical conservation; Gate C is zero of seven ready dimensions and the plan matrix is zero of ten; P7T07-PROP-COMPONENTWISE-BALANCE-COMPATIBILITY-001 further shows that global residual zero sum is insufficient on disconnected support; current ontology still does not derive the missing interfaces and P6 Gate B supplies no effective-geometry input
-- Current next evidence or action: After checkpoint present the exact blocked Gate C matrix to P7-T08 only under a nonblank exact human authorization record; without that authority record deferred_human_gate and select only a dependency-independent included work item; same-milestone continuation requires materially new source selector model-to-world operational-validation common-geometry coupling action stress-energy or conservation input
-- Current failure/freeze criterion: Freeze repetition or physical overread of the exact unchanged P7 package including familiar labels restricted support explicit equipment symmetric functional finite balance same-context review validator or checkpoint state; reopen only for materially new conservative source-side data or law a new model-to-world map operational validation common physical geometry variation class protected human decision or dependency-independent included work
-- Current evidence: `research_control/tasks/RT-20260728-006/artifacts/matter_package_smuggling_audit_v1.tex`
-- Exact overread guard: `no_source_law_adoption;no_canonical_ontology_edit;no_metricdata_e_adoption;no_geff_scope_expansion;no_coupling_law_adoption;no_matter_coupling_derivation;no_matter_coupling_adoption;no_stress_energy_semantics;no_stress_energy_tensor;no_matter_action;no_detector_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
+- Current blocking burden: The exact protected verdict is ADOPTED_AS_CANONICAL_PHYSICAL_MATTER_BY_EXPLICIT_HUMAN_POSTULATE for the unchanged P7-T01 through P7-T06 package within its declared finite domains and the current continuum-first source architecture. This discharges the protected constitutive decision burden but does not supply a first-principles derivation: OBST-P7T07-CROSS-LAYER-COMPOSITION-GAP-001 remains open_derivational_gap_after_constitutive_adoption, current ontology still does not derive the adopted meanings, and P6 Gate B supplies no effective-geometry input.
+- Current next evidence or action: After the P7-T08 checkpoint, P8-T01 may use the eight exact adopted postulates as scoped matter input while independently constructing or precisely obstructing g_eff, a source-to-target geometry bridge, target-side stress energy, equivalence-principle behavior, and Einstein-equation closure.
+- Current failure/freeze criterion: Freeze repetition or physical overread of the exact unchanged P7 package, the protected verdict, familiar labels, restricted support, explicit equipment, symmetric functional, finite balance, same-context review, validator, or checkpoint state as proof of derivation or target-side gravity; reopen only for materially new P8 construction, theorem, countermodel, precise obstruction, or an exact later protected revision.
+- Current evidence: `research_control/tasks/RT-20260729-001/artifacts/p7_t08_gate_c_decision_v1.tex`
+- Exact overread guard: `no_source_law_adoption;no_canonical_ontology_edit;no_metricdata_e_adoption;no_geff_scope_expansion;no_unscoped_or_target_coupling_law_adoption;no_matter_coupling_derivation;no_target_matter_coupling_adoption;no_target_stress_energy_semantics;no_target_stress_energy_tensor;no_target_matter_action;no_target_detector_semantics;no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
 
 ### `einstein_equations`
 
@@ -226,15 +226,15 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `einstein_equations` | field equations | `not started` | `not_started` | `dynamics_action_or_variation_missing` | `no_field_equation_derivation` | `none` | `2026-06-17T15:46:25Z` |
+| `einstein_equations` | field equations | `draft object exists` | `not_started` | `dynamics_action_or_variation_missing` | `no_field_equation_derivation` | `none` | `2026-07-30T02:10:16Z` |
 
 #### `einstein_equations` generated detail
 
-- Current blocking burden: dynamics action or variation
-- Current next evidence or action: derivation theorem
-- Current failure/freeze criterion: freeze route
-- Current evidence: `research_control/program_state.yaml`
-- Exact overread guard: `no_einstein_equations;no_benchmark_promotion;no_completed_derivation`
+- Current blocking burden: physical gravitational interpretation target field equations and Einstein-leading recovery
+- Current next evidence or action: source-derived action and target-side field-equation theorem with covariance dynamics correction control and independent review
+- Current failure/freeze criterion: freeze the exact unchanged P8 package against positive Gate D Einstein-sector adoption exact-GR recovery or benchmark use; reopen only for materially repaired evidence and fresh protected authority
+- Current evidence: `research_control/tasks/RT-20260729-011/artifacts/p8_t07_gate_d_decision_v1.tex`
+- Exact overread guard: `no_einstein_equations;no_benchmark_promotion;no_completed_derivation;no_global_theory_rejection;no_future_source_extension_impossibility`
 
 ### `benchmark_promotion`
 
@@ -247,24 +247,24 @@ state, or latest handoff, those sources govern and this file is stale.
 
 | Burden ID | Required object | Current status | Control status | Mathematical status | Physical status | Promotion status | Updated at |
 | --- | --- | --- | --- | --- | --- | --- | --- |
-| `benchmark_promotion` | exact-GR benchmark | `blocked by missing primitive` | `blocked` | `upstream_burdens_missing` | `no_exact_gr_benchmark_promotion` | `none` | `2026-06-17T15:46:25Z` |
-| `gate_chair_status` | Gate Chair status | `human-gated` | `human_gated` | `protected_verdict_missing` | `no_benchmark_closure` | `human_gate_required` | `2026-06-17T15:46:25Z` |
+| `benchmark_promotion` | exact-GR benchmark | `blocked by missing primitive` | `blocked` | `upstream_burdens_missing` | `no_exact_gr_benchmark_promotion` | `none` | `2026-07-31T14:16:53Z` |
+| `gate_chair_status` | Gate Chair status | `human-gated` | `gate_review_completed` | `protected_negative_verdict_recorded_positive_closure_missing` | `no_positive_benchmark_closure` | `human_gate_required` | `2026-07-31T14:16:53Z` |
 
 #### `benchmark_promotion` generated detail
 
 - Current blocking burden: all upstream derivation burdens
 - Current next evidence or action: Gate Chair approval
 - Current failure/freeze criterion: human gate
-- Current evidence: `research_control/program_state.yaml`
-- Exact overread guard: `no_benchmark_promotion;no_benchmark_gate_chair_closure;no_completed_derivation`
+- Current evidence: `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`
+- Exact overread guard: `no_benchmark_promotion;no_benchmark_gate_chair_closure;no_completed_derivation;no_einstein_equations;no_matter_coupling_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
 
 #### `gate_chair_status` generated detail
 
 - Current blocking burden: protected verdict authority
-- Current next evidence or action: explicit human-gated Gate Chair review
+- Current next evidence or action: explicit fresh human-gated Gate Chair review required before any future positive closure
 - Current failure/freeze criterion: human gate
-- Current evidence: `research_control/approvals/README.md`
-- Exact overread guard: `no_benchmark_gate_chair_closure;no_benchmark_promotion;no_completed_derivation`
+- Current evidence: `research_control/tasks/RT-20260731-004/artifacts/p9_t09_gate_e_decision_v1.tex`
+- Exact overread guard: `no_benchmark_gate_chair_closure;no_benchmark_promotion;no_completed_derivation;no_einstein_equations;no_matter_coupling_derivation;no_future_source_extension_impossibility;no_global_theory_rejection`
 
 ### `finite_toy_metric_response`
 

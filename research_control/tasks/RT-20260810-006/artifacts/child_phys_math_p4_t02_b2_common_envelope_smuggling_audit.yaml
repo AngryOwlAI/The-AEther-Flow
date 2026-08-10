@@ -1,0 +1,433 @@
+schema_id: "child_phys_math_p4_t02_b2_common_envelope_smuggling_audit_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-COMMON-ENVELOPE-SMUGGLING-AUDIT-001"
+task_id: "RT-20260810-006"
+agent_job_id: "AJ-RT-20260810-006-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+authority: "science_draft"
+status: "draft/control"
+artifact_purpose: "Internal child evidence for parent fusion under one outer AgentJob; no independent execution, repair, adoption, validation, proof, or promotion authority."
+
+governance_boundary:
+  claim_boundary_id: "CB-V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-SMUGGLING-AUDIT-001"
+  audit_id: "AUDIT-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+  candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+  candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  plan_task_id: "P4-T02"
+  target_derivation_milestone: "effective_metric_g_eff"
+  route_label: "ontology-law-research-packet"
+  adoption_status: "blocked_adoption_open_continuation"
+  fixed_prior_freeze: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  fixed_prior_obstruction: "OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001"
+  candidate_reconstructed: false
+  repair_executed: false
+
+source_evidence:
+  - path: "research_control/tasks/RT-20260810-006/00_TASK.yaml"
+    sha256: "96623005b51d2389bc5fe422bbfbcf1a9e2a7cad2e7dfa369102f3d3b4184276"
+  - path: "research_control/tasks/RT-20260810-006/DDR-20260810-006.md"
+    sha256: "7811cff9c788fa7e27d38c855cfe566be3f6c25b0b92b1e72787c0eb033890fa"
+  - path: "research_control/tasks/RT-20260810-006/jobs/AJ-RT-20260810-006-001.yaml"
+    sha256: "96f851bfe1288aa91944a71ef925b2f90af322671fcf3a24a81c20ac1b2d6019"
+  - path: "research_control/tasks/RT-20260810-006/roles/smuggling-auditor@0.2.0--RT-20260810-006.yaml"
+    sha256: "b0078701cec0c55b50696535b49db99b167183abf2b6ed7270481f1e196b5ea7"
+  - path: ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+    sha256: "2ec5a542caffa90a54d11f0c03630fde839e92f4917d5dbd55b80b724a46c882"
+  - path: "research_control/handoffs/handoff-1002.yaml"
+    sha256: "8e7d9fedce8c707eda14ad5f92a18c98fd8d2d8d57eded90131d2d589a51fe6e"
+  - path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_v1.tex"
+    sha256: "eeac27624e437851726b3865b8900a78f8bed39aa116fc99fd4dfd3a24689152"
+  - path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_record_v1.yaml"
+    sha256: "60fbd716099176e2f9faff5eb70cc1c02336cde2c730fea6719bb0088213c7bf"
+  - path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_operational_response_ray_quotient_v1.yaml"
+    sha256: "a9138de596a1810bb5533f47b56a60d2e4f83a54d5e2e4163b3dd25fa322637e"
+  - path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_envelope_stress_matrix_v1.yaml"
+    sha256: "e37f67862d3e26bf9865085b76e303df8b3f0ee304a060051cb40c4feb8bea93"
+  - path: "research_control/tasks/RT-20260810-005/artifacts/parent_fusion_notes_p4_t02_b2_common_hyperbolicity_envelope.md"
+    sha256: "0b1cd29b64da343da70906ac313f803275618e45889d07cea91f878e5618c0c0"
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  - path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+
+fixed_candidate_objects:
+  source_patch: "A declared smooth four-dimensional source patch U; it is proposal-only source scaffolding, not physical spacetime."
+  point_and_spaces: "x in U, V=T_xU, V*=T_x^*U"
+  exact_sector_domain: "S_eq={R,S,D}, the equipped Rod_src, Signal_src, and Detector_src controls only"
+  proposal_inputs:
+    - "h_0 in V*"
+    - "u,z in V with h_0(u)=1, h_0(z)=0, and z nonzero"
+    - "epsilon=1/3"
+    - "v_R=u+epsilon z, v_S=u, v_D=u-epsilon z"
+    - "p_s(k)=k(v_s), with degree one and density weight zero"
+    - "the sign orientation selected by h_0"
+    - "the proposal-only covector-request and principal-score protocol syntax"
+  product: "P_product=p_R p_S p_D=k(u)(k(u)^2-epsilon^2 k(z)^2)"
+  common_component: "Gamma_intersection={k:k(u)>|epsilon k(z)|}"
+  nonzero_response_domain: "D={k:p_R(k),p_S(k),p_D(k) are all nonzero}"
+  response: "Resp_prin(k)=(p_R(k),p_S(k),p_D(k))"
+
+conditional_mathematics_preserved:
+  product_hyperbolicity:
+    status: "CORRECT_CONDITIONAL_MATHEMATICS"
+    evidence: "For every q, the roots of t->P_product(q+t h_0) are -q(v_R), -q(v_S), and -q(v_D), since h_0(v_s)=1."
+    consequence: "P_product is hyperbolic with respect to the supplied h_0, and the containing component is the simultaneous positive component Gamma_intersection."
+  characteristic_layers:
+    status: "CORRECTLY_SEPARATED"
+    evidence: "The three nonassociate linear forms have distinct hyperplane kernels; the product zero set is their union, while Gamma_intersection is an intersection of positive half-spaces."
+    limitation: "The hyperplanes share the codimension-two subspace ann(span{u,z}); distinct does not mean disjoint or equal to one universal boundary."
+  source_covariance:
+    status: "CORRECT_CONDITIONAL_ON_TRANSPORTED_INPUTS"
+    evidence: "For invertible A:V->V', v'_s=A v_s and p'_s(k')=p_s(A^*k'). Products, sign inequalities, and quotient classes transport without target geometry."
+    missing_derivation: "No natural selector from the bare patch to h_0,u,z, or v_s is claimed."
+  strict_margin:
+    status: "CORRECT_LOCAL_OPENNESS"
+    evidence: "Continuity of the evaluation pairing and the finite margin h_0(v_s)=1 give a product-open neighborhood under independent perturbations."
+    limitation: "This is local nonemptiness, not global conditioning, strong hyperbolicity, or physical stability."
+  empty_intersection_control:
+    status: "CORRECT_NEGATIVE_CONTROL"
+    evidence: "w_1=e_0, w_2=e_1, w_3=-e_0-e_1 obey a positive dependence, so no covector evaluates positively on all three."
+
+quotient_equivalence_audit:
+  audit_id: "AUDIT-V22-P4T02-B2-QUOTIENT-EQUIVALENCE-001"
+  response_ray:
+    response_space: "(R minus {0})^3"
+    group: "Delta R_{>0}, the diagonal common-positive-scale subgroup"
+    relation: "r ~_ray r' iff r'=a r for one a>0 shared by all three coordinates"
+    equivalence_check: "Reflexivity uses a=1, symmetry uses a^{-1}, and transitivity uses multiplication."
+    fixed_representative_status: "Well-defined for the explicitly fixed p_R,p_S,p_D representatives."
+    independent_scale_status: "Not invariant under p_s->a_s p_s unless the a_s are coherently reduced to one common scale."
+  sign_orbit:
+    response_space: "(R minus {0})^3"
+    group: "G_+=(R_{>0})^3 acting componentwise"
+    relation: "r ~_sign r' iff r'_s=a_s r_s for positive a_s independently in each sector"
+    equivalence_check: "This is a group-orbit equivalence relation and its orbits are exactly the ordered nonzero sign patterns."
+    independent_scale_status: "Invariant under independent positive generator normalization, while all relative magnitudes are discarded."
+  nesting:
+    subgroup_identity: "Delta R_{>0} is a subgroup of G_+."
+    consequence: "Ray equivalence implies sign equivalence, so there is a canonical coarsening map from Q_ray classes to Q_sign classes."
+  zero_and_boundary:
+    zero_component: "A response with any zero component lies outside D; no ray or sign-orbit value is assigned by the candidate."
+    boundary_status: "Such a covector is a sector-characteristic boundary record, not an all-positive class."
+  preimage_identities:
+    ray_identity: "Q_ray^{-1}(C_+++)=Gamma_intersection"
+    sign_identity: "Q_sign^{-1}(O_+++)=Gamma_intersection"
+    proof: "For k in D, either target condition is equivalent to p_R(k)>0, p_S(k)>0, and p_D(k)>0. Positive actions preserve component signs."
+    status: "CORRECT_ON_THE_DECLARED_DOMAIN"
+
+new_mathematical_payload:
+  payload_id: "LEM-V22-P4T02-B2-SPLIT-RESPONSE-IMAGE-RANK-001"
+  type: "response-image rank lemma and counterexample to the stated independent-ratio count"
+  statement: "For the exact split candidate, im(Resp_prin)=H={r in R^3:r_R+r_D=2r_S}, rank(Resp_prin)=2, ker(Resp_prin)=ann(span{u,z}), and dim ker(Resp_prin)=2. The projectivized ray image therefore has dimension one, not two."
+  proof:
+    forward: "Writing a=k(u) and b=k(z) gives Resp_prin(k)=(a+epsilon b,a,a-epsilon b), hence r_R+r_D=2r_S."
+    converse: "Because u and z are linearly independent, arbitrary a and b are realized by some k; every r in H is obtained with a=r_S and b=(r_R-r_D)/(2 epsilon)."
+    rank: "H is a two-dimensional plane and V* is four-dimensional, so rank is two and the kernel has dimension two."
+    projective_dimension: "On D, common positive projectivization removes one dimension from the two-dimensional nonzero image. The oriented projective image is one-dimensional; the sign of p_S is additional discrete data, not a second continuous ratio."
+  exact_parameterization: "Let a=k(u)=p_S(k), t=epsilon k(z)/k(u)=(p_R-p_D)/(2p_S), and sigma=sign(a). Then Resp_prin(k)=a(1+t,1,1-t), and division by the allowed positive scale |a| gives Q_ray(k)=[sigma(1+t,1,1-t)]_+. Thus p_R/p_S=1+t and p_D/p_S=1-t are determined by the single continuous ratio t; sigma is the surviving discrete orientation sign. On Gamma_intersection, sigma=+1 and |t|<1."
+  sign_orbit_image:
+    statement: "Only six of the eight ordered nonzero sign orbits occur on the exact response image."
+    positive_a_patterns: ["-++ for t<-1", "+++ for -1<t<1", "++- for t>1"]
+    negative_a_patterns: ["+--", "---", "--+"]
+    excluded_patterns: ["+-+", "-+-"]
+    reason: "The identity r_R+r_D=2r_S prevents the middle component from having the opposite sign when the two outer components share a sign."
+  impact:
+    preserved: "Both quotient maps and both all-positive preimage identities remain correct."
+    defect: "The manuscript, record, fusion notes, and handoff state that Q_ray retains two independent relative response ratios. On the actual candidate image it retains only one independent projective parameter."
+    repair_scope: "Keep the existing Q_ray codomain if desired but record im(Q_ray) inside P^+(H), replace the two-independent-ratios statement by one continuous parameter t plus the discrete sign sigma, and record the six-orbit Q_sign image."
+
+audit_dimensions:
+  representative_normalization:
+    dimension_id: "representative_normalization"
+    local_status: "PASS_SOURCE_SIDE_INPUT_WITH_NARROW_RECORD_REPAIR"
+    evidence: "The p_s representatives are explicitly fixed proposal data. Q_ray removes one common scale only; Q_sign removes independent positive scales."
+    counterexample_id: "CE-V22-P4T02-B2-NORM-001"
+    counterexample: "At h_0, Resp_prin=(1,1,1). Replacing the generators by (2p_R,3p_S,5p_D) gives (2,3,5), which is not the same Q_ray class but is the same Q_sign class."
+    source_import_result: "No target normalization is used. A coherent relative-sector normalization remains an explicit missing source primitive."
+  response_typing:
+    dimension_id: "response_typing"
+    local_status: "PASS_AS_EXPLICIT_PROPOSAL_ONLY_SYNTAX"
+    evidence: "The covector request, score p_s(k), and principal_positive/zero/negative tokens are explicitly a new protocol extension; the unchanged P7 controls contain no such fields."
+    type_boundary: "Formal principal scores are not exact P7 readouts, empirical detector outputs, or physical signal outcomes."
+    source_import_result: "No empirical calibration or target response is inserted."
+  units_and_degree:
+    dimension_id: "units_and_degree"
+    local_status: "PASS_FORMAL_HOMOGENEITY_WITH_RAY_TYPING_REPAIR"
+    evidence:
+      - "All p_s have homogeneous degree one and density weight zero."
+      - "epsilon is a dimensionless scalar multiplying same-type source vectors u and z."
+      - "Under k->c k with c>0, all responses scale by the same c, so Q_ray and Q_sign descend to positive covector rays."
+      - "P_product has degree three and density weight zero."
+    unit_boundary: "A physical ratio p_R/p_S is meaningful only after the sector responses share a declared unit or coherent trivialization. The candidate supplies formal real scalars and explicitly withholds unequal-unit resolution."
+    counterexample_id: "CE-V22-P4T02-B2-DEGREE-001"
+    counterexample: "If hypothetical degrees were (1,2,1), k->2k would send r to (2r_R,4r_S,2r_D), changing Q_ray; Q_sign would retain only signs. The exact equal-degree candidate avoids this defect."
+    multiplicity_control: "For q(z)=0, all three roots -q(v_s) coincide; product hyperbolicity survives but strict hyperbolicity and multiplicity control do not."
+  component_and_orientation_choice:
+    dimension_id: "component_and_orientation_choice"
+    local_status: "PASS_EXPLICIT_INPUT_NO_DERIVATION_CREDIT"
+    evidence: "h_0 and the conditions h_0(v_s)=1 are openly supplied; the all-positive component is not selected from the bare patch or from a target cone."
+    counterexample_id: "CE-V22-P4T02-B2-ORIENT-001"
+    counterexample: "Replacing h_0 by -h_0 exchanges the all-positive and all-negative components. Without the supplied orientation token neither is preferred."
+    source_import_result: "This is a proposal-only source orientation input, not a smuggled physical time orientation."
+  transition_factors_and_gluing:
+    dimension_id: "transition_factors_and_gluing"
+    local_status: "PASS_CONDITIONAL_WITH_EXPLICIT_GLOBALIZATION_OBLIGATIONS"
+    source_transition: "Invertible source derivatives act contragrediently and must satisfy inverse and triple-overlap composition."
+    generator_transition: "Local generators may obey p_{s,j}=a_{s,ij}p_{s,i}; oriented gluing requires a_{s,ij}>0."
+    q_ray_condition: "A fixed global Q_ray needs common transition scale across sectors or a coherent relative-normalization bundle."
+    q_sign_condition: "Positive sector-dependent factors preserve Q_sign classes, but the underlying principal data still require inverse and cocycle consistency."
+    inverse_obligation: "A_{ji}=A_{ij}^{-1} and a_{s,ji}=a_{s,ij}^{-1}."
+    cocycle_obligation: "A_{ki}A_{jk}A_{ij}=I and a_{s,ij}a_{s,jk}=a_{s,ik}."
+    counterexamples:
+      - "A negative factor a_R=-1 flips one sign and changes Q_sign; it is not an oriented transition."
+      - "A zero factor is noninvertible and destroys the local generator."
+      - "Factors a_ij=2, a_jk=3, a_ik=5 fail the required cocycle because 2*3 is not 5."
+    source_import_result: "No target chart or metric repairs a failed transition."
+  sector_scope:
+    dimension_id: "sector_scope"
+    local_status: "PASS_STRICT_FINITE_SCOPE_WITH_RELABELING_CLARIFICATION"
+    evidence: "Only R, S, and D are in the domain; an unequipped P7 sector is outside scope, not refuted."
+    relabeling_rule: "A typed equipment isomorphism acts by simultaneous permutation and makes the quotient maps equivariant. It is not automatically an additional S_3 quotient, and an untyped swap of distinct protocol roles is not allowed."
+    counterexample_id: "CE-V22-P4T02-B2-RELABEL-001"
+    counterexample: "Swapping Rod_src with Detector_src without transporting their protocol contexts changes the typed request/readout assignment and is not a permitted relabeling."
+    source_import_result: "No full-sector universality is inferred."
+  hidden_target_fit:
+    dimension_id: "hidden_target_fit"
+    local_status: "PASS_NO_TARGET_DATA_DETECTED"
+    evidence: "U,V,h_0,u,z,epsilon, evaluation, positive group actions, and source pullback suffice. No target atlas, metric, tetrad, coframe, desired GR cone, signal speed, or benchmark value appears in the construction."
+    counterexample_id: "CE-V22-P4T02-B2-TARGET-001"
+    counterexample: "Choosing h_0, epsilon, signs, or transition factors because the resulting cone matches a desired GR cone would be circular and forbidden; the fixed sources do not make that choice."
+  goal_property_preload:
+    dimension_id: "goal_property_preload"
+    local_status: "PASS_TRANSPARENT_PRELOAD_NO_DERIVATION_CREDIT"
+    evidence: "The assumptions h_0(u)=1, h_0(z)=0 and v_s=u+{+epsilon,0,-epsilon}z guarantee h_0(v_s)=1 and therefore preload common positivity."
+    classification: "This is an explicit witness premise, not a hidden theorem consequence and not a target import."
+    consequence: "The candidate proves existence conditional on supplied source data but does not show that current ontology or exact P7 protocols select those data."
+  empirical_and_physical_overread:
+    dimension_id: "empirical_and_physical_overread"
+    local_status: "PASS_OVERREAD_BLOCKED"
+    evidence: "The candidate labels its scores formal, its protocol law unadopted, and its characteristic hyperplanes distinct."
+    counterexample_id: "CE-V22-P4T02-B2-PHYSICAL-001"
+    counterexample: "The split forms have a nonempty common positive component while {p_R=0}, {p_S=0}, and {p_D=0} remain different hyperplanes; common sign admissibility therefore does not imply one propagation boundary."
+    source_import_result: "No empirical response, physical causality, conformal class, or effective metric is inferred."
+  authority_smuggling:
+    dimension_id: "authority_smuggling"
+    local_status: "PASS_NO_PROCESS_AUTHORITY_PROMOTION"
+    evidence: "The candidate is draft/control, proposal-only source-extension data; validation, role assignment, registry entries, checkpoint state, and this child review are not scientific or adoption authority."
+    consequence: "The audit cannot adopt or reject the source law, evaluate adequacy, dispose B2, unlock P4-T03, or promote any claim."
+
+source_extension_classification:
+  classification_id: "CLASS-V22-P4T02-B2-COMMON-ENVELOPE-AUDIT-001"
+  aggregate_category: "new ontology primitive candidate"
+  conservative_operations:
+    - "finite product of supplied homogeneous forms"
+    - "intersection of supplied oriented hyperbolicity components"
+    - "common-positive-scale and positive-diagonal orbit quotients"
+    - "source pullback and simultaneous typed relabeling"
+  explicit_proposal_only_inputs:
+    - "the smooth source patch and cotangent request type"
+    - "h_0,u,z,epsilon and the three sector representatives"
+    - "the orientation and positive-transition requirement"
+    - "any coherent relative-sector normalization used by a global Q_ray"
+    - "the principal-score and sign-token protocol law"
+  current_ontology_derivation_claimed: false
+  forbidden_target_data_detected: false
+  empirical_input_detected: false
+  workflow_authority_import_detected: false
+  adoption_authorized: false
+  status_pair: "blocked_adoption_open_continuation"
+
+decisive_local_verdict:
+  verdict_id: "VERDICT-V22-P4T02-B2-COMMON-ENVELOPE-MATH-AUDIT-001"
+  selected_verdict: "repair_required"
+  verdict_scope: "Narrow response-image and quotient-information correction; no target import, physical rejection, or obstruction to the conditional product/cone/preimage mathematics."
+  decisive_basis:
+    - "The source primitives and goal-aligned orientation are explicit proposal inputs rather than hidden target imports."
+    - "The product hyperbolicity, common component, quotient equivalence relations, and all-positive preimage identities are correct under those inputs."
+    - "The exact response image has rank two and projectivized dimension one, so the repeated claim of two independent relative response ratios is false for this candidate."
+    - "Q_ray also requires an explicit common unit or formal-trivialization statement, and relabeling must remain equivariance under typed equipment isomorphisms rather than an undeclared S_3 quotient."
+  repair_requirements:
+    - "Replace two independent relative response ratios with one independent projective image parameter."
+    - "Record im(Resp_prin)=H, ker(Resp_prin)=ann(span{u,z}), and the six realized Q_sign sign orbits."
+    - "State that Q_ray is a formal ray in fixed commensurately typed trivializations; physical cross-sector ratios remain undefined without a source unit/normalization law."
+    - "State sector relabeling as typed equivariance and transport h_0 explicitly on overlaps."
+  core_candidate_disposition: "Preserve the conditional finite product, Gamma_intersection, Q_ray and Q_sign definitions, and both preimage identities; do not execute repair in this audit."
+  target_import_found: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+
+conflict_resolution_revision:
+  revision_id: "CRR-V22-P4T02-B2-COMMON-ENVELOPE-RANK-RATIO-ROUND-001"
+  round: 1
+  same_outer_agent_job: "AJ-RT-20260810-006-001"
+  issue_rechecked: "Exact rank and surviving-ratio content of Resp_prin for v_R=u+z/3, v_S=u, and v_D=u-z/3."
+  exact_formula_check:
+    forms: "p_R(k)=k(u)+k(z)/3, p_S(k)=k(u), p_D(k)=k(u)-k(z)/3"
+    linear_identity: "p_R+p_D=2p_S"
+    independence_basis: "h_0(u)=1, h_0(z)=0, and z nonzero imply u and z are linearly independent."
+  declared_domain_rank:
+    ambient_domain: "V*=T_x^*U with dim(V*)=4"
+    quotient_domain: "D={k in V*:p_R(k),p_S(k),p_D(k) are all nonzero}"
+    linear_map: "Resp_prin:V*->R^3"
+    image: "H={r in R^3:r_R+r_D=2r_S}"
+    rank_on_ambient_linear_map: 2
+    kernel: "ann(span{u,z})"
+    kernel_dimension: 2
+    restricted_image_on_D: "H intersect (R minus {0})^3, an open subset of H after removal of three lines"
+    local_differential_rank_on_D: 2
+  nonzero_projective_image:
+    quotient_action: "common multiplication by R_{>0}"
+    continuous_dimension: 1
+    discrete_orientation_data: "sigma=sign(p_S) in {+1,-1}"
+    surviving_continuous_ratio: "t=(p_R-p_D)/(2p_S)=k(z)/(3k(u))"
+    dependent_ratios: "p_R/p_S=1+t and p_D/p_S=1-t"
+    oriented_representative: "Q_ray(k)=[sigma(1+t,1,1-t)]_+"
+    common_positive_segment: "sigma=+1 and -1<t<1"
+  validity_after_recheck:
+    q_ray_well_defined_for_fixed_representatives: true
+    q_sign_well_defined_on_D: true
+    q_ray_all_positive_preimage_identity_valid: true
+    q_sign_all_positive_preimage_identity_valid: true
+    product_hyperbolicity_and_common_component_valid: true
+    reason: "The rank constraint limits the image and information count but does not alter the group-orbit definitions or the equivalence between all-positive response components and membership in Gamma_intersection."
+  minimal_text_and_structured_record_repair:
+    - "Replace every assertion of two independent relative response ratios by one continuous ratio t plus the discrete positive-ray orientation sign sigma."
+    - "Add im(Resp_prin)=H, rank two, kernel ann(span{u,z}), kernel dimension two, and one-dimensional projective image to the manuscript and structured records."
+    - "Optionally retain the full projective codomain, but state that Q_ray lands in P^+(H); no quotient definition needs reconstruction."
+    - "Record that Q_sign realizes six ordered nonzero sign orbits on this exact image, while its all-positive preimage identity is unchanged."
+    - "Preserve the existing common-unit or fixed-trivialization limitation, typed-relabeling clarification, and every authority block."
+  verdict_confirmation:
+    selected_verdict: "repair_required"
+    written_scope_only: true
+    forbidden_target_import_found: false
+    precise_obstruction_found: false
+    rationale: "The defect is a correctable overcount in the written information content of Q_ray. No target object selects the source data, and the rank relation does not obstruct the conditional envelope or either quotient/preimage construction."
+  repair_executed_here: false
+  successor_packet_executed_here: false
+
+freeze_evaluation:
+  evaluation_id: "FREEZE-EVAL-V22-P4T02-B2-COMMON-ENVELOPE-AUDIT-001"
+  prior_freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  prior_freeze_status: "preserved_active_local"
+  replay_detected: false
+  basis: "The candidate supplies distinct v_R,v_S,v_D and permits independent variations. Its common h_0 is an explicit hyperbolicity witness, not a natural shared tangent-line selector from fixed P7 data."
+  current_branch_decision: "not_frozen_narrow_repair_available"
+  family_freeze_applied: false
+  global_freeze_applied: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+next_packet_recommendation:
+  recommendation_id: "REC-V22-P4T02-B2-COMMON-ENVELOPE-QUOTIENT-RANK-REPAIR-001"
+  packet_type: "source_extension_candidate_repair"
+  role_family: "candidate-constructor@0.2.0"
+  objective: "Perform only the response-image rank, projective-parameter count, formal-unit typing, h_0 transition, and typed-relabeling corrections while holding the product, common cone, two quotient definitions, preimage identities, sector scope, and every downstream block fixed."
+  materially_distinct_reason: "This is a bounded correction of the newly identified rank-two response image; it neither replays shared-line locking nor executes Refuter stress, adoption, adequacy, or P4-T03."
+  executed_in_this_task: false
+  authority_created: false
+
+distance_to_gr_status:
+  changed: false
+  ledger_updated: false
+  effect: "local_audit_and_repair_finding_only"
+  burdens:
+    - burden_id: "source_ontology_primitives"
+      task_effect: "unchanged; explicit primitive debt remains"
+    - burden_id: "source_equivalence_eqsrc"
+      task_effect: "unchanged"
+    - burden_id: "retain_h"
+      task_effect: "unchanged"
+    - burden_id: "gen_h"
+      task_effect: "unchanged"
+    - burden_id: "obsloc_lc"
+      task_effect: "unchanged"
+    - burden_id: "resp_lc"
+      task_effect: "unchanged; formal response law remains proposal-only"
+    - burden_id: "m_src"
+      task_effect: "unchanged"
+    - burden_id: "g_eff"
+      task_effect: "unchanged; no physical cone or source-to-metric map"
+    - burden_id: "matter_coupling"
+      task_effect: "unchanged"
+    - burden_id: "einstein_equations"
+      task_effect: "unchanged"
+    - burden_id: "finite_variation_robustness"
+      task_effect: "unchanged; only the RT005 local margin is preserved"
+    - burden_id: "benchmark_promotion"
+      task_effect: "unchanged"
+    - burden_id: "gate_chair_status"
+      task_effect: "unchanged"
+    - burden_id: "current_route_freeze_or_hard_fail_status"
+      task_effect: "prior shared-line freeze preserved; current branch remains repairable"
+
+forbidden_claim_blocks:
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-001"
+    claim: "The equipped R, S, and D controls exhaust P7 matter sectors or establish full B2 universality."
+    blocked: true
+    asserted: false
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-002"
+    claim: "Formal principal scores or signs are exact P7 empirical responses or a physical causal quotient."
+    blocked: true
+    asserted: false
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-003"
+    claim: "Common time-covector admissibility establishes equal characteristic boundaries, universal propagation, a Lorentzian conformal class, or g_eff."
+    blocked: true
+    asserted: false
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-004"
+    claim: "D7 or P2-T01 adequacy is evaluated, or the descriptor instance is complete."
+    blocked: true
+    asserted: false
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-005"
+    claim: "B2 is activated, viable, sufficient, adopted, rejected, or otherwise disposed."
+    blocked: true
+    asserted: false
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-006"
+    claim: "P4-T03 is unlocked or executed."
+    blocked: true
+    asserted: false
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-007"
+    claim: "A physical signature, time orientation, scale, metric, matter coupling, or Einstein equation is derived."
+    blocked: true
+    asserted: false
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-008"
+    claim: "A target atlas, target metric, target tetrad, target coframe, or desired GR cone is an allowed premise."
+    blocked: true
+    asserted: false
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-009"
+    claim: "The source law or canonical ontology is adopted or rejected by this audit."
+    blocked: true
+    asserted: false
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-010"
+    claim: "Registry metadata, role assignment, validation, compilation, checkpoint, or child review supplies scientific or theorem authority."
+    blocked: true
+    asserted: false
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-011"
+    claim: "A Gate verdict, benchmark promotion, proof, external review, publication, push, or external action exists."
+    blocked: true
+    asserted: false
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-012"
+    claim: "The result is a global no-go, future-source-extension impossibility, global theory rejection, or completed derivation."
+    blocked: true
+    asserted: false
+  - block_id: "FCB-V22-P4T02-B2-AUDIT-013"
+    claim: "This audit executes the candidate repair or the recommended successor packet."
+    blocked: true
+    asserted: false
+
+authority_limits:
+  child_agentjob_created: false
+  candidate_repaired: false
+  source_law_adopted: false
+  source_law_rejected: false
+  canonical_ontology_modified: false
+  empirical_response_derived: false
+  physical_causality_claimed: false
+  full_sector_universality_claimed: false
+  adequacy_evaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  proof_authority: false
+  validation_authority: false
+  physics_promotion_authorized: false
+  global_no_go_claimed: false

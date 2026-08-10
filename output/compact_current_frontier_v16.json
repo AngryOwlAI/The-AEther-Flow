@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-1002.yaml",
+    "research_control/handoffs/handoff-1003.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "21d75b64aba3edc7206324b563bb143954218ba3",
+    "source_commit": "665d41f35cb30fbe72289f51017448897dd491bc",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "1b6013f33a32c5d432c624102cfa760cb3d245a065d50202cc3db66b320d7eab"
+        "sha256": "d62db01b44278e32205b08ac77696f28bd4fc3a63c1aecf11fb5ca8d8a46c18b"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "f6a94984dacb0c9562e94cc3d6ea22a4c117b34e71dd98f34266bf1a3270ca4d"
+        "sha256": "3dd803b673f7fe70555e5ce603a5f91382638f83151ab215f0506049e749b37c"
       },
       {
-        "path": "research_control/handoffs/handoff-1002.yaml",
-        "sha256": "8e7d9fedce8c707eda14ad5f92a18c98fd8d2d8d57eded90131d2d589a51fe6e"
+        "path": "research_control/handoffs/handoff-1003.yaml",
+        "sha256": "b7926adde7570d49c8f90b196d03b151f022c324243bfe0b6fe7813d9ba184e8"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "b6d094aed82b23596a7a2405af7fc4c210c579db80dc63d41c2d602f40dc76f3"
+        "sha256": "ee05980382ca365837f21518b02d0a00027d1d116ae6c4785708f66950f38ef0"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "1021ceb41cf05a7c1d6d3da9d60acc92df929a4cf6782be8c7d63cfdc92cba5b",
+    "source_manifest_sha256": "3c9ea47100ffe0174d640eb5fd0bf18da11bddd7228e63a39d09645763d9d3c8",
     "source_path_count": "12",
-    "generation_time": "2026-08-10T10:55:24Z",
-    "task_count": "1257",
+    "generation_time": "2026-08-10T12:17:04Z",
+    "task_count": "1258",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260810-005",
-    "latest_handoff_id": "handoff-1002",
-    "current_status": "v22_p4_t02_b2_common_hyperbolicity_envelope_constructed_smuggling_audit_selected_checkpoint_pending",
+    "active_task_id": "RT-20260810-006",
+    "latest_handoff_id": "handoff-1003",
+    "current_status": "v22_p4_t02_b2_common_envelope_audit_repair_required_quotient_rank_repair_selected_checkpoint_pending",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260810-005",
-    "latest_research_handoff_id": "handoff-1002",
-    "latest_research_next_action": "Run the single governed checkpoint for AJ-RT-20260810-005-001. After it commits, execute exactly one fresh smuggling-auditor@0.2.0 source_extension_smuggling_audit packet on CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1. Audit representative normalization, response typing, units, component choice, transition factors, sector scope, hidden target fit, and physical overread. Do not reevaluate D7, activate B2, execute P4-T03, adopt source law or ontology, or take protected or external action.",
+    "latest_research_task_id": "RT-20260810-006",
+    "latest_research_handoff_id": "handoff-1003",
+    "latest_research_next_action": "Run the single governed checkpoint for AJ-RT-20260810-006-001. After it commits, execute exactly one fresh candidate-constructor@0.2.0 source_extension_candidate repair packet. Correct the response rank, kernel, one-parameter ray coordinate, and six-orbit sign-image record while preserving the product, common cone, quotient definitions, preimage identities, finite sector scope, and all downstream blocks. Do not execute Refuter stress, reevaluate D7, activate B2, execute P4-T03, adopt source law or ontology, or take protected or external action in the repair packet.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "audit_v22_p4_t02_b2_common_hyperbolicity_envelope_source_extension_smuggling_v1",
-    "role_family": "smuggling-auditor@0.2.0",
+    "route_id": "repair_v22_p4_t02_b2_common_hyperbolicity_envelope_quotient_rank_v1",
+    "role_family": "candidate-constructor@0.2.0",
     "target_derivation_milestone": "effective_metric_g_eff",
-    "milestone_burden": "Audit whether the constructed common-envelope inputs, orientation, normalization layers, response semantics, sector scope, transitions, and physical interpretation hide target or goal-property imports.",
+    "milestone_burden": "Correct the exact response-image information record while preserving every valid conditional common-envelope result and all authority blocks.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -445,7 +445,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "formal_candidate_constructed_no_ledger_delta",
+      "effect": "exact_audit_repair_required_no_ledger_delta",
       "changed": false,
       "milestone": "effective_metric_g_eff",
       "burden_id": "g_eff"
@@ -754,7 +754,7 @@
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "Exactly one governed AJ-RT-20260810-005-001 checkpoint remains."
+          "Exactly one governed AJ-RT-20260810-006-001 checkpoint remains."
         ]
       }
     ]

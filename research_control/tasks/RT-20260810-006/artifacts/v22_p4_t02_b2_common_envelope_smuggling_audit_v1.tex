@@ -1,0 +1,346 @@
+% authority: science_draft
+% object-id: TEX-V22-P4-T02-B2-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1
+% task-id: RT-20260810-006
+% agentjob-id: AJ-RT-20260810-006-001
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.78in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newenvironment{nonconclusion}{\par\smallskip\noindent\textbf{Non-conclusion.}\ }{\par\smallskip}
+
+\newcommand{\RR}{\mathbb R}
+\newcommand{\Resp}{\operatorname{Resp}_{\mathrm{prin}}}
+\newcommand{\Qray}{Q_{\mathrm{ray}}}
+\newcommand{\Qsign}{Q_{\mathrm{sign}}}
+\newcommand{\GammaInt}{\Gamma_{\cap}}
+
+\title{V22 P4--T02 B2 Common-Envelope Smuggling Audit v1\\
+\large No target import, but one exact response-image rank repair}
+\author{Smuggling Auditor Packet RT-20260810-006}
+\date{2026-08-10}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\begin{abstract}
+This draft/control packet audits
+\texttt{CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1} without
+reconstructing it.  The exact written candidate contains no hidden target or
+workflow-authority import: its finite product, simultaneous-positive component,
+fixed-representative response ray, normalization-invariant sign orbit,
+covariance rule, and strict margin use declared source-side proposal data and
+conservative finite algebra.
+No target atlas, metric, tetrad, coframe, desired GR cone, benchmark answer,
+empirical response, or workflow status is a mathematical premise.  The decisive
+result is nevertheless \texttt{repair\_required}.  The response coordinates
+obey $r_R+r_D=2r_S$, so the response map has rank two and its positive-projective
+image has one independent parameter, not the two independent relative ratios
+claimed by RT005.  The quotient definitions and both all-positive preimage
+identities remain valid.
+The common-positive property is deliberately loaded through the explicitly
+supplied $h_0,u,z,v_s$ and orientation data; transparency makes this a new
+ontology-primitive candidate rather than hidden smuggling, but it supplies no
+derivation credit.  The audit leaves empirical semantics, physical causality,
+all-sector universality, multiplicity and PDE strength, adoption, B2, P4--T03,
+and $g_{\mathrm{eff}}$ blocked.  The next unexecuted packet is one bounded
+Candidate Constructor repair.
+\end{abstract}
+
+\section{Fixed audited object and authority}
+
+The audited object is the exact RT005 source artifact with SHA-256
+\texttt{eeac27624e437851726b3865b8900a78f8bed39aa116fc99fd4dfd3a24689152}.
+It supplies, on one declared source patch, three oriented degree-one forms
+\[
+ p_R(k)=k(u+z/3),\qquad p_S(k)=k(u),\qquad
+ p_D(k)=k(u-z/3),
+\]
+with $h_0(u)=1$ and $h_0(z)=0$.  The conditional construction gives
+\[
+ P_\Pi=p_Rp_Sp_D,
+ \qquad
+ \GammaInt=\{k:p_R(k)>0,\ p_S(k)>0,\ p_D(k)>0\}.
+\]
+It also gives $\Resp(k)=(p_R(k),p_S(k),p_D(k))$ on the domain where no
+component vanishes, together with
+\[
+ \Qray(k)=[\Resp(k)]_{\RR_{>0}},\qquad
+ \Qsign(k)=[\Resp(k)]_{(\RR_{>0})^3}.
+\]
+
+This audit holds those formulas fixed.  It asks whether their written premises
+or interpretations covertly use the desired result.  It does not decide whether
+the new source inputs are natural, true, adopted, empirical, or physically
+adequate.  Registry entries, child agreement, validation, rendering, handoff,
+and checkpoint state are process evidence only.
+
+\section{Audit standard and layer separation}
+
+The audit separates six predicates that must not be collapsed:
+
+\begin{enumerate}[leftmargin=*]
+  \item a formula can be stated entirely from declared source-side data;
+  \item the formula is mathematically correct conditional on those data;
+  \item current ontology derives or selects the data;
+  \item protected protocols give the formula empirical response meaning;
+  \item the formula supplies one universal physical causal structure; and
+  \item protected authority adopts or promotes the result.
+\end{enumerate}
+
+RT005 claims only the first two at proposal status.  RT006 finds no hidden
+premise, but it does find one false information-content statement inside the
+second layer.  It does not infer items three through six.
+
+\section{Representative equivalence and normalization}
+
+\begin{lemma}[Exact separation of the two quotient actions]
+Let $r=(r_R,r_S,r_D)\in(\RR\setminus\{0\})^3$ and let
+$a=(a_R,a_S,a_D)\in(\RR_{>0})^3$.  Then $a\mathbin{\cdot}r$ lies on the
+same positive common-scale ray as $r$ exactly when
+$a_R=a_S=a_D$.  The ordered sign orbit of $r$ is unchanged for every such
+positive $a$.
+\end{lemma}
+
+\begin{proof}
+If $a\mathbin{\cdot}r=cr$ for one $c>0$, nonvanishing of every $r_s$
+implies $a_s=c$ in each sector.  The converse is immediate.  Independent
+positive factors preserve every component sign, proving the second statement.
+\end{proof}
+
+\begin{lemma}[Rank-two response image and one projective parameter]
+For the exact split candidate,
+\[
+ \operatorname{im}(\Resp)=
+ H:=\{r\in\RR^3:r_R+r_D=2r_S\},
+ \qquad \operatorname{rank}(\Resp)=2.
+\]
+Moreover $\ker(\Resp)=\operatorname{ann}(\operatorname{span}\{u,z\})$
+has dimension two, and the positive-projective image has one independent
+continuous parameter.
+\end{lemma}
+
+\begin{proof}
+Put $a=k(u)$ and $b=k(z)$.  Then
+\[
+ \Resp(k)=(a+\epsilon b,a,a-\epsilon b),
+\]
+so every response lies in $H$.  Since $h_0(u)=1$, $h_0(z)=0$, and $z\ne0$,
+the vectors $u,z$ are linearly independent.  Hence arbitrary $(a,b)$ are
+realized by covectors and every point of $H$ occurs.  The image therefore has
+dimension two and rank--nullity gives the kernel dimension.  On the nonzero
+domain $a=p_S(k)\ne0$, and
+\[
+ [\Resp(k)]_+=[1+t,1,1-t]_+,
+ \qquad t=\epsilon\frac{k(z)}{k(u)}
+       =\frac{p_R-p_D}{2p_S}.
+\]
+Thus common positive projectivization leaves the one parameter $t$.
+\end{proof}
+
+Therefore $\Qray$ is legitimate formal ratio syntax only for the explicitly
+fixed representatives, modulo one common scale, but its actual image has one
+independent projective parameter.  The repeated RT005 claim of two independent
+relative response ratios is false and requires repair.  The coarser $\Qsign$
+is invariant under independent positive normalization but discards all
+relative magnitude.  On the exact image it realizes six, not eight, nonzero
+ordered sign cells; the alternating cells $(+,-,+)$ and $(-,+,-)$ violate
+$r_R+r_D=2r_S$.
+
+Positive rescaling is essential.  A negative factor flips one sector sign and
+changes the selected component; a zero factor leaves the nonzero-response
+domain and destroys invertibility.  Neither is silently quotient-repaired.
+
+\section{Units, degree, and response type}
+
+\begin{proposition}[Conditional homogeneity and unit boundary]
+For the written equal-degree family,
+$\Resp(\lambda k)=\lambda\Resp(k)$ for every $\lambda>0$, so positive
+covector rescaling preserves $\Qray$.  If sector degrees differ, the response
+coordinates acquire unequal powers of $\lambda$ and generally leave the
+original response ray.  Positive independent unit conversions likewise change
+$\Qray$ while preserving $\Qsign$.
+\end{proposition}
+
+\begin{proof}
+Each written $p_s$ is homogeneous of degree one, which gives the common factor
+$\lambda$.  Degrees $d_s$ instead give factors $\lambda^{d_s}$, common only
+under special coincidences.  A positive unit conversion is componentwise
+multiplication by an independent positive factor, so the preceding lemma
+applies.
+\end{proof}
+
+This is not a dimensional or physical calibration result.  The three scores
+share a formal real codomain in the proposal, but no empirical cross-sector
+unit identification is established.  $\Qray$ ratios therefore have only the
+declared fixed-representative algebraic meaning.  $\Qsign$ avoids positive-unit
+dependence by discarding magnitudes.  Multiplicity, unequal degree, field
+redefinition, timing, speed, and calibration remain outside both quotients.
+
+The response type is equally explicit.  $\Resp$ is a new formal request/readout
+map, not an existing P7 response space.  The names
+\texttt{principal\_positive}, \texttt{principal\_zero}, and
+\texttt{principal\_negative} are proposal tokens, not measurements or device
+outcomes.
+
+\section{Orientation, component choice, and goal-property preload}
+
+The orientation and component are not derived.  RT005 supplies $h_0$ and
+chooses the sector vectors so $p_s(h_0)=1$ for all three sectors.  Replacing
+$h_0$ by $-h_0$ selects the opposite sign cell; removing the token leaves both
+cells available.  The packet records that ambiguity rather than importing a
+physical future direction.
+
+\begin{proposition}[Explicit preload classification]
+The nonempty common-positive property is an explicit source-side goal-property
+input, not a hidden target-GR import.  It validates a conditional existence
+witness but does not show that current ontology, protected P7 semantics, or
+all matter sectors select the witness.
+\end{proposition}
+
+\begin{proof}
+The construction begins by stipulating $h_0(u)=1$, $h_0(z)=0$, and
+$v_s=u+c_sz$, which immediately gives $h_0(v_s)=1$.  These are visible
+source algebraic assumptions.  No target tensor, desired cone, measured speed,
+or benchmark result selects them.  Thus the desired local property is
+engineered transparently, not concealed.  Since the assumptions are not
+derived, the logical implication runs only from the proposal data to the
+conditional witness.
+\end{proof}
+
+Using target agreement later to choose $h_0$, the signs, representatives, or
+sector family would fail this boundary.  No such choice occurs in the audited
+artifact.
+
+\section{Transitions, scope, and physical overread}
+
+For a source-presentation derivative $A$, the simultaneous transformations
+$v_s\mapsto Av_s$ and $k\mapsto A^*k'$ preserve every evaluation.  This is
+source covariance of supplied data, not derivation of those data from a bare
+patch.  Independent positive sector transition factors preserve $\Qsign$;
+$\Qray$ additionally requires coherent relative normalization.  Singular,
+zero, negative, or non-cocyclic transitions block globalization.
+
+The sector domain is exactly the equipped Rod, Signal, and Detector family.
+It is not all P7.  The restriction is material: adding a sector with principal
+vector $-u$ makes its positivity require $k(u)<0$, while the equipped common
+component requires $k(u)>0$.  Thus one unequipped sector can destroy the
+intersection.  Absence of an all-sector constructor is not repaired by calling
+the finite witness universal.
+
+Finally, the common component is not one common characteristic boundary.
+$P_\Pi=0$ remains the union of three distinct hyperplanes.  Common formal
+time-covector admissibility neither identifies them nor supplies strong or
+symmetric hyperbolicity, signal dynamics, empirical response, free fall,
+Lorentzian conformal structure, physical scale, or an effective metric.
+
+\section{Ten-dimension audit matrix}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.24\textwidth}>{\raggedright\arraybackslash}p{0.46\textwidth}}
+\toprule
+Dimension & Local verdict & Exact boundary \\
+\midrule
+Representative normalization & repair required & The actions are correctly separated, but $\operatorname{im}(\Resp)$ has rank two, so $\Qray$ has one independent image parameter rather than the claimed two. \\
+Response typing & pass as new proposal primitive & Formal principal scores are not P7, empirical, measured, or calibrated responses. \\
+Units and degree & conditional pass with wording repair & Independent unit conversion changes $\Qray$; the repaired record must call it fixed-trivialization formal syntax, while unequal degree and multiplicity remain unresolved. \\
+Component and orientation & pass as explicit input & $h_0$ chooses a formal component; no physical time orientation is derived. \\
+Transitions and gluing & pass locally with obligations & Source pullback is target-free; inverse, positivity, relative normalization, and cocycle failures block globalization. \\
+Sector scope & pass on exact finite domain & Only $R,S,D$ are present; one additional sector can destroy simultaneous positivity. \\
+Hidden target fit & none detected & No target atlas, metric, tetrad, coframe, desired cone, speed, or benchmark result selects the data. \\
+Goal-property preload & explicit, not hidden & The proposal engineers common positivity openly and therefore earns conditional existence but no ontology-derivation credit. \\
+Empirical and physical overread & blocked & Formal common admissibility is not universal propagation or physical causality. \\
+Authority smuggling & none detected & Roles, registries, validation, derivatives, handoffs, and checkpoints do not supply scientific truth or promotion. \\
+\bottomrule
+\end{longtable}
+
+Nine rows pass within the written restricted scope.  One row returns the exact
+repair finding
+\texttt{FIND-V22-P4T02-B2-RESPONSE-IMAGE-RANK-001}.  There are zero direct
+target imports and zero direct process-authority imports.  The defect is a
+false count of the information retained on the candidate image, not a failure
+of the quotient definitions or all-positive preimage identities.
+
+\section{Source-extension and freeze classification}
+
+Once the inputs are supplied, finite multiplication, intersection,
+projectivization, positive-diagonal orbit formation, and pullback are
+conservative mathematical operations.  The sector principal representatives,
+common orientation, representative and unit convention, transition data,
+covector request, and response-token law are new ontology-primitive candidate
+data.  Current ontology does not derive them.  No target-GR import is detected
+in the written packet.
+
+The controlled status remains \texttt{draft/control},
+\texttt{proposal-only}, and \texttt{source-extension data}.  Current adoption
+is blocked while same-milestone research remains open:
+\texttt{blocked\_adoption\_open\_continuation}.
+
+The earlier
+\texttt{NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR} freeze is preserved.  It is not
+reopened by this independently split construction.  The present branch is not
+frozen because this audit adds the exact response-image rank lemma and identifies
+a narrow repairable defect.  The repair remains unexecuted; Refuter stress must
+follow only after a separately admitted repair packet.
+
+\section{Distance-to-GR status}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.65\textwidth}}
+\toprule
+Burden & Status preserved after audit \\
+\midrule
+Source ontology primitives & No hidden target import is detected, but the proposal record requires a narrow response-information repair; no canonical source law changes. \\
+Source equivalence EqSrc & No general equivalence theorem is added. \\
+RetainH & Unchanged; blocked by missing primitive. \\
+GenH & Unchanged; blocked by missing primitive. \\
+ObsLoc$_{\rm lc}$ & No localization semantics are added. \\
+Resp$_{\rm lc}$ & Formal principal responses remain unadopted proposal syntax, not protected P7 semantics. \\
+$M_{\rm src}$ & The smooth patch remains conditional source scaffolding. \\
+$g_{\rm eff}$ & No physical cone, conformal class, scale, or metric is constructed. \\
+Matter coupling & No universal propagation or target coupling is derived. \\
+Einstein equations & No action, variation, correction control, or field equation is supplied. \\
+Finite-variation robustness & The local strict-margin witness is preserved pending adversarial stress; no ledger row changes. \\
+Benchmark promotion & No comparison or promotion is performed. \\
+Gate Chair status & No protected review is requested. \\
+Current route freeze or hard-fail status & The shared-line route stays locally frozen; this distinct branch has one bounded rank-record repair available. \\
+\bottomrule
+\end{longtable}
+
+The Distance-to-GR ledger is unchanged.
+
+\section{Decisive result and next packet}
+
+The exact result is:
+\begin{quote}
+\texttt{repair\_required} --- the written candidate uses declared source-side
+proposal inputs and contains no required target-GR or process-authority premise,
+but its response map has rank two and its positive-projective image has one
+independent parameter.  The claim of two independent relative response ratios
+must be corrected.  The product, common cone, two quotient definitions, and
+both all-positive preimage identities are preserved.
+\end{quote}
+
+The next role is \texttt{candidate-constructor@0.2.0} for exactly one
+unexecuted \texttt{source\_extension\_candidate} repair packet.  It may only
+replace the two-ratio statement with the parameter $t$, record the rank-two
+image, two-dimensional kernel, and six realized sign orbits, make formal-unit
+typing explicit, transport $h_0$ on overlaps, and state relabeling as typed
+equivariance.  It must preserve the product, common cone, quotient definitions,
+preimage identities, finite sector scope, and every downstream block.
+
+\begin{nonconclusion}
+This audit neither reconstructs nor repairs the candidate.  It does not derive,
+adopt, or reject a source law; establish empirical response, physical causality,
+universal sector coverage, strong or symmetric hyperbolicity, conformal
+geometry, scale, or $g_{\mathrm{eff}}$; evaluate D7 or P2--T01 adequacy;
+activate, dispose, or promote B2; unlock P4--T03; derive coupling or Einstein
+equations; change the Distance-to-GR ledger; issue a Gate or benchmark verdict;
+authorize proof, publication, push, review, or external action; prove a global
+no-go theorem or future-extension impossibility; or complete the derivation.
+\end{nonconclusion}
+
+\end{document}
