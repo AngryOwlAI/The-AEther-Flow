@@ -1,0 +1,116 @@
+schema_id: "v22_p4_t02_b2_operational_response_ray_quotient_v1"
+task_id: "RT-20260810-005"
+job_id: "AJ-RT-20260810-005-001"
+candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+authority: "science_draft"
+status_label: "proposal-only"
+material_class: "source-extension data"
+
+domain:
+  sector_set: ["R", "S", "D"]
+  covector_domain: "D={k in T_x^*U: p_s(k) is nonzero for every s}"
+  exact_protocol_scope: "the equipped Rod_src Signal_src Detector_src controls only"
+  full_p7_scope_claimed: false
+
+response_map:
+  map_name: "Resp_prin"
+  formula: "Resp_prin(k)=(p_R(k),p_S(k),p_D(k)) in (R\\{0})^3"
+  meaning: "formal signed principal-response scores supplied by a proposal-only protocol extension"
+  empirical_response_claimed: false
+  existing_p7_token_response_claimed: false
+
+normalization_actions:
+  common_scale:
+    group: "R_{>0}"
+    action: "a.(r_R,r_S,r_D)=(a r_R,a r_S,a r_D)"
+    interpretation: "one common positive normalization of the explicitly fixed sector representatives"
+  independent_sector_scale:
+    group: "G_+=(R_{>0})^3"
+    action: "(a_R,a_S,a_D).(r_R,r_S,r_D)=(a_R r_R,a_S r_S,a_D r_D)"
+    interpretation: "independent positive normalization of each oriented local principal generator"
+
+operational_quotient_layers:
+  response_ray:
+    quotient_name: "Q_ray"
+    formula: "Q_ray(k)=[Resp_prin(k)]_{R_{>0}}"
+    status: "constructed for the explicitly fixed proposal-only sector representatives"
+    invariant_data: "the ordered response ray, including two independent relative response ratios"
+    common_positive_cell: "C_+++={[r]_{R_{>0}}: r_R>0, r_S>0, r_D>0}"
+    common_cone_preimage: "Gamma_intersection=Q_ray^{-1}(C_+++)"
+    common_scale_invariant: true
+    independent_sector_scale_invariant: false
+    globalization_boundary: "A canonical ray across independently rescaled local sector generators requires a coherent relative-sector normalization law not supplied by current ontology."
+  sign_orbit:
+    quotient_name: "Q_sign"
+    formula: "Q_sign(k)=[Resp_prin(k)]_{G_+}"
+    equivalence_relation: "k~_sign k' iff Resp_prin(k')=a.Resp_prin(k) for some a in G_+"
+    invariant_data: "the ordered sign pattern of the three nonzero sector responses, modulo permitted simultaneous sector relabeling"
+    common_positive_orbit: "O_+++ = G_+.(1,1,1)"
+    common_cone_preimage: "Gamma_intersection=Q_sign^{-1}(O_+++)"
+    independent_sector_scale_invariant: true
+  shared_properties:
+    source_presentation_covariant: true
+    target_data_used: false
+    physical_causality_claimed: false
+
+preimage_theorem:
+  theorem_id: "THM-V22-P4T02-B2-OPERATIONAL-ORBIT-PREIMAGE-001"
+  hypotheses:
+    - "every oriented p_s is nonzero on D"
+    - "the response-ray layer uses the explicitly fixed sector representatives and treats only common scale as redundant"
+    - "the sign-orbit layer also treats independent positive generator rescalings as redundant"
+    - "permitted sector relabelings act simultaneously on forms and response coordinates"
+  conclusion: "The common oriented cone is exactly the inverse image of both the all-positive response-ray cell and the all-positive sign orbit. The ray equality is invariant under common scale; the sign-orbit equality is invariant under independent positive sector scales."
+  proof_key: "Membership in C_+++ or O_+++ is equivalent componentwise to p_s(k)>0 for every sector. The respective positive actions preserve these signs, and source pullback preserves every evaluation."
+
+proposal_only_protocol_extension:
+  extension_id: "LAW-V22-B2-PRINCIPAL-RESPONSE-PROTOCOL-V1"
+  missing_source_law: "source_operational_common_hyperbolicity_envelope_quotient_law"
+  new_request_field: "a source covector preparation label k on the declared patch"
+  new_readout_field: "a formal signed principal-response score p_s(k) for each equipped sector"
+  derived_readout_tokens: ["principal_positive", "principal_zero", "principal_negative"]
+  sector_readout_rule: "sector s returns the formal score p_s(k), from which its sign token is derived"
+  quotient_rule: "for fixed representatives, discard one common positive scale and retain the response ray; for independent generator normalization, pass to the coarser joint sign orbit"
+  exact_existing_protocol_modified: false
+  proposal_adopted: false
+  current_ontology_derivation_claimed: false
+  noncircularity_basis: "The rule is stated only from source patch, sector forms, evaluation, signs, and declared protocol labels; no target cone, metric, causal answer, or benchmark agreement selects the result."
+
+operational_status_layers:
+  mathematical_model: "constructed"
+  source_extension_candidate: "proposal-only"
+  exact_p7_protocol_implementation: "not derived"
+  empirical_device_semantics: "not established"
+  universal_physical_causality: "not established"
+  benchmark_status: "unchanged"
+
+limitations:
+  - "Q_ray retains relative response ratios but removes only one common scale and is not canonical under independent sector normalization."
+  - "Q_sign is invariant under independent positive sector normalization but records only response signs and discards relative magnitudes."
+  - "Neither layer resolves unequal sector units, multiplicities, transition weights, or the choice of sector representatives."
+  - "The exact current P7 protocols contain no covector request or principal-sign token law."
+  - "The response scores are formal principal evaluations, not measured detector responses."
+  - "A common positive sign orbit does not make the three characteristic hyperplanes equal."
+  - "The quotient does not supply strong hyperbolicity, signal speeds, free fall, conformal geometry, scale, or g_eff."
+  - "The construction covers only the three equipped controls."
+
+failure_conditions:
+  zero_response: "A zero component leaves D and is a characteristic-boundary record rather than an all-positive orbit."
+  orientation_missing: "Without source orientation, O_+++ and O_--- remain equally available and the quotient does not select future direction."
+  negative_transition_factor: "A sign-changing generator transition changes the orbit and fails the oriented gluing contract."
+  vanishing_transition_factor: "A zero factor destroys invertibility and fails the quotient."
+  cocycle_defect: "Positive transition factors that fail the triple-overlap cocycle prevent a global quotient bundle."
+  target_fit_selection: "Any choice made because it agrees with a desired GR cone is a forbidden target import."
+
+authority_limits:
+  physical_operational_quotient_derived: false
+  exact_p7_protocol_extended: false
+  empirical_response_derived: false
+  physical_cone_constructed: false
+  universal_propagation_derived: false
+  source_law_adopted: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  physics_promotion_authorized: false

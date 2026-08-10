@@ -1,0 +1,122 @@
+schema_id: "v22_p4_t02_b2_common_envelope_stress_matrix_v1"
+task_id: "RT-20260810-005"
+job_id: "AJ-RT-20260810-005-001"
+candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+authority: "science_draft"
+status_label: "proposal-only"
+decisive_result: "constructed_candidate"
+
+stress_rows:
+  - stress_id: "CHE-BASE-PRODUCT"
+    branch: "positive construction"
+    input: "v_R=u+z/3, v_S=u, v_D=u-z/3, h_0(u)=1, h_0(z)=0"
+    observed: "three real affine roots for every q; common component k(u)>|k(z)|/3"
+    disposition: "PASS_CONSTRUCTED"
+  - stress_id: "CHE-INDEPENDENT-MARGIN"
+    branch: "independent sector variation"
+    input: "independent product-open perturbations of h_0 and each v_s; reproduction-chart delta<=1/10"
+    observed: "h'(v'_s)>=109/150>0 for all three sectors"
+    disposition: "PASS_LOCAL_ROBUSTNESS"
+  - stress_id: "CHE-EMPTY-INTERSECTION"
+    branch: "empty intersection"
+    input: "w_1=e_0, w_2=e_1, w_3=-e_0-e_1 with positive orientations"
+    observed: "k(w_1)>0 and k(w_2)>0 imply k(w_3)<0, so no common h exists"
+    disposition: "FAILS_CLOSED_NEGATIVE_CONTROL"
+  - stress_id: "CHE-ORIENTATION-AMBIGUITY"
+    branch: "nonuniqueness"
+    input: "erase the source orientation token"
+    observed: "the all-positive and all-negative components are equally admissible"
+    disposition: "FAILS_CLOSED_MISSING_ORIENTATION_PRIMITIVE"
+  - stress_id: "CHE-ZERO-FACTOR"
+    branch: "collapse"
+    input: "set one sector vector to zero"
+    observed: "the corresponding principal form and product vanish identically"
+    disposition: "FAILS_CLOSED_COLLAPSE"
+  - stress_id: "CHE-MULTIPLICITY"
+    branch: "multiplicity and degeneracy"
+    input: "q(z)=0 or epsilon approaches zero"
+    observed: "sector roots coincide and the reducible product is not strictly hyperbolic"
+    disposition: "RECORDED_UNDISCHARGED_PDE_BURDEN"
+  - stress_id: "CHE-NORMALIZATION"
+    branch: "independent generator normalization"
+    input: "p_s -> a_s p_s with independent positive a_s"
+    observed: "The locally constructed Q_ray changes unless relative normalization is supplied; the coarser Q_sign remains invariant"
+    disposition: "PASS_TWO_LAYER_BOUNDARY_RAY_LOCAL_SIGN_ORBIT_INVARIANT"
+  - stress_id: "CHE-INVERSE-DEFECT"
+    branch: "inverse defect"
+    input: "singular overlap derivative or vanishing generator transition factor"
+    observed: "transport or response orbit cannot be inverted"
+    disposition: "FAILS_CLOSED_TRANSITION_INVALID"
+  - stress_id: "CHE-COCYCLE-DEFECT"
+    branch: "cocycle defect"
+    input: "triple-overlap derivative or positive-rescaling factors fail composition"
+    observed: "no globally coherent product, cone, or quotient bundle exists"
+    disposition: "FAILS_CLOSED_GLOBALIZATION_INVALID"
+  - stress_id: "CHE-SECTOR-SCOPE"
+    branch: "full-sector scope"
+    input: "request an unequipped P7 matter sector"
+    observed: "no typed principal form or protocol bridge is supplied"
+    disposition: "OUTSIDE_DECLARED_DOMAIN_NOT_REFUTED"
+  - stress_id: "CHE-TARGET-IMPORT"
+    branch: "hidden target import"
+    input: "select h, signs, normalization, or quotient by desired GR-cone agreement"
+    observed: "the construction becomes circular under the claim boundary"
+    disposition: "INVALID_UNDER_CLAIM_BOUNDARY"
+  - stress_id: "CHE-PHYSICAL-OVERREAD"
+    branch: "sector-boundary inequivalence"
+    input: "infer one physical characteristic boundary from nonempty Gamma_intersection"
+    observed: "the product zero set remains the union of three distinct hyperplanes"
+    disposition: "REJECTED_OVERREAD"
+
+refuter_failure_branches:
+  collapse:
+    status: "FAILS_CLOSED"
+    evidence_id: "CHE-ZERO-FACTOR"
+  nonuniqueness:
+    status: "FAILS_WITHOUT_ORIENTATION_PRIMITIVE"
+    evidence_id: "CHE-ORIENTATION-AMBIGUITY"
+  inverse_defect:
+    status: "FAILS_CLOSED"
+    evidence_id: "CHE-INVERSE-DEFECT"
+  cocycle_defect:
+    status: "FAILS_CLOSED"
+    evidence_id: "CHE-COCYCLE-DEFECT"
+  variation_fragility:
+    status: "PASSES_ONLY_ON_DECLARED_STRICT_MARGIN_NEIGHBORHOOD"
+    positive_evidence_id: "CHE-INDEPENDENT-MARGIN"
+    negative_evidence_id: "CHE-EMPTY-INTERSECTION"
+
+freeze_criteria_status:
+  repeated_burden: false
+  scoped_obstruction: false
+  freeze_evaluation_required: true
+  preserved_prior_freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  current_branch: "common_hyperbolicity_envelope"
+  freeze_decision: "not_frozen_constructed_candidate_requires_audit"
+  rationale: "The exact finite common-envelope and response-orbit candidate is materially distinct and constructed. Its proposal-only inputs and physical interpretation remain blocked, but that is not a failure of the mathematical construction."
+  next_required_role: "smuggling-auditor@0.2.0"
+
+summary:
+  stress_count: 12
+  constructed_positive_control_count: 1
+  local_robustness_pass_count: 1
+  fails_closed_control_count: 5
+  recorded_undischarged_burden_count: 1
+  outside_scope_count: 1
+  forbidden_overread_count: 2
+  normalization_split_count: 1
+  target_import_detected_in_constructed_candidate: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+
+authority_limits:
+  validator_pass_counts_as_scientific_proof: false
+  constructed_candidate_counts_as_adoption: false
+  physical_cone_constructed: false
+  universal_matter_propagation_derived: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false

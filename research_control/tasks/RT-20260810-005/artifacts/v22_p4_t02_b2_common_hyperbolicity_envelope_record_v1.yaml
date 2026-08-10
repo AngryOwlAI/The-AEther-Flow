@@ -1,0 +1,166 @@
+schema_id: "v22_p4_t02_b2_common_hyperbolicity_envelope_record_v1"
+task_id: "RT-20260810-005"
+job_id: "AJ-RT-20260810-005-001"
+candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+authority: "science_draft"
+status_label: "proposal-only"
+material_class: "source-extension data"
+decisive_result: "constructed_candidate"
+no_fog_check: true
+no_fog_explanation: "The packet constructs one exact finite local envelope candidate, a fixed-representative positive-projective response ray, and a coarser normalization-invariant sign orbit on the equipped Rod Signal Detector family. It does not construct a physical causal geometry or derive the candidate inputs from current ontology."
+
+operational_quotient_target:
+  primary_ratio_retaining_layer: "Q_ray=[Resp_prin]_{R_{>0}} for the explicitly fixed proposal-only sector representatives"
+  coarse_normalization_invariant_layer: "Q_sign=[Resp_prin]_{(R_{>0})^3}"
+  shared_preimage_result: "The positive cell of either layer has exact preimage Gamma_intersection."
+  normalization_boundary: "Q_ray removes only one common positive scale and changes under independent sector rescaling; Q_sign removes independent positive sector scales but retains only the ordered sign pattern."
+
+sector_domain:
+  domain_id: "S-EQ-RSD-V1"
+  source_patch: "one declared smooth four-dimensional source patch U"
+  source_point: "x in U"
+  equipped_sector_ids: ["R", "S", "D"]
+  equipped_protocol_roles:
+    R: "Rod_src"
+    S: "Signal_src"
+    D: "Detector_src"
+  finite: true
+  exactly_enumerated: true
+  full_p7_sector_domain_claimed: false
+  all_sector_universality_claimed: false
+
+proposal_only_input_data:
+  tangent_space: "V=T_x U"
+  covector_space: "V*=T_x^* U"
+  common_covector_symbol: "h_0"
+  vector_pair:
+    - "u in V with h_0(u)=1"
+    - "z in ker(h_0), z nonzero"
+  split_parameter: "epsilon=1/3"
+  sector_vectors:
+    R: "v_R=u+epsilon z"
+    S: "v_S=u"
+    D: "v_D=u-epsilon z"
+  provenance: "The sector vectors, h_0, orientation, and pairing-to-protocol rule are explicit proposal-only source-extension inputs. Current ontology and the exact P7 protocols do not derive them."
+  target_data_used: false
+
+sector_principal_forms:
+  polynomial_type: "nonzero real homogeneous degree-one reduced source form"
+  density_weight: 0
+  forms:
+    R: "p_R(k)=k(v_R)"
+    S: "p_S(k)=k(v_S)"
+    D: "p_D(k)=k(v_D)"
+  independent_characteristic_boundaries: true
+  shared_characteristic_line_required: false
+  common_orientation_receipt: "p_R(h_0)=p_S(h_0)=p_D(h_0)=1>0"
+
+product_envelope:
+  product_polynomial: "P_product(k)=p_R(k)p_S(k)p_D(k)=k(u)(k(u)^2-epsilon^2 k(z)^2)"
+  product_degree: 3
+  product_density_weight: 0
+  characteristic_set: "the union of the three distinct sector hyperplanes when epsilon is nonzero"
+  common_cone: "Gamma_intersection={k in V*: k(u)>|epsilon k(z)|}"
+  common_cone_properties:
+    - "nonempty"
+    - "open"
+    - "convex"
+    - "contains h_0"
+    - "does not require equal sector characteristic boundaries"
+  theorem:
+    theorem_id: "THM-V22-P4T02-B2-RSD-COMMON-ENVELOPE-001"
+    hypotheses:
+      - "the exact finite sector domain is S-EQ-RSD-V1"
+      - "h_0(u)=1 and h_0(z)=0"
+      - "epsilon=1/3 is nonzero"
+      - "the three degree-one forms are oriented by h_0"
+    conclusion: "P_product is hyperbolic with respect to h_0, its component containing h_0 is Gamma_intersection, and the sector characteristic hyperplanes remain distinct."
+    proof_key: "For each q, the roots of t -> P_product(q+t h_0) are -q(v_R), -q(v_S), and -q(v_D); the positive component is the simultaneous positivity region of all three factors."
+
+source_presentation_covariance:
+  transformation: "For every source-presentation derivative A:V->V', set v'_s=A v_s and pull covectors by A^*."
+  evaluation_identity: "p'_s(k')=k'(A v_s)=p_s(A^* k')"
+  product_identity: "P'_product(k')=P_product(A^* k')"
+  cone_identity: "Gamma'_intersection=(A^*)^{-1}(Gamma_intersection)"
+  target_atlas_used: false
+  overlap_obligations:
+    inverse: "Every admitted overlap derivative is invertible on its declared domain."
+    cocycle: "A_gamma_beta A_beta_alpha=A_gamma_alpha on triple overlaps."
+    sector_relabeling: "Permitted sector relabelings act by simultaneous permutation of forms and response coordinates."
+    common_positive_rescaling: "A common positive rescaling is absorbed by Q_ray."
+    independent_positive_rescaling: "Independent positive local generator rescalings generally change Q_ray but are absorbed by Q_sign. A canonical global response ray requires a coherent relative-sector normalization law."
+
+strict_margin_robustness:
+  intrinsic_certificate: "The evaluation pairing V* x V -> R is continuous. Because the finite base family obeys h_0(v_s)=1, there are independent product-open neighborhoods N_h of h_0 and N_s of every v_s such that h'(v'_s)>0 for every h' in N_h and v'_s in N_s. Hence the perturbed cone intersection remains nonempty and contains h'."
+  independence: "The three sector vectors vary independently inside N_R x N_S x N_D; no diagonal or shared-line restriction is imposed."
+  reproduction_chart_only:
+    presentation: "u=e_0, z=e_1, h_0=e^0"
+    bound: "If every coordinate component of h'-h_0 and v'_s-v_s has absolute value at most delta=1/10, then h'(v'_s)>=1-[(7/3)delta+4delta^2]=109/150>0."
+    authority: "The numeric sup bound is a calculation witness for the intrinsic open-neighborhood statement, not a source norm or target metric."
+  finite_variation_robustness_status: "constructed_on_declared_neighborhood"
+  global_robustness_claimed: false
+
+multiplicity_and_degeneracy:
+  reducible_product: true
+  repeated_roots_possible: true
+  repeated_root_locus: "sector roots coincide for special q, including q(z)=0"
+  strict_hyperbolicity_claimed: false
+  strong_or_symmetric_hyperbolicity_claimed: false
+  conditioning_claimed: false
+  implication: "Product hyperbolicity and a robust common interior do not discharge PDE well-posedness, multiplicity control, or physical universality."
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+  artifact_path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_v1.tex"
+  formal_objects:
+    - "the exact finite equipped sector domain S-EQ-RSD-V1"
+    - "three independently split proposal-only degree-one sector principal forms"
+    - "the cubic product polynomial P_product"
+    - "the common oriented cone Gamma_intersection"
+    - "the positive-projective response ray Q_ray for explicitly fixed sector representatives"
+    - "the coarser positive-diagonal sign orbit Q_sign"
+    - "an intrinsic strict-margin product-neighborhood certificate"
+  maps:
+    - "sector form family -> product polynomial"
+    - "oriented sector cones -> finite intersection cone"
+    - "covector -> sector response vector -> positive-projective response ray"
+    - "covector -> sector response vector -> positive-diagonal sign orbit"
+    - "source-presentation derivative -> transported sector data and cone"
+  proof_obligations_remaining:
+    - "derive the sector forms orientation and protocol pairing from adopted source law rather than proposal-only inputs"
+    - "extend or precisely fail the construction across every declared P7 sector"
+    - "audit the response-orbit law for hidden goal-property and target imports"
+    - "resolve product multiplicities and establish the appropriate strong or symmetric hyperbolicity"
+    - "supply empirical or adopted operational semantics before physical causal interpretation"
+  next_required_role: "smuggling-auditor@0.2.0"
+
+source_extension_classification:
+  category: "new_ontology_primitive_candidate"
+  current_ontology_derivation_claimed: false
+  conservative_layer: "finite product, cone intersection, common-scale projectivization, positive-diagonal sign orbit, and pullback covariance once the inputs are supplied"
+  new_primitive_layer: "independent sector principal data, source orientation, relative-sector normalization status, and the protocol-to-principal-response token law"
+  forbidden_import_layer: "target Lorentzian cone, target metric, tetrad, coframe, desired signal speeds, empirical calibration, benchmark success, or validator authority"
+  target_gr_import_detected: false
+  source_law_adopted: false
+  adoption_status: "blocked_adoption_open_continuation"
+
+authority_limits:
+  physical_cone_constructed: false
+  universal_matter_propagation_derived: false
+  full_p7_sector_coverage_derived: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  conformal_structure_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  gate_b_verdict_issued: false
+  global_no_go_claimed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

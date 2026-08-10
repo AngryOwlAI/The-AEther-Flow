@@ -1292,12 +1292,12 @@ items:
   stop_conditions: Nonhyperbolicity, instability, inequivalent unselected cones, signature
     loss, sector-dependent propagation without a physical quotient, hidden metric
     primitive, or repeated frozen route.
-  implementation_status: b2_post_line_lock_selector_complete_common_hyperbolicity_envelope_construction_pending_checkpoint
-  runtime_role_family: candidate-constructor@0.2.0
+  implementation_status: b2_common_hyperbolicity_envelope_constructed_source_extension_smuggling_audit_pending_checkpoint
+  runtime_role_family: smuggling-auditor@0.2.0
   runtime_supporting_perspective: refuter@0.2.0
-  runtime_strategy_id: construct_v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_or_obstruction_v1
+  runtime_strategy_id: audit_v22_p4_t02_b2_common_hyperbolicity_envelope_source_extension_smuggling_v1
   runtime_selected_candidate_id: CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1
-  runtime_transition_id: CONSTRUCT_COMMON_HYPERBOLICITY_ENVELOPE_AFTER_POST_LINE_LOCK_SELECTOR
+  runtime_transition_id: AUDIT_COMMON_HYPERBOLICITY_ENVELOPE_AFTER_CONSTRUCTION
   runtime_execution_ready_after_checkpoint: true
   runtime_b1_primary_terminated: true
   runtime_descriptor_specification_complete: true
@@ -1354,14 +1354,28 @@ items:
   runtime_theoretical_continuation_selector_job_id: AJ-RT-20260810-002-001
   runtime_theoretical_continuation_selector_handoff_id: handoff-0999
   runtime_theoretical_continuation_selector_result: common_hyperbolicity_envelope_selected
-  runtime_selected_next_packet_type: source_extension_candidate
+  runtime_selected_next_packet_type: source_extension_smuggling_audit
   runtime_selected_next_candidate_id: CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1
-  runtime_selected_next_role_family: candidate-constructor@0.2.0
-  runtime_selected_next_route_label: ontology-law-research-packet
-  runtime_selected_next_strategy_id: construct_v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_or_obstruction_v1
-  runtime_selected_next_work_item: P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION
+  runtime_selected_next_role_family: smuggling-auditor@0.2.0
+  runtime_selected_next_route_label: ordinary-research-packet
+  runtime_selected_next_strategy_id: audit_v22_p4_t02_b2_common_hyperbolicity_envelope_source_extension_smuggling_v1
+  runtime_selected_next_work_item: P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-SMUGGLING-AUDIT
   runtime_common_hyperbolicity_envelope_selected: true
-  runtime_common_hyperbolicity_envelope_executed: false
+  runtime_common_hyperbolicity_envelope_executed: true
+  runtime_common_hyperbolicity_envelope_task_id: RT-20260810-005
+  runtime_common_hyperbolicity_envelope_job_id: AJ-RT-20260810-005-001
+  runtime_common_hyperbolicity_envelope_handoff_id: handoff-1002
+  runtime_common_hyperbolicity_envelope_result: constructed_candidate
+  runtime_exact_equipped_sector_count: 3
+  runtime_common_hyperbolicity_product_constructed: true
+  runtime_common_hyperbolicity_cone_constructed: true
+  runtime_independent_characteristic_boundaries_preserved: true
+  runtime_response_ray_constructed_for_fixed_representatives: true
+  runtime_normalization_invariant_sign_orbit_constructed: true
+  runtime_common_positive_preimage_identity_established: true
+  runtime_strict_margin_independent_sector_robustness_constructed: true
+  runtime_source_extension_smuggling_audit_selected: true
+  runtime_source_extension_smuggling_audit_executed: false
   runtime_common_hyperbolicity_product_lemma_established: true
   runtime_independent_sector_common_time_witness_established: true
   runtime_common_time_covector_domain_is_universal_propagation: false
@@ -1370,7 +1384,7 @@ items:
   runtime_latest_checkpoint_recovery_task_id: RT-20260810-004
   runtime_latest_checkpoint_recovery_job_id: AJ-RT-20260810-004-001
   runtime_latest_checkpoint_recovery_handoff_id: handoff-1001
-  runtime_latest_checkpoint_recovery_status: exact_two_eof_repaired_fresh_checkpoint_pending
+  runtime_latest_checkpoint_recovery_status: exact_two_eof_repaired_checkpoint_committed_candidate_constructor_executed
   runtime_latest_checkpoint_recovery_science_changed: false
   runtime_latest_checkpoint_recovery_distance_to_gr_changed: false
   runtime_source_fiber_factorization_required: true

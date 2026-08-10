@@ -1,12 +1,119 @@
 mode: "director_led_research_control"
-active_task_id: "RT-20260810-004"
-active_agent_job_id: "AJ-RT-20260810-004-001"
-latest_handoff_id: "handoff-1001"
-current_status: "rt003_two_eof_checkpoint_recovery_pass_ready_for_fresh_checkpoint"
-claim_boundary_summary: "RT-20260810-004 deletes exactly one terminal newline from each of two checkpoint-named RT-20260810-003 control artifacts and rebinds dependent provenance hashes. The sealed receipt records 74 non-target manifest matches at the repair boundary. No science was reexecuted, the consumed checkpoint was not replayed, and the selected common-hyperbolicity Candidate Constructor packet remains unexecuted. Distance-to-GR is unchanged."
+active_task_id: "RT-20260810-005"
+active_agent_job_id: "AJ-RT-20260810-005-001"
+latest_handoff_id: "handoff-1002"
+current_status: "v22_p4_t02_b2_common_hyperbolicity_envelope_constructed_smuggling_audit_selected_checkpoint_pending"
+claim_boundary_summary: "RT-20260810-005 constructs one exact finite proposal-only common-hyperbolicity envelope on the equipped Rod Signal Detector family, together with Q_ray for fixed representatives and the coarser normalization-invariant Q_sign orbit. Both recover the common cone as their all-positive preimage. The packet establishes source covariance and local independent-sector strict-margin robustness, not full-sector universality, physical causality, adopted source law, D7 adequacy, B2 activation, P4-T03, or g_eff. Distance-to-GR is unchanged."
 next_plan_task_id: "P4-T02"
 next_worker_skill: "continue-research"
-next_recommended_action: "Run one fresh governed cumulative checkpoint for AJ-RT-20260810-004-001. Only after it commits may one fresh candidate-constructor@0.2.0 ontology-law-research-packet construct or precisely obstruct CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1. Do not replay RT003, treat common time admissibility as universal propagation, reevaluate D7, activate B2, execute P4-T03, edit canonical ontology, or take protected or external action."
+next_recommended_action: "Run the single governed checkpoint for AJ-RT-20260810-005-001. After it commits, execute exactly one fresh smuggling-auditor@0.2.0 source_extension_smuggling_audit packet on CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1. Audit representative normalization, response typing, units, component choice, transition factors, sector scope, hidden target fit, and physical overread. Do not reevaluate D7, activate B2, execute P4-T03, adopt source law or ontology, or take protected or external action."
+
+v22_p4_t02_b2_common_hyperbolicity_envelope_candidate:
+  task_id: "RT-20260810-005"
+  parent_task_id: "RT-20260810-004"
+  parent_handoff_id: "handoff-1001"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  completed_work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+  next_work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-SMUGGLING-AUDIT"
+  claim_boundary_id: "CB-V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION-001"
+  status: "PASS_V22_P4_T02_B2_COMMON_HYPERBOLICITY_ENVELOPE_CONSTRUCTED_PENDING_SMUGGLING_AUDIT"
+  work_item_status: "constructed_candidate_smuggling_audit_selected_checkpoint_pending"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  selected_role_family: "candidate-constructor@0.2.0"
+  supporting_perspective: "refuter@0.2.0"
+  selected_worker_skill: "continue-research"
+  selected_strategy_id: "construct_v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_or_obstruction_v1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Construct or precisely obstruct a source-covariant common hyperbolicity envelope and noncircular source-operational quotient from independently supplied proposal-only sector data."
+  source_head: "21d75b64aba3edc7206324b563bb143954218ba3"
+  source_tree: "6407dcadb941943ef67593165c88a4ad3fee503b"
+  prior_checkpoint_job_id: "AJ-RT-20260810-004-001"
+  prior_checkpoint_commit: "21d75b64aba3edc7206324b563bb143954218ba3"
+  source_handoff_id: "handoff-1001"
+  source_handoff_path: "research_control/handoffs/handoff-1001.yaml"
+  source_handoff_sha256: "5fcf334f67049e58c8761bec0c567ca9639663ae69fbe296fd08d34c56e2bfae"
+  registered_plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  registered_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  manuscript_path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_v1.tex"
+  manuscript_sha256: "eeac27624e437851726b3865b8900a78f8bed39aa116fc99fd4dfd3a24689152"
+  envelope_record_path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_record_v1.yaml"
+  envelope_record_sha256: "60fbd716099176e2f9faff5eb70cc1c02336cde2c730fea6719bb0088213c7bf"
+  quotient_record_path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_operational_response_ray_quotient_v1.yaml"
+  quotient_record_sha256: "a9138de596a1810bb5533f47b56a60d2e4f83a54d5e2e4163b3dd25fa322637e"
+  stress_matrix_path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_envelope_stress_matrix_v1.yaml"
+  stress_matrix_sha256: "e37f67862d3e26bf9865085b76e303df8b3f0ee304a060051cb40c4feb8bea93"
+  support_model_path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_model.py"
+  support_model_sha256: "9f8e9c58749397921c48a64bae904d5c9dc258d17a9aec16c51250dd3153e958"
+  child_phys_math_path: "research_control/tasks/RT-20260810-005/artifacts/child_phys_math_p4_t02_b2_common_hyperbolicity_envelope.yaml"
+  child_phys_math_sha256: "ef2109f8a04224e7a5681015c1df78ef413674aedae67f0e8f2744893754eef1"
+  child_phys_phil_path: "research_control/tasks/RT-20260810-005/artifacts/child_phys_phil_p4_t02_b2_common_hyperbolicity_envelope.yaml"
+  child_phys_phil_sha256: "e956c306c166c465148dd057c6417fa7820015188a3c5719872a6c5008f03e6f"
+  conflict_review_path: "research_control/tasks/RT-20260810-005/artifacts/parent_conflict_review_p4_t02_b2_common_hyperbolicity_envelope.yaml"
+  conflict_review_sha256: "946dc98583a151164f4d7a506a358306f31046f87b8f2f3bd4eb8af3a03deec7"
+  parent_fusion_path: "research_control/tasks/RT-20260810-005/artifacts/parent_fusion_notes_p4_t02_b2_common_hyperbolicity_envelope.md"
+  parent_fusion_sha256: "0b1cd29b64da343da70906ac313f803275618e45889d07cea91f878e5618c0c0"
+  latex_compile_receipt_path: "research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_latex_compile_receipt.json"
+  latex_compile_receipt_sha256: "05727b19ac7a0ea44453aba7235fb85af0f411abf5f5491324940983805ac633"
+  task_path: "research_control/tasks/RT-20260810-005/00_TASK.yaml"
+  task_sha256: "b782f19d301a4ce2172d5a14d23710ac5c43ea64078df29876a9ebb4a51e018c"
+  agent_job_id: "AJ-RT-20260810-005-001"
+  agent_job_path: "research_control/tasks/RT-20260810-005/jobs/AJ-RT-20260810-005-001.yaml"
+  agent_job_sha256: "ce2096bab50c0a7e3fdcf5932a1009ec93fb8de601695a00065049708abe167d"
+  decision_id: "DDR-20260810-005"
+  decision_path: "research_control/tasks/RT-20260810-005/DDR-20260810-005.md"
+  decision_sha256: "1a1707a6bd4b79744a979ffb218874d8af4bed4925a9e2e34e94614e2d5bb381"
+  execution_role_ref: "candidate-constructor@0.2.0--RT-20260810-005"
+  execution_role_path: "research_control/tasks/RT-20260810-005/roles/candidate-constructor@0.2.0--RT-20260810-005.yaml"
+  execution_role_sha256: "338e8ec336b315f627ab8f09b7847565733b852dea93eae6b42153ba78049e63"
+  completion_path: "research_control/tasks/RT-20260810-005/jobs/completions/AJC-AJ-RT-20260810-005-001.yaml"
+  completion_sha256: "bb63c8fc3f04f052ac9e0af584b84d063337a3d6f61f6322010153ff8642fc1f"
+  handoff_id: "handoff-1002"
+  handoff_path: "research_control/handoffs/handoff-1002.yaml"
+  handoff_sha256: "8e7d9fedce8c707eda14ad5f92a18c98fd8d2d8d57eded90131d2d589a51fe6e"
+  selected_candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+  decisive_result: "constructed_candidate"
+  missing_source_law: "source_operational_common_hyperbolicity_envelope_quotient_law"
+  preserved_freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  exact_equipped_sector_count: 3
+  product_hyperbolicity_constructed: true
+  common_cone_constructed: true
+  independent_sector_characteristic_boundaries_preserved: true
+  response_ray_constructed_for_fixed_representatives: true
+  normalization_invariant_sign_orbit_constructed: true
+  strict_margin_independent_sector_robustness_constructed: true
+  full_sector_coverage_established: false
+  physical_operational_quotient_constructed: false
+  physical_cone_constructed: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_fallback_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  local_freeze_preserved: true
+  current_branch_frozen: false
+  global_freeze_applied: false
+  ontology_adoption_count: 0
+  scientific_claims_changed: false
+  distance_to_gr_ledger_unchanged: true
+  generated_derivatives_non_authority: true
+  checkpoint_invocation_count: 0
+  checkpoint_committed: false
+  selected_next_packet_type: "source_extension_smuggling_audit"
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-SMUGGLING-AUDIT"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_supporting_perspective: "refuter@0.2.0"
+  selected_next_route_label: "ordinary-research-packet"
+  selected_next_strategy_id: "audit_v22_p4_t02_b2_common_hyperbolicity_envelope_source_extension_smuggling_v1"
+  selected_next_target_derivation_milestone: "effective_metric_g_eff"
+  selected_next_requires_human_gate: false
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
 
 v22_p4_t02_b2_two_eof_checkpoint_recovery:
   task_id: "RT-20260810-004"

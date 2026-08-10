@@ -1,0 +1,382 @@
+% authority: science_draft
+% object-id: TEX-V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CANDIDATE-V1
+% task-id: RT-20260810-005
+% agentjob-id: AJ-RT-20260810-005-001
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.78in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newenvironment{nonconclusion}{\par\smallskip\noindent\textbf{Non-conclusion.}\ }{\par\smallskip}
+
+\newcommand{\RR}{\mathbb R}
+\newcommand{\Seq}{\mathcal S_{\mathrm{eq}}}
+\newcommand{\Pprod}{P_{\Pi}}
+\newcommand{\GammaInt}{\Gamma_{\cap}}
+\newcommand{\Resp}{\operatorname{Resp}_{\mathrm{prin}}}
+\newcommand{\Qray}{Q_{\mathrm{ray}}}
+\newcommand{\Qsign}{Q_{\mathrm{sign}}}
+
+\title{V22 P4--T02 B2 Common-Hyperbolicity Envelope Candidate v1\\
+\large A proposal-only product-cone and two-layer response-quotient construction}
+\author{Candidate Constructor Packet RT-20260810-005}
+\date{2026-08-10}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\begin{abstract}
+This draft/control packet executes the post-line-lock construction selected by
+RT-20260810-002.  On the exactly equipped finite sector family
+\(\Seq=\{R,S,D\}\), it supplies three independently split, proposal-only
+degree-one principal forms, proves hyperbolicity of their cubic product,
+identifies the containing component as their common oriented cone, and gives a
+source-presentation-covariant strict-margin certificate under independent
+sector perturbations.  It also constructs two explicit response quotients:
+a positive-projective ray for fixed sector representatives that retains
+relative response ratios, and a coarser normalization-invariant
+positive-diagonal sign orbit.  The all-positive cell of either quotient has
+the common cone as its exact preimage.  These quotients are source-extension
+candidates, not implementations of the unchanged P7 protocols and not
+physical causal quotients.  Empty-intersection, orientation, zero-factor,
+multiplicity, normalization, inverse, cocycle, scope, and target-import
+controls fail closed.  The decisive result is one \emph{constructed
+candidate}, followed by Smuggling Auditor review.  No all-sector universality,
+strong hyperbolicity, physical cone, conformal structure, effective metric,
+adequacy verdict, B2 activation, P4--T03 authority, ontology adoption, or
+Distance-to-GR reduction follows.
+\end{abstract}
+
+\section{Fixed authority and source basis}
+
+The packet is bound to
+\[
+ \texttt{CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1}
+\]
+and work item
+\[
+ \texttt{P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION}.
+\]
+It preserves the scoped obstruction
+\(\texttt{OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001}\) and the local
+\(\texttt{NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR}\) freeze.  Consequently,
+no common sector line is inserted and no diagonal-only variation class is
+used.
+
+The exact positive domain contains only the equipped
+\(\mathsf{Rod}_{\rm src}\), \(\mathsf{Signal}_{\rm src}\), and
+\(\mathsf{Detector}_{\rm src}\) controls.  Their existing P7 protocols remain
+unchanged.  The smooth patch, principal forms, orientation, and new
+principal-response request/readout rule below are proposal-only source-extension
+data.  Current ontology does not derive them.  No target atlas, metric,
+tetrad, coframe, desired GR cone, empirical calibration, or benchmark answer
+is an input.
+
+\section{Intrinsic finite construction}
+
+Let \(U\) be a declared smooth four-dimensional source patch, let
+\(x\in U\), and write \(V=T_xU\).  Supply, as proposal-only data, a covector
+\(h_0\in V^*\), vectors \(u,z\in V\), and
+\(\epsilon=1/3\) satisfying
+\[
+ h_0(u)=1,\qquad h_0(z)=0,\qquad z\ne0.
+\]
+Define the independently split sector vectors
+\[
+ v_R=u+\epsilon z,\qquad v_S=u,\qquad v_D=u-\epsilon z
+\]
+and the degree-one principal forms
+\[
+ p_s(k)=k(v_s),\qquad s\in\Seq,\quad k\in V^*.
+\]
+These forms have density weight zero in the candidate.  They are nonzero and
+are not associates when \(\epsilon\ne0\).  Their orientation receipt is
+\[
+ p_R(h_0)=p_S(h_0)=p_D(h_0)=1>0.
+\]
+
+\begin{definition}[Finite common-hyperbolicity envelope]
+Define
+\begin{align}
+ \Pprod(k)
+   &=p_R(k)p_S(k)p_D(k) \\
+   &=k(u)\bigl(k(u)^2-\epsilon^2 k(z)^2\bigr), \\
+ \GammaInt
+   &=\{k\in V^*:p_R(k)>0,\ p_S(k)>0,\ p_D(k)>0\} \\
+   &=\{k\in V^*:k(u)>|\epsilon k(z)|\}.
+\end{align}
+The pair \((\Pprod,\GammaInt)\) is the finite mathematical envelope.
+\end{definition}
+
+\begin{theorem}[Constructed product and common component]
+\label{thm:product}
+The polynomial \(\Pprod\) is hyperbolic with respect to \(h_0\).  Its
+hyperbolicity-cone component containing \(h_0\) is exactly \(\GammaInt\).
+The cone is nonempty, open, and convex, while the three characteristic
+hyperplanes remain distinct.
+\end{theorem}
+
+\begin{proof}
+For every \(q\in V^*\), the roots of
+\(t\mapsto\Pprod(q+t h_0)\) are
+\[
+ -q(v_R),\qquad -q(v_S),\qquad -q(v_D),
+\]
+because \(h_0(v_s)=1\).  All roots are real, proving hyperbolicity.  The
+positive component containing \(h_0\) is the simultaneous positivity region
+of the three factors, hence \(\GammaInt\).  The displayed inequality makes
+openness and convexity explicit, and \(h_0\in\GammaInt\).  Since
+\(z\ne0\) and \(\epsilon\ne0\), the three linear forms do not have one common
+kernel, so their characteristic hyperplanes are distinct.
+\end{proof}
+
+The theorem is the exact local mathematical payload.  It neither says that
+\(\Pprod\) is the physical principal polynomial of each sector nor converts
+the union of three characteristic hyperplanes into one shared boundary.
+
+\section{Source-presentation covariance and gluing obligations}
+
+Let \(A:V\to V'\) be an invertible derivative of an admitted source
+presentation change.  Transport the proposal-only data by
+\[
+ v'_s=A v_s,\qquad k=A^*k'\quad(k'\in V'^*).
+\]
+Then
+\[
+ p'_s(k')=k'(A v_s)=p_s(A^*k'),
+\]
+so products and common components obey
+\[
+ \Pprod'(k')=\Pprod(A^*k'),
+ \qquad
+ \GammaInt'=(A^*)^{-1}(\GammaInt).
+\]
+This is source covariance conditional on the supplied data; it is not a
+derivation of those data from a bare smooth patch.
+
+On overlaps, the derivatives must be invertible and satisfy the ordinary
+triple-overlap cocycle.  Sector relabelings act by simultaneous permutation of
+the three forms.  A common positive rescaling of the three fixed sector
+representatives is absorbed by the projective ray quotient below.  Independent
+positive generator rescalings generally change its response ratios, but are
+absorbed by the coarser positive-diagonal sign quotient.  A vanishing or
+sign-changing transition factor fails the oriented gluing contract.  A failed
+inverse or triple-overlap cocycle blocks a global envelope rather than being
+repaired by target geometry.
+
+\section{Operational two-layer response-quotient candidate}
+
+The exact P7 protocols currently contain neither a covector request nor a
+principal-response score.  The following law is therefore a new proposal-only
+protocol extension, not a statement about current devices.
+
+On the domain
+\[
+ D=\{k\in V^*:p_s(k)\ne0\ \text{for every }s\in\Seq\},
+\]
+define the formal sector response vector
+\[
+ \Resp(k)=\bigl(p_R(k),p_S(k),p_D(k)\bigr)\in(\RR\setminus\{0\})^3.
+\]
+For the fixed proposal-only representatives above, first quotient by common
+positive scale:
+\[
+ \Qray(k)=[\Resp(k)]_{\RR_{>0}}\in
+ \bigl((\RR\setminus\{0\})^3\bigr)/\RR_{>0}.
+\]
+This response ray retains the two independent relative response ratios.  It is
+invariant under a common positive rescaling of all three generators, but it
+is not invariant under independent sector rescalings.  Thus it is a legitimate
+local proposal-only classifier for the explicitly fixed representatives; a
+canonical global ray would additionally require a coherent relative-sector
+normalization law.
+
+For the normalization-insensitive layer, let
+\(G_+=(\RR_{>0})^3\) act componentwise and define
+\[
+ \Qsign(k)=[\Resp(k)]_{G_+}.
+\]
+Equivalently, \(k\sim_{\rm sign}k'\) when there are
+\(a_R,a_S,a_D>0\) such that
+\(p_s(k')=a_s p_s(k)\) for every sector.  This coarser quotient retains only
+the ordered sign pattern and discards all independent positive generator
+normalizations.
+
+\begin{theorem}[Two all-positive preimages]
+\label{thm:quotient}
+Let \(\mathcal C_{+++}\) be the positive projective cell and let
+\(\mathcal O_{+++}=G_+\cdot(1,1,1)\).  Then
+\[
+ \GammaInt=\Qray^{-1}(\mathcal C_{+++})
+           =\Qsign^{-1}(\mathcal O_{+++}).
+\]
+The ray identity is invariant under common positive scale; the sign-orbit
+identity is invariant under independent positive local generator rescaling.
+Both are covariant under admitted source-presentation transport and
+simultaneous sector relabeling.
+\end{theorem}
+
+\begin{proof}
+Membership in either \(\mathcal C_{+++}\) or \(\mathcal O_{+++}\) is
+equivalent to positivity of all three components of \(\Resp(k)\), which is
+precisely the definition of \(\GammaInt\).  Common and positive-diagonal
+rescaling preserve component signs.  Source-presentation covariance preserves
+each evaluation, while relabeling permutes the components and the respective
+all-positive subset.
+\end{proof}
+
+The proposed protocol law adds a source-covector preparation label and returns
+the formal score \(p_s(k)\), from which one of the tokens
+\(\mathsf{principal\_positive}\),
+\(\mathsf{principal\_zero}\), or
+\(\mathsf{principal\_negative}\) is derived according to its sign.  The ray layer
+discards one common positive scale while retaining ratios; the sign layer
+discards independent positive normalizations.  The rule is noncircular with
+respect to the target because it uses only source data and evaluation signs.
+It is nonetheless an unadopted new primitive: no existing P7 response theorem
+makes these formal signs or ratios empirical detector responses or physical
+signal outcomes.  In particular, the ray layer does not itself supply the
+missing relative-normalization law, and the sign layer does not retain the
+information that such a law would make meaningful.
+
+\section{Strict-margin independent-variation certificate}
+
+\begin{proposition}[Intrinsic finite strict margin]
+There are product-open neighborhoods \(N_h\) of \(h_0\) and \(N_s\) of each
+\(v_s\) such that
+\[
+ h'(v'_s)>0
+\]
+for every independently selected
+\((h',v'_R,v'_S,v'_D)\in N_h\times N_R\times N_S\times N_D\).
+Consequently the perturbed common intersection is nonempty and contains
+\(h'\).
+\end{proposition}
+
+\begin{proof}
+The evaluation pairing \(V^*\times V\to\RR\) is continuous.  Every base
+evaluation equals one, and the family is finite.  Intersecting the finitely
+many inverse images of \((0,\infty)\) gives the required product-open
+neighborhood.  The construction does not constrain the sector variations to
+be diagonal.
+\end{proof}
+
+For reproducibility only, take
+\(u=e_0\), \(z=e_1\), and \(h_0=e^0\).  If every coordinate component of
+\(h'-h_0\) and \(v'_s-v_s\) has magnitude at most
+\(\delta=1/10\), then
+\[
+ |h'(v'_s)-1|
+ \le \frac43\delta+\delta+4\delta^2
+ =\frac{41}{150},
+\]
+and hence \(h'(v'_s)\ge109/150>0\).  This numeric sup bound is a chart-level
+receipt for the intrinsic openness proof.  It is not a source norm, a target
+metric, or a global conditioning theorem.
+
+\section{Adversarial controls and exact limitations}
+
+The common-direction premise is nontrivial.  At one point let
+\[
+ w_1=e_0,\qquad w_2=e_1,\qquad w_3=-e_0-e_1.
+\]
+Each linear form \(k\mapsto k(w_i)\) is individually hyperbolic, but no
+covector can make all three positive: the first two inequalities imply the
+negative of the third.  Equivalently, \(w_1+w_2+w_3=0\) is a positive
+dependence certificate.  This negative control fails closed with empty
+intersection.
+
+Erasing the orientation token leaves the all-positive and all-negative
+components equally available.  Setting one sector vector to zero collapses
+the product.  Singular overlap maps, vanishing transition factors, or failed
+cocycles block globalization.  Requesting an unequipped P7 sector is outside
+the declared domain rather than evidence for universality.
+
+The cubic product is reducible and not strictly hyperbolic on all covectors:
+sector roots coincide when, for example, \(q(z)=0\).  The construction does
+not establish strong or symmetric hyperbolicity, multiplicity stability,
+energy estimates, finite condition numbers, one signal speed, or one physical
+characteristic boundary.  These are surviving P4--T02 burdens.
+
+\section{Source-extension classification and next role}
+
+Finite product, finite cone intersection, common-scale projectivization,
+positive-diagonal orbit formation, and pullback covariance are conservative
+mathematical operations once the inputs are supplied.  The sector principal
+forms, orientation, relative-normalization status, and
+protocol-to-principal-response law are a
+\emph{new ontology primitive candidate}, with status
+\emph{proposal-only} and material class \emph{source-extension data}.
+Current ontology does not derive the
+\texttt{source\_operational\_common\_hyperbolicity\_envelope\_quotient\_law}.
+No adoption is requested.  Current adoption is blocked while same-milestone
+research continuation remains open:
+\texttt{blocked\_adoption\_open\_continuation}.
+
+The next role is \texttt{smuggling-auditor@0.2.0}.  It must test whether the
+new covector request, response scores, sign tokens, orientation, positive
+transition factors, sector restriction, and operational vocabulary hide target
+or goal-property imports.  The audit is not executed in this task.
+
+\section{Distance-to-GR status}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.24\textwidth}>{\raggedright\arraybackslash}p{0.23\textwidth}>{\raggedright\arraybackslash}p{0.43\textwidth}}
+\toprule
+Burden & Tracked status preserved & Task-local consequence\\
+\midrule
+Source ontology primitives & accepted in scoped source-extension status & Adds unadopted envelope inputs; no canonical source law changes.\\
+Source equivalence EqSrc & draft object exists & No general equivalence theorem is added.\\
+RetainH & blocked by missing primitive & Unchanged.\\
+GenH & blocked by missing primitive & Unchanged.\\
+ObsLoc\(_{\rm lc}\) & constructive witness exists & Exact equipped-protocol scope is read only; no new localization semantics.\\
+Resp\(_{\rm lc}\) & accepted only as scoped source-extension data & The principal-response law is a new unadopted proposal.\\
+\(M_{\rm src}\) & accepted only in its scoped protected status & The smooth patch remains conditional input, not a target manifold.\\
+\(g_{\rm eff}\) & accepted only as the historical scoped source-extension record; bare burden unresolved & The envelope is not a metric or physical cone.\\
+Matter coupling & accepted only by the historical scoped source-side postulate & No target coupling or universal propagation is derived.\\
+Einstein equations & draft object exists with positive derivation blocked & No action, variation, correction control, or field equation is supplied.\\
+Finite-variation robustness & Refuter stress passed in the tracked ledger & Adds one local independent-sector open-neighborhood witness without changing the ledger.\\
+Benchmark promotion & blocked by missing primitive & No benchmark comparison or promotion.\\
+Gate Chair status & human-gated & No protected review is requested.\\
+Current route freeze or hard-fail status & prior shared-line route locally frozen & The materially distinct envelope candidate is constructed and awaits audit; no broader freeze is inferred.\\
+\bottomrule
+\end{longtable}
+
+The ledger is not modified.  The task contributes new mathematical payload but
+does not reduce the governed Distance-to-GR burden.
+
+\section{No-fog result}
+
+Exactly one decisive result is recorded:
+\begin{quote}
+\texttt{constructed\_candidate} --- the exact finite local product-cone
+envelope, fixed-representative response ray, normalization-invariant sign
+orbit, covariance map, strict-margin certificate, and adversarial controls
+exist at the declared proposal-only source-extension level.  The next
+required role is Smuggling Auditor.
+\end{quote}
+
+The constructed object is useful because it proves that a common time-covector
+domain can be defined robustly without equality of sector characteristic
+lines.  Its limitation is equally decisive: the new inputs and response
+law are not derived or adopted, the exact P7 protocols do not implement them,
+and distinct sector boundaries plus unresolved multiplicities remain.
+
+\begin{nonconclusion}
+The candidate is not a physical cone, universal matter propagation law,
+Lorentzian conformal structure, time orientation for physics, metric, scale,
+matter coupling, or Einstein equation.  The three equipped controls do not
+exhaust P7.  D7 adequacy is unevaluated, B2 is inactive, P4--T03 is locked,
+the Distance-to-GR ledger is unchanged, and no ontology adoption, Gate
+verdict, benchmark promotion, proof authority, publication, push, external
+action, global no-go, future-extension impossibility, or completed derivation
+follows.
+\end{nonconclusion}
+
+\end{document}

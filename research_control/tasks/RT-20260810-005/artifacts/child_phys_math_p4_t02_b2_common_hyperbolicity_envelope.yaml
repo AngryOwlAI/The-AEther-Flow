@@ -1,0 +1,357 @@
+schema_id: "child_phys_math_p4_t02_b2_common_hyperbolicity_envelope_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-001"
+task_id: "RT-20260810-005"
+agent_job_id: "AJ-RT-20260810-005-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+authority: "science_draft"
+status: "draft/control"
+artifact_purpose: "Child assessment for parent fusion; no independent AgentJob, adoption, validation, proof, or promotion authority."
+
+governance_boundary:
+  claim_boundary_id: "CB-V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION-001"
+  candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+  candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  plan_task_id: "P4-T02"
+  target_derivation_milestone: "effective_metric_g_eff"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  fixed_local_freeze: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  fixed_scoped_obstruction: "OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001"
+  freeze_preserved: true
+  frozen_route_replayed: false
+
+source_evidence:
+  - path: "research_control/tasks/RT-20260810-005/00_TASK.yaml"
+    sha256: "8ba37a267a1ff601949df3d1bf898059f706314a9fc9c5d3363061cdbf4cf453"
+  - path: "research_control/tasks/RT-20260810-005/DDR-20260810-005.md"
+    sha256: "2e08ee1c55d9b7fa554caa21a57168c7c27dcfa4229ebee59886f52df7bc02c9"
+  - path: "research_control/tasks/RT-20260810-005/jobs/AJ-RT-20260810-005-001.yaml"
+    sha256: "21b621136eb4fb107001f2603bb6a53eb93288a700aaea9c803e1afff305fb06"
+  - path: "research_control/tasks/RT-20260810-005/roles/candidate-constructor@0.2.0--RT-20260810-005.yaml"
+    sha256: "aa255364a592f3899befc8061ceb7554ad770c09afe959f16c17b05dfb3fe17b"
+  - path: "research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_packet_v1.yaml"
+    sha256: "ab2231c9796f150b8404ca4e7f092a0e486b023bf64390ed313a6bec30704289"
+  - path: "research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_post_line_lock_route_selection_v1.tex"
+    sha256: "c1c55815eb6c55574f2d7c7ed81a56e63fa1f73024685a506e8996789d2894bd"
+  - path: "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_line_selector_obstruction_v1.yaml"
+    sha256: "3c4d53632f274ce2fa49612f369363e4b3c7ebdffd7a451c102f791f0e0f6b1e"
+  - path: "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_typed_operational_bridge_v1.yaml"
+    sha256: "60a891df7a590c43917c4cb6e0f9ac25e61bcbf328711718d5ad947123d00a08"
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  - path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+
+honest_sector_scope:
+  scope_id: "SCOPE-V22-P4T02-B2-EQUIPPED-RSD-ONLY-001"
+  source_patch: "A declared smooth four-dimensional source patch U; it is source-side scaffolding and is not identified with physical spacetime."
+  finite_sector_set: "S_eq = {R,S,D}"
+  cardinality: 3
+  sectors:
+    - sector_id: "R"
+      protocol_role: "Rod_src"
+      exact_control: "Control_Rod"
+      carrier_addresses: ["b0", "b1", "b2"]
+      intervention: "i0"
+      horizon: 2
+      success_token: "endpoint_2"
+    - sector_id: "S"
+      protocol_role: "Signal_src"
+      exact_control: "Control_Signal"
+      carrier_addresses: ["b0", "b1", "b2"]
+      intervention: "i0"
+      horizon: 2
+      success_token: "arrived_2"
+    - sector_id: "D"
+      protocol_role: "Detector_src"
+      exact_control: "Control_Detector"
+      carrier_addresses: ["b0", "b1", "b2"]
+      intervention: "i0"
+      horizon: 2
+      success_token: "triggered_2"
+  strict_subfamily_of_p7: true
+  all_p7_sectors_equipped: false
+  full_p7_universality_claimed: false
+  scope_rule: "Every positive statement below is restricted to S_eq. A sector not carrying the exact typed P7-T03 equipment is outside the domain, not refuted."
+
+proposal_only_sector_principal_data:
+  definition_id: "DEF-V22-P4T02-B2-INDEPENDENT-LINEAR-SECTOR-FORMS-001"
+  material_status: "proposal-only source-extension data"
+  ontology_derivation_claimed: false
+  data_tuple: "D_env = (U,S_eq,(v_s)_{s in S_eq},(sigma_s)_{s in S_eq})"
+  fields:
+    v_s: "For each s independently, v_s is a declared C^1 source vector field on U, nowhere zero on the construction domain."
+    sigma_s: "A declared sign orientation for each sector; after replacing v_s by sigma_s v_s, the notation v_s denotes the oriented representative."
+  independence_rule: "The three v_s occupy separate data slots and vary in the product topology; neither equality, common projective line, nor diagonal-only variation is imposed."
+  normalization_rule: "The vector fields themselves, not only their projective lines, are fixed proposal data. This fixes the sector-wise scalar representatives needed by the response-ratio quotient."
+  principal_forms:
+    common_formula: "p_s(x,k) = k(v_s(x)), for x in U and k in T_x^*U"
+    real: true
+    homogeneous_degree: 1
+    density_weight: 0
+    reduced_when_admissible: true
+    source_scalar: true
+    nonzero_condition: "v_s(x) != 0, equivalently p_s(x,.) is not the zero polynomial."
+    provenance: "Each p_s is independently supplied proposal-only data; none is derived from the fixed P7 records or from a shared-line selector."
+  orientation_witness:
+    symbol: "h"
+    type: "a declared C^1 source covector field on the local construction domain"
+    condition: "p_s(x,h_x) = h_x(v_s(x)) > 0 for every s in S_eq"
+    status: "proposal-only common-hyperbolicity certificate, not a derived physical time orientation"
+    selector_claimed: false
+  explicit_split_witness:
+    witness_id: "WIT-V22-P4T02-B2-INDEPENDENT-SPLIT-LINEAR-FORMS-001"
+    presentation_status: "A source-presentation basis is used only to display one local algebraic witness; it is not a target atlas or adopted geometry."
+    tangent_basis: ["e0", "e1", "e2", "e3"]
+    cotangent_components: ["k0", "k1", "k2", "k3"]
+    parameter: "0 < |epsilon| < 1"
+    vectors:
+      R: "v_R = e0 + epsilon e1"
+      S: "v_S = e0"
+      D: "v_D = e0 - epsilon e1"
+    forms:
+      R: "p_R(k) = k0 + epsilon k1"
+      S: "p_S(k) = k0"
+      D: "p_D(k) = k0 - epsilon k1"
+    common_witness: "h = e^0, so p_R(h)=p_S(h)=p_D(h)=1"
+    projective_lines_pairwise_distinct: true
+    shared_line_lock_used: false
+
+product_and_common_cone:
+  product_definition_id: "DEF-V22-P4T02-B2-PRODUCT-POLYNOMIAL-001"
+  product_polynomial: "P_product(x,k) = product_{s in S_eq} p_s(x,k)"
+  product_degree: 3
+  product_density_weight: 0
+  characteristic_zero_set_identity: "{P_product=0} = union_{s in S_eq}{p_s=0}, with factor multiplicities retained."
+  sector_cones: "Gamma_s(x) = {k in T_x^*U : p_s(x,k) > 0}"
+  common_cone_definition_id: "DEF-V22-P4T02-B2-COMMON-ORIENTED-CONE-001"
+  common_cone: "Gamma_cap(x) = intersection_{s in S_eq} Gamma_s(x)"
+  elementary_product_lemma:
+    lemma_id: "LEM-V22-P4T02-B2-COMMON-HYPERBOLICITY-PRODUCT-001"
+    hypotheses:
+      - "S_eq is finite."
+      - "Every p_s is a nonzero real homogeneous polynomial hyperbolic with respect to the same h_x."
+      - "Signs are oriented so p_s(x,h_x)>0 for all s."
+    conclusion: "P_product is hyperbolic with respect to h_x, and the hyperbolicity-cone component of P_product containing h_x is Gamma_cap(x)."
+    proof_sketch: "For every q, the roots of t -> P_product(x,q+t h_x) are the multiset union of the real roots of the factors. A path from h_x can remain in the same nonzero component of the product exactly when no factor crosses zero, so the component containing h_x is the simultaneous positive component, namely the intersection of the Gamma_s(x)."
+    linear_specialization: "For p_s(k)=k(v_s), the unique factor root is -q(v_s)/h(v_s), hence is real. Gamma_s is the oriented open half-space k(v_s)>0."
+  split_witness_product: "P_product(k) = k0^3 - epsilon^2 k0 k1^2"
+  split_witness_common_cone: "Gamma_cap = {k : k0+epsilon k1>0, k0>0, k0-epsilon k1>0}"
+  split_witness_nonempty: true
+  layer_separation:
+    sector_characteristics: "The three hypersurfaces {p_s=0}; they are distinct in the split witness."
+    product_characteristic: "Their union, with multiplicity; it is not any one sector's characteristic boundary."
+    common_time_covector_domain: "The intersection Gamma_cap of chosen positive components."
+    response_ray_layer: "A quotient of the finite algebraic response vector defined below."
+
+positive_projective_response_ray:
+  definition_id: "DEF-V22-P4T02-B2-POSITIVE-RESPONSE-RAY-QUOTIENT-001"
+  ordered_response_space: "R^{S_eq}, with coordinates fixed by the exact ordered labels (R,S,D)"
+  response_vector:
+    map_name: "rho_x"
+    domain: "T_x^*U"
+    codomain: "R^{S_eq}"
+    formula: "rho_x(k) = (p_R(x,k),p_S(x,k),p_D(x,k))"
+    linear_rank_bound: "rank(rho_x) <= 3"
+    zero_locus: "Z_x = ker(rho_x) = annihilator(span{v_R(x),v_S(x),v_D(x)})"
+  oriented_positive_projective_space:
+    nonzero_response_domain: "R_*^{S_eq} = R^{S_eq} minus {0}"
+    acting_group: "R_{>0} acting by common scalar multiplication"
+    equivalence: "r ~_+ r' iff there exists one lambda>0 such that r'=lambda r in every sector coordinate"
+    equivalence_status: "reflexive, symmetric, and transitive"
+    quotient: "P^+(R^{S_eq}) = R_*^{S_eq}/~_+"
+    quotient_map: "pi_+(r) = [r]_+"
+    positive_cell: "C_{+++} = pi_+({r : r_R>0, r_S>0, r_D>0})"
+    orientation_note: "Negative common scaling is not quotiented; [r]_+ and [-r]_+ are opposite oriented response rays."
+  quotient_map:
+    map_name: "Q_x"
+    domain: "D_x = T_x^*U minus Z_x"
+    codomain: "P^+(R^{S_eq})"
+    formula: "Q_x(k) = pi_+(rho_x(k))"
+    zero_branch: "If rho_x(k)=0, Q_x is undefined and returns zero_response_ray_undefined; no artificial zero ray is added."
+    boundary_branch: "If some but not all responses vanish, Q_x is defined but lies outside C_{+++}; the covector is on at least one sector characteristic boundary."
+    common_cone_preimage: "Q_x^{-1}(C_{+++}) = Gamma_cap(x)"
+    preimage_proof: "Membership in C_{+++} is equivalent to the existence of a common lambda>0 with every component positive; common positive scaling preserves signs, so this is equivalent to p_s(x,k)>0 for all s."
+    positive_covector_ray_descent: "Because every p_s has the same degree one, rho_x(c k)=c rho_x(k) for c>0, hence Q_x(c k)=Q_x(k). Q_x therefore descends to D_x/R_{>0}."
+  well_definedness_verdict:
+    mathematically_well_defined: true
+    exact_hypotheses:
+      - "All sector forms are scalar-valued, density-weight zero, and globally defined on the declared patch, or have common positive transition units."
+      - "All sector forms have the same homogeneous degree, here degree one."
+      - "The response ordering (R,S,D) is fixed or transported by an explicit sector permutation."
+      - "Only one common positive scale is quotiented."
+      - "The zero response vector is excluded."
+    representation_dependence: "If p_s is replaced independently by a_s p_s with positive a_s, response ratios change unless a_R=a_S=a_D. Thus the quotient is not defined by characteristic hypersurfaces or projective sector lines alone. The fixed v_s representatives are essential proposal data."
+    unequal_degree_defect: "For degrees d_s that differ, rho_s(c k)=c^{d_s}rho_s(k) is not common scaling, so ordinary positive projectivization does not descend. A separately declared weighted quotient or common-degree normalization would be required."
+    density_or_line_bundle_defect: "Sector-dependent density weights or local line-bundle units prevent a single fixed projective response target unless compatible common positive transition data are supplied."
+    rejected_componentwise_quotient: "Quotienting by all independent positive diagonal rescalings would identify the entire positive orthant to one class. That collapse preserves only a sign chamber and destroys the proposed relative-response content."
+  unavoidable_noninjectivity:
+    statement: "Since dim(T_x^*U)=4 and rho_x has at most three components, dim ker(rho_x)>=1. For every zeta in ker(rho_x), rho_x(k+zeta)=rho_x(k), whenever both covectors lie in the domain."
+    inverse_exists: false
+    quotient_status: "This is not a defect in the definition of a forward quotient, but it blocks reconstruction of a unique covector ray, conformal structure, or metric from Q_x."
+    cone_geometry_limit: "Gamma_cap has unobserved kernel directions and need not be sharp or determine a characteristic boundary."
+
+source_presentation_covariance:
+  proposition_id: "PROP-V22-P4T02-B2-SOURCE-COVARIANT-ENVELOPE-001"
+  map_data:
+    source_map: "A source-presentation diffeomorphism phi:U->U'"
+    tangent_map: "A_x=d phi_x:T_xU->T_{phi(x)}U'"
+    cotangent_transport: "A_x^{-*}=(A_x^{-1})^*:T_x^*U->T_{phi(x)}^*U'"
+    vector_transport: "v'_s(phi(x))=A_x v_s(x)"
+    form_identity: "p'_s(phi(x),A_x^{-*}k)=p_s(x,k)"
+    response_identity: "rho'_{phi(x)}(A_x^{-*}k)=rho_x(k)"
+    product_identity: "P'_product(phi(x),A_x^{-*}k)=P_product(x,k)"
+    cone_identity: "Gamma'_cap(phi(x))=A_x^{-*}(Gamma_cap(x))"
+    quotient_identity: "Q'_{phi(x)}(A_x^{-*}k)=Q_x(k)"
+  proof_sketch: "The pairing of a covector with a vector is invariant under contragredient transport. Products, strict inequalities, finite intersections, and the common-scalar quotient commute with that transport."
+  target_geometry_used: false
+  sector_relabeling: "An explicitly declared equipment isomorphism pi:S_eq->S_eq acts by the corresponding coordinate permutation on rho and induces the same permutation on P^+(R^{S_eq}); undeclared relabeling is not allowed."
+
+transition_inverse_cocycle_obligations:
+  obligation_id: "OBL-V22-P4T02-B2-RESPONSE-RAY-GLUING-001"
+  tensorial_candidate_case:
+    transition: "Because each v_s is one geometric vector field and p_s=k(v_s) is a scalar, chart components satisfy p_{s,j}(A_{ij}^{-*}k_i)=p_{s,i}(k_i). The response transition is the identity."
+    inverse: "T_ji=T_ij^{-1}=I."
+    cocycle: "T_ij T_jk=T_ik and T_ij T_jk T_ki=I."
+    status: "satisfied on the declared patch"
+  general_local_representative_audit:
+    local_rule: "Suppose p_{s,j}(A_{ij}^{-*}k_i)=a_{s,ij}(x)p_{s,i}(k_i), with nowhere-zero units a_{s,ij}."
+    positivity_requirement: "Every a_{s,ij} must be positive to preserve the chosen cone orientation."
+    projective_transition_requirement: "For a fixed ordinary positive-projective target, the units must be common across sectors: a_{s,ij}=a_ij for all s (apart from an explicitly transported sector permutation)."
+    inverse_requirement: "a_ji=a_ij^{-1}."
+    cocycle_requirement: "a_ij a_jk=a_ik on triple overlaps, equivalently a_ij a_jk a_ki=1."
+    failure_effect: "A sector-dependent unit changes response ratios; a missing inverse or failed cocycle makes the local Q_i disagree globally. The construction then fails closed as transition_defect or cocycle_defect."
+  candidate_realization: "The proposed global weight-zero scalar forms use a_ij=1, so all three obligations hold conditionally on those proposal data."
+
+strict_margin_robustness:
+  proposition_id: "PROP-V22-P4T02-B2-STRICT-MARGIN-OPEN-ROBUSTNESS-001"
+  compact_domain: "Fix compact K contained in U."
+  data_topology: "Use the product over s in S_eq of the compact-open C^1 topology on source vector-field sections, with sectors varied independently; evaluation against the fixed continuous h is continuous."
+  strict_margin: "m_K = min_{x in K, s in S_eq} h_x(v_s(x)) > 0"
+  explicit_open_neighborhood: "N_K = {(tilde v_s)_s : sup_{x in K}|h_x(tilde v_s(x)-v_s(x))| < m_K/2 for every s}"
+  coordinate_independence: "Each h_x(tilde v_s-v_s) is a source scalar. The definition uses no target norm, metric, tetrad, coframe, or desired cone."
+  conclusion: "For every independently perturbed tuple in N_K, h_x(tilde v_s(x))>m_K/2 for all x in K and all s. Hence h remains a common hyperbolicity direction and the perturbed Gamma_cap(x) is nonempty on K."
+  proof_sketch: "The scalar triangle inequality gives h(tilde v_s)>=h(v_s)-|h(tilde v_s-v_s)|>m_K/2. Finiteness of S_eq and compactness of K make one uniform margin available. N_K is open by continuity of evaluation in the compact-open topology."
+  independent_not_diagonal: true
+  limitations:
+    - "The certificate is local on compact K; it does not supply a uniform margin on noncompact U."
+    - "It protects nonemptiness for sufficiently small perturbations, not equality of characteristic boundaries or strict hyperbolicity of the product."
+    - "When the margin approaches zero, no open-neighborhood conclusion is retained."
+    - "The certificate does not select h from the fixed ontology or give h physical temporal meaning."
+
+empty_intersection_control:
+  lemma_id: "LEM-V22-P4T02-B2-GORDAN-COMMON-HALFSPACE-001"
+  pointwise_alternative: "Exactly one holds at x: (i) there exists k with k(v_s(x))>0 for all s; or (ii) there are coefficients alpha_s>=0, not all zero, with sum_s alpha_s v_s(x)=0."
+  proof_sketch: "This is the finite-dimensional strict Gordan alternative applied to the linear map rho_x. A positive dependence annihilates any proposed strict inequalities; separation of the finite cone generated by the v_s gives the converse."
+  explicit_empty_witness:
+    vectors:
+      R: "v_R=e0"
+      S: "v_S=-e0"
+      D: "v_D=e1"
+    positive_dependence: "v_R+v_S=0"
+    contradiction: "p_R(k)>0 and p_S(k)>0 would require k(e0)>0 and -k(e0)>0 simultaneously."
+  fail_closed_behavior: "At any x with an empty intersection, no Gamma_cap(x), positive response cell preimage, or common-hyperbolicity certificate is asserted; return empty_common_cone."
+  orientation_nonuniqueness: "Changing any sector sign changes Gamma_s and may create or destroy the intersection. The signs are explicit proposal data; the construction does not derive a unique physical orientation."
+
+multiplicity_and_degeneracy_controls:
+  control_id: "CTRL-V22-P4T02-B2-PRODUCT-DEGENERACY-001"
+  branches:
+    - condition: "v_s(x)=0 for some sector"
+      effect: "p_s is the zero polynomial and P_product is inadmissible as a hyperbolic principal polynomial."
+      disposition: "fail_closed_zero_factor"
+    - condition: "p_s and p_t are positive associates"
+      effect: "P_product has a repeated characteristic factor. The common half-space may remain nonempty, but the product is not reduced and repeated roots destroy strict hyperbolicity along that factor."
+      disposition: "retain_multiplicity_and_withhold_conditioning_claim"
+    - condition: "p_s and p_t are negative associates under the declared orientations"
+      effect: "Their positive half-spaces are opposite and Gamma_cap is empty."
+      disposition: "fail_closed_empty_common_cone"
+    - condition: "distinct sector factors meet"
+      effect: "P_product has multiple roots on characteristic intersections; product hyperbolicity alone does not imply strong or symmetric hyperbolicity."
+      disposition: "record_degeneracy_no_pde_wellposedness_inference"
+    - condition: "rank(rho_x)<3"
+      effect: "The response image is lower-dimensional and quotient fibers enlarge; relative responses do not separate covector directions."
+      disposition: "candidate_remains_defined_off_Z_x_but_reconstruction_withheld"
+    - condition: "the strict margin vanishes"
+      effect: "Arbitrarily small further variations may leave the common positive chamber."
+      disposition: "variation_fragility_fail_closed"
+  product_reduced_claimed: false
+  strict_hyperbolicity_claimed: false
+  strong_hyperbolicity_claimed: false
+  symmetric_hyperbolicity_claimed: false
+
+typed_operational_status:
+  bridge_anchor: "The response coordinates are indexed only by the exact equipped R, S, and D controls and retain their fixed intervention, horizon, token, readout, success, and failure contexts."
+  exact_existing_bridge: "B_s^0 is typed and total but constant, hence supplies no map from k or p_s(k) to a protocol response."
+  finite_extension_bridge: "B_{s,N}^{ext} is a proposal-only finite-preparation extension derived by deterministic rationalization; it does not identify principal-form values with readout tokens."
+  quotient_law_status: "Q_x is a mathematically explicit source-only, sector-labelled response-ray candidate. Calling its values empirical or physically operational would require the missing source law source_operational_common_hyperbolicity_envelope_quotient_law."
+  source_law_adopted: false
+  protocol_response_semantics_derived: false
+  physical_interpretation: "withheld"
+
+refuter_support_branches:
+  collapse:
+    status: "CONTROLLED_FAIL_CLOSED"
+    witness: "rho_x(k)=0 has no response ray; a zero factor makes the product inadmissible. Quotienting by independent positive sector scales would also collapse the entire positive orthant and is rejected."
+  nonuniqueness:
+    status: "PRESENT_AND_EXPLICITLY_LIMITED"
+    witness: "Sector sign orientations and scalar normalizations are proposal choices, while ker(rho_x) gives distinct covectors the same response. No unique h, inverse covector ray, or physical orientation is derived."
+  inverse_defect:
+    status: "FORWARD_QUOTIENT_ONLY"
+    witness: "dim ker(rho_x)>=1, so Q_x has no inverse even in the maximal-rank three-sector case. On overlaps, a sector-dependent transition unit also prevents a projective inverse/gluing rule."
+    consequence: "No P4-T03 reconstruction or g_eff inference is available."
+  cocycle_defect:
+    status: "CONDITIONALLY_ABSENT_FOR_DECLARED_GLOBAL_SCALARS"
+    witness: "The candidate has identity transitions. General local representatives must have one common positive unit satisfying inverse and triple-overlap cocycles; otherwise the quotient fails closed."
+  variation_fragility:
+    status: "LOCALLY_CONTROLLED_NOT_GLOBALLY_REMOVED"
+    witness: "A positive compact margin gives an explicit independent-product open neighborhood. The Gordan empty witness and zero-margin boundary show that unrestricted or large independent variations can destroy the intersection."
+
+mathematical_nonconclusions:
+  - "A nonempty Gamma_cap is common time-covector admissibility for the declared algebraic factors only; it is not a physical causal cone."
+  - "The product zero set is the union of sector-dependent characteristic hypersurfaces, not one equal boundary and not a universal propagation law or universal signal speed."
+  - "Q_x records oriented relative algebraic responses up to one common positive scale; it supplies neither empirical device semantics nor an invertible reconstruction."
+  - "The three equipped controls are a strict finite subfamily and do not exhaust P7 matter sectors."
+  - "No Lorentzian conformal class, target geometry, g_eff, physical scale, coupling, or Einstein equation is defined or derived."
+  - "No D7 or P2-T01 adequacy evaluation, B2 activation/viability/adoption/rejection, or P4-T03 unlock follows."
+  - "No source law or canonical ontology is adopted, and no Gate, benchmark, proof, publication, push, or external-review authority is created."
+  - "The result is not a global no-go and does not rule out future source extensions."
+
+no_fog_recommendation:
+  recommendation_id: "REC-V22-P4T02-B2-PHYS-MATH-COMMON-ENVELOPE-001"
+  permitted_result_type_selected: "constructed_candidate"
+  precise_obstruction_selected: false
+  candidate_status: "mathematically constructed conditional proposal-only source-extension candidate on S_eq"
+  decision_basis:
+    - "The independently supplied scalar degree-one forms make P_product hyperbolic wherever a common oriented h exists, with the common component exactly Gamma_cap."
+    - "The response-ray equivalence and map Q_x are well-defined off the zero-response locus, commute with source-presentation transport, and recover Gamma_cap as the preimage of the positive projective cell."
+    - "A compact strict margin supplies an explicit open neighborhood under independent sector perturbations."
+    - "Empty intersections, multiplicities, kernel nonuniqueness, normalization dependence, inverse failure, and cocycle requirements are exposed rather than suppressed."
+  exact_limit_of_positive_result: "This constructs a formal envelope and response-ray quotient candidate only. It does not demonstrate that the quotient is physically operational, universally matter-coupled, adequate, adopted, or capable of determining geometry."
+  proposal_only_missing_primitive: "source_operational_common_hyperbolicity_envelope_quotient_law"
+  next_packet_type: "smuggling_audit"
+  next_role_family: "smuggling-auditor@0.2.0"
+  next_role_scope: "Audit fixed representatives, sign choices, the declared h, protocol semantics, and any attempted physical-cone interpretation for hidden target or undeclared source structure."
+  b2_activity_after_recommendation: "inactive"
+  d7_status_after_recommendation: "not_evaluated"
+  p4_t03_status_after_recommendation: "locked"
+  distance_to_gr_delta: "none"
+
+authority_limits:
+  child_fusion_support_only: true
+  candidate_adopted: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  physical_causality_claimed: false
+  universal_propagation_claimed: false
+  equal_characteristic_boundaries_claimed: false
+  effective_metric_constructed: false
+  adequacy_evaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  proof_authority: false
+  validation_authority: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
