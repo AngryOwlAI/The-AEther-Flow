@@ -1,0 +1,111 @@
+schema_id: "v22_p4_t02_b2_common_hyperbolicity_envelope_packet_v1"
+status: "draft/control"
+authority: "science_draft"
+packet_status: "selected_not_executed"
+source_task_id: "RT-20260810-002"
+source_job_id: "AJ-RT-20260810-002-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+adoption_status: "blocked_adoption_open_continuation"
+selected_next_packet_type: "source_extension_candidate"
+selected_next_role_family: "candidate-constructor@0.2.0"
+supporting_perspective: "refuter@0.2.0"
+strategy_id: "construct_v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_or_obstruction_v1"
+work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Construct or precisely obstruct a source-covariant common hyperbolicity envelope from independently supplied proposal-only sector principal data, then determine whether a noncircular source-operational quotient can justify that envelope as a generalized causal structure."
+objective: "Build the product-principal and common-hyperbolicity-cone-intersection envelope on an honestly delimited sector domain; prove covariance and strict-margin robustness; stress empty intersection, sector-boundary inequivalence, target import, and operational-quotient failure; return one constructed candidate or precise scoped obstruction."
+
+source_extension_classification:
+  category: "new_ontology_primitive_candidate"
+  import_classification: "The product and cone-intersection operations are conservative mathematical constructions once sector principal polynomials are supplied. The independent sector principal data and any law interpreting their common envelope as physical are proposal-only new source primitives, not derivations from current ontology and not target-GR imports."
+  status_label: "proposal-only"
+  material_class: "source-extension data"
+  current_ontology_derivation_claimed: false
+  target_gr_import_detected: false
+  adoption_authorized: false
+
+formal_objects:
+  source_patch: "A declared smooth source patch U with no target metric, tetrad, coframe, or target atlas."
+  sector_domain: "A finite, explicitly enumerated equipped sector set S_eq unless a separate all-sector equipment theorem is supplied."
+  sector_principal_polynomials: "Nonzero real homogeneous reduced source-covariant polynomials p_s(x,k), each with declared degree, density weight, regularity, and provenance."
+  common_direction_domain: "Gamma_intersection(x) = intersection over s of Gamma_s(x), where Gamma_s is a consistently oriented hyperbolicity-cone component of p_s."
+  product_polynomial: "P_product(x,k) = product over s of p_s(x,k), tracked with factor multiplicities and density weight."
+  operational_quotient_target: "A source-only map or equivalence law explaining why Gamma_intersection constrains every declared sector operationally, rather than merely furnishing a mathematical envelope."
+
+maps:
+  - "sector principal data -> oriented sector hyperbolicity cones"
+  - "finite cone family -> intersection cone Gamma_intersection"
+  - "sector polynomial family -> product polynomial P_product"
+  - "candidate envelope plus source protocol data -> proposed operational quotient evidence"
+
+product_hyperbolicity_lemma:
+  lemma_id: "LEM-V22-P4T02-B2-COMMON-HYPERBOLICITY-PRODUCT-001"
+  claim_status: "draft/control"
+  hypotheses:
+    - "S is finite."
+    - "Every real homogeneous p_s is hyperbolic with respect to the same covector h."
+    - "Signs are oriented so p_s(h)>0 for every s."
+  conclusion: "P_product = product_s p_s is hyperbolic with respect to h, and the hyperbolicity-cone component of P_product containing h is the intersection of the corresponding sector components Gamma_s."
+  proof_sketch: "For every q, the roots of t -> P_product(q+t h) are the multiset union of the real roots of the sector factors. The connected positive component containing h is exactly the simultaneous positive component, hence the intersection."
+  specialized_witness: "For p_s(k)=k(v_s) with h(v_s)>0, the roots are -q(v_s)/h(v_s) and Gamma_intersection is the intersection of the oriented half-spaces k(v_s)>0."
+  covariance: "Under a source-presentation derivative A, vectors and covectors transform contragrediently, the polynomial family pulls back, and the product plus cone intersection transport naturally."
+  robustness: "For a finite sector family, strict positivity h(v_s)>0 is open under sufficiently small independent compact-open perturbations; a quantitative or topology-only strict-margin receipt must be supplied without importing a target norm."
+
+required_stress_branches:
+  empty_intersection: "Search for admissible independently varied sector polynomials whose oriented hyperbolicity cones have empty intersection."
+  multiplicity_and_degeneracy: "Track product multiplicities, reducibility, non-strict hyperbolicity, and conditioning changes."
+  sector_boundary_inequivalence: "Do not identify a nonempty common time-covector cone with equality of characteristic hypersurfaces or universal signal speeds."
+  operational_quotient: "Require a source-derived quotient or compatibility rule before the envelope receives physical causal meaning."
+  full_sector_scope: "Restrict all conclusions to S_eq unless every P7 sector receives a typed operator and protocol bridge."
+  hidden_target_import: "Reject any selection of h, orientation, factor, or quotient by target Lorentzian or benchmark agreement."
+  finite_variation: "Stress independent sector perturbations rather than diagonal-only variations."
+
+acceptance_conditions:
+  - "One exact sector domain and every p_s provenance are explicit."
+  - "Product hyperbolicity, covariance, and common-component identity are proved or precisely obstructed."
+  - "A nonempty intersection has a source-intrinsic strict-margin robustness receipt."
+  - "The operational quotient burden is either constructed from source data or named as the exact obstruction."
+  - "The result distinguishes common time orientation from universal propagation and a physical cone."
+  - "No shared-tau equality, target geometry, adequacy verdict, B2 activation, or P4-T03 execution is imported."
+
+stop_conditions:
+  - "The route reintroduces one shared sector line or restricts presentations to its stabilizer."
+  - "The common direction or quotient is chosen by desired GR-cone agreement."
+  - "A product polynomial is called every sector's physical characteristic polynomial without a source-derived coupling or quotient theorem."
+  - "An empty or variation-fragile intersection is suppressed."
+  - "Restricted equipped-sector evidence is generalized to all P7 matter sectors."
+  - "A mathematical envelope is presented as physical geometry, g_eff, or Gate B passage."
+
+result_contract:
+  permitted_result_types:
+    - "constructed_candidate"
+    - "precise_obstruction"
+  positive_next_role: "smuggling-auditor@0.2.0"
+  negative_next_role: "theoretical-continuation-selector@0.1.0 or refuter@0.2.0 as selected by the exact obstruction consequence"
+  no_fog_required: true
+  adequacy_reevaluation_authorized: false
+  b2_activation_authorized: false
+  p4_t03_authorized: false
+
+authority_limits:
+  packet_executed: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physical_cone_constructed: false
+  universal_matter_propagation_derived: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  gate_b_verdict_issued: false
+  global_no_go_claimed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

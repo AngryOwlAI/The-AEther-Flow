@@ -1,0 +1,404 @@
+schema_id: "parent_child_physics_child_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-POST-LINE-LOCK-SELECTOR-001"
+authority: "science_draft"
+status_labels:
+  - "draft/control"
+  - "proposal-only"
+task_id: "RT-20260810-002"
+job_id: "AJ-RT-20260810-002-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+claim_boundary_id: "CB-V22-P4-T02-B2-POST-LINE-LOCK-THEORETICAL-SELECTION-001"
+independent_agentjob_created: false
+subagent_used: false
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: >-
+  Select one materially distinct same-milestone P4-T02 packet after the
+  natural-line obstruction and local shared-tau freeze, without executing the
+  selected construction, evaluating D7 adequacy, activating B2, or importing
+  target geometry.
+adoption_status: "blocked_adoption_open_continuation"
+
+source_basis:
+  - object_id: "HANDOFF-0998"
+    path: "research_control/handoffs/handoff-0998.yaml"
+    sha256: "46bdd9daaecb8a8563c0c00b6c054e23a6ba009e2afe9961cdf42823716d2ab7"
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    inspected_scope: "P4-T02 plus V22-X02 V22-X04 S5 and Gate-lock rules"
+  - object_id: "TEX-V22-P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1"
+    path: "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_v1.tex"
+    sha256: "f1b8d1e851a56109e0976ff4cfde8ff2adce4e1376581547f048c55a6a0b3497"
+  - object_id: "OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001"
+    path: "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_line_selector_obstruction_v1.yaml"
+    sha256: "3c4d53632f274ce2fa49612f369363e4b3c7ebdffd7a451c102f791f0e0f6b1e"
+  - object_id: "TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1"
+    path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex"
+    sha256: "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169"
+
+fixed_negative_result:
+  obstruction_id: "OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001"
+  active_local_freeze: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  frozen_scope: >-
+    One shared tau, diagonal-only sector variation, chart-fixed line choices,
+    and equivalent undeclared line-stabilizer strategies under the current
+    finite P7 controls and bare smooth source patch.
+  nonfrozen_scope: >-
+    Materially distinct P4-T02 descriptors and conservative proposal-only
+    source extensions that do not require equality of sector leading lines.
+  exact_constraint: >-
+    The selector may compare and select only.  It may not instantiate sector
+    principal forms, execute the chosen construction, or infer a candidate
+    success from the generic lemma below.
+
+selected_mathematical_route:
+  route_id: "CONSTRUCT_COMMON_HYPERBOLICITY_ENVELOPE"
+  candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+  strategy_id: "construct_v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_or_obstruction_v1"
+  work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+  selected_next_packet_type: "source_extension_candidate"
+  selected_packet_subtype: "source_covariant_product_polynomial_common_hyperbolicity_cone_intersection_envelope"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  execution_authorized_in_this_job: false
+  requires_human_gate: false
+  material_distinction: >-
+    The route does not force Lambda_R=Lambda_S=Lambda_D or equal sector
+    characteristic hypersurfaces.  It retains independently obtained sector
+    principal forms and asks whether their already selected hyperbolicity
+    components have a nonempty, source-covariant intersection.
+
+formal_packet_specification:
+  source_patch: >-
+    A declared smooth four-dimensional proposal-only source patch U.  No
+    target atlas, metric, tetrad, coframe, connection, measure, or desired GR
+    cone is part of the packet input.
+  sector_domain: >-
+    A finite explicitly enumerated domain S.  Initially S may be only the
+    honestly equipped Rod Signal Detector subfamily; no full-P7-sector credit
+    is available without a separate all-sector operator and protocol theorem.
+  reduced_principal_forms:
+    definition: |-
+      For each s in S, the next packet must independently supply a nonzero
+      source-covariant real homogeneous reduced principal form
+        p_s : T^*U -> L_s,
+      of degree d_s>=1, where L_s is a declared oriented real coefficient or
+      density line.  It must record the reduced operator provenance, degree,
+      multiplicity, density weight, regularity domain, and every degeneracy
+      branch.  The selector does not supply any p_s.
+    independence_rule: >-
+      No p_s may be obtained by copying a common factor, common tangent line,
+      target cone, or benchmark answer into every sector.  Equal factors are
+      allowed only if independently derived and later audited.
+  oriented_hyperbolicity_data:
+    definition: |-
+      Each independently supplied p_s must be hyperbolic on its declared
+      regular branch and must carry a source-justified choice Gamma_s of one
+      oriented hyperbolicity-cone component.  Define the admissible tuple
+      domain
+        H_cap = { ((p_s,Gamma_s))_{s in S}
+                  | intersection_s Gamma_s is nonempty }.
+    orientation_guard: >-
+      A common h may certify membership in the intersection after the
+      independently oriented components are supplied.  Choosing h first by
+      target fit and orienting all factors around it is forbidden preload.
+  product_line: "L_product = tensor_product_{s in S} L_s"
+  product_degree: "d_product = sum_{s in S} d_s"
+  product_map: |-
+    Prod : product_s Poly_hom^{d_s}(T^*U;L_s)
+           -> Poly_hom^{d_product}(T^*U;L_product),
+    Prod((p_s)_s)=P_product=product_s p_s.
+  cone_intersection_map: |-
+    Cap : H_cap -> OpenCone(T^*U),
+    Cap(((p_s,Gamma_s))_s)=Gamma_cap=intersection_s Gamma_s.
+  envelope_map: |-
+    Env : H_cap ->
+          Poly_hom(T^*U;L_product) x OpenCone(T^*U),
+    Env(((p_s,Gamma_s))_s)=(P_product,Gamma_cap).
+  source_covariance: |-
+    For every allowed source diffeomorphism phi, require each principal form
+    and oriented cone to transport by the cotangent lift.  Tensor product and
+    set intersection then commute with transport:
+      phi_*P_product=product_s(phi_*p_s),
+      phi_*Gamma_cap=intersection_s(phi_*Gamma_s).
+    This is source-presentation covariance only, not physical covariance or
+    target-geometry recovery.
+
+product_hyperbolicity_lemma:
+  lemma_id: "LEM-V22-P4T02-B2-COMMON-HYPERBOLICITY-PRODUCT-001"
+  claim_status: "elementary_conditional_mathematical_payload"
+  pointwise_domain: "a finite-dimensional real vector space V, specialized to V=T_x^*U"
+  hypotheses:
+    - "S is finite."
+    - "Every p_s is a nonzero real homogeneous polynomial on V."
+    - "There exists h in V such that every p_s is hyperbolic with respect to h."
+    - "Signs are oriented consistently so p_s(h)>0 for every s."
+  statement: |-
+    P=product_{s in S}p_s is hyperbolic with respect to h.  If Gamma_s is the
+    hyperbolicity-cone component of p_s containing h, then the component of
+    {P!=0} containing h is
+      Gamma_h(P)=intersection_{s in S} Gamma_s.
+  proof_sketch: |-
+    For any q in V,
+      P(q+t h)=product_s p_s(q+t h).
+    Its multiset of roots is the union, with multiplicity, of the roots of the
+    factors, so every root is real and P(h)=product_s p_s(h)>0.  For the cone
+    identity use the standard root characterization
+      Gamma_h(p)={q | every root of t -> p(q-t h) is positive}.
+    The roots for P are again the union of the factor roots; all product roots
+    are positive exactly when all roots for every p_s are positive.  Therefore
+    Gamma_h(P)=intersection_s Gamma_h(p_s).
+  source_bundle_extension: >-
+    The lemma applies fiberwise.  A cone-field result additionally requires
+    regularity, compatible coefficient-line orientations, constant degree on
+    the branch, and source-covariant gluing across U.
+  what_the_lemma_does_not_prove:
+    - "It does not supply or derive any sector principal form."
+    - "It does not select an oriented component when sector data leave it ambiguous."
+    - "It does not imply strong or symmetric hyperbolicity of the full systems."
+    - "It does not imply equal characteristic sets or universal propagation."
+    - "It does not turn Gamma_h(P) into a physical causal cone."
+
+linear_factor_specialization:
+  specialization_id: "SPEC-V22-P4T02-B2-INDEPENDENT-LINEAR-FACTORS-001"
+  assumptions: |-
+    At x, independently supply nonzero proposal-only sector vectors
+    v_s in T_xU and let p_s(k)=k(v_s).  Suppose a covector h satisfies
+    h(v_s)>0 for every s.
+  derivation: |-
+    The polynomial t -> p_s(q-t h) has the one real root
+      t_s=q(v_s)/h(v_s).
+    Hence p_s is hyperbolic with respect to h,
+      Gamma_s={k in T_x^*U | k(v_s)>0},
+      P_product(k)=product_s k(v_s),
+      Gamma_cap=intersection_s {k | k(v_s)>0}.
+  epsilon_split_viability_witness: |-
+    Let v,w be independent, choose h with h(v)>0 and h(w)=0, and set
+      v_R=v+epsilon w, v_S=v, v_D=v-epsilon w.
+    For every epsilon, h(v_R)=h(v_S)=h(v_D)=h(v)>0.  Thus the prior
+    sector-split witness has a nonempty common hyperbolicity-cone intersection
+    even though its three characteristic hyperplanes are distinct for
+    epsilon!=0.  This proves that the envelope route is mathematically
+    distinct from line locking; it does not construct source provenance for
+    v,w, or h.
+  characteristic_boundary_accounting: |-
+    Char(P_product)=union_s {k | k(v_s)=0}.  Unless the v_s are positive
+    scalar multiples, these sector characteristic hyperplanes differ.
+    Gamma_cap therefore records common time-covector admissibility only.  It
+    neither identifies the sector boundaries nor establishes a universal
+    signal speed, one propagation law, or one physical cone.
+  empty_intersection_control: >-
+    If two admitted factors are k(v) and k(-v), no h is positive on both and
+    Gamma_cap is empty.  The next packet must fail closed on this branch.
+
+robustness_condition:
+  certificate_id: "CERT-V22-P4T02-B2-STRICT-COMMON-CONE-MARGIN-001"
+  general_condition: |-
+    On every declared compact K subset U, require an open conic subbundle H
+    with nonempty fibers such that the projective closure of H is contained in
+    every selected Gamma_s over K.  Require a neighborhood V of the entire
+    sector-polynomial tuple in the independently varied compact-open
+    coefficient topology such that every p'_s in V remains hyperbolic on the
+    same regular branch and H is contained in every transported Gamma'_s.
+    This strict common interior, not mere pointwise nonempty intersection, is
+    the robustness certificate.
+  sufficient_analytic_burden: >-
+    Uniform strict hyperbolicity or an appropriate uniform root-separation and
+    symmetrizer estimate may establish the required neighborhood.  Repeated
+    roots, degree changes, constraint-rank changes, and multiplicity collisions
+    must be tracked rather than hidden by the product.
+  linear_case: |-
+    For continuous h and v_s over compact K, if
+      delta_K=min_{x in K,s in S} h_x(v_s(x))>0,
+    then every independent perturbation satisfying
+      |h_x(v'_s(x)-v_s(x))|<delta_K/2
+    preserves h_x(v'_s(x))>delta_K/2 and hence preserves a common
+    hyperbolicity witness.  This uses only the canonical scalar pairing and a
+    declared source variation neighborhood, not a target metric norm.
+  failure_conditions:
+    - "Gamma_cap becomes empty for one admitted independent sector variation."
+    - "The common interior collapses to a boundary or loses strict margin."
+    - "A factor becomes nonhyperbolic, identically zero, or changes degree on the branch."
+    - "The argument varies all sectors diagonally or suppresses a split direction."
+    - "The witness h or cone orientation is selected by desired target behavior."
+
+exact_limitations:
+  - limitation_id: "LIM-BOUNDARY-INEQUIVALENCE"
+    statement: >-
+      A nonempty cone intersection does not make Char(p_s) equal.  The product
+      characteristic set is their union and generally retains birefringent or
+      multirefringent sector boundaries.
+  - limitation_id: "LIM-PRODUCT-NOT-SECTOR-OPERATOR"
+    statement: >-
+      P_product is an envelope polynomial.  Without a source-derived coupled
+      operator or quotient theorem it is not the principal polynomial of each
+      sector and not the determinant of one physical universal system.
+  - limitation_id: "LIM-WELL-POSEDNESS"
+    statement: >-
+      Polynomial hyperbolicity alone does not prove strong or symmetric
+      hyperbolicity, constraint propagation, energy estimates, or PDE
+      well-posedness for the reduced sector systems.
+  - limitation_id: "LIM-ORIENTATION-PRELOAD"
+    statement: >-
+      If sector data do not independently select oriented cone components,
+      inserting a common h or preferred component is a new unproved source
+      primitive and may replay the frozen goal-property preload in dual form.
+  - limitation_id: "LIM-OPERATIONAL-QUOTIENT"
+    statement: >-
+      A source-only operational quotient or compatibility law is still needed
+      to explain why Gamma_cap controls every declared protocol.  Formal token
+      agreement and the word envelope do not supply physical semantics.
+  - limitation_id: "LIM-SECTOR-SCOPE"
+    statement: >-
+      Evidence on the three equipped controls cannot be generalized to all P7
+      sectors without typed all-sector principal forms and protocols.
+  - limitation_id: "LIM-NO-PHYSICAL-CONE"
+    statement: >-
+      Gamma_cap is an algebraic common time-covector domain.  It is not a
+      physical causal cone, time orientation, Lorentzian conformal class,
+      scale, g_eff, or Gate B result.
+
+route_comparison:
+  comparison_result: "one constructive route selected"
+  routes:
+    - route_id: "REPLAY_SHARED_LINE_LOCK"
+      disposition: "excluded_by_local_freeze"
+      materially_distinct: false
+      basis: >-
+        Reusing one tau, constraining variations diagonally, or restricting
+        presentations to an undeclared stabilizer exactly replays
+        NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR.
+    - route_id: "ADD_COMMON_LINE_DISTRIBUTION_PRIMITIVE"
+      disposition: "not_selected_goal_property_preload_risk"
+      materially_distinct_as_currently_posed: false
+      basis: >-
+        A bare common line primitive directly states the missing shared-line
+        property.  A genuinely source-derived line mechanism remains open in
+        principle, but no such independent data are presently supplied and
+        selecting the primitive now would not satisfy the materially distinct
+        route requirement.
+    - route_id: "CONSTRUCT_COMMON_HYPERBOLICITY_ENVELOPE"
+      disposition: "selected_not_executed"
+      materially_distinct: true
+      basis: >-
+        Independently supplied sector factors may have different
+        characteristic boundaries while possessing a robust nonempty
+        intersection of oriented hyperbolicity cones.  The product lemma gives
+        a bounded constructive fail-or-retain test without equal-line preload.
+    - route_id: "GLOBAL_NO_GO_OR_HUMAN_GATE"
+      disposition: "not_selected_premature"
+      materially_distinct: false
+      basis: >-
+        The existing obstruction is scoped to the bare-input line selector,
+        and the envelope route is a non-promotional constructive option.  No
+        global impossibility theorem or protected adoption decision is needed
+        to define and refute that proposal-only packet.
+
+theoretical_decision_output:
+  selected_next_packet_type: "source_extension_candidate"
+  selected_packet_subtype: "source_covariant_product_polynomial_common_hyperbolicity_cone_intersection_envelope"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  decision_basis:
+    - >-
+      It is the only compared route that is both constructive and materially
+      distinct from the locally frozen shared-line strategy.
+    - >-
+      The product-hyperbolicity lemma supplies an exact bounded mathematical
+      target and the linear epsilon-split witness shows nonempty common
+      time-covector admissibility without equal characteristic boundaries.
+    - >-
+      The packet can fail decisively on empty intersection, nonhyperbolicity,
+      loss of strict margin, hidden orientation preload, or missing
+      source-operational quotient.
+    - >-
+      Proposal construction and refutation require no canonical-ontology or
+      Gate authority; adoption remains separately human-gated.
+  theoretical_method: >-
+    In one fresh Candidate Constructor ontology-law packet, independently
+    instantiate source-covariant reduced sector principal forms, form their
+    product and oriented cone intersection, prove covariance and the product
+    lemma on the exact domain, require a strict common-interior robustness
+    certificate under independent variations, and either construct a
+    source-operational quotient or return its precise obstruction.
+  source_extension_category: "new_ontology_primitive_candidate"
+  source_extension_import_classification: >-
+    Product and intersection are conservative mathematical operations once
+    independently sourced sector forms and orientations exist.  Those forms,
+    orientations, and any operational quotient are proposal-only
+    source-extension data; selecting any of them by target Lorentzian or
+    benchmark agreement is a forbidden target import.
+  preserves_claim_blocks: true
+  preserved_claim_blocks:
+    - "B2 remains inactive."
+    - "D7 and P2-T01 adequacy remain unevaluated."
+    - "P4-T03 remains locked."
+    - "No target geometry, physical cone, time orientation, scale, or g_eff is inferred."
+    - "No source law or ontology extension is adopted or rejected."
+    - "No global no-go or future-extension impossibility is claimed."
+    - "No coupling, Einstein equation, Gate, benchmark, publication, or completed derivation follows."
+  requires_human_gate: false
+  human_gate_reason: >-
+    A draft/control source-extension candidate may be constructed and refuted
+    without protected authority.  Any later canonical adoption remains
+    human-gated and is not selected here.
+  packet_selected: true
+  packet_executed: false
+  exactly_one_next_packet_and_role_selected: true
+
+new_mathematical_payload:
+  - payload_id: "LEM-V22-P4T02-B2-COMMON-HYPERBOLICITY-PRODUCT-001"
+    payload_type: "conditional_lemma"
+    novelty: "Product hyperbolicity and exact common-cone intersection for a finite independently supplied sector family."
+  - payload_id: "SPEC-V22-P4T02-B2-INDEPENDENT-LINEAR-FACTORS-001"
+    payload_type: "bounded_theoretical_calculation"
+    novelty: "The prior epsilon-split lines can share a time-covector domain while retaining unequal characteristic hyperplanes."
+  - payload_id: "CERT-V22-P4T02-B2-STRICT-COMMON-CONE-MARGIN-001"
+    payload_type: "proof_obligation"
+    novelty: "A strict common-interior certificate replaces diagonal-only robustness."
+
+distance_to_gr_status:
+  changed: false
+  packet_effect: "one materially distinct P4-T02 construction packet selected but not executed"
+  source_ontology_primitives: "blocked; proposed sector forms orientations and quotient are not adopted"
+  source_equivalence_eqsrc: "unchanged"
+  retain_h: "unchanged"
+  gen_h: "unchanged"
+  observer_localization_obs_lc: "blocked"
+  response_localization_resp_lc: "blocked; D7 not evaluated"
+  source_manifold_m_src: "proposal-only patch unchanged"
+  effective_metric_g_eff: "blocked; no physical cone signature scale or metric"
+  matter_coupling: "not started"
+  einstein_equations: "not started"
+  finite_variation_robustness: "new proof obligation selected, not satisfied"
+  benchmark_promotion: "human-gated and blocked"
+  gate_chair_status: "human-gated and blocked"
+  current_route_freeze: >-
+    NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR remains locally active; the selected
+    product-envelope route lies outside its exact frozen scope.
+
+authority_limits:
+  internal_review_only: true
+  selected_construction_executed: false
+  sector_principal_forms_constructed: false
+  common_envelope_constructed: false
+  operational_quotient_constructed: false
+  descriptor_instance_complete: false
+  d7_adequacy_reevaluated: false
+  b2_activated: false
+  b2_viability_decided: false
+  p4_t03_unlocked: false
+  target_geometry_used: false
+  physical_cone_claimed: false
+  common_physical_propagation_claimed: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  human_gate_invoked: false
+  physics_promotion_authorized: false

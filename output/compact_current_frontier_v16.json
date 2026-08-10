@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-0998.yaml",
+    "research_control/handoffs/handoff-1001.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "a6a9533312f338cefdc7f10d7a1a301aad994cd8",
+    "source_commit": "cdab63ae17afd842bb432e4d85cb4cad54630b9f",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "0d533833dec77b90a688d71706dd6266d922382d490267ec58914f5b008f1918"
+        "sha256": "a5c8f17c21613c28da599f3c8a0adf68cd54c38663c91bef5171c78923a91c66"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "44eee096a74cdaa879903dad5546d6ab5c3a293bb5a9ca07f8c191c2dcda9054"
+        "sha256": "0dafac3199e2ab205683f64c55ce8f1be8eb80376b49a1579032b96b4de807c2"
       },
       {
-        "path": "research_control/handoffs/handoff-0998.yaml",
-        "sha256": "46bdd9daaecb8a8563c0c00b6c054e23a6ba009e2afe9961cdf42823716d2ab7"
+        "path": "research_control/handoffs/handoff-1001.yaml",
+        "sha256": "5fcf334f67049e58c8761bec0c567ca9639663ae69fbe296fd08d34c56e2bfae"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "be0c8b95c4b3171711dae82d6f53be3ff5f1f31075e181402996a7a8b93f8a3d"
+        "sha256": "7a6d93797422ea3a1dd9b03a543b8896c927f9fa6fccebb86bb7f72b54743246"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "7a6d5c1ca02cfeb93fbf88dbd257bd7d80a3dd85bc47875e0501ce51c2ef5ebb",
+    "source_manifest_sha256": "53141585d2f6ae2596d07c37bfad97cfbe746e04a4397f234741ef5d0658094c",
     "source_path_count": "12",
-    "generation_time": "2026-08-10T06:44:58Z",
-    "task_count": "1253",
+    "generation_time": "2026-08-10T09:51:14Z",
+    "task_count": "1256",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260810-001",
-    "latest_handoff_id": "handoff-0998",
-    "current_status": "v22_p4_t02_b2_source_intrinsic_obstruction_shared_tau_locally_frozen_theoretical_selector_selected_checkpoint_pending",
+    "active_task_id": "RT-20260810-004",
+    "latest_handoff_id": "handoff-1001",
+    "current_status": "rt003_two_eof_checkpoint_recovery_pass_ready_for_fresh_checkpoint",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260810-001",
-    "latest_research_handoff_id": "handoff-0998",
-    "latest_research_next_action": "Run the single governed checkpoint for AJ-RT-20260810-001-001. After it commits, execute exactly one fresh theoretical-continuation-selector@0.1.0 packet to choose one materially distinct same-milestone P4-T02 route after the natural-line obstruction and local shared-tau freeze. Do not replay the frozen route, evaluate D7 adequacy, activate B2, execute P4-T03, edit canonical ontology, or take any protected or external action.",
+    "latest_research_task_id": "RT-20260810-004",
+    "latest_research_handoff_id": "handoff-1001",
+    "latest_research_next_action": "Run one fresh governed cumulative checkpoint for AJ-RT-20260810-004-001. Only after it commits may one fresh candidate-constructor@0.2.0 ontology-law-research-packet construct or precisely obstruct CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1. Do not replay RT003, treat common time admissibility as universal propagation, reevaluate D7, activate B2, execute P4-T03, edit canonical ontology, or take protected or external action.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "select_distinct_v22_p4_t02_b2_post_line_lock_obstruction_packet_v1",
-    "role_family": "theoretical-continuation-selector@0.1.0",
+    "route_id": "construct_v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_or_obstruction_v1",
+    "role_family": "candidate-constructor@0.2.0",
     "target_derivation_milestone": "effective_metric_g_eff",
-    "milestone_burden": "Choose one materially distinct same-milestone packet after the natural line-locking obstruction and local shared-tau freeze.",
+    "milestone_burden": "Construct or precisely obstruct the source-covariant common-hyperbolicity envelope and source-operational quotient without equal sector lines or target import.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -445,7 +445,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "obstruction_recorded",
+      "effect": "none_project_system_recovery",
       "changed": false,
       "milestone": "effective_metric_g_eff",
       "burden_id": "g_eff"
@@ -748,13 +748,41 @@
     }
   },
   "validation": {
-    "latest_required_status": "PASS_PRECHECKPOINT_STAGING_REQUIRED",
+    "latest_required_status": "PASS_PRECHECKPOINT_RECOVERY_READY",
     "pending_layers": [
+      {
+        "layer": "post_write",
+        "status": "PENDING",
+        "evidence": [
+          "Integrated control, documentation, signal, memory, and test validation remains before checkpoint."
+        ]
+      },
       {
         "layer": "post_checkpoint",
         "status": "PENDING",
         "evidence": [
-          "Exactly one governed AJ-RT-20260810-001-001 checkpoint remains."
+          "One fresh cumulative checkpoint remains; Candidate Constructor execution is blocked until it commits."
+        ]
+      },
+      {
+        "layer": "renderer",
+        "status": "PENDING",
+        "evidence": [
+          "Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized."
+        ]
+      },
+      {
+        "layer": "memory_bootstrap",
+        "status": "PENDING",
+        "evidence": [
+          "Tracked memory synchronization remains before checkpoint."
+        ]
+      },
+      {
+        "layer": "claim_language_linter",
+        "status": "PENDING",
+        "evidence": [
+          "Integrated research-control validation remains before checkpoint."
         ]
       }
     ]

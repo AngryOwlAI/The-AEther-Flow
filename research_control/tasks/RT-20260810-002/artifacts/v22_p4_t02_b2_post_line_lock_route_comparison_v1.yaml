@@ -1,0 +1,98 @@
+schema_id: "v22_p4_t02_b2_post_line_lock_route_comparison_v1"
+status: "draft/control"
+authority: "science_draft"
+task_id: "RT-20260810-002"
+job_id: "AJ-RT-20260810-002-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+claim_boundary_id: "CB-V22-P4-T02-B2-POST-LINE-LOCK-THEORETICAL-SELECTION-001"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Select one materially distinct same-milestone B2 packet after the natural-line obstruction and local shared-tau freeze, without evaluating adequacy or importing target geometry."
+
+fixed_evidence:
+  source_handoff_id: "handoff-0998"
+  source_handoff_sha256: "46bdd9daaecb8a8563c0c00b6c054e23a6ba009e2afe9961cdf42823716d2ab7"
+  source_obstruction_id: "OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001"
+  source_manuscript_sha256: "f1b8d1e851a56109e0976ff4cfde8ff2adce4e1376581547f048c55a6a0b3497"
+  active_local_freeze: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  frozen_scope: "shared-tau, diagonal-only variation, and equivalent undeclared-line-stabilizer routes under the current inputs"
+  nonfrozen_scope: "materially distinct B2 descriptors and conservative proposal-only source extensions"
+
+selection_rules:
+  - "Prefer a non-promotional constructive packet when one is mathematically available."
+  - "The packet must not require equality of independently varied sector leading lines."
+  - "The packet must remain inside P4-T02 and preserve the P4-T03 dependency lock."
+  - "The packet must separate a common time-covector domain from universal propagation and physical causal interpretation."
+  - "Any new sector principal data or operational quotient must be declared proposal-only source-extension data, not derived current ontology."
+
+routes:
+  - route_id: "REPLAY_SHARED_LINE_LOCK"
+    packet_type: "source_extension_candidate"
+    constructive: false
+    materially_distinct: false
+    requires_human_gate_now: false
+    disposition: "excluded_by_local_freeze"
+    basis: "It repeats the shared-tau or equivalent undeclared-line-stabilizer strategy already frozen by the exact GL(4,R) and independent-variation obstruction."
+  - route_id: "ADD_COMMON_LINE_DISTRIBUTION_PRIMITIVE"
+    packet_type: "source_extension_candidate"
+    constructive: true
+    materially_distinct: false
+    requires_human_gate_now: false
+    disposition: "not_selected_goal_property_preload_risk"
+    basis: "Making a common line primitive simply states the failed goal property as new data; proposal definition is possible, but this is not the materially distinct route required by handoff-0998."
+  - route_id: "CONSTRUCT_COMMON_HYPERBOLICITY_ENVELOPE"
+    packet_type: "source_extension_candidate"
+    constructive: true
+    materially_distinct: true
+    requires_human_gate_now: false
+    disposition: "selected"
+    basis: "For independently supplied proposal-only sector principal polynomials sharing a strict hyperbolicity direction, their product and the intersection of their oriented hyperbolicity cones are source-presentation covariant and do not require equal sector characteristic hypersurfaces. The next packet can construct this envelope and test whether a source-operational quotient justifies it physically."
+  - route_id: "PROVE_BROADER_B2_NO_GO"
+    packet_type: "distinct_scoped_no_go_question"
+    constructive: false
+    materially_distinct: true
+    requires_human_gate_now: false
+    disposition: "not_selected_constructive_route_available"
+    basis: "A broader no-go is premature because the common-envelope construction is a genuinely new mathematical route with a clear fail-or-retain test."
+  - route_id: "REQUEST_ONTOLOGY_ADOPTION_OR_GATE_REVIEW"
+    packet_type: "human_gated_ontology_change_required"
+    constructive: false
+    materially_distinct: false
+    requires_human_gate_now: true
+    disposition: "not_selected_premature"
+    basis: "The selected source-extension candidate can be defined, constructed, and refuted as draft/control without adopting it or requesting a protected verdict."
+
+selected_route:
+  route_id: "CONSTRUCT_COMMON_HYPERBOLICITY_ENVELOPE"
+  candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+  strategy_id: "construct_v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_or_obstruction_v1"
+  work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+  selected_next_packet_type: "source_extension_candidate"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  next_role_family: "candidate-constructor@0.2.0"
+  supporting_perspective: "refuter@0.2.0"
+  adoption_status: "blocked_adoption_open_continuation"
+  requires_human_gate: false
+  execution_authorized_in_this_task: false
+
+decision_consequence:
+  positive: "A constructed, covariant, robust envelope with a noncircular source-operational quotient may advance to a fresh Smuggling Auditor packet; it still does not activate B2 or prove universal propagation."
+  negative: "If the envelope is empty, variation-fragile, presentation-dependent, or lacks a noncircular physical quotient, preserve a precise scoped obstruction and candidate disposition without globalizing it."
+  unchanged: "D7 adequacy, B2 activation, P4-T03, physical geometry, g_eff, coupling, Einstein equations, Gate status, and Distance-to-GR remain unchanged."
+
+authority_limits:
+  scientific_status_changed: false
+  physical_status_changed: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  physical_cone_claimed: false
+  universal_propagation_claimed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

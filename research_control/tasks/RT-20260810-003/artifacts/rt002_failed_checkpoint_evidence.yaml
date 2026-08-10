@@ -1,0 +1,40 @@
+schema_id: "failed_checkpoint_evidence_v1"
+task_id: "RT-20260810-003"
+job_id: "AJ-RT-20260810-003-001"
+source_task_id: "RT-20260810-002"
+source_job_id: "AJ-RT-20260810-002-001"
+source_head: "cdab63ae17afd842bb432e4d85cb4cad54630b9f"
+failed_run_id: "RUN-CHECKPOINT-bae0489d53de8aed"
+failed_manifest_hash: "8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844"
+failed_plan_hash: "315ccb7bf316a48eec8a8b87508c891e5ebc4122f620f42a53d01456a49bcbb5"
+failed_checkpoint_receipt_local_path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-bae0489d53de8aed/receipt.json"
+failed_checkpoint_receipt_sha256: "4941f4e8d0f3d74e5489d69a5bd1391f515bc277b64a3001575341a1ad05acda"
+receipt_status: "FAIL"
+receipt_exit_code: 1
+failed_gate_id: "git_diff_check"
+failed_gate_exit_code: 2
+failed_gate_stdout_sha256: "bfaf278ce65b1456cf800332a6c3ef01c1727e81c14cb0b36c88b77aedfa7788"
+findings:
+  - path: "research_control/tasks/RT-20260810-002/artifacts/parent_conflict_review_p4_t02_b2_post_line_lock_selector.yaml"
+    line: 76
+    finding: "new blank line at EOF"
+  - path: "research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_post_line_lock_route_comparison_v1.yaml"
+    line: 99
+    finding: "new blank line at EOF"
+  - path: "research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_post_line_lock_selector_decision_v1.yaml"
+    line: 218
+    finding: "new blank line at EOF"
+checkpoint_effect:
+  commit_created: false
+  staged_paths_after_failure: 0
+  index_restored: true
+  source_transaction_preserved: true
+  consumed_checkpoint_may_be_replayed: false
+recovery_boundary:
+  exact_target_count: 3
+  permitted_change: "delete exactly one final newline from each named target"
+  required_dependent_updates: "rebind target hashes in RT-20260810-002 completion, handoff, program state, and generated derivatives"
+  scientific_payload_reexecution: false
+  candidate_construction: false
+  next_checkpoint_must_be_fresh: true
+notes: "The .local receipt is cache evidence only. This tracked record preserves the bounded failure facts without promoting .local state to authority."

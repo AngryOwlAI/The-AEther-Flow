@@ -1,0 +1,312 @@
+validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+final_repository_validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+job_id: "AJ-RT-20260810-004-001"
+completion_id: "AJC-AJ-RT-20260810-004-001"
+task_id: "RT-20260810-004"
+task_type: "project_system_rt003_two_eof_blank_lines_and_checkpoint_recovery"
+decision_id: "DDR-20260810-004"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260810-004"
+status: "completed"
+created_at: "2026-08-10T09:51:14Z"
+started_at: "2026-08-10T09:51:14Z"
+completed_at: "2026-08-10T09:51:14Z"
+objective: "Remove exactly the two checkpoint-named terminal blank lines, seal repair-boundary preservation, rebind dependent hashes, synchronize ordinary control state, and run one fresh cumulative checkpoint without changing or reexecuting science."
+completion_summary: "RT-20260810-004 deletes exactly one terminal newline from each of two checkpoint-named RT-20260810-003 control artifacts. The sealed receipt records zero drift across the other 74 dirty-manifest paths at the repair boundary, matches the failed checkpoint and gate hashes, and confirms that neither RT003 science nor the Candidate Constructor ran. Dependent provenance hashes are rebound; one fresh governed checkpoint remains."
+objective_result: "rt003_two_eof_checkpoint_recovery_pass_ready_for_fresh_checkpoint"
+
+implementation_plan_receipt:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T02"
+  recovery_for_plan_task_id: "P4-T02"
+  recovery_for_work_item_id: "P4-T02-B2-POST-LINE-LOCK-SELECTOR"
+  implementation_status: "two_eof_recovery_implemented_fresh_checkpoint_ready"
+  protected_rt003_status: "complete_preserved"
+  completed_v22_tasks_added: []
+  next_dependency_ready_work_item: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION-after-checkpoint"
+  next_work_item_executed: false
+
+transaction_status: "ready_for_fresh_governed_checkpoint"
+result_disposition: "repair_implemented_and_validated"
+work_item_status: "completed"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+recovery_for_plan_task_id: "P4-T02"
+next_work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+checkpoint_commit:
+  status: "PENDING"
+  commit: ""
+  job_id: "AJ-RT-20260810-004-001"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+consumed_checkpoint_replayed: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1174
+    relationship_count: 6023
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1"
+      returned_object_ids:
+        - "TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1"
+  canonical_inspections:
+    - object_id: "TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_post_line_lock_route_selection_v1.tex"
+      source_hash: "c1c55815eb6c55574f2d7c7ed81a56e63fa1f73024685a506e8996789d2894bd"
+  authority_note: "Obsidian, wiki notes, semantic extracts, generated derivatives, and .local are retrieval layers only and not authority."
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "two exact RT-20260810-003 terminal-newline deletions"
+      - "sealed 76-path repair-preservation receipt"
+      - "dependent provenance hash rebinding"
+      - "one fresh governed cumulative checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "each target differs from its sealed hash by exactly one deleted final newline"
+      - "all 74 non-target dirty-manifest paths match at the repair boundary"
+      - "all dependent hashes bind the repaired files"
+      - "all required working-tree gates pass"
+      - "one fresh governed cumulative checkpoint commits"
+      - "Candidate Constructor remains unexecuted until checkpoint success"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS_CHECKPOINT_RECOVERY"
+  source_handoff_id: "handoff-1000"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_recovery_active: true
+  atomic_checkpoint_required: true
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+
+recovery_result:
+  status: "PASS"
+  strategy_id: "repair_rt003_two_eof_blanks_and_checkpoint_v1"
+  source_task_id: "RT-20260810-003"
+  source_job_id: "AJ-RT-20260810-003-001"
+  source_handoff_id: "handoff-1000"
+  source_head: "cdab63ae17afd842bb432e4d85cb4cad54630b9f"
+  dirty_state_manifest_path: "research_control/tasks/RT-20260810-004/artifacts/rt003_failed_checkpoint_dirty_state_manifest.yaml"
+  dirty_state_manifest_sha256: "5dd7772603884bec19f80cfa90270c512db94e4afc96c4cd18a08828898462c0"
+  failed_checkpoint_evidence_path: "research_control/tasks/RT-20260810-004/artifacts/rt003_failed_checkpoint_evidence.yaml"
+  failed_checkpoint_evidence_sha256: "4ff32356fe5fe389adda6d166a60d964e2f766f1520144971a11c18959c8f807"
+  checkpoint_blocker_path: "research_control/tasks/RT-20260810-004/artifacts/rt003_checkpoint_whitespace_blocker.yaml"
+  checkpoint_blocker_sha256: "19f3dafb6a4cb86ac5b4d7daa15a084bdf6d7032dee1d5508a4a4cb372e67bb3"
+  failed_checkpoint_receipt_sha256: "2d82fdc56e66ce892698bb83ff3616b433302fa3268ab3d26e72af549c5f781b"
+  failed_gate_evidence_sha256: "79f4e23915a5a0dc519d3f1c1ea37d77080c67af4370170d42296b94901207ba"
+  recovery_validator_path: "research_control/tasks/RT-20260810-004/artifacts/validate_rt003_two_eof_checkpoint_recovery.py"
+  recovery_validator_sha256: "a4ba35d21d16376c101b1f5ea0278ad0cbf9547af072ad833e3c527455a00771"
+  recovery_receipt_path: "research_control/tasks/RT-20260810-004/artifacts/rt003_two_eof_checkpoint_recovery_receipt.json"
+  recovery_receipt_sha256: "e7aaf82881e0f1a741d4c46ddd52df30d6d3a417ca8cad44567712640d0dc7c5"
+  manifest_path_count: 76
+  target_path_count: 2
+  non_target_path_count: 74
+  non_target_hash_mismatch_count: 0
+  exact_terminal_newline_deletion_count: 2
+  target_hashes_after:
+    - path: "research_control/tasks/RT-20260810-003/DDR-20260810-003.md"
+      sha256: "48fef65027e7f28baf0ae96e92deba9c6e56164c10b9d8feac990eab3b297e5e"
+    - path: "research_control/tasks/RT-20260810-003/roles/process-integrity-auditor@0.1.0--RT-20260810-003.yaml"
+      sha256: "9433abc832c569e520821dc3b98c1b1c96d1e167bea7604f3b7f30a90ba75f90"
+  predecessor_completion_sha256_after_rebind: "1126433808a3973fa45e680e2d3baceaa38dbc70e4bf029201b1a452b070758e"
+  predecessor_handoff_sha256_after_rebind: "9bdb3129f42a14c731156b3a08ba1708d3a5ced0f1c9d40e05ed6d39da5c81d0"
+  rt003_science_payload_modified: false
+  rt003_science_reexecuted: false
+  candidate_construction_executed: false
+  consumed_checkpoint_replayed: false
+
+control_artifacts:
+  task:
+    path: "research_control/tasks/RT-20260810-004/00_TASK.yaml"
+    sha256: "d0ae69e53a434a521a6b9e6cbb69bc136309d87f0210e9c8efe53ae8eb840fb5"
+  decision:
+    path: "research_control/tasks/RT-20260810-004/DDR-20260810-004.md"
+    sha256: "fe29429dd2d37d6816629ed4c89ec0b3130c13a56a31ceeab39100c09dbd04c1"
+  agent_job:
+    path: "research_control/tasks/RT-20260810-004/jobs/AJ-RT-20260810-004-001.yaml"
+    sha256: "16075a9584431998224435e7e383150e1beefa81b1579e6529ed3bc531342ed3"
+  execution_role:
+    path: "research_control/tasks/RT-20260810-004/roles/process-integrity-auditor@0.1.0--RT-20260810-004.yaml"
+    sha256: "8586d8ae78c55af7d8dda376ef8bd2bf6f18208ee0749323fa4387b8eee7b395"
+
+artifacts:
+  - path: "research_control/tasks/RT-20260810-004/artifacts/rt003_failed_checkpoint_dirty_state_manifest.yaml"
+    sha256: "5dd7772603884bec19f80cfa90270c512db94e4afc96c4cd18a08828898462c0"
+  - path: "research_control/tasks/RT-20260810-004/artifacts/rt003_failed_checkpoint_evidence.yaml"
+    sha256: "4ff32356fe5fe389adda6d166a60d964e2f766f1520144971a11c18959c8f807"
+  - path: "research_control/tasks/RT-20260810-004/artifacts/rt003_checkpoint_whitespace_blocker.yaml"
+    sha256: "19f3dafb6a4cb86ac5b4d7daa15a084bdf6d7032dee1d5508a4a4cb372e67bb3"
+  - path: "research_control/tasks/RT-20260810-004/artifacts/validate_rt003_two_eof_checkpoint_recovery.py"
+    sha256: "a4ba35d21d16376c101b1f5ea0278ad0cbf9547af072ad833e3c527455a00771"
+  - path: "research_control/tasks/RT-20260810-004/artifacts/rt003_two_eof_checkpoint_recovery_receipt.json"
+    sha256: "e7aaf82881e0f1a741d4c46ddd52df30d6d3a417ca8cad44567712640d0dc7c5"
+
+output_paths:
+  - "research_control/tasks/RT-20260810-003/DDR-20260810-003.md"
+  - "research_control/tasks/RT-20260810-003/roles/process-integrity-auditor@0.1.0--RT-20260810-003.yaml"
+  - "research_control/tasks/RT-20260810-003/jobs/completions/AJC-AJ-RT-20260810-003-001.yaml"
+  - "research_control/handoffs/handoff-1000.yaml"
+  - "research_control/tasks/RT-20260810-004/**"
+  - "research_control/handoffs/handoff-1001.yaml"
+  - "research_control/handoffs/handoff-1001.md"
+  - "research_control/program_state.yaml"
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260810-004/artifacts/validate_rt003_two_eof_checkpoint_recovery.py --write-report --json"
+    status: "PASS"
+    summary: "two exact terminal-newline deletions; 74 non-target manifest hashes match at the repair boundary; failed receipt and gate hashes match"
+  - command: "git diff --check"
+    status: "PASS"
+    summary: "working-tree whitespace validation passes after the exact two-file repair"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+  task_local_error_count: 0
+  manifest_path_count: 76
+  target_path_count: 2
+  non_target_hash_mismatch_count: 0
+  checkpoint_invocation_count: 0
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "The failed checkpoint receipt, gate output, restored empty index, predecessor handoff, and 76-path manifest were bound before repair writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The sealed receipt proves two exact terminal-newline deletions and zero drift across 74 non-target paths at the repair boundary."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Integrated control, documentation, signal, memory, and test validation remains before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One fresh governed cumulative checkpoint is pending; Candidate Constructor execution remains blocked until it commits."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization remains to be run after final control records are present."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Integrated research-control validation remains to confirm no hard claim-language errors."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system EOF recovery validation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited RT003 route-selection status is preserved; this recovery contributes no physics movement."
+
+physics_progress_status:
+  status: "none_project_system_only"
+  new_mathematical_payload: false
+  scientific_status_changed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+documentation_impact:
+  required: true
+  impact_id: "DI-RT-20260810-004-001"
+  path: "research_control/tasks/RT-20260810-004/documentation_impact.yaml"
+  status: "pending_integrated_validation"
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+coherent_resolution_summary: "No external project-improvement signal was consumed. The exact failed checkpoint itself is the bounded project-system recovery source."
+notes: "This completion records precheckpoint recovery evidence. It does not claim the pending checkpoint succeeded and does not authorize the next physics packet before a fresh commit."

@@ -1,0 +1,75 @@
+schema_id: "parent_child_physics_conflict_review_v1"
+task_id: "RT-20260810-002"
+job_id: "AJ-RT-20260810-002-001"
+claim_boundary_id: "CB-V22-P4-T02-B2-POST-LINE-LOCK-THEORETICAL-SELECTION-001"
+status: "resolved"
+resolution_rounds: 1
+resolved_conflict_count: 2
+unresolved_conflicts: []
+
+child_inputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260810-002/artifacts/child_phys_math_p4_t02_b2_post_line_lock_selector.yaml"
+    sha256: "074018f25304f49d56c26d9944a750a6586954e0ff2402292768b3e8f42f72e8"
+    status: "completed"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260810-002/artifacts/child_phys_phil_p4_t02_b2_post_line_lock_selector.yaml"
+    sha256: "355277d12d7fe1125f9e100254999f5219d62ec53cd7aeb418fd890a625ef306"
+    status: "completed"
+
+shared_consensus:
+  - "The shared-tau, diagonal-only, and undeclared-line-stabilizer route remains locally frozen and may not be replayed."
+  - "A product-polynomial/common-hyperbolicity-cone-intersection envelope is materially distinct because it retains independently supplied sector principal forms and does not require equal characteristic hypersurfaces."
+  - "The product and intersection operations are definitional once sector polynomials and orientations exist; those inputs and any physical quotient remain proposal-only source-extension burdens."
+  - "A common time-covector domain is weaker than universal propagation, a physical cone, Lorentzian conformal structure, or effective metric."
+  - "Exactly one future source-extension Candidate Constructor packet should be selected; it is not executed in this selector."
+
+resolved_conflicts:
+  - conflict_id: "PCONF-RT-20260810-002-001"
+    topic: "canonical packet identity"
+    child_phys_math_position: "Uses route CONSTRUCT_COMMON_HYPERBOLICITY_ENVELOPE, candidate CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1, and work item P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION."
+    child_phys_phil_position: "Uses packet alias P4-T02-B2-INDEPENDENT-SECTOR-PRINCIPAL-ENVELOPE-CANDIDATE."
+    resolution: "Use CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1 as the canonical candidate and P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION as the canonical work item; retain the philosopher label only as a descriptive alias."
+    blocking_after_resolution: false
+  - conflict_id: "PCONF-RT-20260810-002-002"
+    topic: "meaning of a positive mathematical envelope"
+    child_phys_math_position: "Proves conditional product hyperbolicity and an exact common-cone intersection, with a strict common-interior robustness target."
+    child_phys_phil_position: "Warns that common orientation compatibility does not establish equal sector boundaries, universal propagation, empirical meaning, or a physical quotient."
+    resolution: "Retain both layers. A later positive candidate must prove the mathematical envelope and separately construct a source-operational quotient; absent the quotient, the result is formal compatibility data only."
+    blocking_after_resolution: false
+
+unique_contributions_preserved:
+  physicist_mathematician:
+    - "finite product hyperbolicity and common-component lemma"
+    - "epsilon-split linear-factor witness with nonempty common intersection"
+    - "strict common-interior robustness certificate and empty-intersection control"
+    - "coefficient-line, multiplicity, gluing, and orientation obligations"
+  physicist_philosopher:
+    - "six-layer separation of ontology, mathematical envelope, model compatibility, physical causality, empirical meaning, and control authority"
+    - "common time orientation is weaker than universal propagation"
+    - "operational quotient and all-sector scope remain decisive burdens"
+    - "a human gate cannot substitute for missing construction evidence"
+
+fusion_result:
+  selected_next_packet_type: "source_extension_candidate"
+  selected_candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+  selected_work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  route_label: "ontology-law-research-packet"
+  execution_in_this_job: false
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  unresolved_blocking_conflict_count: 0
+  claim_boundary_preserved: true
+
+authority_limits:
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  source_law_adopted: false
+  physical_cone_claimed: false
+  universal_propagation_claimed: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false

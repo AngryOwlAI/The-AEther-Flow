@@ -1,0 +1,299 @@
+validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+handoff_id: "handoff-1001"
+handoff_number: 1000
+handoff_kind: "rt003_two_eof_checkpoint_recovery_ready"
+task_id: "RT-20260810-004"
+decision_id: "DDR-20260810-004"
+job_id: "AJ-RT-20260810-004-001"
+completion_id: "AJC-AJ-RT-20260810-004-001"
+completion_path: "research_control/tasks/RT-20260810-004/jobs/completions/AJC-AJ-RT-20260810-004-001.yaml"
+completion_sha256: "369c77de11d1cd5244809b6e1255a712e6081944a9331a4e9a7da4ff9f5bb035"
+status: "ready_after_checkpoint"
+created_at: "2026-08-10T09:51:14Z"
+parent_handoff_id: "handoff-1000"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+recovery_for_plan_task_id: "P4-T02"
+recovery_for_work_item_id: "P4-T02-B2-POST-LINE-LOCK-SELECTOR"
+source_role_id: "process-integrity-auditor"
+source_role_version: "0.1.0"
+source_execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260810-004"
+summary: "RT-20260810-004 removes exactly one terminal newline from each of the two RT-20260810-003 control artifacts named by the failed staged git-diff gate. The sealed receipt records zero drift across the other 74 dirty-manifest paths at the repair boundary and matches the failed checkpoint and gate hashes. Dependent provenance hashes are rebound. RT003 science was not reexecuted, the consumed checkpoint was not replayed, and the selected Candidate Constructor packet remains unexecuted."
+next_action: "Run one fresh governed cumulative checkpoint for AJ-RT-20260810-004-001. Only after it commits may one fresh candidate-constructor@0.2.0 ontology-law-research-packet construct or precisely obstruct CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1. Do not replay RT003, treat common time admissibility as universal propagation, reevaluate D7, activate B2, execute P4-T03, edit canonical ontology, or take protected or external action."
+current_claim_boundary: "CB-V22-P4-T02-B2-TWO-EOF-CHECKPOINT-RECOVERY-001"
+loop_risk_route: "ontology-law-research-packet"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260810-004"
+  latest_research_handoff_id: "handoff-1001"
+  latest_research_next_action: "Run one fresh governed cumulative checkpoint for AJ-RT-20260810-004-001. Only after it commits may one fresh candidate-constructor@0.2.0 ontology-law-research-packet construct or precisely obstruct CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1. Do not replay RT003, treat common time admissibility as universal propagation, reevaluate D7, activate B2, execute P4-T03, edit canonical ontology, or take protected or external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+
+claim_boundary:
+  allowed_next_scope: "After the fresh cumulative checkpoint commits, one fresh bounded Candidate Constructor ontology-law packet may construct or precisely obstruct the exact selected common-hyperbolicity envelope and source-operational quotient."
+  completed_task: "RT-20260810-004"
+  completed_completion_path: "research_control/tasks/RT-20260810-004/jobs/completions/AJC-AJ-RT-20260810-004-001.yaml"
+  completed_completion_sha256: "369c77de11d1cd5244809b6e1255a712e6081944a9331a4e9a7da4ff9f5bb035"
+  source_task_id: "RT-20260810-003"
+  source_job_id: "AJ-RT-20260810-003-001"
+  source_handoff_id: "handoff-1000"
+  source_handoff_path: "research_control/handoffs/handoff-1000.yaml"
+  source_handoff_sha256: "9bdb3129f42a14c731156b3a08ba1708d3a5ced0f1c9d40e05ed6d39da5c81d0"
+  result_status: "PASS_RT003_TWO_EOF_CHECKPOINT_RECOVERY_READY_FOR_FRESH_CHECKPOINT"
+  dirty_state_manifest_path: "research_control/tasks/RT-20260810-004/artifacts/rt003_failed_checkpoint_dirty_state_manifest.yaml"
+  dirty_state_manifest_sha256: "5dd7772603884bec19f80cfa90270c512db94e4afc96c4cd18a08828898462c0"
+  failed_checkpoint_evidence_path: "research_control/tasks/RT-20260810-004/artifacts/rt003_failed_checkpoint_evidence.yaml"
+  failed_checkpoint_evidence_sha256: "4ff32356fe5fe389adda6d166a60d964e2f766f1520144971a11c18959c8f807"
+  checkpoint_blocker_path: "research_control/tasks/RT-20260810-004/artifacts/rt003_checkpoint_whitespace_blocker.yaml"
+  checkpoint_blocker_sha256: "19f3dafb6a4cb86ac5b4d7daa15a084bdf6d7032dee1d5508a4a4cb372e67bb3"
+  failed_checkpoint_receipt_sha256: "2d82fdc56e66ce892698bb83ff3616b433302fa3268ab3d26e72af549c5f781b"
+  failed_gate_evidence_sha256: "79f4e23915a5a0dc519d3f1c1ea37d77080c67af4370170d42296b94901207ba"
+  recovery_receipt_path: "research_control/tasks/RT-20260810-004/artifacts/rt003_two_eof_checkpoint_recovery_receipt.json"
+  recovery_receipt_sha256: "e7aaf82881e0f1a741d4c46ddd52df30d6d3a417ca8cad44567712640d0dc7c5"
+  manifest_path_count: 76
+  target_path_count: 2
+  non_target_path_count: 74
+  non_target_hash_mismatch_count: 0
+  exact_terminal_newline_deletion_count: 2
+  checkpoint_invocation_count_before_handoff: 0
+  checkpoint_committed_before_handoff: false
+  predecessor_completion_sha256_after_rebind: "1126433808a3973fa45e680e2d3baceaa38dbc70e4bf029201b1a452b070758e"
+  predecessor_handoff_sha256_after_rebind: "9bdb3129f42a14c731156b3a08ba1708d3a5ced0f1c9d40e05ed6d39da5c81d0"
+  rt003_science_payload_modified_by_recovery: false
+  rt003_reexecuted: false
+  candidate_constructor_executed: false
+  consumed_checkpoint_replayed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  ontology_adoption_authorized: false
+  source_law_adoption_authorized: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_performed: false
+  blocked_claims:
+    - "EOF normalization presented as scientific progress"
+    - "common time-covector admissibility presented as universal propagation or a physical cone"
+    - "Candidate Constructor presented as executed before checkpoint"
+    - "D7 adequacy B2 activation P4-T03 ontology source law physical geometry g_eff coupling Einstein Gate benchmark proof publication push external action global no-go or completed derivation"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  recovery_for_plan_task_id: "P4-T02"
+  recovery_for_work_item_id: "P4-T02-B2-POST-LINE-LOCK-SELECTOR"
+  next_work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+  title: "Repair two RT003 EOF blanks and recover checkpoint eligibility"
+  result_status: "RT003_TWO_EOF_CHECKPOINT_RECOVERY_PASS"
+  work_item_status: "completed"
+  protected_rt003_payload_complete: true
+  protected_rt003_payload_byte_preserved_except_two_terminal_newlines: true
+  exact_terminal_newline_repair_complete: true
+  candidate_constructor_dependency_ready_after_checkpoint: true
+  candidate_constructor_dependency_ready_now: false
+  candidate_constructor_executed: false
+  scientific_claims_changed_by_recovery: false
+  distance_to_gr_delta_changed_by_recovery: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "none_project_system_recovery"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The inherited RT003 route-selection status is preserved; this recovery contributes no physics movement."
+  downstream_unlocked:
+    - "one common-hyperbolicity-envelope Candidate Constructor packet only after the fresh checkpoint"
+  downstream_still_blocked:
+    - "Candidate Constructor execution until the fresh checkpoint commits"
+    - "derived sector principal data and source-operational quotient"
+    - "complete descriptor instance and D7 adequacy"
+    - "B2 activation or adoption"
+    - "P4-T03 conformal reconstruction"
+    - "physical scale and effective metric"
+    - "matter coupling and Einstein equations"
+    - "benchmark promotion and completed derivation"
+
+required_next_packet:
+  task_type: "v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_construction"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+  objective: "Construct or precisely obstruct the source-covariant common-hyperbolicity envelope and source-operational quotient without equal sector lines or target import."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  executed: false
+
+selected_next_route:
+  route_id: "construct_v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_or_obstruction_v1"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+  work_kind: "construction_or_implementation"
+  task_class: "science"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  role_family: "candidate-constructor@0.2.0"
+  supporting_perspective: "refuter@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_extension_candidate"
+  selected_candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Construct or precisely obstruct the source-covariant common-hyperbolicity envelope and source-operational quotient without equal sector lines or target import."
+  expected_result_kind: "constructed_candidate_or_precise_obstruction"
+  strategy_id: "construct_v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_or_obstruction_v1"
+  transition_id: "CONSTRUCT_COMMON_HYPERBOLICITY_ENVELOPE_AFTER_POST_LINE_LOCK_SELECTOR"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  adequacy_reevaluation_authorized: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-1001"
+  ordinary_handoff_id: "handoff-1001"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 2
+  ready_science_plan_task_ids: []
+  ready_science_plan_task_refs: []
+  ready_project_system_plan_task_ids: []
+  selected_plan_task_id: "P4-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  selection_reason: "The exact checkpoint recovery preserves handoff-1000's materially distinct unexecuted common-hyperbolicity construction route."
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260810-004"
+  active_job_id: "AJ-RT-20260810-004-001"
+  current_status: "rt003_two_eof_checkpoint_recovery_pass_ready_for_fresh_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  project_system_recovery_completed: true
+  rt003_payload_complete: true
+  rt003_science_reexecuted: false
+  consumed_checkpoint_replayed: false
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  selected_next_supporting_perspective: "refuter@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "construct_v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_or_obstruction_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "The failed receipt, exact gate output, restored empty index, predecessor handoff, and 76-path manifest were bound before repair writes."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The tracked receipt proves two exact terminal-newline deletions and 74 non-target hash matches at the repair boundary."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Integrated control, documentation, signal, memory, and test validation remains before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One fresh cumulative checkpoint remains; Candidate Constructor execution is blocked until it commits."
+  renderer:
+    status: "PENDING"
+    evidence:
+      - "Tracked frontier, task-index, graph, registry, and wiki derivatives remain to be synchronized."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Tracked memory synchronization remains before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Integrated research-control validation remains before checkpoint."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system EOF recovery validation only"
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  publication_authorized: false
+  proof_authority: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_nonblank_signals"
+  rationale: "The bounded recovery emits no new project-improvement signal."
+
+handoff_authority_boundary:
+  this_handoff_authorizes:
+    - "one fresh governed cumulative checkpoint for AJ-RT-20260810-004-001"
+    - "after that checkpoint only, one fresh bounded common-hyperbolicity-envelope Candidate Constructor packet"
+  this_handoff_does_not_authorize:
+    - "Candidate Constructor execution before checkpoint"
+    - "RT-20260810-003 science reexecution or semantic payload mutation"
+    - "consumed checkpoint replay"
+    - "validator or test behavior change"
+    - "universal propagation physical cone D7 B2 P4-T03 ontology source law g_eff coupling Einstein Gate benchmark proof publication push external action global no-go or completed derivation"
+
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_id: "P4-T02"
+next_work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+next_worker_skill: "continue-research"
+next_role_family: "candidate-constructor@0.2.0"
+next_supporting_perspective: "refuter@0.2.0"
+next_route_label: "ontology-law-research-packet"
+next_strategy_id: "construct_v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_or_obstruction_v1"
+notes: "RT-20260810-004 is project-system control work only. The next physics packet remains unexecuted until the fresh cumulative checkpoint commits."

@@ -1,0 +1,44 @@
+schema_id: "failed_checkpoint_evidence_v1"
+task_id: "RT-20260810-004"
+job_id: "AJ-RT-20260810-004-001"
+source_task_id: "RT-20260810-003"
+source_job_id: "AJ-RT-20260810-003-001"
+source_handoff_id: "handoff-1000"
+source_head: "cdab63ae17afd842bb432e4d85cb4cad54630b9f"
+failed_run_id: "RUN-CHECKPOINT-50382a6d69ea35dc"
+failed_manifest_hash: "8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844"
+failed_plan_hash: "9c7241bcbbd75da23148300681c0c6ea8a5044e97c6e29947c258e7d2baead7c"
+failed_checkpoint_receipt_local_path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-50382a6d69ea35dc/receipt.json"
+failed_checkpoint_receipt_sha256: "2d82fdc56e66ce892698bb83ff3616b433302fa3268ab3d26e72af549c5f781b"
+receipt_schema_id: "validation_execution_receipt_v1"
+receipt_status: "FAIL"
+receipt_exit_code: 1
+receipt_gate_count: 7
+receipt_executed_pass_count: 2
+receipt_fail_count: 1
+receipt_skipped_count: 4
+failed_gate_id: "git_diff_check"
+failed_gate_exit_code: 2
+failed_gate_stdout_sha256: "79f4e23915a5a0dc519d3f1c1ea37d77080c67af4370170d42296b94901207ba"
+findings:
+  - path: "research_control/tasks/RT-20260810-003/DDR-20260810-003.md"
+    line: 87
+    finding: "new blank line at EOF"
+  - path: "research_control/tasks/RT-20260810-003/roles/process-integrity-auditor@0.1.0--RT-20260810-003.yaml"
+    line: 72
+    finding: "new blank line at EOF"
+checkpoint_effect:
+  commit_created: false
+  staged_paths_after_failure: 0
+  index_restored: true
+  source_transaction_preserved: true
+  consumed_checkpoint_may_be_replayed: false
+recovery_boundary:
+  exact_target_count: 2
+  permitted_change: "delete exactly one final newline from each named target"
+  required_dependent_updates: "rebind target hashes in RT-20260810-003 completion, handoff-1000, program state, V22 backlog, registries, and generated derivatives"
+  scientific_payload_reexecution: false
+  candidate_construction: false
+  next_checkpoint_must_be_fresh: true
+sealed_dirty_state_manifest_sha256: "5dd7772603884bec19f80cfa90270c512db94e4afc96c4cd18a08828898462c0"
+notes: "The .local receipt is cache evidence only. This tracked record preserves the bounded failure facts without promoting .local state to authority."

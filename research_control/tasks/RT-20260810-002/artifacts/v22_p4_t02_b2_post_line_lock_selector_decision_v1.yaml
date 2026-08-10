@@ -1,0 +1,217 @@
+schema_id: "v22_p4_t02_b2_post_line_lock_selector_decision_v1"
+status: "draft/control"
+authority: "science_draft"
+task_id: "RT-20260810-002"
+job_id: "AJ-RT-20260810-002-001"
+decision_id: "V22-P4-T02-B2-POST-LINE-LOCK-PACKET-SELECTION-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+claim_boundary_id: "CB-V22-P4-T02-B2-POST-LINE-LOCK-THEORETICAL-SELECTION-001"
+candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+candidate_status_before: "preregistered_fallback_inactive_shared_line_strategy_locally_frozen"
+candidate_status_after: "preregistered_fallback_inactive_common_hyperbolicity_envelope_packet_selected"
+
+fixed_input:
+  obstruction_id: "OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001"
+  obstruction_effect: "shared-tau, diagonal-only, and undeclared-line-stabilizer route locally frozen"
+  global_b2_freeze: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+
+selected_path:
+  path_id: "CONSTRUCT_COMMON_HYPERBOLICITY_ENVELOPE"
+  candidate_id: "CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1"
+  packet_type: "source_extension_candidate"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  next_role_family: "candidate-constructor@0.2.0"
+  supporting_perspective: "refuter@0.2.0"
+  next_plan_task_id: "P4-T02"
+  next_work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+  next_task_type: "v22_p4_t02_b2_common_hyperbolicity_envelope_construction_or_obstruction"
+  transition_id: "SELECT_COMMON_HYPERBOLICITY_ENVELOPE_AFTER_LINE_LOCK_FREEZE"
+  strategy_id: "construct_v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_or_obstruction_v1"
+  requires_human_gate: false
+  execution_authorized_in_this_task: false
+  b2_activation_effect: false
+  p4_t03_unlock_effect: false
+
+theoretical_decision_output:
+  selected_next_packet_type: "source_extension_candidate"
+  decision_basis: "The shared-line strategy is locally frozen, but a finite family of independently supplied hyperbolic sector principal polynomials can be combined covariantly through their product and the intersection of their oriented hyperbolicity cones. This is a materially distinct constructive route whose physical quotient and universality burdens remain falsifiable."
+  theoretical_method: "Separate line equality, common hyperbolicity direction, product characteristic envelope, sector boundary equality, and physical operational quotient; prove the finite product/common-component lemma; evaluate the explicit epsilon-split witness; compare all lawful routes; and select the lowest-authority constructive packet."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "Proposal-only source-extension construction and refutation do not require adoption; canonical ontology or source-law adoption remains separately human-gated."
+  decision_consequence: "After checkpoint, one Candidate Constructor packet must build or precisely obstruct the product-principal/common-cone envelope and its source-operational quotient. A positive formal envelope still requires audit and does not activate B2 or prove universal propagation."
+  new_payload_novelty: "First exact post-line-lock route comparison, product-hyperbolicity/common-component lemma, explicit split-sector common-cone witness, and executable common-envelope construction-or-obstruction packet specification."
+  source_extension_category: "new_ontology_primitive_candidate"
+  source_extension_import_classification: "The product and intersection operations are conservative definitions once independent sector polynomials exist; the sector principal data and any physical quotient are proposal-only new source primitives, not current-ontology derivations and not target-GR imports."
+  selected_next_role_family: "candidate-constructor@0.2.0"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT-20260810-002-001"
+    payload_type: "packet_selection"
+    summary: "Selects exactly one source-extension Candidate Constructor packet for the common hyperbolicity envelope."
+  - payload_id: "NMP-RT-20260810-002-002"
+    payload_type: "lemma"
+    summary: "For finitely many sector polynomials hyperbolic with respect to one direction, their product is hyperbolic and its containing cone is the intersection of sector cones."
+  - payload_id: "NMP-RT-20260810-002-003"
+    payload_type: "explicit_witness"
+    summary: "Three unequal epsilon-split linear sector polynomials possess a nonempty common oriented time-covector cone without a shared characteristic line."
+  - payload_id: "NMP-RT-20260810-002-004"
+    payload_type: "source_extension_classification"
+    summary: "Separates conservative envelope operations from proposal-only independent sector principal data and the missing physical quotient law."
+
+source_extension_decision:
+  status_label: "proposal-only"
+  material_class: "source-extension data"
+  category: "new_ontology_primitive_candidate"
+  current_ontology_derivation_claimed: false
+  conservative_definitional_layer: "finite product of supplied sector polynomials and intersection of supplied oriented hyperbolicity cones"
+  new_primitive_layer: "independently derived sector principal data plus a source-operational law making their envelope physically common"
+  forbidden_import_layer: "target Lorentzian cone, metric, tetrad, coframe, desired signal speeds, or benchmark agreement used to select direction, signs, factors, or quotient"
+  target_gr_import_detected_in_selector: false
+  adoption_authorized: false
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  non_trigger_classifications_rejected:
+    - "ordinary_gap"
+    - "workflow_inconvenience"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Construct or precisely obstruct a source-covariant common hyperbolicity envelope and determine whether a noncircular source-operational quotient can justify it as a generalized causal structure."
+  missing_source_law: "source_operational_common_hyperbolicity_envelope_quotient_law"
+  underdetermination_statement: "Current ontology does not derive independently sufficient all-sector principal data or a source-operational law that turns their common hyperbolicity envelope into universal physical causal structure."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    candidate_status: "proposal-only"
+    material_class: "source-extension data"
+    source_side_definition: "Given independently supplied source-covariant hyperbolic sector principal polynomials, construct their product and common oriented hyperbolicity-cone intersection, then seek a source-only operational quotient explaining why the envelope is common for every declared sector."
+    formal_objects:
+      - "sector principal polynomial family"
+      - "oriented sector hyperbolicity cones"
+      - "product principal polynomial"
+      - "common cone intersection"
+      - "source-operational quotient target"
+    domains:
+      - "declared source patch"
+      - "honestly enumerated equipped-sector family"
+      - "proposal-only independent sector principal data"
+    maps:
+      - "sector polynomials to cone components"
+      - "sector polynomial family to product polynomial"
+      - "cone family to common intersection"
+      - "envelope and protocol data to proposed operational quotient"
+    proof_obligations:
+      - "sector polynomial provenance and reduction"
+      - "common-direction existence or exact empty-intersection obstruction"
+      - "source-presentation covariance"
+      - "strict-margin finite-variation robustness"
+      - "physical quotient without target or goal-property import"
+      - "all-sector coverage or exact restriction"
+  candidate_law_comparison:
+    candidates:
+      - "shared-line replay"
+      - "common line primitive"
+      - "common hyperbolicity envelope"
+      - "broader scoped no-go"
+      - "human-gated adoption"
+    comparison_basis:
+      - "material distinction from active freeze"
+      - "constructive availability"
+      - "source-presentation covariance"
+      - "physical universality burden"
+      - "authority level"
+    selection_status: "common_hyperbolicity_envelope_selected"
+  candidate_law_refutation:
+    refuted_candidate: "shared-tau or equivalent line-equality replay"
+    refutation_basis: "The tracked natural-line obstruction and local freeze remain exact."
+    surviving_obligations:
+      - "construct or obstruct the common envelope"
+      - "derive or precisely fail the source-operational quotient"
+      - "preserve exact-GR recovery and no-target-import requirements"
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Draft/control source-extension construction and refutation precede any adoption decision."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "derive sector principal data from source structure rather than target geometry"
+      - "distinguish common time orientation from one universal physical characteristic boundary"
+      - "derive scale, g_eff, matter coupling, and Einstein dynamics only in later authorized stages"
+      - "preserve finite-variation robustness and benchmark gates"
+    distance_to_gr_links:
+      - "effective_metric_g_eff"
+      - "matter_coupling"
+      - "einstein_equations"
+      - "finite_variation_robustness"
+      - "benchmark_promotion"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "target_tetrad"
+      - "target_coframe"
+      - "desired_gr_cone"
+      - "benchmark_success"
+      - "candidate_reconstruction"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  atlas_glue_obligations:
+    profile_law: "Every p_s must be source-covariant and descend from the declared quotient data."
+    selector_law: "The common component must be selected by source-side orientation and operational data, not target agreement."
+    transition_law: "Local sector polynomials and common components must transform coherently on source overlaps."
+    inverse_checks: "Overlap pullbacks and sector quotient maps require declared inverses on their domains."
+    cocycle_checks: "Local polynomial-density transitions and cone orientations must satisfy triple-overlap coherence."
+    finite_variation_robustness: "A nonempty common component must survive independent admitted sector perturbations with a source-intrinsic strict-margin receipt."
+  failure_branches:
+    collapse: "A zero or nonhyperbolic factor destroys the product candidate."
+    nonuniqueness: "Multiple common components or sign orientations remain unselected by source data."
+    inverse_defect: "Local polynomial or quotient transitions fail to invert on overlaps."
+    cocycle_defect: "Sector density weights or cone orientations fail triple-overlap coherence."
+    variation_fragility: "The common intersection becomes empty or loses a strict interior under small independent variations."
+  known_risks:
+    - "A common time-covector cone can be overread as equal sector propagation."
+    - "The product of decoupled sector symbols can be overread as each sector's physical polynomial."
+    - "The source-operational quotient can conceal target or goal-property import."
+  failed_alternatives:
+    - "shared-tau replay"
+    - "diagonal-only variation"
+    - "automatic B2 activation"
+    - "premature global no-go"
+    - "premature human-gated adoption"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No adoption decision is requested in this selector."
+    exact_requested_ontology_edit: "none"
+
+authority_limits:
+  selector_only: true
+  selected_packet_executed: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physical_cone_constructed: false
+  universal_matter_propagation_derived: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  gate_b_verdict_issued: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false

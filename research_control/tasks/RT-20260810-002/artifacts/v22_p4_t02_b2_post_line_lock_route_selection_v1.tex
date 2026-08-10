@@ -1,0 +1,272 @@
+% authority: science_draft
+% object-id: TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1
+% task-id: RT-20260810-002
+% agentjob-id: AJ-RT-20260810-002-001
+\documentclass[11pt]{article}
+
+\usepackage[margin=0.86in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{definition}{Definition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newenvironment{nonconclusion}{\par\smallskip\noindent\textbf{Non-conclusion.}\ }{\par\smallskip}
+
+\newcommand{\Seq}{\mathcal S_{\mathrm{eq}}}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\GammaInt}{\Gamma_{\cap}}
+\newcommand{\Pprod}{P_{\Pi}}
+
+\title{V22 P4--T02 B2 Post-Line-Lock Route Selection v1\\
+\large A common-hyperbolicity-envelope packet without shared-line replay}
+\author{Theoretical Continuation Selector Packet RT-20260810-002}
+\date{2026-08-10}
+
+\begin{document}
+\sloppy
+\maketitle
+
+\begin{abstract}
+The preceding P4--T02 packet proves that fixed finite P7 records and a bare
+smooth source patch do not select a projective tangent line naturally under
+the full source-presentation group.  It also proves that equality of
+independently varied sector lines has empty interior.  This selector therefore
+excludes the shared-line, diagonal-only, and undeclared-line-stabilizer route.
+It compares four remaining dispositions and selects one materially distinct
+constructive packet: build or precisely obstruct a source-covariant product
+principal polynomial and the intersection of independently supplied sector
+hyperbolicity cones, then test whether a source-operational quotient justifies
+that mathematical envelope as a generalized causal structure.  A finite
+product lemma and an explicit three-sector split show why the construction is
+mathematically available without equality of sector characteristic
+hypersurfaces.  They do not establish universal propagation, a physical cone,
+a Lorentzian conformal class, an effective metric, B2 activation, D7 adequacy,
+or P4--T03 authority.
+\end{abstract}
+
+\section{Authority and fixed obstruction}
+
+The fixed result is
+\[
+ \texttt{OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001},
+\]
+and the local freeze is
+\[
+ \texttt{NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR}.
+\]
+The freeze covers a single shared vector field inserted into every sector,
+diagonal-only variations, or an equivalent restriction of source
+presentations to the stabilizer of an undeclared line.  It does not freeze all
+B2 descriptors or prove future source extensions impossible.
+
+This task is a \emph{selector}.  It chooses one next packet but does not
+execute that packet.  The source-extension budget, B1 termination, B2
+inactivity, descriptor incompleteness, D7 non-evaluation, P4--T03 lock, and all
+protected authority boundaries remain fixed.
+
+\section{Decision rule and route comparison}
+
+The selection obeys four rules.  First, a non-promotional constructive packet
+is preferred when one exists.  Second, a route must be materially distinct
+from equality of independently varied sector leading lines.  Third, it must
+stay at the \texttt{effective\_metric\_g\_eff} milestone and inside P4--T02.
+Fourth, it must distinguish mathematical common-time admissibility from
+universal matter propagation and physical causal interpretation.
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.21\textwidth}>{\raggedright\arraybackslash}p{0.18\textwidth}>{\raggedright\arraybackslash}p{0.49\textwidth}}
+\toprule
+Route & Disposition & Exact basis\\
+\midrule
+Replay shared line locking & Excluded & It is the locally frozen strategy under a new name.\\
+Add one common line primitive & Not selected & It preloads the failed equality property and is not materially distinct, even though proposal-only definition would be unprotected.\\
+Construct a common hyperbolicity envelope & Selected & Product and cone intersection are natural operations on independently supplied sector principal data and do not require equal characteristic hypersurfaces.\\
+Prove a broader B2 no-go & Not selected & A new constructive route is available, so a broader negative packet is premature.\\
+Request ontology adoption or Gate review & Not selected & The construction can first be defined and refuted as draft/control without protected authority.\\
+\bottomrule
+\end{longtable}
+
+The exact selected future packet is
+\[
+ \texttt{CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1},
+\]
+assigned, after this task's checkpoint, to
+\texttt{candidate-constructor@0.2.0} with embedded Refuter stress.
+
+\section{Mathematical target}
+
+Let \(U\) be a declared smooth source patch and let \(\Seq\) be a finite,
+honestly enumerated sector domain.  For each \(s\in\Seq\), suppose a later
+packet supplies a nonzero real homogeneous reduced principal polynomial
+\[
+ p_s(x,k),\qquad k\in T_x^*U,
+\]
+with declared degree, density weight, regularity, quotient provenance, and
+source-presentation covariance.  These polynomials are not derived by the
+present selector.  Under the current evidence they remain proposal-only
+source-extension data.
+
+\begin{definition}[Common hyperbolicity envelope]
+Suppose every \(p_s\) is hyperbolic with respect to one covector \(h\), with
+signs oriented so \(p_s(h)>0\).  Let \(\Gamma_s(h)\) be the hyperbolicity-cone
+component of \(p_s\) containing \(h\).  Define
+\[
+ \Pprod(k)=\prod_{s\in\Seq}p_s(k),
+ \qquad
+ \GammaInt(h)=\bigcap_{s\in\Seq}\Gamma_s(h).
+\]
+The pair \((\Pprod,\GammaInt)\) is the proposed mathematical envelope.
+\end{definition}
+
+\begin{lemma}[Finite product and common component]
+\label{lem:product}
+For a finite family of real homogeneous polynomials hyperbolic with respect to
+the same \(h\), \(\Pprod\) is hyperbolic with respect to \(h\).  Its
+hyperbolicity-cone component containing \(h\) is \(\GammaInt(h)\).
+\end{lemma}
+
+The task-local identifier for this lemma is
+\[
+ \texttt{LEM-V22-P4T02-B2-COMMON-HYPERBOLICITY-PRODUCT-001}.
+\]
+
+\begin{proof}
+For every covector \(q\), the roots of
+\(t\mapsto \Pprod(q+t h)\) are the multiset union of the roots of the factors
+\(t\mapsto p_s(q+t h)\).  All are real by the hypotheses, so the product is
+hyperbolic.  The connected positive component containing \(h\) consists
+exactly of covectors remaining in the corresponding positive component of
+every factor; hence it is the intersection of the \(\Gamma_s(h)\).
+\end{proof}
+
+The construction is source-presentation covariant once the \(p_s\) are.  A
+source diffeomorphism pulls back every sector polynomial, preserves products,
+and transports intersections of their cone components.  No target metric,
+coframe, tetrad, desired Lorentzian cone, or benchmark value is needed for
+this algebraic operation.
+
+\section{Explicit independent-sector witness}
+
+At one source point choose a presentation basis \(e_0,e_1,e_2,e_3\) only for
+calculation and set
+\[
+ v_R=e_0+\epsilon e_1,\qquad
+ v_S=e_0,\qquad
+ v_D=e_0-\epsilon e_1,
+ \qquad 0<|\epsilon|<1.
+\]
+The three independently split projective lines are unequal.  Their linear
+principal forms are
+\[
+ p_R(k)=k_0+\epsilon k_1,\quad
+ p_S(k)=k_0,\quad
+ p_D(k)=k_0-\epsilon k_1.
+\]
+With \(h=e^0\), every \(p_s(h)=1\), and
+\[
+ \Pprod(k)=k_0^3-\epsilon^2 k_0k_1^2.
+\]
+For any \(q\), the three roots of
+\(t\mapsto\Pprod(q+t h)\) are
+\[
+ -q(v_R),\qquad -q(v_S),\qquad -q(v_D),
+\]
+and are real.  The common component is the nonempty open convex intersection
+\[
+ \GammaInt=\left\{\,k : k(v_R)>0,\;k(v_S)>0,\;k(v_D)>0\,\right\}.
+\]
+Strict positivity at \(h\) persists under sufficiently small independent
+compact-open perturbations of the finite vector family.  Thus equality of
+sector lines is not required for a robust common time-covector domain.
+
+This witness is a selector-level feasibility proof only.  The individual
+sector vectors are proposal-only data; they are not derived from the fixed P7
+records.  The exact current protocol bridge remains restricted to the three
+equipped controls and is sample-forgetting unless a finite preparation-set
+extension is declared.
+
+\section{The decisive remaining distinction}
+
+The construction yields three different mathematical layers:
+\begin{enumerate}[leftmargin=*]
+  \item each sector has its own characteristic hypersurface
+        \(\{p_s=0\}\);
+  \item their product has the union of those hypersurfaces as its zero set;
+  \item their oriented cone intersection gives a common admissible
+        time-covector domain when nonempty.
+\end{enumerate}
+None of these facts alone says that every matter sector propagates on one
+physical characteristic boundary.  In the explicit witness, the three
+hyperplanes remain distinct.  Treating their intersection as a physical
+causal structure therefore needs a separate source-operational quotient or
+compatibility law.  Without that law, the envelope is mathematical control
+data, not universal matter propagation.
+
+This distinction is the exact reason to select a construction-or-obstruction
+packet rather than claim success now.  The next packet must stress:
+empty intersections, multiplicity and degeneracy, loss of strict margin,
+independent sector variation, all-sector coverage, operational typing, and
+hidden target fit.  It must return either one constructed proposal-only
+candidate or one precise scoped obstruction.
+
+\section{Source-extension classification}
+
+The product and intersection operations are conservative mathematical
+definitions once the sector polynomials are supplied.  The supply of
+independently motivated sector principal data and any law giving the envelope
+physical operational meaning are not derived by the current ontology.  They
+are classified as a \emph{new ontology primitive candidate},
+\emph{proposal-only}, and \emph{source-extension data}.  No adoption is
+requested.
+
+The missing source-side law for the selected packet is
+\[
+ \texttt{source\_operational\_common\_hyperbolicity\_envelope\_quotient\_law}.
+\]
+Current ontology does not derive that law.  Current adoption is blocked while
+same-milestone research continuation remains open:
+\texttt{blocked\_adoption\_open\_continuation}.
+
+\section{Distance-to-GR matrix}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.25\textwidth}>{\raggedright\arraybackslash}p{0.22\textwidth}>{\raggedright\arraybackslash}p{0.43\textwidth}}
+\toprule
+Burden & Status & Selector consequence\\
+\midrule
+Source ontology primitives & draft object exists & One proposal-only envelope packet is selected; no primitive is adopted.\\
+Source equivalence EqSrc & Refuter stress passed & Unchanged.\\
+RetainH & draft object exists & Unchanged.\\
+GenH & draft object exists & Unchanged.\\
+ObsLoc\(_{\rm lc}\) & blocked by missing primitive & Exact protocol typing remains restricted and constant without extension.\\
+Resp\(_{\rm lc}\) & blocked by missing primitive & D7 is not evaluated.\\
+\(M_{\rm src}\) & blocked by missing primitive & The smooth source patch remains proposal-only scaffolding.\\
+\(g_{\rm eff}\) & blocked by missing primitive & The envelope packet is selected but not executed; no physical cone, scale, or metric exists.\\
+Matter coupling & not started & A common time-covector domain would not establish universal matter propagation.\\
+Einstein equations & not started & No action, variation, or field equation is supplied.\\
+Finite-variation robustness & blocked by missing primitive & The next packet must test strict-margin robustness and empty intersections.\\
+Benchmark promotion & human-gated & No benchmark action is attempted.\\
+Gate Chair status & human-gated & No protected review is requested.\\
+Current route freeze or hard-fail status & frozen negative & The shared-line strategy remains locally frozen; the selected envelope branch is materially distinct and unexecuted.\\
+\bottomrule
+\end{longtable}
+
+\section{No-fog decision}
+
+Exactly one result is produced: select a future Candidate Constructor packet
+to build or precisely obstruct \(\Pprod\), \(\GammaInt\), and their proposed
+source-operational quotient on an honestly restricted domain.  The selector
+does not build that candidate.  It proves only that product hyperbolicity and
+a nonempty common time-covector intersection are mathematically available in
+a split-sector witness without equality of sector lines.
+
+\begin{nonconclusion}
+The common envelope is not yet a physical cone, conformal structure, metric,
+clock, rod, universal propagation law, coupling, or Einstein equation.  The
+sector principal data and operational quotient are not derived or adopted.
+D7 adequacy is unevaluated, B2 is inactive, P4--T03 is locked, Distance-to-GR
+is unchanged, and no Gate verdict, benchmark promotion, global no-go,
+publication, push, external review, or completed derivation follows.
+\end{nonconclusion}
+
+\end{document}

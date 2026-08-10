@@ -1,0 +1,48 @@
+schema_id: "rt003_checkpoint_whitespace_blocker_v1"
+status: "active_blocking"
+task_id: "RT-20260810-003"
+job_id: "AJ-RT-20260810-003-001"
+recovery_task_id: "RT-20260810-004"
+recovery_job_id: "AJ-RT-20260810-004-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+blocked_next_work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+created_at: "2026-08-10T09:51:14Z"
+failure_class: "checkpoint_whitespace_gate_failure"
+stop_condition: "consumed checkpoint failed and index was restored"
+failure_summary: "The only RT-20260810-003 checkpoint passed classification and claim-language gates but failed staged git diff --check on exactly two extra terminal newlines. It created no commit and restored an empty index."
+failure_evidence:
+  path: "research_control/tasks/RT-20260810-004/artifacts/rt003_failed_checkpoint_evidence.yaml"
+  sha256: "4ff32356fe5fe389adda6d166a60d964e2f766f1520144971a11c18959c8f807"
+  failed_checkpoint_receipt_sha256: "2d82fdc56e66ce892698bb83ff3616b433302fa3268ab3d26e72af549c5f781b"
+  failed_gate_stdout_sha256: "79f4e23915a5a0dc519d3f1c1ea37d77080c67af4370170d42296b94901207ba"
+impact:
+  rt003_project_system_payload_complete: true
+  checkpoint_commit_created: false
+  index_restored: true
+  selected_candidate_executed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+required_repair:
+  worker_skill: "improve-project-system"
+  role_family: "process-integrity-auditor@0.1.0"
+  objective: "Remove exactly one final newline from each checkpoint-named RT003 target, preserve every non-target manifest path at the repair boundary, rebind dependent hashes, and run one fresh cumulative checkpoint."
+  allowed_scope:
+    - "two exact terminal-newline deletions"
+    - "sealed repair-boundary preservation evidence"
+    - "dependent provenance hash rebinding"
+    - "standard control synchronization"
+    - "one fresh cumulative checkpoint"
+  forbidden_scope:
+    - "RT-20260810-003 semantic or scientific rewrite"
+    - "consumed checkpoint replay"
+    - "Candidate Constructor execution before checkpoint"
+    - "ontology source-law D7 B2 P4-T03 Gate benchmark proof publication push external action or completed derivation"
+repair_acceptance:
+  - "Both targets differ from their sealed pre-repair bytes by exactly one final newline."
+  - "All 74 non-target manifest paths match at the repair boundary."
+  - "Dependent provenance hashes bind the repaired bytes."
+  - "One fresh cumulative checkpoint commits before Candidate Constructor execution."
+authority_note: "This blocker is project-system checkpoint evidence only. It is not scientific evidence and creates no authority to replay RT003 or execute the selected future packet before a fresh commit."

@@ -1,0 +1,55 @@
+{
+  "authority_limits": {
+    "candidate_construction_authorized": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_status_changed": false
+  },
+  "checks": {
+    "candidate_construction_executed": false,
+    "consumed_checkpoint_replayed": false,
+    "failed_checkpoint_receipt_sha256": "2d82fdc56e66ce892698bb83ff3616b433302fa3268ab3d26e72af549c5f781b",
+    "failed_gate_stdout_sha256": "79f4e23915a5a0dc519d3f1c1ea37d77080c67af4370170d42296b94901207ba",
+    "failed_gate_target_count": 2,
+    "manifest_path": "research_control/tasks/RT-20260810-004/artifacts/rt003_failed_checkpoint_dirty_state_manifest.yaml",
+    "manifest_path_count": 76,
+    "manifest_sha256": "5dd7772603884bec19f80cfa90270c512db94e4afc96c4cd18a08828898462c0",
+    "non_target_hash_mismatch_count": 0,
+    "non_target_hash_mismatches": [],
+    "non_target_path_count": 74,
+    "rt003_science_reexecuted": false,
+    "semantic_science_payload_modified": false,
+    "target_path_count": 2,
+    "targets": {
+      "research_control/tasks/RT-20260810-003/DDR-20260810-003.md": {
+        "after_byte_count": 4156,
+        "after_sha256": "48fef65027e7f28baf0ae96e92deba9c6e56164c10b9d8feac990eab3b297e5e",
+        "before_byte_count": 4157,
+        "before_sha256": "3043707668b887a93c977b437add83aeb2fea5dbc435c51d9f13a652d1f28dc5",
+        "ends_with_exactly_one_newline": true,
+        "exact_one_final_newline_removed": true,
+        "structured_valid": true
+      },
+      "research_control/tasks/RT-20260810-003/roles/process-integrity-auditor@0.1.0--RT-20260810-003.yaml": {
+        "after_byte_count": 3940,
+        "after_sha256": "9433abc832c569e520821dc3b98c1b1c96d1e167bea7604f3b7f30a90ba75f90",
+        "before_byte_count": 3941,
+        "before_sha256": "6e8e143fd26310e3ce16356362509b418affa0900d3b62df01c1a175ed92f767",
+        "ends_with_exactly_one_newline": true,
+        "exact_one_final_newline_removed": true,
+        "structured_valid": true
+      }
+    }
+  },
+  "errors": [],
+  "job_id": "AJ-RT-20260810-004-001",
+  "schema_id": "rt003_two_eof_checkpoint_recovery_receipt_v1",
+  "source_handoff_id": "handoff-1000",
+  "source_head": "cdab63ae17afd842bb432e4d85cb4cad54630b9f",
+  "source_job_id": "AJ-RT-20260810-003-001",
+  "source_task_id": "RT-20260810-003",
+  "status": "PASS",
+  "strategy_id": "repair_rt003_two_eof_blanks_and_checkpoint_v1",
+  "task_id": "RT-20260810-004"
+}

@@ -1,0 +1,64 @@
+{
+  "authority_limits": {
+    "candidate_construction_authorized": false,
+    "distance_to_gr_changed": false,
+    "physics_promotion_authorized": false,
+    "proof_authority": false,
+    "scientific_status_changed": false
+  },
+  "checks": {
+    "candidate_construction_executed": false,
+    "consumed_checkpoint_replayed": false,
+    "failed_checkpoint_receipt_sha256": "4941f4e8d0f3d74e5489d69a5bd1391f515bc277b64a3001575341a1ad05acda",
+    "failed_gate_stdout_sha256": "bfaf278ce65b1456cf800332a6c3ef01c1727e81c14cb0b36c88b77aedfa7788",
+    "failed_gate_target_count": 3,
+    "manifest_path": "research_control/tasks/RT-20260810-003/artifacts/rt002_failed_checkpoint_dirty_state_manifest.yaml",
+    "manifest_path_count": 63,
+    "manifest_sha256": "8017e32ac7717d6c1135af39583f3f759880582de993698d361b6cabb879e835",
+    "non_target_hash_mismatch_count": 0,
+    "non_target_hash_mismatches": [],
+    "non_target_path_count": 60,
+    "rt002_science_reexecuted": false,
+    "semantic_science_payload_modified": false,
+    "target_path_count": 3,
+    "targets": {
+      "research_control/tasks/RT-20260810-002/artifacts/parent_conflict_review_p4_t02_b2_post_line_lock_selector.yaml": {
+        "after_byte_count": 4626,
+        "after_sha256": "88038610edc04aca4c6fa7ff491b33a32d737fd3f6ea2ae3bcc3b109437614ce",
+        "before_byte_count": 4627,
+        "before_sha256": "8e9f41ef825cd1df4dd831e36c2bfad4543e6b3b749ee17155282e389fc09598",
+        "ends_with_exactly_one_newline": true,
+        "exact_one_final_newline_removed": true,
+        "yaml_valid": true
+      },
+      "research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_post_line_lock_route_comparison_v1.yaml": {
+        "after_byte_count": 5813,
+        "after_sha256": "3e539e29f6b1299e8ee6256d4802c0a38346e0ab84b9f430f814ae82658eb494",
+        "before_byte_count": 5814,
+        "before_sha256": "085d96ae7b614bb099810f514a811b84db69a202b84e64e55dff24ad69ce25db",
+        "ends_with_exactly_one_newline": true,
+        "exact_one_final_newline_removed": true,
+        "yaml_valid": true
+      },
+      "research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_post_line_lock_selector_decision_v1.yaml": {
+        "after_byte_count": 12617,
+        "after_sha256": "ab1ec9137ecf12a4ea62eabe6f802c1ef40509effb6fe778be81b8d443435380",
+        "before_byte_count": 12618,
+        "before_sha256": "b8b1a5ae47ca4cf2e11c96e0d474b0a415bb07373e94529bb8687fccb6a6a06a",
+        "ends_with_exactly_one_newline": true,
+        "exact_one_final_newline_removed": true,
+        "yaml_valid": true
+      }
+    }
+  },
+  "errors": [],
+  "job_id": "AJ-RT-20260810-003-001",
+  "schema_id": "rt002_three_eof_checkpoint_recovery_receipt_v1",
+  "source_handoff_id": "handoff-0999",
+  "source_head": "cdab63ae17afd842bb432e4d85cb4cad54630b9f",
+  "source_job_id": "AJ-RT-20260810-002-001",
+  "source_task_id": "RT-20260810-002",
+  "status": "PASS",
+  "strategy_id": "repair_rt002_three_eof_blanks_and_checkpoint_v1",
+  "task_id": "RT-20260810-003"
+}

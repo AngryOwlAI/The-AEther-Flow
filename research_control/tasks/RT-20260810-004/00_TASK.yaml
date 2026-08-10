@@ -1,0 +1,81 @@
+task_id: "RT-20260810-004"
+task_type: "project_system_rt003_two_eof_blank_lines_and_checkpoint_recovery"
+title: "Repair two RT-20260810-003 EOF blanks and recover the cumulative checkpoint"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "effective_metric_g_eff"
+  candidate_family: "v22_p4_t02_b2_two_eof_checkpoint_recovery"
+  result_kind: "implemented_and_validated_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+status: "completed"
+created_at: "2026-08-10T09:51:14Z"
+updated_at: "2026-08-10T09:51:14Z"
+closed_at: "2026-08-10T09:51:14Z"
+parent_task_id: "RT-20260810-003"
+parent_handoff_id: "handoff-1000"
+supersedes_active_routing_task_id: "RT-20260810-003"
+current_decision_id: "DDR-20260810-004"
+current_job_id: "AJ-RT-20260810-004-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260810-004"
+requires_human_gate: false
+human_authorization_note: "The user-authorized complete-V22 goal, failed RT-20260810-003 checkpoint receipt, empty restored index, and exact two-finding git-diff output authorize one distinct project-system recovery AgentJob and one fresh checkpoint. They do not authorize replay of the consumed checkpoint or execution of the selected Candidate Constructor packet."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T02"
+  recovery_for_plan_task_id: "P4-T02"
+  recovery_for_work_item_id: "P4-T02-B2-POST-LINE-LOCK-SELECTOR"
+  next_work_item_id: "P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CONSTRUCTION"
+  next_work_item_execution_authorized: false
+objective: "Under the sealed 76-path dirty-state manifest, remove exactly one final newline from each of the two checkpoint-named RT-20260810-003 control artifacts, prove zero non-target drift across the other 74 paths at the repair boundary, rebind only dependent control hashes, synchronize ordinary derivatives, and invoke one fresh governed cumulative checkpoint before Candidate Constructor execution."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system EOF normalization and cumulative checkpoint recovery only; the effective-metric derivation burden does not advance."
+route_label: "repair_rt003_two_eof_blank_lines_and_checkpoint_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+claim_boundary_id: "CB-V22-P4-T02-B2-TWO-EOF-CHECKPOINT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Delete exactly one terminal newline from each of the two checkpoint-named RT-20260810-003 control artifacts; create bounded failure, manifest, recovery, task, completion, and handoff evidence; rebind exact dependent hashes; synchronize standard registries and generated memory derivatives; and invoke one fresh cumulative checkpoint."
+  immutable_predecessor_task: "RT-20260810-003"
+  immutable_predecessor_job: "AJ-RT-20260810-003-001"
+  immutable_predecessor_handoff: "handoff-1000"
+  dirty_state_manifest_sha256: "5dd7772603884bec19f80cfa90270c512db94e4afc96c4cd18a08828898462c0"
+  failed_checkpoint_receipt_sha256: "2d82fdc56e66ce892698bb83ff3616b433302fa3268ab3d26e72af549c5f781b"
+  failed_gate_evidence_sha256: "79f4e23915a5a0dc519d3f1c1ea37d77080c67af4370170d42296b94901207ba"
+  target_path_count: 2
+  non_target_path_count: 74
+  rt003_science_reexecuted: false
+  candidate_construction_executed: false
+  consumed_checkpoint_replayed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+documentation_impact_id: "DI-RT-20260810-004-001"
+completion_id: "AJC-AJ-RT-20260810-004-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260810-004/artifacts/rt003_failed_checkpoint_dirty_state_manifest.yaml"
+  - "research_control/tasks/RT-20260810-004/artifacts/rt003_failed_checkpoint_evidence.yaml"
+  - "research_control/tasks/RT-20260810-004/artifacts/rt003_checkpoint_whitespace_blocker.yaml"
+  - "research_control/tasks/RT-20260810-004/artifacts/validate_rt003_two_eof_checkpoint_recovery.py"
+  - "research_control/tasks/RT-20260810-004/artifacts/rt003_two_eof_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260810-004/jobs/completions/AJC-AJ-RT-20260810-004-001.yaml"
+  - "research_control/handoffs/handoff-1001.yaml"
+  - "research_control/handoffs/handoff-1001.md"
+closure_status: "rt003_two_eof_checkpoint_recovery_pass_ready_for_fresh_checkpoint"
+summary: "Exactly two checkpoint-named terminal blank lines are removed without semantic control change. The sealed receipt records 74 non-target hash matches at the repair boundary; only dependent provenance bindings and standard control derivatives are subsequently synchronized. RT-20260810-003 science is not reexecuted and the Candidate Constructor remains unexecuted."
+next_recommended_action: "Invoke one fresh governed cumulative checkpoint for AJ-RT-20260810-004-001. Only after it commits may one fresh candidate-constructor@0.2.0 ontology-law-research-packet construct or precisely obstruct CAND-V22-B2-COMMON-HYPERBOLICITY-ENVELOPE-V1."
+project_improvement_signals: []
+notes: "This packet creates no ontology, source law, scientific evidence, Distance-to-GR movement, physical interpretation, promotion, proof, publication, push, external action, or completed-derivation authority."
