@@ -1,0 +1,146 @@
+schema_id: "v22_p4_t02_b2_post_refuter_route_comparison_v1"
+task_id: "RT-20260810-009"
+job_id: "AJ-RT-20260810-009-001"
+status: "draft/control"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Choose one materially distinct source-side continuation after the repaired quotient fails presentation descent and unrestricted independent-variation robustness."
+fixed_boundary:
+  obstruction_id: "OB-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS-001"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  predecessor_rewritten: false
+  selected_packet_executed: false
+
+selector_level_results:
+  independent_positive_scale_factorization:
+    result_id: "THM-V22-P4T02-B2-INDEPENDENT-POSITIVE-SCALE-FACTORIZATION-001"
+    statement: "On the nonzero response space (R\\{0})^S, every pointwise map invariant under independent positive sector scaling factors uniquely through the ordered sign map."
+    proof: "Two nonzero response tuples have equal ordered signs exactly when their coordinatewise ratio is in (R_{>0})^S; invariant maps are therefore constant on, and only on, sign fibers."
+    consequence: "Route A is exact for pointwise independently scale-invariant uses, but it does not cover overlap transport, derivatives, nonlocal bridges, or a source-derived reduction of the scale group."
+  common_line_reduction_criterion:
+    result_id: "LEM-V22-P4T02-B2-COMMON-LINE-COCYCLE-REDUCTION-001"
+    setup: "Let sector response coordinates have positive transition cocycles g_s,ij."
+    statement: "A reduction to one common positive cocycle g_ij exists exactly when positive patch cochains a_s,i can satisfy a_s,i*g_s,ij=g_ij*a_s,j; equivalently, every pairwise ratio cocycle is a positive coboundary with coherent sector ratios."
+    proof: "Dividing the reduction equations for sectors s and t gives g_s,ij/g_t,ij=b_st,j/b_st,i with b_st,i=a_s,i/a_t,i. Conversely choose one reference sector and use coboundary representatives to define the a_s and common reference cocycle."
+    exact_limit: "Existence of some reduction does not supply a source-natural choice. Selecting the reduction from source structure is the future law burden."
+  unequal_transition_finite_witness:
+    common_cocycle:
+      g_01: 2
+      g_12: 3
+      g_02: 6
+    positive_cochains:
+      R: [1, 2, 4]
+      S: [1, 3, 9]
+      D: [2, 5, 10]
+    raw_sector_cocycles:
+      R: [4, 6, 24]
+      S: [6, 9, 54]
+      D: [5, 6, 30]
+    verified_relations:
+      - "Each raw row satisfies g_s,01*g_s,12=g_s,02."
+      - "All nine equations a_s,i*g_s,ij=g_ij*a_s,j hold."
+      - "The raw sector transitions are unequal, so a common-line reduction is broader than literal equality of fixed trivialization factors."
+    meaning: "A distinct common-line descent target is mathematically nonempty, but the displayed numbers are a selector witness and not source-derived physics."
+  descent_variation_independence:
+    result_id: "LEM-V22-P4T02-B2-DESCENT-VARIATION-INDEPENDENCE-001"
+    statement: "Common-line descent and admissible-variation generation are logically independent burdens."
+    descent_without_variation_control: "Identity response-line transitions coexist with RT008's transverse rank jump when all independent sector variations are allowed."
+    variation_control_without_descent: "Zero-only variation is stable while unequal positive line transitions still change Q_ray."
+    consequence: "The selected future packet must source both objects independently and cannot define either as the stabilizer of the desired response result."
+
+routes:
+  - route_id: "A_BROADER_SOURCE_SIDE_IRRELEVANCE_THEOREM"
+    packet_type: "source_side_irrelevance_theorem"
+    next_role_candidate: "ontology-formalizer@0.2.0"
+    constructive_payload_score: 3
+    material_distinctness_score: 4
+    milestone_relevance_score: 2
+    source_purity_score: 4
+    executable_contract_score: 3
+    penalty_score: 1
+    total_score: 15
+    strengths:
+      - "Lowest ontology cost."
+      - "Exact pointwise factorization theorem available."
+      - "Clarifies that independent positive normalization leaves only sign data."
+    burdens:
+      - "Must justify the exact class of bridges required to be independently scale invariant."
+      - "Does not cover transition, derivative, zero-locus, refinement, or nonlocal uses without new hypotheses."
+      - "Removes information but constructs no richer common response structure."
+    disposition: "not_selected"
+    rejection_basis: "RT008 already proves the common-positive special case. A materially distinct constructive formalization can directly test both named missing premises, so the selector's constructive discipline controls."
+
+  - route_id: "B_COMMON_CHARACTER_DESCENT_AND_INDEPENDENT_SOURCE_VARIATION_PRIMITIVE"
+    packet_type: "ontology_law_research_packet"
+    packet_subtype: "source_side_selector_primitive"
+    next_role_candidate: "ontology-formalizer@0.2.0"
+    constructive_payload_score: 4
+    material_distinctness_score: 4
+    milestone_relevance_score: 4
+    source_purity_score: 4
+    executable_contract_score: 4
+    penalty_score: 2
+    total_score: 18
+    strengths:
+      - "Directly tests the tracked missing law common_response_line_descent_and_admissible_variation_law."
+      - "Positive-character associated-line descent is a coherent source-side construction target."
+      - "An independently linearized source law gives a falsifiable nonvacuous variation target."
+      - "Construction and precise provenance or existence obstruction are both decisive results."
+    burdens:
+      - "Current ontology derives none of G_src, chi, L_chi, sector intertwiners, E_src, or A_src."
+      - "Goal-preload risk is high unless source roots are fixed before response evaluation."
+      - "Formal common units and a variation law still have no physical or empirical meaning."
+    replay_fail_conditions:
+      - "Any shared tau, common tangent line, fixed Q_ray, midpoint-kernel, diagonal-only, or response-preserving construction."
+      - "Any empty or zero-only variation class counted as robustness."
+      - "Any source root, coefficient, character, law, or admissible path selected by desired response, target geometry, or benchmark behavior."
+    disposition: "selected_not_executed"
+    selection_basis: "Selecting a fail-closed formalization-or-obstruction test is not accepting its primitives. It is the only route that directly decides both exact failed premises while remaining materially distinct from the frozen quotient."
+
+  - route_id: "C_ORIENTED_MATROID_COVECTOR_CIRCUIT_BRIDGE"
+    packet_type: "source_extension_candidate"
+    next_role_candidate: "candidate-constructor@0.2.0"
+    constructive_payload_score: 2
+    material_distinctness_score: 4
+    milestone_relevance_score: 3
+    source_purity_score: 2
+    executable_contract_score: 1
+    penalty_score: 2
+    total_score: 10
+    strengths:
+      - "Full sign-covector and minimal positive-circuit data are invariant under independent positive sector scaling."
+      - "A total feasible-or-obstructed output reduces goal preload."
+      - "Support-at-most-five and sector-refinement monotonicity give bounded finite obstruction evidence in four dimensions."
+      - "Lower ontology cost than Route B."
+    burdens:
+      - "Extends the RT005 strict Gordan and Q_sign/common-envelope core rather than deciding the named descent and variation-law failure."
+      - "Needs source-proven sector vectors, orientations, gluing, and refinement data not available for all declared sectors."
+      - "Finite combinatorial admissibility remains weaker than a physical quotient, universal propagation, or a quadratic cone."
+    disposition: "not_selected_retained_later_alternative"
+    rejection_basis: "Its mathematics is genuinely richer than one Gordan witness, but even complete success would leave the exact tracked missing-law burden untouched. It remains a later alternative only after a precise Route-B obstruction and fresh admission."
+
+conflict_resolution:
+  child_initial_selections:
+    physicist_mathematician: "B"
+    physicist_philosopher: "C"
+  resolution_round_count: 2
+  round_one_effect: "Each child accepted the other's novelty argument and temporarily swapped selections, sharpening the burden-directness versus ontology-economy conflict."
+  final_discriminator: "Prefer the next packet that can decisively construct or precisely obstruct the exact tracked missing source law, provided its higher ontology debt is itself fail-closed and no primitive is treated as accepted."
+  final_selection: "B_COMMON_CHARACTER_DESCENT_AND_INDEPENDENT_SOURCE_VARIATION_PRIMITIVE"
+  unresolved_blocking_conflicts: []
+  route_c_value_preserved: true
+
+selection:
+  selected_route_id: "B_COMMON_CHARACTER_DESCENT_AND_INDEPENDENT_SOURCE_VARIATION_PRIMITIVE"
+  packet_id: "PKT-V22-P4T02-B2-COMMON-CHARACTER-DESCENT-INDEPENDENT-VARIATION-FORMALIZATION-V1"
+  candidate_id: "CAND-V22-B2-COMMON-CHARACTER-DESCENT-INDEPENDENT-VARIATION-LAW-V1"
+  work_item_id: "P4-T02-B2-COMMON-CHARACTER-DESCENT-INDEPENDENT-VARIATION-LAW-FORMALIZATION"
+  selected_next_packet_type: "ontology_law_research_packet"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  selected_packet_executed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

@@ -1,0 +1,360 @@
+% object_id: TEX-V22-P4-T02-B2-POST-REFUTER-ROUTE-SELECTION-V1
+% authority: science_draft
+% status: draft/control
+% decisive_result: ontology_law_research_packet_selected_formalization_pending
+% task_id: RT-20260810-009
+% job_id: AJ-RT-20260810-009-001
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,longtable}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\newenvironment{boundary}{\par\smallskip\noindent\textbf{Claim boundary.}\ }{\par\smallskip}
+\newenvironment{nonconclusion}{\par\smallskip\noindent\textbf{Non-conclusion.}\ }{\par\smallskip}
+\newcommand{\RR}{\mathbb R}
+\newcommand{\Resp}{\operatorname{Resp}_{\mathrm{prin}}}
+\newcommand{\Qray}{Q_{\mathrm{ray}}}
+\newcommand{\Qsign}{Q_{\mathrm{sign}}}
+\newcommand{\sgnmap}{\operatorname{sgn}}
+
+\title{V22 P4--T02 B2 Post-Refuter Route Selection:\\
+Common-Character Descent and Independent Source Variation}
+\author{The Aether-Flow Research Project}
+\date{10 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft/control selector compares exactly three continuations after the
+repaired common-envelope quotient fails independent positive-line descent and
+unrestricted independent-sector robustness.  It proves that ordered signs are
+the maximal pointwise invariant under independent positive sector scaling,
+gives an exact cochain criterion for reducing unequal sector transition
+cocycles to one common positive cocycle, supplies a finite unequal-transition
+witness, and separates line descent from admissible-variation generation.
+After two independent child analyses and two explicit conflict rounds, the
+selector chooses one future, unexecuted ontology-law packet: formalize or
+precisely obstruct a source-character common response line and a nonvacuous
+variation class generated independently from a source law.  The packet remains
+proposal-only source-extension data.  Both local freezes remain active; no
+adequacy, B2 disposition, physical causality, effective metric, adoption,
+protected verdict, global no-go, or Distance-to-GR change follows.
+\end{abstract}
+
+\section{Authority and retained obstruction}
+
+The immutable predecessor records the scoped obstruction
+\begin{center}
+\small\nolinkurl{OB-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS-001}.
+\end{center}
+The fixed RT007 witness remains mathematically valid.  What fails is its use,
+without additional source law, as a presentation-independent and unrestricted
+independent-variation-robust operational quotient.
+
+Two local freezes remain unchanged:
+\begin{itemize}
+  \item \nolinkurl{NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR}; and
+  \item \nolinkurl{NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS}.
+\end{itemize}
+
+The current job may compare a broader source-side irrelevance theorem, a new
+common-line descent plus independently generated admissible-variation law, and
+a distinct bridge family.  It may select one future packet, but it may not
+execute that packet or reconstruct either frozen route.
+
+\begin{boundary}
+All positive statements below are source-side draft/control mathematics.
+No source transition group, character, line, variation law, physical unit,
+empirical response, causal cone, or effective metric is adopted or derived.
+\end{boundary}
+
+\section{What independent positive scaling preserves}
+
+Let $S$ be a finite nonempty sector set and let
+\[
+ X=(\RR\setminus\{0\})^S,
+ \qquad G=(\RR_{>0})^S.
+\]
+The group $G$ acts on $X$ componentwise.  Write
+$\sgnmap:X\to\{-1,+1\}^S$ for the ordered sign map.
+
+\begin{theorem}[Independent-positive-scale factorization]
+For any set $Y$, a pointwise map $B:X\to Y$ is invariant under $G$ if and
+only if there is a unique map $b:\{-1,+1\}^S\to Y$ such that
+\[
+ B=b\circ\sgnmap.
+\]
+\end{theorem}
+
+\begin{proof}
+If $r,r'\in X$ have the same ordered signs, then
+$\lambda_s=r'_s/r_s>0$ for every $s$, so $r'=\lambda\cdot r$ for one
+$\lambda\in G$.  Invariance makes $B$ constant on every sign fiber and hence
+defines $b$ uniquely.  Conversely, positive coordinate scaling preserves all
+signs, so every composite $b\circ\sgnmap$ is invariant.
+\end{proof}
+
+Thus $\Qsign$ is the maximal pointwise invariant under fully independent
+positive retrivialization.  This does not prove that every lawful bridge is
+pointwise or fully $G$-invariant.  Zero loci, derivatives, overlap transport,
+refinement, and nonlocal data lie outside this theorem.  A broader
+irrelevance-theorem packet would have to type those additional uses rather
+than declare them irrelevant by premise.
+
+\section{Common-line descent beyond literal equality}
+
+Take a source cover $\{U_i\}$ and suppose sector $s$ has positive local
+transition functions $g^s_{ij}$ satisfying its ordinary overlap cocycle.  A
+common-line reduction consists of positive patch functions $a^s_i$ and one
+positive common cocycle $g_{ij}$ satisfying
+\begin{equation}\label{eq:reduction}
+ a^s_i g^s_{ij}=g_{ij}a^s_j
+ \qquad\text{for every }s,i,j.
+\end{equation}
+
+\begin{theorem}[Common-line cocycle-reduction criterion]
+Equation~\eqref{eq:reduction} has a solution if and only if, relative to one
+reference sector $t$, every ratio cocycle is a positive coboundary:
+\begin{equation}\label{eq:ratio}
+ \frac{g^s_{ij}}{g^t_{ij}}
+ =\frac{b^{st}_j}{b^{st}_i}
+\end{equation}
+for positive patch functions $b^{st}_i$, with the sector ratios chosen
+coherently.
+\end{theorem}
+
+\begin{proof}
+Divide~\eqref{eq:reduction} for sectors $s$ and $t$ and set
+$b^{st}_i=a^s_i/a^t_i$ to obtain~\eqref{eq:ratio}.  Conversely, choose the
+reference cocycle as the common cocycle, set $a^t_i=1$, and set
+$a^s_i=b^{st}_i$.  Equation~\eqref{eq:ratio} rearranges to
+\eqref{eq:reduction}.  Coherence of the sector ratios makes the result
+independent of the chosen comparison chain.
+\end{proof}
+
+This criterion is broader than the RT008 fixed-trivialization condition.
+Raw sector factors need not be literally equal; they must be reducible to one
+common transition by declared positive cochains.  The theorem proves an
+existence criterion only.  It does not select a reduction naturally from
+current source ontology.
+
+\subsection{Exact finite witness}
+
+On three patches take the common cocycle
+\[
+ (g_{01},g_{12},g_{02})=(2,3,6).
+\]
+Use positive sector cochains
+\[
+ a^R=(1,2,4),\qquad
+ a^S=(1,3,9),\qquad
+ a^D=(2,5,10).
+\]
+The induced raw sector cocycles are
+\[
+ g^R=(4,6,24),\qquad
+ g^S=(6,9,54),\qquad
+ g^D=(5,6,30).
+\]
+Every row satisfies $g^s_{01}g^s_{12}=g^s_{02}$, and all nine instances of
+\eqref{eq:reduction} hold.  The rows are unequal, so this witness cannot be
+mistaken for literal common-factor equality.  Its numbers are loaded selector
+data, not a source-law derivation.
+
+\section{One possible source mechanism}
+
+Let $G_{\rm src}$ be a proposed source transition group or groupoid with
+cocycle $h_{ij}$, and let
+\[
+ \chi:G_{\rm src}\longrightarrow\RR_{>0}
+\]
+be a positive character.
+
+\begin{lemma}[Positive-character associated-line descent]
+The functions $\lambda_{ij}=\chi(h_{ij})$ are positive, invertible, and obey
+the overlap cocycle.  They therefore define an oriented associated real line
+$L_\chi$.  A sector response line equipped with a source-natural intertwiner
+into $L_\chi$ shares this common descent cocycle.
+\end{lemma}
+
+\begin{proof}
+Positivity and invertibility follow from the codomain group.  The homomorphism
+identity gives
+$\lambda_{ij}\lambda_{jk}=\chi(h_{ij}h_{jk})=\chi(h_{ik})=\lambda_{ik}$.
+The associated-line descent statement is then the ordinary intertwining
+condition.
+\end{proof}
+
+Current ontology supplies neither $G_{\rm src}$, $\chi$, $L_\chi$, nor the
+sector intertwiners.  The lemma makes a future construction target coherent;
+it does not make that target available or natural.
+
+\section{Descent and variation are independent}
+
+\begin{lemma}[Logical independence]
+A common positive response-line cocycle does not determine an admissible
+variation law, and an admissible variation restriction does not determine a
+common response-line cocycle.
+\end{lemma}
+
+\begin{proof}
+For the first direction, put all response lines in one trivial line with
+identity transitions but admit the full independent sector-triple tangent
+space.  RT008's arbitrarily small transverse perturbation is then admissible
+and changes rank two to rank three despite perfect descent.  For the other
+direction, admit only the zero variation while changing local response
+trivializations by unequal positive factors.  Variation is vacuously stable,
+but $\Qray$ still changes and fails common-line descent.
+\end{proof}
+
+The future packet must therefore specify a source equation or generator
+$E_{\rm src}:C_{\rm src}\to W_{\rm src}$ before response evaluation and derive
+a nonvacuous variation quotient such as
+\[
+ A_{\rm src}(c)=
+ \ker(D E_{\rm src}|_c)/\operatorname{im}(D\,\mathrm{gauge}_{\rm src}|_c).
+\]
+An empty, zero-only, diagonal-only, midpoint-preserving, or response-preserving
+class is not a successful robustness law.
+
+\section{Three-route comparison}
+
+\renewcommand{\arraystretch}{1.2}
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.19\textwidth}
+                  >{\raggedright\arraybackslash}p{0.25\textwidth}
+                  >{\raggedright\arraybackslash}p{0.25\textwidth}
+                  >{\raggedright\arraybackslash}p{0.20\textwidth}}
+\toprule
+Route & Strength & Decisive limitation & Disposition\\
+\midrule
+\endhead
+Broader irrelevance theorem & Exact pointwise sign-factorization result and
+low ontology cost. & Does not cover every transition, derivative, refinement,
+or nonlocal bridge use and constructs no richer common response object. & Not
+selected.\\
+Common-character descent plus independent variation law & Directly tests both
+missing RT008 premises and permits construction or precise obstruction. & New
+source roots have high circularity and ontology-debt risk unless fixed before
+response evaluation. & Selected, not executed.\\
+Oriented-matroid covector/circuit bridge & Scale-invariant total
+feasible-or-obstructed object with bounded circuits and refinement value. &
+Extends the RT005 sign/common-envelope core but leaves the named descent and
+variation-law burden unresolved. & Retained as a later, separately admitted
+alternative.\\
+\bottomrule
+\end{longtable}
+
+The children initially disagreed between the second and third routes.  Two
+parallel conflict rounds established that the oriented-matroid route is
+genuinely richer than a single Gordan witness, but it is not the direct next
+test of the tracked blocker.  Both analyses finally select the second route.
+The controlling point is that selecting a falsifiable
+formalization-or-obstruction packet does not accept its proposed source roots.
+
+\section{Selected future packet}
+
+The selected packet is
+\begin{center}
+\nolinkurl{PKT-V22-P4T02-B2-COMMON-CHARACTER-DESCENT-INDEPENDENT-VARIATION-FORMALIZATION-V1}.
+\end{center}
+It is an unexecuted
+\nolinkurl{ontology_law_research_packet} under
+\nolinkurl{ontology-formalizer@0.2.0}.  It must define or precisely obstruct:
+\begin{enumerate}
+  \item a source transition group or groupoid $G_{\rm src}$;
+  \item a positive character $\chi$ and associated line $L_\chi$;
+  \item source-natural sector intertwiners into $L_\chi$;
+  \item the common-line reduction class and its common-gauge ambiguity;
+  \item a source configuration domain and independently specified law
+        $E_{\rm src}$;
+  \item a nonvacuous infinitesimal variation quotient and integrated finite
+        path class; and
+  \item a provenance graph separating all source roots from response success,
+        target geometry, benchmark behavior, and workflow status.
+\end{enumerate}
+
+The packet fails closed if the character, intertwiners, cocycle, inverse,
+natural reduction, nonzero variation, independent provenance, or finite-path
+integration is absent.  Shared $\tau$, the fixed $\Qray$ atlas, the midpoint
+kernel, diagonal-only variation, and any desired-response stabilizer count as
+frozen-route replay rather than success.
+
+\begin{nonconclusion}
+Successful formalization would still be only a proposal-only source-law
+candidate pending source-purity audit and Refuter stress.  It would not be a
+physical normalization, empirical calibration, dynamics, causal cone, or
+effective metric.
+\end{nonconclusion}
+
+\section{Meaning and authority separation}
+
+The source-ontology question is whether the proposed roots can be defined
+without circularity.  The mathematical question is whether their maps and
+cocycles satisfy the exact proofs.  The physical question is whether any
+result describes causal propagation.  The empirical question is whether any
+formal response corresponds to Rod, Signal, Detector, clock, or timing data.
+The adoption question is protected and remains unopened.  Registration,
+validation, rendering, handoff, and checkpoint answer only workflow questions.
+These six predicates are independent at this boundary.
+
+\section{Expanded Distance-to-GR status}
+
+\begin{longtable}{>{\raggedright\arraybackslash}p{0.28\textwidth}
+                  >{\raggedright\arraybackslash}p{0.64\textwidth}}
+\toprule
+Burden & Status after this selector\\
+\midrule
+\endhead
+Source ontology primitives & Unchanged; all selected objects are unconstructed
+and unadopted source-extension proposals.\\
+Source equivalence $\mathrm{EqSrc}$ & Unchanged; no general equivalence theorem
+or adoption.\\
+$\mathrm{RetainH}$ & Unchanged and blocked by missing primitive.\\
+$\mathrm{GenH}$ & Unchanged and blocked by missing primitive.\\
+$\mathrm{ObsLoc}_{\mathrm{lc}}$ & Unchanged; finite equipped protocol remains
+read only.\\
+$\mathrm{Resp}_{\mathrm{lc}}$ & Unchanged; formal response coordinates are not
+empirical P7 responses.\\
+$M_{\mathrm{src}}$ & Unchanged; the source cover and groupoid remain conditional
+scaffolding.\\
+$g_{\mathrm{eff}}$ & Unchanged; no physical conformal class, scale, or metric is
+constructed.\\
+Matter coupling & Unchanged; universal propagation and coupling are absent.\\
+Einstein equations & Unchanged; no action, variation, or field equation.\\
+Finite-variation robustness & Unchanged; one variation-law formalization is
+selected but unexecuted.\\
+Benchmark promotion & Blocked and unchanged.\\
+Gate Chair status & Unchanged; no protected review is requested.\\
+Current route freeze or hard-fail status & Both local freezes remain active;
+the materially distinct formalization test is not frozen before one bounded
+attempt.\\
+\bottomrule
+\end{longtable}
+
+No Distance-to-GR ledger row changes.  The only downstream routing consequence
+is that one separately admitted Ontology Formalizer packet may execute after
+checkpoint.
+
+\section{Decisive result}
+
+Exactly one future packet is selected and remains unexecuted.  Current
+adoption is blocked while same-milestone continuation remains open:
+\nolinkurl{blocked_adoption_open_continuation}.  D7 is not reevaluated, B2 is
+neither activated nor disposed, and P4--T03 stays locked.
+
+\begin{nonconclusion}
+This selector is not source-law construction or adoption, empirical P7
+semantics, physical causality, a Lorentzian conformal class, $g_{\rm eff}$,
+matter coupling, Einstein equations, Gate or benchmark action, proof or
+publication authority, push, external action, global theory rejection,
+future-extension impossibility, or a completed derivation.
+\end{nonconclusion}
+
+\end{document}
