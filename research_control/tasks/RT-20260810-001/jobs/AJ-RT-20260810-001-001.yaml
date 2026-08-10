@@ -1,0 +1,488 @@
+job_id: "AJ-RT-20260810-001-001"
+task_id: "RT-20260810-001"
+decision_id: "DDR-20260810-001"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260810-001"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-10T06:15:24Z"
+started_at: "2026-08-10T06:15:24Z"
+completed_at: "2026-08-10T06:44:58Z"
+completion_path: "research_control/tasks/RT-20260810-001/jobs/completions/AJC-AJ-RT-20260810-001-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The complete-V22 goal, committed RT027 checkpoint a6a9533312f338cefdc7f10d7a1a301aad994cd8, and handoff-0997 authorize one P4-T02 Candidate Constructor source-intrinsic interface repair packet with Refuter support and one checkpoint. No adequacy reevaluation, B2 activation, P4-T03, source-law adoption, protected Gate, external review, publication, push, or external action is authorized."
+objective: "Repair or precisely obstruct the five RT026 populated-descriptor interfaces by typing the sector scope honestly, replacing the coordinate norm with source-intrinsic jet topology, testing independent presentation-natural leading selection under genuine sector-split variation, constructing a typed P7 protocol bridge on justified controls, and returning exactly one no-fog constructed-candidate or precise-obstruction result."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Determine whether the proposal-only B2 populated descriptor can obtain presentation-natural and independently selected common principal data with sector-split robustness and typed P7 operational interfaces, while explicitly separating the equipped three-control subfamily from the full P7 sector family and importing no target geometry."
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+adoption_status: "blocked_adoption_open_continuation"
+route_reason: "handoff_0997_selects_one_fresh_v22_p4_t02_candidate_constructor_source_intrinsic_interface_repair_after_committed_rt027_checkpoint"
+route_strategy_id: "repair_v22_p4_t02_b2_populated_descriptor_source_intrinsic_interfaces_v1"
+immutable_route_sha256: "13f4e4a8c62510dbaea44600ba5257a91e264f2beb3a133ce609bf19e8057a5f"
+source_head: "a6a9533312f338cefdc7f10d7a1a301aad994cd8"
+source_tree: "731b73a60b176d7f9eec8dd15d9a442f87c849d3"
+assembly_parent_head: "a6a9533312f338cefdc7f10d7a1a301aad994cd8"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+recommendation_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R10"
+  - "V22-R13"
+declared_coverage_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R13"
+  - "S5"
+sequence_step_ids:
+  - "S5"
+cross_cutting_directive_ids:
+  - "V22-X02"
+  - "V22-X04"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P4-T02"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-0997"
+  source_handoff_path: "research_control/handoffs/handoff-0997.yaml"
+  source_handoff_sha256: "13f4e4a8c62510dbaea44600ba5257a91e264f2beb3a133ce609bf19e8057a5f"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite:
+    task_id: "RT-20260809-027"
+    commit: "a6a9533312f338cefdc7f10d7a1a301aad994cd8"
+    committed: true
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1170
+    relationship_row_count: 5999
+    semantic_row_count: 1170
+    vault_row_count: 1170
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"populated descriptor\" --limit 10 --json"
+      query_type: "search"
+      query_text: "populated descriptor"
+      returned_object_ids:
+        - "TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1"
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-POPULATED-INSTANCE-AUDIT-V1"
+        - "TEX-V22-P4-T02-B2-DESCRIPTOR-SMUGGLING-AUDIT-V1"
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-CONSTRUCTION-V1"
+        - "TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1"
+        - "MD-RESEARCH-CONTROL-TASK-INDEX"
+  canonical_inspections:
+    - object_id: "TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.tex"
+      source_hash: "8404fc7bd3586c353155cdce00bbede9e107ed4b38231b69953f4242bc5d90f0"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-POPULATED-INSTANCE-AUDIT-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-026/artifacts/parent_fusion_notes_p4_t02_b2_populated_instance_audit.md"
+      source_hash: "b6dba96db8f14e17e56753504653b96707400d5e39ffe24c70ef7c12b3b1cbee"
+    - object_id: "TEX-V22-P4-T02-B2-DESCRIPTOR-SMUGGLING-AUDIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-022/artifacts/v22_p4_t02_b2_descriptor_smuggling_audit_v1.tex"
+      source_hash: "9b89c066a18888a1ba28065cdb23e1623d4c2f6f611a0b8d3a7f2a7423231de6"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-CONSTRUCTION-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-023/artifacts/parent_fusion_notes_p4_t02_b2_descriptor_construction.md"
+      source_hash: "cb0ac3441ca6a98716f3bf94c379802fce390d0ce3f98332595ed2b690ac648c"
+    - object_id: "TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex"
+      source_hash: "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169"
+    - object_id: "MD-RESEARCH-CONTROL-TASK-INDEX"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/TASK_INDEX.md"
+      source_hash: "f97218008e7b96617199392a82e623b99a8038981389aa6218a381c487d10191"
+  additional_control_inspections:
+    - object_id: "HANDOFF-0997"
+      control_path: "research_control/handoffs/handoff-0997.yaml"
+      source_hash: "13f4e4a8c62510dbaea44600ba5257a91e264f2beb3a133ce609bf19e8057a5f"
+    - object_id: "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+      control_path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+      source_hash: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+    - object_id: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+      control_path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+      source_hash: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+    - object_id: "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+      control_path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+      source_hash: "5a9a8f5542a7c8b714bbff7ec06c06449b0c66c0196266051562caf9ce602c6b"
+    - object_id: "DISTANCE-TO-GR-LEDGER"
+      control_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      source_hash: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+  authority_note: "Tracked registered source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  assumption_delta:
+    - "Hold the exact P7 package, RT023 populated witness, RT026 five-finding audit, candidate identity, and handoff-0997 route fixed."
+    - "Replace the claimed all-sector domain by the exact explicitly equipped Rod Signal Detector subfamily unless an all-sector constructor is actually derived."
+    - "Replace the componentwise coordinate threshold by the compact-open topology of first jets on the proposal-only smooth source patch."
+    - "Treat each sector leading line as independently selected and require equivariance under the full source-presentation derivative action; do not insert one shared tau."
+    - "Use the product topology for sector variations so arbitrarily small split directions remain admitted negative controls."
+    - "Construct a deterministic source-only rationalization and protocol-context map into the exact P7-T03 operational domain for the three equipped controls."
+    - "If no full-presentation-equivariant common-line selector exists, return the exact missing line-locking primitive and evaluate local route freeze."
+  materiality_basis: "RT026 identified five exact anchored-source defects but did not construct the intrinsic topology, typed bridge, or prove the equivariant line-selection obstruction. This packet adds those formal objects, an independent sector-split theorem, and a decisive route consequence."
+  payload_details:
+    construction_identity: "CAND-V22-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1"
+    candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+    obstruction_id_if_required: "OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001"
+    source_extension_classification: "proposal_only_source_intrinsic_interface_and_line_selector_attempt"
+    global_no_go_claimed: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1"
+    - "TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1"
+    - "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    - "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    - "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    - "research_control/handoffs/handoff-0997.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_v1.tex"
+    - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_matrix_v1.yaml"
+    - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_line_selector_obstruction_v1.yaml"
+    - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_typed_operational_bridge_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+    - "latex_compile_pass"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "repair_v22_p4_t02_b2_populated_descriptor_source_intrinsic_interfaces_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  family_identity_sha256: "9d8691e21e36bac63185d4ee6bf530f768e5952d202bc4dea374d9cc4aead8eb"
+  assumption_sha256es:
+    - "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169"
+    - "8404fc7bd3586c353155cdce00bbede9e107ed4b38231b69953f4242bc5d90f0"
+    - "13f4e4a8c62510dbaea44600ba5257a91e264f2beb3a133ce609bf19e8057a5f"
+  route_kind: "candidate_construction"
+  detected_match_basis: []
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V22-P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR"
+    material_difference_basis: "This packet replaces the coordinate norm, constructs a typed operational bridge, admits independent sector-split variations, and tests a new full-presentation equivariance obstruction; it neither reconstructs frozen B1 nor replays the RT023 shared-tau claim."
+    reconstructs_frozen_candidate: false
+    expected_artifact_paths:
+      - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_v1.tex"
+      - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_line_selector_obstruction_v1.yaml"
+      - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_typed_operational_bridge_v1.yaml"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered draft/control source-intrinsic interface repair-or-obstruction manuscript"
+      - "one five-finding repair matrix, typed operational bridge record, and line-selector obstruction record if required"
+    project_system:
+      - "task-local executable model, focused validator, compact receipt, LaTeX receipt, parent-child synthesis, and standard control synchronization"
+  acceptance_criteria:
+    physics:
+      - "all five RT026 findings receive an exact repaired restricted or obstructed disposition with no hidden scope expansion"
+      - "the intrinsic topology typed bridge equivariance test and independent sector-split stress are formal and reproducible"
+      - "the decisive result names the constructed candidate or exact missing primitive and evaluates local freeze criteria"
+      - "no adequacy activation physical geometry P4-T03 or protected authority is created"
+    project_system:
+      - "source hashes artifacts registries backlog program state and handoff pass deterministic validation"
+      - "the rendered TeX derivative passes inspection and one governed checkpoint records the transaction"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold exact source hashes five-finding contract and downstream blocks fixed"
+      - "require a constructed candidate or precise obstruction with no-fog accounting"
+      - "embed Refuter collapse nonuniqueness inverse cocycle and variation stresses"
+      - "separate restricted source construction physical interpretation adoption and workflow authority"
+      - "review child outputs for conflicts and fuse one final role artifact"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260810-001/artifacts/child_phys_math_p4_t02_b2_source_intrinsic_interface_repair.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260810-001/artifacts/child_phys_phil_p4_t02_b2_source_intrinsic_interface_repair.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260810-001/artifacts/parent_conflict_review_p4_t02_b2_source_intrinsic_interface_repair.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260810-001/artifacts/parent_fusion_notes_p4_t02_b2_source_intrinsic_interface_repair.md"
+    fused_output_path: "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+  rationale: "Two internal child execution units work in parallel under one outer AgentJob, one Candidate Constructor overlay, one claim boundary, and one completion record."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-0997.yaml"
+  - "research_control/handoffs/handoff-0997.md"
+  - "research_control/tasks/RT-20260809-003/**"
+  - "research_control/tasks/RT-20260809-019/**"
+  - "research_control/tasks/RT-20260809-021/**"
+  - "research_control/tasks/RT-20260809-022/**"
+  - "research_control/tasks/RT-20260809-023/**"
+  - "research_control/tasks/RT-20260809-026/**"
+  - "research_control/tasks/RT-20260809-027/**"
+  - "research_control/tasks/RT-20260727-007/**"
+  - "research_control/tasks/RT-20260728-001/**"
+  - "research_control/tasks/RT-20260728-002/**"
+  - "research_control/tasks/RT-20260728-003/**"
+  - "research_control/tasks/RT-20260728-004/**"
+  - "research_control/tasks/RT-20260728-005/**"
+  - "registries/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-0998.yaml"
+  - "research_control/handoffs/handoff-0998.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260810-001/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - ".local/**"
+forbidden_paths:
+  - "ontology/**"
+  - "papers/**"
+  - "manuscripts/**"
+  - "experiments/**"
+  - ".git/**"
+allowed_source_classes:
+  - "registered_tex"
+  - "registered_markdown"
+  - "tracked_control_state"
+  - "task_local_draft_control"
+  - "protected_finite_p7_conditional_input_read_only"
+  - "proposal_only_source_extension_data"
+forbidden_source_classes:
+  - "candidate_reconstruction"
+  - "canonical_ontology_write"
+  - "source_law_adoption_or_rejection"
+  - "P2_T01_adequacy_reevaluation"
+  - "B2_activation_or_adoption"
+  - "target_atlas"
+  - "target_metric"
+  - "target_tetrad"
+  - "target_coframe"
+  - "desired_gr_cone"
+  - "benchmark_success"
+  - "generated_derivative_authority"
+  - "registry_metadata_authority"
+  - "role_authority"
+  - "validation_authority"
+  - "gate_chair_verdict"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+  - "P4_T03_execution"
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search <phrase> --limit 10 --json"
+  - ".venv/bin/python research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_model.py --json"
+  - ".venv/bin/python research_control/tasks/RT-20260810-001/artifacts/validate_v22_p4_t02_b2_source_intrinsic_interface_repair.py --write-report --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260810-001-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260810-001-001 --planner-validation"
+  - "bundled Tectonic compile and bundled Poppler render for visual inspection"
+required_validators:
+  - "focused_v22_p4_t02_b2_source_intrinsic_interface_repair_validator"
+  - "task_taxonomy"
+  - "project_change_classifier"
+  - "documentation_impact"
+  - "project_improvement_signal_validator"
+  - "claim_language_changed"
+  - "generated_report_freshness"
+  - "affected_validation_profile"
+  - "research_control_diff_validation"
+  - "git_diff_check"
+expected_outputs:
+  - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_v1.tex"
+  - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_line_selector_obstruction_v1.yaml"
+  - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_typed_operational_bridge_v1.yaml"
+  - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_model.py"
+  - "research_control/tasks/RT-20260810-001/artifacts/child_phys_math_p4_t02_b2_source_intrinsic_interface_repair.yaml"
+  - "research_control/tasks/RT-20260810-001/artifacts/child_phys_phil_p4_t02_b2_source_intrinsic_interface_repair.yaml"
+  - "research_control/tasks/RT-20260810-001/artifacts/parent_conflict_review_p4_t02_b2_source_intrinsic_interface_repair.yaml"
+  - "research_control/tasks/RT-20260810-001/artifacts/parent_fusion_notes_p4_t02_b2_source_intrinsic_interface_repair.md"
+  - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260810-001/artifacts/validate_v22_p4_t02_b2_source_intrinsic_interface_repair.py"
+  - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_validation.json"
+  - "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_compact_receipt.json"
+  - "research_control/tasks/RT-20260810-001/00_TASK.yaml"
+  - "research_control/tasks/RT-20260810-001/DDR-20260810-001.md"
+  - "research_control/tasks/RT-20260810-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260810-001/roles/candidate-constructor@0.2.0--RT-20260810-001.yaml"
+  - "research_control/tasks/RT-20260810-001/jobs/completions/AJC-AJ-RT-20260810-001-001.yaml"
+  - "research_control/handoffs/handoff-0998.yaml"
+  - "research_control/handoffs/handoff-0998.md"
+  - "research_control/program_state.yaml"
+claim_boundary:
+  boundary_id: "CB-V22-P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR-001"
+  allowed_claims:
+    - "the exact equipped Rod Signal Detector controls define a restricted source-control subfamily and not the full P7 sector family"
+    - "the compact-open first-jet topology is independent of source coordinates on the proposal-only smooth patch"
+    - "the exact equipped protocols admit a constant typed bridge and a nontrivial finite-image bridge requires an explicit proposal-only preparation-set extension"
+    - "an equivariant leading-line selector or its exact current-ontology obstruction is proved under the declared source-presentation group"
+    - "a genuine product-topology sector-split stress and local freeze evaluation are recorded"
+    - "one fresh audit or theoretical-selector route is selected according to the decisive result"
+  forbidden_claims:
+    - "the three equipped controls exhaust all P7 matter sectors or establish full B2 universality"
+    - "a shared transport field is source-derived merely because every sector equation contains it"
+    - "sector-split variations are excluded without an explicit source law"
+    - "D7 adequacy was evaluated or B2 was activated viable adopted rejected adequate or sufficient"
+    - "P4-T03 is unlocked or a physical causal cone signature orientation scale or effective metric is derived"
+    - "the obstruction is a global no-go or future source-extension impossibility"
+    - "a protected Gate verdict external review proof publication push or completed derivation exists"
+  authority_source: "research_control/handoffs/handoff-0997.yaml"
+  checkpoint_limit: 1
+project_improvement_signals: []
+notes: "Execution completed with one outer AgentJob, two internal child execution units, embedded Refuter stress, precise obstruction OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001, and a local shared-tau route freeze. The successor theoretical selector remains unexecuted until after checkpoint."

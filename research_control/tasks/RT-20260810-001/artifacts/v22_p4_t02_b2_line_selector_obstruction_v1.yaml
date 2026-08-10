@@ -1,0 +1,92 @@
+schema_id: "v22_p4_t02_b2_line_selector_obstruction_v1"
+task_id: "RT-20260810-001"
+job_id: "AJ-RT-20260810-001-001"
+obstruction_record:
+  present: true
+  obstruction_id: "OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001"
+  scope: "source_extension_candidate"
+  failed_object: "source-presentation-natural sectorwise leading-line selector with independent-variation robust commonity"
+  failed_premise: "The current P7 records and bare smooth source patch contain no source_presentation_natural_line_locking_selector."
+  exact_failure: "A selector natural under every local source-presentation derivative would choose a projective tangent line fixed by GL(4,R), but GL(4,R) fixes no projective line; moreover the diagonal common-line locus has empty interior in the independent product variation topology."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_v1.tex"
+  countermodel_scope: "one source point, three sector lines, arbitrarily small nonzero epsilon"
+  minimal_counterexample_path: "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_v1.tex"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "route_frozen"
+  forbidden_overread: "This locally freezes the shared-tau selector strategy only; it is not global theory rejection and does not prove future source-extension impossibility."
+theorems:
+  - theorem_id: "THM-V22-P4T02-B2-NO-NATURAL-LINE-SELECTOR-001"
+    hypotheses:
+      - "U is a smooth source patch of dimension at least two with no additional tangent-line structure."
+      - "Finite P7 control data are unchanged by source-presentation germs fixing the source point."
+      - "The selector is natural under every allowed local source-presentation diffeomorphism."
+    conclusion: "No selector from the fixed finite control data to P(T_xU) exists."
+    proof_key: "Naturality makes the selected line fixed by every derivative in GL(T_xU); a shear or coordinate exchange moves every proposed line, so no global fixed projective line exists."
+  - theorem_id: "THM-V22-P4T02-B2-DIAGONAL-EMPTY-INTERIOR-001"
+    hypotheses:
+      - "dim(T_xU)>=2"
+      - "at least two sector lines vary independently in the product topology"
+    conclusion: "The diagonal common-line locus has empty interior."
+    proof_key: "Every product neighborhood of (ell,ell,ell) contains (ell_epsilon,ell,ell_minus_epsilon) with distinct nearby projective lines."
+sector_split_witness:
+  basis: ["e0", "e1", "e2", "e3"]
+  parameter: "0<|epsilon|"
+  sector_lines:
+    R: "[e0+epsilon e1]"
+    S: "[e0]"
+    D: "[e0-epsilon e1]"
+  principal_ideals:
+    R: "<k0+epsilon k1>"
+    S: "<k0>"
+    D: "<k0-epsilon k1>"
+  associates_for_nonzero_epsilon: false
+  arbitrarily_close_to_diagonal: true
+refuter_failure_branches:
+  collapse:
+    status: "FAILS_CLOSED"
+    basis: "A zero selected vector has no projective line and no nonzero principal generator."
+  nonuniqueness:
+    status: "FAILS"
+    basis: "Different source-presentation derivatives transport any proposed line to different lines while leaving finite P7 data fixed."
+  inverse_defect:
+    status: "FAILS_AFTER_SECTOR_SPLIT"
+    basis: "Distinct linear principal generators are not associates, so no nowhere-zero degree-zero transition unit g_st or inverse g_ts exists."
+  cocycle_defect:
+    status: "NOT_REACHED_AFTER_INVERSE_FAILURE"
+    basis: "Triple-overlap cocycles cannot be asserted when pairwise transition units do not exist."
+  variation_fragility:
+    status: "FAILS"
+    basis: "The common-line diagonal has empty interior under independent product variations."
+candidate_law_repair_requirement:
+  missing_source_law: "source_presentation_natural_line_locking_selector"
+  permitted_future_form: "a proposal-only source law that either adds an independently justified source line distribution or derives a natural locking map from materially new source data"
+  forbidden_shortcut: "restricting the presentation group to the stabilizer of an undeclared line or defining variations diagonally without deriving the constraint"
+  adoption_required_for_current_instance_credit: true
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  prior_attempts_considered:
+    - "RT-20260809-023"
+    - "RT-20260809-026"
+    - "RT-20260810-001"
+  freeze_if:
+    - "Shared leading commonity or diagonal-only variation recurs without a new source line-locking primitive."
+  do_not_freeze_if:
+    - "A materially new source-presentation-natural line selector with independent-variation stress evidence is constructed."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The same shared-leading burden recurs, while this packet adds the missing equivariance theorem and empty-interior stress rather than replaying the candidate."
+  next_allowed_route: "theoretical_selector"
+  frozen_scope: "shared-tau and equivalent undeclared line-stabilizer constructions"
+  nonfrozen_scope: "all possible B2 descriptors and future conservative source extensions"
+authority_limits:
+  no_go_theorem_status: "scoped_obstruction_only"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  b2_activation_authorized: false
+  p4_t03_authorized: false
+  physics_promotion_authorized: false

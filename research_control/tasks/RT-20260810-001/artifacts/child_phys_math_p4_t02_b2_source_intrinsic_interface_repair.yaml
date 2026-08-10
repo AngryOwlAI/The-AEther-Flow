@@ -1,0 +1,537 @@
+schema_id: "parent_child_physics_child_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR-001"
+authority: "science_draft"
+status_labels:
+  - "draft/control"
+  - "proposal-only"
+  - "source-extension data"
+task_id: "RT-20260810-001"
+job_id: "AJ-RT-20260810-001-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+authority_inherited_from: "candidate-constructor@0.2.0--RT-20260810-001"
+supporting_perspective: "refuter@0.2.0"
+claim_boundary_id: "CB-V22-P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR-001"
+independent_agentjob_created: false
+subagent_used: false
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: >-
+  Determine whether the proposal-only B2 populated descriptor can obtain
+  presentation-natural and independently selected common principal data with
+  sector-split robustness and typed P7 operational interfaces, without
+  treating the three equipped controls as the full P7 sector family or
+  importing target geometry.
+
+source_basis:
+  - object_id: "TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1"
+    path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex"
+    sha256: "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169"
+  - object_id: "TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1"
+    path: "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.tex"
+    sha256: "8404fc7bd3586c353155cdce00bbede9e107ed4b38231b69953f4242bc5d90f0"
+  - object_id: "TEX-V21-P7-T01-SOURCE-MATTER-ONTOLOGY-SECTOR-TAXONOMY-V1"
+    path: "research_control/tasks/RT-20260727-007/artifacts/source_matter_ontology_and_sector_taxonomy_v1.tex"
+    sha256: "8d160217bf223078a11bc63fde6593c11c39d5b50d9c48fbad7b12084f8a752d"
+  - object_id: "TEX-V21-P7-T03-SOURCE-OPERATIONAL-DEVICE-SUITE-V1"
+    path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+    sha256: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+  - object_id: "TEX-V21-P7-T05-UNIVERSAL-SOURCE-COUPLING-MAP-V1"
+    path: "research_control/tasks/RT-20260728-004/artifacts/universal_source_coupling_map_candidate_v1.tex"
+    sha256: "5a9a8f5542a7c8b714bbff7ec06c06449b0c66c0196266051562caf9ce602c6b"
+
+sector_scope:
+  scope_id: "SCOPE-V22-P4T02-B2-EQUIPPED-THREE-CONTROL-SUBFAMILY-001"
+  full_p7_sector_family: >-
+    Sigma_P7 = image(Sec_src) over all admissible P7-T01 configurations.
+  equipped_control_family: >-
+    C_eq,3 = {C_Rod, C_Signal, C_Detector}, with one explicitly supplied
+    three-address equipment map kappa_s: Omega_s -> B_3 for each control.
+  tagged_instances: >-
+    S_eq,3 = {(Rod,sigma_R),(Signal,sigma_S),(Detector,sigma_D)}.  The tags
+    preserve control identity even if two inherited sector coordinates happen
+    to coincide.
+  exact_relation: >-
+    C_eq,3 is a strict named subfamily of the P7 operational-control suite.
+    It is not a taxonomy of Sigma_P7, and its sector projection is not an
+    all-sector equipment constructor.  P7-T05 supplies no equality
+    pi_Sigma(S_eq,3)=Sigma_P7 and no total equipment functor on Sigma_P7.
+  strictness_witness: >-
+    The P7-T03 suite also contains Clock and FreeFall controls, while P7-T05
+    equips only Rod, Signal, and Detector on B_3 and expressly leaves other
+    admitted sectors outside its constructive domain.
+  quantified_positive_scope: "for every s in S_eq,3 only"
+  full_p7_sector_credit: false
+  full_b2_universality_credit: false
+
+source_intrinsic_first_jet_topology:
+  definition_id: "DEF-V22-P4T02-B2-COMPACT-OPEN-C1-JET-001"
+  base_data: >-
+    Let pi:E->U be any declared smooth source bundle and Gamma^1(E) its C1
+    source sections.  The first-jet prolongation is
+    j^1:Gamma^1(E)->C^0(U,J^1E).
+  topology_name: "compact-open C1 first-jet topology"
+  definition: |-
+    Give C^0(U,J^1E) the compact-open topology with subbasic sets
+      [K,O] = { f : U -> J^1E | f(K) is a subset of O },
+    where K is compact in U and O is open in J^1E.  Define
+      T_co^1(E) = (j^1)^*(T_co(J^1E)).
+    Equivalently, a subbasic section neighborhood is
+      N(K,O) = { u in Gamma^1(E) | j^1u(K) is a subset of O }.
+    For the RT023 C2 section space, use the subspace topology induced by the
+    inclusion Gamma^2(E) -> Gamma^1(E).  For m sectors, use the finite product
+    topology product_{s=1}^m T_co^1(E_s).
+  coordinate_independence_theorem:
+    theorem_id: "THM-V22-P4T02-B2-JET-TOPOLOGY-NATURALITY-001"
+    statement: >-
+      A smooth bundle isomorphism F:E->E' covering a source diffeomorphism
+      phi:U->U' induces a homeomorphism of section spaces equipped with
+      T_co^1; hence no source-coordinate component norm or numerical
+      coordinate threshold occurs in the definition.
+    proof: |-
+      Jet functoriality gives
+        j^1(F_*u) = J^1F o j^1u o phi^{-1}.
+      Both phi and J^1F are homeomorphisms.  They send compact sets to compact
+      sets and open sets to open sets, so preimages and images of every
+      compact-open subbasic set are compact-open.  Applying the same argument
+      to F^{-1} proves that the induced map is a homeomorphism.
+  vector_field_specialization: >-
+    For sector leading fields use E=TU.  Convergence tau_n->tau means
+    j^1tau_n->j^1tau compact-open; it is not a componentwise sup bound and
+    requires no source or target metric.
+  repaired_prior_defect: "F2-PRESENTATION-NORM"
+  target_metric_used: false
+  target_atlas_used: false
+
+typed_operational_bridge:
+  bridge_family_id: "B-V22-P4T02-B2-EQUIPPED-P7-RATIONALIZED-PROTOCOL-V1"
+  status: "constructed_on_exact_equipped_subfamily"
+  bridge_scope: "Rod Signal and Detector controls only"
+  common_finite_data:
+    carrier: "B_3={b_0,b_1,b_2}"
+    sample_grid: "a fixed finite nonempty declared source grid G_0"
+    quantization_parameter: "an integer N>=1"
+    sample_space: "A=(R^{B_3})^{G_0}"
+  deterministic_rationalizer:
+    map_id: "MAP-V22-P4T02-B2-SIGNED-CLIPPED-RATIONALIZER-001"
+    formula: |-
+      q_N(t) = sgn(t) floor(N min{|t|,1})/N, with sgn(0)=0.
+    codomain: "{-1,-(N-1)/N,...,0,...,(N-1)/N,1} subset Q"
+    tie_rule: "floor after clipping; there are no rounding ties"
+    source_only_basis: >-
+      The map uses only the declared real source-fiber component, scalar
+      order, integer N, and the exact finite carrier labels.  It uses no
+      metric, device calibration, benchmark answer, or empirical threshold.
+  normalization:
+    formula: |-
+      For a in A set
+        z_b(a) = sum_{g in G_0} |q_N(a(g,b))| in Q_{>=0},
+        Z(a)   = sum_{b in B_3} z_b(a).
+      If Z(a)>0, set w_b(a)=z_b(a)/Z(a).  If Z(a)=0, set
+        w(a)=delta_{b_0}.
+      For the exact equipment bijection kappa_s:Omega_s->B_3, define
+        mu_{s,a}(x)=w_{kappa_s(x)}(a).
+  exact_properties:
+    - "The construction is total and deterministic on A."
+    - "Every mu_{s,a}(x) is a nonnegative rational."
+    - "sum_{x in Omega_s} mu_{s,a}(x)=1."
+    - >-
+      Because q_N has finite image and G_0 is finite, the preparation image is
+      finite and therefore satisfies the P7-T03 finite-preparation-set type.
+    - >-
+      The construction commutes with exact ordered-equipment relabelings that
+      transport b_0, G_0, carrier components, and the fixed protocol context.
+  zero_branch:
+    condition: "Z(a)=0, equivalently every rationalized component is zero"
+    output: "mu_{s,a}=delta at the declared initial address kappa_s^{-1}(b_0)"
+    semantic_guard: >-
+      This is a deterministic typing fallback.  It is not a physical vacuum,
+      a no-event observation, zero matter, or a detector statement.
+  p7_t03_context_type:
+    definition: |-
+      Ctx_s^adm = {
+        ((Control_s,mu,2), i_{s,0}, 2,
+         (A_s,r_s^P7,S_s,F_s))
+        | mu in Q_{>=0}^{Omega_s}, sum_x mu(x)=1
+      }.
+      Here (Control_s,mu,2) has exactly the P7-T03 preparation type;
+      i_{s,0} is the declared baseline intervention; A_s is the exact token
+      alphabet; r_s^P7:H_2(Control_s)->A_s is the exact total readout; S_s is
+      the success-token subset; and F_s is the exact failure classifier.
+    scalar_response_domain: >-
+      Appending alpha in A_s to an element of Ctx_s^adm gives an input of the
+      exact scalar token-response map R_{Device_s,p,i,2}(alpha).
+  common_bridge_formula: |-
+    B_{s,N}: A -> Ctx_s^adm,
+    B_{s,N}(a)=((Control_s,mu_{s,a},2),i_{s,0},2,
+                (A_s,r_s^P7,S_s,F_s)).
+    With the exact finite sampling map S_{s,0}, the typed composite is
+    Bhat_{s,N}=B_{s,N} o S_{s,0}:Gamma^1(E_s)->Ctx_s^adm.
+  admissible_image: >-
+    im(B_{s,N}) is the finite proposal-only subset of Ctx_s^adm whose
+    preparation weights are produced by the displayed rationalization and
+    normalization.  Every output has unit rational bookkeeping mass, the
+    exact equipped control, declared baseline intervention, horizon two, and
+    the protected total token readout context.
+  protocols:
+    - bridge_id: "BRIDGE-V22-P4T02-B2-ROD-P7T03-001"
+      sector_control_tag: "(Rod,sigma_R)"
+      equipment: "kappa_R(r_i)=b_i for i=0,1,2"
+      domain: "(R^3)^{G_0}"
+      codomain: "Ctx_Rod^adm"
+      preparation: "p_R(a)=(Control_Rod,mu_{R,a},2)"
+      fixed_intervention: "i_{R,0}"
+      fixed_horizon: 2
+      fixed_total_readout: "r_Rod^P7:H_2(Control_Rod)->A_Rod"
+      success_token: "endpoint_2"
+      zero_branch: "delta_{r_0}"
+      admissible_image: "finite unit-rational preparations on {r_0,r_1,r_2} with exact Rod context"
+    - bridge_id: "BRIDGE-V22-P4T02-B2-SIGNAL-P7T03-001"
+      sector_control_tag: "(Signal,sigma_S)"
+      equipment: "kappa_S(s_i)=b_i for i=0,1,2"
+      domain: "(R^3)^{G_0}"
+      codomain: "Ctx_Signal^adm"
+      preparation: "p_S(a)=(Control_Signal,mu_{S,a},2)"
+      fixed_intervention: "i_{S,0}"
+      fixed_horizon: 2
+      fixed_total_readout: "r_Signal^P7:H_2(Control_Signal)->A_Signal"
+      success_token: "arrived_2"
+      zero_branch: "delta_{s_0}"
+      admissible_image: "finite unit-rational preparations on {s_0,s_1,s_2} with exact Signal context"
+    - bridge_id: "BRIDGE-V22-P4T02-B2-DETECTOR-P7T03-001"
+      sector_control_tag: "(Detector,sigma_D)"
+      equipment: "kappa_D(q_i)=b_i for i=0,1,2"
+      domain: "(R^3)^{G_0}"
+      codomain: "Ctx_Detector^adm"
+      preparation: "p_D(a)=(Control_Detector,mu_{D,a},2)"
+      fixed_intervention: "i_{D,0}"
+      fixed_horizon: 2
+      fixed_total_readout: "r_Detector^P7:H_2(Control_Detector)->A_Detector"
+      success_token: "triggered_2"
+      zero_branch: "delta_{q_0}"
+      admissible_image: "finite unit-rational preparations on {q_0,q_1,q_2} with exact Detector context"
+  nonphysical_status: >-
+    The bridges are conservative proposal-only coercions into the P7-T03
+    preparation schema.  They do not amend or adopt the protected P7 suite;
+    do not turn guarded labels into physical rods, signals, or detectors; and
+    do not derive empirical response, probability, duration, distance,
+    causality, a leading line, a cone, a metric, scale, or coupling.
+  known_mathematical_limits:
+    - "q_N is discontinuous at quantization thresholds."
+    - "B_{s,N} is many-to-one and has no left inverse on the sample space."
+    - "The bridge is not defined for arbitrary P7 sectors lacking an exact P7-T03 protocol tuple."
+
+equivariant_selector_obstruction:
+  theorem_id: "THM-V22-P4T02-B2-NO-NATURAL-LINE-SELECTOR-001"
+  obstruction_id: "OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001"
+  setting: |-
+    Fix x in the four-dimensional smooth source patch U and let
+    D_fin denote the abstract finite P7 control data.  D_fin has no embedding,
+    soldering map, frame, covector, tangent vector, or other datum coupling it
+    to T_xU.  Source-presentation germs fixing x therefore act trivially on
+    D_fin, while their derivatives realize GL(T_xU)=GL(4,R).
+  candidate_map: |-
+    Lambda_x:D_fin -> P(T_xU), required to satisfy
+      Lambda_x(phi_*D_fin)=P(d phi_x) Lambda_x(D_fin)
+    for every allowed source-presentation germ phi fixing x.
+  theorem_statement: >-
+    No such full source-presentation-natural map exists under the stated bare
+    source data.
+  proof: |-
+    Let ell=Lambda_x(D_fin).  Because phi_*D_fin=D_fin, naturality requires
+      ell=P(A)ell for every A in GL(T_xU).
+    Choose 0!=v in ell and choose w not in span(v).  Extend {v,w} to a basis
+    and define the invertible shear A by A(v)=v+w, A(w)=w, and A equal to the
+    identity on the remaining basis vectors.  Then
+      P(A)ell=[v+w]!=[v]=ell,
+    contradicting the required fixed-line condition.  Hence GL(4,R) has no
+    fixed point in P(T_xU), and Lambda_x cannot be formed from D_fin alone.
+  characteristic_link: >-
+    A nonzero tangent line ell=[tau_x] determines the cotangent hyperplane
+    { [k] | k(tau_x)=0 } without a metric.  Thus absence of a natural line
+    selector blocks the RT023 common principal generator before any claim of
+    a physical cone or metric arises.
+  exact_failed_premise: >-
+    The current ontology and fixed P7 controls do not derive a
+    source_presentation_natural_line_locking_selector.
+  missing_primitive: "source_presentation_natural_line_locking_selector"
+  permitted_repair: >-
+    A materially new proposal-only source structure may reduce the isotropy
+    or couple finite data to a tangent line and must then pass naturality,
+    descent, independent-sector variation, and hidden-import audit.
+  obstruction_scope: "current ontology plus fixed finite controls and a bare smooth source patch"
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+sector_split_theorem:
+  theorem_id: "THM-V22-P4T02-B2-DIAGONAL-EMPTY-INTERIOR-001"
+  witness_id: "WIT-V22-P4T02-B2-EPSILON-SECTOR-SPLIT-001"
+  statement: |-
+    Let V=T_xU with dim(V)>=2 and m>=2.  In the product topology on
+    P(V)^m, the common-line diagonal
+      Delta_m={(ell_1,...,ell_m) | ell_1=...=ell_m}
+    has empty interior.
+  proof: |-
+    Take any diagonal point (ell,...,ell), write ell=[v], and choose w not in
+    span(v).  Every basic product neighborhood O_1 x ... x O_m of the point
+    has ell in each O_i.  The curve ell_epsilon=[v+epsilon w] converges to ell
+    in P(V).  Hence, for all sufficiently small nonzero epsilon,
+      (ell,ell_epsilon,ell,...,ell)
+    lies in O_1 x ... x O_m but not in Delta_m.  No point of Delta_m is
+    interior.
+  explicit_three_sector_witness:
+    basis: "choose independent v,w in T_xU"
+    epsilon_condition: "0<|epsilon|, arbitrarily small"
+    lines:
+      Rod: "[v+epsilon w]"
+      Signal: "[v]"
+      Detector: "[v-epsilon w]"
+    coordinate_display_only: >-
+      With v=e_0 and w=e_1 the associated linear principal generators are
+      k_0+epsilon k_1, k_0, and k_0-epsilon k_1; for epsilon!=0 they are not
+      nonzero scalar associates, so their principal ideals are distinct.
+  first_jet_section_lift: |-
+    Choose C1 local vector fields tau and nu with tau_x=v and nu_x=w.  Vary
+    only sector two by tau_{2,epsilon}=tau+epsilon nu and keep the other
+    sector fields equal to tau.  Linearity of j^1 gives
+      j^1(tau+epsilon nu)=j^1tau+epsilon j^1nu,
+    so the split tuple converges to the diagonal in the finite product
+    compact-open C1 topology while leaving it for every sufficiently small
+    nonzero epsilon at x.
+  consequence: >-
+    Common-line robustness is not an open property under independent sector
+    variations.  Restricting variations to the diagonal merely assumes a
+    locking law; it does not derive one.
+  global_no_go_claimed: false
+
+exact_finding_dispositions:
+  - finding_id: "F1-SECTOR-COVERAGE"
+    disposition_code: "REPAIRED_BY_STRICT_SUBFAMILY_RESTRICTION_FULL_SECTOR_BURDEN_OPEN"
+    disposition: >-
+      Repair succeeds only after quantifying all constructed operators and
+      bridges over the exact tagged Rod Signal Detector equipped controls.
+      They are a strict operational-control subfamily, not all P7 sectors.
+    full_descriptor_blocking: true
+    remaining_burden: "no all-sector equipment or protocol constructor"
+  - finding_id: "F2-PRESENTATION-NORM"
+    disposition_code: "REPAIRED_BY_COMPACT_OPEN_C1_FIRST_JET_TOPOLOGY"
+    disposition: >-
+      Replace every componentwise source-coordinate threshold by the
+      coordinate-independent compact-open first-jet topology and its finite
+      sector product.
+    full_descriptor_blocking: false
+    remaining_burden: "none inside the declared smooth-patch topology interface"
+  - finding_id: "F3-SHARED-LEADING-PRELOAD"
+    disposition_code: "PRECISELY_OBSTRUCTED_WITHOUT_PRESENTATION_NATURAL_LINE_LOCK"
+    disposition: >-
+      Independent leading selection from the fixed finite controls fails the
+      GL(4,R) equivariance test.  Inserting one shared tau would replay the
+      audited goal-property preload.
+    full_descriptor_blocking: true
+    remaining_burden: "source_presentation_natural_line_locking_selector"
+  - finding_id: "F4-SECTOR-SPLIT-VARIATION"
+    disposition_code: "REFUTED_BY_EMPTY_INTERIOR_DIAGONAL_UNDER_PRODUCT_VARIATION"
+    disposition: >-
+      The required independent product stress is admitted and the common-line
+      diagonal has empty interior; arbitrarily small epsilon splits destroy
+      common principal ideals unless an additional locking law is supplied.
+    full_descriptor_blocking: true
+    remaining_burden: "source-derived sector-locking and robustness law"
+  - finding_id: "F5-UNTYPED-OPERATIONAL-BRIDGE"
+    disposition_code: "REPAIRED_ON_EQUIPPED_SUBFAMILY_BY_TYPED_RATIONALIZED_BRIDGES"
+    disposition: >-
+      B_{Rod,N}, B_{Signal,N}, and B_{Detector,N} are total typed maps into
+      finite unit-rational P7-T03 preparation and fixed protocol contexts.
+      No bridge is claimed for unequipped sectors.
+    full_descriptor_blocking: true
+    remaining_burden: "no typed protocol tuple outside the exact equipped subfamily"
+
+refuter_support:
+  classification: "scoped_obstruction"
+  branches:
+    collapse:
+      branch_id: "REFUTE-V22-P4T02-B2-COLLAPSE-001"
+      target: "constant or zero line repair"
+      witness: >-
+        A zero vector defines no point of P(T_xU).  A nonzero constant line
+        ell_0 ignores the finite data and is moved by a GL(4,R) shear while
+        the finite data remain fixed.
+      result: "fails full presentation equivariance"
+      disposition: "blocking_for_line_selector"
+    nonuniqueness:
+      branch_id: "REFUTE-V22-P4T02-B2-NONUNIQUENESS-001"
+      target: "unique line selected by fixed finite control data"
+      witness: >-
+        For any two projective lines ell_1 and ell_2 there is A in GL(4,R)
+        with P(A)ell_1=ell_2, while A acts trivially on the abstract finite
+        control record.  The record therefore provides no orbit discriminator.
+      result: "the current data do not select a unique projective line"
+      disposition: "blocking_for_line_selector"
+    inverse_defect:
+      branch_id: "REFUTE-V22-P4T02-B2-INVERSE-DEFECT-001"
+      target: "inverse or reconstruction claim for the typed operational bridge"
+      witness: >-
+        For any nonzero sample a, q_N(a) and q_N(-a) have equal absolute
+        carrier weights, hence B_{s,N}(a)=B_{s,N}(-a).  Also every sample with
+        |a(g,b)|<1/N enters the same zero branch.  Thus no map L can satisfy
+        L o B_{s,N}=id_A.
+      result: "bridge is intentionally many-to-one; no inverse or line reconstruction follows"
+      disposition: "nonblocking_for_F5_typing_but_blocks_overread"
+    cocycle_defect:
+      branch_id: "REFUTE-V22-P4T02-B2-COCYCLE-DEFECT-001"
+      target: "descent of chartwise coordinate-fixed line choices"
+      witness: >-
+        On an overlap let one presentation transition have derivative A with
+        A(e_0)=e_0+e_1.  A chartwise rule that chooses [e_0] in both charts
+        requires [e_0]=P(A)[e_0]=[e_0+e_1], which is false.  The local lines
+        do not descend; proportional overlap units are not typed, so inverse
+        and triple-cocycle identities cannot be asserted.
+      result: "chartwise coordinate choices fail projective descent"
+      disposition: "blocking_for_line_selector"
+    variation_fragility:
+      branch_id: "REFUTE-V22-P4T02-B2-VARIATION-FRAGILITY-001"
+      target: "open robustness of common sector line under independent variation"
+      witness: "WIT-V22-P4T02-B2-EPSILON-SECTOR-SPLIT-001"
+      result: "the diagonal common-line locus has empty interior"
+      disposition: "blocking_without_line_locking_law"
+
+refuter_obstruction_record:
+  obstruction_id: "OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001"
+  target_claim: >-
+    The fixed P7 finite controls and bare smooth source patch naturally select
+    independently derived but common sector leading lines that remain common
+    under the declared independent product variation class.
+  target_milestone: "effective_metric_g_eff"
+  failed_premise: >-
+    The current source basis contains no
+    source_presentation_natural_line_locking_selector; fixed finite control
+    data are invariant under arbitrary GL(4,R) source-presentation derivatives,
+    but no projective tangent line is GL(4,R)-fixed.
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260810-001/artifacts/child_phys_math_p4_t02_b2_source_intrinsic_interface_repair.yaml"
+  countermodel_scope: "finite_local"
+  certificate_gap: "missing natural line-selection and projective-descent certificate"
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    repeated_burden: true
+    freeze_evaluation_required: true
+    active_freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    prior_attempts_considered:
+      - "RT-20260809-023"
+      - "RT-20260809-026"
+      - "RT-20260810-001"
+    freeze_if:
+      - >-
+        Shared leading commonity, a coordinate-fixed line, or diagonal-only
+        variation recurs without materially new source line-locking data.
+    do_not_freeze_if:
+      - >-
+        A materially new source-presentation-natural selector or an alternative
+        non-line-based principal construction is supplied and independently
+        stressed.
+    freeze_decision: "locally_frozen"
+    decision_reason: >-
+      RT023 inserted one shared tau, RT026 identified the preload and missing
+      sector-split stress, and this child proves the GL fixed-line obstruction
+      plus empty-interior theorem.  Replaying the same strategy is orbital.
+    next_allowed_route: "theoretical_selector"
+    frozen_scope: "shared-tau and equivalent undeclared line-stabilizer strategy"
+    nonfrozen_scope: "all other B2 candidates and future conservative source extensions"
+    status_update_path: ""
+    no_status_update_rationale: >-
+      This child artifact only recommends the local freeze; the parent owns
+      the fused completion, registry synchronization, and status transaction.
+  route_cycle_control:
+    cycle_family: "v22_p4_t02_b2_shared_tau_selector"
+    current_cycle_step: "candidate_constructor_with_refuter_support"
+    prior_related_tasks:
+      - "RT-20260809-023"
+      - "RT-20260809-026"
+    cycle_risk: "high"
+    orbit_avoidance_reason: >-
+      The current packet adds a new equivariant obstruction and exact
+      empty-interior theorem, then routes away from another shared-tau repair.
+    next_role_consequence: "theoretical-continuation-selector@0.1.0"
+  forbidden_conclusions:
+    - "The obstruction is not a global no-go theorem for B2 or the project."
+    - "Future conservative source extensions are not proved impossible."
+    - "No source law or canonical ontology is adopted or rejected."
+    - "No D7 or P2-T01 adequacy reevaluation follows."
+    - "B2 is not activated, viable, sufficient, adopted, or rejected."
+    - "P4-T03 is not unlocked or executed."
+    - "No physical cone, time orientation, scale, effective metric, coupling, or Einstein equation is derived."
+    - "No Gate, benchmark, proof, publication, push, or completed-derivation authority follows."
+
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  no_fog_check: true
+  obstruction_id: "OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001"
+  obstruction_record_path: "research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_line_selector_obstruction_v1.yaml"
+  constructed_components:
+    - "strict equipped-control subfamily scope"
+    - "coordinate-independent compact-open C1 first-jet topology"
+    - "three deterministic typed P7-T03 preparation/context bridges"
+    - "GL(4,R) equivariant-selector obstruction theorem"
+    - "product-topology diagonal empty-interior theorem with epsilon witness"
+    - "five Refuter-support failure branches"
+  failed_components:
+    - "full source-presentation-natural leading-line selection from current fixed data"
+    - "open common-line robustness under independent sector variations"
+    - "all-P7-sector equipment and protocol coverage"
+  missing_primitive: "source_presentation_natural_line_locking_selector"
+  bridge_attempt_status:
+    status: "typed_restricted_bridge_constructed_but_principal_line_bridge_obstructed"
+    candidate_map: "{B_{Rod,N},B_{Signal,N},B_{Detector,N}}"
+    missing_primitive: "source_presentation_natural_line_locking_selector"
+    downstream_promotion_blocks_preserved: true
+  no_fog_explanation: >-
+    F1, F2, and F5 receive exact restricted or intrinsic repairs.  F3 fails
+    because full source-presentation naturality would require a GL(4,R)-fixed
+    projective tangent line, which does not exist.  F4 fails because the
+    common-line diagonal has empty interior under independent product
+    variations.  Therefore the full candidate is not constructed; the exact
+    missing primitive and local obstruction are named.
+
+decisive_recommendation:
+  result: "precise_obstruction"
+  obstruction_id: "OBST-V22-P4T02-B2-NATURAL-LINE-LOCK-001"
+  missing_primitive: "source_presentation_natural_line_locking_selector"
+  local_freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  local_freeze_decision: "locally_frozen"
+  global_no_go: false
+  same_milestone_continuation_open: true
+  next_role: "theoretical-continuation-selector@0.1.0"
+  next_role_reason: >-
+    The complete candidate is not obtained.  A selector must choose a
+    materially distinct same-milestone packet: new source structure that can
+    carry a natural line, an alternative source-side irrelevance theorem, or
+    a non-line-based principal construction.  Another shared-tau replay is
+    locally frozen.
+
+authority_limits:
+  equipped_controls_exhaust_p7_sectors: false
+  full_sector_constructor_derived: false
+  current_ontology_derives_line_selector: false
+  source_law_adopted: false
+  source_law_rejected: false
+  canonical_ontology_modified: false
+  d7_adequacy_reevaluated: false
+  b2_activated: false
+  b2_viability_decided: false
+  p4_t03_unlocked: false
+  target_atlas_used: false
+  target_metric_used: false
+  physical_cone_claimed: false
+  physical_time_orientation_claimed: false
+  effective_metric_constructed: false
+  matter_coupling_constructed: false
+  einstein_equations_derived: false
+  gate_or_benchmark_authority_created: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  publication_authorized: false
+  push_authorized: false
+  completed_derivation_claimed: false

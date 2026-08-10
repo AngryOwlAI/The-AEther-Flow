@@ -1,0 +1,100 @@
+schema_id: "v22_p4_t02_b2_typed_operational_bridge_v1"
+task_id: "RT-20260810-001"
+job_id: "AJ-RT-20260810-001-001"
+bridge_family_id: "B-V22-P4T02-B2-EQUIPPED-P7-RATIONALIZED-PROTOCOL-V1"
+authority: "science_draft"
+status_label: "proposal-only"
+source_extension_category: "exact_constant_bridge_plus_proposal_only_finite_preparation_set_extension"
+sector_domain:
+  exact_controls:
+    - sector_id: "R"
+      protocol_role: "Rod_src"
+      carrier_addresses: ["b0", "b1", "b2"]
+      intervention: "i0"
+      horizon: 2
+      success_token: "endpoint_2"
+    - sector_id: "S"
+      protocol_role: "Signal_src"
+      carrier_addresses: ["b0", "b1", "b2"]
+      intervention: "i0"
+      horizon: 2
+      success_token: "arrived_2"
+    - sector_id: "D"
+      protocol_role: "Detector_src"
+      carrier_addresses: ["b0", "b1", "b2"]
+      intervention: "i0"
+      horizon: 2
+      success_token: "triggered_2"
+  full_p7_sector_bridge_claimed: false
+protocol_type_audit:
+  p7_t03_requirement: "Each protocol tuple (Control,P,I,Tokens,r,S,F) has a finite nonempty set P of declared preparation records."
+  exact_chain_protocol_preparations:
+    R: "p_R^0=(Control_Rod,delta_r0,2)"
+    S: "p_S^0=(Control_Signal,delta_s0,2)"
+    D: "p_D^0=(Control_Detector,delta_q0,2)"
+  consequence: "A nonconstant sample-to-preparation map is not a map into an exact existing chain protocol unless its finite image is explicitly added to that protocol's preparation set."
+bridge_layers:
+  exact_existing_protocol_bridge:
+    map_name: "B_s^0"
+    domain: "(R^3)^{G0}"
+    codomain: "the exact declared P7-T03 protocol request domain for equipped control s"
+    formula: "B_s^0(a) returns p_s^0 and the exact declared intervention horizon token alphabet total readout success set and failure classifier, independently of a"
+    status: "typed_total_but_constant"
+    preserves_sample_information: false
+    inverse_exists: false
+    exact_protocol_modified: false
+  finite_preparation_extension_bridge:
+    map_name: "B_{s,N}^{ext}"
+    quantization_parameter: "integer N>=1"
+    domain: "(R^3)^{G0}"
+    codomain: "Dom(P7Response_{s,N}^{ext}), a proposal-only finite-preparation extension using the exact equipped control and P7-T03 context"
+    rationalizer: "q_N(t)=sgn(t) floor(N min(|t|,1))/N with sgn(0)=0"
+    rationalizer_image: "{-1,-(N-1)/N,...,0,...,(N-1)/N,1}, a finite subset of Q"
+    steps:
+      - "Apply q_N componentwise."
+      - "For carrier component i, set z_i=sum_{x in G0}|q_N(a_xi)| in Q_nonnegative."
+      - "If Z=sum_i z_i is positive, set mu_i=z_i/Z; otherwise set mu=delta_b0."
+      - "Let P_{s,N}^{ext} be the finite image of the resulting preparation map together with the exact declared p_s^0."
+      - "Form a proposal-only protocol extension with P replaced by P_{s,N}^{ext} and all exact control intervention horizon token readout success and failure data unchanged."
+    zero_branch: "all clipped-rationalized samples zero implies mu=delta_b0"
+    finite_image_reason: "q_N has finite image and G0 and the carrier are finite, so the normalized preparation image is finite."
+    admissible_image:
+      - "mu_i is a nonnegative rational for every carrier address"
+      - "sum_i mu_i=1"
+      - "P_{s,N}^{ext} is finite and nonempty"
+      - "the preparation uses the exact finite equipped control"
+      - "the intervention horizon token alphabet readout success set and failure classifier are copied unchanged from P7-T03"
+    composition: "P7Response_{s,N}^{ext} composed with B_{s,N}^{ext} is typed on the equipped-control sample domain"
+    exact_protocol_modified: false
+    protocol_extension_adopted: false
+naturality:
+  presentation_scope: "exact equipment-preserving permutations of the three carrier addresses with transported protocol context"
+  statement: "The constant exact bridge commutes trivially when its initial address is transported. Clipped rationalization, absolute aggregation, normalization, and the zero branch commute with a simultaneous carrier permutation; the transported finite protocol extension therefore commutes with the exact equipment isomorphism."
+  arbitrary_source_diffeomorphism_claimed: false
+failure_branches:
+  malformed_sample: "nonfinite or untyped entries return malformed_source_bridge_input"
+  missing_protocol: "a P7 sector without an exact P7-T03 protocol returns outside_equipped_protocol_domain_not_refuted"
+  target_calibration_import: "any metric detector calibration benchmark answer or empirical threshold used in q_N returns forbidden_target_import"
+  readout_partiality: "a missing or multivalued P7 readout returns malformed_protocol_context"
+  zero_input: "uses the declared delta_b0 preparation and does not infer physical vacuum or no event"
+limitations:
+  - "The exact existing-protocol bridge is constant and discards all sample information."
+  - "The nontrivial finite-extension bridge is discontinuous at rationalization boundaries; operational typing does not establish continuum stability."
+  - "The nontrivial bridge enlarges the finite preparation set as proposal-only source-extension data and is not part of the protected P7-T03 record."
+  - "Both bridges supply formal bookkeeping preparations only; neither supplies empirical detector or device semantics."
+  - "Only the exact Rod Signal and Detector protocol controls are covered."
+  - "No leading-line selector, physical cone, metric, scale, or coupling follows."
+source_provenance:
+  p7_protocol_path: "research_control/tasks/RT-20260728-002/artifacts/source_operational_device_suite_candidate_v1.tex"
+  p7_protocol_sha256: "d6c818ee29f1a7e659e2f454aec21431d680b3d2d4df048fcf36f4aba87ba22a"
+  prior_candidate_path: "research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex"
+  prior_candidate_sha256: "6b35e208631b287cd4ec5c6e27bc73c8389c555cad1c8a3cde24021e35be4169"
+authority_limits:
+  physical_device_semantics_derived: false
+  empirical_response_derived: false
+  full_sector_universality_derived: false
+  exact_nonconstant_bridge_derived: false
+  finite_protocol_extension_adopted: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  physics_promotion_authorized: false
