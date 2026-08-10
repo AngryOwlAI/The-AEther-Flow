@@ -689,6 +689,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P3-T03-PARENT-FUSION-CONTROLLED-REFINEMENT-V1` `research_control/tasks/RT-20260809-015/artifacts/parent_fusion_notes_p3_t03_refinement.md`
 - `MD-V22-P3-T04-PARENT-FUSION-LINEAR-RESPONSE-V1` `research_control/tasks/RT-20260809-016/artifacts/parent_fusion_notes_p3_t04_linear_response.md`
 - `MD-V22-P4-T01-PARENT-FUSION-PRINCIPAL-SYMBOL-V1` `research_control/tasks/RT-20260809-018/artifacts/parent_fusion_notes_p4_t01_principal_symbol.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-AUDIT-V1` `research_control/tasks/RT-20260809-022/artifacts/parent_fusion_notes_p4_t02_b2_descriptor_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/parent_fusion_notes_p4_t02_b2_selector.md`
 - `MD-V22-P4-T02-PARENT-FUSION-HARD-FAIL-SCREEN-V1` `research_control/tasks/RT-20260809-019/artifacts/parent_fusion_notes_p4_t02_screen.md`
@@ -1378,6 +1379,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P3-T03-PARENT-FUSION-CONTROLLED-REFINEMENT-V1` `wiki/markdown/md-v22-p3-t03-parent-fusion-controlled-refinement-v1.md`
 - `WIKI-MD-V22-P3-T04-PARENT-FUSION-LINEAR-RESPONSE-V1` `wiki/markdown/md-v22-p3-t04-parent-fusion-linear-response-v1.md`
 - `WIKI-MD-V22-P4-T01-PARENT-FUSION-PRINCIPAL-SYMBOL-V1` `wiki/markdown/md-v22-p4-t01-parent-fusion-principal-symbol-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-PARENT-FUSION-HARD-FAIL-SCREEN-V1` `wiki/markdown/md-v22-p4-t02-parent-fusion-hard-fail-screen-v1.md`

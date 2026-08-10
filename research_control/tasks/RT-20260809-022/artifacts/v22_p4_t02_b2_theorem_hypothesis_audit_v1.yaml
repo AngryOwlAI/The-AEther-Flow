@@ -1,0 +1,120 @@
+schema_id: "v22_p4_t02_b2_theorem_hypothesis_audit_v1"
+artifact_id: "V22-P4-T02-B2-THEOREM-HYPOTHESIS-AUDIT-V1"
+task_id: "RT-20260809-022"
+job_id: "AJ-RT-20260809-022-001"
+status: "draft/control"
+candidate_status: "proposal-only"
+source_formalization_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex"
+source_formalization_sha256: "6b3e454048f1645f164e06dbebac08d1bd29b8a61918d98dcbf77d09c82156c0"
+
+new_mathematical_payload:
+  payload_id: "THM-V22-P4T02-B2-SOURCE-FIBER-FACTORIZATION-AUDIT"
+  payload_type: "definition_and_factorization_criterion"
+  statement: "For X=S_source x T_target x A_authority, an audit map F:X->Y is source-determined iff it is constant on the fibers of pi_S; by the universal property of the quotient by equal-source fibers, this is equivalent to existence of a unique set map F_source on the image of pi_S with F=F_source composed with pi_S."
+  physical_claim: false
+  proof_authority: false
+
+projective_gluing_core:
+  theorem_id: "THM-V22-P4T02-B2-PROJECTIVE-COMMON-PRINCIPAL-GLUING"
+  core_result: "PASS_CONDITIONAL"
+  hypotheses:
+    - hypothesis_id: "GL-H1"
+      statement: "Local reduced characteristic data are represented on source patches by nonzero homogeneous generators P_i."
+      target_import: false
+      authority_import: false
+      status: "clean_but_instance_evidence_open"
+    - hypothesis_id: "GL-H2"
+      statement: "On every overlap P_i=g_ij P_j for nowhere-zero degree-zero source units g_ij."
+      target_import: false
+      authority_import: false
+      status: "clean_explicit_relation_required"
+    - hypothesis_id: "GL-H3"
+      statement: "The inverse identities g_ji=g_ij^{-1} hold."
+      target_import: false
+      authority_import: false
+      status: "clean_explicit_relation_required"
+    - hypothesis_id: "GL-H4"
+      statement: "The triple-overlap cocycle g_ij g_jk g_ki=1 holds."
+      target_import: false
+      authority_import: false
+      status: "clean_explicit_relation_required"
+    - hypothesis_id: "GL-H5"
+      statement: "The generators come from fully reduced source-side sector symbols or locally principal characteristic ideals."
+      target_import: false
+      authority_import: false
+      status: "clean_but_locally_principal_condition_must_be_explicit_for_nonsquare_cases"
+    - hypothesis_id: "GL-H6"
+      statement: "No fixed degree, signature, time orientation, physical scale, target atlas, metric, or desired cone selects a representative."
+      target_import: false
+      authority_import: false
+      status: "clean_guard"
+  conclusion_scope: "The explicit unit and cocycle hypotheses support gluing to a source projective hypersurface and associated line-bundle section."
+  audit_conclusion: "The core conditional theorem is source-only and survives the audit. It supplies no instance and no physical causal interpretation."
+
+uniqueness_addendum:
+  source_sentence_scope: "Any other family with the same reduced local hypersurfaces differs locally by nowhere-zero units."
+  audit_result: "FAIL_SCOPE_OVERCLAIM"
+  finding_id: "AUD-V22-P4T02-UNIQUENESS-001"
+  defect: "Equality of real projective zero sets does not imply unit association of homogeneous generators."
+  counterexample:
+    source_covector_space: "R4 with coordinates (k0,k1,k2,k3)"
+    first_generator: "P(k)=k0"
+    second_generator: "Q(k)=k0*(k0^2+k1^2)"
+    homogeneous_degrees:
+      - 1
+      - 3
+    both_square_free_over_R: true
+    same_real_projective_zero_set: true
+    equality_reason: "Q=0 iff k0=0 or k0^2+k1^2=0; the second real locus has k0=k1=0 and is contained in k0=0."
+    quotient: "Q/P=k0^2+k1^2"
+    quotient_is_nowhere_zero_unit: false
+    decisive_point: "The quotient vanishes whenever k0=k1=0 and also depends on the covector, so it is not an overlap source unit."
+  repair_options:
+    - "Delete or weaken the uniqueness-from-real-zero-set sentence."
+    - "Retain uniqueness only when explicit nowhere-zero unit association is supplied."
+    - "If recovering generators from ideals, require equality of appropriate locally principal characteristic ideals and a minimal-generator convention in a ring where equal principal ideals imply unit association."
+  effect_on_core_theorem: "none; the core gluing theorem already assumes explicit unit and cocycle data"
+  effect_on_descriptor_instance: "blocks reliance on the uniqueness addendum and strengthens future construction evidence"
+
+finite_trace_counterpair_audit:
+  theorem_id: "THM-V22-P4T02-B2-FINITE-TRACE-PRINCIPAL-UNDERDETERMINATION"
+  source_counterpair_sha256: "e3a8d24c5eda70aa5c8a7c389828ddaee58887e90ab9260f381748423460f9a6"
+  audit_result: "PASS_WITH_DECLARED_SCOPE"
+  premises:
+    - premise_id: "FT-H1"
+      statement: "Xi is a finite sampling set in a local smooth source chart."
+      target_import: false
+      authority_import: false
+    - premise_id: "FT-H2"
+      statement: "Only finite r-jet traces at Xi are held fixed."
+      target_import: false
+      authority_import: false
+    - premise_id: "FT-H3"
+      statement: "A nonzero smooth source scalar f has vanishing r-jet on Xi."
+      target_import: false
+      authority_import: false
+    - premise_id: "FT-H4"
+      statement: "The perturbed first-order source operators agree on the admitted traces but split projective principal classes where f is nonzero."
+      target_import: false
+      authority_import: false
+  exact_scope: "finite sampled trace interfaces on one smooth source patch"
+  forbidden_overread: "not a full P7 continuum reproduction, global no-go, or future-extension impossibility"
+
+theorem_audit_summary:
+  theorem_or_definition_payload_count: 3
+  core_conditional_theorem_pass_count: 1
+  scoped_counterpair_pass_count: 1
+  scope_defect_count: 1
+  explicit_target_import_count: 0
+  explicit_authority_import_count: 0
+  overall_result: "conditional_theorem_pass_with_one_noncore_uniqueness_scope_obstruction"
+
+authority_limits:
+  theorem_repaired_in_source: false
+  descriptor_instance_constructed: false
+  source_law_adopted: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  global_no_go_claimed: false
+  proof_authority: false
+  physics_promotion_authorized: false

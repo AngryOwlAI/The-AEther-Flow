@@ -1292,15 +1292,22 @@ items:
   stop_conditions: Nonhyperbolicity, instability, inequivalent unselected cones, signature
     loss, sector-dependent propagation without a physical quotient, hidden metric
     primitive, or repeated frozen route.
-  implementation_status: b2_descriptor_specification_complete_smuggling_audit_pending
-  runtime_role_family: smuggling-auditor@0.2.0
-  runtime_supporting_perspective: ontology-formalizer@0.2.0 and candidate-constructor@0.2.0
-  runtime_strategy_id: audit_v22_p4_t02_b2_continuum_lift_descriptor_v1
+  implementation_status: b2_descriptor_smuggling_audit_complete_guarded_construction_pending
+  runtime_role_family: candidate-constructor@0.2.0
+  runtime_supporting_perspective: smuggling-auditor@0.2.0 and refuter@0.2.0
+  runtime_strategy_id: construct_v22_p4_t02_b2_descriptor_instance_under_audited_source_factorization_v1
   runtime_selected_candidate_id: CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1
-  runtime_transition_id: AUDIT_B2_DESCRIPTOR_LAW
+  runtime_transition_id: CONSTRUCT_B2_DESCRIPTOR_INSTANCE_UNDER_AUDIT_GUARDS
   runtime_execution_ready_after_checkpoint: true
   runtime_b1_primary_terminated: true
   runtime_descriptor_specification_complete: true
+  runtime_descriptor_smuggling_audit_complete: true
+  runtime_descriptor_audit_verdict: conditional_specification_level_no_smuggling_pass_with_one_theorem_scope_obstruction_and_instance_audit_required
+  runtime_source_fiber_factorization_required: true
+  runtime_explicit_source_unit_cocycle_required: true
+  runtime_locally_principal_characteristic_evidence_required: true
+  runtime_uniqueness_addendum_quarantined: true
+  runtime_core_gluing_theorem_retained_conditionally: true
   runtime_descriptor_instance_complete: false
   runtime_adequacy_reevaluated: false
   runtime_scoped_finite_trace_obstruction_recorded: true

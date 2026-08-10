@@ -1,0 +1,132 @@
+schema_id: "v22_p4_t02_b2_descriptor_field_audit_matrix_v1"
+artifact_id: "V22-P4-T02-B2-DESCRIPTOR-FIELD-AUDIT-MATRIX-V1"
+task_id: "RT-20260809-022"
+job_id: "AJ-RT-20260809-022-001"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+status: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+audit_scope: "all ten components of the RT-20260809-021 descriptor specification"
+source_descriptor_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_specification_v1.yaml"
+source_descriptor_sha256: "82a48f1e82f45012908d9eb8df389ed256bafba937ef6c8de0776b630ab71a65"
+
+no_smuggling_criterion:
+  criterion_id: "NSC-V22-P4T02-SOURCE-FIBER-FACTORIZATION-001"
+  enriched_input: "X = S_source x T_target x A_authority"
+  projection: "pi_S:X->S_source"
+  definition: "An audit term F:X->Y is source-determined exactly when it is constant on every fiber of pi_S, equivalently when F factors as F_source composed with pi_S."
+  target_invariance_test: "Holding S_source fixed while changing T_target must not change F."
+  authority_invariance_test: "Holding S_source fixed while changing roles, registries, validation outcomes, generated reports, or workflow state must not change F."
+  epistemic_limit: "A source-typed declaration can pass this textual criterion without being derived by the current ontology."
+
+summary:
+  descriptor_component_count: 10
+  component_records_present: 10
+  explicit_target_import_count: 0
+  explicit_authority_import_count: 0
+  specification_level_pass_count: 10
+  instance_validated_count: 0
+  populated_instance_reaudit_required_count: 10
+  highest_risk_component_id: "D5_COMPATIBILITY_RELATION"
+  overall_result: "conditional_specification_level_source_purity_pass_instance_reaudit_required"
+
+components:
+  - component_id: "D0_SECTOR_SET"
+    symbol: "S"
+    source_status: "fixed_exact_P7_input"
+    direct_target_import: false
+    direct_authority_import: false
+    audit_result: "conditional_pass"
+    import_surface: "A later implementation could silently select or discard sectors by desired common-cone success."
+    instance_evidence_rule: "Sector membership and exclusions must be traceable only to the immutable P7 contract and declared source equipment."
+  - component_id: "D1_CONTINUUM_FIELDS"
+    symbol: "{F_s}"
+    source_status: "uninstantiated_source_bundle_slots"
+    direct_target_import: false
+    direct_authority_import: false
+    audit_result: "conditional_pass_instance_open"
+    import_surface: "Bundle rank, components, regularity, and strata could be reverse-engineered from a target tensor, tetrad, metric, or desired equation."
+    instance_evidence_rule: "Every rank, fiber type, regularity class, and stratum must factor through declared source objects with a provenance witness."
+  - component_id: "D2_FINITE_TO_CONTINUUM_LIFT"
+    symbol: "L"
+    source_status: "uninstantiated_natural_map_slots"
+    direct_target_import: false
+    direct_authority_import: false
+    audit_result: "conditional_pass_instance_open_high_risk"
+    import_surface: "The lift, convergence topology, norm, or refinement error could import a target metric, volume form, distance, or desired principal cone."
+    instance_evidence_rule: "The maps, topology or norm, and error sequence must be constructed from source incidence, source measures, or separately declared source-extension primitives and must pass fiber invariance."
+  - component_id: "D3_SOURCE_QUOTIENT"
+    symbol: "Q_src"
+    source_status: "uninstantiated_groupoid_and_descent_slots"
+    direct_target_import: false
+    direct_authority_import: false
+    audit_result: "conditional_pass_instance_open"
+    import_surface: "Passive coordinate covariance could be promoted by declaration into physical gauge equivalence."
+    instance_evidence_rule: "Each groupoid generator needs an independent source-redundancy proof; coordinate covariance alone is not physical equivalence."
+  - component_id: "D3_OUTPUT_QUOTIENT"
+    symbol: "Q_out"
+    source_status: "uninstantiated_groupoid_observable_and_descent_slots"
+    direct_target_import: false
+    direct_authority_import: false
+    audit_result: "conditional_pass_instance_open"
+    import_surface: "Output equivalence or invariant observables could be chosen to force reconstruction descent or erase failed responses."
+    instance_evidence_rule: "Generators and observables must be fixed source-operationally before testing descent and may not depend on desired adequacy."
+  - component_id: "D4_SECTOR_EQUATIONS"
+    symbol: "{E_s}"
+    source_status: "uninstantiated_operator_and_reduction_slots"
+    direct_target_import: false
+    direct_authority_import: false
+    audit_result: "conditional_pass_instance_open_high_risk"
+    import_surface: "Coefficients, connections, volume elements, reductions, determinant choices, or characteristic ideals could encode a target metric or desired dispersion law."
+    instance_evidence_rule: "Each coefficient and reduction must have source provenance; a single polynomial requires a locally principal reduced characteristic ideal or an explicit invariant generator construction."
+  - component_id: "D5_COMPATIBILITY_RELATION"
+    symbol: "C"
+    source_status: "uninstantiated_selector_relation"
+    direct_target_import: false
+    direct_authority_import: false
+    audit_result: "conditional_pass_instance_open_critical_risk"
+    import_surface: "C could be defined as equality with a desired common cone, GR-like cone, successful benchmark, or a relation selected only because it activates B2."
+    instance_evidence_rule: "C must be fixed from source objects and source-operational data before sector comparison; common-sector equality is an output test, not its derivation."
+  - component_id: "D5_COMMON_PRINCIPAL_TARGET"
+    symbol: "P_src"
+    source_status: "uninstantiated_projective_class"
+    direct_target_import: false
+    direct_authority_import: false
+    audit_result: "conditional_pass_instance_open_with_uniqueness_scope_defect"
+    import_surface: "A local generator could be chosen by quadratic degree, Lorentzian signature, time orientation, scale, target metric, or desired GR cone."
+    instance_evidence_rule: "Use only reduced source characteristic ideals and explicit nowhere-zero source-unit overlap relations; equality of real projective zero sets alone is insufficient."
+  - component_id: "D6_OPERATIONAL_NO_TARGET_RECEIPT"
+    symbol: "Omega"
+    source_status: "schema_defined_instance_unconstructed"
+    direct_target_import: false
+    direct_authority_import: false
+    audit_result: "conditional_pass_instance_open"
+    import_surface: "Device labels, validation receipts, registry metadata, or workflow success could be treated as physical detector, clock, or matter evidence."
+    instance_evidence_rule: "Each response needs a finite source-device bridge, invariant readout, scale status, and falsifier; Omega reports provenance but cannot create it."
+  - component_id: "D7_ADEQUACY_PROCEDURE"
+    symbol: "N"
+    source_status: "interface_defined_not_evaluated"
+    direct_target_import: false
+    direct_authority_import: false
+    audit_result: "conditional_pass_interface_only"
+    import_surface: "A validator PASS, role decision, or desired P2-T01 verdict could be fed back as a mathematical premise or used to fill missing descriptor fields."
+    instance_evidence_rule: "N may consume only a complete independently evidenced D0-D6 instance and must emit one necessary-condition verdict without changing its inputs."
+
+source_extension_classification:
+  classification: "conservative_definitional_extension_schema_with_uninstantiated_primitive_slots"
+  current_ontology_derives_populated_slots: false
+  forbidden_target_import_as_written: false
+  future_population_can_create_new_primitives: true
+  future_population_requires_fresh_smuggling_audit: true
+
+authority_limits:
+  descriptor_instance_constructed: false
+  source_law_adopted: false
+  b2_activated: false
+  adequacy_reevaluated: false
+  p4_t03_unlocked: false
+  physical_cone_constructed: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  proof_authority: false
+  physics_promotion_authorized: false

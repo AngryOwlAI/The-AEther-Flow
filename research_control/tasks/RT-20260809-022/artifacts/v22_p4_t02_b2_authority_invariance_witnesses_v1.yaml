@@ -1,0 +1,54 @@
+schema_id: "v22_p4_t02_b2_authority_invariance_witnesses_v1"
+artifact_id: "V22-P4-T02-B2-AUTHORITY-INVARIANCE-WITNESSES-V1"
+task_id: "RT-20260809-022"
+job_id: "AJ-RT-20260809-022-001"
+status: "draft/control"
+criterion_id: "NSC-V22-P4T02-SOURCE-FIBER-FACTORIZATION-001"
+scope: "textual descriptor schema, theorem premises, counterpair premises, and proof obligations"
+witness_count: 6
+witnesses:
+  - witness_id: "AINV-01"
+    held_fixed: "all source mathematical inputs"
+    varied: "execution role name and role version"
+    required_result: "descriptor fields, theorem truth values, and counterpair comparison remain unchanged"
+    audit_result: "PASS"
+  - witness_id: "AINV-02"
+    held_fixed: "all source mathematical inputs"
+    varied: "validator status from PASS to FAIL"
+    required_result: "mathematical objects and conclusions remain unchanged; only transaction readiness changes"
+    audit_result: "PASS"
+  - witness_id: "AINV-03"
+    held_fixed: "all source mathematical inputs"
+    varied: "registry row identifier, row order, and generated metadata"
+    required_result: "descriptor fields and mathematical conclusions remain unchanged"
+    audit_result: "PASS"
+  - witness_id: "AINV-04"
+    held_fixed: "all source mathematical inputs"
+    varied: "generated wiki, current-frontier report, or retrieval-cache availability"
+    required_result: "mathematical objects and conclusions remain unchanged"
+    audit_result: "PASS"
+  - witness_id: "AINV-05"
+    held_fixed: "all source mathematical inputs"
+    varied: "candidate activation flag, Gate status, and benchmark outcome"
+    required_result: "no descriptor component, compatibility relation, or principal object changes"
+    audit_result: "PASS"
+  - witness_id: "AINV-06"
+    held_fixed: "all source mathematical inputs"
+    varied: "desired target metric, target atlas, signature, orientation, scale, and GR cone"
+    required_result: "the textual schema and conditional theorems remain unchanged; any populated instance that changes fails the audit"
+    audit_result: "PASS_AT_SPECIFICATION_LEVEL_INSTANCE_REAUDIT_REQUIRED"
+summary:
+  pass_count: 6
+  failure_count: 0
+  explicit_process_import_count: 0
+  textual_authority_invariance_established: true
+  instance_authority_invariance_established: false
+  reason_instance_open: "No populated descriptor instance exists to test."
+authority_limits:
+  validation_success_is_scientific_evidence: false
+  registry_metadata_is_source_premise: false
+  role_authority_is_source_premise: false
+  generated_derivative_is_source_premise: false
+  descriptor_instance_constructed: false
+  b2_activated: false
+  p4_t03_unlocked: false

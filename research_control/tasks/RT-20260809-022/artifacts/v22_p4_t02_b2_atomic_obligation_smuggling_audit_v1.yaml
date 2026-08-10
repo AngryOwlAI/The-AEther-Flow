@@ -1,0 +1,264 @@
+schema_id: "v22_p4_t02_b2_atomic_obligation_smuggling_audit_v1"
+artifact_id: "V22-P4-T02-B2-ATOMIC-OBLIGATION-SMUGGLING-AUDIT-V1"
+task_id: "RT-20260809-022"
+job_id: "AJ-RT-20260809-022-001"
+status: "draft/control"
+candidate_id: "CAND-V22-B2-P7-COMMON-PRINCIPAL-LIFT-V1"
+source_matrix_path: "research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_proof_obligation_matrix_v1.yaml"
+source_matrix_sha256: "53e78abd61db464bd13b666a5cb2351b41877e31b0efac84a00a97333c9378d1"
+obligation_family_count: 7
+atomic_obligation_count: 35
+audit_record_count: 35
+all_obligations_audited: true
+instance_evidence_supplied: false
+audit_legend:
+  clean_guard: "The obligation explicitly blocks an import or overread."
+  clean_open: "The obligation is source-compatible as text but requires populated evidence."
+  clean_high_risk: "The obligation is source-compatible as text and exposes a likely target-import surface during construction."
+  scope_repair: "The obligation needs the audit's stronger theorem-scope condition before discharge."
+
+families:
+  - family_id: "D1_FIELDS_REGULARITY"
+    records:
+      - obligation_id: "D1-O1"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "bundle rank or domain chosen from a desired target field"
+        discharge_guard: "source provenance for domain, bundle, rank, and regularity"
+      - obligation_id: "D1-O2"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "operator order chosen to reproduce a desired dispersion relation"
+        discharge_guard: "source derivation of order and differentiability burden"
+      - obligation_id: "D1-O3"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "discarding rank-change loci because they spoil the desired cone"
+        discharge_guard: "complete source-side stratum inventory including failures"
+      - obligation_id: "D1-O4"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "typing only cases that admit local deterministic target fields"
+        discharge_guard: "source-motivated coverage of deterministic, stochastic, marked, partial, and nonlocal cases"
+      - obligation_id: "D1-O5"
+        audit_class: "clean_guard"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "target atlas, metric, tetrad, coframe, or physical time"
+        discharge_guard: "component-wise source-fiber factorization witness"
+  - family_id: "D2_FINITE_TO_CONTINUUM_LIFT"
+    records:
+      - obligation_id: "D2-O1"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "refinement defined by target distance or target volume"
+        discharge_guard: "source-incidence or separately justified source refinement"
+      - obligation_id: "D2-O2"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "continuum codomain imported from desired target tensor types"
+        discharge_guard: "maps and codomains typed from declared D1 source bundles"
+      - obligation_id: "D2-O3"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "naturality asserted only for transformations preserving desired output"
+        discharge_guard: "all exact P7 relabelings tested independently of output success"
+      - obligation_id: "D2-O4"
+        audit_class: "clean_high_risk"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "metric, measure, or topology imported to define convergence"
+        discharge_guard: "named source-derived topology or explicit proposal-only source extension with assumption cost"
+      - obligation_id: "D2-O5"
+        audit_class: "clean_high_risk"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "selector chosen because it returns the common principal class"
+        discharge_guard: "independent source selector plus explicit defeat of the finite-trace counterpair"
+  - family_id: "D3_SOURCE_OUTPUT_QUOTIENTS"
+    records:
+      - obligation_id: "D3-O1"
+        audit_class: "clean_high_risk"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "passive source coordinates declared physical gauge"
+        discharge_guard: "independent redundancy proof for every source groupoid generator"
+      - obligation_id: "D3-O2"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "output quotient chosen to erase disagreement"
+        discharge_guard: "predeclared operational observables and generators"
+      - obligation_id: "D3-O3"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "regular patch chosen after observing target-like behavior"
+        discharge_guard: "source-defined common patch and explicit excluded strata"
+      - obligation_id: "D3-O4"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "representative selected with target geometry"
+        discharge_guard: "representative-free descent proof"
+      - obligation_id: "D3-O5"
+        audit_class: "clean_guard"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "singular or nonlocal cases silently discarded"
+        discharge_guard: "fail-closed classification of every declared exceptional case"
+  - family_id: "D4_SECTOR_EQUATIONS_REDUCTION"
+    records:
+      - obligation_id: "D4-O1"
+        audit_class: "clean_high_risk"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "metric, connection, volume, or target dispersion encoded in coefficients"
+        discharge_guard: "coefficient-level source provenance and fiber-factorization witness"
+      - obligation_id: "D4-O2"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "constraints chosen to remove undesired characteristics"
+        discharge_guard: "constraints derived before principal comparison"
+      - obligation_id: "D4-O3"
+        audit_class: "clean_high_risk"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "redundancies declared because they improve the target cone"
+        discharge_guard: "independent null-direction and equation-syzygy evidence"
+      - obligation_id: "D4-O4"
+        audit_class: "clean_guard"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "unreduced symbol used to manufacture a determinant"
+        discharge_guard: "ordered constraint and redundancy reduction receipt"
+      - obligation_id: "D4-O5"
+        audit_class: "scope_repair"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "determinant imposed on a nonsquare symbol or one polynomial assumed without local principality"
+        discharge_guard: "square reduced determinant or invariant characteristic ideal; single-generator use additionally requires local principality or explicit generator data"
+  - family_id: "D5_COMMON_PRINCIPAL_COMPATIBILITY"
+    records:
+      - obligation_id: "D5-O1"
+        audit_class: "clean_high_risk"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "compatibility relation defined by desired common-cone success"
+        discharge_guard: "C fixed source-side before comparison; equality is an output filter"
+      - obligation_id: "D5-O2"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "sectors or patches removed after failure"
+        discharge_guard: "all predeclared sectors on one predeclared regular patch"
+      - obligation_id: "D5-O3"
+        audit_class: "scope_repair"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "unit association inferred from equality of real zero sets"
+        discharge_guard: "explicit nowhere-zero source-unit relations; zero-set equality alone is insufficient"
+      - obligation_id: "D5-O4"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "coordinate covariance treated as physical invariance"
+        discharge_guard: "explicit inverse, cocycle, and frame transformation equations"
+      - obligation_id: "D5-O5"
+        audit_class: "clean_high_risk"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "norm, perturbation class, or stability threshold imported from target geometry"
+        discharge_guard: "source-derived variation class, norm or topology, and uniform stability bound"
+  - family_id: "D6_OPERATIONAL_NO_TARGET_RECEIPT"
+    records:
+      - obligation_id: "D6-O1"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "finite device label promoted to continuum detector semantics"
+        discharge_guard: "explicit finite source-device bridge and invariant readout"
+      - obligation_id: "D6-O2"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "physical scale borrowed from a benchmark or target metric"
+        discharge_guard: "scale status and falsifier stated without target calibration"
+      - obligation_id: "D6-O3"
+        audit_class: "clean_guard"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "target atlas, metric, tetrad, coframe, GR cone, or benchmark fit"
+        discharge_guard: "negative provenance receipt plus source-fiber invariance"
+      - obligation_id: "D6-O4"
+        audit_class: "clean_guard"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "generated derivatives, registries, roles, validators, or process success"
+        discharge_guard: "authority-invariance witness set AINV-01 through AINV-06"
+      - obligation_id: "D6-O5"
+        audit_class: "clean_guard"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "mathematical characteristic set called a causal cone or clock law"
+        discharge_guard: "separate mathematical and physical claim layers"
+  - family_id: "D7_P2_T01_ADEQUACY_INTERFACE"
+    records:
+      - obligation_id: "D7-O1"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "missing fields filled from desired verdict"
+        discharge_guard: "all ten fields populated from one independently evidenced instance"
+      - obligation_id: "D7-O2"
+        audit_class: "clean_open"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "ranks evaluated on different cherry-picked patches"
+        discharge_guard: "same predeclared regular patch for every rank and independence test"
+      - obligation_id: "D7-O3"
+        audit_class: "clean_guard"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "exceptional scopes omitted to obtain passage"
+        discharge_guard: "complete scope classification"
+      - obligation_id: "D7-O4"
+        audit_class: "clean_guard"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "validator or role decision treated as the adequacy verdict"
+        discharge_guard: "deterministic N evaluation only after D0-D6 completion"
+      - obligation_id: "D7-O5"
+        audit_class: "clean_guard"
+        direct_target_import: false
+        direct_authority_import: false
+        import_surface: "necessary-condition passage promoted to geometry or benchmark evidence"
+        discharge_guard: "claim-boundary lock"
+
+summary:
+  clean_guard_count: 9
+  clean_open_count: 17
+  clean_high_risk_count: 7
+  scope_repair_count: 2
+  explicit_target_import_count: 0
+  explicit_authority_import_count: 0
+  discharged_obligation_count: 0
+  overall_result: "all_35_textually_source_compatible_none_discharged_three_require_strengthened_scope"
+
+authority_limits:
+  obligation_audit_is_instance_evidence: false
+  obligation_discharged_count: 0
+  descriptor_instance_constructed: false
+  b2_activated: false
+  adequacy_reevaluated: false
+  p4_t03_unlocked: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

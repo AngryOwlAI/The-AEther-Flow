@@ -459,6 +459,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-PREPRINCIPAL-V1` `research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex`
 - `TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1` `research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex`
 - `TEX-V22-P4-T02-B2-CONTINUUM-LIFT-DESCRIPTOR-FORMALIZATION-V1` `research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex`
+- `TEX-V22-P4-T02-B2-DESCRIPTOR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260809-022/artifacts/v22_p4_t02_b2_descriptor_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_fallback_descriptor_selection_v1.tex`
 - `TEX-V22-P4-T02-HYPERBOLICITY-UNIVERSALITY-ROBUSTNESS-HARD-FAIL-SCREEN-V1` `research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex`
 

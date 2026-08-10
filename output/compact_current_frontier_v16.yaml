@@ -7,50 +7,50 @@ generated_from:
   - "research_control/current_frontier.md"
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
-  - "research_control/handoffs/handoff-0991.yaml"
+  - "research_control/handoffs/handoff-0992.yaml"
   - "research_control/program_state.yaml"
 report_provenance:
   schema_id: "generated_report_provenance_v1"
   policy_id: "p13_t07_live_generated_report_freshness_v1"
   report_class: "compact_current_frontier"
-  source_commit: "bb708f994f611d713efe1f967dba3fe238773d0a"
+  source_commit: "df3665ae3d7445dff6acd7c0b8fb207155d8ce39"
   source_hashes:
     - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
       sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
     - path: "registries/RESEARCH_TASK_REGISTRY.csv"
-      sha256: "6b2e596212e4dee7b900222db108d25c704d146bfef2a9a7524b8464018709bf"
+      sha256: "f272b528213e005a5c207029c76c056dd30b779426abb75a3fb3013f5e274d25"
     - path: "research_control/current_frontier.md"
-      sha256: "b4f8228fd68c7a3abeaaba387497d302bfa153cb68c9a87db30252cff625680f"
-    - path: "research_control/handoffs/handoff-0991.yaml"
-      sha256: "d4ca051a725237f9f5c0c2884f0c8df70751a913ae045f5edb79ff2177c70033"
+      sha256: "4ec832f19a46e8fa21ff793aba1e1229c106a377667f4ce9c05381b62dd3fdb0"
+    - path: "research_control/handoffs/handoff-0992.yaml"
+      sha256: "2be141beba66b24b1dee0bcd16ea846d7ebf9a1462e91c463add35bd20527aca"
     - path: "research_control/program_state.yaml"
-      sha256: "7689e5ea10d38f1798f3ad451bd59a685ea95a1eae41619bb887ea9c30b7cc08"
+      sha256: "8103d080927e45d4bca0facf0add7ce73331f23c809856f04757794cb8d9b7b3"
     - path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml"
       sha256: "dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"
     - path: "scripts/research_control/generated_report_provenance.py"
       sha256: "af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"
     - path: "scripts/research_control/render_compact_current_frontier_v16.py"
       sha256: "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
-  source_manifest_sha256: "b6c74f0142b2ca9cbf335e2290c2ac5833d949927ef5852b28842bf5d527025d"
+  source_manifest_sha256: "f9a76899068771d59ecd7324101b6619a98ea99b303968ad503ffb2e349392c5"
   source_path_count: "12"
-  generation_time: "2026-08-09T22:55:12Z"
-  task_count: "1246"
+  generation_time: "2026-08-10T00:13:46Z"
+  task_count: "1247"
   maximum_commit_lag: "1"
   freshness_status: "fresh_at_generation"
   generated_view_is_authority: false
   physics_promotion_authorized: false
   proof_authority: false
 active_state:
-  active_task_id: "RT-20260809-021"
-  latest_handoff_id: "handoff-0991"
-  current_status: "v22_p4_t02_b2_descriptor_specification_complete_checkpoint_pending"
+  active_task_id: "RT-20260809-022"
+  latest_handoff_id: "handoff-0992"
+  current_status: "v22_p4_t02_b2_descriptor_audit_complete_checkpoint_pending"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260809-021"
-  latest_research_handoff_id: "handoff-0991"
-  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-021-001. After it commits, execute exactly one V22 P4-T02 ontology-law-research-packet under smuggling-auditor@0.2.0 to audit every descriptor field, theorem hypothesis, counterpair premise, and atomic obligation for hidden target or authority import; do not construct a descriptor instance, reevaluate adequacy, activate B2, execute P4-T03, or take any protected or external action."
+  latest_research_task_id: "RT-20260809-022"
+  latest_research_handoff_id: "handoff-0992"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260809-022-001. After it commits, execute exactly one V22 P4-T02 ontology-law-research-packet under candidate-constructor@0.2.0 to construct a complete proposal-only descriptor instance or return a precise construction obstruction under source-fiber factorization, source-provenance, local-principality, and explicit-unit cocycle guards; do not reevaluate adequacy, activate B2, execute P4-T03, or take any protected or external action."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -58,10 +58,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "audit_v22_p4_t02_b2_continuum_lift_descriptor_v1"
-  role_family: "smuggling-auditor@0.2.0"
+  route_id: "construct_v22_p4_t02_b2_descriptor_instance_under_audited_source_factorization_v1"
+  role_family: "candidate-constructor@0.2.0"
   target_derivation_milestone: "effective_metric_g_eff"
-  milestone_burden: "Audit every descriptor field, theorem hypothesis, counterpair premise, and atomic obligation for hidden target geometry, physical interpretation, or authority import before construction."
+  milestone_burden: "Populate every B2 descriptor component from source data, prove explicit source-unit cocycles and all 35 obligations, or return a precise construction obstruction, without adequacy reevaluation or activation."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -371,7 +371,7 @@ blocked_physical_targets:
       - "no_global_theory_rejection"
 distance_to_gr:
   delta:
-    effect: "obstruction_recorded"
+    effect: "audit_obstruction_recorded"
     changed: false
     milestone: "effective_metric_g_eff"
     burden_id: "g_eff"
