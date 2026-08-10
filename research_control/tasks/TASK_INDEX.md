@@ -2,7 +2,7 @@
 
 Generated navigation support only. This index is not task authority, physics proof authority, benchmark authority, Gate Chair authority, or completed-derivation evidence.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-10T16:13:10Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"c050e3eaba242f7b1a46eea8c92e35a93260189c","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"3ccb95cc14243952563b24957ed1f06c209581040909fe3a3971747fe20fe5db"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"b9c362dffbd9c6948384d259ce46d27a46e9793ab5e249c6fd1794bbc1e8b19f"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"dd27756f26e1351c94ca777fb7b92cae441f8c94c7909949313c0c3a7e215f88"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"3da6f55dd8aee47a84ac60c56d23687d02ab54813bb1c95fd9b912c41bface19","source_path_count":"5054","task_count":"1265"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-10T17:53:54Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"bbb17abc6b7edeeae01026884fba6d277d4ace93","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"c7a54d3ea4ab0c7dc6a128b6d623468fc8361ba67b87c91d484a3d04b4962e27"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"9ddfa0e842d6379832499f3ee1d46a1566bb77c798d65c5d2cf850b9b73c8294"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"034c1a3b131b6afa10a530069d2e6937d4b103eb34962c942890da32659fe975"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"07f9ab9ef7e214c9cbfa5cff245467bee7b0cdd5407d8cf3445d2f0e4228c4e7","source_path_count":"5058","task_count":"1266"} -->
 
 ## Generated-Report Provenance
 
@@ -11,21 +11,21 @@ Generated navigation support only. This index is not task authority, physics pro
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_task_index` |
-| Source commit | `c050e3eaba242f7b1a46eea8c92e35a93260189c` |
-| Source-derived generation time | `2026-08-10T16:13:10Z` |
-| Tracked task count | 1265 |
-| Exact source-path count | 5054 |
-| Source manifest SHA-256 | `3da6f55dd8aee47a84ac60c56d23687d02ab54813bb1c95fd9b912c41bface19` |
+| Source commit | `bbb17abc6b7edeeae01026884fba6d277d4ace93` |
+| Source-derived generation time | `2026-08-10T17:53:54Z` |
+| Tracked task count | 1266 |
+| Exact source-path count | 5058 |
+| Source manifest SHA-256 | `07f9ab9ef7e214c9cbfa5cff245467bee7b0cdd5407d8cf3445d2f0e4228c4e7` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `3ccb95cc14243952563b24957ed1f06c209581040909fe3a3971747fe20fe5db`
+- `registries/AGENT_JOB_REGISTRY.csv`: `c7a54d3ea4ab0c7dc6a128b6d623468fc8361ba67b87c91d484a3d04b4962e27`
 - `registries/AGENT_ROLE_REGISTRY.csv`: `847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `b9c362dffbd9c6948384d259ce46d27a46e9793ab5e249c6fd1794bbc1e8b19f`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `dd27756f26e1351c94ca777fb7b92cae441f8c94c7909949313c0c3a7e215f88`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `9ddfa0e842d6379832499f3ee1d46a1566bb77c798d65c5d2cf850b9b73c8294`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `034c1a3b131b6afa10a530069d2e6937d4b103eb34962c942890da32659fe975`
 - `research_control/design/task_index_schema_v2.md`: `4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f`
 - `research_control/design/v21_recommendation_backlog.yaml`: `849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f`
 - `research_control/design/v21_task_taxonomy_policy.md`: `7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b`
@@ -41,9 +41,9 @@ or claim-promotion authority.
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `0eac08ee0fc138107063d9ad750ad62b1cf537955d4eb5b3cc00a54a811db04d`
-- Generated-at source timestamp: `2026-08-10T16:13:10Z`
-- Row count: `1265`
+- Source fingerprint: `91631f3a30028e9df71cab4880e1ced36b47442cdf2b4772d2868985dc020470`
+- Generated-at source timestamp: `2026-08-10T17:53:54Z`
+- Row count: `1266`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -51,6 +51,7 @@ or claim-promotion authority.
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260810-010|RT-20260810-009|2026-08-10T17:53:54Z|2026-08-10T18:31:15Z|Formalize or precisely obstruct the P4-T02 common-character descent and independent variation law|v22_p4_t02_b2_common_character_descent_independent_variation_law_formalization_or_obstruction|formalization_or_theorem|effective_metric_g_eff|v22_b2_common_character_independent_variation_law_v1|theorem_or_precise_obstruction|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Define or precisely obstruct one source-generated common response-line descent mechanism and one independently generated admissible-variation law, without target import or frozen-route replay.|ontology-formalizer@0.2.0|false|false|14||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-010/jobs/completions/AJC-AJ-RT-20260810-010-001.yaml|
 |RT-20260810-009|RT-20260810-008|2026-08-10T16:13:10Z|2026-08-10T16:54:11Z|Select one materially distinct P4-T02 route after repaired-quotient stress|v22_p4_t02_b2_post_refuter_theoretical_continuation_selector|integration_or_selection|effective_metric_g_eff|v22_b2_matter_principal_polynomial|completed_or_precisely_blocked|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Select one target-atlas-free same-milestone packet that can sharpen whether source-side response data can support a stable common physical causal structure after the repaired quotient fails independent-positive-line descent and arbitrary-variation robustness.|theoretical-continuation-selector@0.1.0|false|false|14||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-009/jobs/completions/AJC-AJ-RT-20260810-009-001.yaml|
 |RT-20260810-008|RT-20260810-007|2026-08-10T14:44:30Z|2026-08-10T15:07:03Z|Stress the repaired B2 common-envelope quotient|v22_p4_t02_b2_common_hyperbolicity_envelope_refuter_stress|audit_or_review|effective_metric_g_eff|v22_b2_matter_principal_polynomial|theorem_or_precise_obstruction|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Stress the repaired typed response image, two-sheet positive-projective atlas, six-orbit sign image, structured robustness scope, source purity, and semantic boundary before any B2 adequacy or physical interpretation.|refuter@0.2.0|false|false|13||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-008/jobs/completions/AJC-AJ-RT-20260810-008-001.yaml|
 |RT-20260810-007|RT-20260810-006|2026-08-10T13:09:17Z|2026-08-10T13:37:15Z|Repair the B2 common-envelope quotient rank record|v22_p4_t02_b2_common_hyperbolicity_envelope_quotient_rank_repair|construction_or_implementation|effective_metric_g_eff|v22_b2_matter_principal_polynomial|candidate_or_precise_obstruction|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Correct the exact response-image information record while preserving every valid conditional common-envelope result and all authority blocks.|candidate-constructor@0.2.0|false|false|13|Checkpoint AJ-RT-20260810-007-001 once, then execute the separately admitted source-extension Refuter stress in a fresh bounded task.|PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-007/jobs/completions/AJC-AJ-RT-20260810-007-001.yaml|

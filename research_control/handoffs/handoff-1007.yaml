@@ -1,0 +1,288 @@
+handoff_id: "handoff-1007"
+handoff_number: 1007
+handoff_kind: "v22_p4_t02_b2_common_character_independent_variation_candidate_constructed_smuggling_audit_selected_unexecuted"
+task_id: "RT-20260810-010"
+decision_id: "DDR-20260810-010"
+job_id: "AJ-RT-20260810-010-001"
+completion_id: "AJC-AJ-RT-20260810-010-001"
+completion_path: "research_control/tasks/RT-20260810-010/jobs/completions/AJC-AJ-RT-20260810-010-001.yaml"
+completion_sha256: "5bafe5fbc3e98e6e268f9116d4fbfa915a1af34136acb697ab8a42d025067c36"
+status: "ready_for_v22_p4_t02_b2_common_character_independent_variation_smuggling_audit_after_checkpoint"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-10T18:31:15Z"
+parent_handoff_id: "handoff-1006"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+completed_plan_task_id: "P4-T02-B2-COMMON-CHARACTER-DESCENT-INDEPENDENT-VARIATION-LAW-FORMALIZATION"
+source_role_id: "ontology-formalizer"
+source_role_version: "0.2.0"
+source_execution_role_ref: "ontology-formalizer@0.2.0--RT-20260810-010"
+supporting_perspective: "theoretical-continuation-selector@0.1.0"
+summary: "RT-20260810-010 constructs one finite exact proposal-only common-character and independent-variation source-law candidate. The pointed source cycle supplies G_src, chi, and L_chi; framed R/S/D representations reduce through anchored intertwiners with a_s(0)=1; the independent balance law has a nonzero one-dimensional gauge quotient and an exact non-diagonal finite flow. Parent-child conflict proves the unanchored sector-relative intertwiner torsor and resolves FB-04 only for the fixed anchored candidate. Both children converge after one round. FB-08 is not cleared: the universal-character, frame, anchor, cochain, shared-state, and variation roots require one separate Smuggling Auditor. Both inherited freezes remain active, D7 is not reevaluated, B2 remains inactive, P4-T03 stays locked, and Distance-to-GR is unchanged."
+next_action: "Run the single governed checkpoint for AJ-RT-20260810-010-001. After it commits, admit exactly one fresh smuggling-auditor@0.2.0 packet for PKT-V22-P4T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT-V1. Audit whether the pointed source frames, a_s(0)=1 anchors, universal character, cochain arrays, shared source state, and independent variation roots are conservative source-side primitives or hidden goal-selected imports. Do not execute the audit before checkpoint, infer source legitimacy or adoption, replay either frozen route, assign physical or empirical meaning, reevaluate D7, activate or dispose B2, unlock P4-T03, or take protected or external action."
+current_claim_boundary: "CB-V22-P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-LAW-001"
+loop_risk_route: "audit_v22_p4_t02_b2_common_character_independent_variation_source_purity_v1"
+
+active_state_bifurcation:
+  latest_research_task_id: "RT-20260810-010"
+  latest_research_handoff_id: "handoff-1007"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260810-010-001. After it commits, admit exactly one fresh smuggling-auditor@0.2.0 packet for PKT-V22-P4T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT-V1. Audit whether the pointed source frames, a_s(0)=1 anchors, universal character, cochain arrays, shared source state, and independent variation roots are conservative source-side primitives or hidden goal-selected imports. Do not execute the audit before checkpoint, infer source legitimacy or adoption, replay either frozen route, assign physical or empirical meaning, reevaluate D7, activate or dispose B2, unlock P4-T03, or take protected or external action."
+  latest_project_system_task_id: "none"
+  latest_project_system_status: "none"
+  latest_project_system_sidecar_task_id: "none"
+  latest_project_system_sidecar_status: "none"
+  next_research_route_source: "latest_research_handoff"
+  sidecar_supersedes_research_handoff: false
+  project_improvement_sidecar_required: false
+  research_handoff_remains_authoritative: true
+
+claim_boundary:
+  allowed_next_scope: "One governed RT-20260810-010 checkpoint followed by one separately admitted source-extension smuggling audit of the exact fixed common-character and independent-variation candidate."
+  completed_task: "RT-20260810-010"
+  completed_completion_path: "research_control/tasks/RT-20260810-010/jobs/completions/AJC-AJ-RT-20260810-010-001.yaml"
+  completed_completion_sha256: "5bafe5fbc3e98e6e268f9116d4fbfa915a1af34136acb697ab8a42d025067c36"
+  source_task_id: "RT-20260810-009"
+  source_job_id: "AJ-RT-20260810-009-001"
+  source_handoff_id: "handoff-1006"
+  source_handoff_path: "research_control/handoffs/handoff-1006.yaml"
+  source_handoff_sha256: "16bc80b7fa359cd88913de6c9828a5681917e66cdaa2316a6c2690827493a347"
+  prerequisite_checkpoint_commit: "bbb17abc6b7edeeae01026884fba6d277d4ace93"
+  candidate_id: "CAND-V22-B2-COMMON-CHARACTER-DESCENT-INDEPENDENT-VARIATION-LAW-V1"
+  manuscript_path: "research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_common_character_independent_variation_law_v1.tex"
+  manuscript_sha256: "6c81af99ff98b315b3867deed2658ec8123386b7d2f9fbc9517ed80b0c1f695f"
+  descent_spec_path: "research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_common_character_descent_spec_v1.yaml"
+  descent_spec_sha256: "70f25b557642d9bc4d71b92b9b05cdca045c670df775089058f4b444bfa1a4a2"
+  variation_spec_path: "research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_independent_variation_law_v1.yaml"
+  variation_spec_sha256: "bb30f36984d97f084a914b07253e872935f8f05190779a5c76a095d03235c774"
+  provenance_path: "research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_source_provenance_separation_v1.yaml"
+  provenance_sha256: "8692478fa808e39bbc580ff395d34c9162786a1e67000d7bbddba54fe72e04f0"
+  disposition_path: "research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_common_character_candidate_disposition_v1.yaml"
+  disposition_sha256: "1fa1e74be8c983aae376278df79c71748d97aa2e8713e0df3052b3235f7a73e0"
+  model_path: "research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_common_character_model.py"
+  model_sha256: "ff5a0d9e1973e8f5bc9a0db48e9b11afb25e17a8bc35b0d01a19097c9b8c67c8"
+  child_phys_math_path: "research_control/tasks/RT-20260810-010/artifacts/child_phys_math_p4_t02_b2_common_character_independent_variation.yaml"
+  child_phys_math_sha256: "369c17b6204997b01301e5b43fde17ea8d2795bd5c74c096d73b7785d603f669"
+  child_phys_phil_path: "research_control/tasks/RT-20260810-010/artifacts/child_phys_phil_p4_t02_b2_common_character_independent_variation.yaml"
+  child_phys_phil_sha256: "e158ed1cdc95d21924693c9631ee844f4d33c5f1388ea850821a80e6c3590ece"
+  conflict_review_path: "research_control/tasks/RT-20260810-010/artifacts/parent_conflict_review_p4_t02_b2_common_character_independent_variation.yaml"
+  conflict_review_sha256: "fd4463b1323c256641df56b7338f87b891f67fb87827216362d5725b0af89e7a"
+  parent_fusion_path: "research_control/tasks/RT-20260810-010/artifacts/parent_fusion_notes_p4_t02_b2_common_character_independent_variation.md"
+  parent_fusion_sha256: "966fba0889677cc1d8ad2c6aa49af42eba793a0a9f94455b3b58170f7857f862"
+  latex_compile_receipt_path: "research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_common_character_latex_compile_receipt.json"
+  latex_compile_receipt_sha256: "9ccfff794ddad00b6d356280e41925446e2d5d2c340195e25eb51fc31d42dafb"
+  decisive_result: "constructed_candidate_pending_smuggling_audit"
+  source_law_constructed_as_proposal: true
+  source_law_derived_from_current_ontology: false
+  source_purity_audit_completed: false
+  adoption_status: "blocked_adoption_open_continuation"
+  missing_source_law: "common_response_line_descent_and_admissible_variation_law"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  conflict_resolution_round_count: 1
+  full_sector_coverage_established: false
+  physical_operational_quotient_constructed: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_fallback_activated: false
+  b2_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  global_freeze_applied: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  canonical_ontology_modified: false
+  benchmark_promotion_authorized: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  blocked_claims:
+    - "the candidate described as source-pure, audited, stressed, adopted, rejected, canonical, physical, empirical, or all-sector"
+    - "either local freeze described as reopened or superseded"
+    - "formal common-line descent or source anchors described as physical units, calibration, dynamics, causality, conformal geometry, or g_eff"
+    - "D7 adequacy, B2 activation or disposition, P4-T03, ontology adoption, Gate, benchmark, proof, publication, push, external action, global no-go, or completed derivation described as authorized"
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P4"
+  plan_task_id: "P4-T02"
+  title: "Apply the hyperbolicity universality robustness and hard-fail screen"
+  work_item_status: "common_character_independent_variation_candidate_constructed_audit_pending_checkpoint"
+  result_status: "P4_T02_B2_COMMON_CHARACTER_CANDIDATE_CONSTRUCTED_PENDING_AUDIT"
+  completed_plan_subroute: "P4-T02-B2-COMMON-CHARACTER-DESCENT-INDEPENDENT-VARIATION-LAW-FORMALIZATION"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT"
+  ontology_formalizer_executed: true
+  source_extension_smuggling_audit_executed: false
+  descriptor_instance_complete: false
+  b2_fallback_activated: false
+  b2_activated: false
+  adequacy_reevaluated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+distance_to_gr:
+  changed: false
+  effect: "proposal_candidate_constructed_no_ledger_delta"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The construction remains proposal-only and unaudited and yields no adopted source law, physical cone, Lorentzian conformal class, scale, effective metric, coupling, Einstein equation, or protected evidence."
+  downstream_unlocked:
+    - "one source-extension smuggling audit after checkpoint"
+  downstream_still_blocked:
+    - "complete descriptor instance and D7 adequacy"
+    - "B2 activation, adoption, rejection, disposal, or sufficiency"
+    - "P4-T03 conformal reconstruction"
+    - "physical scale, effective metric, matter coupling, Einstein equations, benchmark promotion, and completed derivation"
+
+required_next_packet:
+  task_type: "v22_p4_t02_b2_common_character_independent_variation_source_extension_smuggling_audit"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT"
+  packet_id: "PKT-V22-P4T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT-V1"
+  objective: "Audit whether the exact character, frames, anchors, cochains, shared state, and variation roots are conservative source-side primitives or hidden goal-selected imports."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  executed: false
+
+selected_next_route:
+  route_id: "audit_v22_p4_t02_b2_common_character_independent_variation_source_purity_v1"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT"
+  work_kind: "source_extension_smuggling_audit"
+  task_class: "science"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  supporting_perspective: "ontology-formalizer@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "source_extension_smuggling_audit"
+  selected_packet_id: "PKT-V22-P4T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT-V1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Audit source legitimacy and hidden-import risk of the exact common-character and independent-variation candidate."
+  expected_result_kind: "source_pure_or_repair_required_or_precise_obstruction"
+  strategy_id: "audit_v22_p4_t02_b2_common_character_independent_variation_source_purity_v1"
+  transition_id: "AUDIT_COMMON_CHARACTER_ANCHORS_AND_VARIATION_PROVENANCE"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  adequacy_reevaluation_authorized: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physics_promotion_authorized: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-HANDOFF-1007"
+  ordinary_handoff_id: "handoff-1007"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  selected_plan_task_id: "P4-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  selection_reason: "The exact constructed candidate has not received its first independent source-purity audit and the audit has explicit roots and failure branches."
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+active_state_boundary:
+  active_task_id: "RT-20260810-010"
+  active_job_id: "AJ-RT-20260810-010-001"
+  current_status: "v22_p4_t02_b2_common_character_candidate_constructed_audit_pending_checkpoint"
+  checkpoint_required: true
+  checkpoint_completed: false
+  checkpoint_invocation_count: 0
+  ontology_formalizer_packet_executed: true
+  source_extension_smuggling_audit_executed: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_fallback_activated: false
+  b2_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  selected_next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_next_plan_task_id: "P4-T02"
+  selected_next_work_item_id: "P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT"
+  selected_next_worker_skill: "continue-research"
+  selected_next_role_family: "smuggling-auditor@0.2.0"
+  selected_next_supporting_perspective: "ontology-formalizer@0.2.0"
+  selected_next_route_label: "ontology-law-research-packet"
+  selected_next_strategy_id: "audit_v22_p4_t02_b2_common_character_independent_variation_source_purity_v1"
+  selected_next_execution_ready_after_checkpoint: true
+  selected_next_execution_ready_now: false
+  successor_requested: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, plan, milestone, source, committed checkpoint, route, payload, freeze, ordinary-route, and dual-budget admissions passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The exact model, two child analyses, one-round conflict resolution, fused manuscript, clean compilation, and complete visual inspection pass."
+  post_write:
+    status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    evidence:
+      - "Focused and governed repository validation must pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed AJ-RT-20260810-010-001 checkpoint remains."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  selected_packet_execution_authorized: false
+  source_purity_audit_completed: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  descriptor_instance_completion_authorized: false
+  b2_activation_authorized: false
+  adequacy_reevaluation_authorized: false
+  p4_t03_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  reviewer_contact_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false

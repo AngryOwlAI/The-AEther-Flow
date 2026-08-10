@@ -1,0 +1,167 @@
+schema_id: "v22_p4_t02_b2_source_provenance_separation_v1"
+task_id: "RT-20260810-010"
+job_id: "AJ-RT-20260810-010-001"
+candidate_id: "CAND-V22-B2-COMMON-CHARACTER-DESCENT-INDEPENDENT-VARIATION-LAW-V1"
+status: "internal_source_provenance_pass_pending_separate_smuggling_audit"
+authority: "draft/control"
+
+declared_source_roots:
+  - root_id: "ROOT-DESC-CYCLE"
+    object: "oriented source three-cycle Gamma_desc"
+    status: "proposal-only source-extension data"
+    fixed_before_response: true
+  - root_id: "ROOT-DESC-WINDING"
+    object: "additive path winding ell on Pi_1(Gamma_desc)"
+    status: "proposal-only source-extension data"
+    fixed_before_response: true
+  - root_id: "ROOT-VAR-BALANCE"
+    object: "source balance matrix B"
+    status: "proposal-only source-extension data"
+    fixed_before_response: true
+  - root_id: "ROOT-VAR-GAUGE"
+    object: "source gauge generator d"
+    status: "proposal-only source-extension data"
+    fixed_before_response: true
+  - root_id: "ROOT-DESC-MU"
+    object: "source covector m defining mu(x)=m*x"
+    status: "proposal-only source-extension data"
+    fixed_before_response: true
+  - root_id: "ROOT-SECTOR-COCHAINS"
+    object: "declared-sector integer cochain exponent arrays k_s normalized by k_s,0=0"
+    status: "proposal-only source-extension data"
+    fixed_before_response: true
+  - root_id: "ROOT-SECTOR-FRAMES-AND-ANCHORS"
+    object: "positive frames of the common and declared-sector lines together with the source-base-object anchor a_s(0)=1"
+    status: "proposal-only source-extension data"
+    fixed_before_response: true
+
+dependency_nodes:
+  - node_id: "NODE-E-SRC"
+    definition: "E_src(x)=B*x"
+    parents: ["ROOT-VAR-BALANCE"]
+  - node_id: "NODE-A-SRC"
+    definition: "A_src=ker(B)/span{d}"
+    parents: ["ROOT-VAR-BALANCE", "ROOT-VAR-GAUGE"]
+  - node_id: "NODE-G-SRC"
+    definition: "G_src=Pi_1(Gamma_desc)"
+    parents: ["ROOT-DESC-CYCLE"]
+  - node_id: "NODE-CHI"
+    definition: "chi_x(gamma)=exp(mu(x)ell(gamma))"
+    parents: ["ROOT-DESC-CYCLE", "ROOT-DESC-WINDING", "ROOT-DESC-MU"]
+  - node_id: "NODE-L-CHI"
+    definition: "oriented associated representation line of chi_x"
+    parents: ["NODE-G-SRC", "NODE-CHI"]
+  - node_id: "NODE-RHO-S"
+    definition: "rho_s=a_s(source)^{-1}chi_x a_s(target)"
+    parents: ["NODE-CHI", "ROOT-SECTOR-COCHAINS"]
+  - node_id: "NODE-J-S"
+    definition: "relative to the declared positive source frames, j_s sends e_s,i to a_s(i)e_i and is anchored by j_s,0(e_s,0)=e_0"
+    parents: ["NODE-L-CHI", "NODE-RHO-S", "ROOT-SECTOR-COCHAINS", "ROOT-SECTOR-FRAMES-AND-ANCHORS"]
+  - node_id: "NODE-FLOW-A"
+    definition: "Flow_A(x,t)=x+t*v for the nonzero quotient representative v"
+    parents: ["NODE-A-SRC"]
+
+explicit_shared_dependencies:
+  - shared_node: "typed source state x"
+    consumers: ["NODE-E-SRC", "NODE-CHI", "NODE-RHO-S", "NODE-FLOW-A"]
+    opacity: false
+    justification: "The shared source state is typed and visible; the variation law and descent law use different declared coefficient roots and neither is selected from the other's success."
+
+forbidden_root_scan:
+  shared_tau: false
+  tangent_covector_or_diagonal_response_line: false
+  fixed_q_ray_atlas: false
+  midpoint_relation: false
+  response_rank_or_kernel: false
+  sign_cell_or_positive_orthant_success: false
+  target_atlas: false
+  target_metric_tetrad_or_coframe: false
+  desired_gr_cone_signature_scale_or_coefficient: false
+  empirical_calibration_or_detector_answer: false
+  benchmark_success: false
+  registry_metadata_authority: false
+  role_authority: false
+  validation_or_checkpoint_authority: false
+
+preload_neutrality_audit:
+  hidden_target_import_detected: false
+  hidden_workflow_authority_import_detected: false
+  response_outcome_selected_root_detected: false
+  transparent_goal_property_premise: "The sector representation law explicitly posits that all declared sector lines are anchored positive-cochain twists of one source character. The a_s(0)=1 anchor removes the otherwise residual sector-relative intertwiner torsor. These are the candidate law under test, not derived current-ontology results."
+  preload_cost: "high_but_explicit_including_normalization_anchor"
+  permissibility: "permitted_only_as_proposal_only_source_extension_candidate_pending_separate_smuggling_audit"
+  current_ontology_entailment: false
+  physical_or_empirical_entailment: false
+
+material_distinctness:
+  shared_tau_used: false
+  rt007_response_formula_used: false
+  q_ray_used: false
+  midpoint_preservation_used: false
+  rank_two_or_six_sign_orbit_used: false
+  desired_response_stabilizer_used: false
+  new_object_families:
+    - "fundamental source groupoid"
+    - "positive path character"
+    - "associated oriented line representation"
+    - "source balance law"
+    - "nonzero gauge-quotiented source flow"
+  conclusion: "materially_distinct_from_both_active_local_freezes"
+
+source_presentation_naturality:
+  allowed_presentation_changes: "isomorphisms preserving the orientation, distinguished base object, and typing of Gamma_desc and transporting B,d,m,k_s and the declared positive line frames together"
+  functorial_objects:
+    - "G_src"
+    - "ell"
+    - "chi"
+    - "L_chi"
+    - "rho_s"
+    - "j_s"
+    - "E_src"
+    - "A_src"
+  limitation: "No invariance is claimed under arbitrary changes that discard or alter the newly declared source-extension tensors, frames, or anchors. The unanchored sector-intertwiner family has relative positive moduli; anchor legitimacy remains for independent audit."
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  category: "source_extension_candidate"
+  classification: "new_ontology_primitive_proposal_only_pending_source_purity_audit"
+  status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  human_gated: false
+  adoption_status: "blocked_adoption_open_continuation"
+
+source_hashes:
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  - path: "research_control/handoffs/handoff-1006.yaml"
+    sha256: "16bc80b7fa359cd88913de6c9828a5681917e66cdaa2316a6c2690827493a347"
+  - path: "research_control/tasks/RT-20260810-009/artifacts/v22_p4_t02_b2_selected_future_packet_v1.yaml"
+    sha256: "18518be4ca42afb94954d362c75117f3bd27bc24dfadbb96a532644b00828941"
+  - path: "research_control/tasks/RT-20260810-009/artifacts/v22_p4_t02_b2_post_refuter_route_selection_v1.tex"
+    sha256: "f65be2c4890d3595a4e60dc9515cf244faa7c77c2cc52998285d1d0d6c0292da"
+  - path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+    sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+  - path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+  - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+
+authority_limits:
+  internal_provenance_scan_is_independent_smuggling_audit: false
+  source_law_constructed_as_proposal: true
+  source_law_derived_from_current_ontology: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  physical_meaning_assigned: false
+  empirical_recovery_claimed: false
+  all_sector_universality_claimed: false
+  adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  distance_to_gr_changed: false
+  proof_authority: false
+  global_no_go_claimed: false

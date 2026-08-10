@@ -1,0 +1,73 @@
+schema_id: "parent_conflict_review_v1"
+task_id: "RT-20260810-010"
+job_id: "AJ-RT-20260810-010-001"
+status: "resolved"
+reviewed_child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260810-010/artifacts/child_phys_math_p4_t02_b2_common_character_independent_variation.yaml"
+    final_sha256: "369c17b6204997b01301e5b43fde17ea8d2795bd5c74c096d73b7785d603f669"
+    initial_result: "constructed_candidate_pending_smuggling_audit"
+    final_result: "constructed_candidate_pending_smuggling_audit"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260810-010/artifacts/child_phys_phil_p4_t02_b2_common_character_independent_variation.yaml"
+    final_sha256: "e158ed1cdc95d21924693c9631ee844f4d33c5f1388ea850821a80e6c3590ece"
+    initial_result: "precise_obstruction_with_failed_premise"
+    final_result: "constructed_candidate_pending_smuggling_audit"
+
+initial_conflicts:
+  - conflict_id: "CR-RT010-001-RELATIVE-INTERTWINER-NORMALIZATION"
+    blocking: true
+    physicist_mathematician_position: "A pointed source object, declared positive frames, and sector anchors a_s(0)=1 select one reduction for the fixed structured proposal; alternative sector constants are different laws."
+    physicist_philosopher_position: "Without such fixed source anchors, the intertwiner family retains (R_{>0})^(|S_decl|-1) relative moduli after common gauge and triggers FB-04, with FB-08 as the provenance consequence."
+    exact_issue: "Whether the parent candidate actually contains source-law data that remove the sector-relative torsor, and whether mathematical removal should be confused with source legitimacy."
+  - conflict_id: "CR-RT010-002-FB08-AUDIT-TIMING"
+    blocking: true
+    physicist_mathematician_position: "An explicit acyclic source dependency graph is enough to construct a candidate, while source-legitimacy and goal-preload judgment belong to the separately admitted Smuggling Auditor."
+    physicist_philosopher_position: "If the common-character and intertwiner roots are only the requested goal property, FB-08 already forces an obstruction and leaves no candidate to audit."
+    exact_issue: "Whether transparent high-cost candidate-law premises fail internal construction or remain pending the role-separated smuggling audit."
+
+resolution_rounds:
+  - round: 1
+    instruction: "Both children inspected the peer objection and the revised parent artifacts, distinguished fixed structured-law data from the family of alternative laws, and separated algebraic uniqueness from source legitimacy."
+    parent_repair:
+      - "Declare vertex 0 as a pointed source base object and include positive common-line and sector-line source frames."
+      - "Normalize the cochain exponents so a_s(0;x)=1 for every declared sector and state."
+      - "Prove that unanchored intertwiners form a sectorwise positive torsor and that the fixed anchors force every sector constant to one."
+      - "Classify changed sector constants as changed candidate-law data, not common-gauge copies of the fixed candidate."
+      - "Expose the frames and anchors as high-cost proposal-only roots whose legitimacy is neither proved nor accepted."
+    controlling_discriminator: "FB-04 asks whether data held fixed leave multiple reductions outside the common gauge. The anchored candidate does not. FB-08 remains a live falsifier for the next audit because explicit source data can still be goal-selected, but the Ontology Formalizer is authorized to construct—not accept—the proposal under transparent new primitives."
+    child_phys_math_response: "Accepts the peer torsor theorem; retains constructed-candidate status for the fixed anchored law and leaves FB-08 uncleared."
+    child_phys_phil_response: "Revises to constructed-candidate status because the parent now holds pointed frames and a_s(0)=1 fixed; preserves the torsor theorem and reserves anchor legitimacy wholly for the audit."
+    result: "Consensus on constructed_candidate_pending_smuggling_audit with the exact unanchored obstruction retained as a limitation and audit test."
+
+resolved_findings:
+  fixed_candidate:
+    decisive_result: "constructed_candidate_pending_smuggling_audit"
+    fb_04_status: "not_triggered_for_fixed_anchored_candidate"
+    fb_08_status: "not_cleared_pending_separate_smuggling_audit"
+    exact_reason: "The structured proposal explicitly fixes a pointed source frame law and a_s(0)=1, so the sector-relative torsor has one member within that law. No source, ontology, physical, or operational legitimacy follows from the mathematical anchor."
+  retained_obstruction_theorem:
+    theorem: "Without the anchors, positive sector intertwiners form a torsor for (R_{>0})^S and one common diagonal gauge leaves (R_{>0})^(|S|-1) relative moduli."
+    consequence: "Any later removal, opacity, response selection, or physical interpretation of the anchors triggers the exact FB-04/FB-08 audit path."
+  next_packet:
+    packet_type: "source_extension_smuggling_audit"
+    next_role: "smuggling-auditor@0.2.0"
+    selected_but_unexecuted: true
+    audit_focus: "The pointed-frame and a_s(0)=1 anchor roots, common-character law, shared source state, cochain arrays, and variation-law independence."
+
+shared_consensus:
+  - "The finite algebraic candidate exists and all cocycle, intertwiner, nonvacuity, and integrability identities are exact."
+  - "The current ontology derives none of the new groupoid, character, frames, anchors, cochains, balance law, or admissible variation."
+  - "The anchors have no licensed physical-unit, calibration, operational, empirical, or all-sector meaning."
+  - "Both inherited freezes remain active and neither frozen route is reconstructed."
+  - "D7 is not reevaluated, B2 remains inactive, P4-T03 remains locked, and Distance-to-GR is unchanged."
+  - "No source-law adoption, canonical ontology edit, physical response, causality, g_eff, coupling, Einstein equation, Gate verdict, proof, benchmark, publication, push, external action, global no-go, or completed derivation follows."
+
+unresolved_conflicts: []
+blocking_conflict_count: 0
+resolution_round_count: 1
+maximum_resolution_rounds: 2
+claim_boundary_preserved: true
+smuggling_audit_executed: false
+source_law_adopted_or_rejected: false
+physics_promotion_authorized: false

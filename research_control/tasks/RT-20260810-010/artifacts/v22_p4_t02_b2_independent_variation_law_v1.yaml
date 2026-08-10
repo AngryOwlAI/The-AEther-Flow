@@ -1,0 +1,154 @@
+schema_id: "v22_p4_t02_b2_independent_variation_law_v1"
+task_id: "RT-20260810-010"
+job_id: "AJ-RT-20260810-010-001"
+candidate_id: "CAND-V22-B2-COMMON-CHARACTER-DESCENT-INDEPENDENT-VARIATION-LAW-V1"
+status: "constructed_candidate_pending_smuggling_audit"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+
+source_configuration_domain:
+  notation: "C_src"
+  definition: "R^4 with coordinates x=(x_0,x_1,x_2,x_3) carrying no target-field or physical-coordinate interpretation"
+  positive_control_domain: "C_src^+=(R_{>0})^4 is used only for a bounded positive finite-path example"
+  base_state: [2, 1, 1, 2]
+  source_symmetry:
+    notation: "Gauge_src"
+    action: "x maps to x+r*d"
+    generator: [1, 1, 1, 1]
+
+independent_source_law:
+  notation: "E_src"
+  signature: "E_src:C_src->W_src=R^2"
+  definition: "E_src(x)=B*x"
+  balance_matrix:
+    - [1, -1, 1, -1]
+    - [1, 1, -1, -1]
+  coefficient_provenance: "The integer balance matrix is declared proposal-only source data before chi, sector transitions, or any response property is evaluated."
+  regularity: "linear and smooth"
+  rank: 2
+  base_state_is_root: true
+  gauge_invariance_proof: "B*d=0, hence E_src(x+r*d)=E_src(x)."
+  response_success_selected: false
+  target_import: false
+
+linearized_law:
+  notation: "D E_src"
+  definition: "D E_src|_x=B at every source state"
+  kernel_dimension: 2
+  kernel_basis:
+    gauge_generator: [1, 1, 1, 1]
+    non_gauge_generator: [1, -1, -1, 1]
+  rank_jump_branches: []
+  proof: "The two rows of B are independent, B*d=0, B*v=0, and d,v are independent; therefore ker(B)=span{d,v}."
+
+admissible_variation_quotient:
+  notation: "A_src(x)"
+  definition: "ker(B)/span{d}"
+  dimension: 1
+  nonzero_class_representative: [1, -1, -1, 1]
+  nonvacuity_proof: "v is in ker(B) and is not proportional to d, so [v] is nonzero."
+  diagonal_only: false
+  fixed_before_response_evaluation: true
+  success_stabilizer_definition_used: false
+
+finite_admissible_flow:
+  notation: "Flow_A"
+  definition: "Flow_A(x,t)=x+t*v with v=(1,-1,-1,1)"
+  law_preservation_proof: "E_src(x+t*v)=B*x+t*B*v=0 for every root x and every real t."
+  composition_proof: "Flow_A(Flow_A(x,t),u)=x+(t+u)v=Flow_A(x,t+u)."
+  inverse_proof: "Flow_A(Flow_A(x,t),-t)=x."
+  base_positive_interval: "-2<t<1"
+  positive_interval_proof: "At x_*=(2,1,1,2), the path is (2+t,1-t,1-t,2+t), which is positive exactly when t>-2 and t<1."
+  sample_parameters:
+    - "-1/2"
+    - "0"
+    - "1/2"
+  endpoint_scope: "Only endpoints inside the declared interval belong to the positive control subdomain; the R^4 flow itself is global."
+
+coupling_to_descent_data:
+  source_scalar_covector: [1, -1, 0, 0]
+  source_scalar: "mu(x)=x_0-x_1"
+  gauge_invariance: "mu(d)=0"
+  base_value: 1
+  variation_rate: "D mu(v)=2"
+  common_cycle_log_holonomy: "3*mu(x)"
+  common_cycle_log_holonomy_variation_rate: 6
+  sector_log_transition_variation_rates:
+    e_01:
+      R: 4
+      S: -2
+      D: 8
+    e_12:
+      R: 6
+      S: 4
+      D: -6
+    e_20:
+      R: -4
+      S: 4
+      D: 4
+  relevance_proof: "The nonzero quotient class changes mu, common holonomy, and the three sector transition families. On e_01 the rate vector (4,-2,8) has three distinct nonzero entries, so the variation is neither response-vacuous nor diagonal-only."
+  structural_descent_preservation: "For every x(t), rho_s,x(t)=a_s(source;x(t))^{-1}chi_x(t)a_s(target;x(t)); therefore the intertwining identity holds along the entire source flow without defining A_src as its stabilizer."
+
+independence_and_noncircularity:
+  source_law_root: "B and d"
+  descent_root: "The pointed Gamma_desc, ell, mu, declared positive line frames, a_s(0)=1 anchors, and anchored cochain exponent arrays"
+  explicit_shared_root: "The typed source state x is shared transparently; no opaque or goal-selected hidden variable is used."
+  logical_order:
+    - "Declare C_src, B, d, and the quotient class [v]."
+    - "Declare Gamma_desc, ell, mu, and exponent arrays."
+    - "Define chi, sector representations, and intertwiners."
+    - "Only then evaluate descent and variation identities."
+  circularity_excluded: "Neither B nor v is defined by preserving midpoint, rank, sign cells, Q_ray, common positivity, a target cone, or a benchmark answer."
+  caveat: "The universal-character sector law and source-base intertwiner anchors are explicit new proposal premises; neither is derived from current ontology or a physical normalization, and both require separate smuggling audit."
+
+theorems:
+  - theorem_id: "THM-V22-P4T02-B2-INDEPENDENT-VARIATION-INTEGRABILITY-001"
+    title: "Nonvacuous integrable source-variation quotient"
+    hypotheses:
+      - "C_src=R^4, E_src(x)=B*x, and Gauge_src=span{d} with the displayed B and d."
+    statement: "A_src=ker(B)/span{d} is one-dimensional with nonzero class [v], and x(t)=x+t*v integrates it globally on C_src and locally on the positive control domain."
+    proof_status: "proved_in_artifact"
+  - theorem_id: "THM-V22-P4T02-B2-NONVACUOUS-DESCENT-PRESERVING-SOURCE-FLOW-001"
+    title: "Non-diagonal source flow through common-character descents"
+    hypotheses:
+      - "The linked common-character descent specification holds."
+      - "x(t)=x+t*v is the displayed source flow."
+    statement: "Along the flow the common holonomy varies at log-rate 6 and the e_01 sector log-transition rates are (4,-2,8), while every sector remains intertwined with the same chi_x(t)."
+    proof_status: "proved_in_artifact"
+  - theorem_id: "LEM-V22-P4T02-B2-DESCENT-VARIATION-PROVENANCE-SEPARATION-001"
+    title: "Descent and admissible-variation provenance separation"
+    hypotheses:
+      - "The declared dependency order and source roots are enforced."
+    statement: "The admissible quotient is computed from B and d without response success, while descent is evaluated from Gamma_desc, ell, mu, and fixed cochain exponents; the shared state x is explicit and neither branch is defined as the success locus of the other."
+    proof_status: "proved_as_dependency_statement_pending_independent_audit"
+
+exact_model_receipt:
+  model_path: "research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_common_character_model.py"
+  expected_status: "PASS"
+  exact_check_count: 19
+  expected_balance_rank: 2
+  expected_kernel_dimension: 2
+  expected_quotient_dimension: 1
+  expected_e01_rate_vector: [4, -2, 8]
+
+failure_branch_status:
+  FB-06-VARIATION-VACUITY: "NOT_TRIGGERED_DIMENSION_ONE_NONZERO_CLASS"
+  FB-07-VARIATION-CIRCULARITY: "NOT_TRIGGERED_FIXED_BALANCE_LAW"
+  FB-08-PROVENANCE-DEPENDENCE: "NOT_TRIGGERED_EXPLICIT_SHARED_STATE_AND_DAG_PENDING_AUDIT"
+  FB-09-INTEGRABILITY: "NOT_TRIGGERED_GLOBAL_AFFINE_FLOW"
+  FB-10-TARGET-IMPORT: "NOT_DETECTED_INTERNAL_PENDING_AUDIT"
+
+scope_and_claim_limits:
+  source_law_adopted: false
+  current_ontology_derivation_claimed: false
+  physical_dynamics_claimed: false
+  physical_time_or_causality_claimed: false
+  empirical_robustness_claimed: false
+  arbitrary_variation_robustness_claimed: false
+  all_sector_universality_claimed: false
+  adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  distance_to_gr_changed: false
+  proof_authority: false

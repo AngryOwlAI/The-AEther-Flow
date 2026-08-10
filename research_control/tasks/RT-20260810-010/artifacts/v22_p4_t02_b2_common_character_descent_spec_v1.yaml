@@ -1,0 +1,208 @@
+schema_id: "v22_p4_t02_b2_common_character_descent_spec_v1"
+task_id: "RT-20260810-010"
+job_id: "AJ-RT-20260810-010-001"
+candidate_id: "CAND-V22-B2-COMMON-CHARACTER-DESCENT-INDEPENDENT-VARIATION-LAW-V1"
+packet_id: "PKT-V22-P4T02-B2-COMMON-CHARACTER-DESCENT-INDEPENDENT-VARIATION-FORMALIZATION-V1"
+status: "constructed_candidate_pending_smuggling_audit"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+adoption_status: "blocked_adoption_open_continuation"
+current_ontology_derivation_status: "not_derived"
+
+scope:
+  declared_sector_labels:
+    - "R"
+    - "S"
+    - "D"
+  label_semantics: "Formal declared-sector labels only; no rod, signal, detector, empirical, or all-P7 meaning is assigned."
+  finite_sector_scope: true
+  unequipped_sector_rule: "fail_closed"
+  source_presentation_category: "orientation-preserving isomorphisms of the typed source-cycle, balance-law, gauge, covector, and cochain data"
+
+source_transition_groupoid:
+  object_id: "G-SRC-CYCLE-PI1-V1"
+  notation: "G_src"
+  definition: "The fundamental groupoid Pi_1(Gamma_desc) of the oriented three-cycle Gamma_desc with vertices 0,1,2 and oriented edges e_01,e_12,e_20."
+  objects:
+    - 0
+    - 1
+    - 2
+  declared_base_object: 0
+  generating_arrows:
+    - arrow: "e_01"
+      source: 0
+      target: 1
+      winding_increment: 1
+    - arrow: "e_12"
+      source: 1
+      target: 2
+      winding_increment: 1
+    - arrow: "e_20"
+      source: 2
+      target: 0
+      winding_increment: 1
+  inverse_rule: "ell(gamma^{-1})=-ell(gamma)"
+  composition_rule: "ell(eta composed gamma)=ell(eta)+ell(gamma) whenever the arrows compose"
+  identity_rule: "ell(id_i)=0"
+  source_root: "The oriented source-cycle and additive path record are declared proposal-only source data before any response evaluation."
+  target_import: false
+
+source_configuration_interface:
+  configuration_space: "C_src=R^4"
+  source_law_reference: "v22_p4_t02_b2_independent_variation_law_v1.yaml"
+  source_scalar:
+    notation: "mu(x)"
+    definition: "mu(x)=x_0-x_1"
+    gauge_invariant: true
+    base_state: [2, 1, 1, 2]
+    base_value: 1
+  dependency_rule: "mu is defined from the typed source configuration before any sector response coordinate is introduced."
+
+positive_character:
+  object_id: "CHI-SRC-CYCLE-V1"
+  notation: "chi_x"
+  signature: "chi_x:G_src->R_{>0}"
+  definition: "chi_x(gamma)=exp(mu(x)*ell(gamma))"
+  identity_proof: "ell(id_i)=0, hence chi_x(id_i)=exp(0)=1."
+  inverse_proof: "ell(gamma^{-1})=-ell(gamma), hence chi_x(gamma^{-1})=chi_x(gamma)^{-1}."
+  composition_proof: "Additivity of ell and exp(a+b)=exp(a)exp(b) give chi_x(eta composed gamma)=chi_x(eta)chi_x(gamma)."
+  positivity_proof: "The real exponential is strictly positive for every finite source state and arrow."
+  cycle_holonomy_at_base: "exp(3)"
+  cycle_holonomy_nontrivial: true
+  source_root: "Gamma_desc, ell, and mu(x)"
+  response_success_selected: false
+
+common_associated_line:
+  object_id: "L-CHI-SRC-CYCLE-V1"
+  notation: "L_chi"
+  fiber: "one oriented real line over each object of G_src"
+  declared_source_frames: "Each fiber at object i carries a proposal-only positive source frame e_i; changing all such frames is the declared common line-frame gauge."
+  action: "gamma acts by multiplication with chi_x(gamma)"
+  orientation_preserved: true
+  transition_cocycle: "lambda_x(gamma)=chi_x(gamma)"
+  interpretation_limit: "An oriented source representation line only; not physical units, causality, time orientation, a cone, or a metric."
+
+declared_sector_lines:
+  common_definition: "For each s in {R,S,D}, L_s is an oriented one-dimensional G_src-representation with a declared proposal-only positive source frame e_s,i and action rho_s,x defined from a source cochain a_s and chi_x."
+  source_cochain_rule: "a_s(i;x)=exp(k_s,i*mu(x))"
+  cochain_exponents:
+    R: [0, 1, 3]
+    S: [0, -2, -1]
+    D: [0, 3, -1]
+  anchor_rule: "The distinguished source object 0 fixes a_s(0;x)=1 for every declared sector and source state. Sector-relative constant rescalings therefore change the declared candidate-law anchor data and are not gauge transformations of the fixed candidate."
+  provenance: "The anchored frames and integer exponent arrays are explicit proposal-only preparation tokens fixed in the packet, not fitted to an evaluated response outcome; whether this high-cost source anchor smuggles the goal property is reserved for the separately admitted audit."
+  sector_action_rule: "rho_s,x(gamma)=a_s(source(gamma);x)^{-1}*chi_x(gamma)*a_s(target(gamma);x)"
+  logarithmic_rule: "log rho_s,x(gamma)=mu(x)*(ell(gamma)+k_s,target-k_s,source)"
+  action_proof: "For composable gamma:i->j and eta:j->k, the middle a_s(j;x) factors cancel, so rho_s,x(eta composed gamma)=rho_s,x(gamma)rho_s,x(eta); identity and inverse laws follow."
+  positivity: true
+
+sector_intertwiners:
+  notation: "j_s,i"
+  signature: "j_s,i:(L_s)_i->(L_chi)_i"
+  definition: "Relative to the declared source frames, j_s,i(e_s,i)=a_s(i;x)e_i; in particular j_s,0 sends the anchored sector frame to the common frame."
+  intertwining_identity: "a_s(i;x)*rho_s,x(gamma)=chi_x(gamma)*a_s(j;x) for gamma:i->j"
+  proof: "Substitute rho_s,x(gamma)=a_s(i;x)^{-1}chi_x(gamma)a_s(j;x) and cancel the positive a_s(i;x)."
+  isomorphism_proof: "Every a_s(i;x) is strictly positive and therefore invertible."
+  relabeling_naturality: "An allowed typed presentation isomorphism transports vertices, ell, mu, and each exponent array together; the formulas commute with that transport."
+  restriction_naturality: "Restricting to any subgroupoid restricts chi_x, rho_s,x, and j_s without changing their identities."
+
+cochain_reduction_and_gauge_classification:
+  reduction_equation: "a_s(i)*g_s,ij=g_ij*a_s(j)"
+  existence_result: "The displayed a_s solve the reduction equation with g_ij=chi_x(gamma_ij) and g_s,ij=rho_s,x(gamma_ij)."
+  pairwise_ratio_result: "rho_s,x/rho_t,x is the positive coboundary of a_s/a_t, so every pairwise ratio class is trivial in positive H^1."
+  common_gauge_action: "For any positive object cochain b_i, change the common source frames by b_i and transform common transitions and all displayed intertwiner coordinates coherently; all abstract intertwining identities remain valid."
+  sector_intertwiner_torsor_theorem: "If the sector anchors are omitted, solutions on the connected source cycle differ by independent constants c_s in (R_{>0})^{S_decl}; quotienting only common diagonal scale leaves (R_{>0})^{|S_decl|-1}. The declared a_s(0)=1 anchors set every c_s=1."
+  uniqueness_scope: "With the anchored frames and a_s(0)=1 held fixed as candidate-law data, each reduction cochain is unique. Alternative sector-relative constants are distinct candidate laws, not gauge-equivalent realizations of this fixed candidate. No physical or current-ontology normalization is claimed."
+  nonuniqueness_fail_condition: "FB-04 triggers if the declared candidate-law source data leave multiple reductions unrelated by the common gauge. It is not triggered by alternative laws that change the explicit anchor data; the legitimacy of positing those anchors remains pending smuggling audit."
+
+theorems:
+  - theorem_id: "THM-V22-P4T02-B2-POSITIVE-CHARACTER-ASSOCIATED-LINE-DESCENT-001"
+    title: "Positive-character associated-line descent"
+    hypotheses:
+      - "G_src is the typed fundamental groupoid of Gamma_desc."
+      - "ell is additive, inverse-odd, and identity-zero."
+      - "mu is a finite real source scalar fixed before response evaluation."
+    statement: "chi_x is a positive groupoid character and defines an oriented associated representation line L_chi with valid identity, inverse, and composition maps."
+    proof_status: "proved_in_artifact"
+  - theorem_id: "THM-V22-P4T02-B2-COCHAIN-INTERTWINER-CLASSIFICATION-001"
+    title: "Sector cochain reduction and common-gauge classification"
+    hypotheses:
+      - "Each a_s is a positive source object cochain."
+      - "rho_s,x=a_s(source)^{-1}chi_x a_s(target)."
+    statement: "Every j_s is a natural representation isomorphism into L_chi; pairwise sector ratios are positive coboundaries; without anchors the intertwiner family has independent sector-constant moduli, while the declared a_s(0)=1 proposal anchors select exactly one reduction modulo the common positive line-frame gauge."
+    proof_status: "proved_in_artifact"
+  - theorem_id: "THM-V22-P4T02-B2-ANCHORED-INTERTWINER-TORSOR-RESOLUTION-001"
+    title: "Anchored intertwiner torsor resolution"
+    hypotheses:
+      - "G_src is connected on the declared source cycle."
+      - "Every sector reduction cochain is positive and satisfies the common intertwining equation."
+      - "The proposal-law anchor a_s(0)=1 is fixed for every declared sector."
+    statement: "Any two solutions have sectorwise constant ratios; the anchors force all ratios to one. Thus the fixed structured candidate has no residual sector-relative reduction ambiguity, although removing the anchors restores (R_{>0})^{|S_decl|-1} moduli after common gauge."
+    proof_status: "proved_in_artifact"
+  - theorem_id: "THM-V22-P4T02-B2-NONTRIVIAL-SOURCE-HOLONOMY-001"
+    title: "Nontrivial finite source holonomy"
+    hypotheses:
+      - "The oriented cycle has total winding 3."
+      - "The base source state has mu=1."
+    statement: "The common character has cycle holonomy exp(3), so the candidate is not the literal-equal-transition or globally constant numerical witness from RT009."
+    proof_status: "proved_in_artifact"
+
+proof_obligation_status:
+  PO-01-EXACT-TYPING: "PASS"
+  PO-02-COMMON-COCYCLE: "PASS"
+  PO-03-REDUCTION-CRITERION: "PASS"
+  PO-04-NO-SHARED-TAU-REPLAY: "PASS"
+  PO-05-INDEPENDENT-VARIATION-PROVENANCE: "PASS_BY_LINKED_VARIATION_SPEC"
+  PO-06-NONVACUITY: "PASS_BY_LINKED_VARIATION_SPEC"
+  PO-07-DESCENT-VARIATION-INDEPENDENCE: "PASS_BY_LINKED_PROVENANCE_CERTIFICATE"
+  PO-08-SOURCE-NATURALITY: "PASS_WITH_TYPED_PRESENTATION_SCOPE"
+  PO-09-FINITE-VARIATION-INTEGRABILITY: "PASS_BY_LINKED_VARIATION_SPEC"
+  PO-10-TOTAL-FAIL-CLOSED-OUTPUT: "PASS_CONSTRUCTED_CANDIDATE_BRANCH"
+  PO-11-SOURCE-PURITY: "PASS_INTERNAL_PROVENANCE_PENDING_INDEPENDENT_AUDIT"
+  PO-12-MATERIAL-DISTINCTNESS: "PASS"
+  PO-13-FINITE-SECTOR-SCOPE: "PASS"
+  PO-14-CLAIM-BLOCKS: "PASS"
+
+failure_branch_status:
+  FB-01-NO-POSITIVE-CHARACTER: "NOT_TRIGGERED_EXPLICIT_CHI"
+  FB-02-NO-SECTOR-INTERTWINER: "NOT_TRIGGERED_EXPLICIT_J_S"
+  FB-03-COCYCLE-OR-INVERSE-DEFECT: "NOT_TRIGGERED_PROVED"
+  FB-04-NONUNIQUENESS: "NOT_TRIGGERED_FOR_FIXED_ANCHORED_CANDIDATE_WITH_UNANCHORED_TORSOR_RECORDED"
+  FB-05-FROZEN-ROUTE-REPLAY: "NOT_TRIGGERED_DISTINCT_OBJECTS_AND_FORMULAS"
+  FB-06-VARIATION-VACUITY: "NOT_TRIGGERED_NONZERO_QUOTIENT"
+  FB-07-VARIATION-CIRCULARITY: "NOT_TRIGGERED_E_SRC_FIXED_FIRST"
+  FB-08-PROVENANCE-DEPENDENCE: "NOT_TRIGGERED_BY_INTERNAL_EXPLICIT_DAG_ANCHOR_LEGITIMACY_PENDING_AUDIT"
+  FB-09-INTEGRABILITY: "NOT_TRIGGERED_EXPLICIT_FLOW"
+  FB-10-TARGET-IMPORT: "NOT_DETECTED_INTERNAL_PENDING_AUDIT"
+  FB-11-SECTOR-SCOPE: "CONTROLLED_FAIL_CLOSED"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  category: "source_extension_candidate"
+  classification: "new_ontology_primitive_proposal_only_pending_source_purity_audit"
+  conservative_mathematical_layer: "Given G_src, ell, mu, and positive cochains, the associated-line and intertwiner theorems follow."
+  new_primitive_layer: "The source cycle, character law, declared-sector representation law, source balance law, and their provenance are supplied proposal-only primitives."
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  human_gated: false
+
+freeze_and_claim_limits:
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  reconstructs_shared_tau: false
+  reconstructs_fixed_q_ray: false
+  uses_midpoint_rank_or_sign_success: false
+  physical_causality_constructed: false
+  empirical_response_semantics_constructed: false
+  all_p7_sector_universality_established: false
+  d7_adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  global_no_go_claimed: false
+  proof_authority: false
