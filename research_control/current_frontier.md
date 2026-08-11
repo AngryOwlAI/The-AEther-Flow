@@ -3,14 +3,14 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260810-017` and `handoff-1014`.
+`RT-20260811-001` and `handoff-1015`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T05:22:10Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"593168057fd892f08d4c7d3fb4638f3956a7dc05","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"14ac2ca32e19b5c1c6369f82cba874818aa9e28c20557dd820bbadbf83d4700c"},{"path":"research_control/handoffs/handoff-1014.yaml","sha256":"6c24758482864dcb1e144af0c5e9fcaebea4d2132df4af9d6ebada63e93444a5"},{"path":"research_control/program_state.yaml","sha256":"0e2c887ad681998e7781e8c12b2e6f8308921d758f4fe79d9458df67246e6ae5"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"0a7c7d84ce50ec3b963fddc35c09675d8443c2bb04450513541b22ec9af92b34","source_path_count":"12","task_count":"1269"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T07:31:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"9cfadc63a61b159b8281c6da10da0eed465b8963","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"e9b78412b9e7e56a4c9a4f9ff847a337cd45e1e72e0f32e3d2a253317130ef77"},{"path":"research_control/handoffs/handoff-1015.yaml","sha256":"e4373644bacc7e5ee7d4799745388ab6e45bbec45e1d3aeb564930c775085dc7"},{"path":"research_control/program_state.yaml","sha256":"27ae3fd28a507e1175e0ab44b9a75c712b4a6e53dd0b751984e99082a6dccd54"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"bb4c6fec705cd2ca84dff3aab27da5c50d64e1d4a55e0686c5451b0b57ff34ac","source_path_count":"12","task_count":"1270"} -->
 
 ## Generated-Report Provenance
 
@@ -19,11 +19,11 @@ tracked authority files govern.
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `current_frontier` |
-| Source commit | `593168057fd892f08d4c7d3fb4638f3956a7dc05` |
-| Source-derived generation time | `2026-08-11T05:22:10Z` |
-| Tracked task count | 1269 |
+| Source commit | `9cfadc63a61b159b8281c6da10da0eed465b8963` |
+| Source-derived generation time | `2026-08-11T07:31:00Z` |
+| Tracked task count | 1270 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `0a7c7d84ce50ec3b963fddc35c09675d8443c2bb04450513541b22ec9af92b34` |
+| Source manifest SHA-256 | `bb4c6fec705cd2ca84dff3aab27da5c50d64e1d4a55e0686c5451b0b57ff34ac` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -31,9 +31,9 @@ tracked authority files govern.
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `14ac2ca32e19b5c1c6369f82cba874818aa9e28c20557dd820bbadbf83d4700c`
-- `research_control/handoffs/handoff-1014.yaml`: `6c24758482864dcb1e144af0c5e9fcaebea4d2132df4af9d6ebada63e93444a5`
-- `research_control/program_state.yaml`: `0e2c887ad681998e7781e8c12b2e6f8308921d758f4fe79d9458df67246e6ae5`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `e9b78412b9e7e56a4c9a4f9ff847a337cd45e1e72e0f32e3d2a253317130ef77`
+- `research_control/handoffs/handoff-1015.yaml`: `e4373644bacc7e5ee7d4799745388ab6e45bbec45e1d3aeb564930c775085dc7`
+- `research_control/program_state.yaml`: `27ae3fd28a507e1175e0ab44b9a75c712b4a6e53dd0b751984e99082a6dccd54`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_current_frontier.py`: `62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6`
@@ -47,15 +47,15 @@ or claim-promotion authority.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260810-017` |
-| Latest handoff ID | `handoff-1014` |
-| Current status | `v22_p4_t02_b2_oriented_matroid_bridge_general_rank_source_pure_refuter_stress_pending_checkpoint` |
+| Active task ID | `RT-20260811-001` |
+| Latest handoff ID | `handoff-1015` |
+| Current status | `v22_p4_t02_b2_oriented_matroid_bridge_scoped_obstruction_theoretical_selector_pending_checkpoint` |
 | V16 completed | false |
 | Current route family | audit or review (scientific audit) |
 | Target derivation milestone | `effective_metric_g_eff` |
 | Current burden | `g_eff` |
-| Required next authority | One governed RT017 checkpoint followed by one separately admitted Refuter stress of only the unchanged locally source-pure arbitrary-finite-rank Bridge_OM candidate. |
-| Next recommended action | Run the single governed checkpoint for AJ-RT-20260810-017-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REFUTER-STRESS-V1. Stress only the unchanged locally source-pure candidate under target-free finite perturbations, reorientations, refinements, tame wall crossings, and bridge-relevance tests. Preserve all three freezes. Do not replay RT015 or RT017, reevaluate D7, act on B2, unlock P4-T03, adopt, promote, publish, push, or take external action. |
+| Required next authority | One governed RT018 checkpoint followed by one separately admitted theoretical continuation selector choosing exactly one materially distinct same-milestone packet. |
+| Next recommended action | Run the single governed checkpoint for AJ-RT-20260811-001-001. After it commits execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-ORIENTED-MATROID-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1. Select exactly one materially distinct same-milestone source-side selection or admissibility theorem realization-sensitive bridge source-side irrelevance theorem or protected human-gated ontology stop. Preserve all four freezes. Do not replay the unchanged Bridge_OM candidate reevaluate D7 act on B2 unlock P4-T03 adopt promote publish push or take external action. |
 
 ## Active-State Bifurcation
 
@@ -66,9 +66,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260810-017` |
-| Latest research handoff ID | `handoff-1014` |
-| Latest research next action | Run the single governed checkpoint for AJ-RT-20260810-017-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REFUTER-STRESS-V1. Stress only the unchanged locally source-pure candidate under target-free finite perturbations, reorientations, refinements, tame wall crossings, and bridge-relevance tests. Preserve all three freezes. Do not replay RT015 or RT017, reevaluate D7, act on B2, unlock P4-T03, adopt, promote, publish, push, or take external action. |
+| Latest research task ID | `RT-20260811-001` |
+| Latest research handoff ID | `handoff-1015` |
+| Latest research next action | Run the single governed checkpoint for AJ-RT-20260811-001-001. After it commits execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-ORIENTED-MATROID-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1. Select exactly one materially distinct same-milestone source-side selection or admissibility theorem realization-sensitive bridge source-side irrelevance theorem or protected human-gated ontology stop. Preserve all four freezes. Do not replay the unchanged Bridge_OM candidate reevaluate D7 act on B2 unlock P4-T03 adopt promote publish push or take external action. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -101,12 +101,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260810-017/00_TASK.yaml`.
-- Active task objective: Audit only whether the repaired arbitrary-finite-rank Bridge_OM theorem domain and explicit nonphysical conformance quarantine are source-pure; hold every other candidate input, typing repair, status boundary, and inherited freeze fixed, and return one decisive local verdict without reconstructing, stress-testing, or promoting the candidate.
-- Latest handoff path: `research_control/handoffs/handoff-1014.yaml`.
-- Latest handoff summary: RT-20260810-017 returns source_pure_as_written for only the repaired arbitrary-finite-rank Bridge_OM theorem domain and explicit nonphysical conformance quarantine. Effective-span embedding selects no unused ambient or physical dimension, and finite fixture windows identify no unique theorem cap or physical dimension. Both specialists agree with zero blocking conflicts; the one wording difference is reconciled without scientific effect. The underlying candidate remains underived proposal-only source-extension data. All fourteen Distance-to-GR burdens, all three freezes, D7 non-evaluation, B2 inactivity, P4-T03 lock, and every promotion block remain unchanged.
+- Active task path: `research_control/tasks/RT-20260811-001/00_TASK.yaml`.
+- Active task objective: Execute the exact handoff-1014 packet: hold the RT016 arbitrary-finite-rank Bridge_OM candidate and RT017 source-purity verdict fixed; stress finite perturbations, source reorientations, finite refinements, tame wall crossings, certificate transport, and bridge relevance; return exactly one allowed Refuter classification with any required candidate-scoped obstruction, local freeze, and next-route consequence.
+- Latest handoff path: `research_control/handoffs/handoff-1015.yaml`.
+- Latest handoff summary: RT-20260811-001 returns scoped_obstruction for promotion of the unchanged arbitrary-finite-rank Bridge_OM classifier as a selected finite-variation-stable source-to-physical P4-T02 bridge. The conditional RT016 mathematics and RT017 source_pure_as_written verdict survive. Exact rational fixed-rank wall crossing all-rank reorientation rank-preserving refinement named-component projective-modulus noninjectivity and pointwise-totality nonselection isolate the missing selector stability and physical-interpretation laws. One metadata-only child reconciliation round leaves zero blocking conflicts. The unchanged standalone-bridge claim is locally frozen while diagnostic use remains open. All fourteen Distance-to-GR burdens all three inherited freezes D7 non-evaluation B2 inactivity P4-T03 lock and every promotion block remain unchanged.
 - Current route family: audit or review (scientific audit).
-- Next recommended action: Run the single governed checkpoint for AJ-RT-20260810-017-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REFUTER-STRESS-V1. Stress only the unchanged locally source-pure candidate under target-free finite perturbations, reorientations, refinements, tame wall crossings, and bridge-relevance tests. Preserve all three freezes. Do not replay RT015 or RT017, reevaluate D7, act on B2, unlock P4-T03, adopt, promote, publish, push, or take external action.
+- Next recommended action: Run the single governed checkpoint for AJ-RT-20260811-001-001. After it commits execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-ORIENTED-MATROID-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1. Select exactly one materially distinct same-milestone source-side selection or admissibility theorem realization-sensitive bridge source-side irrelevance theorem or protected human-gated ontology stop. Preserve all four freezes. Do not replay the unchanged Bridge_OM candidate reevaluate D7 act on B2 unlock P4-T03 adopt promote publish push or take external action.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -336,7 +336,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the single governed checkpoint for AJ-RT-20260810-017-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REFUTER-STRESS-V1. Stress only the unchanged locally source-pure candidate under target-free finite perturbations, reorientations, refinements, tame wall crossings, and bridge-relevance tests. Preserve all three freezes. Do not replay RT015 or RT017, reevaluate D7, act on B2, unlock P4-T03, adopt, promote, publish, push, or take external action.
+Run the single governed checkpoint for AJ-RT-20260811-001-001. After it commits execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-ORIENTED-MATROID-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1. Select exactly one materially distinct same-milestone source-side selection or admissibility theorem realization-sensitive bridge source-side irrelevance theorem or protected human-gated ontology stop. Preserve all four freezes. Do not replay the unchanged Bridge_OM candidate reevaluate D7 act on B2 unlock P4-T03 adopt promote publish push or take external action.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -364,9 +364,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260810-017`;
-- latest handoff: `handoff-1014`;
-- current status: `v22_p4_t02_b2_oriented_matroid_bridge_general_rank_source_pure_refuter_stress_pending_checkpoint`;
+- active task: `RT-20260811-001`;
+- latest handoff: `handoff-1015`;
+- current status: `v22_p4_t02_b2_oriented_matroid_bridge_scoped_obstruction_theoretical_selector_pending_checkpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -376,8 +376,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-1014.yaml`
-- `research_control/tasks/RT-20260810-017/00_TASK.yaml`
+- `research_control/handoffs/handoff-1015.yaml`
+- `research_control/tasks/RT-20260811-001/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -393,7 +393,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 1014*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 1015*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

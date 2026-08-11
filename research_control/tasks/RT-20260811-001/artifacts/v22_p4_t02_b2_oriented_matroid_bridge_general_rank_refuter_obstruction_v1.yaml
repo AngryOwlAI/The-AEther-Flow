@@ -1,0 +1,150 @@
+schema_id: "v22_p4_t02_b2_oriented_matroid_bridge_general_rank_refuter_obstruction_v1"
+obstruction_id: "OB-V22-P4T02-B2-OM-BRIDGE-SELECTION-ROBUSTNESS-001"
+task_id: "RT-20260811-001"
+job_id: "AJ-RT-20260811-001-001"
+claim_boundary_id: "CB-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REFUTER-STRESS-001"
+candidate_id: "CAND-V22-B2-NONCHARACTER-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-GENERAL-RANK-V2"
+created_at: "2026-08-11T07:18:00Z"
+status: "active_candidate_local_obstruction"
+result_type: "scoped_obstruction"
+
+scope:
+  obstructed_claim: "The unchanged arbitrary-finite-rank Bridge_OM classifier is by itself a selected, finite-variation-stable, source-to-physical bridge sufficient for P4-T02."
+  surviving_claims:
+    - "For each supplied exact finite configuration, Gordan totality gives exactly one strict-feasible or positive-circuit obstruction branch."
+    - "Covectors, positive circuits, certificate fibers or orbits, presentation transport, finite refinements, and finite tame-path records remain well typed in their declared domain."
+    - "The arbitrary-finite-rank support theorem and effective-span factorization remain valid."
+    - "The RT017 source_pure_as_written verdict remains valid as a narrow absence-of-hidden-import audit."
+  non_obstructed_uses:
+    - "diagnostic classification of supplied finite configurations"
+    - "mathematical wall and refinement bookkeeping"
+    - "future materially distinct source-selection or bridge construction"
+    - "future physical interpretation if independently derived and separately audited"
+
+smallest_failed_premise:
+  premise: "Totality and presentation equivariance alone select admissible source data and protect a physically relevant stable branch."
+  failure_mode: "selection_and_robustness_not_derived"
+  exact_basis:
+    - "The rank-two A(t) path crosses the feasible-to-obstructed wall at arbitrarily small distance while rank and nonzero-column conditions persist."
+    - "A one-column source reorientation flips the total branch at every finite rank."
+    - "A finite rank-preserving refinement destroys strict feasibility."
+    - "Named sign/circuit/total/chamber components do not determine a labeled projective cross-ratio."
+    - "No bridge component derives which input, orientation, refinement, path, or physical interpretation is admissible."
+
+countermodel_families:
+  wall_crossing:
+    configuration: "A(t)=[e1,e2,(-1,t)]"
+    field: "Q"
+    fixed_rank: 2
+    nonzero_columns: true
+    feasible_side: "t>0 with witness k=(1,n+1) at t=1/n"
+    wall: "t=0 with positive dependence on columns 1 and 3"
+    obstructed_side: "t<0 with positive dependence coefficients (1,|t|,1)"
+    arbitrarily_small_sequence: "t=+1/n and -1/n"
+  reorientation:
+    configurations: "A_r^+=[e1,...,er,+1_r] and A_r^-=[e1,...,er,-1_r]"
+    ranks: "every finite r; exact controls exercised r=1,...,8"
+    feasible_witness: "k=1_r for A_r^+"
+    positive_circuit: "all coefficients one for A_r^-"
+  refinement:
+    base: "[e1,e2]"
+    refinement: "[e1,e2,-e1-e2]"
+    base_branch: "Feasible"
+    refined_branch: "Obstructed"
+    rank_preserved: true
+  realization_modulus:
+    first_labeled_slopes: "(0,1,2,infinity)"
+    second_labeled_slopes: "(0,1,3,infinity)"
+    shared_named_components:
+      - "rank-two chirotope sign data"
+      - "empty positive-circuit inventory"
+      - "Feasible total tag"
+      - "strict chamber a>0 and b>0"
+      - "identity-refinement and constant-path component values"
+    distinct_cross_ratios:
+      first: "2"
+      second: "3/2"
+    precision_guard: "This does not identify full base-realization-retaining presentation-groupoid objects."
+
+local_freeze:
+  freeze_label: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  decision: "locally_frozen"
+  frozen_scope: "Replay of the unchanged Bridge_OM candidate as a standalone P4-T02 source-to-physical bridge without a separately derived selector, stable admissibility law, and physical interpretation."
+  open_scope:
+    - "diagnostic use of oriented-matroid covectors, circuits, refinements, and walls"
+    - "a materially distinct source-side selector or stability theorem"
+    - "a realization-sensitive bridge with independently derived semantics"
+    - "a different theorem target chosen by a theoretical continuation selector"
+    - "protected human-gated ontology action if later shown necessary"
+  replay_prohibited: true
+  global_p4_t02_freeze: false
+  global_oriented_matroid_freeze: false
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+inherited_freezes:
+  - freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    status: "preserved"
+  - freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    status: "preserved"
+  - freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    status: "preserved"
+
+epistemic_boundary:
+  source_purity_verdict_reversed: false
+  conditional_bridge_mathematics_refuted: false
+  current_ontology_derivation_established: false
+  source_selection_established: false
+  finite_variation_robustness_established: false
+  physical_gauge_established: false
+  empirical_response_established: false
+  physical_causality_established: false
+  universal_sector_coverage_established: false
+  adoption_or_rejection_established: false
+
+distance_to_gr:
+  changed: false
+  row_count: 14
+  literal_no_delta_row_count: 14
+  ledger_updated: false
+  explanation: "The obstruction removes an overclaim and narrows route choice; it derives no new source primitive, response, geometry, coupling, equation, or protected status."
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_oriented_matroid_bridge"
+  current_cycle_step: "refuter"
+  prior_related_tasks:
+    - "RT-20260810-013"
+    - "RT-20260810-014"
+    - "RT-20260810-015"
+    - "RT-20260810-016"
+    - "RT-20260810-017"
+    - "RT-20260811-001"
+  cycle_risk: "high_if_unchanged_bridge_replayed"
+  next_allowed_route: "theoretical_selector"
+  next_role: "theoretical-continuation-selector@0.1.0"
+  successor_packet_id: "PKT-V22-P4T02-B2-POST-ORIENTED-MATROID-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  successor_status: "selected_not_executed"
+  orbit_avoidance_requirement: "The selector must change the theorem target, source primitive, admissibility assumptions, or bridge family and preserve all four local freezes."
+
+source_extension_classification:
+  classification: "status_boundary_evidence_only"
+  relation_to_current_ontology: "blocked_open"
+  status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  protected_authority_required: false
+  downstream_promotion_authorized: false
+  source_law_adopted: false
+  source_law_rejected: false
+  adoption_status: "blocked_adoption_open_continuation"
+
+forbidden_overreads:
+  - "the finite supplied sectors exhaust P7"
+  - "RT016 conditional mathematics is false"
+  - "RT017 source purity is reversed"
+  - "presentation naturality is physical gauge"
+  - "signs or positive circuits are empirical response or physical causality"
+  - "D7 adequacy or B2 activation, viability, adoption, rejection, disposal, adequacy, or sufficiency"
+  - "P4-T03 unlock or derivation of conformal structure, orientation, scale, g_eff, coupling, or Einstein equations"
+  - "Gate, benchmark, proof, publication, push, external action, or completed derivation"
+  - "global no-go, global theory rejection, or future source-extension impossibility"
