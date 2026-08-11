@@ -1,0 +1,222 @@
+schema_id: "v22_p4_t02_b2_source_law_space_robust_invariance_protection_packet_v1"
+status: "draft/control"
+authority: "science_draft"
+packet_status: "selected_not_executed"
+source_task_id: "RT-20260811-006"
+source_job_id: "AJ-RT-20260811-006-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+packet_id: "PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-FORMALIZATION-V1"
+candidate_law_id: "CAND-V22-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1"
+candidate_law_name: "SourceLawSpaceRobustInvarianceProtection_v1"
+candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+selected_next_packet_type: "ontology_law_research_packet"
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+adoption_status: "blocked_adoption_open_continuation"
+selected_next_role_family: "ontology-formalizer@0.2.0"
+supporting_perspective: "refuter@0.2.0"
+strategy_id: "formalize_v22_p4_t02_b2_source_law_space_robust_invariance_protection_or_obstruction_v1"
+work_item_id: "P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-FORMALIZATION"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Formalize or precisely obstruct an independently source-provenanced full source-law-space robust-invariance relation without replaying any frozen selector or importing target geometry."
+objective: "Define, from pre-outcome source syntax, a typed full-state admissible set, source-law family, admitted variation multifunction, and robust tangent-cone inclusion; prove quantitative stability or return the exact missing-source-primitive obstruction."
+
+source_extension_classification:
+  status_label: "proposal-only"
+  material_class: "source-extension data"
+  category: "new_ontology_primitive_candidate"
+  current_ontology_derivation_claimed: false
+  conservative_definitional_layer: "Tangent-cone, polar-cone, set-valued inclusion, and positive certificate-regraduation operations applied after their source-side domains are independently supplied."
+  new_primitive_layer: "The source-intrinsic admissible full-state set K, the source-law family A, the admitted variation multifunction Delta, and their presentation-transport law."
+  forbidden_import_layer: "Any target atlas, metric, tetrad, coframe, desired GR cone, physical norm, detector response, benchmark success, or outcome-selected failure locus used to choose K, A, Delta, tangent orientation, certificate scale, or margin."
+  source_extension_import_classification: "No target import occurs in the selector syntax. The future packet must fail closed if K, A, Delta, or their orientation is chosen from the desired P4-T02 outcome rather than independent source provenance."
+  target_gr_import_detected_in_selector: false
+  adoption_authorized: false
+
+formal_objects:
+  - object_id: "OBJ-SLSRIP-01"
+    name: "typed local source-law arena X_law"
+    status: "proposal-only"
+    meaning: "A source configuration and law-coefficient arena used only to type the formalization; it is not an adopted M_src or physical spacetime."
+  - object_id: "OBJ-SLSRIP-02"
+    name: "source-intrinsic admissible full-state subset K"
+    status: "missing_source_law_input"
+    meaning: "A closed subset whose provenance must precede every success or failure calculation."
+  - object_id: "OBJ-SLSRIP-03"
+    name: "admissible source-law family A"
+    status: "missing_source_law_input"
+    meaning: "A typed family of source generators fixed independently of the desired protection verdict."
+  - object_id: "OBJ-SLSRIP-04"
+    name: "admitted variation multifunction Delta"
+    status: "missing_source_law_input"
+    meaning: "Pointwise source-law variations fixed by source provenance, not by excluding known countermodels."
+  - object_id: "OBJ-SLSRIP-05"
+    name: "tangent and polar cone data T_K and N_K"
+    status: "conservative_mathematical_layer"
+    meaning: "Coordinate-free local geometry of K in source-law space; it has no physical causal-cone meaning."
+  - object_id: "OBJ-SLSRIP-06"
+    name: "robust-invariance relation R_prot"
+    status: "proposal-only"
+    meaning: "The boundary inclusion F(x)+Delta(x) subset int T_K(x), with exact weak or stratified variants explicitly separated."
+  - object_id: "OBJ-SLSRIP-07"
+    name: "certificate presentation groupoid Cert_prot"
+    status: "conservative_mathematical_layer"
+    meaning: "Optional multi-barrier or conormal certificates modulo positive regraduation and source-presentation transport; raw certificates are noncanonical."
+  - object_id: "OBJ-SLSRIP-08"
+    name: "balanced normal-variation witness family"
+    status: "draft/control"
+    meaning: "A falsifier showing that tangency with a centrally symmetric admitted normal variation class cannot provide strict protection."
+
+domains:
+  - "finite-dimensional or otherwise explicitly regular source-law charts with declared topology and differentiability"
+  - "closed full-state subsets K with source-provenance and effective tangent-cone calculation"
+  - "source generators and variations with declared local existence, transport, and boundary evaluation"
+  - "finite barrier fixtures only when they present K without supplying its authority"
+  - "no target spacetime, physical cone, empirical-response, metric, or benchmark domain"
+
+maps:
+  - map_id: "MAP-SLSRIP-01"
+    signature: "(K,x) -> T_K(x)"
+    purpose: "Compute the source-law-space tangent cone at an admissible-state boundary point."
+  - map_id: "MAP-SLSRIP-02"
+    signature: "(A,Delta,x) -> {F(x)+E : F in A, E in Delta(x)}"
+    purpose: "Form the independently admitted perturbed boundary-velocity set."
+  - map_id: "MAP-SLSRIP-03"
+    signature: "(K,A,Delta) -> R_prot in {pass,fail,undefined}"
+    purpose: "Return strict robust inclusion, an exact counterexample, or undefined when required source data are absent."
+  - map_id: "MAP-SLSRIP-04"
+    signature: "barrier presentation -> certificate orbit in Cert_prot"
+    purpose: "Quarantine raw barrier choices while preserving positive conormal sign information."
+  - map_id: "MAP-SLSRIP-05"
+    signature: "source presentation arrow -> transported (K,A,Delta,T_K,R_prot)"
+    purpose: "Test EqSrc-compatible transport without treating presentation naturality as physical gauge."
+  - map_id: "MAP-SLSRIP-06"
+    signature: "balanced normal pair (+E,-E) -> opposite boundary signs"
+    purpose: "Expose the zero-margin obstruction without a target norm."
+
+theorem_targets:
+  - theorem_id: "THM-SLSRIP-01"
+    name: "robust tangent-inclusion viability theorem"
+    target: "Under declared regularity and strict inclusion F(x)+Delta(x) subset int T_K(x) on every relevant boundary stratum, all admitted perturbed laws preserve K for their declared forward domain."
+  - theorem_id: "THM-SLSRIP-02"
+    name: "finite multi-certificate quantitative stability theorem"
+    target: "For a regular finite barrier presentation, independently sourced positive conormal residuals dominate admitted conormal variations and provide an exact strict-inclusion certificate invariant under positive regraduation."
+  - theorem_id: "THM-SLSRIP-03"
+    name: "balanced-normal-variation obstruction"
+    target: "If the admitted variation class contains both signs of a nonzero outward conormal direction at a zero-margin boundary point, strict robust invariance fails there."
+  - theorem_id: "THM-SLSRIP-04"
+    name: "presentation transport theorem"
+    target: "R_prot descends through declared source-presentation arrows when K, A, Delta, and tangent data transport coherently."
+  - theorem_id: "THM-SLSRIP-05"
+    name: "nonselection boundary theorem"
+    target: "Neither R_prot nor a certificate orbit selects K, A, Delta, a physical component, a matter sector, or a causal interpretation; those data require independent provenance."
+
+proof_obligations:
+  - obligation_id: "PO-01"
+    burden: "Type X_law without identifying it with physical spacetime or adopted M_src."
+  - obligation_id: "PO-02"
+    burden: "Derive or explicitly fail the source provenance of K before evaluating R_prot."
+  - obligation_id: "PO-03"
+    burden: "Derive or explicitly fail the source provenance of A before evaluating R_prot."
+  - obligation_id: "PO-04"
+    burden: "Derive or explicitly fail the source provenance of Delta before excluding any perturbation."
+  - obligation_id: "PO-05"
+    burden: "Declare regularity, existence, uniqueness, and boundary-domain hypotheses."
+  - obligation_id: "PO-06"
+    burden: "Prove the tangent-inclusion viability implication on every declared stratum."
+  - obligation_id: "PO-07"
+    burden: "Prove barrier-certificate independence under positive regraduation and presentation transport."
+  - obligation_id: "PO-08"
+    burden: "Prove the balanced-normal-variation obstruction and identify the exact failed premise."
+  - obligation_id: "PO-09"
+    burden: "Show that no target norm or desired physical failure locus defines the admitted variation bound."
+  - obligation_id: "PO-10"
+    burden: "Separate source-law robustness from sector universality, response semantics, and physical causality."
+  - obligation_id: "PO-11"
+    burden: "Preserve all five active freezes and demonstrate no factorization through a frozen candidate."
+  - obligation_id: "PO-12"
+    burden: "Return exactly one theorem-with-hypotheses-and-proof or precise-obstruction result."
+  - obligation_id: "PO-13"
+    burden: "Keep D7 unevaluated, B2 inactive, and P4-T03 locked."
+  - obligation_id: "PO-14"
+    burden: "Preserve every ontology, physical, empirical, Gate, proof, publication, push, and external-action block."
+
+failure_branches:
+  - failure_id: "FB-01"
+    trigger: "K is chosen by the desired protected component or P4-T02 outcome."
+    result: "goal_property_smuggling_obstruction"
+  - failure_id: "FB-02"
+    trigger: "A excludes failing laws only after observing the desired verdict."
+    result: "circular_admissibility_obstruction"
+  - failure_id: "FB-03"
+    trigger: "Delta is narrowed to remove RT005-style outward or transverse witnesses without independent source provenance."
+    result: "countermodel_exclusion_smuggling_obstruction"
+  - failure_id: "FB-04"
+    trigger: "A target metric or physical norm supplies tangent, conormal, or variation magnitude."
+    result: "forbidden_target_import"
+  - failure_id: "FB-05"
+    trigger: "The strict tangent inclusion fails at any declared boundary stratum."
+    result: "precise_robust_invariance_obstruction"
+  - failure_id: "FB-06"
+    trigger: "Balanced admitted normal variations meet a zero-margin boundary law."
+    result: "balanced_normal_variation_obstruction"
+  - failure_id: "FB-07"
+    trigger: "Raw barrier functions are selected canonically despite positive regraduation or redundant presentations."
+    result: "certificate_presentation_nonuniqueness"
+  - failure_id: "FB-08"
+    trigger: "K, A, Delta, or certificate data fail source-presentation transport or overlap coherence."
+    result: "inverse_or_cocycle_defect"
+  - failure_id: "FB-09"
+    trigger: "The law is defined only on the frozen signed-cubic slice or factors through any other frozen route."
+    result: "frozen_route_replay"
+  - failure_id: "FB-10"
+    trigger: "Robust source invariance is read as sector-universal propagation or a physical causal cone."
+    result: "physical_semantics_overread"
+  - failure_id: "FB-11"
+    trigger: "Required source objects or decision procedures are absent or ineffective."
+    result: "precise_missing_primitive_or_decidability_obstruction"
+
+result_contract:
+  selected_packet_executed: false
+  execution_authorized_in_this_task: false
+  permitted_result_types:
+    - "theorem_with_hypotheses_and_proof"
+    - "precise_obstruction"
+  exactly_one_result_required: true
+  no_fog_required: true
+  positive_result_next_role: "smuggling-auditor@0.2.0"
+  obstruction_result_next_role: "theoretical-continuation-selector@0.1.0"
+  next_roles_are_not_executed: true
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+
+authority_limits:
+  packet_selected_only: true
+  selected_packet_executed: false
+  source_law_formalized: false
+  source_law_proved: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  physical_component_selected: false
+  physical_cone_constructed: false
+  universal_matter_propagation_derived: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  gate_b_verdict_issued: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
