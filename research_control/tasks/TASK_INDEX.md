@@ -2,7 +2,7 @@
 
 Generated navigation support only. This index is not task authority, physics proof authority, benchmark authority, Gate Chair authority, or completed-derivation evidence.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T17:22:19Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"12434ada3b9276d53a3ed8a3b9c4ee76e30791d3","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"29026f0f94854b43a7e7dc9a9326ae6cdb4d311af6dc29fec0fcf4c1ad42e672"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"1afa7cb0840e596f93f74ce03217f2a129f768134ee20504fcda9230d5471aab"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"1ff41c721e79f3dbfbfadffeca7b6ecb9899c1c7f1ec8d4512538a8cdbb2c64d"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"11a5e1ba3eb0892f386665a477b2b8a1c7d9beeca3376aaa9f69056c61a1421e","source_path_count":"5118","task_count":"1281"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T18:45:38Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"028870b243490f2981f7cdd5635aa343544ffeb4","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"9bc494f57aa2c1322879794a0d33563cd3970301f603969354eb432620e78895"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"6a3cc7906c832cb47dfdce35e6b88b6336784edad5474324d76430c90fb75c9a"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"28c9548eb40c29bb2eb8dd27fd9a476071287f92b230243556407cef097ea2c3"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"faafcafc603cee9fa91784d5a1f37bc89fc15a215bde7e13ed7bef282b078133","source_path_count":"5122","task_count":"1282"} -->
 
 ## Generated-Report Provenance
 
@@ -11,21 +11,21 @@ Generated navigation support only. This index is not task authority, physics pro
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_task_index` |
-| Source commit | `12434ada3b9276d53a3ed8a3b9c4ee76e30791d3` |
-| Source-derived generation time | `2026-08-11T17:22:19Z` |
-| Tracked task count | 1281 |
-| Exact source-path count | 5118 |
-| Source manifest SHA-256 | `11a5e1ba3eb0892f386665a477b2b8a1c7d9beeca3376aaa9f69056c61a1421e` |
+| Source commit | `028870b243490f2981f7cdd5635aa343544ffeb4` |
+| Source-derived generation time | `2026-08-11T18:45:38Z` |
+| Tracked task count | 1282 |
+| Exact source-path count | 5122 |
+| Source manifest SHA-256 | `faafcafc603cee9fa91784d5a1f37bc89fc15a215bde7e13ed7bef282b078133` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `29026f0f94854b43a7e7dc9a9326ae6cdb4d311af6dc29fec0fcf4c1ad42e672`
+- `registries/AGENT_JOB_REGISTRY.csv`: `9bc494f57aa2c1322879794a0d33563cd3970301f603969354eb432620e78895`
 - `registries/AGENT_ROLE_REGISTRY.csv`: `847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `1afa7cb0840e596f93f74ce03217f2a129f768134ee20504fcda9230d5471aab`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `1ff41c721e79f3dbfbfadffeca7b6ecb9899c1c7f1ec8d4512538a8cdbb2c64d`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `6a3cc7906c832cb47dfdce35e6b88b6336784edad5474324d76430c90fb75c9a`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `28c9548eb40c29bb2eb8dd27fd9a476071287f92b230243556407cef097ea2c3`
 - `research_control/design/task_index_schema_v2.md`: `4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f`
 - `research_control/design/v21_recommendation_backlog.yaml`: `849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f`
 - `research_control/design/v21_task_taxonomy_policy.md`: `7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b`
@@ -41,9 +41,9 @@ or claim-promotion authority.
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `a3686e1f7fa6b93a7ff2f51d96dfb4f9cde059e6c52b3a5e821dd728cba555cb`
-- Generated-at source timestamp: `2026-08-11T17:22:19Z`
-- Row count: `1281`
+- Source fingerprint: `0e3f7f0d752907db24fb08b648121ebdd52796e0f661ebd6b880027a5e752719`
+- Generated-at source timestamp: `2026-08-11T18:45:38Z`
+- Row count: `1282`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -51,6 +51,7 @@ or claim-promotion authority.
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260811-009|RT-20260811-008|2026-08-11T18:45:38Z|2026-08-11T19:19:29Z|Stress the source-law-space robust-invariance protection candidate|v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress|audit_or_review|effective_metric_g_eff|v22_b2_source_law_space_robust_invariance_protection|theorem_or_precise_obstruction|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Test whether the fixed source-pure syntax protects the complete root tuple and robust-invariance property beyond its exact declared family.|refuter@0.2.0|false|false|14|{'role': 'theoretical-continuation-selector@0.1.0', 'packet': 'PKT-V22-P4T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1', 'recommendation': 'Select exactly one materially distinct source-derived family-protection law, source-side irrelevance theorem, bridge class, or protected ontology stop without replaying any frozen candidate.', 'execution_status': 'selected_not_executed'}|PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260811-009/jobs/completions/AJC-AJ-RT-20260811-009-001.yaml|
 |RT-20260811-008|RT-20260811-007|2026-08-11T17:22:19Z|2026-08-11T17:48:00Z|Audit the source-law-space robust-invariance protection proposal for hidden target or authority imports|v22_p4_t02_b2_source_law_space_robust_invariance_protection_source_extension_smuggling_audit|audit_or_review|effective_metric_g_eff|v22_b2_source_law_space_robust_invariance_protection_v1|audit_verdict_or_precise_repair|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Audit whether K A Delta tangent orientation conormal margin and EqSrc arrows are independently source-provenanced rather than desired-outcome preload.|smuggling-auditor@0.2.0|false|false|14||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260811-008/jobs/completions/AJC-AJ-RT-20260811-008-001.yaml|
 |RT-20260811-007|RT-20260811-006|2026-08-11T16:03:00Z|2026-08-11T16:31:42Z|Formalize or precisely obstruct the P4-T02 full source-law-space robust-invariance protection law|v22_p4_t02_b2_source_law_space_robust_invariance_protection_formalization_or_obstruction|formalization_or_theorem|effective_metric_g_eff|v22_b2_source_law_space_robust_invariance_protection_v1|theorem_or_precise_obstruction|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Formalize or precisely obstruct full source-law-space robust invariance from source premises only.|ontology-formalizer@0.2.0|false|false|13||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260811-007/jobs/completions/AJC-AJ-RT-20260811-007-001.yaml|
 |RT-20260811-006|RT-20260811-005|2026-08-11T14:35:09Z|2026-08-11T15:18:28Z|Select one materially distinct P4-T02 route after the signed-cubic viability-selector robustness freeze|v22_p4_t02_b2_post_signed_cubic_viability_refuter_theoretical_continuation_selector|integration_or_selection|effective_metric_g_eff|v22_b2_matter_principal_polynomial|completed_or_precisely_blocked|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Choose one materially distinct same-milestone packet after the SignedCubicViabilitySelector_v1 robustness obstruction without replaying shared-tau, repaired-quotient, common-character, or unchanged signed-cubic viability-selector route.|theoretical-continuation-selector@0.1.0|false|false|14||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260811-006/jobs/completions/AJC-AJ-RT-20260811-006-001.yaml|

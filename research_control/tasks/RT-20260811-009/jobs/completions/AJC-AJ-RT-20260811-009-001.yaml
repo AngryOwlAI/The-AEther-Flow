@@ -1,0 +1,751 @@
+job_id: "AJ-RT-20260811-009-001"
+completion_id: "AJC-AJ-RT-20260811-009-001"
+task_id: "RT-20260811-009"
+task_type: "v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress"
+decision_id: "DDR-20260811-009"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260811-009"
+supporting_perspective: "smuggling-auditor@0.2.0"
+status: "completed"
+result: "completed"
+completion_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-11T18:45:38Z"
+started_at: "2026-08-11T18:45:38Z"
+completed_at: "2026-08-11T19:19:29Z"
+objective: "Stress the exact locally source-pure SourceLawSpaceRobustInvarianceProtection_v1 under target-free source-root and source-law perturbations, orientation reversal, variation enlargement, nontrivial EqSrc demands, strict-margin collapse, and dimensional extension; preserve valid conditional mathematics and the RT008 source-purity verdict; issue one decisive Refuter classification with any required obstruction, freeze, and route-cycle record without promotion."
+completion_summary: "The fixed RT007 theorem remains correct for every supplied positive-margin tuple and RT008's narrow source_pure_as_written verdict remains unchanged. Exact half-line, variation, reflection, transverse-lift, and presentation-arrow controls show that the unchanged proposal does not select or protect a complete family of roots: each positive-margin tuple is locally open, yet family margins can converge to zero; the variation threshold is alpha=1; complete reflection preserves the verdict while incomplete reversal fails; base-identical full-state lifts have opposite verdicts; and nontrivial EqSrc arrows require extra closure data. The decisive result is scoped_obstruction. Unchanged standalone replay is candidate-locally frozen, all five inherited freezes remain active, every Distance-to-GR row is no_delta, and one theoretical-continuation-selector packet is selected but not executed."
+objective_result: "scoped_obstruction"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "source_law_space_robust_invariance_protection_scoped_obstruction_theoretical_selector_pending_checkpoint"
+milestone_disposition: "effective_metric_burden_candidate_local_freeze_no_distance_delta"
+requires_human_gate: false
+human_gate_required: false
+source_head: "028870b243490f2981f7cdd5635aa343544ffeb4"
+source_tree: "7079deac847501383d04710f5c839efead453bb4"
+source_handoff_id: "handoff-1022"
+source_handoff_sha256: "dd97072babc76d2a7c67053c3a20af828f4d73fea4e1eda6ed118198c15b4242"
+source_extension_classification_required: true
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P4"
+  plan_task_id: "P4-T02"
+  work_item_status: "source_law_space_robust_invariance_protection_scoped_obstruction_theoretical_selector_checkpoint_pending"
+  completed_plan_subroute: "P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "P4-T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-THEORETICAL-CONTINUATION-SELECTION"
+  recommendation_ids:
+    - "V22-R07"
+    - "V22-R08"
+    - "V22-R10"
+    - "V22-R13"
+  declared_coverage_ids:
+    - "V22-R07"
+    - "V22-R08"
+    - "V22-R13"
+    - "S5"
+  decisive_result: "scoped_obstruction"
+  candidate_id: "CAND-V22-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1"
+  candidate_law_name: "SourceLawSpaceRobustInvarianceProtection_v1"
+  obstruction_id: "OB-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS-001"
+  candidate_local_freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  selected_successor_packet_id: "PKT-V22-P4T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  selected_successor_packet_type: "theoretical_continuation_selector"
+  selected_successor_role_family: "theoretical-continuation-selector@0.1.0"
+  selected_successor_executed: false
+  active_freeze_count: 6
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_fallback_activated: false
+  b2_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one registered draft/control source-law-space robust-invariance Refuter stress manuscript"
+      - "one exact stress matrix and one candidate-scoped obstruction or survival disposition"
+    project_system:
+      - "task-local executable stress model, focused validator, compact receipt, LaTeX receipt, provenance, parent-child synthesis, and standard control synchronization"
+  accepted_criteria:
+    physics:
+      - "all handoff-selected stress branches receive explicit evidence and a local result"
+      - "fixed conditional theorem and narrow source-purity mathematics are preserved unless one exact defect is proved"
+      - "one decisive Refuter class records the smallest failed premise or exact survival scope"
+      - "freeze and route-cycle consequences are explicit without global overread"
+    project_system:
+      - "source hashes, artifacts, registries, backlog, program state, and handoff pass deterministic validation"
+      - "the registered TeX source compiles and rendered pages pass visual inspection"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "countermodel"
+  realized_payload_type: "candidate_scoped_obstruction_with_exact_countermodels"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  result: "PASS_MATERIAL_COUNTERMODEL_PAYLOAD_PRESENT"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_result_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "stress_v22_p4_t02_b2_source_law_space_robust_invariance_protection_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  result: "PASS_MATERIALLY_DISTINCT_CANDIDATE_STRESS"
+  reopening_requested: false
+  inherited_freeze_count: 5
+  candidate_local_freeze_created: true
+  active_freeze_count: 6
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1022"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite_commit: "028870b243490f2981f7cdd5635aa343544ffeb4"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  refresh_needed: false
+  refresh_performed: false
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1216
+    relationship_row_count: 6281
+    semantic_row_count: 1216
+    vault_row_count: 1216
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1"
+      returned_object_ids:
+        - "TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1"
+  canonical_inspections:
+    - object_id: "TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260811-008/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_audit_v1.tex"
+      source_hash: "122bcd824cf4ea9956fe26f38f592c962dfaf26ece004a68333f1a1f2514e450"
+  authority_note: "Tracked registered source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  internal_child_count: 2
+  selected_successor_executed: false
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260811-009/artifacts/child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+      output_sha256: "1439672919aa8587a6f8df969bede0cb3f7f8a3c93ee21cdd88758bf5361a1fb"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260811-009/artifacts/child_phys_phil_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+      output_sha256: "f8e3471b6c269b992c8fd4d426023ce4ccf5fe715cf8ea91c2ab1826ae89d6b5"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260811-009/artifacts/parent_conflict_review_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+    review_sha256: "9f67207bf6485ad716ffb63957569c3aecc82f347b5fbc41afbbd8d685af1eae"
+    resolution_rounds: 0
+    resolved_precision_finding_count: 4
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_v1.tex"
+    fused_output_sha256: "b60a5a38b1de55a0706516e188c9ba8ebdbcd30eebbc8ef543022db4f5dad910"
+    fusion_notes_path: "research_control/tasks/RT-20260811-009/artifacts/parent_fusion_notes_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.md"
+    fusion_notes_sha256: "6523c2bde9c7479d106d0e6fbb11cc46b852b0c9a00b00615c2f7e7518bbcce4"
+    shared_consensus_summary: "Both children preserve fixed-tuple openness and the narrow RT008 written-syntax purity verdict while finding the same exact family-margin, variation-threshold, transverse-lift, and nontrivial-arrow obstruction."
+    unique_phys_math_contributions: "Exact fixed-fibre radius, alpha threshold, reflection transport, product-boundary controls, and swap-arrow coherence calculation."
+    unique_phys_phil_contributions: "Modal-strength ladder, covariance-versus-selection distinction, reduced-slice-versus-full-state distinction, and explicit conceptual falsifiers."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Test whether the fixed source-pure syntax protects the complete root tuple and robust-invariance property beyond its exact declared family."
+  missing_source_law: "source_derived_uniform_root_family_margin_variation_bound_transverse_closure_and_nontrivial_eqsrc_protection_law"
+  underdetermination_statement: "Current ontology does not derive a complete root-family law with a positive uniform margin, independently admitted variation bound, transverse closure, orientation selection, and nontrivial EqSrc closure. The exact scoped obstruction blocks unchanged replay while materially distinct continuation remains open."
+  no_go_theorem_status: "scoped_obstruction"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_refutation"
+  candidate_law_refutation:
+    refuted_candidate: "Unchanged SourceLawSpaceRobustInvarianceProtection_v1 used as a source-derived family-uniform protection law or standalone P4-T02 bridge."
+    refutation_basis: "Exact D_epsilon, Delta_alpha, complete-reflection, same-slice transverse-lift, and nontrivial-arrow controls expose the smallest missing complete-family law while preserving every fixed-tuple theorem."
+    surviving_obligations:
+      - "Derive or independently source a complete root family and positive uniform margin."
+      - "Derive an admissible variation bound and full-state transverse closure."
+      - "Derive orientation and nontrivial EqSrc closure without target or outcome preload."
+      - "Preserve all downstream exact-GR recovery and protected authority gates."
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Retain exact-GR recovery as a downstream obligation rather than a Refuter premise."
+      - "Preserve D7 non-evaluation, B2 inactivity, and the P4-T03 lock."
+      - "Require physical metric, coupling, equation, and benchmark claims to pass their own protected gates."
+    distance_to_gr_links:
+      - "source ontology primitives"
+      - "finite-variation robustness"
+      - "effective metric g_eff"
+      - "matter coupling and Einstein equations"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No decision is requested now; any later canonical-ontology candidate promotion, source-law adoption, or protected stop requires a separate explicit human gate."
+    exact_requested_ontology_edit: ""
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "The fixed candidate has no source-derived family-uniform margin, perturbation bound, transverse closure, orientation selector, or nontrivial EqSrc closure beyond each supplied tuple."
+  obstruction_id: "OB-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS-001"
+  result_scope: "source_extension_candidate"
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+  rationale: "Exact target-free controls preserve fixed-tuple local openness while proving that unchanged proposal syntax does not select or uniformly protect its own complete root family."
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The obstruction narrows one proposal-only route but constructs no source primitive, physical response, cone, metric, coupling, equation, or protected status."
+  downstream_unlocked: []
+  downstream_still_blocked:
+    - "complete P7 coverage and D7 or P2-T01 adequacy"
+    - "B2 activation, adoption, rejection, disposal, viability, adequacy, or sufficiency"
+    - "P4-T03 conformal reconstruction, physical scale, g_eff, matter coupling, and Einstein equations"
+    - "Gate, benchmark, proof, publication, and completed derivation"
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_delta"
+    finding: "No complete root family or family-protection law is selected or adopted from current ontology."
+  - burden: "Source equivalence EqSrc"
+    status: "no_delta"
+    finding: "Complete-tuple transport remains conditional; nontrivial arrows and coherence are not source-selected."
+  - burden: "RetainH"
+    status: "no_delta"
+    finding: "No retention primitive or theorem is supplied."
+  - burden: "GenH"
+    status: "no_delta"
+    finding: "Generator families and allowed perturbations remain proposal-only inputs."
+  - burden: "ObsLoc_lc"
+    status: "no_delta"
+    finding: "No observer-localization or operational readout map is supplied."
+  - burden: "Resp_lc"
+    status: "no_delta"
+    finding: "Robust-invariance verdicts and conormal certificates are not detector or empirical responses."
+  - burden: "M_src"
+    status: "no_delta"
+    finding: "Source-law charts and product controls are not an adopted physical source manifold."
+  - burden: "g_eff"
+    status: "no_delta"
+    finding: "No physical cone, conformal class, time orientation, scale, or effective metric is constructed."
+  - burden: "matter coupling"
+    status: "no_delta"
+    finding: "No universal matter-sector propagation or coupling law is derived."
+  - burden: "Einstein equations"
+    status: "no_delta"
+    finding: "No action, stress-energy semantics, variation principle, or field equation is supplied."
+  - burden: "finite-variation robustness"
+    status: "no_delta"
+    finding: "Fixed positive-margin tuples are locally robust, but no source-derived family-uniform margin, variation bound, or full-state closure is supplied."
+  - burden: "benchmark promotion"
+    status: "no_delta"
+    finding: "No exact-GR comparison, benchmark test, recovery, or promotion occurs."
+  - burden: "Gate Chair status"
+    status: "no_delta"
+    finding: "No protected review, adoption, activation, disposition, or verdict occurs."
+  - burden: "current route freeze or hard-fail status"
+    status: "no_delta"
+    finding: "Five inherited freezes remain active and unchanged predicate replay is locally frozen only as a standalone source-derived family-protection bridge."
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT009-001"
+    payload_type: "theorem"
+    name: "Fixed-margin perturbation control"
+    burden_effect: "local robustness preserved with no Distance-to-GR delta"
+    summary: "A fixed regular tuple with residual margin m remains strictly robustly invariant against every admitted perturbation whose active-conormal residual norm is less than m."
+  - payload_id: "NMP-RT009-002"
+    payload_type: "obstruction"
+    name: "Family-uniformity obstruction"
+    burden_effect: "candidate-scoped obstruction with no Distance-to-GR delta"
+    summary: "The passing half-line family D_epsilon has exact protection radii epsilon with zero family infimum."
+  - payload_id: "NMP-RT009-003"
+    payload_type: "theorem"
+    name: "Sharp admitted-variation threshold"
+    burden_effect: "variation-bound debt with no Distance-to-GR delta"
+    summary: "For Delta_alpha the worst residual is (1-alpha)epsilon, giving strict pass, tangency, and outward failure below, at, and above alpha=1."
+  - payload_id: "NMP-RT009-004"
+    payload_type: "countermodel"
+    name: "Same-slice full-state lift nonselection"
+    burden_effect: "transverse-closure debt with no Distance-to-GR delta"
+    summary: "Two product lifts agree on the protected base slice but have opposite strict-invariance verdicts at transverse faces."
+  - payload_id: "NMP-RT009-005"
+    payload_type: "obstruction"
+    name: "Nontrivial EqSrc arrow nonselection"
+    burden_effect: "presentation-closure debt with no Distance-to-GR delta"
+    summary: "Classifier truth does not select a nontrivial presentation groupoid or provide generator and parameter closure for a demanded arrow."
+
+mathematical_payload_manifest:
+  - payload_id: "NMP-RT009-001"
+    payload_type: "theorem"
+    object_name: "fixed-margin active-conormal perturbation theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_v1.tex"
+    burden_effect: "local robustness preserved with no Distance-to-GR delta"
+    summary: "Strict residual margin m protects the fixed tuple against residual perturbations smaller than m."
+    proof_or_countermodel_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_model.py"
+    reproducibility_status: "PASS_10_OF_10"
+  - payload_id: "NMP-RT009-002"
+    payload_type: "obstruction"
+    object_name: "D_epsilon family-uniformity obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_obstruction_v1.yaml"
+    burden_effect: "candidate-scoped obstruction with no Distance-to-GR delta"
+    summary: "Every positive member passes while the protection radii have zero family infimum."
+    proof_or_countermodel_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_model.py"
+    reproducibility_status: "PASS_10_OF_10"
+  - payload_id: "NMP-RT009-003"
+    payload_type: "theorem"
+    object_name: "Delta_alpha sharp threshold theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_v1.tex"
+    burden_effect: "variation-bound debt with no Distance-to-GR delta"
+    summary: "The exact worst residual is (1-alpha)epsilon."
+    proof_or_countermodel_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_model.py"
+    reproducibility_status: "PASS_10_OF_10"
+  - payload_id: "NMP-RT009-004"
+    payload_type: "countermodel"
+    object_name: "opposite-verdict full-state product lifts"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_v1.tex"
+    burden_effect: "transverse-closure debt with no Distance-to-GR delta"
+    summary: "Base-identical inward and outward lifts separate reduced-slice truth from full-state protection."
+    proof_or_countermodel_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_model.py"
+    reproducibility_status: "PASS_10_OF_10"
+  - payload_id: "NMP-RT009-005"
+    payload_type: "obstruction"
+    object_name: "nontrivial EqSrc closure obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-009/artifacts/child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+    burden_effect: "presentation-closure debt with no Distance-to-GR delta"
+    summary: "Two passing singleton generators do not make an identity-coordinate parameter swap coherent; a different scaling arrow illustrates the extra structure."
+    proof_or_countermodel_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_model.py"
+    reproducibility_status: "PASS_10_OF_10"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OB-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS-001"
+  result_class: "scoped_obstruction"
+  scope: "source_extension_candidate"
+  failed_object: "unchanged proposal-only SourceLawSpaceRobustInvarianceProtection_v1 promoted as a source-derived family-uniform protection law or standalone P4-T02 bridge"
+  exact_failure: "Positive fixed margins give local openness, but their family infimum may vanish; variation enlargement crosses the strict boundary at alpha=1; base-identical transverse lifts have opposite verdicts; and a demanded nontrivial EqSrc arrow requires extra closure data."
+  minimal_counterexample_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_model.py"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "selector_required"
+  forbidden_overread: "This candidate-scoped obstruction neither refutes the fixed theorem nor reverses RT008's narrow written-syntax purity verdict nor proves a global no-go or future source-extension impossibility."
+  source_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_obstruction_v1.yaml"
+  minimal_countermodel_available: true
+  global_no_go_claimed: false
+
+refuter_obstruction_record:
+  obstruction_id: "OB-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS-001"
+  target_claim: "The unchanged SourceLawSpaceRobustInvarianceProtection_v1 supplies a source-derived family-uniform protection law and standalone P4-T02 bridge beyond each supplied tuple."
+  target_milestone: "effective_metric_g_eff"
+  failed_premise: "No independently source-derived complete-family law supplies a positive uniform margin, admitted-variation bound, transverse closure, orientation selection, or nontrivial EqSrc coherence."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_model.py"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "Missing independent source certificate for the complete root family and its uniform margin, variation, transverse, orientation, and arrow closures."
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "locally_frozen"
+    active_freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+    freeze_scope: "Unchanged candidate as a source-derived family-wide law or P4-T02 bridge; exact theorem and diagnostic use remain open."
+    next_allowed_route: "theoretical_selector"
+    global_theory_rejection: false
+    future_source_extension_impossibility: false
+  route_cycle_control:
+    cycle_family: "v22_p4_t02_b2_source_law_space_robust_invariance_protection"
+    current_cycle_step: "source_extension_refuter_stress"
+    prior_related_tasks:
+      - "RT-20260811-006"
+      - "RT-20260811-007"
+      - "RT-20260811-008"
+    cycle_risk: "high_if_unchanged_candidate_is_replayed_as_family_protection"
+    orbit_avoidance_reason: "The next packet must select a materially distinct law, theorem, bridge, or protected stop."
+    next_role_consequence: "theoretical-continuation-selector@0.1.0"
+  forbidden_conclusions:
+    - "The fixed conditional theorem is not false on its declared domain."
+    - "The RT008 narrow source-purity verdict is not revoked."
+    - "No source law or canonical ontology is adopted or globally rejected."
+    - "No D7 adequacy, B2 action, P4-T03 unlock, g_eff, coupling, Einstein equation, Gate, benchmark, proof, publication, push, external action, global no-go, or completed derivation follows."
+
+freeze_criteria_status:
+  repeated_burden: true
+  scoped_obstruction: true
+  freeze_evaluation_required: true
+  active_freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  candidate_freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  prior_attempts_considered:
+    - "RT-20260811-006 theoretical selection"
+    - "RT-20260811-007 candidate formalization"
+    - "RT-20260811-008 source-extension audit"
+    - "RT-20260811-009 Refuter stress"
+  freeze_if:
+    - "The unchanged tuple-conditional classifier is replayed as a source-derived family-wide robustness law."
+    - "Outcome-selected restrictions on epsilon, alpha, transverse lifts, orientation, or arrows are described as source admissibility."
+  do_not_freeze_if:
+    - "A separately admitted packet materially changes the source law, theorem target, bridge class, or protected authority question."
+  criteria_evaluated:
+    - "construction, audit, and exact stress are complete"
+    - "family-margin collapse and variation threshold are exact"
+    - "transverse and nontrivial-arrow gaps are independently exhibited"
+    - "all five inherited freezes remain preserved"
+  freeze_decision: "not_frozen"
+  decision_reason: "The exact unchanged candidate is locally frozen in the obstruction record while fixed-tuple and diagnostic use plus materially distinct same-milestone research remain open."
+  rationale: "The candidate-local freeze prevents construct-audit-stress orbit replay without freezing materially distinct research."
+  next_allowed_route: "theoretical_selector"
+  next_allowed_role: "theoretical-continuation-selector@0.1.0"
+  status_update_path: "research_control/design/v22_recommendation_backlog.yaml"
+  ledger_or_registry_update_path: "research_control/program_state.yaml"
+  frozen_scope: "unchanged SourceLawSpaceRobustInvarianceProtection_v1 as a standalone source-derived family-uniform P4-T02 bridge"
+  nonfrozen_scope: "fixed-tuple and diagnostic use plus a materially distinct source law, theorem, bridge, or protected human-gated route"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_source_law_space_robust_invariance_protection"
+  current_cycle_step: "source_extension_refuter_stress"
+  prior_related_tasks:
+    - "RT-20260811-006"
+    - "RT-20260811-007"
+    - "RT-20260811-008"
+  cycle_risk: "high_if_unchanged_candidate_is_replayed"
+  orbit_avoidance_reason: "The next selector must change the source law, theorem target, bridge class, or protected authority question."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0 selects exactly one materially distinct same-milestone packet after checkpoint."
+
+loop_risk_decision:
+  category: "scoped_obstruction"
+  repeated_object: "unchanged SourceLawSpaceRobustInvarianceProtection_v1 offered as a source-derived family-uniform P4-T02 bridge"
+  obstruction_summary: "Fixed positive margins are locally open, but exact family, variation, transverse-lift, and arrow controls show that the candidate supplies no complete-family protection law."
+  next_route: "theoretical_decision_role_selection"
+  rationale: "A fresh theoretical-continuation-selector must select one materially distinct source law, source-side irrelevance theorem, bridge class, or protected stop while preserving all six freezes."
+  local_freeze_applied: true
+  next_route_changes_object_or_assumptions: true
+  global_freeze_applied: false
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "OB-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS-001"
+  item_source_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_obstruction_v1.yaml"
+  item_kind: "obstruction"
+  classification: "status_boundary_evidence_only"
+  claim_boundary_id: "CB-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-001"
+  evidence_paths:
+    - "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_model.py"
+    - "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_matrix_v1.yaml"
+    - "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_obstruction_v1.yaml"
+    - "research_control/tasks/RT-20260811-009/artifacts/parent_fusion_notes_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.md"
+  blocked_overreads:
+    - "fixed-tuple openness described as a source-derived complete-family law"
+    - "conditional covariance described as orientation selection or physical gauge"
+    - "candidate-scoped obstruction described as global no-go or future-extension impossibility"
+    - "D7 adequacy, B2 action, P4-T03, or downstream promotion"
+  relation_to_current_ontology: "blocked_open"
+  relation_to_target_side_structures: "none"
+  protected_authority_required: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "The unchanged proposal-only candidate fails as a source-derived family-uniform protection bridge while its fixed-tuple theorem and materially distinct continuation remain open."
+  next_route_if_blocked: "theoretical-continuation-selector@0.1.0"
+  category: "source_extension_candidate_refutation"
+  status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  current_ontology_derivation_claimed: false
+  source_law_adopted: false
+  source_law_rejected: false
+  adoption_status: "blocked_adoption_open_continuation"
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "select_v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_continuation_v1"
+  packet_id: "PKT-V22-P4T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-THEORETICAL-CONTINUATION-SELECTION"
+  work_kind: "theoretical_packet_selection"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  supporting_perspective: "refuter@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "theoretical_continuation_selector"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Select one materially distinct continuation after the source-law-space robust-invariance family-protection obstruction and candidate-local freeze."
+  expected_result_kind: "one_theoretical_packet_selection"
+  transition_id: "SELECT_DISTINCT_B2_ROUTE_AFTER_SOURCE_LAW_SPACE_ROBUST_INVARIANCE_PROTECTION_FREEZE"
+  selector_options:
+    - "source_derived_family_protection_law"
+    - "source_side_irrelevance_theorem"
+    - "materially_distinct_bridge_class"
+    - "human_gated_ontology_change_required"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  adequacy_reevaluation_authorized: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physics_promotion_authorized: false
+  selected: true
+  admitted: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+next_recommendation:
+  role: "theoretical-continuation-selector@0.1.0"
+  packet: "PKT-V22-P4T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  recommendation: "Select exactly one materially distinct source-derived family-protection law, source-side irrelevance theorem, bridge class, or protected ontology stop without replaying any frozen candidate."
+  execution_status: "selected_not_executed"
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "universality_or_robustness"
+  slots:
+    - countermodel_slot: "minimal_local_failure"
+      status: "satisfied"
+      scope: "D_epsilon family margin collapse and arbitrarily small variation failure"
+      result_artifact: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_model.py"
+    - countermodel_slot: "boundary_control"
+      status: "satisfied"
+      scope: "strict, tangent, and outward alpha threshold with complete reflection control"
+      result_artifact: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_matrix_v1.yaml"
+    - countermodel_slot: "off_family_control"
+      status: "satisfied"
+      scope: "base-identical inward and outward full-state lifts plus nontrivial-arrow demand"
+      result_artifact: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_v1.tex"
+
+artifact_receipt:
+  science:
+    manuscript_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_v1.tex"
+    manuscript_sha256: "b60a5a38b1de55a0706516e188c9ba8ebdbcd30eebbc8ef543022db4f5dad910"
+    obstruction_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_obstruction_v1.yaml"
+    obstruction_sha256: "7f1b136bb31883aebb337602bb3c86f2b222d1ec737307b48cb182d1c9c19c51"
+    stress_matrix_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_matrix_v1.yaml"
+    stress_matrix_sha256: "53001f1cf64d90ab0d639550e61439ddf8961587518a615b4f188dc484e44946"
+    model_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_model.py"
+    model_sha256: "08c539ccd60ac48d3d7b597b1494bebc567f680d9e2ba95c3a606aa02f079a90"
+    provenance_manifest_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_provenance_manifest_v1.yaml"
+    provenance_manifest_sha256: "bb1a71dea2d6cde3e671cdfb19a1137958b19b8f614ae52e0029a00535b03c68"
+  synthesis:
+    child_phys_math_sha256: "1439672919aa8587a6f8df969bede0cb3f7f8a3c93ee21cdd88758bf5361a1fb"
+    child_phys_phil_sha256: "f8e3471b6c269b992c8fd4d426023ce4ccf5fe715cf8ea91c2ab1826ae89d6b5"
+    parent_conflict_review_sha256: "9f67207bf6485ad716ffb63957569c3aecc82f347b5fbc41afbbd8d685af1eae"
+    parent_fusion_notes_sha256: "6523c2bde9c7479d106d0e6fbb11cc46b852b0c9a00b00615c2f7e7518bbcce4"
+  rendering:
+    latex_compile_receipt_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_latex_compile_receipt.json"
+    latex_compile_receipt_sha256: "c2df6e3e7589c787250d426c259bf300864cfec7655023e409840b4a3280a074"
+    page_count: 5
+    visually_inspected_page_count: 5
+    visual_inspection_status: "PASS"
+    tracked_pdf_created: false
+  validation:
+    focused_validator_path: "research_control/tasks/RT-20260811-009/artifacts/validate_v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.py"
+    focused_report_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_validation.json"
+    compact_receipt_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_compact_receipt.json"
+
+command_results:
+  - command: "v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_model.py --json"
+    status: "PASS"
+    detail: "Ten exact rational fixed-margin, family-limit, variation, reflection, transverse, arrow, and root-orbit checks pass."
+  - command: "pdfLaTeX two-pass compile and all-page Poppler rendered inspection"
+    status: "PASS"
+    detail: "Five letter-size pages compile in two passes with zero final-pass reference or box warnings and all five pages pass visual inspection."
+  - command: "focused and governed repository validation"
+    status: "PENDING_PRECHECKPOINT"
+    detail: "Focused, affected-profile, research-control, documentation, claim-language, memory, and diff validation remain required before checkpoint."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, registered-source, committed-checkpoint, ordinary-route, payload, family-freeze, dual-budget, and claim-boundary admissions passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The exact model, both child analyses, zero-conflict review, fused manuscript, two-pass compilation, and all-page visual inspection pass."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Focused and governed repository validation remain to run against the terminal precheckpoint state."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed AJ-RT-20260811-009-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Five letter-size pages compile without final-pass box warnings and every rendered page passes visual inspection."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Governed source registration synchronization and read-only memory validation remain to run."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains to run before checkpoint."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review is authorized for this P4-T02 source-extension Refuter stress."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "the fixed RT007 conditional theorem or RT008 narrow written-syntax purity verdict was refuted"
+    - "conditional covariance or a tangent-cone certificate is physical gauge, causality, empirical response, or occurrence"
+    - "the proposal selects complete P7 coverage, M_src adoption, or full B2 universality"
+    - "D7 adequacy was reevaluated or B2 was activated, adopted, rejected, disposed, viable, adequate, or sufficient"
+    - "P4-T03 is unlocked or g_eff, matter coupling, or Einstein equations are derived"
+    - "a Gate, benchmark, proof, publication, push, external action, or completed derivation is authorized"
+    - "global theory rejection, global no-go, or future source-extension impossibility is established"
+  summary: "The scoped obstruction, local freeze, and selector route are draft/control physics payload. Validation, registration, rendering, and checkpoint success cannot promote them into M_src adoption, physical semantics, g_eff, matter coupling, Einstein equations, benchmark evidence, protected authority, completed derivation, or global theory rejection."
+
+checkpoint:
+  invocation_count_before_completion: 0
+  committed_before_completion: false
+  required: true
+  permitted_invocation_count: 1
+  consumed_checkpoint_replay_authorized: false
+  push_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+
+output_paths:
+  - "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_obstruction_v1.yaml"
+  - "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_provenance_manifest_v1.yaml"
+  - "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_model.py"
+  - "research_control/tasks/RT-20260811-009/artifacts/child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260811-009/artifacts/child_phys_phil_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260811-009/artifacts/parent_conflict_review_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260811-009/artifacts/parent_fusion_notes_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.md"
+  - "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260811-009/artifacts/validate_v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.py"
+  - "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_validation.json"
+  - "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_compact_receipt.json"
+  - "research_control/tasks/RT-20260811-009/documentation_impact.yaml"
+  - "research_control/handoffs/handoff-1023.yaml"
+  - "research_control/handoffs/handoff-1023.md"
+  - "research_control/program_state.yaml"
+
+notes: "Exactly one source-law-space robust-invariance Refuter stress was executed and exactly one next role was selected. The theoretical continuation selector remains unexecuted until a fresh post-checkpoint invocation."

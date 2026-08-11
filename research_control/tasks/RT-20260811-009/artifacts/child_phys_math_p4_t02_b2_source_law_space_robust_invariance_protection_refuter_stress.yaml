@@ -1,0 +1,896 @@
+schema_id: "child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-001"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260811-009"
+job_id: "AJ-RT-20260811-009-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+execution_role_ref: "refuter@0.2.0--RT-20260811-009"
+authority: "science_draft"
+status: "completed"
+status_label: "draft/control"
+candidate_id: "CAND-V22-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1"
+candidate_law_name: "SourceLawSpaceRobustInvarianceProtection_v1"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+packet_id: "PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-V1"
+claim_boundary_id: "CB-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-001"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Test whether the fixed source-pure syntax protects the complete root tuple and robust-invariance property beyond its exact declared family."
+missing_source_law: "source_derived_uniform_root_family_margin_variation_bound_transverse_closure_and_nontrivial_eqsrc_protection_law"
+refuter_result_class: "scoped_obstruction"
+exact_refuter_result_count: 1
+
+decisive_verdict:
+  result_type: "scoped_obstruction"
+  obstruction_id: "OB-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS-001"
+  scope: "source_extension_candidate"
+  statement: "The exact RT007 theorem is valid for every supplied datum satisfying its hypotheses, and the RT008 source_pure_as_written verdict remains valid narrowly. The unchanged candidate does not, however, supply a source-derived protection theorem over a family of roots: fixed positive-margin fibres are open with a radius proportional to their margin, while the exact half-line family has margins epsilon tending to zero; variation enlargement crosses at alpha=1; complete reflection preserves the verdict but K-only reversal fails; two target-free transverse extensions agreeing on the base slice have opposite verdicts; and a nontrivial swap arrow requires generator-family closure absent from the identity-only datum."
+  exact_failed_premise: "No independently source-derived law gives a positive uniform lower margin, an admitted-variation radius, transverse extension closure, or nontrivial EqSrc arrow closure over the candidate root family."
+  fixed_candidate_theorem_refuted: false
+  rt008_source_purity_verdict_reversed: false
+  fixed_tuple_robustness_refuted: false
+  family_wide_source_derived_protection_refuted_under_current_candidate: true
+  candidate_sufficiency_for_p4_t02_refuted: true
+  source_extension_repair_remains_possible: true
+  p4_t02_burden_discharged: false
+  no_fog_check: true
+  no_fog_explanation: "The candidate is an exact conditional classifier, not a law that selects or uniformly protects its own root family; the displayed target-free counterfamilies identify the missing law exactly."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "The fixed candidate has no source-derived family-uniform margin, perturbation bound, transverse closure, or nontrivial EqSrc closure beyond each supplied tuple."
+  explanation: "An exact candidate-scoped obstruction and local route freeze are established without changing any Distance-to-GR burden or predecessor theorem."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+canonical_metadata:
+  obstruction_id: "OB-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS-001"
+  candidate_local_freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  successor_packet_id: "PKT-V22-P4T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  successor_packet_type: "theoretical_continuation_selector"
+  successor_role: "theoretical-continuation-selector@0.1.0"
+  successor_status: "selected_not_executed"
+  convergence_status: "converged_to_parent_canonical_identifiers"
+
+blocking_conflict:
+  present: false
+  count: 0
+  peer_conflict_review_received: true
+  peer_result_alignment: "The Physicist-Philosopher independently preserves the fixed-tuple theorem and narrow RT008 purity, distinguishes local radius from zero family infimum and complete reflection from incomplete reversal, and uses the same transverse, swap, obstruction, freeze, and successor identities."
+  description: "No mathematical, conceptual, typing, provenance, ownership, or authority conflict blocks this child result. The peer review and parent canonical identities converge."
+
+execution_controls:
+  independent_agentjob_created: false
+  child_agentjob_created: false
+  subagent_used: false
+  candidate_reconstructed: false
+  candidate_repaired: false
+  predecessor_file_modified: false
+  file_ownership_respected: true
+  sole_written_path: "research_control/tasks/RT-20260811-009/artifacts/child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+  selected_successor_executed: false
+  external_source_used: false
+  generated_retrieval_authority_used: false
+  canonical_tracked_sources_governed: true
+
+job_baseline:
+  source_head: "028870b243490f2981f7cdd5635aa343544ffeb4"
+  source_tree: "7079deac847501383d04710f5c839efead453bb4"
+  prerequisite_checkpoint: "028870b243490f2981f7cdd5635aa343544ffeb4"
+  baseline_use: "Immutable RT009 admission identity only; no claim that the shared concurrent worktree is clean."
+
+inspected_sources:
+  - path: "SOUL.md"
+    sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+    use: "Mandatory scientific honesty, exact-mathematics, scope, and verification discipline."
+  - path: "AGENTS.md"
+    sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+    use: "Repository authority hierarchy, source-extension status, and promotion boundaries."
+  - path: "research_control/AGENTS.md"
+    sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+    use: "Bounded child ownership and research-control immutability."
+  - path: ".codex/skills/continue-research/SKILL.md"
+    sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+    use: "Single-AgentJob execution, source boundaries, freeze discipline, and child synthesis rules."
+  - path: "research_control/tasks/RT-20260811-009/00_TASK.yaml"
+    sha256: "ee97842c7d2afa7681357add1a60ed2b428b55dd5e3f3ae3575296a413c011e3"
+    use: "Active RT009 objective, required stress branches, five freezes, and claim boundary."
+  - path: "research_control/tasks/RT-20260811-009/DDR-20260811-009.md"
+    sha256: "7c12523dc320aa17f4b426f4f42191981942dec54128072e0626b0778b8e4de4"
+    use: "Exact Refuter route decision and formal stress program."
+  - path: "research_control/tasks/RT-20260811-009/jobs/AJ-RT-20260811-009-001.yaml"
+    sha256: "7ec2911c680730e21e2b04bec4519721bad4ad8bf0341b75a8bdaaa2e3a08d62"
+    use: "One-job authority, fixed roots, admitted payload, ownership, and completion constraints."
+  - path: "research_control/tasks/RT-20260811-009/roles/refuter@0.2.0--RT-20260811-009.yaml"
+    sha256: "41e6033512bcb28bd3a1dfd2262a2763ec925c3bd027d629b1be29e326d8b17e"
+    use: "Task-local Refuter authority and removed repair, adoption, adequacy, Gate, and promotion permissions."
+  - path: ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+    sha256: "66c116620dbef591f93a6db190395b46bef6cf0443baec1c11255ef552cfdbc6"
+    use: "Loop-risk routing, source-law packet use, theoretical continuation, and parent-child synthesis."
+  - path: ".agents/roles/physics/refuter.v0.2.0.md"
+    sha256: "01b7897ecf5861d952d7349e3eb743feed6f178112264de73f5226d3c88946fc"
+    use: "Allowed result classes, exact failed-premise rule, obstruction scope, new-payload rule, and freeze requirement."
+  - path: "research_control/handoffs/handoff-1022.yaml"
+    sha256: "dd97072babc76d2a7c67053c3a20af828f4d73fea4e1eda6ed118198c15b4242"
+    use: "Immutable selected packet, fixed candidate and audit, five freezes, and downstream locks."
+  - path: "research_control/tasks/RT-20260811-007/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_v1.tex"
+    sha256: "9a1143eb8485749f105c75156670d925b2d7a46b7fafd17a10e38e87371c1322"
+    use: "Registered fixed theorem, typed roots, tangent and conormal formulas, strong invariance, certificate orbit, transport, and balanced obstruction."
+  - path: "research_control/tasks/RT-20260811-007/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_record_v1.yaml"
+    sha256: "7d1b9c239754e33a096a66aff4a01433f8b2d71a4c0329e3c279810ca9485f8d"
+    use: "Fixed formal domains, maps, seven theorem results, fourteen obligations, eleven failure branches, and source-extension classification."
+  - path: "research_control/tasks/RT-20260811-007/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_controls_v1.yaml"
+    sha256: "0fafe911555afbf84f0196036e7eb841b37a3826cf17487c37e9f7628dd01abb"
+    use: "Exact rational orthant controls, countercontrols, and conformance-only quarantine."
+  - path: "research_control/tasks/RT-20260811-007/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_model.py"
+    sha256: "01ae5c231e66e22ae6249a646a3454fd51e742b3b4a2657ca32cdc4ec8c489e2"
+    use: "Exact arithmetic implementation of twelve fixed candidate controls."
+  - path: "research_control/tasks/RT-20260811-008/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_audit_v1.tex"
+    sha256: "122bcd824cf4ea9956fe26f38f592c962dfaf26ece004a68333f1a1f2514e450"
+    use: "Registered narrow source_pure_as_written verdict, root nonselection, reflection, and identity-groupoid result."
+  - path: "research_control/tasks/RT-20260811-008/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_disposition_v1.yaml"
+    sha256: "37be3a6d3b244da21970289f431911f114018e38d6ded39e375abd19c412dd4e"
+    use: "Fixed audit disposition, source-extension classification, preserved mathematics, and selected Refuter packet."
+  - path: "research_control/tasks/RT-20260811-008/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_matrix_v1.yaml"
+    sha256: "0f6abd5a06a49fd06bd65a56b1d89b323c2974ee51dda3ee9ddfdb5530f22f59"
+    use: "Twelve audit dimensions, root provenance debt, and exact authority boundary."
+  - path: "research_control/tasks/RT-20260811-008/artifacts/parent_fusion_notes_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_audit.md"
+    sha256: "29d5db3e083d8892ed244f493325b07806be25edb0e15b5a9f233402a304fb51"
+    use: "Fused RT008 consensus, exact D1-D2-D3 theorem, identity-groupoid degeneracy, and no-delta boundary."
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    use: "V22 recommendations and the complete P4-T02 robustness and P4-T03 dependency boundary."
+  - path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    use: "Roadmap milestone, fourteen burdens, constructive preference, source-extension controls, and freeze requirements."
+  - path: "research_control/design/refuter_obstruction_schema_v1.md"
+    sha256: "2045fc2a2895ac02f04dbd87be3e60c66497ec599e4f756fc92afd6ede36b7fe"
+    use: "Required obstruction record, exact failed premise, countermodel scope, and protected global defaults."
+  - path: "research_control/design/obstruction_and_freeze_control.md"
+    sha256: "42f07f733d3d28beaef78c1d8509ef97d4bb7bdda36ef21eb06375600d175d57"
+    use: "Local-freeze criteria, route-cycle policy, and no-global-rejection discipline."
+  - path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+    sha256: "562405dd78a03efde831806323081285c7850ee18dbeb2a6b6ecf900417c814c"
+    use: "Physics progress, payload manifest, obstruction, freeze, route-cycle, and forbidden-conclusion requirements."
+  - path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+    sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789"
+    use: "Allowed decisive statuses, scopes, consequences, and next-route vocabulary."
+  - path: "research_control/tasks/RT-20260811-005/artifacts/child_phys_math_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.yaml"
+    sha256: "16d713320fafbdbf0c4b1e91c60fc64235171b877a6dbced822347e044f06b01"
+    use: "Prior Refuter child format, exact countermodel, freeze, route-cycle, and no-delta precedent only."
+  - path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_obstruction_v1.yaml"
+    sha256: "c524c2e13caef223c90f0500af061890d2076a4959a1ca89172b04006fbbe43e"
+    use: "Prior complete obstruction-record and local-freeze control shape only."
+
+registry_rows_inspected:
+  - registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+    object_id: "TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1"
+    registry_sha256_value: "9a1143eb8485749f105c75156670d925b2d7a46b7fafd17a10e38e87371c1322"
+    live_source_hash_match: true
+  - registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+    object_id: "TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1"
+    registry_sha256_value: "122bcd824cf4ea9956fe26f38f592c962dfaf26ece004a68333f1a1f2514e450"
+    live_source_hash_match: true
+  - registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+    object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1"
+    registry_sha256_value: "29d5db3e083d8892ed244f493325b07806be25edb0e15b5a9f233402a304fb51"
+    live_source_hash_match: true
+  - registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+    object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    registry_sha256_value: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    live_source_hash_match: true
+
+source_inventory_summary:
+  inspected_source_count: 27
+  inspected_registry_row_count: 4
+  every_recorded_hash_reverified_before_write: true
+  fixed_candidate_registry_hash_match: true
+  fixed_audit_registry_hash_match: true
+  generated_authority_source_count: 0
+  external_source_count: 0
+
+fixed_predecessor_preservation:
+  rt007_candidate_bytes_held_fixed: true
+  rt008_audit_bytes_held_fixed: true
+  rt007_result_type: "theorem_with_hypotheses_and_proof"
+  rt008_verdict: "source_pure_as_written"
+  rt008_verdict_scope: "Narrow absence of literal target, physical, empirical, benchmark, frozen-route, generated-derivative, or workflow-authority premises in the fully disclosed proposal-only syntax."
+  rt008_verdict_preserved: true
+  source_purity_implies_family_robustness: false
+  source_purity_implies_current_ontology_derivation: false
+  source_purity_implies_epistemic_selection: false
+  source_purity_implies_adoption: false
+  conditional_results_preserved:
+    regular_tangent_and_interior_formula: true
+    strict_strong_invariance_theorem: true
+    finite_conormal_certificate: true
+    positive_certificate_regraduation: true
+    coherent_C1_1_presentation_transport: true
+    balanced_normal_obstruction: true
+    exact_rational_orthant_controls: true
+  fixed_candidate_theorem_refuted: false
+  candidate_definition_changed: false
+
+formal_domains:
+  - domain_id: "DOM-RT009-01"
+    name: "fixed half-line law-variation fibre"
+    definition: "X=R, K=R_ge_0, barrier rho(x)=x, identity EqSrc, compact singleton generator and variation data, and the boundary-velocity Hausdorff metric on nonempty compact subsets of R."
+  - domain_id: "DOM-RT009-02"
+    name: "positive rational margin family"
+    definition: "D_epsilon=(R,R_ge_0,{F_epsilon=epsilon},{0},Id) for epsilon in Q_positive, viewed as distinct proposal roots sharing one exact chart and barrier presentation."
+  - domain_id: "DOM-RT009-03"
+    name: "variation-threshold family"
+    definition: "D_epsilon_alpha has F_epsilon=epsilon and Delta_alpha={-alpha*epsilon}, with epsilon in Q_positive and alpha in Q."
+  - domain_id: "DOM-RT009-04"
+    name: "reflection-related complete tuples"
+    definition: "The C-infinity diffeomorphism r(x)=-x transports K_plus, F_plus, Delta_plus, the inward barrier, and the identity parameter space together."
+  - domain_id: "DOM-RT009-05"
+    name: "regular product extension"
+    definition: "X_prime=R^2 and K_prime=R_ge_0 times [-rho,rho] for rho in Q_positive, presented by x>=0, z+rho>=0, and rho-z>=0; active differentials satisfy LICQ on every face and corner."
+  - domain_id: "DOM-RT009-06"
+    name: "two-component swap-arrow datum"
+    definition: "X=R^2, K=R_ge_0^2, singleton constant generator F_a=(2,1), Delta={(0,0)}, and initially the identity-only presentation groupoid."
+  - domain_id: "DOM-RT009-07"
+    name: "root classifier quotient"
+    definition: "The disjoint union of typed proposal tuples modulo only their declared complete-tuple EqSrc arrows and positive certificate-orbit transport; dimensions and undeclared arrows are not identified."
+  - domain_id: "DOM-RT009-08"
+    name: "excluded physical and target domain"
+    definition: "No target atlas, metric, tetrad, coframe, desired GR cone, physical norm, empirical response, calibration, benchmark answer, frozen-selector output, or workflow authority enters any stress premise."
+
+formal_objects:
+  - object_id: "OBJ-RT009-01"
+    name: "D_epsilon"
+    type: "proposal-only half-line root tuple with exact strict margin epsilon"
+  - object_id: "OBJ-RT009-02"
+    name: "V_epsilon_alpha"
+    type: "singleton boundary velocity set {(1-alpha)*epsilon}"
+  - object_id: "OBJ-RT009-03"
+    name: "d_boundary"
+    type: "Hausdorff distance between nonempty compact boundary-velocity fibres"
+  - object_id: "OBJ-RT009-04"
+    name: "m_epsilon"
+    type: "exact inward residual epsilon for the fixed barrier rho=x"
+  - object_id: "OBJ-RT009-05"
+    name: "D_reflected"
+    type: "complete C1,1 pushforward of the half-line datum"
+  - object_id: "OBJ-RT009-06"
+    name: "K_prime"
+    type: "regular two-dimensional product admissible set"
+  - object_id: "OBJ-RT009-07"
+    name: "F_in"
+    type: "constant-longitudinal and inward-transverse field (epsilon,-nu*z)"
+  - object_id: "OBJ-RT009-08"
+    name: "F_out"
+    type: "constant-longitudinal and outward-transverse field (epsilon,+nu*z)"
+  - object_id: "OBJ-RT009-09"
+    name: "F_c"
+    type: "constant-transverse field (epsilon,c)"
+  - object_id: "OBJ-RT009-10"
+    name: "s"
+    type: "coordinate-swap C-infinity diffeomorphism s(x1,x2)=(x2,x1)"
+  - object_id: "OBJ-RT009-11"
+    name: "A_swap_closed"
+    type: "two-law family {(2,1),(1,2)} with a parameter transposition"
+  - object_id: "OBJ-RT009-12"
+    name: "C_root"
+    type: "three-valued RobInv classifier on declared EqSrc root orbits"
+
+formal_maps:
+  - map_id: "MAP-RT009-01"
+    signature: "epsilon -> D_epsilon"
+    definition: "Creates the exact positive-margin half-line tuple without selecting epsilon from current ontology."
+  - map_id: "MAP-RT009-02"
+    signature: "(epsilon,alpha) -> (1-alpha)*epsilon"
+    definition: "Evaluates the unique active-conormal residual after Delta_alpha enlargement."
+  - map_id: "MAP-RT009-03"
+    signature: "r_*(K,F,Delta,rho)"
+    definition: "Maps K_plus to K_minus, F_plus to -epsilon, Delta_plus to {+alpha*epsilon}, and rho_plus to rho_minus(y)=-y."
+  - map_id: "MAP-RT009-04"
+    signature: "reverse_K_only(K_plus,F_plus,Delta_plus)"
+    definition: "Changes K and its inward conormal while holding the law and variations fixed; this is a root change, not an EqSrc arrow."
+  - map_id: "MAP-RT009-05"
+    signature: "i:R_ge_0 -> K_prime"
+    definition: "Embeds the base half-line as i(x)=(x,0); F_in and F_out agree with the base longitudinal law on this slice."
+  - map_id: "MAP-RT009-06"
+    signature: "s_*F=Ds composed with F composed with s_inverse"
+    definition: "Pushes the constant law (2,1) to (1,2), exposing failure of singleton-family closure."
+  - map_id: "MAP-RT009-07"
+    signature: "C_root:[D]_{EqSrc}-> {pass,fail,undefined}"
+    definition: "Classifies a supplied root orbit but contains no inverse root-selection or source-adoption map."
+  - map_id: "MAP-RT009-08"
+    signature: "rho_i -> h_i*rho_pi(i)"
+    definition: "Positive certificate regraduation and permutation preserve every residual sign and zero used in the countermodels."
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT009-CHILD-MATH-001"
+    payload_type: "theorem"
+    name: "Fixed-fibre openness and family-uniformity obstruction theorem"
+    hypotheses:
+      - "For epsilon>0, D_epsilon has X=R, K=R_ge_0, rho=x, F_epsilon=epsilon, Delta={0}, and identity EqSrc."
+      - "Boundary-velocity perturbations are measured by Hausdorff distance d_boundary on nonempty compact subsets of R."
+    statement: "Every D_epsilon passes and is open in its fixed K and EqSrc law-variation fibre: d_boundary(W,{epsilon})<epsilon implies W is contained in (0,infinity), and d_boundary(W,{epsilon})<=epsilon/2 gives residual at least epsilon/2. Nevertheless epsilon_n=1/n gives passing tuples with inf_n m_epsilon_n=0. For every proposed absolute radius r>0 choose n with 2/n<r; replacing Delta={0} by Delta_2={-2/n} changes the boundary velocity from 1/n to -1/n at Hausdorff distance 2/n<r and fails even weak tangency. Hence the candidate typing alone yields no positive family-uniform protection radius."
+    proof: "At the only boundary point, Int T_K(0)=(0,infinity) and the unperturbed velocity is epsilon. A Hausdorff perturbation smaller than epsilon cannot reach zero. The sequence and the Delta_2 perturbation give the exact zero-infimum and arbitrary-radius counterexample."
+    compact_parameter_corollary: "If a single compact parameter family contains epsilon_n and joint continuity extends it to epsilon=0, then the limit generator has zero boundary residual and the declared strict relation fails at that parameter."
+    scope: "source_extension_candidate"
+    novelty: "Quantifies both honest local stability and exact failure of any candidate-derived family-wide absolute margin; neither RT007 nor RT008 supplied this uniformity result."
+  - payload_id: "NMP-RT009-CHILD-MATH-002"
+    payload_type: "lemma"
+    name: "Exact variation-enlargement threshold"
+    statement: "For epsilon>0 and Delta_alpha={-alpha*epsilon}, the unique boundary residual is (1-alpha)*epsilon. The candidate returns strict pass exactly for alpha<1, strict fail with weak tangency at alpha=1, and outward fail outside T_K for alpha>1."
+    proof: "The admitted boundary velocity is epsilon-alpha*epsilon. Its sign gives all three branches because T_K(0)=[0,infinity) and Int T_K(0)=(0,infinity)."
+    exact_rational_controls: "At epsilon=1/5 and alpha in {1/2,1,3/2}, the residuals are {1/10,0,-1/10}."
+    scope: "source_extension_candidate"
+  - payload_id: "NMP-RT009-CHILD-MATH-003"
+    payload_type: "lemma"
+    name: "Complete reflection covariance versus untransported orientation reversal"
+    statement: "Reflection r(x)=-x transports the full D_epsilon_alpha tuple to K_minus=R_le_0, F_minus=-epsilon, Delta_minus={+alpha*epsilon}, and rho_minus(y)=-y; the transported residual remains (1-alpha)*epsilon. By contrast, at alpha=0 changing only K_plus to K_minus while holding F=+epsilon fixed gives residual -epsilon and fails."
+    proof: "For complete transport, the reflected velocity is -(1-alpha)*epsilon and d rho_minus=-dy, so their pairing is +(1-alpha)*epsilon. For K-only reversal the pairing is (-dy)(+epsilon)=-epsilon."
+    consequence: "The RT007 EqSrc theorem survives exactly; it transports a complete supplied tuple and cannot select an orientation or license root-only reversal."
+    scope: "source_extension_candidate"
+  - payload_id: "NMP-RT009-CHILD-MATH-004"
+    payload_type: "countermodel"
+    name: "Transverse extension nonuniqueness and exact boundary-sign theorem"
+    construction: "For epsilon,nu,rho>0 take K_prime=R_ge_0 times [-rho,rho]. The fields F_in=(epsilon,-nu*z) and F_out=(epsilon,+nu*z) both restrict along z=0 to the same embedded base field (epsilon,0)."
+    exact_signs:
+      x_face: "Both fields have residual epsilon>0."
+      lower_face_for_F_in: "d(z+rho)[F_in]=+nu*rho>0."
+      upper_face_for_F_in: "d(rho-z)[F_in]=+nu*rho>0."
+      lower_face_for_F_out: "d(z+rho)[F_out]=-nu*rho<0."
+      upper_face_for_F_out: "d(rho-z)[F_out]=-nu*rho<0."
+    statement: "F_in passes every face and corner, while F_out fails on both transverse faces although the two extensions agree on the base slice. A constant transverse drift F_c=(epsilon,c) has lower and upper residuals c and -c, so no real c is strictly inward on both; c=0 is non-strict."
+    proof: "The displayed active-barrier derivatives give the verdicts. At corners LICQ holds because dx and plus-or-minus dz are independent."
+    consequence: "A passing dimensional lift exists, but it requires extra state-dependent transverse law structure that the base tuple and classifier do not select."
+    scope: "source_extension_candidate"
+  - payload_id: "NMP-RT009-CHILD-MATH-005"
+    payload_type: "obstruction"
+    name: "Nontrivial EqSrc swap-arrow closure obstruction"
+    construction: "On X=R^2 and K=R_ge_0^2, A={F_a=(2,1)}, Delta={(0,0)}, and identity-only EqSrc pass strict invariance."
+    statement: "The coordinate swap s is not an automorphism arrow of the same singleton datum: the singleton parameter homeomorphism fixes a, but Ds F_a=(1,2) differs from F_a composed with s=(2,1). Adding s therefore violates complete-tuple transport coherence."
+    proof: "The identity datum passes because both components of F_a are positive. The RT007 arrow equation for a same-datum automorphism demands F_a(sx)=Ds F_a(x); its two sides are (2,1) and (1,2)."
+    repair_classification: "Closure can be supplied by the extra family A_swap_closed={(2,1),(1,2)} with parameter transposition, or by a symmetric singleton law such as (1,1); neither structure is selected by identity-only covariance."
+    scope: "source_extension_candidate"
+  - payload_id: "NMP-RT009-CHILD-MATH-006"
+    payload_type: "obstruction"
+    name: "Root-orbit and certificate-orbit nonselection under stress"
+    statement: "RT008 already proves that the pass value has dimension-distinct root orbits. The new epsilon family adds passing roots with protection radii tending to zero, while the product pair adds extensions agreeing on an embedded base tuple but having opposite verdicts. Positive barrier regraduation scales positive, zero, and negative residuals by positive factors and changes none of these classifications."
+    proof: "Diffeomorphisms preserve dimension; the explicit residual calculations distinguish the roots; and d(h*rho)=h*d rho on an active face preserves every residual sign for h>0."
+    consequence: "Neither C_root nor its certificate orbit supplies an inverse map selecting a root, uniform margin, transverse law, or nontrivial EqSrc groupoid."
+    scope: "source_extension_candidate"
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT009-001"
+    payload_type: "theorem"
+    object_name: "fixed-fibre openness and family-uniformity obstruction theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-009/artifacts/child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+    burden_effect: "obstructs"
+    summary: "Proves exact local openness for each epsilon>0 and exact absence of a candidate-derived uniform family radius as epsilon tends to zero."
+  - payload_id: "PAYLOAD-RT009-002"
+    payload_type: "countermodel"
+    object_name: "variation reflection product-extension and swap-arrow exact countermodels"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-009/artifacts/child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+    burden_effect: "stress_tests"
+    summary: "Locates exact threshold, orientation, transverse-closure, and groupoid-closure failures without refuting the conditional theorem."
+  - payload_id: "PAYLOAD-RT009-003"
+    payload_type: "source_extension_classification"
+    object_name: "candidate-scoped family-protection obstruction and local route freeze"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-009/artifacts/child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+    burden_effect: "freezes"
+    summary: "Freezes unchanged replay as a family-wide source-derived protection law while keeping materially distinct conservative source extensions open."
+  - payload_id: "PAYLOAD-RT009-004"
+    payload_type: "packet_selection"
+    object_name: "post-Refuter theoretical continuation selection packet"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-009/artifacts/child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+    burden_effect: "selects_next"
+    summary: "Selects one discriminator packet but does not execute it."
+
+stress_branch_results:
+  - branch_id: "STRESS-01-FIXED-POSITIVE-MARGIN-OPENNESS"
+    required_branch: "strict-margin protection at a fixed tuple"
+    local_result: "survives_with_margin_dependent_radius"
+    exact_evidence: "For D_epsilon, d_boundary(W,{epsilon})<epsilon keeps every perturbed boundary velocity positive; radius epsilon/2 guarantees residual at least epsilon/2."
+    fixed_candidate_effect: "Confirms rather than refutes the RT007 perturbative-protection interpretation at one fixed positive-margin datum."
+  - branch_id: "STRESS-02-FAMILY-MARGIN-COLLAPSE"
+    required_branch: "epsilon positive with epsilon tending to zero"
+    local_result: "no_candidate_derived_family_uniform_margin_or_radius"
+    exact_evidence: "D_{1/n} passes for every finite n, but inf_n 1/n=0; an outward velocity -1/n lies only 2/n from +1/n, so every proposed uniform radius admits a failing member for sufficiently large n."
+    fixed_candidate_effect: "The candidate never claimed cross-root uniformity; the result obstructs that stronger use."
+  - branch_id: "STRESS-03-VARIATION-ENLARGEMENT"
+    required_branch: "Delta_alpha below at and above alpha=1"
+    local_result: "sharp_threshold_at_alpha_one"
+    exact_evidence: "The residual (1-alpha)*epsilon is positive for alpha<1, zero for alpha=1, and negative for alpha>1."
+    fixed_candidate_effect: "Exercises its exact pass/fail classifier and shows that a source-derived variation bound is indispensable."
+  - branch_id: "STRESS-04-REFLECTION-AND-ORIENTATION"
+    required_branch: "complete-tuple reflection versus K-only reversal"
+    local_result: "transport_survives_root_only_reversal_fails"
+    exact_evidence: "Complete reflection gives the same residual (1-alpha)*epsilon; holding F=epsilon fixed while replacing K_plus by K_minus gives residual -epsilon at alpha=0."
+    fixed_candidate_effect: "Preserves the C1,1 EqSrc theorem and blocks confusing covariance with orientation selection."
+  - branch_id: "STRESS-05-DIMENSIONAL-EXTENSION"
+    required_branch: "bounded transverse factor and exact boundary signs"
+    local_result: "base_restriction_does_not_select_extension"
+    exact_evidence: "F_in and F_out agree at z=0, but F_in has transverse residuals (+nu*rho,+nu*rho) and F_out has (-nu*rho,-nu*rho); constant c gives (c,-c)."
+    fixed_candidate_effect: "The theorem correctly classifies each complete extension; no automatic lift from the base tuple follows."
+  - branch_id: "STRESS-06-NONTRIVIAL-EQSRC-SWAP"
+    required_branch: "identity-only pass and demanded nontrivial swap arrow"
+    local_result: "identity_covariance_is_vacuous_and_swap_needs_extra_law_closure"
+    exact_evidence: "A={(2,1)} passes, but the swap pushforward is (1,2), outside A; adding the swapped law plus parameter transposition restores coherence."
+    fixed_candidate_effect: "The transport theorem survives because the demanded arrow does not satisfy its hypotheses."
+  - branch_id: "STRESS-07-ROOT-AND-CERTIFICATE-ORBITS"
+    required_branch: "root-orbit nonselection and certificate orbit"
+    local_result: "classifier_and_certificate_orbit_remain_nonselective"
+    exact_evidence: "Dimension-distinct passes, zero-infimum pass families, opposite-verdict transverse lifts, and positive sign-preserving regraduation admit no inverse selector."
+    fixed_candidate_effect: "Preserves RT008 and sharpens it from root noninversion to quantitative protection nonselection."
+  - branch_id: "STRESS-08-FROZEN-FAMILY-CONTROLS"
+    required_branch: "all five frozen-route controls"
+    local_result: "all_five_active_and_untouched"
+    exact_evidence: "Every stress is built from half-lines, product intervals, constant or linear source fields, complete diffeomorphism transport, and finite barrier signs; none contains a frozen-family object."
+    fixed_candidate_effect: "No frozen route is reopened, repaired, or used to stabilize the candidate."
+  - branch_id: "STRESS-09-CERTIFICATE-ORBIT-QUARANTINE"
+    required_branch: "certificate representatives versus source roots"
+    local_result: "positive_regraduation_preserves_all_stress_verdicts"
+    exact_evidence: "Multiplying an active barrier by h>0 multiplies each positive, zero, or negative residual by h and cannot change any branch."
+    fixed_candidate_effect: "Preserves the RT007 certificate orbit and prevents raw normalization from being used as the missing protection law."
+  - branch_id: "STRESS-10-P4-T02-RELEVANCE"
+    required_branch: "active milestone and hard-fail boundary"
+    local_result: "source_set_viability_classifier_is_not_physical_common_cone_evidence"
+    exact_evidence: "No principal polynomial, declared matter sectors, common hyperbolicity cone, physical time orientation, conformal reconstruction, response semantics, or effective metric occurs."
+    fixed_candidate_effect: "No D7, B2, P4-T03, g_eff, matter-coupling, Einstein-equation, or benchmark consequence follows."
+
+exact_countermodel_controls:
+  arithmetic_domain: "Q embedded in R"
+  half_line_control:
+    epsilon: "1/5"
+    alpha_values: ["1/2", "1", "3/2"]
+    residuals: ["1/10", "0", "-1/10"]
+    expected_results: ["strict_pass", "strict_fail_weak_tangent", "outward_fail"]
+  reflection_control:
+    alpha: "1/2"
+    original_velocity: "1/10"
+    reflected_velocity: "-1/10"
+    reflected_inward_residual: "1/10"
+    complete_transport_preserves_pass: true
+  orientation_reversal_control:
+    epsilon: "1/5"
+    alpha: "0"
+    held_fixed_law_velocity: "1/5"
+    reversed_K_inward_residual: "-1/5"
+    result: "outward_fail"
+  transverse_control:
+    epsilon: "1/5"
+    rho: "2"
+    nu: "3"
+    inward_field_transverse_residuals: ["6", "6"]
+    outward_field_transverse_residuals: ["-6", "-6"]
+    constant_drift_values: ["-5", "0", "5"]
+    constant_drift_residual_pairs:
+      - ["-5", "5"]
+      - ["0", "0"]
+      - ["5", "-5"]
+  swap_control:
+    original_law: [2, 1]
+    swap_pushforward: [1, 2]
+    singleton_closed_under_swap: false
+    symmetric_law_control: [1, 1]
+    symmetric_law_closed_under_swap: true
+  margin_sequence_controls: ["1", "1/2", "1/5", "1/10"]
+  independent_check_count: 18
+  independent_pass_count: 18
+  independent_all_pass: true
+  fixtures_are_source_evidence: false
+  fixtures_are_physical_or_empirical_evidence: false
+
+proof_obligation_results:
+  - obligation_id: "RO-01"
+    status: "PASS"
+    evidence: "The exact RT007 theorem and all seven conditional results are held fixed."
+  - obligation_id: "RO-02"
+    status: "PASS"
+    evidence: "The RT008 source_pure_as_written verdict is preserved at its narrow written-syntax scope."
+  - obligation_id: "RO-03"
+    status: "PASS"
+    evidence: "Fixed-fibre positive-margin openness is proved with an exact Hausdorff radius."
+  - obligation_id: "RO-04"
+    status: "PASS"
+    evidence: "The epsilon_n=1/n family proves zero infimum and absence of a candidate-derived uniform absolute radius."
+  - obligation_id: "RO-05"
+    status: "PASS"
+    evidence: "Delta_alpha is classified exactly below, at, and above alpha=1."
+  - obligation_id: "RO-06"
+    status: "PASS"
+    evidence: "Complete reflection transport is separated from untransported K and orientation reversal."
+  - obligation_id: "RO-07"
+    status: "PASS"
+    evidence: "The regular product extension has exact face and corner signs for passing, failing, and constant-drift controls."
+  - obligation_id: "RO-08"
+    status: "PASS"
+    evidence: "The two-component identity-only datum passes and the nontrivial swap arrow has an exact generator-closure defect."
+  - obligation_id: "RO-09"
+    status: "PASS"
+    evidence: "Root-orbit and certificate-orbit nonselection are preserved and quantitatively sharpened."
+  - obligation_id: "RO-10"
+    status: "PASS"
+    evidence: "The precise candidate-scoped failed premise and minimal countermodels are recorded without global overread."
+  - obligation_id: "RO-11"
+    status: "PASS"
+    evidence: "All five inherited freezes are preserved and one canonical candidate-local freeze is evaluated."
+  - obligation_id: "RO-12"
+    status: "PASS"
+    evidence: "Exactly one allowed Refuter result class, scoped_obstruction, is returned."
+  - obligation_id: "RO-13"
+    status: "PASS"
+    evidence: "Exactly fourteen Distance-to-GR rows retain literal task_delta no_delta."
+  - obligation_id: "RO-14"
+    status: "PASS"
+    evidence: "D7, B2, P4-T03, physical, empirical, adoption, Gate, proof, benchmark, publication, push, and external-action blocks are explicit."
+
+candidate_failure_branch_audit:
+  - failure_id: "FB-01"
+    status: "not_triggered"
+    result: "No K is selected from a desired target or P4-T02 outcome; alternate K roots are stress inputs only."
+  - failure_id: "FB-02"
+    status: "guard_preserved"
+    result: "No failing generator is removed after observing its verdict; both passing and failing laws remain explicit."
+  - failure_id: "FB-03"
+    status: "pressure_confirmed"
+    result: "The alpha threshold proves that narrowing Delta after alpha>=1 would need independent provenance and cannot be inferred from the pass goal."
+  - failure_id: "FB-04"
+    status: "not_triggered"
+    result: "No target metric, physical norm, desired cone, empirical tolerance, or benchmark datum supplies a magnitude."
+  - failure_id: "FB-05"
+    status: "triggered_as_exact_classifier_guards"
+    result: "Alpha>1, F_out, constant transverse drifts, and K-only reversal provide exact tangent violations."
+  - failure_id: "FB-06"
+    status: "fixed_predecessor_result_preserved"
+    result: "The RT007 balanced-normal obstruction remains valid and is not needed to manufacture the new family-uniformity obstruction."
+  - failure_id: "FB-07"
+    status: "resolved_by_preserved_certificate_orbit"
+    result: "Positive regraduation preserves every sign and does not select a raw barrier, orientation, or margin normalization."
+  - failure_id: "FB-08"
+    status: "triggered_for_undeclared_swap_only"
+    result: "The singleton generator family is not closed under the demanded swap; the valid RT007 transport theorem is not violated because its complete-arrow hypothesis fails."
+  - failure_id: "FB-09"
+    status: "not_triggered"
+    result: "No stress object factors through or reconstructs any of the five frozen families."
+  - failure_id: "FB-10"
+    status: "blocked_by_claim_boundary"
+    result: "Source-law invariance, transverse intervals, and presentation arrows receive no physical causal, temporal, or empirical meaning."
+  - failure_id: "FB-11"
+    status: "precise_missing_primitive_identified"
+    result: "The missing family-uniform margin, variation, transverse-closure, and nontrivial-arrow protection law is explicit; missing roots remain undefined rather than pass."
+
+refuter_obstruction_record:
+  obstruction_id: "OB-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS-001"
+  target_claim: "The unchanged locally source-pure SourceLawSpaceRobustInvarianceProtection_v1, without additional source laws, protects its complete root family under source-local law and variation perturbations, orientation changes, dimensional extensions, and nontrivial EqSrc demands sufficiently to continue P4-T02."
+  target_milestone: "effective_metric_g_eff"
+  failed_premise: "The candidate and current ontology supply no independently source-derived uniform root-family margin, admitted-variation bound, transverse extension closure, or nontrivial EqSrc arrow-closure law. These are not hypotheses of the valid fixed-tuple theorem; they are the missing premise of the stronger family-protection claim under test."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260811-009/artifacts/child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "Missing source certificate for a positive lower margin over the root family, a bound excluding alpha>=1 variations, an extension rule selecting inward transverse dynamics, and generator-family closure for nontrivial EqSrc arrows."
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "locally_frozen"
+    active_freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+    decision_reason: "The formalize-audit-stress cycle now contains exact target-free counterfamilies to every use of the unchanged tuple-conditional classifier as a family-wide source-derived protection law."
+    freeze_scope: "Only unchanged replay of SourceLawSpaceRobustInvarianceProtection_v1 as a standalone family-wide robust P4-T02 bridge; its exact conditional theorem and diagnostic classifier remain valid."
+    next_allowed_route: "theoretical_selector"
+    global_theory_rejection: false
+    future_source_extension_impossibility: false
+  route_cycle_control:
+    cycle_family: "v22_p4_t02_b2_source_law_space_robust_invariance_protection"
+    current_cycle_step: "source_extension_refuter_stress"
+    prior_related_tasks:
+      - "RT-20260811-006"
+      - "RT-20260811-007"
+      - "RT-20260811-008"
+    cycle_risk: "high_if_unchanged_candidate_is_replayed"
+    orbit_avoidance_reason: "This packet adds exact quantitative counterfamilies, locally freezes unchanged standalone replay, and routes to one discriminator among materially distinct continuations rather than another generic formalization."
+    next_role_consequence: "theoretical-continuation-selector@0.1.0"
+    successor_packet_id: "PKT-V22-P4T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+    successor_executed: false
+  forbidden_conclusions:
+    - "No RT007 conditional theorem is invalidated on its declared datum and hypotheses."
+    - "No reversal of the RT008 narrow source_pure_as_written verdict follows."
+    - "No canonical ontology or source law is adopted, rejected, or modified."
+    - "No global impossibility of a future conservative source extension follows."
+    - "No global theory rejection or program-wide no-go follows."
+    - "No P7 sector coverage, D7 adequacy, or P2-T01 adequacy is established or reevaluated."
+    - "No B2 activation, viability, adoption, rejection, disposal, adequacy, or sufficiency follows."
+    - "No P4-T03 conformal reconstruction, physical time orientation, or physical scale is unlocked."
+    - "No physical causality, empirical response, calibration, principal cone, conformal class, or g_eff follows."
+    - "No matter coupling, action, stress-energy semantics, or Einstein equation follows."
+    - "No benchmark, Gate Chair, proof, promotion, publication, push, external action, or completed derivation authority follows."
+    - "No validator, role, registry, checkpoint, or generated derivative counts as physics evidence."
+
+obstruction_record:
+  present: true
+  obstruction_id: "OB-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS-001"
+  scope: "source_extension_candidate"
+  failed_object: "family-wide source-derived protection law for the proposal root tuple"
+  exact_failure: "Margins epsilon tend to zero; Delta_alpha crosses the strict boundary at alpha=1; base-identical transverse lifts have opposite verdicts; and the singleton passing law family is not closed under a demanded swap arrow."
+  minimal_counterexample_path: "research_control/tasks/RT-20260811-009/artifacts/child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.yaml"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "selector_required"
+  forbidden_overread: "This candidate-scoped obstruction neither refutes the fixed theorem nor proves global theory rejection or future source-extension impossibility."
+
+freeze_evaluation:
+  inherited_freeze_count: 5
+  candidate_local_freeze_count: 1
+  evaluated_freeze_count: 6
+  all_inherited_freezes_preserved: true
+  candidate_local_freeze_warranted: true
+  freezes:
+    - freeze_id: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      provenance: "inherited"
+      status: "active_untouched"
+      evaluation: "No shared-tau selector or time parameter enters the half-line, product, reflection, or swap arguments."
+    - freeze_id: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      provenance: "inherited"
+      status: "active_untouched"
+      evaluation: "No Q_ray quotient, repaired descent, or response-ray representative is reconstructed."
+    - freeze_id: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      provenance: "inherited"
+      status: "active_untouched"
+      evaluation: "No character, anchor, cochain, cocycle, or holonomy object supplies margin or closure."
+    - freeze_id: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      provenance: "inherited"
+      status: "active_untouched"
+      evaluation: "No oriented-matroid sign, circuit, wall, refinement, or bridge output occurs."
+    - freeze_id: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      provenance: "inherited"
+      status: "active_untouched"
+      evaluation: "No sign token, normalized cubic barrier, cubic flow, or one-mode viability selector is replayed."
+    - freeze_id: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+      provenance: "candidate_local_rt009"
+      status: "locally_frozen"
+      evaluation: "The unchanged tuple-conditional classifier may not be replayed as a source-derived family-wide robustness or P4-T02 bridge under the current assumptions; exact theorem and diagnostic use remain open."
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  new_mathematical_payload_added: true
+  merely_selected_another_selector_route: false
+  construct_audit_stress_cycle_completed: true
+  same_unmet_burden_recurred: true
+  active_freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  prior_attempts_considered:
+    - "RT-20260811-006"
+    - "RT-20260811-007"
+    - "RT-20260811-008"
+    - "RT-20260811-009"
+  freeze_if:
+    - "A successor reads fixed positive-margin openness as a root-family uniform lower bound without a new source law."
+    - "A successor excludes alpha>=1 variations after their failing verdict without independently sourced admissibility."
+    - "A successor reverses K or orientation without transporting the complete tuple and calls the move EqSrc covariance."
+    - "A successor lifts the half-line law to transverse modes without a source-derived extension rule and all-boundary certificate."
+    - "A successor demands nontrivial EqSrc arrows without generator, variation, and parameter closure."
+  do_not_freeze_if:
+    - "A separately admitted packet constructs and audits a materially distinct source-derived uniform-margin, variation-bound, transverse-closure, and nontrivial-arrow law."
+    - "A source-side irrelevance theorem proves with new mathematics that one or more missing protections are unnecessary for the active burden."
+    - "A materially distinct bridge class supplies exact source objects and survives audit and stress."
+    - "A protected human-gated ontology stop is explicitly authorized."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The candidate has completed selection, formalization, smuggling audit, and exact Refuter stress; unchanged standalone replay cannot remove the explicit zero-uniform-margin, variation-threshold, transverse, or swap-closure countermodels."
+  local_freeze_scope: "Only SourceLawSpaceRobustInvarianceProtection_v1 under unchanged proposal roots as a family-wide source-derived robustness law or P4-T02 bridge."
+  next_allowed_route: "theoretical_selector"
+  status_update_path: ""
+  no_status_update_rationale: "This internal child owns only its child analysis artifact; parent fusion and the governed checkpoint own persistent route-status synchronization."
+  global_freeze_applied: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_source_law_space_robust_invariance_protection"
+  current_cycle_step: "source_extension_refuter_stress"
+  prior_related_tasks:
+    - "RT-20260811-006"
+    - "RT-20260811-007"
+    - "RT-20260811-008"
+  cycle_risk: "high"
+  generic_ontology_formalizer_replay_allowed: false
+  unchanged_candidate_reaudit_allowed: false
+  unchanged_candidate_restress_allowed: false
+  orbit_avoidance_reason: "The stress adds exact quantitative countermodels and locally freezes unchanged replay; the next packet must discriminate among materially distinct continuation classes rather than repeat formalization, audit, or stress."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  candidate_classification: "proposal-only locally source-pure new-ontology-primitive source-extension data with a candidate-scoped family-protection obstruction"
+  obstruction_classification: "source_extension_candidate"
+  relation_to_current_ontology: "not_derived"
+  conservative_definitional_extension: false
+  new_ontology_primitive: true
+  syntactically_source_pure_as_written: true
+  constructive_goal_preload_disclosed: true
+  fixed_tuple_conditional_theorem_valid: true
+  family_uniform_margin_derived: false
+  admitted_variation_bound_derived: false
+  transverse_extension_closure_derived: false
+  nontrivial_eqsrc_closure_derived: false
+  inward_orientation_selected: false
+  root_orbit_selected: false
+  physical_or_empirical_meaning_derived: false
+  forbidden_target_import_detected: false
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  human_gate_invoked: false
+  adoption_status: "blocked_adoption_open_continuation"
+  exact_allowed_conclusion: "The unchanged candidate remains a valid source-pure-as-written conditional classifier but does not supply its own source-derived family-wide protection law; materially distinct conservative source extensions remain possible."
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "X_law, K, A, Delta, orientation, margins, transverse closure, and EqSrc remain proposal-only or missing rather than current-ontology-derived."
+    task_delta: no_delta
+  - burden: "Source equivalence EqSrc"
+    status: "Complete C1,1 transport remains valid, but identity-only covariance is nondiscriminating and nontrivial arrow closure is not source-derived."
+    task_delta: no_delta
+  - burden: "RetainH"
+    status: "No retention, persistence, or history primitive is constructed."
+    task_delta: no_delta
+  - burden: "GenH"
+    status: "The generator families and their variation bounds remain proposal-only inputs rather than current-ontology consequences."
+    task_delta: no_delta
+  - burden: "ObsLoc_lc"
+    status: "Half-line, interval, and swap controls supply no observer-localization or operational readout map."
+    task_delta: no_delta
+  - burden: "Resp_lc"
+    status: "RobInv values and exact conormal residuals are not detector or empirical response semantics."
+    task_delta: no_delta
+  - burden: "M_src"
+    status: "The one- and two-dimensional source-law charts are fixtures, not an adopted physical source manifold."
+    task_delta: no_delta
+  - burden: "g_eff"
+    status: "No physical characteristic cone, conformal class, time orientation, scale, source-to-metric map, or effective metric is constructed."
+    task_delta: no_delta
+  - burden: "matter coupling"
+    status: "No declared matter sectors, common physical propagation law, universality theorem, or coupling is derived."
+    task_delta: no_delta
+  - burden: "Einstein equations"
+    status: "No action, variation principle, stress-energy semantics, correction law, or field equation is supplied."
+    task_delta: no_delta
+  - burden: "finite-variation robustness"
+    status: "Fixed positive-margin fibres are locally open, but exact zero-infimum and alpha-threshold families obstruct a source-derived family-wide robustness pass."
+    task_delta: no_delta
+  - burden: "benchmark promotion"
+    status: "No exact-GR comparison, recovery test, benchmark result, or promotion occurs."
+    task_delta: no_delta
+  - burden: "Gate Chair status"
+    status: "No protected adoption, rejection, activation, closure, or Gate verdict is requested or issued."
+    task_delta: no_delta
+  - burden: "current route freeze or hard-fail status"
+    status: "Five inherited freezes remain active and one candidate-local route freeze is recommended; the child cannot update the persistent ledger and no global hard fail follows."
+    task_delta: no_delta
+
+distance_to_gr_delta:
+  changed: false
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  burden_row_count: 14
+  literal_no_delta_row_count: 14
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  local_result_is_distance_advance: false
+  downstream_unlocked: []
+  downstream_still_blocked:
+    - "current-ontology source-root derivation or source-law adoption"
+    - "D7 and P2-T01 adequacy"
+    - "B2 activation, viability, adoption, rejection, disposal, adequacy, and sufficiency"
+    - "P4-T03 conformal reconstruction and physical time-orientation derivation"
+    - "g_eff, matter coupling, and Einstein equations"
+    - "Gate, benchmark, proof promotion, publication, push, external action, and completed derivation"
+  explanation: "A proposal-candidate stress and local route freeze sharpen the obstruction but do not construct any roadmap object or change the persistent Distance-to-GR ledger."
+
+selected_unexecuted_successor:
+  packet_id: "PKT-V22-P4T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  packet_type: "theoretical_continuation_selector"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Select one materially distinct continuation after the candidate-local source-law-space robust-invariance protection freeze."
+  exact_discriminator: "Compare a source-derived uniform-margin, admitted-variation, transverse-closure, and nontrivial-EqSrc protection law; a source-side irrelevance theorem with roadmap consequence; a materially distinct bridge class; and a protected human-gated ontology stop, while preserving all six local freeze controls and excluding target or frozen-route imports."
+  execution_status: "selected_not_executed"
+  selected: true
+  requires_separate_admission: true
+  separately_admitted_in_rt20260811_009: false
+  executed_in_rt20260811_009: false
+  successor_agentjob_created: false
+  external_action_required: false
+
+authority_and_claim_blocks:
+  p7_complete_or_exhaustive: false
+  d7_or_p2_t01_adequacy_reevaluated: false
+  b2_active: false
+  b2_activated: false
+  b2_viability_claimed: false
+  b2_adopted: false
+  b2_rejected: false
+  b2_disposed: false
+  b2_adequacy_claimed: false
+  b2_sufficiency_claimed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+  p4_t03_unlocked_or_executed: false
+  current_ontology_derivation_claimed: false
+  source_law_adopted_or_rejected: false
+  canonical_ontology_modified: false
+  physical_time_orientation_assigned: false
+  physical_causality_assigned: false
+  empirical_response_semantics_assigned: false
+  physical_normalization_or_calibration_assigned: false
+  physical_cone_or_conformal_class_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  gate_verdict_issued: false
+  benchmark_promoted: false
+  proof_authority_created: false
+  physics_claim_promoted: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  global_theory_rejected: false
+  completed_derivation_claimed: false
+  candidate_repair_performed: false
+  selected_successor_executed: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "RT007 theorem invalidation"
+    - "RT008 source-purity reversal"
+    - "canonical ontology edit or source-law adoption or rejection"
+    - "D7 or P2-T01 adequacy reevaluation"
+    - "B2 activation, viability, adoption, rejection, disposal, adequacy, or sufficiency"
+    - "P4-T03 unlock or execution"
+    - "physical causality, empirical response, principal cone, conformal class, physical scale, or g_eff"
+    - "matter coupling or Einstein-equation derivation"
+    - "benchmark promotion or Gate Chair verdict"
+    - "proof promotion, publication, push, or external action"
+    - "global theory rejection or program-wide no-go"
+    - "future source-extension impossibility or completed derivation"
+  summary: "The exact result is one candidate-scoped family-protection obstruction and one local route freeze; validator, role, registry, hash, and checkpoint evidence cannot strengthen it into physics promotion."
+
+validation:
+  yaml_parse_status: "PASS"
+  duplicate_key_status: "PASS"
+  recorded_source_hash_status: "PASS_27_OF_27"
+  registered_source_hash_status: "PASS_4_OF_4_ROWS"
+  canonical_metadata_identity_status: "PASS"
+  independent_exact_math_status: "PASS_18_OF_18"
+  exact_refuter_result_count: 1
+  required_stress_branch_count: 10
+  executed_stress_branch_count: 10
+  proof_obligation_count: 14
+  passed_proof_obligation_count: 14
+  candidate_failure_branch_count: 11
+  audited_candidate_failure_branch_count: 11
+  inherited_freeze_count: 5
+  candidate_local_freeze_count: 1
+  evaluated_freeze_count: 6
+  distance_to_gr_row_count: 14
+  literal_no_delta_row_count: 14
+  selected_successor_count: 1
+  selected_successor_executed_count: 0
+  semantic_cardinality_status: "PASS"
+  whitespace_status: "PASS"
+  git_diff_check_status: "PASS"
+  exact_owned_path_only_status: "PASS"
