@@ -1,0 +1,296 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\PhiFlow}{\Phi_{\gamma}}
+\newcommand{\Viab}{\operatorname{Viab}}
+
+\title{Source-Extension Smuggling Audit of the Signed Cubic Viability Selector}
+\author{The \AE ther-Flow Research Project}
+\date{RT-20260811-004 --- draft/control source-extension audit}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We audit the fixed proposal-only candidate
+\texttt{SignedCubicViabilitySelector\_v1}.  Its source state is the real
+amplitude line, its forward flow is
+\[
+ \PhiFlow(t,a)=\frac{a}{\sqrt{1+2\gamma t a^2}},
+\]
+and its four explicit roots are $\gamma>0$, $\Delta>0$, $a_\star>0$, and
+$\sigma\in\{+1,-1\}$.  No target atlas, metric, desired GR cone, empirical
+response, physical semantics, frozen selector output, benchmark answer, or
+workflow authority enters these definitions.  The decisive local verdict is
+therefore \texttt{source\_pure\_as\_written}, strictly for the fully disclosed
+proposal-only existence-witness reading.  This pass is deliberately weak:
+$\sigma$ supplies the entire component choice, while the other roots supply
+underived dynamics and certificate structure.  Acyclic predeclaration proves
+syntactic noncircularity but no epistemic selection.  Reflection exchanges
+the two candidates and selects neither.  Exact finite-path viability supplies
+neither point nor probability occurrence, and its positive margin vanishes
+asymptotically.  The source law remains a new ontology-primitive candidate,
+unadopted and physically uninterpreted.  All four inherited freezes and all
+fourteen Distance-to-GR burdens remain unchanged.  One first Refuter stress is
+selected but not executed.
+\end{abstract}
+
+\section{Question and fixed boundary}
+
+The fixed candidate defines
+\[
+ U_\sigma=\{a\in\R:\sigma a>0\},\qquad
+ b_\sigma(a)=\frac{\sigma a}{\sqrt{a_\star^2+a^2}},
+\]
+the one-step successor relation
+\[
+ R_\Delta(a)=\{\PhiFlow(t,a):0\le t\le\Delta\},
+\]
+and the component selector $\operatorname{Sel}_{\rm src}(\sigma)=U_\sigma$.
+RT003 proved conditionally that
+\[
+ \Viab_{R_\Delta}(U_\sigma)=U_\sigma,
+ \qquad
+ b_\sigma(\PhiFlow(t,a))\ge
+ \lambda b_\sigma(a),
+ \quad
+ \lambda=(1+2\gamma\Delta a_\star^2)^{-1/2}.
+\]
+This audit holds those formulas fixed.  It asks whether their premises import
+forbidden target or authority data and what the formulas actually select.
+
+The audit may distinguish source syntax, constructive preload, epistemic
+selection, current-ontology derivation, adoption, physical interpretation,
+empirical semantics, and workflow authority.  It may not reconstruct or
+repair the candidate, execute its successor, reevaluate D7, act on B2, unlock
+P4--T03, adopt a source law, construct $g_{\rm eff}$, promote a claim, or issue
+a global no-go result.
+
+The following freezes remain active and untouched:
+\begin{itemize}[leftmargin=*]
+  \item \texttt{NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR};
+  \item \texttt{NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS};
+  \item \texttt{NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION};
+  \item \texttt{NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS}.
+\end{itemize}
+
+\section{Audit standard}
+
+``Source-pure as written'' means only that the disclosed mathematical premises
+are source-typed and do not secretly use target geometry, desired empirical
+behavior, frozen outputs, or workflow status as scientific premises.  It does
+not mean that the premises are derived, natural, epistemically preferred,
+robust, adopted, physical, empirical, universal, or adequate for P4--T02.
+
+A desired property may be constructively preloaded without being hidden.  In
+that case the local source-purity test can pass while the result earns no
+derivational credit.  That is the situation here: $\sigma$ explicitly names
+one of two otherwise symmetric source components.
+
+\section{Exact new audit payloads}
+
+\subsection{Dimensionless reduction}
+
+Set
+\[
+ x=\frac{a}{a_\star},\qquad
+ \tau=\frac{t}{\Delta},\qquad
+ H=\gamma\Delta a_\star^2.
+\]
+Then
+\[
+ x(\tau)=\frac{x}{\sqrt{1+2H\tau x^2}},\qquad
+ b_\sigma=\frac{\sigma x}{\sqrt{1+x^2}},\qquad
+ \lambda=(1+2H)^{-1/2}.
+\]
+Thus the quantitative bounded-step certificate has one continuous
+dimensionless parameter $H$ plus the separate discrete token $\sigma$.
+Under
+\[
+ a'=da,\quad a_\star'=da_\star,\quad t'=ct,\quad
+ \Delta'=c\Delta,\quad \gamma'=\frac{\gamma}{cd^2},
+\]
+$x$, $\tau$, $H$, $b_\sigma$, and $\lambda$ are invariant.  Moreover, $H$ is
+complete for this positive-regraduation action.  If two positive triples have
+the same $H$, choosing $c=\Delta'/\Delta$ and
+$d=a_\star'/a_\star$ transports one to the other; choosing
+$c=1/\Delta$ and $d=1/a_\star$ gives the unique normal form $(H,1,1)$.
+This is exact
+source-coordinate covariance.  It is not a physical gauge statement or a
+derived unit system.
+
+\subsection{Parameter roles and component selection}
+
+For every $\gamma>0$, $\Delta>0$, and $a_\star>0$, the flow preserves the
+sign of every nonzero finite-time state.  Therefore the equality
+$\Viab_{R_\Delta}(U_\sigma)=U_\sigma$ is independent of the numerical values
+of those three continuous parameters.  They change the rate and the
+certificate factor; they do not choose between $U_+$ and $U_-$.  The entire
+component-identity choice is carried by the supplied token $\sigma$.
+
+More precisely, the finite transitive closure from nonzero $a$ is
+\[
+ \{y:\operatorname{sign}(y)=\operatorname{sign}(a),\ 0<|y|\le |a|\}.
+\]
+Necessity follows from sign preservation and monotone amplitude.  Conversely,
+every such $y$ is reached at
+\[
+ T=\frac{y^{-2}-a^{-2}}{2\gamma}\ge0,
+\]
+and the finite time $T$ can be split into finitely many increments no larger
+than $\Delta$.  The reachable set is therefore independent of the positive
+magnitudes $\gamma$, $\Delta$, and $a_\star$.
+
+This separation is sharpened by two controls.  At $\gamma=0$ the identity
+flow still preserves both components and selects neither.  For $\gamma<0$ the
+displayed real flow can lose global forward existence at finite time.  Hence
+$\gamma>0$ prepares the particular global dissipative family but is not a
+component selector.
+
+\subsection{Reflection proves token nonselection}
+
+The map
+\[
+ J(a,\sigma)=(-a,-\sigma)
+\]
+intertwines the flow, maps $U_\sigma$ to $U_{-\sigma}$, and satisfies
+$b_{-\sigma}(-a)=b_\sigma(a)$.  On the two-element token set the reflection
+has one orbit and no fixed token.  Equivariance therefore transports the pair
+of candidates but selects neither member.  It proves no physical gauge
+equivalence, no empirical equivalence, and no spontaneous symmetry breaking.
+
+\subsection{Finite viability and the asymptotic boundary}
+
+For a constant step $\Delta$ and $u_0=a_0^2>0$, exact iteration gives
+\[
+ u_n=\frac{u_0}{1+2\gamma n\Delta u_0}>0
+\]
+for each finite $n$.  For an arbitrary $n$-step path, the total time obeys
+$0\le T\le n\Delta$, so the one-step argument at horizon $n\Delta$ gives the
+greatest uniform factor
+\[
+ \Lambda_n=(1+2nH)^{-1/2},\qquad
+ b_\sigma(a_n)\ge\Lambda_n b_\sigma(a_0)>0.
+\]
+Sharpness is approached at total time $n\Delta$ as $|a_0|\to\infty$.
+Bernoulli's inequality gives $\Lambda_n\ge\lambda^n$, strictly for $n>1$.
+This proves the stated finite-path viability with a sharper bound.  However,
+\[
+ \lim_{n\to\infty}u_n=0,
+ \qquad
+ \lim_{t\to\infty}\PhiFlow(t,a)=0,
+ \qquad
+ \lim_{t\to\infty}b_\sigma(\PhiFlow(t,a))=0.
+\]
+Zero is not in $U_\sigma$, and $\Lambda_n$ has no positive lower bound
+independent of $n$.  The fixed theorem therefore does not establish a closed
+infinite-horizon viable limit or a positive asymptotic margin.  This precision
+does not invalidate its finite-path statement.
+
+\subsection{Component selection is not probability occurrence}
+
+Fix any positive time $t_0$.  The bounded function
+\[
+ h(a)=\frac{a^2}{1+a^2}
+\]
+satisfies $h(\PhiFlow(t_0,a))<h(a)$ for $a\ne0$, with equality only at zero.
+If a Borel probability $\mu$ is invariant, equality of the integrals of the
+two sides forces $\mu(\{0\})=1$.  Thus the unique invariant probability is
+$\delta_0$, whose support is outside both $U_+$ and $U_-$.  The token-relative
+component selector supplies neither an initial amplitude, a probability law,
+nor an event-occurrence rule.
+
+\section{Twelve-dimension result}
+
+\begin{longtable}{p{0.24\textwidth}p{0.25\textwidth}p{0.42\textwidth}}
+\toprule
+Input & Local verdict & Exact boundary \\
+\midrule
+\endfirsthead
+\toprule
+Input & Local verdict & Exact boundary \\
+\midrule
+\endhead
+State and semiflow & Source-pure disclosed syntax & Registered proposal-only P5 data; no target premise and no ontology adoption. \\
+$\gamma>0$ & Source-pure dynamical preparation & Underived global-forward flow choice; not component, time-orientation, or target selection. \\
+$\Delta>0$ & Source-pure proof granularity & Changes $H$ and $\lambda$, not the component; not a physical clock. \\
+$a_\star>0$ & Source-pure normalization & Changes the dimensionless certificate, not the component; not physical scale. \\
+$\sigma$ & Transparent constructive preload & Sole component selector; disclosed, target-free, underived, and epistemically nonselected. \\
+Dependency DAG & Syntactically noncircular & Root-before-diagnostic order proves no naturalness, truth, or epistemic independence. \\
+Reflection & Exact covariance and nonselection & Exchanges the two tokens; neither physical gauge nor spontaneous selection. \\
+Regraduation & Exact dimensionless covariance & Positive triples are classified by $H$; no physical-unit authority. \\
+Occurrence scope & Component classifier only & No point, event, or probability occurrence; stationary law is $\delta_0$. \\
+Time scope & Exact finite-path theorem & No positive asymptotic margin and no closed limiting state inside $U_\sigma$. \\
+Forbidden-input scan & No forbidden import detected & No target, empirical, frozen, benchmark, or workflow premise. \\
+Ontology and P4--T02 & New primitive candidate only & Source-pure locally, but underived, unadopted, nonuniversal, and physically uninterpreted. \\
+\bottomrule
+\end{longtable}
+
+\section{Decisive disposition}
+
+The decisive verdict is \texttt{source\_pure\_as\_written}, narrowly.  The
+fixed syntax contains no forbidden target-GR import and needs no repair to
+state its conditional existence-witness mathematics.  The verdict does not
+erase the proposal debt: the law succeeds because $\sigma$ supplies component
+identity, while the other three roots supply a selected source dynamics and a
+uniform finite-step certificate.  Current ontology derives none of them.
+
+The source-extension classification is ``new ontology primitive candidate,''
+with material status ``proposal-only source-extension data.''  It is neither a
+conservative definitional extension nor a canonical-ontology candidate.  Its
+adoption status remains \texttt{blocked\_adoption\_open\_continuation}.
+
+\section{Distance-to-GR}
+
+\begin{longtable}{p{0.28\textwidth}p{0.62\textwidth}}
+\toprule
+Burden & RT004 status \\
+\midrule
+\endfirsthead
+\toprule
+Burden & RT004 status \\
+\midrule
+\endhead
+Source ontology primitives & No delta; the four roots and law remain underived and unadopted. \\
+Source equivalence EqSrc & No delta; reflection and regraduation are not adopted physical equivalence. \\
+RetainH & No delta; no primitive or theorem. \\
+GenH & No delta; candidate-specific cubic generator remains proposal-only. \\
+ObsLoc\_lc & No delta; no observer-localization map. \\
+Resp\_lc & No delta; barriers and viability are not empirical responses. \\
+$M_{\rm src}$ & No delta; the amplitude line is not an adopted source manifold. \\
+$g_{\rm eff}$ & No delta; no cone, conformal class, scale, or effective metric. \\
+Matter coupling & No delta; no universal sector or coupling law. \\
+Einstein equations & No delta; no action, variation, or field equation. \\
+Finite-variation robustness & No delta; off-family, token, and sign-crossing stress remains. \\
+Benchmark promotion & No delta; no comparison or promotion. \\
+Gate Chair status & No delta; no protected verdict is requested. \\
+Current route freeze or hard-fail status & No delta; four inherited freezes remain active and this distinct candidate is not yet frozen. \\
+\bottomrule
+\end{longtable}
+
+\section{Next bounded packet}
+
+The audit selects, but does not execute,
+\begin{flushleft}
+\small\ttfamily
+PKT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-\\
+SOURCE-EXTENSION-REFUTER-STRESS-V1.
+\end{flushleft}
+Its type is \texttt{source\_extension\_refuter\_stress} and its next role is
+\texttt{refuter@0.2.0}.  The future packet may stress the fixed candidate under
+arbitrarily small source-local law and successor perturbations, sign-crossing
+branches, token erasure or reversal, long-time boundary completion, off-family
+amplitude variations, and all frozen-route controls.  It may not reconstruct a
+frozen selector, import target behavior, or promote the candidate.
+
+D7 remains unevaluated, B2 remains inactive and undisposed, P4--T03 remains
+locked, and no source-law adoption, canonical ontology edit, physical or
+empirical interpretation, $g_{\rm eff}$, coupling, Einstein equation, Gate
+action, benchmark promotion, proof promotion, publication, push, external
+action, global no-go, or completed derivation is authorized.
+
+\end{document}

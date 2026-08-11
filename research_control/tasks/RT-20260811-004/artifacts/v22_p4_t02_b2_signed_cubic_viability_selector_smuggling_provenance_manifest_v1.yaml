@@ -1,0 +1,124 @@
+schema_id: "v22_p4_t02_b2_signed_cubic_viability_selector_smuggling_provenance_manifest_v1"
+task_id: "RT-20260811-004"
+job_id: "AJ-RT-20260811-004-001"
+audit_id: "AUDIT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-V1"
+candidate_id: "CAND-V22-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1"
+candidate_law_name: "SignedCubicViabilitySelector_v1"
+status: "complete"
+source_count: 13
+sources:
+  - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    source_class: "registered_markdown_control"
+    used_for: "P4-T02 scope, hard-fail screen, and no-global-no-go boundary"
+  - object_id: "HANDOFF-1017"
+    path: "research_control/handoffs/handoff-1017.yaml"
+    sha256: "21946600d826f6f6e0a1398243ac5da387b03ed9b1201a25b341abd9b880dec5"
+    source_class: "tracked_control_state"
+    used_for: "fixed audit packet and one-job authority"
+  - object_id: "TEX-V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-LAW-V1"
+    path: "research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_law_v1.tex"
+    sha256: "14c229daccb45faabff0a2f3fe264459e2f54302ae514a1f0820ca30c0984edc"
+    source_class: "registered_tex_draft_control"
+    used_for: "fixed candidate definitions, theorems, and claim boundary"
+  - object_id: "V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-SPEC-V1"
+    path: "research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_spec_v1.yaml"
+    sha256: "f990e4e6048b268545e3f818a2088d7951d13c2310e0a113e018b3c39fa2af0e"
+    source_class: "task_local_draft_control"
+    used_for: "formal roots, dependency graph, obligations, and failure branches"
+  - object_id: "V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-PROVENANCE-V1"
+    path: "research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_provenance_manifest_v1.yaml"
+    sha256: "0d5ba8be92e79967e7ff9f0ef349ee67951abbe36481f88387af12bb932c7781"
+    source_class: "task_local_draft_control"
+    used_for: "declared origin of gamma, Delta, a_star, and sigma"
+  - object_id: "V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-DISPOSITION-V1"
+    path: "research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_disposition_v1.yaml"
+    sha256: "c7782786290f8d50774de7d507145229edde65599f5c3cdcb23ed2f8e5187c24"
+    source_class: "task_local_draft_control"
+    used_for: "proposal-only status, constructive preload, and successor boundary"
+  - object_id: "V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-MODEL-V1"
+    path: "research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_model.py"
+    sha256: "deb4827eab5195098b62fb722430715b333aad8f393faa7f4c5cb1126f6631a5"
+    source_class: "task_local_exact_control"
+    used_for: "fixed rational theorem controls"
+  - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1"
+    path: "research_control/tasks/RT-20260811-003/artifacts/parent_fusion_notes_p4_t02_b2_source_dynamical_viability_admissibility_selector.md"
+    sha256: "a6d4ba275e4ba201a23a06e38f484b5319d905240ac107ac0c4b9064e678c40b"
+    source_class: "registered_markdown_draft_control"
+    used_for: "parent synthesis and explicit pending-audit claims"
+  - object_id: "TEX-V21-P5-T03-CUBIC-AMPLITUDE-SOURCE-DYNAMICS-V1"
+    path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+    sha256: "98ce6833f6e4d8be22837d25845d7fa62d6886049e168d121de5de0093703f6a"
+    source_class: "registered_tex_proposal_only"
+    used_for: "conditional cubic flow, global forward existence, and long-time limit"
+  - object_id: "TEX-V21-P5-T04-CUBIC-AMPLITUDE-STRUCTURAL-ANALYSIS-V1"
+    path: "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex"
+    sha256: "a9a9f42ff016febc0f40a8a4db32b09f670084bda2248704e290cf5bee02a06b"
+    source_class: "registered_tex_proposal_only"
+    used_for: "reflection non-gauge boundary and unique invariant probability delta_0"
+  - object_id: "SMUGGLING-AUDITOR-ROLE-0.2.0"
+    path: ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+    sha256: "2ec5a542caffa90a54d11f0c03630fde839e92f4917d5dbd55b80b724a46c882"
+    source_class: "role_contract"
+    used_for: "audit procedure and no-promotion limit only"
+  - object_id: "GR-DERIVATION-BURDEN-MAP"
+    path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    source_class: "tracked_control_design"
+    used_for: "target milestone and fourteen burden dimensions"
+  - object_id: "DISTANCE-TO-GR-LEDGER"
+    path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+    source_class: "tracked_registry"
+    used_for: "no-delta baseline only"
+
+root_audit:
+  - root_id: "gamma"
+    declared_origin: "inherited P5 proposal-only positive cubic coefficient"
+    source_syntactic: true
+    current_ontology_derived: false
+    target_or_success_selected: false
+    exact_role: "global forward dissipative cubic semiflow; does not select sigma"
+  - root_id: "Delta"
+    declared_origin: "new proposal-only bounded-step horizon"
+    source_syntactic: true
+    current_ontology_derived: false
+    target_or_success_selected: false
+    exact_role: "proof granularity and lambda; transitive finite-path closure is unchanged"
+  - root_id: "a_star"
+    declared_origin: "new proposal-only amplitude reference"
+    source_syntactic: true
+    current_ontology_derived: false
+    target_or_success_selected: false
+    exact_role: "dimensionless barrier normalization and lambda; not component selection or physical scale"
+  - root_id: "sigma"
+    declared_origin: "new proposal-only source orientation token"
+    source_syntactic: true
+    current_ontology_derived: false
+    target_or_success_selected: false
+    exact_role: "sole selector of one reflection-exchanged nonzero component"
+
+forbidden_import_scan:
+  target_atlas_used: false
+  target_metric_used: false
+  target_tetrad_or_coframe_used: false
+  desired_gr_cone_used: false
+  empirical_response_used: false
+  physical_time_orientation_used: false
+  benchmark_answer_used: false
+  frozen_selector_output_used: false
+  generated_derivative_used_as_science: false
+  registry_used_as_science: false
+  role_used_as_science: false
+  validator_or_checkpoint_used_as_science: false
+
+audit_interpretation:
+  syntactic_source_purity: "No forbidden target, empirical, physical, frozen-route, or workflow-authority input occurs in the fixed definitions."
+  constructive_preload: "sigma supplies the entire component choice; gamma, Delta, and a_star supply flow and certificate structure. The success property is transparently built into proposal data."
+  epistemic_selection: "Neither the dependency DAG, reflection equivariance, nor the continuous parameters select sigma or establish why this law should hold."
+  ontology_status: "The package is a new ontology primitive candidate and source-extension data, not a derivation from current ontology."
+  physical_empirical_status: "No physical causality, time orientation, response semantics, probability occurrence, geometry, or calibration is established."
+  workflow_status: "Hashes and validation establish traceability and calculation consistency only."
+
+authority_note: "Source provenance can support the local source-purity classification but cannot adopt the law, establish physical meaning, change Distance-to-GR, or authorize a successor execution."

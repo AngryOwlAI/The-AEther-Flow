@@ -1,0 +1,25 @@
+{
+  "schema_id": "v22_p4_t02_b2_signed_cubic_viability_selector_smuggling_latex_compile_receipt_v1",
+  "task_id": "RT-20260811-004",
+  "job_id": "AJ-RT-20260811-004-001",
+  "status": "PASS",
+  "compile_status": "PASS",
+  "compiler": "tectonic",
+  "compiler_version": "Tectonic 0.16.9",
+  "compile_command": "python3 scripts/compile_latex.py /Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260811-004/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_source_extension_smuggling_audit_v1.tex --output-directory /Volumes/P-SSD/AngryOwl/The-AEther-Flow/.local/latex/RT-20260811-004 --json",
+  "source_path": "research_control/tasks/RT-20260811-004/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_source_extension_smuggling_audit_v1.tex",
+  "source_sha256": "a3a798bd2e45a52da3702624f9cd3c5c5d508021bf721b680aa47d3e27b0bfc5",
+  "local_pdf_path": ".local/latex/RT-20260811-004/v22_p4_t02_b2_signed_cubic_viability_selector_source_extension_smuggling_audit_v1.pdf",
+  "local_pdf_sha256": "6b139d21db12252170dbdad0637a6696a199f0e0a0ce7b0e6b94a07dfba3a60b",
+  "local_pdf_bytes": 67877,
+  "page_count": 5,
+  "pdf_required": false,
+  "tracked_pdf_created": false,
+  "visual_inspection": {
+    "status": "PASS",
+    "pages_inspected": [1, 2, 3, 4, 5],
+    "render_command": "pdftoppm -png -r 120 <local-pdf> .local/latex/RT-20260811-004/rendered/page",
+    "findings": "All five pages are legible and complete. Tables, equations, headings, page breaks, and the long successor identifier remain visible within the page. Underfull table-cell warnings and one 3.9pt overfull code phrase are nonblocking and produce no clipped content."
+  },
+  "authority_note": "The local PDF and compile receipt are derivative validation evidence only. They do not establish scientific truth, adoption, physical meaning, Distance-to-GR progress, or promotion authority."
+}

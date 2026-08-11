@@ -13,9 +13,9 @@ state, or latest handoff, those sources govern and this file is stale.
 | Field | Value |
 | --- | --- |
 | Schema | `v21_current_burden_status_v1` |
-| Source commit at generation | `227b3106675d56608c18e18033986bf15bd34534` |
-| Status generation time | `2026-08-11T09:06:00Z` |
-| Tracked task count | 1271 |
+| Source commit at generation | `ff6d4bf14a64e212a913d438f4901e80c3091289` |
+| Status generation time | `2026-08-11T11:56:41Z` |
+| Tracked task count | 1273 |
 | Stable definition count | 10 |
 | Distance-to-GR burden count | 14 |
 | Historical authored-map commit | `2c5fb02fd8fff9b449ab10a328d7c881b13ef546` |
@@ -24,20 +24,20 @@ state, or latest handoff, those sources govern and this file is stale.
 ### Exact source hashes
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `fa2330cbd6aade1f11dd9d73d45f68284ab1885e4815aa883184d29ea26afd8c`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `5c1acb29cdb3668817ea0220acab444594248bd6aaa20ece00af1876de092287`
 - `research_control/design/gr_derivation_burden_map.md`: `8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e`
-- `research_control/handoffs/handoff-1016.yaml`: `cd244a75f88bc4345cae7df69d51dbc8b7dde461c26a1967a44d1e8dbda7a07f`
-- `research_control/program_state.yaml`: `75be2968ff8fb5f7183bde2a37a144e662e08abcb4f1531c39b83678ce2292c6`
+- `research_control/handoffs/handoff-1018.yaml`: `bd3f3ae9bcb4146fb4c26baae41b15f31c294a6fec27176ccea17ed053b7eaec`
+- `research_control/program_state.yaml`: `9eb52f6e5426feb83ea5f60e61d164e464fe17676595523bf682f01548c343ea`
 - `research_control/tasks/RT-20260721-009/artifacts/v21_burden_definitions_v1.yaml`: `67b8053baa60db4b11ee20582633d6279523d40b2ee853a6c570e2fdc1d113f5`
 
 ## Live control state
 
 | Field | Value |
 | --- | --- |
-| Active task | `RT-20260811-002` |
-| Latest handoff | `handoff-1016` |
-| Current status | `v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_formalization_selected_not_executed_checkpoint_pending` |
-| Next recommended action | Run the single governed checkpoint for AJ-RT-20260811-002-001. After it commits execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION-V1. Formalize or precisely obstruct target-free source occurrence O_src, admissible domain U_src, transition relation R_src, barrier b_src, and viability certificate from independently source-provenanced premises. Preserve all four freezes. Do not execute any later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
+| Active task | `RT-20260811-004` |
+| Latest handoff | `handoff-1018` |
+| Current status | `v22_p4_t02_b2_signed_cubic_viability_selector_source_pure_as_written_pending_refuter_stress_precheckpoint` |
+| Next recommended action | Run the single governed checkpoint for AJ-RT-20260811-004-001. After it commits execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-REFUTER-STRESS-V1. Stress only the fixed locally source-pure candidate for perturbative and off-family robustness token nonselection finite-versus-asymptotic viability and invariant-measure limitations. Preserve all four freezes. Do not repair or adopt the candidate execute a later selector packet reevaluate D7 act on B2 unlock P4-T03 promote publish push or take external action. |
 
 ## Authored stable definitions with generated current values
 
