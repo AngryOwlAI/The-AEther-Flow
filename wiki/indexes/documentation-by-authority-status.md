@@ -137,6 +137,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POPULATED-INSTANCE-AUDIT-V1` `research_control/tasks/RT-20260809-026/artifacts/parent_fusion_notes_p4_t02_b2_populated_instance_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-COMMON-CHARACTER-SELECTOR-V1` `research_control/tasks/RT-20260810-013/artifacts/parent_fusion_notes_p4_t02_b2_post_common_character_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-LINE-LOCK-SELECTION-V1` `research_control/tasks/RT-20260810-002/artifacts/parent_fusion_notes_p4_t02_b2_post_line_lock_selector.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-POST-ORIENTED-MATROID-REFUTER-SELECTOR-V1` `research_control/tasks/RT-20260811-002/artifacts/parent_fusion_notes_p4_t02_b2_post_oriented_matroid_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-REFUTER-SELECTION-V1` `research_control/tasks/RT-20260810-009/artifacts/parent_fusion_notes_p4_t02_b2_post_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/parent_fusion_notes_p4_t02_b2_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `research_control/tasks/RT-20260810-001/artifacts/parent_fusion_notes_p4_t02_b2_source_intrinsic_interface_repair.md`
@@ -907,6 +908,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POPULATED-INSTANCE-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-populated-instance-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-COMMON-CHARACTER-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-common-character-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-LINE-LOCK-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-line-lock-selection-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-ORIENTED-MATROID-REFUTER-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-oriented-matroid-refuter-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-REFUTER-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-refuter-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-intrinsic-interface-repair-v1.md`

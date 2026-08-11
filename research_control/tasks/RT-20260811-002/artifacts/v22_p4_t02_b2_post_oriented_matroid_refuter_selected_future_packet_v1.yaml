@@ -1,0 +1,214 @@
+schema_id: "v22_p4_t02_b2_post_oriented_matroid_refuter_selected_future_packet_v1"
+task_id: "RT-20260811-002"
+job_id: "AJ-RT-20260811-002-001"
+packet_id: "PKT-V22-P4T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION-V1"
+candidate_id: "CAND-V22-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1"
+work_item_id: "P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION"
+strategy_id: "formalize_v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_v1"
+task_type: "v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_formalization_or_obstruction"
+status: "selected_not_executed"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+selected_next_packet_type: "ontology_law_research_packet"
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Determine whether the existing source-side state and dynamics derive a covariant occurrence and admissible-variation law with an exact viability/barrier theorem that selects and protects one realization component without target geometry or frozen-route import."
+adoption_status: "blocked_adoption_open_continuation"
+next_role_family: "ontology-formalizer@0.2.0"
+supporting_future_perspectives:
+  - "smuggling-auditor@0.2.0 after a formalized candidate law"
+  - "refuter@0.2.0 after a source-pure audit"
+requires_human_gate: false
+human_gate_reason: "One proposal-only source-law formalization-or-obstruction packet is unprotected. Canonical ontology adoption, physical interpretation, B2 disposition, and protected Gate action remain separate and human-gated or otherwise controlled."
+execution_authorized_in_rt019: false
+selected_packet_executed: false
+
+source_side_definition: "On the full source realization/state space, formalize an independently source-provenanced transition relation or semiflow, an admissible-domain predicate fixed before outcome evaluation, a positive barrier or viability certificate, and an occurrence/component selector; prove a source-side forward-invariance and selection theorem or return the smallest exact missing primitive or countermodel."
+
+formal_domains:
+  source_state_domain: "A declared exact source-state/realization space X_src retaining the quantitative data needed by the source equations; no quotient by Bridge_OM outputs and no target manifold."
+  source_transition_domain: "A relation R_src subset X_src x X_src or semiflow Phi_src derived from current source equations or explicitly labeled proposal-only source-extension data."
+  admissible_domain: "A source-side subset U_src fixed before evaluation by exact source predicates; desired target cones, empirical response, and benchmark behavior are forbidden selectors."
+  barrier_domain: "An ordered exact field K and a source scalar b_src:X_src->K with U_src={x:b_src(x)>0}, or a precise obstruction to such a global representation."
+  viability_domain: "All R_src trajectories or allowed one-step successors from one source state; nondeterminism must be quantified universally rather than success-filtered."
+  occurrence_domain: "A source occurrence/initial-data law O_src selecting a state or a unique invariant component independently of desired P4-T02 success."
+  covariance_domain: "Only source transformations already justified by EqSrc or explicitly proposal-only candidate intertwiners; presentation arrows are not automatically physical gauge."
+  exact_input_class: "Finite rational/algebraic controls and exact symbolic predicates with decidable sign and transition checks, plus a precise non-decidability failure branch."
+  excluded_inputs:
+    - "shared tau, Q_ray, midpoint plane, common character, anchor, cochain, or holonomy-protection law"
+    - "Bridge_OM sign/circuit/total/refinement/path components used as a standalone selector"
+    - "target atlas, metric, tetrad, coframe, desired GR cone, proper time, physical normalization, empirical response calibration, or benchmark answer"
+    - "registry, validation, role, checkpoint, or workflow status treated as source evidence"
+
+formal_objects:
+  - object_id: "FULL-SOURCE-STATE-SPACE"
+    notation: "X_src"
+    definition: "The exact proposal domain of source states and quantitative realizations on which source evolution and admissibility are typed."
+  - object_id: "SOURCE-TRANSITION-LAW"
+    notation: "R_src or Phi_src"
+    definition: "The source-derived or proposal-only admissible successor relation; it is not inferred from wall avoidance or desired physical output."
+  - object_id: "SOURCE-ADMISSIBLE-DOMAIN"
+    notation: "U_src"
+    definition: "A predeclared source-predicate domain whose membership is independent of target geometry and benchmark success."
+  - object_id: "SOURCE-BARRIER"
+    notation: "b_src"
+    definition: "An exact scalar certificate with positive superlevel U_src and a transition inequality establishing forward invariance."
+  - object_id: "VIABILITY-KERNEL"
+    notation: "Viab_{R_src}(U_src)"
+    definition: "States whose every admitted source evolution stays inside U_src for all admitted future steps."
+  - object_id: "OCCURRENCE-OR-COMPONENT-SELECTOR"
+    notation: "O_src or Sel_src"
+    definition: "An independently source-provenanced law selecting initial data or one invariant viable component without goal filtering."
+  - object_id: "DIAGNOSTIC-ONLY-BRIDGE-READOUT"
+    notation: "Diag_OM"
+    definition: "Optional evaluation of already-valid Bridge_OM components on selected source states solely as diagnostics; it has no occurrence, stability, physical, or empirical authority."
+
+formal_maps:
+  - map_id: "SOURCE-EVOLUTION"
+    signature: "Phi_src:T x X_src -> X_src or R_src:X_src -> P(X_src)"
+    obligation: "Prove typing, composition/closure, source provenance, and covariance without selecting paths by desired output."
+  - map_id: "BARRIER-EVALUATION"
+    signature: "b_src:X_src -> K"
+    obligation: "Define its source-side provenance and prove U_src={b_src>0} on the declared domain."
+  - map_id: "BARRIER-PROPAGATION"
+    signature: "x |-> inf_{y in R_src(x)} b_src(y)"
+    obligation: "Prove an exact lower bound inf b_src(y) >= lambda b_src(x) with lambda>0 or return a countermodel."
+  - map_id: "VIABILITY-CONSTRUCTION"
+    signature: "Viab_{R_src}:P(X_src)->P(X_src)"
+    obligation: "Quantify over every admitted successor and prove forward invariance without ignoring wall-crossing branches."
+  - map_id: "SOURCE-COMPONENT-SELECTION"
+    signature: "Sel_src:(R_src,U_src,O_src)->C_star or precise_obstruction"
+    obligation: "Prove existence and uniqueness of a selected viable component from source premises alone; multiple components fail closed."
+  - map_id: "DIAGNOSTIC-EVALUATION"
+    signature: "Diag_OM:X_src->Bridge_OM outputs"
+    obligation: "Keep the frozen classifier diagnostic-only and prove that selection does not factor through its noninjective named components."
+
+theorem_targets:
+  - theorem_id: "THM-SOURCE-BARRIER-VIABILITY"
+    statement: "If b_src(x)>0 and every admitted successor y satisfies b_src(y)>=lambda b_src(x) for one lambda>0, then every finite admitted trajectory remains in U_src and satisfies b_src(x_n)>=lambda^n b_src(x_0)>0."
+    status: "future_proof_required"
+  - theorem_id: "THM-OCCURRENCE-STABILITY-SEPARATION"
+    statement: "A viability/barrier law without O_src selects no realized component, while an occurrence law without a viability condition does not protect the selected state from leaving U_src; the two primitives are logically independent."
+    status: "future_proof_required"
+  - theorem_id: "THM-FROZEN-DIAGNOSTIC-NONFACTORIZATION"
+    statement: "A materially distinct selector must use independently source-derived transition or occurrence data and cannot factor only through shared-tau, Q_ray, common-character, or Bridge_OM diagnostic outputs."
+    status: "future_proof_required"
+
+proof_obligations:
+  - obligation_id: "PO-01-SOURCE-STATE-TYPING"
+    statement: "Type X_src and every state/realization component from tracked source-side premises."
+  - obligation_id: "PO-02-TRANSITION-PROVENANCE"
+    statement: "Derive R_src or Phi_src from current source equations or classify every added clause as proposal-only new ontology primitive data."
+  - obligation_id: "PO-03-ADMISSIBLE-DOMAIN-PREDECLARATION"
+    statement: "Fix U_src and its predicates before evaluating whether they retain a desired branch; prohibit success-filtered definitions."
+  - obligation_id: "PO-04-BARRIER-DEFINITION"
+    statement: "Define b_src over an exact ordered domain and prove U_src={b_src>0}, including boundary and singular cases."
+  - obligation_id: "PO-05-BARRIER-PROPAGATION-THEOREM"
+    statement: "Prove the universal successor inequality and finite-trajectory induction with lambda>0."
+  - obligation_id: "PO-06-VIABILITY-NONEMPTINESS"
+    statement: "Construct at least one exact viable state or return a minimal countermodel showing the viability kernel is empty."
+  - obligation_id: "PO-07-OCCURRENCE-OR-COMPONENT-SELECTION"
+    statement: "Derive O_src or prove a unique invariant viable component from source premises; multiplicity without a selector is an obstruction."
+  - obligation_id: "PO-08-SOURCE-COVARIANCE"
+    statement: "Prove the law and certificates transport under justified source equivalences without promoting presentation arrows to physical gauge."
+  - obligation_id: "PO-09-FOUR-FREEZE-INDEPENDENCE"
+    statement: "Prove the candidate neither imports nor reconstructs shared-tau, repaired-Q_ray, common-character, or unchanged Bridge_OM selector data."
+  - obligation_id: "PO-10-REALIZATION-SENSITIVITY-WITHOUT-TARGET-METRIC"
+    statement: "If quantitative realization data are used, identify their source provenance and avoid an arbitrary norm or target-shaped margin."
+  - obligation_id: "PO-11-FINITE-AND-CONTINUUM-SCOPE"
+    statement: "State the exact finite/local domain and do not infer continuum, global, or all-P7 sector coverage."
+  - obligation_id: "PO-12-PHYSICAL-EMPIRICAL-SEPARATION"
+    statement: "Keep source viability distinct from physical causality, empirical response, conformal geometry, scale, and g_eff."
+  - obligation_id: "PO-13-SOURCE-EXTENSION-CLASSIFICATION"
+    statement: "Classify every non-derived primitive and preserve blocked_adoption_open_continuation with no ontology edit or adoption."
+  - obligation_id: "PO-14-DECISIVE-FORMALIZATION-OR-FAIL"
+    statement: "Return a theorem with explicit hypotheses and proof plus a complete candidate-law packet, or the smallest exact missing primitive/countermodel; obligations-only fog is forbidden."
+
+failure_branches:
+  - branch_id: "FB-01-UNTYPED-SOURCE-STATE"
+    exact_failure: "X_src or a required state component has no tracked source-side type or provenance."
+  - branch_id: "FB-02-NO-SOURCE-TRANSITION-LAW"
+    exact_failure: "No R_src or Phi_src is derived or explicitly classified as proposal-only source-extension data."
+  - branch_id: "FB-03-GOAL-OR-TARGET-SELECTED-DOMAIN"
+    exact_failure: "U_src or b_src is chosen using desired positivity, physical cone, empirical response, target metric, or benchmark behavior."
+  - branch_id: "FB-04-BARRIER-REPRESENTATION-FAILURE"
+    exact_failure: "U_src cannot be represented by the declared exact barrier and no precise alternative or obstruction is supplied."
+  - branch_id: "FB-05-BARRIER-PROPAGATION-FAILURE"
+    exact_failure: "An admitted successor violates b_src(y)>=lambda b_src(x) for every lambda>0."
+  - branch_id: "FB-06-EMPTY-VIABILITY-KERNEL"
+    exact_failure: "Every admitted state has an allowed trajectory leaving U_src."
+  - branch_id: "FB-07-NONSELECTION"
+    exact_failure: "Multiple viable components or occurrence states remain and no independent source selector distinguishes them."
+  - branch_id: "FB-08-SOURCE-COVARIANCE-DEFECT"
+    exact_failure: "The candidate depends on source presentation beyond justified source-equivalence transport."
+  - branch_id: "FB-09-FROZEN-ROUTE-REPLAY"
+    exact_failure: "The formalization imports any object or success restriction from one of the four frozen routes."
+  - branch_id: "FB-10-PHYSICAL-OR-EMPIRICAL-OVERREAD"
+    exact_failure: "Source viability is called physical causality, calibrated response, universal matter propagation, conformal geometry, scale, or g_eff."
+  - branch_id: "FB-11-OBLIGATIONS-ONLY-FOG"
+    exact_failure: "The future completion restates missing laws without proving a theorem, constructing a candidate law, or giving a precise obstruction/countermodel."
+
+formalization_attempt_status_contract:
+  required: true
+  candidate_law: "SourceDynamicalViabilityAdmissibilitySelector_v1"
+  success_status: "proposal_only_candidate_source_law_formalized_pending_smuggling_audit"
+  failure_status: "smallest_missing_source_primitive_or_countermodel_named_with_precise_obstruction"
+  allowed_result_types:
+    - "theorem_with_hypotheses_and_proof"
+    - "bridge_map_candidate"
+    - "countermodel_or_obstruction"
+    - "invalid_under_claim_boundary"
+  no_fog_check_required: true
+  obligations_only_completion_allowed: false
+
+required_future_disposition:
+  after_formalized_candidate: "one separately admitted source_extension_smuggling_audit under smuggling-auditor@0.2.0"
+  after_source_pure_audit: "one separately admitted source_extension_refuter_stress under refuter@0.2.0"
+  after_precise_obstruction: "one separately admitted theoretical selector or local-freeze review tied to the exact failed premise"
+  automatic_adoption: false
+  automatic_b2_disposition: false
+  execution_in_rt019: false
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "CAND-V22-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1"
+  item_source_path: "research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_selected_future_packet_v1.yaml"
+  classification: "new_ontology_primitive_candidate"
+  evidence_paths:
+    - "research_control/tasks/RT-20260811-001/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_refuter_stress_v1.tex"
+    - "research_control/handoffs/handoff-1015.yaml"
+  relation_to_current_ontology: "Current ontology does not derive the required occurrence selector, admissible-variation relation, barrier propagation law, or unique viable component."
+  relation_to_target_side: "No target-side structure is admitted; any target-selected predicate triggers FB-03."
+  proposed_import_classification: "target_free_explicit_proposal_only_source_law_pending_smuggling_audit"
+  protected_authority_required: false
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "proposal-only new ontology primitive candidate with blocked adoption and open same-milestone continuation"
+  forbidden_overreads:
+    - "source-law adoption"
+    - "physical causality or empirical response"
+    - "matter-coupling derivation"
+    - "g_eff or Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+  next_route_if_blocked: "source_extension_smuggling_audit or precise-obstruction selector"
+
+authority_limits:
+  formalization_executed_in_rt019: false
+  source_law_constructed: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  physical_causality_constructed: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

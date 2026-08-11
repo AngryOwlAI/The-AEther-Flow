@@ -1,0 +1,576 @@
+schema_id: "child_phys_math_p4_t02_b2_post_oriented_matroid_refuter_selector_v1"
+authority: "science_draft"
+artifact_kind: "internal_parent_child_selector_analysis"
+task_id: "RT-20260811-002"
+job_id: "AJ-RT-20260811-002-001"
+decision_id: "DDR-20260811-002"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260811-002"
+child_perspective: "physicist_mathematician"
+status: "complete_for_parent_synthesis"
+created_on: "2026-08-11"
+
+ownership_boundary:
+  owned_path: "research_control/tasks/RT-20260811-002/artifacts/child_phys_math_p4_t02_b2_post_oriented_matroid_refuter_selector.yaml"
+  files_written_count: 1
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  selected_packet_executed: false
+  other_files_modified: false
+
+source_binding:
+  source_head: "227b3106675d56608c18e18033986bf15bd34534"
+  source_tree: "86fc85a4be2e677cc9860b5423a45d7d3d7dd221"
+  governing_source_hashes:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      use: "Mandatory project reasoning and conduct boundary."
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      use: "Root authority, source-extension, freeze, and no-promotion rules."
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      use: "Research-control execution boundary."
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      use: "One-job governed theoretical-continuation workflow."
+    - path: "research_control/tasks/RT-20260811-002/00_TASK.yaml"
+      sha256: "c977898e3f03ee7402ac92f6771046d489dbf7f07e86fe06b2342fca327840a7"
+      use: "Exact four-route scope and completion contract."
+    - path: "research_control/tasks/RT-20260811-002/DDR-20260811-002.md"
+      sha256: "16fddaca07c17c4901dc92ab8c1a9fbbf71b36c0cce5d14fa178c1c9aeb86957"
+      use: "Live role choice, parent-child decomposition, and stop condition."
+    - path: "research_control/tasks/RT-20260811-002/jobs/AJ-RT-20260811-002-001.yaml"
+      sha256: "66f9efffc6f888cfbdc7730c698c548a599fb6baa7ca1ce08f594b05577bc158"
+      use: "Single outer AgentJob, route candidates, allowlist, and blocks."
+    - path: "research_control/tasks/RT-20260811-002/roles/theoretical-continuation-selector@0.1.0--RT-20260811-002.yaml"
+      sha256: "e3707775ce4bb0fe855bdeb95c8d8a22f11003400e2d3a584b66341064b5006c"
+      use: "Task-local selector authority overlay."
+    - path: ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+      sha256: "85550a50a4be3fc2b1fbf6e22b22c160b25923944276d0b555e75fb10380ff79"
+      use: "Required theoretical_decision_output and constructive-preference rules."
+    - path: "research_control/handoffs/handoff-1015.yaml"
+      sha256: "e4373644bacc7e5ee7d4799745388ab6e45bbec45e1d3aeb564930c775085dc7"
+      use: "Immutable post-RT018 boundary and exact four continuations."
+    - path: "research_control/tasks/RT-20260810-016/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_repair_v1.tex"
+      sha256: "c977c9a93e3a543fe18378f51b83773211b483df3377d4187c506ff88768bba4"
+      use: "Preserved arbitrary-finite-rank conditional mathematics."
+    - path: "research_control/tasks/RT-20260810-017/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_post_repair_smuggling_audit_v1.tex"
+      sha256: "961d584045e0911151ca79dedf87d90792485ab3504fdbba1366e063ab8e9b25"
+      use: "Preserved source_pure_as_written repair audit."
+    - path: "research_control/tasks/RT-20260811-001/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_refuter_stress_v1.tex"
+      sha256: "2b8cf492bb8c47e0591caa53840cc401c6bc300c5c08d97409f4c43f7bb860c4"
+      use: "Canonical RT018 theorem survival, countermodels, and scoped obstruction."
+    - path: "research_control/tasks/RT-20260811-001/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_refuter_obstruction_v1.yaml"
+      sha256: "c7ac829cb1ad2c1b19360b8c4fd66656d5b5b27aa6623e4cd715f156c108f6dc"
+      use: "Exact failed premise and freeze consequence."
+    - path: "research_control/tasks/RT-20260811-001/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_refuter_stress_matrix_v1.yaml"
+      sha256: "b33f73de11c62259ceb1175b7cc686065466ff863b26f26991270aa01e3613d1"
+      use: "RT018 branch and authority matrix."
+    - path: "research_control/tasks/RT-20260811-001/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_refuter_stress_model.py"
+      sha256: "82e0de6a5102e943b828ddb8a28f6c3265851046bc235d9ce88c2db138e9c977"
+      use: "Exact RT018 rational countermodel controls."
+    - path: "research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_selector_model.py"
+      sha256: "38093a3842c5ce06290ef76930e1decfca6397bd4ba5c4910f70aae44fc785e3"
+      use: "Live exact route-score and rational-barrier model."
+    - path: "research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_route_comparison_v1.yaml"
+      sha256: "1e08b48bd37a8a27c19a5a9c2da354e2e344457046410fc0553035b614038c72"
+      use: "Live parent four-route comparison used for identity convergence."
+    - path: "research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_selected_future_packet_v1.yaml"
+      sha256: "daf708d2646fb111ece049f89158222f6327d0cedc72b096b1aa01682b431f07"
+      use: "Live future-packet draft used for packet identity and proof-contract convergence."
+    - path: "research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.tex"
+      sha256: "8404fc7bd3586c353155cdce00bbede9e107ed4b38231b69953f4242bc5d90f0"
+      use: "Exact shared-tau preload and sector-split freeze boundary."
+    - path: "research_control/tasks/RT-20260810-008/artifacts/v22_p4_t02_b2_common_envelope_refuter_stress_v1.tex"
+      sha256: "7f860d25cdb6e0578acaf59e70cc745388a2777dbcd2749d3736d6c6e017dea2"
+      use: "Exact repaired-quotient descent and robustness freeze boundary."
+    - path: "research_control/tasks/RT-20260810-012/artifacts/v22_p4_t02_b2_common_character_independent_variation_refuter_stress_v1.tex"
+      sha256: "3a657b97e67775755565c14e52ac13c5b0ffec82da01ddcba2517a9adaba4729"
+      use: "Exact common-character holonomy-protection freeze boundary."
+    - path: "research_control/design/v22_recommendation_backlog.yaml"
+      sha256: "c4ebb55431f736f2fcb2786990ae4afbc25db4c89ebbcbd7a8b0fb046fe45885"
+      use: "P4-T02 acceptance and hard-fail screen."
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      use: "P4-T02 dependency and P4-T03 lock."
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      use: "Fourteen-row Distance-to-GR and ontology-law routing contracts."
+
+fixed_scientific_boundary:
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Choose one materially distinct same-milestone packet after the Bridge_OM selection-robustness obstruction without replaying shared-tau, repaired-quotient, common-character, or unchanged oriented-matroid bridge routes."
+  rt018_decisive_result: "scoped_obstruction"
+  rt018_obstruction_id: "OB-V22-P4T02-B2-OM-BRIDGE-SELECTION-ROBUSTNESS-001"
+  failed_premise: "The unchanged Bridge_OM named data select which source realization occurs and protect one physically relevant interpretation under every admitted finite variation."
+  preserved_truths:
+    - "For every finite intrinsic rank, every support-minimal positive circuit has support size at most r+1, and the bound is sharp."
+    - "Effective-span embeddings add no Bridge_OM data and select no ambient or target dimension."
+    - "The RT016 rank-domain repair remains source_pure_as_written and every finite fixture remains nonphysical conformance-only."
+    - "Gordan totality, exact certificate transport, and the declared finite refinement and tame-path records remain valid in their conditional source-side scope."
+    - "RT018 wall-crossing, negative-reorientation, refinement, and information-forgetting countermodels remain decisive against standalone promotion of unchanged Bridge_OM."
+  diagnostic_use_only: "Bridge_OM may be evaluated after an independently selected source state and transition law exist; it supplies neither occurrence, admissibility, physical semantics, nor robustness."
+  full_base_realization_groupoid_isomorphism_claimed: false
+  frozen_candidate_reconstructed: false
+  global_no_go_claimed: false
+
+selector_score_rule:
+  scale: "Each primitive criterion is an integer from 0 through 3."
+  formula: "score=3*constructive+3*materially_distinct+3*addresses_occurrence_selection+2*addresses_variation_stability+2*preserves_freezes-2*extra_unselected_structure-3*human_gate_now"
+  epistemic_status: "Declared routing rubric only; it is not scientific evidence."
+  tie_break: "Prefer the route with the smaller unselected-structure burden, then the more direct theorem-or-obstruction contract."
+
+route_comparison:
+  - route_id: "A_SOURCE_DYNAMICAL_VIABILITY_ADMISSIBILITY_THEOREM"
+    authorized_family: "source-side selection or admissibility theorem"
+    future_packet_type: "ontology_law_research_packet"
+    future_role: "ontology-formalizer@0.2.0"
+    formal_objects:
+      - "X_src: exact source state and quantitative realization domain, independently typed before outcome evaluation."
+      - "Sigma_src: source condition or initial-data domain."
+      - "Occ_src:Sigma_src->X_src: occurrence map or component selector."
+      - "E_src subset X_src x X_src: independently source-provenanced one-step transition and refinement relation."
+      - "Reach_E(x): states reachable from x by a finite E_src path, including path length zero."
+      - "U_src subset X_src: source-admissible domain fixed before diagnostic evaluation."
+      - "b_src:X_src->K: optional exact ordered-field barrier with U_src={b_src>0}."
+      - "beta:X_src->{F,O}: total diagnostic branch map, permitted to instantiate RT018 Tot only after Occ_src and E_src are defined independently."
+    domains:
+      source_domain: "All source states for which Occ_src, E_src, and any proposed barrier are well typed; finite fixtures do not cap the domain."
+      transition_domain: "Every admitted finite transition, reorientation, refinement, and path event generated by E_src; success-filtered transitions are forbidden."
+      target_exclusions: "No target atlas, metric, desired cone, empirical response, benchmark answer, or workflow status."
+    formal_maps:
+      - "Occ_src selects an occurring state or unique invariant component from source conditions."
+      - "E_src generates Reach_E and must be fixed independently of beta."
+      - "beta is a post-selection diagnostic; it is not a selector or an admissibility predicate."
+      - "If supplied, b_src propagates by b_src(y)>=lambda*b_src(x) for every E_src successor y and fixed lambda>0."
+    exact_theorem_target: "Prove source-derived occurrence plus forward-invariant branch-homogeneous reachability, or return the smallest exact missing primitive or countermodel."
+    exact_failure_control: "RT018 A(t)=[e1,e2,(-1,t)] changes beta across arbitrarily small rational wall crossings whenever E_src admits both sides; excluding those transitions only after inspecting beta is goal-property preload."
+    freeze_independence:
+      shared_tau: "No common dual witness, shared leading direction, or diagonal-only variation law."
+      repaired_quotient: "No Q_ray, midpoint plane, or quotient-descent claim."
+      common_character: "No anchor, cochain, common character, or holonomy protection."
+      oriented_matroid_bridge: "Unchanged Bridge_OM is diagnostic-only and cannot define Occ_src, E_src, U_src, or b_src."
+    source_status: "A new source occurrence and transition/admissibility primitive is currently underived; a proposal-only formalization is lawful without adoption."
+    score_components:
+      constructive: 3
+      materially_distinct: 3
+      addresses_occurrence_selection: 3
+      addresses_variation_stability: 3
+      preserves_freezes: 3
+      extra_unselected_structure: 1
+      human_gate_now: 0
+    weighted_score: 37
+    disposition: "selected_not_executed"
+
+  - route_id: "B_REALIZATION_SENSITIVE_MARGIN_BRIDGE"
+    authorized_family: "realization-sensitive bridge retaining information Bridge_OM forgets"
+    future_packet_type: "source_extension_candidate"
+    future_role: "candidate-constructor@0.2.0"
+    formal_objects:
+      - "X_real: full quantitative source realization domain with nonzero columns and intrinsic effective spans."
+      - "G_pres: explicitly declared source presentation transformations; its physical-gauge status is not presumed."
+      - "Real_src(A): presentation-equivariant realization record retaining at least one modulus lost by Bridge_OM."
+      - "q_OM:Real_src->Bridge_OM: a forgetful diagnostic map with at least one nontrivial fiber witnessed by RT018."
+      - "m_src:Real_src->K_ge_0: proposed source-side margin or conditioning datum."
+    domains:
+      realization_domain: "Quantitative exact realizations, not only oriented-matroid strata or certificate orbits."
+      equivalence_domain: "Only transformations justified from source presentation data; no full groupoid classification is assumed."
+      target_exclusions: "No target norm, physical distance, desired cone margin, calibration, or spacetime dimension."
+    formal_maps:
+      - "q_OM forgets projective or scaling moduli while preserving the named diagnostic output."
+      - "m_src would measure a source-derived separation from declared degeneracy walls if a lawful scale or order is supplied."
+      - "No map in this route presently selects which realization occurs."
+    exact_theorem_target: "Construct a source-provenanced realization-sensitive record and margin that distinguish a same-Bridge_OM pair and remain covariant under G_pres."
+    exact_failure_control: "Two realization records can share all named Bridge_OM components while differing in a continuous modulus; retaining the modulus still does not choose an occurrence state or admissible transition family."
+    precision_guard: "No full base-realization groupoid isomorphism or complete realization classification is claimed."
+    source_status: "Materially distinct and constructive, but it adds an underived norm, topology, or quantitative margin before resolving occurrence selection."
+    score_components:
+      constructive: 3
+      materially_distinct: 3
+      addresses_occurrence_selection: 1
+      addresses_variation_stability: 2
+      preserves_freezes: 3
+      extra_unselected_structure: 3
+      human_gate_now: 0
+    weighted_score: 25
+    disposition: "not_selected"
+    rejection_basis: "It retains missing information but does not directly supply the independently missing occurrence and admissible-transition laws, and its margin provenance burden is larger."
+
+  - route_id: "C_SOURCE_SIDE_IRRELEVANCE_THEOREM"
+    authorized_family: "source-side irrelevance theorem with new math and roadmap consequence"
+    future_packet_type: "source_side_irrelevance_theorem"
+    future_role: "ontology-formalizer@0.2.0"
+    formal_objects:
+      - "X_src: source-state domain."
+      - "q:X_src->Y: declared forgetful map for the candidate datum under test."
+      - "P:X_src->{0,1}: independently source-defined decision predicate."
+      - "P_bar:Y->{0,1}: proposed factor through q."
+    domains:
+      theorem_domain: "A precisely bounded source-side bridge class and decision predicate; physical relevance cannot be assumed."
+      target_exclusions: "No physical-cone predicate, empirical response, or benchmark success may be used to manufacture P."
+    formal_maps:
+      - "P factors through q exactly when P is constant on every fiber of q."
+      - "Failure of fiber constancy supplies an exact relevance countermodel."
+    exact_theorem_target: "Prove a genuinely new fiber-constancy irrelevance theorem for a source-defined P and state which roadmap branch it closes."
+    exact_failure_control: "Without an independently defined P4-T02-relevant source predicate, fiber constancy proves only formal irrelevance for an arbitrarily selected question."
+    source_status: "Lawful and materially distinct, but presently negative and less direct than the available occurrence/admissibility formalization."
+    score_components:
+      constructive: 0
+      materially_distinct: 3
+      addresses_occurrence_selection: 0
+      addresses_variation_stability: 1
+      preserves_freezes: 3
+      extra_unselected_structure: 1
+      human_gate_now: 0
+    weighted_score: 15
+    disposition: "not_selected"
+    rejection_basis: "Constructive preference applies because route A has a lawful theorem-or-obstruction packet addressing both active missing laws."
+
+  - route_id: "D_PROTECTED_HUMAN_GATED_ONTOLOGY_STOP"
+    authorized_family: "protected human-gated ontology stop"
+    future_packet_type: "human_gated_ontology_change_required"
+    future_role: "protected_human_authority"
+    formal_objects:
+      - "L: set of explicit source-law proposals that would require canonical adoption."
+      - "Gate:L->protected verdict: human-controlled partial action, not a scientific map."
+      - "StopRequired: proposition that every honest A, B, or C continuation requires protected canonical ontology change now."
+    domains:
+      gate_domain: "Only a concrete protected adoption or canonical-edit request after bounded proposal work is exhausted."
+      current_evaluation: "StopRequired is false because route A can be formalized or obstructed proposal-only without adoption."
+    formal_maps:
+      - "Gate is not evaluated or invoked in this task."
+      - "Absent current derivation does not imply that proposal-only formalization is forbidden."
+    exact_theorem_target: "Establish exhaustion of every lawful unprotected continuation before a protected stop could be selected."
+    exact_failure_control: "The explicit route-A packet is lawful, materially distinct, and unexecuted, so exhaustion is false."
+    source_status: "Premature at this boundary."
+    score_components:
+      constructive: 0
+      materially_distinct: 3
+      addresses_occurrence_selection: 0
+      addresses_variation_stability: 0
+      preserves_freezes: 3
+      extra_unselected_structure: 0
+      human_gate_now: 3
+    weighted_score: 6
+    disposition: "not_selected"
+    rejection_basis: "Protected authority is unnecessary for one proposal-only formalization-or-obstruction packet."
+
+comparison_cardinality:
+  exact_authorized_route_count: 4
+  actual_route_count: 4
+  selected_route_count: 1
+  rejected_route_count: 3
+  unique_route_ids: true
+  score_order:
+    - "A_SOURCE_DYNAMICAL_VIABILITY_ADMISSIBILITY_THEOREM:37"
+    - "B_REALIZATION_SENSITIVE_MARGIN_BRIDGE:25"
+    - "C_SOURCE_SIDE_IRRELEVANCE_THEOREM:15"
+    - "D_PROTECTED_HUMAN_GATED_ONTOLOGY_STOP:6"
+
+new_mathematical_payload:
+  payload_id: "THM-V22-P4T02-B2-REACHABILITY-COMPONENT-BRANCH-ROBUSTNESS-001"
+  payload_type: "exact_theorem_and_dependency_map"
+  title: "Reachability-component criterion for source-side branch robustness"
+  definitions:
+    - "Let X be any set, E subset X x X a directed one-step relation, and beta:X->B a total diagnostic classifier."
+    - "Reach_E(x) is the set of endpoints of all finite E-paths beginning at x, including the length-zero path."
+    - "A subset U of X is E-forward-invariant when x in U and x E y imply y in U."
+  theorem_statement: "For x in X, beta is robust under every finite admitted E-path from x if and only if beta is constant on Reach_E(x). Equivalently, there exists an E-forward-invariant subset U containing x on which beta is constant. Reach_E(x) is the least such forward-invariant carrier whenever robustness holds."
+  proof:
+    - "Reach_E(x) contains x and is E-forward-invariant by path concatenation."
+    - "If every finite admitted path is branch preserving, every y in Reach_E(x) has beta(y)=beta(x), so beta is constant on Reach_E(x)."
+    - "If beta is constant on Reach_E(x), every admitted finite path endpoint lies in Reach_E(x) and has the initial branch."
+    - "If an E-forward-invariant U contains x, induction on path length gives Reach_E(x) subset U; constancy of beta on U therefore implies robustness."
+    - "Thus Reach_E(x) is the least forward-invariant carrier and supplies the converse choice U=Reach_E(x)."
+  rt018_application:
+    wall_family: "A(t)=[e1,e2,(-1,t)] over Q has fixed rank two and nonzero columns."
+    diagnostic_values: "beta(A(t)) is Feasible for t>0 and Obstructed for t<=0."
+    countermodel: "Any E relation admitting a finite path from A(1/n) to A(-1/n), for arbitrarily large n, has a branch-inhomogeneous reachable set and fails robustness."
+    conclusion: "Pointwise totality of beta cannot repair this failure; only a separately source-derived Occ_src and E_src can determine the actual reachable component."
+  dependency_map:
+    - upstream: "tracked source ontology or explicit proposal-only extension"
+      supplies: "Sigma_src, X_src, Occ_src, and E_src"
+      missing_now: true
+    - upstream: "Occ_src"
+      supplies: "which initial state or invariant component occurs"
+      missing_now: true
+    - upstream: "E_src"
+      supplies: "which finite variations and refinements are admitted"
+      missing_now: true
+    - upstream: "Reach_E plus diagnostic beta"
+      supplies: "a check of branch homogeneity only after occurrence and transition laws are fixed"
+      missing_now: false
+    - upstream: "source-only branch stability"
+      supplies: "no automatic physical causality, empirical response, universal matter compatibility, conformal class, scale, or g_eff"
+      missing_now: true
+  novelty: "RT018 proves that the frozen classifier does not select or protect a realization. This theorem decomposes the exact repair burden into a source occurrence map and an admitted-transition reachability component, with a necessary-and-sufficient robustness test that is independent of all four frozen candidate constructions."
+  decision_consequence: "Route A is the unique compared route that directly targets both missing upstream maps while remaining proposal-only and target free."
+
+exact_rational_barrier_control:
+  control_id: "CTRL-V22-P4T02-B2-RATIONAL-BARRIER-GENERATORS-001"
+  epistemic_status: "Exact validation-only example of a sufficient law form; not a source derivation, physical law, or adoption."
+  domain: "Q_{>0}"
+  barrier: "b(t)=t"
+  generator_set: ["1/3", "1/2", "1", "2"]
+  transition: "T_q(t)=q*t"
+  lambda: "1/3"
+  exact_result: "For every t>0 and every listed q, b(T_q(t))=q*t>=(1/3)*t>0. Hence every n-step composition stays positive and obeys b(t_n)>=(1/3)^n*b(t_0)."
+  negative_control: "T_minus(t)=-t sends 1/10 to -1/10 and crosses the RT018 wall."
+  model_sample_count: 16
+  model_status: "PASS"
+  model_payload_sha256: "cc42b87a649b3eecd57fca55fae95dec78b37f3fcc3e901349602d5087202845"
+  inference_limit: "The fixture shows what an admissibility/barrier primitive could prove; it does not show that current source ontology supplies T_q, b, lambda, or the occurrence state."
+
+decisive_selection:
+  result_type: "one_theoretical_packet_selection"
+  selected_route_id: "A_SOURCE_DYNAMICAL_VIABILITY_ADMISSIBILITY_THEOREM"
+  selected_future_packet_id: "PKT-V22-P4T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION-V1"
+  selected_future_packet_type: "ontology_law_research_packet"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  candidate_id: "CAND-V22-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1"
+  work_item_id: "P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION"
+  adoption_status: "blocked_adoption_open_continuation"
+  selected_packet_executed: false
+  selection_is_promotion: false
+  exact_basis: "Route A scores 37 versus 25, 15, and 6; uniquely addresses both occurrence selection and admitted-variation stability; is independent of all four freezes; and can return a source-law theorem or precise obstruction without protected adoption."
+
+theoretical_decision_output:
+  selected_next_packet_type: "ontology_law_research_packet"
+  decision_basis: "Current ontology does not derive the occurrence selector or admissible source-transition law isolated by RT018. A materially distinct target-free formalization-or-obstruction packet exists, directly addresses both deficits, outranks the other three routes under the declared exact rubric, and preserves every freeze and claim block."
+  theoretical_method: "Formalize source occurrence, transition reachability, admissibility, and an optional exact barrier; apply the reachability-component criterion and rational wall controls; prove a source-only theorem with explicit hypotheses or return the smallest missing primitive or countermodel."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "Proposal-only source-law formalization or precise obstruction needs no protected authority. Any later canonical ontology adoption, physical interpretation, B2 disposition, or Gate verdict remains separately controlled and human-gated where required."
+
+selected_future_packet_contract:
+  packet_id: "PKT-V22-P4T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION-V1"
+  packet_status: "selected_not_executed"
+  task_type: "v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_formalization_or_obstruction"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  next_role_family: "ontology-formalizer@0.2.0"
+  objective: "Determine whether source-side premises derive or support a proposal-only occurrence map and admissible-transition law whose reachable components satisfy an exact viability or barrier theorem, without target import or frozen-route reconstruction; otherwise name the smallest exact missing primitive or countermodel."
+  source_side_objects:
+    - "X_src, Sigma_src, Occ_src, E_src, Reach_E, U_src, and optional b_src with ordered exact codomain K."
+    - "Bridge_OM output may appear only as Diag_OM after independent source selection."
+  proof_obligations:
+    - obligation_id: "PO-01-SOURCE-TYPING"
+      requirement: "Type X_src, Sigma_src, Occ_src, E_src, U_src, and every quantitative datum from tracked source premises or label it explicit proposal-only extension data."
+    - obligation_id: "PO-02-NONCIRCULAR-OCCURRENCE"
+      requirement: "Define Occ_src without selecting the realization because it has the desired branch, cone, response, or benchmark behavior."
+    - obligation_id: "PO-03-TRANSITION-PROVENANCE"
+      requirement: "Define every E_src generator independently of beta and include all admitted reorientation, refinement, and finite-path branches."
+    - obligation_id: "PO-04-REACHABILITY-THEOREM"
+      requirement: "Prove the selected reachable component is branch homogeneous by the exact reachability criterion, or exhibit a branch-changing reachable path."
+    - obligation_id: "PO-05-BARRIER-PROPAGATION"
+      requirement: "If a barrier is used, prove b_src(y)>=lambda*b_src(x) for every admitted successor with one exact lambda>0 and state all boundary cases."
+    - obligation_id: "PO-06-SOURCE-COVARIANCE"
+      requirement: "Prove transport under justified source equivalences without converting presentation arrows into physical gauge."
+    - obligation_id: "PO-07-ORIENTATION-AND-REFINEMENT"
+      requirement: "Show how source orientation and finite refinements are admitted or excluded by source rules rather than diagnostic success."
+    - obligation_id: "PO-08-MULTICOMPONENT-NONSELECTION"
+      requirement: "If more than one viable component remains, derive a unique source selector or return nonselection as a precise obstruction."
+    - obligation_id: "PO-09-FOUR-FREEZE-INDEPENDENCE"
+      requirement: "Demonstrate no shared tau, Q_ray or midpoint repair, common character or holonomy protection, or unchanged Bridge_OM selector is reconstructed."
+    - obligation_id: "PO-10-P4-T02-SCOPE"
+      requirement: "Separate source viability from stable common physical cone, physical time orientation, controlled degeneracy, and universal declared matter compatibility."
+    - obligation_id: "PO-11-SOURCE-EXTENSION-CLASSIFICATION"
+      requirement: "Classify every underived primitive and preserve blocked_adoption_open_continuation with no automatic adoption."
+    - obligation_id: "PO-12-DECISIVENESS"
+      requirement: "Return a theorem with explicit hypotheses and proof plus a complete candidate-law object, or a smallest missing primitive/countermodel; an obligations-only completion is invalid."
+  failure_branches:
+    - branch_id: "FB-01-UNTYPED-STATE-OR-MAP"
+      exact_failure: "A required state component, occurrence map, or transition generator lacks source-side typing."
+    - branch_id: "FB-02-GOAL-FILTERED-DOMAIN"
+      exact_failure: "U_src or E_src is defined by retaining only diagnostically successful states or transitions."
+    - branch_id: "FB-03-TARGET-SELECTED-BARRIER"
+      exact_failure: "The barrier, scale, norm, or margin is chosen from a target metric, desired cone, empirical calibration, or benchmark answer."
+    - branch_id: "FB-04-BRANCH-CHANGING-REACHABILITY"
+      exact_failure: "An admitted finite E_src path connects states with different beta values."
+    - branch_id: "FB-05-EMPTY-VIABILITY-KERNEL"
+      exact_failure: "Every admitted initial state has at least one allowed path leaving U_src."
+    - branch_id: "FB-06-MULTIPLE-UNSELECTED-COMPONENTS"
+      exact_failure: "Several branch-homogeneous viable components survive and no source occurrence law selects one."
+    - branch_id: "FB-07-COVARIANCE-DEFECT"
+      exact_failure: "Selection or admissibility changes under an admitted source presentation transformation."
+    - branch_id: "FB-08-FROZEN-ROUTE-REPLAY"
+      exact_failure: "The law is merely a shared-tau, quotient, common-character, or unchanged Bridge_OM success restriction."
+    - branch_id: "FB-09-PHYSICAL-OVERREAD"
+      exact_failure: "Source viability is identified with physical causality, response, matter coupling, conformal geometry, scale, or g_eff."
+    - branch_id: "FB-10-OBLIGATIONS-ONLY-FOG"
+      exact_failure: "The completion lists missing primitives without formalizing one or providing a precise obstruction."
+  allowed_future_results:
+    - "proposal_only_candidate_source_law_formalized_pending_smuggling_audit"
+    - "smallest_missing_source_primitive_or_countermodel_named_with_precise_obstruction"
+  automatic_followup_authority: false
+  execution_in_current_job: false
+
+source_extension_classification:
+  source_extension_category: "new_ontology_primitive_candidate"
+  source_extension_import_classification: "target_free_explicit_proposal_only_source_law_pending_smuggling_audit"
+  relation_to_current_ontology: "Current ontology does not derive Occ_src, E_src, a barrier-propagation law, or unique viable component."
+  current_ontology_derivation: false
+  conservative_definitional_extension: false
+  forbidden_target_gr_import: false
+  direct_workflow_authority_import: false
+  status_label: "draft/control"
+  material_class: "source-extension data"
+  candidate_status: "proposal-only"
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  adoption_status: "blocked_adoption_open_continuation"
+  smuggling_audit_still_required_after_formalization: true
+  allowed_conclusion: "One target-free proposal-only source-law formalization-or-obstruction packet is selected and remains unexecuted."
+
+freeze_evaluation:
+  freeze_count: 4
+  new_freeze_created: false
+  global_freeze_created: false
+  evaluations:
+    - freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "preserved"
+      reopened: false
+      reconstruction: false
+      boundary: "No shared principal direction, common dual witness, or diagonal-only variation class."
+    - freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "preserved"
+      reopened: false
+      reconstruction: false
+      boundary: "No Q_ray, midpoint relation, rank-two quotient repair, or six-cell robustness claim."
+    - freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "preserved"
+      reopened: false
+      reconstruction: false
+      boundary: "No anchor, cochain, common character, or sector-holonomy protection law."
+    - freeze_label: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      status: "preserved"
+      reopened: false
+      reconstruction: false
+      boundary: "Unchanged Bridge_OM remains frozen as a standalone selector or robust physical bridge; diagnostic use only remains open."
+
+distance_to_gr_status:
+  changed: false
+  effect: "no_distance_delta"
+  row_count: 14
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      reason: "A new primitive candidate is selected for future formalization but no primitive is constructed or adopted here."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      reason: "No source-equivalence theorem or physical gauge identification is added."
+    - burden: "RetainH"
+      status: "no_delta"
+      reason: "No retention primitive or theorem is constructed."
+    - burden: "GenH"
+      status: "no_delta"
+      reason: "No generation primitive or theorem is constructed."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      reason: "No observer-localization object or physical semantics is supplied."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      reason: "Source occurrence and viability are not empirical response semantics."
+    - burden: "M_src"
+      status: "no_delta"
+      reason: "No adopted source manifold or localization bridge is constructed."
+    - burden: "g_eff"
+      status: "no_delta"
+      reason: "No physical cone, conformal class, time orientation, scale, or source-to-metric map is constructed."
+    - burden: "matter coupling"
+      status: "no_delta"
+      reason: "No universal propagation or coupling law is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      reason: "No action, dynamics, stress tensor, variation, or field equation is derived."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      reason: "The reachability theorem identifies a future proof burden but supplies no adopted source transition law or physical robustness result."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      reason: "No benchmark comparison, recovery theorem, or promotion is authorized."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      reason: "No protected review or verdict is requested or performed."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      reason: "All four local freezes remain active; no new freeze, global no-go, or hard-fail is created."
+
+downstream_state:
+  d7_adequacy: "not_reevaluated"
+  p2_t01_adequacy: "not_reevaluated"
+  b2_status: "inactive_and_undisposed"
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_status: "locked"
+  g_eff_status: "not_constructed"
+  selected_packet_status: "selected_not_executed"
+  automatic_successor_execution: false
+
+authority_blocks:
+  ontology_or_source_law_adoption: false
+  canonical_ontology_edit: false
+  physical_causality_claim: false
+  empirical_response_claim: false
+  all_p7_sector_coverage_claim: false
+  physical_time_orientation_claim: false
+  conformal_geometry_claim: false
+  physical_scale_claim: false
+  g_eff_claim: false
+  matter_coupling_claim: false
+  einstein_equation_claim: false
+  d7_adequacy_verdict: false
+  b2_activation_or_disposal: false
+  p4_t03_unlock_or_execution: false
+  gate_chair_action: false
+  benchmark_promotion: false
+  physics_promotion: false
+  proof_promotion: false
+  publication: false
+  push: false
+  external_action: false
+  completed_derivation_claim: false
+  global_no_go_claim: false
+  future_source_extension_impossibility_claim: false
+
+conflicts_and_risks:
+  blocking_conflict_count: 0
+  blocking_conflicts: []
+  parent_identity_convergence: "The independent child selection matches the live exact model, route comparison, and future-packet draft on route, packet ID, packet type, next role, and unexecuted status."
+  residual_risks:
+    - risk_id: "RISK-GOAL-FILTERED-ADMISSIBILITY"
+      severity: "high"
+      control: "E_src and U_src must be fixed from source predicates before beta is evaluated."
+    - risk_id: "RISK-MARGIN-TARGET-IMPORT"
+      severity: "high"
+      control: "Any barrier, norm, or scale must have explicit source provenance and later Smuggling Auditor review."
+    - risk_id: "RISK-CONDITIONAL-THEOREM-OVERREAD"
+      severity: "high"
+      control: "The reachability and barrier theorems remain conditional source mathematics, not physical causality or g_eff."
+    - risk_id: "RISK-MULTIPLE-VIABLE-COMPONENTS"
+      severity: "medium"
+      control: "Multiplicity without an independent occurrence selector returns a precise obstruction."
+    - risk_id: "RISK-FROZEN-DIAGNOSTIC-REPLAY"
+      severity: "high"
+      control: "Bridge_OM is post-selection diagnostic-only and cannot define the selected law."
+
+validation:
+  strict_unique_key_yaml: "PASS"
+  yaml_safe_load: "PASS"
+  source_hash_recomputation: "PASS"
+  exact_selector_model: "PASS"
+  exact_selector_model_payload_sha256: "cc42b87a649b3eecd57fca55fae95dec78b37f3fcc3e901349602d5087202845"
+  exact_rational_arithmetic: "PASS"
+  exactly_four_routes: "PASS"
+  exactly_one_selected_route: "PASS"
+  exactly_one_unexecuted_future_packet: "PASS"
+  four_freezes_preserved: "PASS"
+  fourteen_literal_no_delta_rows: "PASS"
+  authority_boundary_scan: "PASS"
+  whitespace_check: "PASS"
+  git_diff_check: "PASS"
+  validation_scope: "Owned child YAML plus read-only governing-source and live-parent checks; no other file was edited."

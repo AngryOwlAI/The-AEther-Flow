@@ -1,0 +1,189 @@
+schema_id: "v22_p4_t02_b2_post_oriented_matroid_refuter_route_comparison_v1"
+task_id: "RT-20260811-002"
+job_id: "AJ-RT-20260811-002-001"
+status: "draft/control"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Choose one materially distinct same-milestone packet after the Bridge_OM selection-robustness obstruction without replaying any of four frozen route families."
+
+fixed_boundary:
+  predecessor_task_id: "RT-20260811-001"
+  obstruction_id: "OB-V22-P4T02-B2-OM-BRIDGE-SELECTION-ROBUSTNESS-001"
+  obstruction_result: "scoped_obstruction"
+  conditional_bridge_mathematics_preserved: true
+  predecessor_source_purity_verdict_preserved: true
+  diagnostic_bridge_use_remains_open: true
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  frozen_route_reopened: false
+  predecessor_rewritten: false
+  selected_packet_executed: false
+
+selector_level_results:
+  representation_occurrence_separation_lemma:
+    result_id: "LEM-V22-P4T02-B2-REPRESENTATION-OCCURRENCE-SEPARATION-001"
+    statement: "Even an injective representation J:X->Y of a source-state set with at least two elements supplies neither a distinguished element of X, an occurrence map into X, nor an admissible transition relation on X."
+    proof: "For X={x0,x1}, J=id_X is compatible with occurrence of x0, occurrence of x1, or no selection, and contains no subset of XxX declaring allowed changes."
+    consequence: "Information retention and explanatory selection are distinct; Route B is downstream of a source occurrence and transition law."
+  reachability_component_robustness_theorem:
+    result_id: "THM-V22-P4T02-B2-REACHABILITY-COMPONENT-BRANCH-ROBUSTNESS-001"
+    setup: "Let E be a source successor relation on X, beta:X->B a total diagnostic, and Reach_E(x) the endpoints of every finite E-path from x, including the length-zero path."
+    statement: "Every finite admitted path from x preserves beta if and only if beta is constant on Reach_E(x); equivalently there is an E-forward-invariant beta-homogeneous set containing x, and Reach_E(x) is the least such carrier whenever robustness holds."
+    proof: "Reach_E(x) is forward invariant by path concatenation. Pathwise branch preservation is exactly constancy on all reachable endpoints. Every forward-invariant set containing x contains Reach_E(x) by induction on path length."
+    rt018_control: "Any admitted path from A(1/n) to A(-1/n) has branch-inhomogeneous reachability and fails robustness; excluding it after diagnostic evaluation is goal-property preload."
+  barrier_propagation_lemma:
+    result_id: "LEM-V22-P4T02-B2-SOURCE-BARRIER-PROPAGATION-001"
+    setup: "Let R_src be a supplied source successor relation on X_src, let b_src:X_src->K take values in an ordered field, and suppose b_src(y)>=lambda b_src(x) for every y in R_src(x), with one fixed lambda>0."
+    statement: "Every finite admitted trajectory beginning at b_src(x_0)>0 remains in the positive domain and satisfies b_src(x_n)>=lambda^n b_src(x_0)>0."
+    proof: "Induct on n. The successor inequality supplies the induction step; positivity follows because lambda and the initial barrier value are positive."
+    epistemic_limit: "The lemma is conditional. It neither derives R_src or b_src nor proves that the current ontology supplies them."
+  occurrence_viability_independence:
+    result_id: "LEM-V22-P4T02-B2-OCCURRENCE-VIABILITY-INDEPENDENCE-001"
+    statement: "A viability law without an occurrence or component selector protects every admitted starting point but selects none; an occurrence selector without a viability law chooses an initial state but does not prevent an admitted trajectory from leaving the domain."
+    proof: "The first structure quantifies conditionally over supplied initial states and contains no existence or uniqueness clause selecting one. The second constrains initial data but contains no universal successor condition. Models can vary either clause while holding the other fixed."
+  diagnostic_nonselection_corollary:
+    result_id: "COR-V22-P4T02-B2-DIAGNOSTIC-NONSELECTION-001"
+    statement: "The frozen Bridge_OM readout may diagnose a selected source trajectory, but pointwise totality and presentation equivariance cannot replace an independently source-provenanced occurrence law or admissible-transition law."
+    proof_basis: "RT018 pointwise-totality nonselection plus the occurrence-viability independence lemma."
+  rational_control_fixture:
+    result_id: "CTRL-V22-P4T02-B2-RATIONAL-BARRIER-FIXTURE-001"
+    setup: "On the RT018 wall coordinate t, take U={t>0}, b(t)=t, and the separately supplied transition t|->q t with q>=1/3."
+    result: "The exact bound b(qt)>=b(t)/3 preserves U, whereas the independently admitted sign-flip t|->-t crosses the wall."
+    interpretation: "This fixture exhibits what a protection law would have to control. It is validation-only proposal data, not a source-law derivation or adoption."
+
+decision_rubric:
+  status: "declared_selector_rubric_not_scientific_evidence"
+  score_range: "0 to 3 per criterion"
+  criteria:
+    - "constructive continuation"
+    - "material distinction from all four freezes"
+    - "addresses occurrence selection"
+    - "addresses admissible variation and stability"
+    - "preserves claim and authority blocks"
+    - "avoids unselected extra structure"
+    - "avoids premature protected authority"
+  exact_model_path: "research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_selector_model.py"
+  exact_model_payload_sha256: "cc42b87a649b3eecd57fca55fae95dec78b37f3fcc3e901349602d5087202845"
+
+routes:
+  - route_id: "A_SOURCE_DYNAMICAL_VIABILITY_ADMISSIBILITY_THEOREM"
+    handoff_route: "source-side selection or admissibility theorem"
+    packet_type: "ontology_law_research_packet"
+    route_label: "ontology-law-research-packet"
+    trigger_classification: "derivation_critical_missing_source_law"
+    next_role_candidate: "ontology-formalizer@0.2.0"
+    constructive_score: 3
+    material_distinctness_score: 3
+    occurrence_selection_score: 3
+    variation_stability_score: 3
+    freeze_preservation_score: 3
+    unselected_structure_penalty: 1
+    protected_authority_penalty: 0
+    declared_weighted_score: 37
+    strengths:
+      - "Directly addresses the two independent RT018 deficits: source occurrence/component selection and admissible finite-variation protection."
+      - "Can be formalized over a full quantitative source-state space without treating Bridge_OM components as selectors."
+      - "Has a decisive theorem-or-obstruction contract: prove a typed source barrier/viability law and occurrence selector, or return the smallest missing primitive or countermodel."
+      - "Requires no protected authority while it remains proposal-only source-extension data."
+    burdens:
+      - "Current ontology does not derive R_src, U_src, b_src, or O_src at the required specificity."
+      - "Any selected admissible domain must be fixed from source predicates before desired physical behavior is evaluated."
+      - "A formal viability theorem remains source-side and does not itself supply physical causality, empirical response, universal matter coupling, or g_eff."
+    freeze_independence:
+      shared_tau: "No common dual witness or shared-tau selector is used."
+      repaired_quotient: "No Q_ray, midpoint plane, restricted quotient, or quotient-descent repair is used."
+      common_character: "No character, anchor, cochain, or holonomy-protection construction is used."
+      oriented_matroid_bridge: "Bridge_OM is optional diagnostic output only and supplies neither occurrence nor transition law."
+    disposition: "selected_not_executed"
+    selection_basis: "It is the only route that is constructive, materially distinct, and directly targets both source occurrence and admissible-variation protection through one fail-closed theorem-or-obstruction packet."
+
+  - route_id: "B_REALIZATION_SENSITIVE_MARGIN_BRIDGE"
+    handoff_route: "realization-sensitive bridge"
+    packet_type: "source_extension_candidate"
+    route_label: "ordinary-research-packet"
+    next_role_candidate: "candidate-constructor@0.2.0"
+    constructive_score: 3
+    material_distinctness_score: 3
+    occurrence_selection_score: 1
+    variation_stability_score: 2
+    freeze_preservation_score: 3
+    unselected_structure_penalty: 3
+    protected_authority_penalty: 0
+    declared_weighted_score: 25
+    strengths:
+      - "Retaining the full realization can distinguish projective moduli forgotten by named Bridge_OM components."
+      - "A declared quantitative margin could measure distance from a supplied wall."
+    burdens:
+      - "No independently selected source norm, topology, quantitative margin, or physical interpretation is currently derived."
+      - "A margin classifies a supplied realization but still does not select which realization occurs."
+      - "Choosing a norm or margin because it protects the desired branch risks goal preload and new target-shaped structure."
+    disposition: "not_selected"
+    rejection_basis: "It adds quantitative structure without first solving occurrence selection, and its norm/margin provenance burden is higher than the target-free viability formalization route."
+
+  - route_id: "C_SOURCE_SIDE_IRRELEVANCE_THEOREM"
+    handoff_route: "source-side irrelevance theorem"
+    packet_type: "source_side_irrelevance_theorem"
+    route_label: "ordinary-research-packet"
+    next_role_candidate: "ontology-formalizer@0.2.0"
+    constructive_score: 0
+    material_distinctness_score: 3
+    occurrence_selection_score: 0
+    variation_stability_score: 1
+    freeze_preservation_score: 3
+    unselected_structure_penalty: 1
+    protected_authority_penalty: 0
+    declared_weighted_score: 15
+    strengths:
+      - "Could delimit a broad class of source-side classifiers or bridges that cannot affect physical interpretation."
+      - "Could produce a useful scoped theorem if its bridge class and consequence were independently justified."
+    burdens:
+      - "The current line already has the narrower RT018 nonselection obstruction for the unchanged bridge."
+      - "A broad bridge class is not presently delimited by source principles, creating a risk of proving irrelevance only for an arbitrarily chosen class."
+      - "It does not construct the available source-side occurrence/admissibility candidate."
+    disposition: "not_selected"
+    rejection_basis: "A lawful constructive theorem-or-obstruction packet is available and more directly addresses the active missing-source-law burden."
+
+  - route_id: "D_PROTECTED_HUMAN_GATED_ONTOLOGY_STOP"
+    handoff_route: "protected human-gated ontology stop"
+    packet_type: "human_gated_ontology_change_required"
+    route_label: "human-gated"
+    next_role_candidate: "protected human authority"
+    constructive_score: 0
+    material_distinctness_score: 3
+    occurrence_selection_score: 0
+    variation_stability_score: 0
+    freeze_preservation_score: 3
+    unselected_structure_penalty: 0
+    protected_authority_penalty: 3
+    declared_weighted_score: 6
+    strengths:
+      - "Would preserve authority correctly if every honest continuation required canonical ontology adoption or modification."
+    burdens:
+      - "Produces no new mathematical theorem, candidate, witness, or obstruction."
+      - "Would mistake absent current derivation for exhaustion of bounded proposal-only research."
+    disposition: "not_selected"
+    rejection_basis: "A target-free, proposal-only formalization-or-obstruction packet remains lawful and needs no protected ontology authority, so a human-gated stop is premature."
+
+comparison_cardinality:
+  exact_route_count: 4
+  selected_route_count: 1
+  rejected_route_count: 3
+  selected_route_id: "A_SOURCE_DYNAMICAL_VIABILITY_ADMISSIBILITY_THEOREM"
+
+selection:
+  selected_route_id: "A_SOURCE_DYNAMICAL_VIABILITY_ADMISSIBILITY_THEOREM"
+  packet_id: "PKT-V22-P4T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION-V1"
+  candidate_id: "CAND-V22-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1"
+  work_item_id: "P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION"
+  selected_next_packet_type: "ontology_law_research_packet"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  source_extension_category: "new_ontology_primitive_candidate"
+  source_extension_import_classification: "target_free_explicit_proposal_only_source_law_pending_smuggling_audit"
+  adoption_status: "blocked_adoption_open_continuation"
+  selected_packet_executed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

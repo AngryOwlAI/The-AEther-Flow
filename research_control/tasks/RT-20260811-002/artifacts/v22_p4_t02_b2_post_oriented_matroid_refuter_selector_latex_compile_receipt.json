@@ -1,0 +1,42 @@
+{
+  "schema_id": "v22_p4_t02_b2_post_oriented_matroid_refuter_selector_latex_compile_receipt_v1",
+  "task_id": "RT-20260811-002",
+  "job_id": "AJ-RT-20260811-002-001",
+  "created_at": "2026-08-11T09:04:10Z",
+  "status": "PASS",
+  "source_path": "research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_route_selection_v1.tex",
+  "source_sha256": "03c20bbf44168a197c9a1137df24eb6164114709babd4f4d8002c70ede4b1f63",
+  "compiler": "bundled Tectonic 0.16.9",
+  "compiler_skill": "latex-compile",
+  "command": "python3 scripts/compile_latex.py /Volumes/P-SSD/AngryOwl/The-AEther-Flow/research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_route_selection_v1.tex --output-directory /Volumes/P-SSD/AngryOwl/The-AEther-Flow/.local/rt019_selector_latex --json",
+  "exit_code": 0,
+  "rerun_completed": true,
+  "warnings": [
+    "inputenc ignored by the UTF-8 engine on the first pass",
+    "hyperref page labels and outline requested one automatic rerun"
+  ],
+  "errors": [],
+  "generated_pdf_path": ".local/rt019_selector_latex/v22_p4_t02_b2_post_oriented_matroid_refuter_route_selection_v1.pdf",
+  "generated_pdf_sha256": "3466b2849e0ca651f5c50251f69327e15a301719c293ae33217cb290297e7bbc",
+  "generated_pdf_tracked": false,
+  "pdf_required_by_registry": false,
+  "page_count": 5,
+  "page_size": "612 x 792 pt letter",
+  "file_size_bytes": 71798,
+  "render_command": "pdftoppm -png -r 140 .local/rt019_selector_latex/v22_p4_t02_b2_post_oriented_matroid_refuter_route_selection_v1.pdf tmp/pdfs/rt019-selector/final-page",
+  "rendered_page_count": 5,
+  "visual_inspection": {
+    "status": "PASS",
+    "pages_inspected": [1, 2, 3, 4, 5],
+    "clipped_text": false,
+    "overlapping_text": false,
+    "broken_tables": false,
+    "unreadable_glyphs": false,
+    "margin_defects": false,
+    "page_numbering_consistent": true,
+    "section_hierarchy_consistent": true,
+    "table_headers_repeat_after_page_break": true,
+    "notes": "All five final rendered pages were inspected after the representation-occurrence lemma was fused. The long route-comparison and Distance-to-GR tables break cleanly with repeated headers, equations remain legible, and no visual defect was found."
+  },
+  "authority_note": "Compilation and rendering establish document integrity only. They do not establish theorem truth, source-law derivation, physical interpretation, adoption, or Distance-to-GR progress."
+}
