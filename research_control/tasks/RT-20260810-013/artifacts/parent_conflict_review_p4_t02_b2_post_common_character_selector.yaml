@@ -1,0 +1,61 @@
+schema_id: "parent_conflict_review_v1"
+task_id: "RT-20260810-013"
+job_id: "AJ-RT-20260810-013-001"
+status: "resolved"
+reviewed_child_outputs:
+  - execution_unit_id: "child_phys_math"
+    path: "research_control/tasks/RT-20260810-013/artifacts/child_phys_math_p4_t02_b2_post_common_character_selector.yaml"
+    final_sha256: "172575fd5ea318afb3f63ebf7e2bc012c57b7da20bf80f4e4a5d7c3c3a116e2c"
+    final_selection: "B_NON_CHARACTER_ORIENTED_MATROID_BRIDGE"
+    final_packet_id: "PKT-V22-P4T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+  - execution_unit_id: "child_phys_phil"
+    path: "research_control/tasks/RT-20260810-013/artifacts/child_phys_phil_p4_t02_b2_post_common_character_selector.yaml"
+    final_sha256: "604ab6a73125e58b3f0118c42612578f7b4641ca091b4a5b68877f2c87226081"
+    final_selection: "B_NON_CHARACTER_ORIENTED_MATROID_BRIDGE"
+    final_packet_id: "PKT-V22-P4T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+initial_consensus:
+  route: "Both children independently selected the non-character oriented-matroid covector/circuit/refinement bridge."
+  role: "Both children selected candidate-constructor@0.2.0."
+  execution_status: "Both children required selected_not_executed."
+  freeze_status: "Both children preserved all three local freezes unchanged."
+initial_conflicts:
+  - conflict_id: "CR-RT013-001-PACKET-IDENTITY-ALIAS"
+    blocking: true
+    physicist_mathematician_position: "Use PKT-V22-P4T02-B2-NON-CHARACTER-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1."
+    physicist_philosopher_position: "Reuse the retained RT009 identity PKT-V22-P4T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1."
+    exact_issue: "Whether the descriptive non-character qualifier required a new packet identity despite an identical formal contract."
+resolution_rounds:
+  - round: 1
+    instruction: "Inspect the peer output and RT009 retained packet. Reuse an already declared unexecuted identity when the route, formal object, proof obligations, failures, role, and authority boundary are the same; carry non-character in descriptive metadata instead of forking an alias."
+    mathematician_revision: "Concurred, replaced the alias with the retained RT009 packet identity, preserved non-character route metadata, and changed no mathematical or authority conclusion."
+    philosopher_revision: "Confirmed that the retained identity controls and recorded the peer spelling as a descriptive alias only."
+    controlling_discriminator: "Identity continuity outranks stylistic renaming when no substantive packet-contract difference exists."
+    result: "Exact packet identity, route, role, candidate boundary, and unexecuted status now agree."
+resolved_findings:
+  packet_identity:
+    packet_id: "PKT-V22-P4T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+    selected_next_packet_type: "source_extension_candidate"
+    next_role_family: "candidate-constructor@0.2.0"
+    status: "selected_not_executed"
+    identity_basis: "Exact retained RT009 future identity with an unchanged full covector/circuit/total-certificate/support/refinement/wall-crossing contract."
+  route_materiality:
+    status: "materially_distinct"
+    basis: "The full configuration object forgets fine Q_ray magnitude and holonomy data, enumerates all realized covectors and minimal positive circuits, and supplies total and refinement structure rather than one RT005 witness."
+  source_extension_status:
+    status_label: "draft/control"
+    candidate_status: "proposal-only"
+    material_class: "source-extension data"
+    adoption_status: "blocked_adoption_open_continuation"
+shared_consensus:
+  - "Route A lacks an independently delimited source bridge category and is less constructive."
+  - "Route B is total, falsifiable, lower-ontology, and independent of all three freezes only under the full-package acceptance guard."
+  - "Route C lacks an independently supplied source root and risks goal-directed repair of the common-character freeze."
+  - "Route D is premature because Route B needs no protected authority."
+  - "Formal covectors and circuits have no physical causal or empirical response semantics."
+  - "D7 is unevaluated, B2 inactive, P4-T03 locked, and Distance-to-GR unchanged."
+unresolved_conflicts: []
+blocking_conflict_count: 0
+resolution_round_count: 1
+maximum_resolution_rounds: 2
+selected_packet_executed: false
+claim_boundary_preserved: true

@@ -1,0 +1,150 @@
+schema_id: "v22_p4_t02_b2_post_common_character_route_comparison_v1"
+task_id: "RT-20260810-013"
+job_id: "AJ-RT-20260810-013-001"
+status: "draft/control"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Choose one materially distinct same-milestone packet after the common-character obstruction and local freeze without replaying any frozen family."
+fixed_boundary:
+  obstruction_id: "OB-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION-001"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  conditional_predecessor_mathematics_preserved: true
+  source_pure_as_written_verdict_preserved: true
+  predecessor_rewritten: false
+  selected_packet_executed: false
+
+selector_level_results:
+  strict_finite_alternative:
+    result_id: "THM-V22-P4T02-B2-STRICT-FINITE-ALTERNATIVE-001"
+    setup: "Let S be finite, V a finite-dimensional real vector space, and v_s nonzero oriented vectors fixed before evaluation."
+    statement: "Exactly one of the following holds: there is k in V* with k(v_s)>0 for every s, or there is a nonzero alpha in R_{>=0}^S with sum_s alpha_s v_s=0."
+    proof: "If both held, applying k to the nonnegative dependence would give a strictly positive sum equal to zero. If the strict-positive system is infeasible, finite-dimensional strict separation gives a nonzero nonnegative vector in the kernel of the sector-vector map."
+    certificate_symmetry: "Both the feasible witness and the obstructing dependence are decisive outputs from the same fixed input."
+  minimal_positive_circuit_bound:
+    result_id: "LEM-V22-P4T02-B2-POSITIVE-CIRCUIT-SUPPORT-BOUND-001"
+    statement: "A support-minimal nonzero nonnegative dependence has strictly positive coefficients on its support, one-dimensional kernel on that support, and support size at most rank(V_S)+1; hence at most five when dim(V)=4."
+    proof: "A zero coefficient could be removed. If the restricted kernel had dimension above one, a signed kernel perturbation could cancel one positive coefficient while retaining nonnegativity, contradicting support minimality. Rank-nullity then gives |C|=rank(V_C)+1."
+  presentation_invariance:
+    result_id: "LEM-V22-P4T02-B2-ORIENTED-CONFIGURATION-INVARIANCE-001"
+    statement: "Realized sign covectors and positive-circuit supports are invariant under source-linear isomorphisms, independent positive sector rescaling, and relabeling."
+    coefficient_rule: "Under v_s -> lambda_s v_s with lambda_s>0, a circuit coefficient alpha_s transforms to alpha_s/lambda_s."
+    orientation_limit: "Negative rescaling is a reorientation and is not an allowed invariance unless independently source-authorized."
+  refinement_relations:
+    result_id: "LEM-V22-P4T02-B2-FINITE-SECTOR-REFINEMENT-001"
+    statement: "For S subseteq T in one declared configuration, realized covectors restrict surjectively from T to S, Gamma_T is contained in Gamma_S, and every positive circuit supported in S persists after adjoining sectors."
+    consequence: "Adding sectors can destroy common feasibility but cannot erase an already supported positive-circuit obstruction."
+  preload_neutrality_criterion:
+    result_id: "CRIT-V22-P4T02-B2-TOTAL-ALTERNATIVE-PRELOAD-NEUTRALITY-001"
+    statement: "A total two-certificate classifier avoids success preload only when its sector set, vector orientations, and provenance are fixed before evaluation and its obstruction branch is accepted as a terminal result."
+    failure_condition: "Choosing inputs, orientations, or refinements because they yield the all-plus branch invalidates the criterion."
+
+routes:
+  - route_id: "A_SOURCE_SIDE_IRRELEVANCE_THEOREM"
+    handoff_route: "source-side irrelevance theorem"
+    packet_type: "source_side_irrelevance_theorem"
+    next_role_candidate: "ontology-formalizer@0.2.0"
+    constructive_payload_score: 2
+    material_distinctness_score: 4
+    milestone_relevance_score: 2
+    source_purity_score: 3
+    executable_contract_score: 3
+    penalty_score: 2
+    total_score: 12
+    strengths:
+      - "Could delimit exactly which bridge classes forget magnitude or normalization."
+      - "Can remain independent of every frozen object when the bridge category is source-justified."
+    burdens:
+      - "Current ontology supplies no complete class of lawful bridge functionals."
+      - "Declaring independent positive rescaling to be physical gauge would assume the intended conclusion."
+      - "A successful theorem removes information but constructs no finite compatibility bridge."
+    disposition: "not_selected"
+    rejection_basis: "A lawful total constructive route exists and returns a concrete compatibility witness or bounded obstruction without first choosing a broad bridge category."
+
+  - route_id: "B_NON_CHARACTER_ORIENTED_MATROID_BRIDGE"
+    handoff_route: "non-character bridge-facing oriented-matroid covector/circuit candidate"
+    packet_type: "source_extension_candidate"
+    next_role_candidate: "candidate-constructor@0.2.0"
+    constructive_payload_score: 5
+    material_distinctness_score: 5
+    milestone_relevance_score: 4
+    source_purity_score: 4
+    executable_contract_score: 5
+    penalty_score: 1
+    total_score: 22
+    strengths:
+      - "Returns a total strict-feasible-or-positive-circuit certificate from one fixed finite input."
+      - "Requires no common normalization, Q_ray, common character, anchor, cochain, or holonomy law."
+      - "Provides the full covector set, all minimal positive circuits, a rank support bound, presentation invariance, refinement maps, and wall-crossing boundaries."
+      - "Needs no protected authority because construction remains proposal-only source-extension data."
+    burdens:
+      - "Current ontology does not derive the sector vectors, their orientations, sector coverage, or their provenance."
+      - "Finite sign compatibility is not physical causality, universal propagation, a quadratic cone, or g_eff."
+      - "A one-witness Gordan restatement would replay RT005 and fail the selected packet contract."
+    freeze_independence:
+      shared_tau: "No dual witness is adopted; the complete realized covector set is enumerated and either certificate branch is accepted."
+      repaired_quotient: "No Q_ray, midpoint plane, six-cell quotient, or restricted variation class is used."
+      common_character: "No character, line descent, cochain, anchor, holonomy, or protection law is used."
+    disposition: "selected_not_executed"
+    selection_basis: "It is the only route that is simultaneously constructive, total, materially independent of all three freezes, target-free at the declared boundary, falsifiable, and executable without adoption authority."
+
+  - route_id: "C_INDEPENDENT_HOLONOMY_PROTECTION_LAW"
+    handoff_route: "independently provenanced holonomy-protection law"
+    packet_type: "ontology_law_research_packet"
+    next_role_candidate: "ontology-formalizer@0.2.0"
+    constructive_payload_score: 3
+    material_distinctness_score: 1
+    milestone_relevance_score: 4
+    source_purity_score: 1
+    executable_contract_score: 2
+    penalty_score: 5
+    total_score: 6
+    strengths:
+      - "A genuinely independent conservation or symmetry law could later constrain holonomy."
+    burdens:
+      - "No independent source root is presently supplied."
+      - "Selecting a law because it excludes the exact RT012 perturbation or collapse branch risks goal-directed repair of the frozen candidate."
+      - "Many inequivalent laws could force the desired formal outcome, so current epistemic discrimination is low."
+    disposition: "not_selected"
+    rejection_basis: "Material independence from the common-character freeze and independently fixed source provenance are not presently demonstrated."
+
+  - route_id: "D_PROTECTED_HUMAN_GATED_STOP"
+    handoff_route: "protected human-gated stop"
+    packet_type: "human_gated_ontology_change_required"
+    next_role_candidate: "human_gate_chair"
+    constructive_payload_score: 0
+    material_distinctness_score: 4
+    milestone_relevance_score: 0
+    source_purity_score: 5
+    executable_contract_score: 1
+    penalty_score: 4
+    total_score: 6
+    strengths:
+      - "Would accurately preserve protected authority if no ordinary continuation remained."
+    burdens:
+      - "Produces no mathematical witness, obstruction, or bridge-facing evidence."
+      - "Would confuse present underdetermination with exhaustion of lawful proposal-only research."
+    disposition: "not_selected"
+    rejection_basis: "Route B remains an honest, materially distinct, non-promotional packet that needs no canonical ontology authority, so a protected stop is premature."
+
+comparison_cardinality:
+  exact_route_count: 4
+  selected_route_count: 1
+  rejected_route_count: 3
+  selected_route_id: "B_NON_CHARACTER_ORIENTED_MATROID_BRIDGE"
+
+selection:
+  selected_route_id: "B_NON_CHARACTER_ORIENTED_MATROID_BRIDGE"
+  packet_id: "PKT-V22-P4T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+  candidate_id: "CAND-V22-B2-NONCHARACTER-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+  work_item_id: "P4-T02-B2-NONCHARACTER-ORIENTED-MATROID-BRIDGE-CONSTRUCTION"
+  selected_next_packet_type: "source_extension_candidate"
+  selected_next_role_family: "candidate-constructor@0.2.0"
+  route_label: "ordinary-research-packet"
+  source_extension_category: "source_extension_candidate"
+  source_extension_import_classification: "conservative_oriented_matroid_mathematics_over_new_proposal_only_sector_inputs_pending_audit"
+  adoption_status: "blocked_adoption_open_continuation"
+  selected_packet_executed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false

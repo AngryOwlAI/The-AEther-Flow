@@ -208,6 +208,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-CONSTRUCTION-V1` `research_control/tasks/RT-20260809-023/artifacts/parent_fusion_notes_p4_t02_b2_descriptor_construction.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POPULATED-INSTANCE-AUDIT-V1` `research_control/tasks/RT-20260809-026/artifacts/parent_fusion_notes_p4_t02_b2_populated_instance_audit.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-POST-COMMON-CHARACTER-SELECTOR-V1` `research_control/tasks/RT-20260810-013/artifacts/parent_fusion_notes_p4_t02_b2_post_common_character_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-LINE-LOCK-SELECTION-V1` `research_control/tasks/RT-20260810-002/artifacts/parent_fusion_notes_p4_t02_b2_post_line_lock_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-REFUTER-SELECTION-V1` `research_control/tasks/RT-20260810-009/artifacts/parent_fusion_notes_p4_t02_b2_post_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/parent_fusion_notes_p4_t02_b2_selector.md`
@@ -907,6 +908,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-CONSTRUCTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-construction-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POPULATED-INSTANCE-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-populated-instance-audit-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-COMMON-CHARACTER-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-common-character-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-LINE-LOCK-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-line-lock-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-REFUTER-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-refuter-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-selection-v1.md`
@@ -1400,6 +1402,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1` `wiki/tex/tex-v22-p4-t02-b2-equipped-chain-descriptor-attempt-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-fallback-descriptor-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-populated-instance-smuggling-audit-v1.md`
+- `WIKI-TEX-V22-P4-T02-B2-POST-COMMON-CHARACTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-common-character-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-line-lock-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-REFUTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-refuter-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `wiki/tex/tex-v22-p4-t02-b2-source-intrinsic-interface-repair-v1.md`
@@ -2416,6 +2419,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1` `research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex`
 - `TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_fallback_descriptor_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.tex`
+- `TEX-V22-P4-T02-B2-POST-COMMON-CHARACTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-013/artifacts/v22_p4_t02_b2_post_common_character_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_post_line_lock_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-009/artifacts/v22_p4_t02_b2_post_refuter_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_v1.tex`

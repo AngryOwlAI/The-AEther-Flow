@@ -1,0 +1,213 @@
+schema_id: "v22_p4_t02_b2_post_common_character_selected_future_packet_v1"
+task_id: "RT-20260810-013"
+job_id: "AJ-RT-20260810-013-001"
+packet_id: "PKT-V22-P4T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+candidate_id: "CAND-V22-B2-NONCHARACTER-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+work_item_id: "P4-T02-B2-NONCHARACTER-ORIENTED-MATROID-BRIDGE-CONSTRUCTION"
+strategy_id: "construct_v22_p4_t02_b2_noncharacter_oriented_matroid_covector_circuit_bridge_v1"
+task_type: "v22_p4_t02_b2_noncharacter_oriented_matroid_bridge_construction_or_obstruction"
+status: "selected_not_executed"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+selected_next_packet_type: "source_extension_candidate"
+route_label: "ordinary-research-packet"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Determine whether a finite proposal-only source-sector vector configuration supports a target-free, normalization-free, refinement-aware common-admissibility bridge or carries a bounded positive-circuit obstruction, without reconstructing any frozen route."
+adoption_status: "blocked_adoption_open_continuation"
+next_role_family: "candidate-constructor@0.2.0"
+supporting_future_perspectives:
+  - "smuggling-auditor@0.2.0 after a constructed candidate"
+  - "refuter@0.2.0 after a source-pure audit"
+requires_human_gate: false
+human_gate_reason: "One proposal-only finite construction-or-obstruction packet is unprotected. Canonical ontology adoption, physical interpretation, B2 disposition, and Gate action remain human-gated or separately controlled."
+execution_authorized_in_rt013: false
+selected_packet_executed: false
+
+source_side_definition: "From one finite, predeclared, provenance-bound configuration of nonzero oriented source-sector rays, construct the complete realized sign-covector set, all minimal positive circuits, a total strict-feasible-or-obstructed certificate, presentation invariances, finite-refinement relations, and finite-path wall-crossing limits."
+
+formal_domains:
+  declared_sector_domain: "A finite nonempty sector set S_decl; no completeness claim over P7 matter sectors."
+  source_vector_domain: "A finite-dimensional real source response space V_src with 1 <= rank(V_src)=r <= 4 and nonzero oriented rays [v_s]_+ fixed before evaluation."
+  representative_domain: "One positive representative v_s of each oriented ray, with independent positive representative changes declared as presentation changes only for this proposed bridge."
+  dual_domain: "The algebraic dual V_src^*, used to enumerate every realized sign pattern; no dual element is adopted as a common selector."
+  covector_domain: "The finite sign cube {-,0,+}^{S_decl} and its realized subset Cstar(A)."
+  circuit_domain: "Support-minimal nonzero nonnegative kernel vectors of the sector-vector map A:R^{S_decl}->V_src."
+  refinement_domain: "Finite inclusions i:S->T preserving each old oriented ray up to positive rescaling while adding independently provenance-bound sectors."
+  variation_domain: "Continuous finite paths of valid configurations, stratified by zero-vector, rank, and relevant determinant-minor discriminants."
+  exact_input_class: "Finite rational or algebraic data, or another explicitly declared exact representation with decidable sign and rank predicates."
+  excluded_inputs:
+    - "shared tau, a common tangent line, or one preselected all-positive dual witness"
+    - "Q_ray, midpoint relation, repaired rank-two plane, six-cell quotient, or response-preserving variation restriction"
+    - "G_src, positive character, common line, cochain, anchor, holonomy, or holonomy-protection law"
+    - "target atlas, metric, tetrad, coframe, desired cone, physical normalization, empirical calibration, benchmark answer, or workflow status"
+
+formal_objects:
+  - object_id: "ORIENTED-SECTOR-CONFIGURATION"
+    notation: "A:R^{S_decl}->V_src, A(e_s)=v_s"
+    definition: "A finite tuple of nonzero oriented proposal-only source rays with exact representatives and explicit provenance."
+  - object_id: "REALIZED-SIGN-COVECTORS"
+    notation: "Cstar(A)={sgn(A^*k):k in V_src^*}"
+    definition: "The complete realized sign-covector set, including zero evaluations."
+  - object_id: "STRICT-POSITIVE-CHAMBER"
+    notation: "Gamma(A)={k in V_src^*:k(v_s)>0 for all s}"
+    definition: "The open common-positive feasibility chamber; nonemptiness is only formal joint admissibility."
+  - object_id: "MINIMAL-POSITIVE-CIRCUITS"
+    notation: "Cir_plus(A)"
+    definition: "Every inclusion-minimal support C admitting alpha_C>0 with A_C alpha_C=0."
+  - object_id: "TOTAL-ALTERNATIVE-CERTIFICATE"
+    notation: "Tot(A)"
+    definition: "A tagged result returning exactly Feasible(k) or Obstructed(C,alpha), with both branches accepted as terminal candidate-construction evidence."
+  - object_id: "PRESENTATION-QUOTIENT"
+    notation: "Conf_plus(S,V)"
+    definition: "Oriented configurations modulo independent positive column scaling, source-linear isomorphism, and sector relabeling, without claiming these are physical gauge relations."
+  - object_id: "REFINEMENT-PACKAGE"
+    notation: "Ref(A_S,A_T)"
+    definition: "Covector restriction, positive-chamber inclusion, and persistence of already supported positive circuits."
+  - object_id: "VARIATION-STRATIFICATION"
+    notation: "Strat(A(t))"
+    definition: "Wall-free configuration intervals and their ordered zero, rank, or determinant-minor crossing records."
+
+formal_maps:
+  - map_id: "SECTOR-VECTOR-MAP"
+    signature: "A:R^{S_decl}->V_src"
+    obligation: "Type every column, orientation, exact representation, and source provenance before evaluation."
+  - map_id: "SIGN-EVALUATION"
+    signature: "sigma_A:V_src^*->{-,0,+}^{S_decl}, k|->sgn(A^*k)"
+    obligation: "Construct its entire image and prove dual-presentation independence."
+  - map_id: "TOTAL-ALTERNATIVE"
+    signature: "Alt_A:Conf_plus(S,V)->Feasible(k) disjoint_union Obstructed(C,alpha)"
+    obligation: "Prove strict finite totality, exclusivity, exact certificate verification, and minimal-support reduction."
+  - map_id: "COVECTOR-RESTRICTION"
+    signature: "rho_i:Cstar(A_T)->Cstar(A_S)"
+    obligation: "Prove coordinate restriction is well-defined, surjective, and compositional for nested inclusions."
+  - map_id: "FEASIBILITY-INCLUSION"
+    signature: "inc_i:Gamma(A_T)->Gamma(A_S)"
+    obligation: "Prove adding sectors can shrink but cannot enlarge the strict common-positive domain."
+  - map_id: "CIRCUIT-PERSISTENCE"
+    signature: "kappa_i:Cir_plus(A_S)->Cir_plus(A_T) on supports contained in S"
+    obligation: "Prove a support-minimal positive dependence on old columns remains the same supported circuit after adjoining sectors."
+  - map_id: "PRESENTATION-TRANSPORT"
+    signature: "Trans_{T,D,P}:A|->T A D P^{-1}"
+    obligation: "Prove covector, chamber, circuit, rank, coefficient, branch, and label transport for T in GL(V), positive diagonal D, and sector permutation P."
+  - map_id: "VARIATION-WALL-RECORD"
+    signature: "Wall:path(A(t))->ordered discriminant-crossing record"
+    obligation: "Identify all combinatorial change boundaries and claim stability only on wall-free intervals of fixed exact type."
+  - map_id: "BRIDGE-FACING-CLASSIFIER"
+    signature: "Bridge_OM(A)=(Cstar(A),Cir_plus(A),Tot(A),Ref(A),Strat(A))"
+    obligation: "Name this exact candidate map in bridge_attempt_status or identify the smallest missing primitive that makes it ill-typed."
+
+proof_obligations:
+  - obligation_id: "PO-01-INPUT-TYPING-AND-PROVENANCE"
+    statement: "Type S_decl, V_src, A, every nonzero oriented ray, exact representation, and provenance before computing any output."
+  - obligation_id: "PO-02-COMPLETE-COVECTOR-CONSTRUCTION"
+    statement: "Construct all of Cstar(A), not one preferred sign vector or only the all-plus cell."
+  - obligation_id: "PO-03-COMPLETE-POSITIVE-CIRCUIT-CONSTRUCTION"
+    statement: "Construct every inclusion-minimal positive circuit and verify its coefficients and minimal support."
+  - obligation_id: "PO-04-STRICT-GORDAN-TOTALITY"
+    statement: "Prove exactly one of Gamma(A) nonempty or ker(A) intersect R_{>=0}^{S_decl} containing a nonzero vector, and minimize the latter to a positive circuit."
+  - obligation_id: "PO-05-CIRCUIT-RANK-KERNEL-AND-SUPPORT"
+    statement: "For each positive circuit C, prove rank(A_C)=|C|-1, dim ker(A_C)=1, uniform coefficient-sign ray, and |C|<=r+1<=5."
+  - obligation_id: "PO-06-PRESENTATION-INVARIANCE"
+    statement: "Prove invariance under source-linear isomorphisms, independent positive sector scaling, and relabeling, while treating negative reorientation as new source data."
+  - obligation_id: "PO-07-REFINEMENT-FUNCTORIALITY"
+    statement: "Prove covector restriction surjectivity and composition, Gamma(A_T) subseteq Gamma(A_S), and persistence of supported positive circuits."
+  - obligation_id: "PO-08-FINITE-VARIATION-BOUNDARY"
+    statement: "Prove stratumwise stability, enumerate wall crossings, and avoid arbitrary-variation or continuum robustness claims."
+  - obligation_id: "PO-09-TOTAL-ALTERNATIVE-PRELOAD-NEUTRALITY"
+    statement: "Freeze sectors, orientations, and provenance before evaluation and accept either certificate branch without success filtering."
+  - obligation_id: "PO-10-THREE-FREEZE-INDEPENDENCE"
+    statement: "Prove fine positive-ray magnitude and holonomy data lie in forgotten fibers and import no object from any frozen family."
+  - obligation_id: "PO-11-MATERIAL-DISTINCTNESS"
+    statement: "Deliver the full covector, all-circuit, bounded-support, total-certificate, presentation, refinement, and wall-crossing package; a bare RT005 Gordan witness is replay."
+  - obligation_id: "PO-12-SOURCE-PURITY"
+    statement: "Exclude target geometry, desired positivity, empirical calibration, benchmark behavior, workflow authority, and protected status from every input and choice."
+  - obligation_id: "PO-13-FINITE-SECTOR-AND-SEMANTIC-SCOPE"
+    statement: "Keep finite formal compatibility distinct from all-P7 universality, physical causality, empirical response, a quadratic cone, conformal geometry, scale, and g_eff."
+  - obligation_id: "PO-14-DECISIVE-BRIDGE-OR-FAIL"
+    statement: "Return exactly one allowed Candidate Constructor result with bridge_attempt_status, no-fog explanation, and all downstream claim blocks."
+
+failure_branches:
+  - branch_id: "FB-01-INVALID-OR-UNPROVENANCED-INPUT"
+    exact_failure: "A sector vector is zero, orientation or exact representation is absent, provenance is opaque, or finite sector scope is undefined."
+  - branch_id: "FB-02-TARGET-OR-GOAL-SELECTED-INPUT"
+    exact_failure: "Vectors, orientations, sectors, refinements, or a dual witness are selected using desired positivity, target geometry, empirical calibration, or benchmark behavior."
+  - branch_id: "FB-03-INCOMPLETE-RT005-REPLAY"
+    exact_failure: "The packet returns only one common-envelope witness or the bare strict alternative and omits the full covector, all-circuit, support, presentation, refinement, or wall-crossing package."
+  - branch_id: "FB-04-TOTAL-ALTERNATIVE-DEFECT"
+    exact_failure: "A valid input receives neither certificate, both exclusive branches are asserted, or a returned certificate fails exact verification."
+  - branch_id: "FB-05-CIRCUIT-MINIMALITY-OR-SUPPORT-DEFECT"
+    exact_failure: "A circuit is not support-minimal, coefficients are not strictly positive on support, rank or kernel claims fail, or support exceeds r+1."
+  - branch_id: "FB-06-PRESENTATION-TRANSPORT-DEFECT"
+    exact_failure: "Bridge outputs depend on positive representatives, source basis, or sector labels beyond the declared natural transport."
+  - branch_id: "FB-07-REFINEMENT-DEFECT"
+    exact_failure: "Restriction, feasibility inclusion, nested composition, or persistence of an old supported circuit fails."
+  - branch_id: "FB-08-VARIATION-OVERREAD"
+    exact_failure: "A discriminant wall is ignored or wall-free stability is reported as arbitrary finite-variation or continuum robustness."
+  - branch_id: "FB-09-FROZEN-ROUTE-REPLAY"
+    exact_failure: "The construction imports shared tau, Q_ray, midpoint/rank repair data, common character, anchor, cochain, holonomy, or a protection law."
+  - branch_id: "FB-10-PHYSICAL-EMPIRICAL-OR-UNIVERSAL-OVERREAD"
+    exact_failure: "Formal sign compatibility is called physical causality, calibrated response, all-sector universality, a unique quadratic cone, conformal geometry, or g_eff."
+  - branch_id: "FB-11-EXACT-COMPUTATION-DEFECT"
+    exact_failure: "The chosen real-number representation cannot decide a required sign, rank, minimality, or wall event and no precise representation obstruction is returned."
+
+bridge_attempt_status_contract:
+  required: true
+  candidate_map: "Bridge_OM(A)=(Cstar(A),Cir_plus(A),Tot(A),Ref(A),Strat(A))"
+  success_status: "candidate_map_constructed_proposal_only_pending_smuggling_audit"
+  failure_status: "smallest_missing_input_or_primitive_named_with_precise_obstruction"
+  allowed_result_types:
+    - "constructed_candidate"
+    - "minimal_countermodel"
+    - "precise_obstruction"
+    - "invalid_under_claim_boundary"
+  no_fog_check_required: true
+  obligations_only_completion_allowed: false
+
+required_future_disposition:
+  after_constructed_candidate: "one separately admitted source_extension_smuggling_audit under smuggling-auditor@0.2.0"
+  after_source_pure_audit: "one separately admitted source_extension_refuter_stress under refuter@0.2.0"
+  after_precise_obstruction: "one separately admitted theoretical selector or local-freeze review tied to the exact failed premise"
+  automatic_adoption: false
+  automatic_b2_disposition: false
+  execution_in_rt013: false
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  category: "source_extension_candidate"
+  classification: "conservative_oriented_matroid_mathematics_over_new_proposal_only_sector_inputs_pending_smuggling_audit"
+  relation_to_current_ontology: "Current ontology derives neither the declared sector-ray configuration and its coverage/provenance nor the use of the total oriented-matroid object as a bridge-facing classifier."
+  conservative_mathematical_layer:
+    - "dual evaluation and realized sign covectors"
+    - "strict finite alternative and minimal positive-dependence theory"
+    - "positive-diagonal, GL(V), permutation, and finite-inclusion naturality"
+  new_primitive_or_input_layer:
+    - "finite sector set and coverage boundary"
+    - "nonzero oriented source rays and their provenance"
+    - "exact input representation and refinement family"
+    - "bridge-facing status of the total classifier"
+  forbidden_import_detected_at_selection: false
+  target_import_detected_at_selection: false
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  construction_human_gated: false
+  adoption_human_gated: true
+
+authority_limits:
+  construction_executed_in_rt013: false
+  source_bridge_constructed: false
+  source_bridge_adopted: false
+  canonical_ontology_modified: false
+  adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  physical_causality_constructed: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
