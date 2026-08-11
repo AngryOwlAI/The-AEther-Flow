@@ -1,0 +1,713 @@
+job_id: "AJ-RT-20260811-010-001"
+completion_id: "AJC-AJ-RT-20260811-010-001"
+task_id: "RT-20260811-010"
+task_type: "v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_theoretical_continuation_selector"
+decision_id: "DDR-20260811-010"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260811-010"
+supporting_perspective: "refuter@0.2.0"
+status: "completed"
+result: "completed"
+completion_status: "PASS"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-11T20:13:27Z"
+started_at: "2026-08-11T20:13:27Z"
+completed_at: "2026-08-11T20:52:45Z"
+objective: "Compare exactly four post-RT009 continuations, preserve all six local freezes, and select exactly one materially distinct future packet and role without executing it."
+completion_summary: "Both internal physics perspectives select Route A: one proposal-only SourceGeneratedCompactRootFamilyCoerciveProtectionLaw_v1 formalization-or-obstruction packet under ontology-formalizer@0.2.0. The packet must derive a source-presentation functor to nonempty compact total root spaces and an independently source-derived finite positive lower-semicontinuous natural coercive modulus before any downstream outcome test. The compact-total minimum theorem and exact noncompact and non-lower-semicontinuous controls establish conditional mathematical feasibility and sharp failure branches. Route B's nonfactorization lemma does not establish P4-T02 irrelevance without a source-derived Pi_prin. The packet is selected but not executed; all six freezes and fourteen Distance-to-GR no-delta rows remain unchanged."
+objective_result: "one_theoretical_packet_selection"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "source_generated_compact_root_family_coercive_protection_formalization_selected_not_executed_precheckpoint"
+milestone_disposition: "effective_metric_burden_route_selected_no_distance_delta"
+requires_human_gate: false
+human_gate_required: false
+source_head: "8fa4225e3bb9bdb31ab61be6139b93550c00f80c"
+source_tree: "0f3f4b3345b3355f6e40659f570fe973bd761a5d"
+source_handoff_id: "handoff-1023"
+source_handoff_sha256: "e03d8091120931859aa944de2f2acd47cf1a5286956cbfae0b156cf3cdf03370"
+source_extension_classification_required: true
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P4"
+  plan_task_id: "P4-T02"
+  work_item_status: "source_generated_compact_root_family_coercive_protection_formalization_selected_not_executed_checkpoint_pending"
+  completed_plan_subroute: "P4-T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-THEORETICAL-CONTINUATION-SELECTION"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "P4-T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION"
+  recommendation_ids:
+    - "V22-R07"
+    - "V22-R08"
+    - "V22-R10"
+    - "V22-R13"
+  declared_coverage_ids:
+    - "V22-R07"
+    - "V22-R08"
+    - "V22-R13"
+    - "S5"
+  decisive_result: "one_theoretical_packet_selection"
+  selected_route_id: "A_SOURCE_GENERATED_COMPACT_ROOT_FAMILY_COERCIVE_PROTECTION_LAW"
+  selected_candidate_id: "CAND-V22-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-V1"
+  selected_packet_id: "PKT-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION-V1"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_packet_executed: false
+  inherited_freeze_count: 6
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_fallback_activated: false
+  b2_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one registered draft/control post-source-law-space route-selection manuscript"
+      - "one exact four-route comparison, theoretical decision output, new mathematical payload, and unexecuted future packet contract"
+    project_system:
+      - "task-local focused validator, compact receipt, LaTeX receipt, parent-child synthesis records, and standard control synchronization"
+  accepted_criteria:
+    physics:
+      - "all six local freezes are preserved and exactly one materially distinct future packet is selected"
+      - "the selected packet has formal objects, domains, maps, proof obligations, failure branches, and an executable next-role boundary"
+      - "selection remains source-side proposal-only with D7 non-evaluation, B2 inactivity, and P4-T03 lock preserved"
+    project_system:
+      - "source hashes, artifacts, registries, backlog, program state, and handoff pass deterministic validation"
+      - "the rendered TeX derivative passes visual inspection and one governed checkpoint records the transaction"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "route_decision"
+  realized_payload_type: "packet_selection"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  result: "PASS_MATERIAL_SELECTOR_PAYLOAD_PRESENT"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_result_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "select_v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_continuation_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  result: "PASS_MATERIALLY_DISTINCT_SOURCE_LAW_SELECTION"
+  reopening_requested: false
+  all_six_local_freezes_preserved: true
+  new_freeze_created: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1023"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite_commit: "8fa4225e3bb9bdb31ab61be6139b93550c00f80c"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  refresh_needed: false
+  refresh_performed: false
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1218
+    relationship_row_count: 6289
+    semantic_row_count: 1218
+    vault_row_count: 1218
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-V1"
+      returned_object_ids:
+        - "TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-V1"
+  canonical_inspections:
+    - object_id: "TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_v1.tex"
+      source_hash: "b60a5a38b1de55a0706516e188c9ba8ebdbcd30eebbc8ef543022db4f5dad910"
+  authority_note: "Tracked registered source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval evidence only and are not authority."
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  internal_child_count: 2
+  selected_packet_executed: false
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260811-010/artifacts/child_phys_math_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.yaml"
+      output_sha256: "13a87b489327b46ead4942c9770010442a3df28d0564d21fa34c4c1fbf9c6c05"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260811-010/artifacts/child_phys_phil_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.yaml"
+      output_sha256: "db0ca927174078dc398b5ecadd16295ec3623649b7721bf8cc85f2a667e3099d"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260811-010/artifacts/parent_conflict_review_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.yaml"
+    review_sha256: "557bd3caf83754014ed68108059098099bc518f667d930cd7eb81753df8d58a3"
+    resolution_rounds: 1
+    resolved_conflict_count: 1
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_selection_v1.tex"
+    fused_output_sha256: "ed9df707ba5bbb15aab9a5632b283ec4ba96aa38aad0341598c63d4e9abd0f0f"
+    fusion_notes_path: "research_control/tasks/RT-20260811-010/artifacts/parent_fusion_notes_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.md"
+    fusion_notes_sha256: "5ec1efd69f4846536d6a1ef881de862ff18bde21ea8de30ac15ffaa71c1c26b5"
+    shared_consensus_summary: "Both children select Route A, the same candidate and Ontology Formalizer packet, preserve all six freezes, and require selected_not_executed."
+    unique_phys_math_contributions: "Compact-total minimum theorem, exact noncompact and non-lower-semicontinuous countercontrols, rational three-root fixture, factorization criterion, and Pi_prin limitation."
+    unique_phys_phil_contributions: "Pre-outcome complete-root provenance, constructive-preload distinction, authority-category separation, frozen-classifier quarantine, and protected-stop criterion."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+theoretical_decision_output:
+  selected_next_packet_type: "ontology_law_research_packet"
+  selected_next_route_family: "ontology-law-research-packet"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_next_task_id: "P4-T02"
+  selected_next_work_item_id: "P4-T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION"
+  selected_next_task_type: "v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_law_formalization_or_obstruction"
+  selected_packet_id: "PKT-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION-V1"
+  selected_candidate_id: "CAND-V22-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-V1"
+  trigger_classification: "derivation_critical_missing_source_law"
+  decision_basis: "Both child perspectives select the only constructive route that directly addresses RT009's missing complete-family and uniform-protection premise while remaining materially distinct from all six freezes. The future packet must derive G_src and kappa from source presentations before any protection verdict."
+  theoretical_method: "Formalize or precisely obstruct a source-presentation category, a functorial nonempty compact total root family, an independently source-derived finite positive lower-semicontinuous natural coercive modulus, and complete variation, transverse, and EqSrc closure; use the frozen RobInv predicate only as a downstream comparison."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "Proposal-only formalization or precise-obstruction work is unprotected. Canonical ontology change or source-law adoption remains separately human-gated."
+  selected_next_packet_requires_human_gate: false
+  selected_packet_executed: false
+  decision_consequence: "After checkpoint, one separately admitted Ontology Formalizer AgentJob may execute the packet; no audit, adoption, B2 action, P4-T03 work, or downstream promotion is unlocked."
+  new_payload_novelty: "A compact-total root-family functor target, natural coercive modulus, attained-minimum theorem, exact zero-infimum countercontrols, and a nonfactorization-versus-irrelevance lemma."
+  source_extension_category: "new_ontology_primitive_candidate"
+  source_extension_import_classification: "target_free_explicit_proposal_only_root_family_generator_and_coercive_modulus_pending_formalization_and_smuggling_audit"
+  adoption_status: "blocked_adoption_open_continuation"
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  non_trigger_classifications_rejected:
+    - "ordinary_gap"
+    - "workflow_inconvenience"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Formalize or precisely obstruct an independently source-derived compact total root-family generator and natural coercive protection modulus without replaying a frozen route or importing target geometry."
+  missing_source_law: "source_generated_complete_root_family_and_uniform_coercive_protection_law"
+  underdetermination_statement: "Current ontology does not derive a functorial compact total source-root family, an independently source-derived positive lower-semicontinuous coercive modulus, or the variation, transverse, and EqSrc closure needed for a family-uniform protection theorem."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    candidate_status: "proposal-only"
+    material_class: "source-extension data"
+    source_side_definition: "Derive or precisely obstruct a source-presentation category, a functor G_src to nonempty compact total root spaces, a finite strictly positive lower-semicontinuous natural modulus kappa, and complete variation, transverse, and EqSrc closure before comparing against any downstream protection diagnostic."
+    formal_objects:
+      - "source-presentation category Pres_src"
+      - "EqSrc presentation arrows"
+      - "nonempty compact total root-space functor G_src"
+      - "complete-root predicate independent of outcome"
+      - "finite positive lower-semicontinuous natural modulus kappa"
+      - "uniform coercive minimum kappa_star"
+      - "variation and transverse closure operations"
+    domains:
+      - "all admitted source presentations"
+      - "the complete root space generated before outcome evaluation"
+      - "every declared source variation and transverse operation"
+      - "all overlap domains of EqSrc presentation transport"
+    maps:
+      - "G_src from source presentations and arrows to compact total root spaces and homeomorphisms"
+      - "kappa from each total root space to finite positive real values"
+      - "minimum map from each compact total root space to kappa_star"
+      - "variation and transverse operations internal to the total family"
+      - "optional downstream comparison from independently fixed kappa to protection diagnostics"
+    proof_obligations:
+      - "derive G_src from source primitives or identify the first precise missing primitive"
+      - "prove nonempty compact total-family generation without outcome filtering"
+      - "derive finite positivity and lower semicontinuity of kappa independently of frozen margins"
+      - "prove EqSrc naturality and coherent inverse and cocycle laws"
+      - "prove closure under declared variation and transverse operations"
+      - "prove the uniform-minimum theorem with explicit hypotheses"
+      - "run noncompact, non-lower-semicontinuous, incomplete-family, and circular controls"
+      - "prove no factorization through any of the six frozen candidates"
+      - "separate formal protection from physical causality, response, universality, metric, and adoption"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Keep exact-GR recovery downstream; it may not define the root family or kappa."
+      - "Preserve D7 non-evaluation, B2 inactivity, and the P4-T03 dependency lock."
+      - "Require later response, universality, scale, coupling, and Einstein-equation derivations under their own gates."
+    distance_to_gr_links:
+      - "Source ontology primitives"
+      - "GenH"
+      - "finite-variation robustness"
+      - "effective_metric_g_eff"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "target_tetrad"
+      - "target_coframe"
+      - "desired_gr_cone"
+      - "physical_norm_or_calibration"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No adoption decision is requested now; any later canonical-ontology candidate promotion or source-law adoption requires a separate explicit human gate."
+  human_gate_precondition:
+    blocks_payload_definition: false
+    reason: "Only adoption or canonical ontology modification requires protected authority."
+
+physics_progress_status:
+  status: "selector_only_no_distance_delta"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Select one materially distinct source-generated family-protection law formalization-or-obstruction packet after the RT009 freeze."
+  explanation: "The selector supplies conditional mathematics and a packet contract but constructs no current-ontology primitive, source law, response, physical geometry, or effective metric."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none; one future packet is selected but requires separate admission and execution"
+  downstream_still_blocked:
+    - "source-derived complete root-family generator and coercive-modulus law"
+    - "D7 adequacy and B2 disposition"
+    - "P4-T02 acceptance and P4-T03"
+    - "physical causality, conformal geometry, scale, and g_eff"
+    - "matter coupling, Einstein equations, Gate, benchmark, proof, and completed derivation"
+  explanation: "A route selection and conditional theorem do not discharge a derivation burden."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "Source equivalence EqSrc"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "RetainH"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "GenH"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "ObsLoc_lc"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "Resp_lc"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "M_src"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "g_eff"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "matter coupling"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "Einstein equations"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "finite-variation robustness"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "benchmark promotion"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "Gate Chair status"
+    status: "no_delta"
+    task_delta: "no_delta"
+  - burden: "current route freeze or hard-fail status"
+    status: "no_delta"
+    task_delta: "no_delta"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT010-001"
+    payload_type: "packet_selection"
+    name: "Source-generated compact-root-family coercive-protection packet selection"
+    burden_effect: "selects_next"
+    summary: "Selects exactly one unexecuted Ontology Formalizer packet after comparing all four authorized routes."
+  - payload_id: "NMP-RT010-002"
+    payload_type: "definition"
+    name: "Source-generated compact total root-family functor"
+    burden_effect: "narrows"
+    summary: "Types G_src as a pre-outcome functor from source presentations to nonempty compact total root spaces."
+  - payload_id: "NMP-RT010-003"
+    payload_type: "definition"
+    name: "Natural coercive protection modulus"
+    burden_effect: "narrows"
+    summary: "Types a finite positive lower-semicontinuous natural kappa independently of frozen diagnostic margins."
+  - payload_id: "NMP-RT010-004"
+    payload_type: "theorem"
+    name: "Compact-total root-family coercive-minimum theorem"
+    burden_effect: "narrows"
+    summary: "A finite strictly positive lower-semicontinuous function on a nonempty compact total root space attains a strictly positive minimum."
+  - payload_id: "NMP-RT010-005"
+    payload_type: "countermodel"
+    name: "Zero-infimum necessity controls"
+    burden_effect: "narrows"
+    summary: "Noncompactness or failure of lower semicontinuity permits pointwise positive moduli with infimum zero."
+  - payload_id: "NMP-RT010-006"
+    payload_type: "lemma"
+    name: "Nonfactorization is not irrelevance"
+    burden_effect: "narrows"
+    summary: "Failure of a supplied proposal label to factor through diagnostics does not prove P4-T02 irrelevance without a source-derived Pi_prin and universal fibre constancy."
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT010-001"
+    payload_type: "packet_selection"
+    object_name: "PKT-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION-V1"
+    claim_status: "draft/control selected_not_executed"
+    source_path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selected_future_packet_v1.yaml"
+    burden_effect: "selects_next"
+    summary: "Selects one future Ontology Formalizer packet without executing or adopting it."
+  - payload_id: "PAYLOAD-RT010-002"
+    payload_type: "definition"
+    object_name: "DEF-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-TOTAL-ROOT-FAMILY-001"
+    claim_status: "draft/control mathematical definition"
+    source_path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_selection_v1.tex"
+    burden_effect: "narrows"
+    summary: "Defines the future G_src target without adopting a source law."
+  - payload_id: "PAYLOAD-RT010-003"
+    payload_type: "definition"
+    object_name: "DEF-V22-P4T02-B2-NATURAL-COERCIVE-PROTECTION-MODULUS-001"
+    claim_status: "draft/control mathematical definition"
+    source_path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_selection_v1.tex"
+    burden_effect: "narrows"
+    summary: "Defines kappa as an independently sourced natural modulus rather than a frozen diagnostic margin."
+  - payload_id: "PAYLOAD-RT010-004"
+    payload_type: "theorem"
+    object_name: "THM-V22-P4T02-B2-COMPACT-TOTAL-ROOT-FAMILY-COERCIVE-MINIMUM-001"
+    claim_status: "draft/control conditional mathematical theorem"
+    source_path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_selection_v1.tex"
+    burden_effect: "narrows"
+    summary: "Proves the attained positive minimum under compactness, positivity, finiteness, and lower semicontinuity."
+  - payload_id: "PAYLOAD-RT010-005"
+    payload_type: "countermodel"
+    object_name: "CTRL-V22-P4T02-B2-ZERO-INFIMUM-NECESSITY-001"
+    claim_status: "draft/control exact countercontrols"
+    source_path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector_model.py"
+    burden_effect: "narrows"
+    summary: "Checks the noncompact and non-lower-semicontinuous zero-infimum families exactly."
+  - payload_id: "PAYLOAD-RT010-006"
+    payload_type: "lemma"
+    object_name: "LEM-V22-P4T02-B2-NONFACTORIZATION-NOT-IRRELEVANCE-001"
+    claim_status: "draft/control mathematical lemma"
+    source_path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_selection_v1.tex"
+    burden_effect: "narrows"
+    summary: "Separates a finite nonfactorization result from the stronger missing P4-T02 irrelevance theorem."
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: false
+  active_freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  prior_attempts_considered:
+    - "RT-20260810-005"
+    - "RT-20260810-012"
+    - "RT-20260811-001"
+    - "RT-20260811-005"
+    - "RT-20260811-009"
+  freeze_decision: "not_frozen"
+  decision_reason: "The selected future packet introduces a materially distinct source-generated total-family and coercive-modulus law target; the selector itself does not construct it."
+  next_allowed_route: "ontology-formalizer@0.2.0"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_post_source_law_space_robust_invariance_protection_selection"
+  current_cycle_step: "theoretical_packet_selection"
+  prior_related_tasks:
+    - "RT-20260810-005"
+    - "RT-20260810-012"
+    - "RT-20260811-001"
+    - "RT-20260811-005"
+    - "RT-20260811-009"
+  cycle_risk: "high if G_src or kappa is selected from a desired downstream pass"
+  orbit_avoidance_reason: "The future primitive is a source generator and natural modulus; frozen RobInv may appear only as a downstream comparison."
+  next_role_consequence: "ontology-formalizer@0.2.0 after checkpoint"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "CAND-V22-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-V1"
+  item_source_path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selected_future_packet_v1.yaml"
+  classification: "new_ontology_primitive_candidate"
+  claim_boundary_id: "CB-V22-P4-T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-THEORETICAL-SELECTION-001"
+  evidence_paths:
+    - "research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_v1.tex"
+    - "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_selection_v1.tex"
+  relation_to_current_ontology: "missing_primitive"
+  relation_to_target_side: "none admitted by the selected contract"
+  protected_authority_required: false
+  protected_authority_required_for_adoption: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "proposal-only new ontology primitive candidate; blocked adoption with open same-milestone continuation"
+  forbidden_overreads:
+    - "source-law adoption"
+    - "physical causality or empirical response"
+    - "matter-sector universality"
+    - "g_eff or Einstein equations"
+    - "benchmark promotion"
+    - "completed derivation"
+  next_route_if_blocked: "theoretical-continuation-selector after a precise obstruction; smuggling-auditor after a constructed theorem candidate"
+
+selected_next_route:
+  route_id: "formalize_v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_law_v1"
+  route_label: "ontology-law-research-packet"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION"
+  work_kind: "source_law_formalization_or_obstruction"
+  task_class: "science"
+  role_family: "ontology-formalizer@0.2.0"
+  supporting_perspective: "smuggling-auditor@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "ontology_law_research_packet"
+  selected_packet_id: "PKT-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION-V1"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Formalize or precisely obstruct a source-generated compact total root-family and natural coercive-modulus law from source premises only."
+  expected_result_kind: "theorem_with_hypotheses_and_proof_or_precise_obstruction"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  selected_packet_executed: false
+  physics_promotion_authorized: false
+  external_action_authorized: false
+
+artifact_receipt:
+  route_selection_tex:
+    path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_selection_v1.tex"
+    sha256: "ed9df707ba5bbb15aab9a5632b283ec4ba96aa38aad0341598c63d4e9abd0f0f"
+  selector_decision:
+    path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector_decision_v1.yaml"
+    sha256: "120683516aa0003f6bc70cd5dc80b03a29000b61d153017bb93d8d0fd3475f9a"
+  route_comparison:
+    path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_comparison_v1.yaml"
+    sha256: "c124550271ba8cde874ad098571722ec2fc29d9738257dd725b1ab6b6803364e"
+  selected_future_packet:
+    path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selected_future_packet_v1.yaml"
+    sha256: "1f70f9cc52c097a5da00bdb237f4fe67fd8bca289df2925b318f662142208609"
+  selector_model:
+    path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector_model.py"
+    sha256: "e06db8cea506a858ef241f5c3013466fd9d69223dea69b9630a97e39d34a7278"
+  provenance_manifest:
+    path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_source_provenance_manifest_v1.yaml"
+    sha256: "5dac8309fd8a61f89d683123c2f77d6a9843677fb63944dcb10f9d74f0865fec"
+  latex_receipt:
+    path: "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector_latex_compile_receipt.json"
+    sha256: "a66f306a5bb36b9c5923b9ed2b19e40a4698aede2257206c8c5947946f73f60f"
+  focused_validator:
+    path: "research_control/tasks/RT-20260811-010/artifacts/validate_v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.py"
+    sha256: "5edc43e349155a388d17b44bcc212b2376996e3c60e2916149c2c89d543907ff"
+
+command_results:
+  - command: "v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector_model.py --json"
+    status: "PASS"
+    detail: "The exact selector model passes all sixteen route, theorem, countercontrol, freeze, and no-delta checks."
+  - command: "bundled Tectonic two-pass compile and all-page rendered inspection"
+    status: "PASS"
+    detail: "Five letter-size TeX pages compile and every rendered page passes visual inspection."
+  - command: "focused selector validator"
+    status: "PASS"
+    detail: "The task-local validator passes 26 of 26 checks before terminal control synchronization."
+  - command: "affected and governed repository validation"
+    status: "PENDING_PRECHECKPOINT"
+    detail: "Terminal affected-profile and checkpoint validation remain required against the converged state."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, committed-predecessor, ordinary-route, payload, family-freeze, dual-budget, and claim-boundary admissions passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The exact model, two child analyses, round-one conflict resolution, fused manuscript, compilation, and all-page visual inspection pass."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Focused revalidation, affected validation, and research-control diff validation remain to run against terminal precheckpoint state."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed AJ-RT-20260811-010-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Five letter-size pages compile and all rendered pages pass visual inspection."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Final source registration synchronization and staged memory validation are checkpoint obligations."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains a checkpoint obligation."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review is authorized for this P4-T02 selector packet."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_formalized: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  physical_causality_constructed: false
+  empirical_response_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_constructed: false
+  einstein_equations_derived: false
+  gate_or_benchmark_authority_created: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  global_no_go_claimed: false
+  completed_derivation_claimed: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "the selected packet was executed, formalized, proved, audited, stressed, adopted, or found physically adequate"
+    - "any of six local freezes was reopened, weakened, repaired, or superseded"
+    - "G_src, compact total roots, kappa, or closure laws are derived from current ontology"
+    - "M_src adoption or a formal coercive modulus is physical causality, empirical response, conformal geometry, scale, or g_eff"
+    - "D7 adequacy or B2 activation, disposal, sufficiency, adoption, or rejection"
+    - "P4-T03 unlock, matter coupling, or Einstein equations"
+    - "Gate, benchmark, proof, publication, push, release, or external action"
+    - "global theory rejection, future-extension impossibility, or completed derivation"
+  summary: "Packet selection, child consensus, exact arithmetic, compilation, validation, registration, and checkpoint are control evidence only. They do not authorize M_src adoption, g_eff, matter coupling, Einstein equations, benchmark promotion, completed derivation, or global theory rejection."
+
+checkpoint:
+  invocation_count: 0
+  committed: false
+  commit: ""
+  push_performed: false
+  external_action_performed: false
+  note: "The checkpoint executes only after all final artifacts and generated systems validate."
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+
+output_paths:
+  - "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_selection_v1.tex"
+  - "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector_decision_v1.yaml"
+  - "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_comparison_v1.yaml"
+  - "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selected_future_packet_v1.yaml"
+  - "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_source_provenance_manifest_v1.yaml"
+  - "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector_model.py"
+  - "research_control/tasks/RT-20260811-010/artifacts/child_phys_math_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.yaml"
+  - "research_control/tasks/RT-20260811-010/artifacts/child_phys_phil_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.yaml"
+  - "research_control/tasks/RT-20260811-010/artifacts/parent_conflict_review_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.yaml"
+  - "research_control/tasks/RT-20260811-010/artifacts/parent_fusion_notes_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.md"
+  - "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260811-010/artifacts/validate_v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.py"
+  - "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector_validation.json"
+  - "research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector_compact_receipt.json"
+  - "research_control/tasks/RT-20260811-010/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260811-010/jobs/completions/AJC-AJ-RT-20260811-010-001.yaml"
+  - "research_control/handoffs/handoff-1024.yaml"
+  - "research_control/handoffs/handoff-1024.md"
+  - "research_control/program_state.yaml"
+
+notes: "Exactly one Theoretical Continuation Selector AgentJob was executed. Exactly one future Ontology Formalizer packet was selected and remains unexecuted until a fresh post-checkpoint invocation."

@@ -480,6 +480,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-POST-ORIENTED-MATROID-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-009/artifacts/v22_p4_t02_b2_post_refuter_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-006/artifacts/v22_p4_t02_b2_post_signed_cubic_viability_refuter_route_selection_v1.tex`
+- `TEX-V22-P4-T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-V1` `research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1.tex`
 - `TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-004/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_source_extension_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-LAW-V1` `research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_law_v1.tex`

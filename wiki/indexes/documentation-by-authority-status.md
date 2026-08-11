@@ -140,6 +140,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-ORIENTED-MATROID-REFUTER-SELECTOR-V1` `research_control/tasks/RT-20260811-002/artifacts/parent_fusion_notes_p4_t02_b2_post_oriented_matroid_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-REFUTER-SELECTION-V1` `research_control/tasks/RT-20260810-009/artifacts/parent_fusion_notes_p4_t02_b2_post_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-SIGNED-CUBIC-VIABILITY-REFUTER-SELECTION-V1` `research_control/tasks/RT-20260811-006/artifacts/parent_fusion_notes_p4_t02_b2_post_signed_cubic_viability_refuter_selector.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-SELECTION-V1` `research_control/tasks/RT-20260811-010/artifacts/parent_fusion_notes_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/parent_fusion_notes_p4_t02_b2_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-V1` `research_control/tasks/RT-20260811-005/artifacts/parent_fusion_notes_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-004/artifacts/parent_fusion_notes_p4_t02_b2_signed_cubic_viability_selector_smuggling_audit.md`
@@ -918,6 +919,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-ORIENTED-MATROID-REFUTER-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-oriented-matroid-refuter-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-REFUTER-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-refuter-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-SIGNED-CUBIC-VIABILITY-REFUTER-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-signed-cubic-viability-refuter-selection-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-source-law-space-robust-invariance-refuter-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-signed-cubic-viability-selector-refuter-stress-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-signed-cubic-viability-selector-smuggling-audit-v1.md`
