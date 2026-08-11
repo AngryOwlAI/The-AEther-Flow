@@ -164,6 +164,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-004/artifacts/parent_fusion_notes_p4_t02_b2_signed_cubic_viability_selector_smuggling_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1` `research_control/tasks/RT-20260811-003/artifacts/parent_fusion_notes_p4_t02_b2_source_dynamical_viability_admissibility_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `research_control/tasks/RT-20260810-001/artifacts/parent_fusion_notes_p4_t02_b2_source_intrinsic_interface_repair.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-008/artifacts/parent_fusion_notes_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1` `research_control/tasks/RT-20260811-007/artifacts/parent_fusion_notes_p4_t02_b2_source_law_space_robust_invariance_protection.md`
 - `MD-V22-P4-T02-PARENT-FUSION-HARD-FAIL-SCREEN-V1` `research_control/tasks/RT-20260809-019/artifacts/parent_fusion_notes_p4_t02_screen.md`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
@@ -635,6 +636,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-004/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_source_extension_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-LAW-V1` `research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_law_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_v1.tex`
+- `TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-008/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1` `research_control/tasks/RT-20260811-007/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_v1.tex`
 - `TEX-V22-P4-T02-HYPERBOLICITY-UNIVERSALITY-ROBUSTNESS-HARD-FAIL-SCREEN-V1` `research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex`
 
@@ -1427,6 +1429,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-signed-cubic-viability-selector-smuggling-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-dynamical-viability-admissibility-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-intrinsic-interface-repair-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-law-space-robust-invariance-protection-smuggling-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-law-space-robust-invariance-protection-v1.md`
 - `WIKI-MD-V22-P4-T02-PARENT-FUSION-HARD-FAIL-SCREEN-V1` `wiki/markdown/md-v22-p4-t02-parent-fusion-hard-fail-screen-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
@@ -1931,6 +1934,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-signed-cubic-viability-selector-source-extension-smuggling-audit-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-LAW-V1` `wiki/tex/tex-v22-p4-t02-b2-source-dynamical-viability-admissibility-selector-law-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `wiki/tex/tex-v22-p4-t02-b2-source-intrinsic-interface-repair-v1.md`
+- `WIKI-TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-source-law-space-robust-invariance-protection-smuggling-audit-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-source-law-space-robust-invariance-protection-v1.md`
 - `WIKI-TEX-V22-P4-T02-HYPERBOLICITY-UNIVERSALITY-ROBUSTNESS-HARD-FAIL-SCREEN-V1` `wiki/tex/tex-v22-p4-t02-hyperbolicity-universality-robustness-hard-fail-screen-v1.md`
 

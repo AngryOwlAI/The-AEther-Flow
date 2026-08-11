@@ -1,0 +1,81 @@
+{
+  "schema_id": "v22_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_latex_compile_receipt_v1",
+  "task_id": "RT-20260811-008",
+  "job_id": "AJ-RT-20260811-008-001",
+  "created_at": "2026-08-11T17:45:43Z",
+  "status": "PASS",
+  "source": {
+    "path": "research_control/tasks/RT-20260811-008/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_audit_v1.tex",
+    "sha256": "122bcd824cf4ea9956fe26f38f592c962dfaf26ece004a68333f1a1f2514e450"
+  },
+  "compiler": {
+    "name": "Tectonic",
+    "version": "0.16.9",
+    "source": "openai-bundled-latex-plugin",
+    "exit_code": 0,
+    "rerun_completed": true,
+    "warnings": [
+      "inputenc ignored by utf8 engine on the first and second passes",
+      "hyperref requested one automatic rerun for page labels on the first pass"
+    ],
+    "errors": []
+  },
+  "local_pdf": {
+    "path": ".local/research_control/RT-20260811-008/latex/v22_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_audit_v1.pdf",
+    "sha256": "8c056cb7f6ea5fbf23aa4dd3ce18ebad1d99f430e7f4e5591ac258bac15d5bdb",
+    "page_count": 5,
+    "page_size_points": [612, 792],
+    "page_size_name": "letter",
+    "tracked": false,
+    "pdf_required_by_registry": false
+  },
+  "render": {
+    "tool": "pdftoppm",
+    "resolution_dpi": 144,
+    "page_count": 5,
+    "rendered_pages": [
+      {
+        "page": 1,
+        "path": ".local/research_control/RT-20260811-008/rendered/page-1.png",
+        "sha256": "e40ba30cd49fe729e833f9e89b9e835970b4a3a7287a2ed3fa37b0d05cb35f4d"
+      },
+      {
+        "page": 2,
+        "path": ".local/research_control/RT-20260811-008/rendered/page-2.png",
+        "sha256": "ed0af0fa240cb9c66256aab5932d04d472d9e75d12253fc0aebc4afa2de5e1d3"
+      },
+      {
+        "page": 3,
+        "path": ".local/research_control/RT-20260811-008/rendered/page-3.png",
+        "sha256": "09d060b92365334f669ffb30b4eb052765bda58aef31af8bd16750a34510aaed"
+      },
+      {
+        "page": 4,
+        "path": ".local/research_control/RT-20260811-008/rendered/page-4.png",
+        "sha256": "09a3f052994b52dfc6a37082c3712477a7bc143133ce3a7ae534ceeb0315b36b"
+      },
+      {
+        "page": 5,
+        "path": ".local/research_control/RT-20260811-008/rendered/page-5.png",
+        "sha256": "4146ef2adbb6b4af25d9cb952b95c4c48518e74f83dab27fac1624395b28ace2"
+      }
+    ]
+  },
+  "visual_inspection": {
+    "status": "PASS",
+    "pages_inspected": [1, 2, 3, 4, 5],
+    "all_pages_inspected": true,
+    "checks": {
+      "text_legible": true,
+      "equations_legible": true,
+      "tables_legible": true,
+      "long_identifiers_wrapped": true,
+      "no_clipping": true,
+      "no_overlap": true,
+      "margins_consistent": true,
+      "page_breaks_acceptable": true
+    },
+    "notes": "All five pages were inspected at original rendered resolution. The sparse final page is intentional and contains the complete successor and non-conclusion sections."
+  },
+  "authority_note": "The local PDF and rendered images are inspection derivatives only. The registered TeX source remains the draft/control authority and requires no tracked PDF derivative."
+}

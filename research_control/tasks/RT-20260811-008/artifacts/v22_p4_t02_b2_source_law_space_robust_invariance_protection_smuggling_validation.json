@@ -1,0 +1,101 @@
+{
+  "authority_limits": {
+    "candidate_adopted": false,
+    "current_ontology_derivation_established": false,
+    "distance_to_gr_changed": false,
+    "independent_source_provenance_established": false,
+    "physics_promotion_authorized": false,
+    "successor_executed": false,
+    "validator_pass_is_scientific_authority": false
+  },
+  "check_count": 16,
+  "checks": [
+    {
+      "check_id": "strict_unique_yaml",
+      "evidence": "parsed=6 errors={}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "exact_model",
+      "evidence": "all_pass=True checks=12/12 payload=189b55235384c36ef6886fcf8c91107c02a3928a0de275d8592eb34755cbd888",
+      "status": "PASS"
+    },
+    {
+      "check_id": "source_manifest_hashes",
+      "evidence": "declared=12 rows=12 mismatches=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "audit_matrix_dimensions",
+      "evidence": "declared=12 rows=12 unique=12 parity=True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "audit_matrix_verdict_scope",
+      "evidence": "verdict=source_pure_as_written syntax_pure=True provenance_false=True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "decisive_disposition_and_classification",
+      "evidence": "verdict=source_pure_as_written classification=new_ontology_primitive_candidate derived=not_derived adopted=False",
+      "status": "PASS"
+    },
+    {
+      "check_id": "successor_selected_not_executed",
+      "evidence": "packet=PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-V1 role=refuter@0.2.0 status=selected_not_executed executed=False",
+      "status": "PASS"
+    },
+    {
+      "check_id": "new_mathematical_payload",
+      "evidence": "count=5 unique=5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "freeze_preservation",
+      "evidence": "freezes=['NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR', 'NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS', 'NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION', 'NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS', 'NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS']",
+      "status": "PASS"
+    },
+    {
+      "check_id": "distance_to_gr_matrix",
+      "evidence": "rows=14 unique=14 all_no_delta=True",
+      "status": "PASS"
+    },
+    {
+      "check_id": "independent_children",
+      "evidence": "[{\"contains_source_pure\": true, \"filename\": \"child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_audit.yaml\"}, {\"contains_source_pure\": true, \"filename\": \"child_phys_phil_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_audit.yaml\"}]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "parent_conflict_review",
+      "evidence": "blocking=0 resolved=True child_hashes={'child_phys_math': '8ac0b6fc0d62e05b96627b23743dee96da1dfe579c1b99d2e800517648026df5', 'child_phys_phil': 'edcfca5e45ef7607f34f898a7d67534f1353000a18d9e67ea1b46ad8a7ba765c'}",
+      "status": "PASS"
+    },
+    {
+      "check_id": "manuscript_contract",
+      "evidence": "missing=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "latex_compile_and_visual_review",
+      "evidence": "status=PASS visual=PASS pages=5",
+      "status": "PASS"
+    },
+    {
+      "check_id": "control_and_source_registries",
+      "evidence": "missing=[]",
+      "status": "PASS"
+    },
+    {
+      "check_id": "completion_and_handoff",
+      "evidence": "completion=source_pure_as_written handoff=handoff-1022 successor_executed=False",
+      "status": "PASS"
+    }
+  ],
+  "fail_count": 0,
+  "job_id": "AJ-RT-20260811-008-001",
+  "model_payload_sha256": "189b55235384c36ef6886fcf8c91107c02a3928a0de275d8592eb34755cbd888",
+  "pass_count": 16,
+  "schema_id": "v22_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_validation_v1",
+  "status": "PASS",
+  "task_id": "RT-20260811-008"
+}
