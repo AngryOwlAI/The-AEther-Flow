@@ -6,12 +6,12 @@
 Authority notice: This generated dependency graph is navigational support only. It is not physics authority, proof authority, claim-promotion authority, or a substitute for registered sources, completions, handoffs, gates, or control registries.
 
 - Schema: `research_dependency_graph_v1`
-- Generated from tracked state as of: `2026-08-11T11:56:41Z`
-- Source fingerprint: `d91cdaf782d3d5708cda11ff3b73bc99d6b22c1733f08b8dbd57de90334f3ef3`
-- Nodes: `26782`
-- Edges: `79376`
+- Generated from tracked state as of: `2026-08-11T13:21:58Z`
+- Source fingerprint: `0418d6ff406d3d206deefcabeef382b2f7cd169b328e27195a2c642253a8f62c`
+- Nodes: `26817`
+- Edges: `79429`
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T11:56:41Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_dependency_graph","schema_id":"generated_report_provenance_v1","source_commit":"ff6d4bf14a64e212a913d438f4901e80c3091289","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"1034b7082f14faa2e8e4618ab8a818cd65c828febbf8ae3ab5bdcb6fbc853840"},{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"5c1acb29cdb3668817ea0220acab444594248bd6aaa20ece00af1876de092287"},{"path":"research_control/program_state.yaml","sha256":"9eb52f6e5426feb83ea5f60e61d164e464fe17676595523bf682f01548c343ea"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_dependency_graph.py","sha256":"6fdbe02623855697110263a90bbfbbd9a223ff636f320df497593fce3f9bef39"}],"source_manifest_sha256":"be9bb6667a461392c3626c4b64c86b8f5c4f08b7dbacc1214ce7c7f860ac8b44","source_path_count":"2304","task_count":"1273"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T13:21:58Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_dependency_graph","schema_id":"generated_report_provenance_v1","source_commit":"4483b8debf73f1d2492e14ca779ded75d48efd85","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"05b6bc1c89962473f310366713242f0a1cddd162d784dfac19583ab623b1b6e0"},{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"326e6d58fbfee869ebba92f820a5f35e02d3f5fe28d5181975851c1e40942beb"},{"path":"research_control/program_state.yaml","sha256":"83d4899c3bf602bcabcf05de21a82fa23c0296f49d06b5d892a62ce4f5bf83fa"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_dependency_graph.py","sha256":"6fdbe02623855697110263a90bbfbbd9a223ff636f320df497593fce3f9bef39"}],"source_manifest_sha256":"cc920a58b4b789bf2b4990af0757bbfae0fe6a19031163ea0989b6907fae2f9d","source_path_count":"2306","task_count":"1274"} -->
 
 ## Generated-Report Provenance
 
@@ -20,21 +20,21 @@ Authority notice: This generated dependency graph is navigational support only. 
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_dependency_graph` |
-| Source commit | `ff6d4bf14a64e212a913d438f4901e80c3091289` |
-| Source-derived generation time | `2026-08-11T11:56:41Z` |
-| Tracked task count | 1273 |
-| Exact source-path count | 2304 |
-| Source manifest SHA-256 | `be9bb6667a461392c3626c4b64c86b8f5c4f08b7dbacc1214ce7c7f860ac8b44` |
+| Source commit | `4483b8debf73f1d2492e14ca779ded75d48efd85` |
+| Source-derived generation time | `2026-08-11T13:21:58Z` |
+| Tracked task count | 1274 |
+| Exact source-path count | 2306 |
+| Source manifest SHA-256 | `cc920a58b4b789bf2b4990af0757bbfae0fe6a19031163ea0989b6907fae2f9d` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `1034b7082f14faa2e8e4618ab8a818cd65c828febbf8ae3ab5bdcb6fbc853840`
+- `registries/AGENT_JOB_REGISTRY.csv`: `05b6bc1c89962473f310366713242f0a1cddd162d784dfac19583ab623b1b6e0`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `5c1acb29cdb3668817ea0220acab444594248bd6aaa20ece00af1876de092287`
-- `research_control/program_state.yaml`: `9eb52f6e5426feb83ea5f60e61d164e464fe17676595523bf682f01548c343ea`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `326e6d58fbfee869ebba92f820a5f35e02d3f5fe28d5181975851c1e40942beb`
+- `research_control/program_state.yaml`: `83d4899c3bf602bcabcf05de21a82fa23c0296f49d06b5d892a62ce4f5bf83fa`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_dependency_graph.py`: `6fdbe02623855697110263a90bbfbbd9a223ff636f320df497593fce3f9bef39`
@@ -49,11 +49,11 @@ or claim-promotion authority.
 | --- | ---: |
 | `agent_job_registry` | 1 |
 | `claim_boundary_registry` | 1 |
-| `completion_yaml` | 1273 |
+| `completion_yaml` | 1274 |
 | `director_decision_registry` | 1 |
 | `distance_to_gr_ledger` | 1 |
 | `file_object_registry` | 1 |
-| `handoff_yaml` | 1018 |
+| `handoff_yaml` | 1019 |
 | `markdown_source_registry` | 1 |
 | `program_state` | 1 |
 | `research_task_registry` | 1 |
@@ -65,32 +65,32 @@ or claim-promotion authority.
 | Node class | State label | Count |
 | --- | --- | ---: |
 | `accepted_scoped_object` | `accepted_scoped` | 9 |
-| `agent_job` | `support_only` | 1273 |
+| `agent_job` | `support_only` | 1274 |
 | `artifact` | `canonical_source` | 87 |
-| `artifact` | `support_only` | 13609 |
+| `artifact` | `support_only` | 13632 |
 | `blocked_burden` | `blocked` | 5566 |
-| `claim_boundary` | `support_only` | 1230 |
-| `draft_control_candidate` | `draft_control` | 918 |
+| `claim_boundary` | `support_only` | 1231 |
+| `draft_control_candidate` | `draft_control` | 923 |
 | `draft_control_candidate` | `proposal_only` | 181 |
 | `draft_control_candidate` | `science_draft` | 100 |
-| `frozen_negative` | `frozen_negative` | 166 |
+| `frozen_negative` | `frozen_negative` | 167 |
 | `gate_chair_verdict` | `human_gated` | 38 |
-| `handoff` | `support_only` | 1018 |
+| `handoff` | `support_only` | 1019 |
 | `human_gated_object` | `human_gated` | 641 |
 | `ledger_row` | `accepted_scoped` | 6 |
 | `ledger_row` | `blocked` | 3 |
 | `ledger_row` | `frozen_negative` | 1 |
 | `ledger_row` | `human_gated` | 1 |
 | `ledger_row` | `science_draft` | 4 |
-| `obstruction` | `blocked` | 116 |
+| `obstruction` | `blocked` | 117 |
 | `obstruction` | `rejected` | 5 |
 | `source_extension_evidence_precondition` | `source_extension_evidence` | 41 |
 | `source_ontology_object` | `canonical_source` | 28 |
 | `source_ontology_object` | `rejected` | 50 |
-| `source_ontology_object` | `support_only` | 418 |
+| `source_ontology_object` | `support_only` | 419 |
 | `task` | `human_gated` | 29 |
 | `task` | `science_draft` | 34 |
-| `task` | `support_only` | 1210 |
+| `task` | `support_only` | 1211 |
 
 ## Frontier Table
 
@@ -195,9 +195,9 @@ or claim-promotion authority.
 
 ## Route Continuity
 
-- Active task: `RT-20260811-004`
-- Latest handoff: `handoff-1018`
-- Handoff path: `research_control/handoffs/handoff-1018.yaml`
-- Next action: Run the single governed checkpoint for AJ-RT-20260811-004-001. After it commits execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-REFUTER-STRESS-V1. Stress only the fixed locally source-pure candidate for perturbative and off-family robustness token nonselection finite-versus-asymptotic viability and invariant-measure limitations. Preserve all four freezes. Do not repair or adopt the candidate execute a later selector packet reevaluate D7 act on B2 unlock P4-T03 promote publish push or take external action.
+- Active task: `RT-20260811-005`
+- Latest handoff: `handoff-1019`
+- Handoff path: `research_control/handoffs/handoff-1019.yaml`
+- Next action: Run the single governed checkpoint for AJ-RT-20260811-005-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1. Select one materially distinct source-derived protection law, source-side irrelevance theorem, bridge class, or protected ontology stop. Do not replay any frozen candidate, repair or adopt the current candidate, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
 
 This graph is navigational support only; inspect the cited sources before using any claim.

@@ -1,0 +1,400 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=0.84in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{url}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{obstruction}{Scoped obstruction}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Us}{U_{\sigma}}
+\newcommand{\Viab}{\operatorname{Viab}}
+\newcommand{\status}[1]{\textsf{#1}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlist{nosep,leftmargin=*}
+\urlstyle{tt}
+
+\title{Refuter Stress of the Signed Cubic Viability Selector\\
+\large V22 P4--T02 B2 source-extension robustness boundary}
+\author{Refuter parent synthesis, RT-20260811-005}
+\date{11 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\begin{minipage}{0.94\linewidth}
+\textbf{Decisive result.}
+The exact fixed \status{SignedCubicViabilitySelector\_v1} has a
+\status{scoped\_obstruction} when used as a standalone perturbatively robust
+P4--T02 source selector and viability bridge.  The reflection-equivariant
+family
+\[
+ F_{\sigma,\mu}(a)=-\gamma a^3+\mu\sigma
+\]
+is uniformly $|\mu|$-close to the fixed field, yet negative $\mu$ drives
+every selected state across the boundary in finite time.  Zero, positive,
+and negative $\mu$ place the unique attracting equilibrium on, inside, and
+opposite the selected component.  Reflection symmetry permits all three and
+selects none.
+
+\smallskip
+\textbf{Boundary.}
+The fixed finite-path theorem and RT004's narrow
+\status{source\_pure\_as\_written} verdict remain valid.  The failed premise
+is the absence of a source-derived tangency class or positive inward margin,
+token-persistence law, and full-state viability primitive.  The obstruction
+is candidate-local: it is not a global no-go and does not exclude materially
+distinct future source extensions.  All four inherited freezes remain active,
+one candidate-local freeze is added, and all fourteen Distance-to-GR rows have
+\status{no\_delta}.
+\end{minipage}}
+\end{center}
+
+\section{Fixed candidate and exact scope}
+
+The packet holds the registered proposal-only state $a\in\R$, token
+$\sigma\in\{+1,-1\}$, selected component
+\[
+ \Us=\{a:\sigma a>0\},
+\]
+and cubic forward field
+\begin{equation}
+ F_{\sigma,0}(a)=-\gamma a^3,
+ \qquad \gamma>0,
+ \label{eq:fixed-field}
+\end{equation}
+fixed.  Its flow is
+\[
+ \phi_t(a)=\frac{a}{\sqrt{1+2\gamma t a^2}},
+\]
+and the fixed normalized barrier is
+\[
+ b_\sigma(a)=\frac{\sigma a}{\sqrt{a_\star^2+a^2}},
+ \qquad a_\star>0.
+\]
+RT003 proved exact finite-path viability for this field.  RT004 proved only
+that the disclosed syntax contains no literal target or workflow premise; it
+also proved that $\sigma$ supplies the entire component identity, reflection
+selects neither token, the long-time limit is zero, and the only invariant
+probability of the fixed flow is $\delta_0$.
+
+This stress does not alter those statements.  It asks the distinct P4--T02
+question whether the candidate has an independently protected neighborhood of
+source laws or a lawful lift beyond its exact one-mode slice.
+
+\section{Minimal reflection-equivariant perturbation family}
+
+Introduce one real control parameter $\mu$ and define
+\begin{equation}
+ F_{\sigma,\mu}(a)=-\gamma a^3+\mu\sigma.
+ \label{eq:mu-family}
+\end{equation}
+The parameter is a Refuter control, not adopted source data.
+
+\begin{theorem}[Equivariance and arbitrarily small distance]
+\label{thm:equivariance}
+For every $\mu\in\R$,
+\[
+ F_{-\sigma,\mu}(-a)=-F_{\sigma,\mu}(a).
+\]
+Moreover,
+\[
+ \sup_{a\in\R}|F_{\sigma,\mu}(a)-F_{\sigma,0}(a)|=|\mu|,
+\]
+and every derivative difference of positive order is zero.  Hence the family
+contains perturbations arbitrarily close to the fixed field in the global
+$C^0$ norm and in every compact-open $C^k$ topology.
+\end{theorem}
+
+\begin{proof}
+Direct substitution gives
+\[
+ F_{-\sigma,\mu}(-a)=\gamma a^3-\mu\sigma
+ =-F_{\sigma,\mu}(a).
+\]
+The difference between the two fields is the constant $\mu\sigma$; the norm
+and derivative statements follow immediately.
+\end{proof}
+
+At the selected boundary, define the oriented sheet velocity
+$v_\sigma=\sigma F_{\sigma,\mu}(0)$.  Reflection equivariance forces
+$v_+=v_-$, but the common value is exactly $\mu$ and may have either sign.
+Thus symmetry identifies the two sheet velocities without anchoring them or
+choosing an inward orientation.  Equivalently,
+\[
+ \left.\frac{d}{dt}b_\sigma(a(t))\right|_{a=0}
+ =\frac{\mu}{a_\star}.
+\]
+
+Use the selected coordinate $y=\sigma a$.  Equation~\eqref{eq:mu-family}
+becomes
+\begin{equation}
+ \dot y=-\gamma y^3+\mu.
+ \label{eq:y-family}
+\end{equation}
+
+\begin{theorem}[Exact boundary bifurcation]
+\label{thm:bifurcation}
+Equation~\eqref{eq:y-family} has the unique equilibrium
+\[
+ r_\mu=\sqrt[3]{\mu/\gamma}.
+\]
+Every solution is global and converges to $r_\mu$.  Consequently:
+\begin{enumerate}
+ \item if $\mu>0$, the equilibrium is inside $y>0$ and the vector field is
+ strictly inward at the boundary;
+ \item if $\mu=0$, every $y_0>0$ remains positive for finite time but tends
+ to the excluded boundary zero;
+ \item if $\mu=-\varepsilon<0$, every $y_0>0$ crosses zero in a time no
+ greater than $y_0/\varepsilon$ and converges to an opposite-sign
+ equilibrium.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+The function $-\gamma y^3+\mu$ is positive below $r_\mu$ and negative above
+it, giving global bounded forward motion and convergence.  In the negative
+branch,
+\[
+ \dot y=-\gamma y^3-\varepsilon\leq-\varepsilon
+ \qquad (y\geq0),
+\]
+so comparison with $y_0-\varepsilon t$ gives the crossing bound.
+\end{proof}
+
+This is stronger than a symmetry-breaking counterexample.  It preserves the
+full token-aware reflection covariance.  Reflection forces corresponding
+oriented boundary velocities to transport together; it does not force them to
+be nonnegative and cannot select among the inward, tangent, and outward laws.
+
+\section{What structural component protection requires}
+
+\begin{theorem}[Tangency and inward-margin boundary]
+\label{thm:tangency}
+Let $\dot y=f(y)$ be a globally forward-complete scalar law with locally
+Lipschitz $f$.
+\begin{enumerate}
+ \item If $f(0)=0$, uniqueness prevents a trajectory beginning at $y_0>0$
+ from reaching zero at finite time.  Thus $y>0$ is invariant inside the
+ class of laws that preserves exact boundary tangency.
+ \item If $f(0)<0$, continuity gives a neighborhood of zero in which the
+ field is strictly outward; all sufficiently small positive initial states
+ cross zero in finite time.
+ \item If $f(0)>0$, continuity gives a positive inward margin near zero.
+ Every sufficiently small uniform perturbation on that boundary neighborhood
+ retains a positive inward direction, so no positive trajectory can cross to
+ the negative side.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+For the first branch, a finite first hitting time would give a solution
+through zero that is nonzero immediately before the hit.  Local uniqueness
+for the initial condition at the hit contradicts the constant zero solution.
+The second and third branches follow by continuity and the first-crossing
+argument: a crossing must traverse a neighborhood in which the field has the
+stated strict sign.
+\end{proof}
+
+The fixed cubic field has $f(0)=0$ but no positive inward margin.  Exact
+tangency protects its declared law; it is not open under the independently
+admissible perturbations of Theorem~\ref{thm:equivariance}.  A robust repair
+would therefore need either an independently source-derived restriction to a
+tangency-preserving law class or a source-derived strictly inward boundary
+margin.  Neither is present in the current ontology or fixed candidate.
+
+\section{Off-family and token-persistence stresses}
+
+\subsection{Transverse coupling}
+
+Extend the control state by $z\in\R$ and set
+\begin{equation}
+ \dot a=-\gamma a^3+\varepsilon z,
+ \qquad \dot z=0,
+ \label{eq:transverse-coupling}
+\end{equation}
+with reflection $(a,z,\sigma)\mapsto(-a,-z,-\sigma)$.  On the source slice
+$z=-\sigma$, equation~\eqref{eq:transverse-coupling} is exactly the outward
+$\mu=-\varepsilon$ countermodel.  On every bounded $z$ domain, the coupling
+and its first derivative are arbitrarily small as $\varepsilon\to0$.
+The failure also occurs arbitrarily near the embedded $z=0$ sheet: with
+$\gamma=1$, $\varepsilon=1/N$, $z_0=-\sigma/N$, and
+$\sigma a_0=1/N^2$, the oriented law obeys
+$\dot y=-y^3-1/N^2$ and crosses by time one, while both the initial transverse
+distance and the compact-open $C^1$ field difference tend to zero.
+
+A complementary lift keeps the amplitude law fixed but uses
+\[
+ \dot z=\varepsilon\sigma.
+\]
+The lifted domain $\{\sigma a>0,\ |z|<\rho\}$ is exited through its transverse
+boundary in finite time while the amplitude remains in its selected component.
+Thus the exact one-mode theorem does not lift to a full source state without
+an independently specified full-state admissibility and viability law.
+
+\subsection{Token erasure, reversal, and flips}
+
+Erasing $\sigma$ returns the exact two-component nonselection proved in RT003.
+Replacing $\sigma$ by $-\sigma$ while holding $a$ fixed changes the declared
+selected component without a source event that explains the change.
+
+For a symmetric two-state token process with flip rate $\kappa>0$, let the
+amplitude follow the fixed cubic flow between flips.  Starting with
+$\sigma a>0$, the first token flip exits the selected set because the
+amplitude sign does not change simultaneously.  Therefore
+\[
+ \Pr(\hbox{selected through }T)=e^{-\kappa T},
+ \qquad
+ \Pr(\hbox{exit by }T)=1-e^{-\kappa T}.
+\]
+Every positive rate, however small, gives eventual exit probability one.
+This is a source-local persistence stress, not empirical evidence.  It shows
+that the static token does not itself supply a token-persistence law.
+In a discrete control with flip probability $p>0$, uninterrupted survival
+through $n$ steps is $(1-p)^n$, whereas selected-sheet occupancy at step $n$
+is $[1+(1-2p)^n]/2$.  A later even-parity return is therefore not pathwise
+viability.  For either positive symmetric flip rate, the joint stationary law
+is $\delta_0$ times the uniform token law, still supported off the selected
+open set.
+
+\section{Finite viability, asymptotic margin, and occurrence}
+
+For the exact fixed field and $a_0\neq0$,
+\[
+ a(t)^2=\frac{a_0^2}{1+2\gamma t a_0^2}.
+\]
+Substitution into the normalized barrier gives the exact identity
+\begin{equation}
+ b_\sigma(a(t))^2
+ =\frac{1}{1+a_\star^2/a_0^2+2\gamma a_\star^2t}.
+ \label{eq:barrier-decay}
+\end{equation}
+It is positive at every finite time and tends to zero.  With
+$C=1+a_\star^2/a_0^2$ and $\beta=2\gamma a_\star^2$, its time average is
+\[
+ \frac1T\int_0^T b_\sigma(a(t))^2\,dt
+ =\frac{1}{\beta T}\log\!\left(\frac{C+\beta T}{C}\right)
+ \longrightarrow0.
+\]
+This sharpens rather than contradicts finite-path viability: no persistent
+positive asymptotic margin is obtained.
+
+The perturbation family also classifies stationary occurrence.  Define
+$V_\mu(y)=(y-r_\mu)^2$.  Along equation~\eqref{eq:y-family},
+\begin{equation}
+ \dot V_\mu
+ =-2\gamma(y-r_\mu)^2(y^2+yr_\mu+r_\mu^2),
+ \label{eq:lyapunov}
+\end{equation}
+which is strictly negative away from $r_\mu$.  A bounded monotone transform of
+$V_\mu$ shows that the only invariant Borel probability is $\delta_{r_\mu}$.
+Its support is selected only for $\mu>0$, lies on the excluded boundary for
+$\mu=0$, and lies opposite the selected component for $\mu<0$.  Arbitrarily
+nearby reflection-equivariant laws therefore give incompatible stationary
+occurrence statuses.  Source purity and token covariance choose none of them.
+
+\section{Scoped obstruction and freeze}
+
+\begin{obstruction}[Candidate-local robustness obstruction]
+The unchanged candidate does not provide a perturbatively robust source-side
+component selector or a full-state viability bridge.  The failed premise is
+the absence of an independently source-derived boundary-tangency class or
+positive inward margin, token-persistence law, and full-state admissibility
+primitive.  The minimal family~\eqref{eq:mu-family} is a concrete countermodel.
+\end{obstruction}
+
+The decisive Refuter classification is exactly
+\begin{center}
+\status{scoped\_obstruction}.
+\end{center}
+The candidate is locally frozen under
+\begin{center}
+\path{NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS}.
+\end{center}
+The freeze blocks replay of the unchanged proposal as a standalone robust
+P4--T02 selector or viability bridge.  It does not block exact-model or
+diagnostic use, a materially distinct source law with independently justified
+protection, a token-persistence or full-state construction, a source-side
+irrelevance theorem, or a protected human-gated ontology decision.
+
+The following inherited freezes remain active and untouched:
+\begin{itemize}
+ \item \path{NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR};
+ \item \path{NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS};
+ \item \path{NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION};
+ \item \path{NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS}.
+\end{itemize}
+
+\section{Distance-to-GR matrix}
+
+\begin{longtable}{P{0.27\linewidth}P{0.63\linewidth}}
+\toprule
+Burden & Status after RT005 \\
+\midrule
+\endfirsthead
+\toprule
+Burden & Status after RT005 \\
+\midrule
+\endhead
+Source ontology primitives & No inward-margin, tangency-protection, token-persistence, or full-state viability primitive is derived or adopted.  No delta.\\
+Source equivalence $\mathsf{EqSrc}$ & Reflection-equivariant perturbations expose fragility; reflection is not adopted physical equivalence.  No delta.\\
+$\mathsf{RetainH}$ & No retention primitive or theorem is supplied.  No delta.\\
+$\mathsf{GenH}$ & The cubic generator remains proposal-only and its boundary behavior is not source-protected.  No delta.\\
+$\mathsf{ObsLoc}_{lc}$ & No observer-localization or operational readout map is supplied.  No delta.\\
+$\mathsf{Resp}_{lc}$ & Tokens, barriers, viability, and invariant measures are not empirical responses.  No delta.\\
+$M_{\mathrm{src}}$ & The amplitude line and transverse controls are not an adopted physical source manifold.  No delta.\\
+$g_{\mathrm{eff}}$ & No physical cone, conformal class, scale, or effective metric is constructed.  No delta.\\
+Matter coupling & No universal matter sector or coupling law is derived.  No delta.\\
+Einstein equations & No action, stress energy, variation principle, or field equation is supplied.  No delta.\\
+Finite-variation robustness & The unchanged candidate fails an arbitrarily small reflection-equivariant drift and off-family lift stress.  No delta.\\
+Benchmark promotion & No exact-GR comparison, benchmark test, or promotion occurs.  No delta.\\
+Gate Chair status & No protected adoption, activation, disposition, or verdict occurs.  No delta.\\
+Route freeze or hard-fail & Four inherited freezes remain active and the unchanged candidate is locally frozen only as a standalone robust bridge.  No delta.\\
+\bottomrule
+\end{longtable}
+
+\section{Next bounded decision}
+
+The packet selects, but does not execute,
+\begin{flushleft}
+\small\ttfamily
+PKT-V22-P4T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-\\
+THEORETICAL-CONTINUATION-SELECTION-V1.
+\end{flushleft}
+Its packet type and execution role are, respectively,
+\begin{center}
+\small
+\path{theoretical_continuation_selector}\\
+\path{theoretical-continuation-selector@0.1.0}.
+\end{center}
+It must choose among a
+materially distinct source-derived inward-margin or tangency-protection law,
+a token-persistence/full-state construction, a source-side irrelevance theorem,
+a genuinely distinct scoped obstruction, or a protected human-gated ontology
+route.  It may not replay any of the five frozen candidates.
+
+\section{Explicit non-conclusions}
+
+This packet does not:
+\begin{itemize}
+ \item invalidate the fixed finite-path theorem or RT004's narrow source-purity verdict;
+ \item adopt, reject, or modify canonical ontology or a source law;
+ \item establish P7 sector coverage, reevaluate D7, or activate, dispose, or validate B2;
+ \item derive a physical token, time orientation, causality, occurrence probability, response, scale, or gauge;
+ \item unlock P4--T03 or construct conformal geometry, $g_{\mathrm{eff}}$, matter coupling, an action, stress energy, or Einstein equations;
+ \item prove a global no-go or future source-extension impossibility;
+ \item create Gate Chair, proof, benchmark, publication, release, push, external-action, or completed-derivation authority.
+\end{itemize}
+
+\end{document}

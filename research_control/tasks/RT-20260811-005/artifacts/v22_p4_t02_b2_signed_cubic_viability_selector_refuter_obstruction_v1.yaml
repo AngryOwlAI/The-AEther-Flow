@@ -1,0 +1,77 @@
+schema_id: "refuter_obstruction_record_v1"
+task_id: "RT-20260811-005"
+job_id: "AJ-RT-20260811-005-001"
+result_class: "scoped_obstruction"
+refuter_obstruction_record:
+  obstruction_id: "OB-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS-001"
+  target_claim: "The unchanged SignedCubicViabilitySelector_v1 supplies a perturbatively robust source-side component selector and viability law sufficient to continue P4-T02 beyond its exact one-mode family."
+  target_milestone: "effective_metric_g_eff"
+  failed_premise: "No source-derived boundary-tangency class, positive inward margin, token-persistence law, or full-state viability primitive excludes arbitrarily small reflection-equivariant source-local perturbations that drive the selected state across its boundary."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "Missing independent source certificate for boundary tangency or positive inward margin, token persistence, and full-state viability under independently admissible perturbations."
+  source_extension_repair_possible: "repair_possible"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "locally_frozen"
+    active_freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    decision_reason: "An arbitrarily small reflection-equivariant token-aware drift destroys the selected open component while all fixed theorems remain true at the unperturbed point. Replaying the unchanged candidate cannot supply the missing robustness primitive."
+    freeze_scope: "The unchanged candidate as a standalone robust P4-T02 selector or viability bridge. Exact-model and diagnostic use remain open."
+    next_allowed_route: "theoretical_continuation_selector"
+    global_theory_rejection: false
+    future_source_extension_impossibility: false
+  route_cycle_control:
+    cycle_family: "p4_t02_b2_signed_cubic_viability_selector"
+    current_cycle_step: "source_extension_refuter_stress"
+    prior_related_tasks:
+      - "RT-20260811-002"
+      - "RT-20260811-003"
+      - "RT-20260811-004"
+    cycle_risk: "high"
+    orbit_avoidance_reason: "The packet adds a new exact boundary-bifurcation countermodel, freezes only unchanged standalone replay, and routes to a selector rather than another generic formalization."
+    next_role_consequence: "theoretical-continuation-selector@0.1.0"
+    successor_packet_id: "PKT-V22-P4T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+    successor_executed: false
+  forbidden_conclusions:
+    - "The fixed conditional finite-path theorem is not false on its declared domain."
+    - "The RT004 narrow source-purity verdict is not revoked."
+    - "No canonical ontology or source law is adopted or rejected."
+    - "No P7 sector coverage or D7 adequacy is established or reevaluated."
+    - "No B2 activation adoption rejection disposal viability adequacy or sufficiency follows."
+    - "No physical causality empirical response time orientation or probability occurrence follows."
+    - "No P4-T03 conformal reconstruction or physical scale is unlocked."
+    - "No effective metric matter coupling Einstein equation or benchmark recovery follows."
+    - "No Gate Chair proof publication push or external-action authority follows."
+    - "No program-wide no-go conclusion follows."
+    - "No future source-extension impossibility follows."
+
+countermodel_family:
+  family_id: "CM-V22-P4T02-B2-SIGNED-CUBIC-BOUNDARY-BIFURCATION-001"
+  state: "a in R and sigma in {+1,-1}"
+  fixed_field: "F_{sigma,0}(a)=-gamma*a^3"
+  perturbed_field: "F_{sigma,mu}(a)=-gamma*a^3+mu*sigma"
+  selected_coordinate: "y=sigma*a"
+  selected_dynamics: "ydot=-gamma*y^3+mu"
+  reflection_law: "F_{-sigma,mu}(-a)=-F_{sigma,mu}(a)"
+  perturbation_distance: "sup_a |F_{sigma,mu}-F_{sigma,0}|=|mu| and every positive-order derivative difference is zero"
+  exact_branches:
+    - condition: "mu<0"
+      result: "every selected y0>0 crosses zero and converges to the opposite-sign equilibrium real_cuberoot(mu/gamma)"
+    - condition: "mu=0"
+      result: "every selected finite-time state remains selected but converges to the excluded boundary zero"
+    - condition: "mu>0"
+      result: "the selected half-line is inward-protected and converges to the selected equilibrium real_cuberoot(mu/gamma)"
+
+freeze_and_authority:
+  inherited_freeze_count: 4
+  new_candidate_local_freeze_count: 1
+  total_active_freeze_count: 5
+  adoption_status: "blocked_adoption_open_continuation"
+  distance_to_gr_effect: "no_distance_delta"
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false

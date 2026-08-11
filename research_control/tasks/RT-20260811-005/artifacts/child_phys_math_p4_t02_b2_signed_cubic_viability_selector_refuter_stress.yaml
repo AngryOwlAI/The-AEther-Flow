@@ -1,0 +1,575 @@
+schema_id: "child_phys_math_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-001"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260811-005"
+job_id: "AJ-RT-20260811-005-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+execution_role_ref: "refuter@0.2.0--RT-20260811-005"
+authority: "science_draft"
+status: "completed"
+status_label: "draft/control"
+candidate_id: "CAND-V22-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1"
+candidate_law_name: "SignedCubicViabilitySelector_v1"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+packet_id: "PKT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-REFUTER-STRESS-V1"
+claim_boundary_id: "CB-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-001"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Test whether the fixed source-pure syntax supplies any robust selector or viability law beyond its exact one-mode family."
+missing_source_law: "source_derived_boundary_anchoring_token_persistence_and_full_state_viability_robustness_law"
+refuter_result_class: "scoped_obstruction"
+exact_refuter_result_count: 1
+
+decisive_verdict:
+  result_type: "scoped_obstruction"
+  obstruction_id: "OB-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS-001"
+  scope: "source_extension_candidate"
+  statement: "The fixed cubic flow, normalized barrier, finite-path viability theorem, reflection transport, regraduation covariance, and narrow RT004 source_pure_as_written verdict all survive exactly. They do not extend to a source-derived robust selector law: reflection equivariance equates the two oriented boundary velocities but leaves their common sign free; an arbitrarily small token-aware drift can therefore point outward, an arbitrarily small transverse lift can reproduce the same crossing, and erasure, reversal, or stochastic flips destroy token persistence."
+  fixed_candidate_theorem_refuted: false
+  rt004_source_purity_verdict_reversed: false
+  candidate_sufficiency_beyond_exact_one_mode_family_refuted: true
+  p4_t02_burden_discharged: false
+  no_fog_check: true
+
+canonical_metadata:
+  obstruction_id: "OB-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS-001"
+  candidate_local_freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  successor_packet_id: "PKT-V22-P4T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  successor_packet_type: "theoretical_continuation_selector"
+  successor_role: "theoretical-continuation-selector@0.1.0"
+  convergence_status: "converged"
+
+blocking_conflict:
+  present: false
+  count: 0
+  description: "No mathematical, metadata, ownership, or authority conflict blocks this child result. The canonical obstruction, freeze, and successor identities match the parent convergence instruction."
+
+execution_controls:
+  independent_agentjob_created: false
+  child_agentjob_created: false
+  subagent_used: false
+  candidate_reconstructed: false
+  candidate_repaired: false
+  predecessor_file_modified: false
+  file_ownership_respected: true
+  sole_written_path: "research_control/tasks/RT-20260811-005/artifacts/child_phys_math_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.yaml"
+  successor_executed: false
+  external_source_used: false
+  generated_retrieval_authority_used: false
+
+job_baseline:
+  source_head: "4483b8debf73f1d2492e14ca779ded75d48efd85"
+  source_tree: "feb469b8ce7629488200c6f5be7004c4781b61db"
+  prerequisite_checkpoint: "4483b8debf73f1d2492e14ca779ded75d48efd85"
+  baseline_use: "Immutable job admission identity only; no claim that the concurrent working tree is clean."
+
+inspected_sources:
+  - path: "SOUL.md"
+    sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+    use: "Mandatory scientific honesty, exact-mathematics, scope, and verification discipline."
+  - path: "AGENTS.md"
+    sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+    use: "Repository authority hierarchy, source-extension status, and no-promotion controls."
+  - path: "research_control/AGENTS.md"
+    sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+    use: "Bounded child ownership and research-control immutability."
+  - path: ".codex/skills/continue-research/SKILL.md"
+    sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+    use: "Single-AgentJob execution, freeze discipline, source boundaries, and child synthesis rules."
+  - path: "research_control/tasks/RT-20260811-005/00_TASK.yaml"
+    sha256: "4ac031d699e5eecb1308776b278a3a95d62aec2ecfbe1509ce15e3e03706703a"
+    use: "Active RT005 objective, stress branches, claim boundary, and completion conditions."
+  - path: "research_control/tasks/RT-20260811-005/DDR-20260811-005.md"
+    sha256: "e3cabf25e99def009b784edbeb34b2f75ffbfe2424a31ce1c7ca99a41ccfa461"
+    use: "RT005 rationale, fixed candidate boundary, and robustness question."
+  - path: "research_control/tasks/RT-20260811-005/jobs/AJ-RT-20260811-005-001.yaml"
+    sha256: "db09b761e1d7816cd4c7e250108755175ce8d85cb44e2dffaccd9833be1ad9d0"
+    use: "Exact job authority, assumptions, source hashes, four inherited freezes, output ownership, and downstream blocks."
+  - path: ".agents/roles/physics/refuter.v0.2.0.md"
+    sha256: "01b7897ecf5861d952d7349e3eb743feed6f178112264de73f5226d3c88946fc"
+    use: "Permitted result classes, new-payload rule, local obstruction scope, and freeze requirement."
+  - path: "research_control/tasks/RT-20260811-005/roles/refuter@0.2.0--RT-20260811-005.yaml"
+    sha256: "926c76a5d96a3bccd0ab1afe19aa9556f5a4d3b6c43137fb85ffb9e6e3246d67"
+    use: "Task-local Refuter authority and removed repair, adoption, adequacy, Gate, and promotion permissions."
+  - path: "research_control/handoffs/handoff-1018.yaml"
+    sha256: "bd3f3ae9bcb4146fb4c26baae41b15f31c294a6fec27176ccea17ed053b7eaec"
+    use: "Immutable selected packet, fixed candidate hashes, four freezes, and downstream locks."
+  - path: "research_control/handoffs/handoff-1018.md"
+    sha256: "d782ad74acd0a12c996cd189ccd9ab4b30c5ae45aff5b45bd66953eea299a6e8"
+    use: "Human-readable handoff scope and required stress distinctions."
+  - path: "research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_law_v1.tex"
+    sha256: "14c229daccb45faabff0a2f3fe264459e2f54302ae514a1f0820ca30c0984edc"
+    use: "Fixed candidate definitions, finite-path theorems, reflection transport, regraduation, and explicit nonclaims."
+  - path: "research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_spec_v1.yaml"
+    sha256: "f990e4e6048b268545e3f818a2088d7951d13c2310e0a113e018b3c39fa2af0e"
+    use: "Typed roots, maps, proof obligations, failure branches, and source-extension classification."
+  - path: "research_control/tasks/RT-20260811-004/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_source_extension_smuggling_audit_v1.tex"
+    sha256: "a3a798bd2e45a52da3702624f9cd3c5c5d508021bf721b680aa47d3e27b0bfc5"
+    use: "Narrow source_pure_as_written verdict, dimensionless reduction, reachability, asymptotics, and invariant-measure theorem."
+  - path: "research_control/tasks/RT-20260811-004/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_smuggling_matrix_v1.yaml"
+    sha256: "90c2993a4411f3601388207d117b128201866542da89beff7e51b33553664a79"
+    use: "Twelve audit dimensions, proposal-root debt, and no-delta boundary."
+  - path: "research_control/tasks/RT-20260811-004/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_smuggling_disposition_v1.yaml"
+    sha256: "50ceb4d3080ebb2788dafd06ae580ddec70cec09747e72854b6d2ad5a380ffda"
+    use: "Committed audit disposition and selected first Refuter stress."
+  - path: "research_control/tasks/RT-20260811-004/artifacts/parent_fusion_notes_p4_t02_b2_signed_cubic_viability_selector_smuggling_audit.md"
+    sha256: "217d42b007c4dc9b63bcfdb00b3da40ff674865ec50adc6b62d08ca281fa8b25"
+    use: "Fused fixed mathematics, source-purity scope, four freezes, and future stress boundary."
+  - path: "research_control/tasks/RT-20260811-004/artifacts/parent_conflict_review_p4_t02_b2_signed_cubic_viability_selector_smuggling_audit.yaml"
+    sha256: "c8574cd4f07640deeb0c7a6499dc6e4d2e480f386b192433523fde31f7ca13a1"
+    use: "Resolved RT004 child precision and canonical predecessor consensus."
+  - path: "research_control/design/gr_derivation_burden_map.md"
+    sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    use: "Target milestone, fourteen Distance-to-GR burdens, source-extension rules, and freeze controls."
+  - path: "research_control/design/refuter_obstruction_schema_v1.md"
+    sha256: "2045fc2a2895ac02f04dbd87be3e60c66497ec599e4f756fc92afd6ede36b7fe"
+    use: "Required candidate-scoped obstruction record and protected global-conclusion defaults."
+  - path: "research_control/design/obstruction_and_freeze_control.md"
+    sha256: "42f07f733d3d28beaef78c1d8509ef97d4bb7bdda36ef21eb06375600d175d57"
+    use: "Local-freeze decision, route-cycle fields, and no-global-rejection discipline."
+  - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    use: "P4-T02 robustness screen, P4-T03 dependency lock, and final forbidden conclusions."
+  - path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py"
+    sha256: "72774b14ab4edf1064dda70c74777e76743997187ad8172a4eafcac2edc4b310"
+    use: "Live parent exact-rational model independently inspected and executed with nine of nine checks passing."
+
+source_inventory_summary:
+  inspected_source_count: 23
+  every_recorded_hash_reverified_before_write: true
+  fixed_candidate_hash_match: true
+  fixed_audit_hash_match: true
+  external_source_count: 0
+
+fixed_predecessor_preservation:
+  rt003_candidate_bytes_held_fixed: true
+  rt004_audit_bytes_held_fixed: true
+  rt004_verdict: "source_pure_as_written"
+  rt004_verdict_scope: "Absence of literal target, physical, empirical, benchmark, frozen-route, or workflow-authority premises in the fully disclosed proposal-only syntax."
+  rt004_verdict_preserved: true
+  source_purity_implies_robustness: false
+  source_purity_implies_current_ontology_derivation: false
+  source_purity_implies_adoption: false
+  conditional_results_preserved:
+    cubic_forward_semiflow: true
+    normalized_barrier_one_step_bound: true
+    exact_finite_path_viability_kernel: true
+    token_indexed_component_selection: true
+    occurrence_viability_independence: true
+    reflection_transport_of_candidate_pair: true
+    positive_regraduation_covariance: true
+    frozen_route_nonfactorization: true
+    complete_dimensionless_modulus_H: true
+    same_sign_finite_reachability: true
+    sharp_finite_n_step_factor: true
+    full_line_invariant_probability_delta_zero: true
+  fixed_candidate_theorem_refuted: false
+  candidate_definition_changed: false
+
+formal_setup:
+  fixed_source_state: "X_src=Q_amp identified with R through q_a<->a."
+  lifted_token_state: "E=R x {+1,-1} with reflection J(a,sigma)=(-a,-sigma)."
+  selected_lifted_domain: "A={(a,sigma):y=sigma*a>0}."
+  fixed_vector_field: "F_0(a,sigma)=-gamma*a^3 with gamma>0."
+  fixed_flow: "phi_t(a)=a/sqrt(1+2*gamma*t*a^2)."
+  fixed_successor_relation: "R_Delta(a)={phi_t(a):0<=t<=Delta}, Delta>0."
+  fixed_barrier: "b_sigma(a)=sigma*a/sqrt(a_star^2+a^2), a_star>0."
+  oriented_coordinate: "y=sigma*a, so the fixed field is y_dot=-gamma*y^3."
+  admitted_drift_family: "F_mu(a,sigma)=-gamma*a^3+mu*sigma, with target-free source parameter mu."
+  drift_reflection_law: "F_mu(-a,-sigma)=-F_mu(a,sigma)."
+  drift_oriented_field: "y_dot=-gamma*y^3+mu."
+  transverse_state: "E_tilde=R^2 x {+1,-1}, coordinates (a,z,sigma), reflection (a,z,sigma)->(-a,-z,-sigma)."
+  transverse_field: "G_kappa(a,z,sigma)=(-gamma*a^3+kappa*z,0)."
+  stochastic_token_kernel: "After a sign-preserving amplitude step, sigma flips independently with probability p and remains fixed with probability 1-p."
+  excluded_inputs:
+    - "target atlas, metric, tetrad, coframe, desired GR cone, physical clock, or target normalization"
+    - "empirical response, detector semantics, calibration, or benchmark success"
+    - "shared tau, repaired Q_ray, common-character or holonomy, or oriented-matroid frozen-route output"
+    - "registry, role, validator, checkpoint, or generated derivative as scientific premise"
+
+stress_branch_results:
+  - branch_id: "STRESS-01-TOTALITY-VERSUS-SELECTION"
+    required_branch: "totality and selector robustness"
+    local_result: "totality_survives_selection_fails_for_negative_mu"
+    exact_evidence: "For every real mu, r=cuberoot(mu/gamma) is the unique equilibrium of y_dot=-gamma*(y^3-r^3). The field points toward r, so every forward solution is bounded and total. For mu<0, however, every y_0>0 crosses y=0 in finite time."
+    fixed_candidate_effect: "No fixed theorem is refuted; totality does not imply selected-component viability."
+  - branch_id: "STRESS-02-ARBITRARILY-SMALL-TOKEN-AWARE-DRIFT"
+    required_branch: "arbitrarily small reflection-equivariant token-aware drift"
+    local_result: "exact_component_crossing_counterfamily"
+    exact_evidence: "Set gamma=1 and eta_N=N^(-3). The field F_N^-(a,sigma)=-a^3-eta_N*sigma is reflection-equivariant and has global C0 distance eta_N from F_0, with all continuous-state derivative differences zero. From y_0=eta_N, y_dot=-y^3-eta_N<=-eta_N while y>=0, so crossing occurs by t<=1; the exact attracting equilibrium is y=-1/N."
+    fixed_candidate_effect: "The exact mu=0 flow remains valid, but it has no two-sided structural-stability neighborhood in the admitted drift class."
+  - branch_id: "STRESS-03-OFF-FAMILY-TRANSVERSE-MODE"
+    required_branch: "one transverse source mode"
+    local_result: "one_mode_viability_does_not_lift_without_full_state_primitive"
+    exact_evidence: "For gamma=1, G_kappa=(-a^3+kappa*z,0) is reflection-equivariant. Let kappa=1/N, z_0=-sigma/N, and y_0=sigma*a_0=1/N^2. Then z is constant and y_dot=-y^3-1/N^2, so y crosses zero by t<=1. The initial state is 1/N from the z=0 sheet; on each compact |z|<=R, the field-value perturbation is at most R/N and its only new first derivative is 1/N."
+    fixed_candidate_effect: "The candidate states no theorem on E_tilde; this is an exact failure of a universal full-state lift, not a contradiction of its one-dimensional result."
+  - branch_id: "STRESS-04-TOKEN-ERASURE"
+    required_branch: "token erasure"
+    local_result: "exact_two_component_nonselection_survives"
+    exact_evidence: "After forgetting sigma, the unsigned cubic flow preserves both nonempty components C_+ and C_- and reflection exchanges them. No component identity is selected by the unchanged unsigned dynamics."
+    fixed_candidate_effect: "This preserves the RT003 occurrence-versus-viability independence theorem."
+  - branch_id: "STRESS-05-TOKEN-REVERSAL"
+    required_branch: "deterministic token reversal"
+    local_result: "immediate_selector_exit"
+    exact_evidence: "The source-local map rho(a,sigma)=(a,-sigma) commutes with reflection J and sends every selected state with sigma*a>0 to a state with (-sigma)*a<0 while leaving amplitude unchanged."
+    fixed_candidate_effect: "A supplied token selects only while a separate law preserves it."
+  - branch_id: "STRESS-06-STOCHASTIC-TOKEN-FLIP"
+    required_branch: "symmetric stochastic token flips"
+    local_result: "almost_sure_viability_and_persistence_fail"
+    exact_evidence: "For 0<p<=1, a selected state exits on the next step with probability p. The probability of never exiting through n steps is (1-p)^n, while the probability of occupying the selected sheet at step n is (1+(1-2p)^n)/2. The distinction prevents a later even-parity return from being miscounted as uninterrupted viability."
+    fixed_candidate_effect: "No probability law was part of the candidate; this stress exposes the missing token-persistence primitive without importing empirical semantics."
+  - branch_id: "STRESS-07-FINITE-VERSUS-ASYMPTOTIC-VIABILITY"
+    required_branch: "finite versus asymptotic viability"
+    local_result: "finite_theorem_survives_no_uniform_asymptotic_margin"
+    exact_evidence: "For an admitted path with cumulative time T_n=sum_j t_j, y_n=y_0/sqrt(1+2*gamma*T_n*y_0^2)>0 at every finite n. If T_n tends to infinity, y_n and b_sigma(a_n) tend to zero; the sharp worst-case n-step factor Lambda_n=(1+2*n*gamma*Delta*a_star^2)^(-1/2) also tends to zero."
+    fixed_candidate_effect: "Exact finite-path viability is preserved; closed limiting viability and an n-independent positive barrier margin do not follow."
+  - branch_id: "STRESS-08-INVARIANT-PROBABILITY"
+    required_branch: "invariant probability"
+    local_result: "no_stationary_occurrence_on_selected_open_component"
+    exact_evidence: "For every fixed t_0>0, phi_t0^n(a) tends pointwise to zero. Invariance plus dominated convergence for bounded continuous tests forces every invariant Borel probability on R to be delta_0, which gives U_sigma zero mass. With any symmetric flip probability p>0, the unique joint invariant law is delta_0 times the uniform token law, again supported off A."
+    fixed_candidate_effect: "The RT004 invariant-measure consequence survives and blocks probability-occurrence overread."
+  - branch_id: "STRESS-09-BOUNDARY-TANGENCY-AND-INWARD-MARGIN"
+    required_branch: "exact boundary tangency and inward-margin robustness"
+    local_result: "reflection_does_not_anchor_or_orient_boundary_velocity"
+    exact_evidence: "For any reflection-equivariant lifted field F, v_sigma=sigma*F(0,sigma) satisfies v_+=v_-, but symmetry imposes no sign. In the exact family v=mu: mu>0 is strictly inward and preserves A, mu=0 is tangent and preserves A only under the exact anchored locally Lipschitz law, and mu<0 is outward and crosses."
+    fixed_candidate_effect: "The candidate sits at zero inward margin; robustness requires either a derived anchoring restriction F(0,sigma)=0 or a positive margin stable over a declared perturbation class."
+  - branch_id: "STRESS-10-P4-T02-BRIDGE-RELEVANCE"
+    required_branch: "relevance to the active P4-T02 burden and frozen-route independence"
+    local_result: "source_sign_component_certificate_is_not_a_physical_common_cone_certificate"
+    exact_evidence: "The candidate contains no sector principal polynomial, common hyperbolicity cone, physical time orientation, response semantics, or full-state finite-variation law. None of the four frozen route outputs occurs in the countermodels or conclusions."
+    fixed_candidate_effect: "No D7, B2, P4-T03, g_eff, matter-coupling, or Einstein-equation consequence follows."
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT20260811-005-CHILD-MATH-001"
+    payload_type: "reflection_boundary_velocity_quotient_lemma"
+    name: "Reflection equivariance identifies sheet velocities but does not choose their sign"
+    statement: "Let F:R x {+1,-1}->R obey F(-a,-sigma)=-F(a,sigma), and define v_sigma=sigma*F(0,sigma). Then v_+=v_-. Conversely every real v occurs in the reflection-equivariant family F_mu=-gamma*a^3+mu*sigma with v=mu."
+    proof: "At a=0, equivariance gives F(0,-sigma)=-F(0,sigma), hence (-sigma)F(0,-sigma)=sigma F(0,sigma). The displayed family realizes arbitrary mu."
+    barrier_consequence: "Writing b(y)=y/sqrt(a_star^2+y^2), b_dot=a_star^2*(-gamma*y^3+mu)/(a_star^2+y^2)^(3/2), so b_dot at y=0 is mu/a_star. The source reflection therefore protects equality across token sheets but supplies neither anchoring nor inward orientation."
+    novelty_relative_to_rt003_rt004: "RT003 proved reflection transport and RT004 proved token nonselection; this lemma isolates the exact scalar boundary datum that those symmetries leave free."
+  - payload_id: "NMP-RT20260811-005-CHILD-MATH-002"
+    payload_type: "exact_rational_structural_instability_counterfamily"
+    name: "Total reflection-equivariant wall crossing at arbitrarily small drift"
+    construction: "At gamma=1 choose N>=1, eta_N=1/N^3, F_N^-(a,sigma)=-a^3-eta_N*sigma, and y_0=eta_N."
+    exact_checks:
+      reflection_equivariance: "F_N^-(-a,-sigma)=-F_N^-(a,sigma)."
+      perturbation_size: "sup_{a,sigma}|F_N^--F_0|=eta_N and every derivative difference with respect to a is zero."
+      finite_crossing: "While y>=0, y_dot=-y^3-eta_N<=-eta_N; therefore the first crossing time is at most y_0/eta_N=1."
+      totality: "The unique equilibrium is -1/N and the scalar field points toward it, so every forward orbit remains bounded and is global."
+      exact_rationality: "eta_N, y_0, and the equilibrium are rational for every positive integer N."
+    consequence: "There is no open compact-C1 or global-C0 neighborhood of the fixed field within the admitted token-aware reflection-equivariant class on which selected-component viability follows from symmetry alone."
+    scope: "source_extension_candidate"
+  - payload_id: "NMP-RT20260811-005-CHILD-MATH-003"
+    payload_type: "off_family_transverse_near_sheet_counterfamily"
+    name: "Arbitrarily near transverse states reproduce the outward drift"
+    construction: "At gamma=1 take G_N(a,z)=(-a^3+z/N,0), z_0=-sigma/N, and sigma*a_0=1/N^2."
+    exact_checks:
+      reflection_equivariance: "G_N(-a,-z)=-G_N(a,z)."
+      near_sheet_state: "|z_0|=1/N tends to zero."
+      compact_field_convergence: "On |z|<=R the value difference from (-a^3,0) is at most R/N and the new z derivative is 1/N."
+      crossing: "The oriented amplitude satisfies y_dot=-y^3-1/N^2 and crosses by t<=1."
+    consequence: "The one-mode theorem has no automatic full-state viability lift even arbitrarily near the embedded amplitude sheet."
+    scope: "source_extension_candidate"
+  - payload_id: "NMP-RT20260811-005-CHILD-MATH-004"
+    payload_type: "token_flip_survival_and_stationarity_theorem"
+    name: "Uninterrupted viability differs from later sheet occupancy"
+    statement: "Under independent symmetric token flips with probability p>0, uninterrupted survival through n steps is (1-p)^n, whereas selected-sheet occupancy at step n is (1+(1-2p)^n)/2. The unique invariant joint probability is delta_0 times the uniform token distribution."
+    proof: "Uninterrupted survival forbids every flip; endpoint occupancy asks for even flip parity. The amplitude marginal of an invariant law is delta_0 by contraction, and the two-state flip kernel has the unique stationary uniform distribution for p>0."
+    consequence: "Neither reflection symmetry nor eventual return supplies token persistence, pathwise viability, or probability occurrence inside A."
+    scope: "source_extension_candidate"
+
+edge_case_audit:
+  - edge_case: "mu_positive"
+    result: "The unique equilibrium r=(mu/gamma)^(1/3) lies in y>0; the boundary is strictly inward and every selected orbit remains selected. This proves failure is not asserted for every perturbation."
+  - edge_case: "mu_zero"
+    result: "The exact candidate is tangent at y=0 and locally Lipschitz; positive states approach but do not reach zero in finite time."
+  - edge_case: "mu_negative"
+    result: "Every selected orbit crosses in finite time and converges to the unique opposite-sheet equilibrium."
+  - edge_case: "zero_flip_probability"
+    result: "At p=0 the token is persistent and the stochastic stress reduces to the fixed-token candidate."
+  - edge_case: "deterministic_flip"
+    result: "At p=1 the state exits on the first token update; endpoint occupancy alternates, but uninterrupted viability has already failed."
+  - edge_case: "finite_cumulative_time"
+    result: "An infinite step sequence with bounded cumulative time can retain a positive limit; only paths with cumulative time tending to infinity approach zero."
+  - edge_case: "unbounded_cumulative_time"
+    result: "The fixed trajectory remains positive at every finite step but approaches the excluded boundary, so there is no uniform positive asymptotic margin."
+  - edge_case: "transverse_mode_absent"
+    result: "At z=0 the transverse field restricts exactly to the fixed cubic law, preserving every one-mode theorem."
+  - edge_case: "reflection_without_token_transport"
+    result: "Holding sigma fixed while reflecting only a is not the candidate symmetry; the valid family symmetry transports sigma as well."
+  - edge_case: "barrier_reference"
+    result: "a_star>0 remains only a normalization representative; no robustness result derives it or gives it physical scale semantics."
+
+refuter_obstruction_record:
+  obstruction_id: "OB-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS-001"
+  target_claim: "The fixed locally source-pure SignedCubicViabilitySelector_v1, its reflection-equivariant token family, and its exact finite-path barrier theorem together supply a source-derived token-persistent, perturbatively stable, full-state viability law relevant to the P4-T02 robustness burden."
+  target_milestone: "effective_metric_g_eff"
+  failed_premise: "The candidate and current ontology contain no law that anchors the oriented boundary velocity, constrains it to an inward margin over an admitted perturbation class, preserves the token under source evolution, or controls transverse source modes. Reflection equivariance forces the two oriented boundary velocities to agree but does not constrain their common sign."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260811-005/artifacts/child_phys_math_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.yaml"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "Missing source-derived boundary-anchoring or inward-margin certificate, token-transition persistence law, and full-state admissible-set viability certificate."
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "locally_frozen"
+    decision_reason: "The candidate has completed construction, source-extension smuggling audit, and its first exact robustness stress. Reusing its unchanged fixed-token one-mode syntax as a perturbative or full-state P4-T02 solution cannot remove the exact drift, transverse, or token countermodels."
+    active_freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    next_allowed_route: "theoretical_selector"
+  route_cycle_control:
+    cycle_family: "v22_p4_t02_b2_signed_cubic_viability_selector"
+    current_cycle_step: "source_extension_refuter_stress"
+    prior_related_tasks:
+      - "RT-20260811-002"
+      - "RT-20260811-003"
+      - "RT-20260811-004"
+    cycle_risk: "high_if_unchanged_candidate_is_replayed_as_robust"
+    orbit_avoidance_reason: "The next packet must select a materially distinct boundary-anchoring and token/full-state law, a new irrelevance theorem, or a protected stop; another unchanged-candidate audit or stress is barred by the exact countermodels."
+    next_role_consequence: "theoretical-continuation-selector@0.1.0"
+  forbidden_conclusions:
+    - "No fixed RT003 conditional theorem is invalidated."
+    - "No reversal of the RT004 source_pure_as_written verdict follows."
+    - "No source law, token, boundary condition, or full-state extension is adopted or rejected canonically."
+    - "No global impossibility of a future conservative source extension follows."
+    - "No global theory rejection or program-wide no-go follows."
+    - "No physical time orientation, causality, empirical response, calibration, cone, conformal class, or effective metric follows."
+    - "No D7 or P2-T01 adequacy reevaluation follows."
+    - "No B2 activation, viability, adoption, rejection, disposition, adequacy, or sufficiency follows."
+    - "No P4-T03 unlock or execution follows."
+    - "No g_eff, matter coupling, action, stress-energy semantics, or Einstein equation follows."
+    - "No benchmark, Gate Chair, proof, promotion, publication, push, external action, or completed derivation authority follows."
+
+five_freeze_evaluation:
+  inherited_freeze_count: 4
+  candidate_local_freeze_count: 1
+  evaluated_freeze_count: 5
+  all_inherited_freezes_preserved: true
+  candidate_local_freeze_warranted: true
+  freezes:
+    - freeze_id: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      provenance: "inherited"
+      status: "active_untouched"
+      evaluation: "No shared-tau object or output appears in any stress premise or conclusion."
+    - freeze_id: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      provenance: "inherited"
+      status: "active_untouched"
+      evaluation: "No repaired Q_ray quotient or descent object is reconstructed or replayed."
+    - freeze_id: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      provenance: "inherited"
+      status: "active_untouched"
+      evaluation: "No common character, anchor, cochain, or holonomy output stabilizes the candidate."
+    - freeze_id: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      provenance: "inherited"
+      status: "active_untouched"
+      evaluation: "No Bridge_OM sign, circuit, refinement, or wall datum supplies selection or protection."
+    - freeze_id: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      provenance: "candidate_local_rt005"
+      status: "locally_frozen"
+      evaluation: "The unchanged one-mode fixed-token syntax is closed as a perturbatively robust or full-state P4-T02 solution under the current assumptions; its exact conditional mathematics and source purity remain usable."
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  new_mathematical_payload_added: true
+  merely_selected_another_selector_route: false
+  construct_audit_stress_cycle_completed: true
+  same_unmet_burden_recurred: true
+  active_freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  prior_attempts_considered:
+    - "RT-20260811-002"
+    - "RT-20260811-003"
+    - "RT-20260811-004"
+    - "RT-20260811-005"
+  freeze_if:
+    - "A successor treats reflection transport as boundary anchoring or token selection without a new source law."
+    - "A successor reuses exact finite-path positivity as an n-independent asymptotic margin or perturbative robustness theorem."
+    - "A successor lifts the one-mode result to transverse source states without a full-state admissible set and viability certificate."
+    - "A successor assumes token persistence while admitting erasure, reversal, or stochastic flip channels."
+  do_not_freeze_if:
+    - "A separately admitted packet constructs or refutes a materially distinct source-derived anchoring, token-persistence, and full-state robustness law."
+    - "A new source-side irrelevance theorem changes the P4-T02 roadmap consequence with exact mathematics."
+    - "A protected human-gated ontology stop is explicitly authorized."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The exact candidate remains valid on its fixed one-dimensional law, but the completed construction-audit-stress cycle now contains decisive arbitrarily small countermodels to every claimed robustness extension."
+  local_freeze_scope: "Only the unchanged SignedCubicViabilitySelector_v1 under the current fixed-token one-mode assumptions as a perturbatively stable, token-persistent, full-state P4-T02 bridge."
+  next_allowed_route: "theoretical_selector"
+  status_update_path: ""
+  no_status_update_rationale: "This internal child owns only this child analysis artifact; parent fusion and governed checkpoint synchronization own any persistent status update."
+  global_freeze_applied: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_signed_cubic_viability_selector"
+  current_cycle_step: "source_extension_refuter_stress"
+  prior_related_tasks:
+    - "RT-20260811-002"
+    - "RT-20260811-003"
+    - "RT-20260811-004"
+  cycle_risk: "high"
+  generic_ontology_formalizer_replay_allowed: false
+  unchanged_candidate_reaudit_allowed: false
+  unchanged_candidate_restress_allowed: false
+  orbit_avoidance_reason: "This child adds exact boundary-velocity, drift, transverse, and token countermodels and routes only to a discriminator among materially distinct continuations."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  candidate_classification: "proposal-only locally source-pure new-ontology-primitive source-extension data with a candidate-scoped robustness obstruction"
+  obstruction_classification: "source_extension_candidate"
+  relation_to_current_ontology: "blocked_adoption_open_continuation"
+  syntactically_source_pure_as_written: true
+  constructive_goal_preload_disclosed: true
+  token_selects_component_by_proposal: true
+  token_epistemically_selected: false
+  token_persistence_derived: false
+  boundary_anchoring_derived: false
+  full_state_viability_derived: false
+  physical_or_empirical_meaning_derived: false
+  conservative_definitional_extension: false
+  new_ontology_primitive: true
+  forbidden_target_import_detected: false
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  human_gate_invoked: false
+  adoption_status: "blocked_adoption_open_continuation"
+  exact_allowed_conclusion: "The unchanged candidate does not supply perturbative, token-persistent, or full-state viability robustness under the admitted source-local stresses; a materially distinct source extension remains possible."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_delta"
+    finding: "Gamma, Delta, a_star, sigma, the drift restriction, token persistence, and any full-state robustness law remain proposal-only or missing rather than adopted ontology primitives."
+  - burden: "Source equivalence EqSrc"
+    status: "no_delta"
+    finding: "Reflection and positive regraduation remain conditional mathematical covariance, not an adopted source equivalence or physical gauge law."
+  - burden: "RetainH"
+    status: "no_delta"
+    finding: "No retention or history primitive is constructed; stochastic token survival is a negative control only."
+  - burden: "GenH"
+    status: "no_delta"
+    finding: "The cubic generator remains proposal-only, and no ontology-derived admissible perturbation class is supplied."
+  - burden: "ObsLoc_lc"
+    status: "no_delta"
+    finding: "Amplitude sign, token, barrier, and transverse controls supply no observer-localization witness or operational semantics."
+  - burden: "Resp_lc"
+    status: "no_delta"
+    finding: "No detector or empirical response map is derived; probability stresses are source-local mathematical controls only."
+  - burden: "M_src"
+    status: "no_delta"
+    finding: "The amplitude line and one auxiliary transverse coordinate are not an adopted source manifold or localization bridge."
+  - burden: "g_eff"
+    status: "no_delta"
+    finding: "No physical characteristic cone, conformal class, signature, orientation, scale, source-to-metric map, or effective metric is constructed."
+  - burden: "matter coupling"
+    status: "no_delta"
+    finding: "No universal matter sector, common propagation law, or coupling is derived."
+  - burden: "Einstein equations"
+    status: "no_delta"
+    finding: "No action, variation principle, stress-energy semantics, correction law, or field equation is supplied."
+  - burden: "finite-variation robustness"
+    status: "no_delta"
+    finding: "The fixed one-mode theorem survives, but exact arbitrarily small reflection-equivariant drift and transverse counterfamilies block a robustness pass."
+  - burden: "benchmark promotion"
+    status: "no_delta"
+    finding: "No exact-GR comparison, benchmark test, or promotion occurs."
+  - burden: "Gate Chair status"
+    status: "no_delta"
+    finding: "No protected Gate review, adoption, rejection, closure, or verdict is requested or issued."
+  - burden: "current route freeze or hard-fail status"
+    status: "no_delta"
+    finding: "Four inherited freezes remain active and this child records one candidate-local freeze; no persistent ledger update, global hard fail, or global theory rejection is authorized."
+
+distance_to_gr_delta:
+  changed: false
+  burden_row_count: 14
+  literal_no_delta_row_count: 14
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  target_milestone: "effective_metric_g_eff"
+  local_result_is_distance_advance: false
+  downstream_unlocked: []
+  downstream_still_blocked:
+    - "D7 and P2-T01 adequacy"
+    - "B2 activation, viability, adoption, rejection, disposition, adequacy, and sufficiency"
+    - "P4-T03 conformal reconstruction and physical time-orientation derivation"
+    - "g_eff, matter coupling, and Einstein equations"
+    - "Gate, benchmark, proof promotion, publication, push, external action, and completed derivation"
+
+selected_unexecuted_successor:
+  packet_id: "PKT-V22-P4T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  packet_type: "theoretical_continuation_selector"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Select one materially distinct continuation after the candidate-local signed-cubic selector robustness freeze."
+  exact_discriminator: "Compare a source-derived boundary-anchoring, token-persistence, and full-state viability law; a materially distinct source-side irrelevance theorem with roadmap consequence; and a protected ontology stop, while preserving the four inherited freezes and excluding target or frozen-route imports."
+  execution_status: "selected_not_executed"
+  selected: true
+  requires_separate_admission: true
+  separately_admitted_in_rt20260811_005: false
+  executed_in_rt20260811_005: false
+  successor_agentjob_created: false
+  external_action_required: false
+
+authority_and_claim_blocks:
+  p7_complete_or_exhaustive: false
+  d7_or_p2_t01_adequacy_reevaluated: false
+  b2_active: false
+  b2_activated: false
+  b2_viability_claimed: false
+  b2_adopted: false
+  b2_rejected: false
+  b2_disposed: false
+  b2_adequacy_claimed: false
+  b2_sufficiency_claimed: false
+  p4_t03_locked: true
+  p4_t03_unlocked_or_executed: false
+  current_ontology_derivation_claimed: false
+  source_law_adopted_or_rejected: false
+  canonical_ontology_modified: false
+  token_given_physical_time_orientation: false
+  physical_causality_assigned: false
+  empirical_response_semantics_assigned: false
+  physical_normalization_or_calibration_assigned: false
+  physical_cone_or_conformal_class_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  gate_verdict_issued: false
+  benchmark_promoted: false
+  proof_authority_created: false
+  physics_claim_promoted: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  global_theory_rejected: false
+  completed_derivation_claimed: false
+  candidate_repair_performed: false
+  selected_successor_executed: false
+
+validation:
+  yaml_parse_status: "PASS"
+  duplicate_key_status: "PASS"
+  recorded_source_hash_status: "PASS_23_OF_23"
+  canonical_metadata_identity_status: "PASS"
+  independent_exact_math_status: "PASS"
+  parent_exact_model_status: "PASS_9_OF_9"
+  parent_exact_model_payload_sha256: "29d132551276b255a34b20f042f087b3353e396a183ed77961f23f922b964ffe"
+  exact_refuter_result_count: 1
+  required_stress_branch_count: 10
+  executed_stress_branch_count: 10
+  evaluated_freeze_count: 5
+  inherited_freeze_count: 4
+  candidate_local_freeze_count: 1
+  distance_to_gr_row_count: 14
+  literal_no_delta_row_count: 14
+  selected_successor_count: 1
+  selected_successor_executed_count: 0
+  semantic_cardinality_status: "PASS"
+  whitespace_status: "PASS"
+  git_diff_check_status: "PASS"
+  exact_owned_path_only_status: "PASS"

@@ -1,0 +1,847 @@
+job_id: "AJ-RT-20260811-005-001"
+completion_id: "AJC-AJ-RT-20260811-005-001"
+task_id: "RT-20260811-005"
+task_type: "v22_p4_t02_b2_signed_cubic_viability_selector_source_extension_refuter_stress"
+decision_id: "DDR-20260811-005"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260811-005"
+supporting_perspective: "smuggling-auditor@0.2.0"
+status: "completed"
+result: "completed"
+completion_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-11T12:49:27Z"
+started_at: "2026-08-11T12:49:27Z"
+completed_at: "2026-08-11T13:21:58Z"
+objective: "Stress the exact locally source-pure SignedCubicViabilitySelector_v1 under target-free source-law perturbations, token erasure or reversal, off-family modes, finite-versus-asymptotic viability, invariant-measure, and structural-stability tests; preserve valid conditional mathematics and the RT004 source-purity verdict; issue one decisive Refuter classification with any required obstruction, freeze, and route-cycle record without promotion."
+completion_summary: "The fixed SignedCubicViabilitySelector_v1 and RT004 narrow source_pure_as_written verdict survive on their exact domains, but the stronger standalone robustness premise fails. The reflection-equivariant family F_{sigma,mu}(a)=-gamma*a^3+mu*sigma is arbitrarily close to the fixed field while negative mu drives every selected state across the boundary in finite time; reflection identifies oriented sheet velocities but does not choose their common sign. Near-sheet transverse controls, token reversal and positive flip rates, asymptotic barrier decay, and invariant-measure bifurcation expose independent full-state, persistence, and occurrence gaps. The decisive result is scoped_obstruction. The unchanged candidate is locally frozen only as a standalone perturbatively robust P4-T02 selector or viability bridge; exact-domain and diagnostic use remain open. Four inherited freezes remain active, every Distance-to-GR row is no_delta, and one theoretical-continuation-selector packet is selected but not executed."
+objective_result: "scoped_obstruction"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "signed_cubic_viability_selector_scoped_robustness_obstruction_theoretical_selector_pending_checkpoint"
+milestone_disposition: "effective_metric_burden_candidate_local_freeze_no_distance_delta"
+requires_human_gate: false
+human_gate_required: false
+source_head: "4483b8debf73f1d2492e14ca779ded75d48efd85"
+source_tree: "feb469b8ce7629488200c6f5be7004c4781b61db"
+source_handoff_id: "handoff-1018"
+source_handoff_sha256: "bd3f3ae9bcb4146fb4c26baae41b15f31c294a6fec27176ccea17ed053b7eaec"
+source_extension_classification_required: true
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P4"
+  plan_task_id: "P4-T02"
+  work_item_status: "signed_cubic_viability_selector_scoped_obstruction_theoretical_selector_checkpoint_pending"
+  completed_plan_subroute: "P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-REFUTER-STRESS"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "P4-T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-THEORETICAL-CONTINUATION-SELECTION"
+  recommendation_ids:
+    - "V22-R07"
+    - "V22-R08"
+    - "V22-R10"
+    - "V22-R13"
+  declared_coverage_ids:
+    - "V22-R07"
+    - "V22-R08"
+    - "V22-R13"
+    - "S5"
+  decisive_result: "scoped_obstruction"
+  candidate_id: "CAND-V22-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1"
+  candidate_law_name: "SignedCubicViabilitySelector_v1"
+  obstruction_id: "OB-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS-001"
+  candidate_local_freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  selected_successor_packet_id: "PKT-V22-P4T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  selected_successor_packet_type: "theoretical_continuation_selector"
+  selected_successor_role_family: "theoretical-continuation-selector@0.1.0"
+  selected_successor_executed: false
+  active_freeze_count: 5
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_fallback_activated: false
+  b2_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one registered draft/control signed cubic viability-selector Refuter stress manuscript"
+      - "one exact stress matrix and one candidate-scoped obstruction or survival disposition"
+    project_system:
+      - "task-local executable stress model, focused validator, compact receipt, LaTeX receipt, provenance, parent-child synthesis, and standard control synchronization"
+  accepted_criteria:
+    physics:
+      - "all handoff-selected stress branches receive explicit evidence and a local result"
+      - "fixed conditional source-purity finite-path and parameter-quotient mathematics is preserved unless one exact defect is proved"
+      - "one decisive Refuter class records the smallest failed premise or exact survival scope"
+      - "freeze and route-cycle consequences are explicit without global overread"
+    project_system:
+      - "source hashes, artifacts, registries, backlog, program state, and handoff pass deterministic validation"
+      - "the registered TeX source compiles and rendered pages pass visual inspection"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "countermodel"
+  realized_payload_type: "candidate_scoped_obstruction_with_exact_countermodels"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  result: "PASS_MATERIAL_COUNTERMODEL_PAYLOAD_PRESENT"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_result_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "stress_v22_p4_t02_b2_signed_cubic_viability_selector_source_extension_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  result: "PASS_MATERIALLY_DISTINCT_CANDIDATE_STRESS"
+  reopening_requested: false
+  inherited_freeze_count: 4
+  candidate_local_freeze_created: true
+  active_freeze_count: 5
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1018"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite_commit: "4483b8debf73f1d2492e14ca779ded75d48efd85"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  refresh_needed: false
+  refresh_performed: false
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1208
+    relationship_row_count: 6222
+    semantic_row_count: 1208
+    vault_row_count: 1208
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1"
+      returned_object_ids:
+        - "TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-LAW-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-LAW-V1"
+      returned_object_ids:
+        - "TEX-V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-LAW-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "TEX-V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-LAW-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_law_v1.tex"
+      source_hash: "14c229daccb45faabff0a2f3fe264459e2f54302ae514a1f0820ca30c0984edc"
+    - object_id: "TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260811-004/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_source_extension_smuggling_audit_v1.tex"
+      source_hash: "a3a798bd2e45a52da3702624f9cd3c5c5d508021bf721b680aa47d3e27b0bfc5"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-SMUGGLING-AUDIT-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260811-004/artifacts/parent_fusion_notes_p4_t02_b2_signed_cubic_viability_selector_smuggling_audit.md"
+      source_hash: "217d42b007c4dc9b63bcfdb00b3da40ff674865ec50adc6b62d08ca281fa8b25"
+  authority_note: "Tracked registered source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  internal_child_count: 2
+  selected_successor_executed: false
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260811-005/artifacts/child_phys_math_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.yaml"
+      output_sha256: "16d713320fafbdbf0c4b1e91c60fc64235171b877a6dbced822347e044f06b01"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260811-005/artifacts/child_phys_phil_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.yaml"
+      output_sha256: "b32fff85b6807b12ea80d3cf3d87b038f124532427ede34e367eb975b4dd2a83"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260811-005/artifacts/parent_conflict_review_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.yaml"
+    review_sha256: "c21f04b86c4d3f7ddbffa40a406871c1562a0457570f7f5d94c62f4b33752920"
+    resolution_rounds: 0
+    resolved_precision_finding_count: 3
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1.tex"
+    fused_output_sha256: "5720a45d017419109cfd67bd1fd6cacebc6a0cd0b4c93133ba993c06f90efac1"
+    fusion_notes_path: "research_control/tasks/RT-20260811-005/artifacts/parent_fusion_notes_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.md"
+    fusion_notes_sha256: "510cbbdee8543dfa66ceed94e4150ccae38f743262ebe2a2759bf512f8490322"
+    shared_consensus_summary: "Both children preserve the fixed conditional mathematics and RT004 source-purity verdict while independently finding the same boundary-margin token-persistence full-state and occurrence obstruction."
+    unique_phys_math_contributions: "Oriented-boundary-velocity lemma rational near-law and near-sheet counterfamilies and uninterrupted-survival versus endpoint-occupancy theorem."
+    unique_phys_phil_contributions: "Symmetry-versus-robustness synchronic-versus-diachronic reduced-slice-versus-full-state and viability-versus-occurrence separations with explicit falsifiers."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  non_trigger_classifications_rejected:
+    - "ordinary_gap"
+    - "workflow_inconvenience"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Test whether the fixed source-pure syntax supplies any robust selector or viability law beyond its exact one-mode family."
+  missing_source_law: "source_derived_boundary_anchoring_token_persistence_and_full_state_viability_robustness_law"
+  underdetermination_statement: "Current ontology does not derive a boundary-anchoring class, positive inward margin, token-persistence law, or full-state viability robustness law for SignedCubicViabilitySelector_v1. The exact countermodels support a candidate-scoped obstruction, while materially distinct continuation remains open."
+  no_go_theorem_status: "not_proved"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_payload"
+  candidate_law_payload:
+    status_label: "proposal-only"
+    material_class: "source-extension data"
+    source_side_definition: "Hold the fixed one-dimensional signed cubic proposal and its exact conditional theorems constant, then stress it with target-free reflection-equivariant drift, transverse source modes, token changes, and asymptotic or invariant-measure controls."
+    formal_objects:
+      - "fixed amplitude line, token-indexed open component, and cubic semiflow"
+      - "reflection-equivariant drift family F_{sigma,mu}"
+      - "near-sheet transverse family and token-flip controls"
+      - "normalized barrier and finite-time viability relation"
+    domains:
+      - "gamma>0, a_star>0, sigma in {+1,-1}, and target-free locally Lipschitz source-law perturbations"
+      - "continuous and discrete symmetric token-flip controls used only as source-local stress models"
+    maps:
+      - "selected coordinate y=sigma*a and its boundary velocity"
+      - "reflection transport (a,sigma) to (-a,-sigma)"
+      - "continuous and discrete token survival and endpoint-occupancy maps"
+    proof_obligations:
+      - "preserve every fixed conditional theorem unless an exact defect is identified"
+      - "supply arbitrarily small source-local countermodels for each failed robustness premise"
+      - "separate finite viability, asymptotic margin, persistence, occurrence, and physical meaning"
+      - "record only the smallest candidate-scoped obstruction and its local freeze"
+      - "preserve all inherited freezes and downstream authority blocks"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Retain exact-GR recovery as a downstream obligation rather than a Refuter premise."
+      - "Preserve D7 non-evaluation, B2 inactivity, and the P4-T03 lock."
+      - "Require physical metric, coupling, equation, and benchmark claims to pass their own protected gates."
+    distance_to_gr_links:
+      - "source ontology primitives"
+      - "finite-variation robustness"
+      - "universal matter characteristics"
+      - "effective metric g_eff"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No decision is requested now; any later canonical-ontology candidate promotion, source-law adoption, or protected stop requires a separate explicit human gate."
+    exact_requested_ontology_edit: ""
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Test whether the fixed source-pure syntax supplies any robust selector or viability law beyond its exact one-mode family."
+  obstruction_id: "OB-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS-001"
+  result_scope: "source_extension_candidate"
+  physics_promotion_authorized: false
+  rationale: "Exact target-free countermodels show that the unchanged candidate has no open robustness neighborhood and no token-persistence or full-state lift law, while every fixed conditional theorem remains valid."
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The obstruction narrows a proposal-only route but constructs no source primitive physical response cone metric coupling equation or protected status."
+  downstream_unlocked: []
+  downstream_still_blocked:
+    - "complete P7 coverage and D7 or P2-T01 adequacy"
+    - "B2 activation adoption rejection disposal viability adequacy or sufficiency"
+    - "P4-T03 conformal reconstruction physical scale g_eff matter coupling and Einstein equations"
+    - "Gate benchmark proof promotion publication and completed derivation"
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_delta"
+    finding: "No source-derived boundary anchoring inward margin token persistence or full-state viability primitive is added or adopted."
+  - burden: "Source equivalence EqSrc"
+    status: "no_delta"
+    finding: "Reflection covariance is conditional mathematics and neither an adopted source equivalence nor physical gauge."
+  - burden: "RetainH"
+    status: "no_delta"
+    finding: "No retention or history primitive is supplied; token-flip survival is a negative control."
+  - burden: "GenH"
+    status: "no_delta"
+    finding: "The cubic generator remains proposal-only and no ontology-derived admissible perturbation class is supplied."
+  - burden: "ObsLoc_lc"
+    status: "no_delta"
+    finding: "Amplitude token barrier and transverse controls supply no observer-localization or operational readout map."
+  - burden: "Resp_lc"
+    status: "no_delta"
+    finding: "Tokens viability barriers and invariant probabilities are not detector or empirical response data."
+  - burden: "M_src"
+    status: "no_delta"
+    finding: "The amplitude line and auxiliary transverse coordinate are not an adopted physical source manifold."
+  - burden: "g_eff"
+    status: "no_delta"
+    finding: "No physical characteristic cone conformal class signature orientation scale or effective metric is constructed."
+  - burden: "matter coupling"
+    status: "no_delta"
+    finding: "No universal matter sector propagation law or coupling is derived."
+  - burden: "Einstein equations"
+    status: "no_delta"
+    finding: "No action variation principle stress-energy semantics correction law or field equation is supplied."
+  - burden: "finite-variation robustness"
+    status: "no_delta"
+    finding: "The exact candidate fails arbitrarily small reflection-equivariant drift and near-sheet transverse robustness tests."
+  - burden: "benchmark promotion"
+    status: "no_delta"
+    finding: "No exact-GR comparison benchmark test or promotion occurs."
+  - burden: "Gate Chair status"
+    status: "no_delta"
+    finding: "No protected review adoption rejection activation closure or verdict is requested or issued."
+  - burden: "current route freeze or hard-fail status"
+    status: "no_delta"
+    finding: "Four inherited freezes remain and the new freeze is candidate-local rather than a global P4-T02 closure."
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT005-001"
+    payload_type: "countermodel"
+    name: "Reflection-equivariant boundary bifurcation"
+    burden_effect: "precise obstruction with no Distance-to-GR delta"
+    summary: "F_{sigma,mu}=-gamma*a^3+mu*sigma has inward tangent and outward branches with arbitrarily small distance from the fixed field."
+  - payload_id: "NMP-RT005-002"
+    payload_type: "lemma"
+    name: "Oriented boundary-velocity nonselection"
+    burden_effect: "selector gap with no Distance-to-GR delta"
+    summary: "Reflection forces v_+=v_- but permits every real common value; the barrier derivative at the boundary is mu/a_star."
+  - payload_id: "NMP-RT005-003"
+    payload_type: "countermodel"
+    name: "Near-sheet transverse crossing family"
+    burden_effect: "full-state viability gap with no Distance-to-GR delta"
+    summary: "N-indexed reflection-equivariant transverse fields converge compact-open C1 to the embedded law while selected states starting arbitrarily near the sheet cross by time one."
+  - payload_id: "NMP-RT005-004"
+    payload_type: "theorem"
+    name: "Token survival versus endpoint occupancy"
+    burden_effect: "persistence and occurrence gap with no Distance-to-GR delta"
+    summary: "Uninterrupted survival is weaker than later endpoint occupancy; any positive symmetric flip rate gives eventual first exit and the joint stationary law remains off the selected open set."
+  - payload_id: "NMP-RT005-005"
+    payload_type: "theorem"
+    name: "Finite viability without asymptotic margin"
+    burden_effect: "asymptotic robustness gap with no Distance-to-GR delta"
+    summary: "The normalized-barrier square and its time average tend to zero while every fixed finite-time state remains selected."
+
+mathematical_payload_manifest:
+  - payload_id: "NMP-RT005-001"
+    payload_type: "countermodel"
+    object_name: "F_{sigma,mu} boundary-bifurcation family"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1.tex"
+    burden_effect: "precise obstruction with no Distance-to-GR delta"
+    summary: "Arbitrarily small reflection-equivariant negative drift drives every selected state across the boundary in finite time while positive drift preserves the selected side."
+    proof_or_countermodel_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py"
+    reproducibility_status: "PASS_9_OF_9"
+  - payload_id: "NMP-RT005-002"
+    payload_type: "lemma"
+    object_name: "oriented boundary-velocity quotient lemma"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1.tex"
+    burden_effect: "selector gap with no Distance-to-GR delta"
+    summary: "Reflection equates the two oriented boundary velocities but does not constrain or select their common sign."
+    proof_or_countermodel_path: "research_control/tasks/RT-20260811-005/artifacts/child_phys_math_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.yaml"
+    reproducibility_status: "exact_algebra_checked"
+  - payload_id: "NMP-RT005-003"
+    payload_type: "countermodel"
+    object_name: "near-sheet transverse crossing family"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1.tex"
+    burden_effect: "full-state viability gap with no Distance-to-GR delta"
+    summary: "A target-free transverse source mode yields arbitrarily near-sheet selected initial states that cross or exit a prescribed tube by time one."
+    proof_or_countermodel_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py"
+    reproducibility_status: "PASS_9_OF_9"
+  - payload_id: "NMP-RT005-004"
+    payload_type: "theorem"
+    object_name: "token survival and occupancy theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1.tex"
+    burden_effect: "persistence and occurrence gap with no Distance-to-GR delta"
+    summary: "Continuous and discrete symmetric token flips separate uninterrupted survival from endpoint occupancy and admit no selected-open-set stationary occurrence law."
+    proof_or_countermodel_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py"
+    reproducibility_status: "PASS_9_OF_9"
+  - payload_id: "NMP-RT005-005"
+    payload_type: "theorem"
+    object_name: "barrier decay and time-average identity"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1.tex"
+    burden_effect: "asymptotic robustness gap with no Distance-to-GR delta"
+    summary: "The exact normalized barrier remains positive for finite time but both its square and time average tend to zero."
+    proof_or_countermodel_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py"
+    reproducibility_status: "PASS_9_OF_9"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OB-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS-001"
+  result_class: "scoped_obstruction"
+  scope: "source_extension_candidate"
+  failed_object: "unchanged proposal-only SignedCubicViabilitySelector_v1 promoted as a perturbatively robust token-persistent full-state P4-T02 selector or viability bridge"
+  exact_failure: "Arbitrarily small reflection-equivariant negative drift, near-sheet transverse modes, and positive token-flip rates destroy selected-component persistence while the fixed conditional finite-path theorems remain valid on their exact domain."
+  minimal_counterexample_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "selector_required"
+  forbidden_overread: "This candidate-scoped obstruction neither refutes the fixed conditional mathematics nor reverses the RT004 source-purity verdict nor proves a global no-go or future source-extension impossibility."
+  source_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_obstruction_v1.yaml"
+  minimal_countermodel_available: true
+  global_no_go_claimed: false
+
+refuter_obstruction_record:
+  obstruction_id: "OB-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS-001"
+  target_claim: "The unchanged SignedCubicViabilitySelector_v1 supplies a perturbatively robust source-side component selector and viability law sufficient to continue P4-T02 beyond its exact one-mode family."
+  target_milestone: "effective_metric_g_eff"
+  failed_premise: "No source-derived boundary-tangency class positive inward margin token-persistence law or full-state viability primitive excludes arbitrarily small reflection-equivariant source-local perturbations that drive the selected state across its boundary."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "Missing independent source certificate for boundary anchoring or positive inward margin token persistence and full-state viability under independently admissible perturbations."
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "locally_frozen"
+    active_freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    freeze_scope: "The unchanged candidate as a standalone robust P4-T02 selector or viability bridge; exact-model and diagnostic use remain open."
+    next_allowed_route: "theoretical_selector"
+    global_theory_rejection: false
+    future_source_extension_impossibility: false
+  route_cycle_control:
+    cycle_family: "v22_p4_t02_b2_signed_cubic_viability_selector"
+    current_cycle_step: "source_extension_refuter_stress"
+    prior_related_tasks:
+      - "RT-20260811-002"
+      - "RT-20260811-003"
+      - "RT-20260811-004"
+    cycle_risk: "high_if_unchanged_candidate_is_replayed_as_robust"
+    orbit_avoidance_reason: "The next packet must select a materially distinct law theorem bridge or protected stop rather than another unchanged-candidate construction audit or stress."
+    next_role_consequence: "theoretical-continuation-selector@0.1.0"
+  forbidden_conclusions:
+    - "The fixed conditional finite-path theorem is not false on its declared domain."
+    - "The RT004 narrow source-purity verdict is not revoked."
+    - "No source law or canonical ontology is adopted or globally rejected."
+    - "No D7 adequacy B2 action P4-T03 unlock physical geometry g_eff coupling Einstein equation Gate benchmark proof publication push external action global no-go or completed derivation follows."
+    - "No future source-extension impossibility follows."
+
+freeze_criteria_status:
+  repeated_burden: true
+  scoped_obstruction: true
+  freeze_evaluation_required: true
+  active_freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  candidate_freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  prior_attempts_considered:
+    - "RT-20260811-002 theoretical selection"
+    - "RT-20260811-003 candidate formalization"
+    - "RT-20260811-004 source-extension audit"
+    - "RT-20260811-005 Refuter stress"
+  freeze_if:
+    - "The unchanged fixed-token one-mode candidate is replayed as perturbatively robust or full-state sufficient."
+    - "Reflection or finite-path positivity is reused as a substitute for boundary anchoring token persistence occurrence or full-state viability."
+  do_not_freeze_if:
+    - "A separately admitted packet materially changes the source law admissibility theorem bridge family or protected authority question."
+  criteria_evaluated:
+    - "construction audit and first exact stress are complete"
+    - "arbitrarily small reflection-equivariant countermodels are exact"
+    - "token and transverse gaps are independently exhibited"
+    - "all four inherited freezes remain preserved"
+  freeze_decision: "not_frozen"
+  decision_reason: "The exact unchanged candidate is locally frozen in the obstruction record while exact-domain diagnostic use and materially distinct P4-T02 source-law or bridge work remain open."
+  rationale: "The candidate-local freeze prevents construct-audit-stress orbit replay without freezing materially distinct same-milestone research."
+  next_allowed_route: "theoretical_selector"
+  next_allowed_role: "theoretical-continuation-selector@0.1.0"
+  status_update_path: "research_control/design/v22_recommendation_backlog.yaml"
+  ledger_or_registry_update_path: "research_control/program_state.yaml"
+  frozen_scope: "unchanged SignedCubicViabilitySelector_v1 as a standalone perturbatively robust token-persistent full-state P4-T02 bridge"
+  nonfrozen_scope: "exact-domain and diagnostic use plus materially distinct source law theorem bridge or protected human-gated route"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_signed_cubic_viability_selector"
+  current_cycle_step: "source_extension_refuter_stress"
+  prior_related_tasks:
+    - "RT-20260811-002"
+    - "RT-20260811-003"
+    - "RT-20260811-004"
+  cycle_risk: "high_if_unchanged_candidate_is_replayed"
+  orbit_avoidance_reason: "The next selector must change the theorem target source primitive admissibility assumptions bridge family or protected authority question."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0 selects exactly one materially distinct same-milestone packet after checkpoint."
+
+loop_risk_decision:
+  category: "scoped_obstruction"
+  repeated_object: "unchanged SignedCubicViabilitySelector_v1 offered as a perturbatively robust token-persistent full-state P4-T02 bridge"
+  obstruction_summary: "Arbitrarily small reflection-equivariant drift near-sheet transverse token and asymptotic controls show that exact one-mode finite-path viability does not supply open robustness or occurrence."
+  next_route: "theoretical_decision_role_selection"
+  rationale: "A fresh theoretical-continuation-selector must select one materially distinct source law theorem bridge or protected stop while preserving all five freezes."
+  local_freeze_applied: true
+  next_route_changes_object_or_assumptions: true
+  global_freeze_applied: false
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "OB-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS-001"
+  item_source_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_obstruction_v1.yaml"
+  item_kind: "obstruction"
+  classification: "status_boundary_evidence_only"
+  claim_boundary_id: "CB-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-001"
+  evidence_paths:
+    - "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py"
+    - "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_matrix_v1.yaml"
+    - "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_obstruction_v1.yaml"
+    - "research_control/tasks/RT-20260811-005/artifacts/parent_fusion_notes_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.md"
+  blocked_overreads:
+    - "source purity or exact tangency described as current-ontology derivation robust law physical causality or occurrence"
+    - "candidate-scoped obstruction described as global no-go or future-extension impossibility"
+    - "D7 adequacy B2 action P4-T03 or downstream promotion"
+  relation_to_current_ontology: "blocked_open"
+  relation_to_target_side_structures: "none"
+  protected_authority_required: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "The unchanged proposal-only candidate fails the declared perturbative token-persistence and full-state robustness scope while exact-domain use and materially distinct continuation remain open."
+  next_route_if_blocked: "theoretical-continuation-selector@0.1.0"
+  category: "source_extension_candidate_refutation"
+  status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  current_ontology_derivation_claimed: false
+  source_law_adopted: false
+  source_law_rejected: false
+  adoption_status: "blocked_adoption_open_continuation"
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "select_v22_p4_t02_b2_post_signed_cubic_viability_refuter_continuation_v1"
+  packet_id: "PKT-V22-P4T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-THEORETICAL-CONTINUATION-SELECTION"
+  work_kind: "theoretical_packet_selection"
+  task_class: "science"
+  route_label: "ordinary-research-packet"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  supporting_perspective: "refuter@0.2.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "theoretical_continuation_selector"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Select one materially distinct continuation after the signed-cubic selector robustness obstruction and candidate-local freeze."
+  expected_result_kind: "one_theoretical_packet_selection"
+  strategy_id: "select_v22_p4_t02_b2_post_signed_cubic_viability_refuter_continuation_v1"
+  transition_id: "SELECT_DISTINCT_B2_ROUTE_AFTER_SIGNED_CUBIC_VIABILITY_SELECTOR_FREEZE"
+  selector_options:
+    - "source_derived_boundary_protection_and_token_full_state_law"
+    - "source_side_irrelevance_theorem"
+    - "materially_distinct_bridge_class"
+    - "human_gated_ontology_change_required"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  adequacy_reevaluation_authorized: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physics_promotion_authorized: false
+  selected: true
+  admitted: false
+  executed: false
+  successor_requested: false
+  external_action_authorized: false
+
+next_recommendation:
+  role: "theoretical-continuation-selector@0.1.0"
+  packet: "PKT-V22-P4T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  recommendation: "Select exactly one materially distinct source-derived protection law source-side irrelevance theorem bridge class or protected ontology stop without replaying any frozen candidate."
+  execution_status: "selected_not_executed"
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-RT-20260811-005"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  selected_plan_task_id: "P4-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  selection_reason: "A candidate-scoped obstruction and local freeze require one materially distinct same-milestone theoretical decision before further construction."
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+countermodel_obligations:
+  policy_id: "minimal_countermodel_obligation_policy_v1"
+  theorem_family: "universality_or_robustness"
+  slots:
+    - countermodel_slot: "minimal_local_failure"
+      status: "satisfied"
+      scope: "arbitrarily small reflection-equivariant negative drift with finite crossing"
+      result_artifact: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py"
+    - countermodel_slot: "boundary_control"
+      status: "satisfied"
+      scope: "inward tangent outward boundary-velocity trichotomy"
+      result_artifact: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_matrix_v1.yaml"
+    - countermodel_slot: "off_family_control"
+      status: "satisfied"
+      scope: "near-sheet transverse crossing and tube exit"
+      result_artifact: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1.tex"
+
+artifact_receipt:
+  science:
+    manuscript_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1.tex"
+    manuscript_sha256: "5720a45d017419109cfd67bd1fd6cacebc6a0cd0b4c93133ba993c06f90efac1"
+    obstruction_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_obstruction_v1.yaml"
+    obstruction_sha256: "c524c2e13caef223c90f0500af061890d2076a4959a1ca89172b04006fbbe43e"
+    stress_matrix_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_matrix_v1.yaml"
+    stress_matrix_sha256: "9051944c780fb13969b75a36403d06a7d2bd6ef535f4b0f240299c9af43c8d08"
+    model_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py"
+    model_sha256: "72774b14ab4edf1064dda70c74777e76743997187ad8172a4eafcac2edc4b310"
+    provenance_manifest_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_provenance_manifest_v1.yaml"
+    provenance_manifest_sha256: "116d736ae29665862a15ae4c80256ba4770c454f921d66b43a57f4da55e85a6a"
+  synthesis:
+    child_phys_math_sha256: "16d713320fafbdbf0c4b1e91c60fc64235171b877a6dbced822347e044f06b01"
+    child_phys_phil_sha256: "b32fff85b6807b12ea80d3cf3d87b038f124532427ede34e367eb975b4dd2a83"
+    parent_conflict_review_sha256: "c21f04b86c4d3f7ddbffa40a406871c1562a0457570f7f5d94c62f4b33752920"
+    parent_fusion_notes_sha256: "510cbbdee8543dfa66ceed94e4150ccae38f743262ebe2a2759bf512f8490322"
+  rendering:
+    latex_compile_receipt_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_latex_compile_receipt.json"
+    latex_compile_receipt_sha256: "2c1c043176d6ab16ec30e961ac083cf82d44b3bf15a892f65eb1e36fae65b79f"
+    page_count: 6
+    visually_inspected_page_count: 6
+    visual_inspection_status: "PASS"
+    tracked_pdf_created: false
+  validation:
+    focused_validator_path: "research_control/tasks/RT-20260811-005/artifacts/validate_v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.py"
+    focused_validator_sha256: "1cabf061df7587d2f85f5c8b0ea8e02e102b2d88ae274f397297f46c977a9f35"
+    focused_report_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_validation.json"
+    compact_receipt_path: "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_compact_receipt.json"
+
+command_results:
+  - command: "v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py --json"
+    status: "PASS"
+    detail: "Nine exact rational reflection drift equilibrium transverse token barrier and boundary checks pass."
+  - command: "bundled Tectonic compile and all-page rendered inspection"
+    status: "PASS"
+    detail: "Six letter-size pages compile in two passes with zero final-pass reference or box warnings and all six pages pass visual inspection."
+  - command: "focused and governed repository validation"
+    status: "PENDING_PRECHECKPOINT"
+    detail: "Focused affected-profile research-control documentation claim-language memory and diff validation remain required before checkpoint."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory registered-source committed-checkpoint ordinary-route payload family-freeze dual-budget and claim-boundary admissions passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "The exact model both child analyses zero-conflict review fused manuscript Tectonic compilation and all-page visual inspection pass."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Focused and governed repository validation remain to run against the terminal precheckpoint state."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed AJ-RT-20260811-005-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Six letter-size pages compile without final-pass box warnings and every rendered page passes visual inspection."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Governed source registration synchronization and read-only memory validation remain to run."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains to run before checkpoint."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review is authorized for this P4-T02 source-extension Refuter stress."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_formalized_as_proposal: true
+  source_law_audited_as_source_pure_as_written: true
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  physical_causality_constructed: false
+  empirical_response_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_constructed: false
+  einstein_equations_derived: false
+  gate_or_benchmark_authority_created: false
+  source_law_adoption_authorized: false
+  source_law_rejection_authorized: false
+  successor_theoretical_selector_execution_authorized: false
+  descriptor_instance_completion_authorized: false
+  b2_activation_authorized: false
+  adequacy_reevaluation_authorized: false
+  p4_t03_authorized: false
+  canonical_ontology_edit_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  push_authorized: false
+  external_outreach_authorized: false
+  external_publication_authorized: false
+  reviewer_contact_authorized: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  external_action_authorized: false
+  global_no_go_claimed: false
+  completed_derivation_claimed: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "the fixed RT003 conditional mathematics or RT004 narrow source-purity verdict was refuted"
+    - "reflection is physical gauge or token sign is physical time orientation causality response or occurrence"
+    - "the amplitude family exhausts P7 or establishes full B2 universality"
+    - "D7 adequacy was reevaluated or B2 was activated adopted rejected disposed viable adequate or sufficient"
+    - "P4-T03 is unlocked or conformal structure scale g_eff matter coupling or Einstein equations are derived"
+    - "the source law canonical ontology or M_src adoption is authorized"
+    - "a Gate benchmark proof publication push external action or completed derivation is authorized"
+    - "global theory rejection global no-go or future source-extension impossibility is established"
+  summary: "The scoped obstruction local freeze and selector route are draft/control physics payload. Validation registration rendering and checkpoint success cannot promote them into physical semantics g_eff coupling equations benchmark evidence ontology adoption protected authority completed derivation or global rejection."
+
+checkpoint:
+  invocation_count_before_completion: 0
+  committed_before_completion: false
+  required: true
+  permitted_invocation_count: 1
+  consumed_checkpoint_replay_authorized: false
+  push_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+
+output_paths:
+  - "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_obstruction_v1.yaml"
+  - "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_provenance_manifest_v1.yaml"
+  - "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_model.py"
+  - "research_control/tasks/RT-20260811-005/artifacts/child_phys_math_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260811-005/artifacts/child_phys_phil_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260811-005/artifacts/parent_conflict_review_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260811-005/artifacts/parent_fusion_notes_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.md"
+  - "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260811-005/artifacts/validate_v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.py"
+  - "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_validation.json"
+  - "research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_compact_receipt.json"
+  - "research_control/tasks/RT-20260811-005/documentation_impact.yaml"
+  - "research_control/handoffs/handoff-1019.yaml"
+  - "research_control/handoffs/handoff-1019.md"
+  - "research_control/program_state.yaml"
+
+notes: "Exactly one signed-cubic viability-selector Refuter stress was executed and exactly one next role was selected. The theoretical continuation selector remains unexecuted until a fresh post-checkpoint invocation."
