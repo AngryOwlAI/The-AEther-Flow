@@ -1,0 +1,427 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=0.82in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{url}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newtheorem{obstruction}{Scoped obstruction}
+\newcommand{\R}{\mathbb R}
+\newcommand{\Qamp}{\mathcal Q_{\mathrm{amp}}}
+\newcommand{\PhiSrc}{\Phi_{\mathrm{src}}}
+\newcommand{\Us}{U_{\sigma}}
+\newcommand{\bs}{b_{\sigma}}
+\newcommand{\Viab}{\operatorname{Viab}}
+\newcommand{\status}[1]{\textsf{#1}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlist{nosep,leftmargin=*}
+\urlstyle{tt}
+
+\title{Source-Dynamical Viability, Admissibility, and Component Selection\\
+\large V22 P4--T02 B2 proposal-only source-law formalization}
+\author{Ontology Formalizer parent synthesis, RT-20260811-003}
+\date{11 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\begin{minipage}{0.94\linewidth}
+\textbf{Decisive result.}
+\status{SignedCubicViabilitySelector\_v1} is a complete
+\status{draft/control}, \status{proposal-only} source-extension candidate.
+Under its explicit roots it proves a uniform normalized-barrier inequality,
+an exact viability-kernel theorem, an equivariant component-selection
+theorem, and sharp nonselection and sign-flip countermodels.  Its status is
+\status{proposal\_only\_candidate\_source\_law\_formalized\_pending\_smuggling\_audit}.
+
+\smallskip
+\textbf{Boundary.}
+The current ontology derives none of the candidate's cubic coefficient,
+step horizon, amplitude reference, or orientation token.  The construction
+does not adopt a law, select a physical time orientation, establish physical
+causality or empirical response, reevaluate D7, act on B2, unlock P4--T03,
+construct $g_{\mathrm{eff}}$, or change any Distance-to-GR burden.  All four
+local freezes remain active.
+\end{minipage}}
+\end{center}
+
+\section{Authority, fixed predecessor, and honest assumption delta}
+
+The fixed registered source package supplies the proposal-only amplitude
+family
+\[
+  q_a(\theta)=a\sin\theta_1,
+  \qquad \Qamp=\{q_a:a\in\R\},
+\]
+and the proposal-only cubic forward action
+\begin{equation}
+ \phi_t(a)=\frac{a}{\sqrt{1+2\gamma t a^2}},
+ \qquad t\geq0,\quad \gamma>0.
+ \label{eq:flow}
+\end{equation}
+The P5 package proves that this is a continuous forward semiflow and that it
+commutes with the state reflection $a\mapsto-a$.  It also states explicitly
+that the current ontology does not derive or adopt this dynamics, its
+coefficient, or a physical interpretation of its parameter.
+
+This packet adds, before inspecting any P4--T02 diagnostic, three further
+positive source-side data and one two-valued source-side datum:
+\begin{equation}
+   \Delta>0,\qquad a_\star>0,\qquad
+   \sigma\in\{+1,-1\}.
+   \label{eq:roots}
+\end{equation}
+Here $\Delta$ is a bounded-step generator horizon, $a_\star$ is the positive
+representative of a nonzero barrier-normalization magnitude, and $\sigma$ is
+an orientation/component token.  A negative reference gives the identical
+barrier because only $a_\star^2$ appears, so $a_\star>0$ removes that redundant
+sign rather than adding a mathematical restriction.
+They are transparent proposal roots, not conclusions of the current
+ontology.  In particular, $\sigma$ deliberately supplies the selection that
+the unsigned source dynamics lacks.  That constructive preload is a cost of
+the candidate and is reserved for a separate Smuggling Auditor; it is not
+presented as an epistemic preference or derivation.
+
+No target atlas, metric, tetrad, coframe, GR cone, physical clock, empirical
+response, benchmark answer, registry fact, role status, validator result, or
+checkpoint appears in equations~\eqref{eq:flow}--\eqref{eq:roots}.
+
+\section{Typed candidate law}
+
+\begin{definition}[Full source state and successor law]
+Identify $X_{\mathrm{src}}=\Qamp$ with $\R$ through $q_a\leftrightarrow a$.
+For the fixed $\Delta$, define
+\begin{equation}
+ R_\Delta(a)=\{\phi_t(a):0\leq t\leq\Delta\}.
+ \label{eq:successors}
+\end{equation}
+An admitted finite path is a sequence $a_0,\ldots,a_n$ with
+$a_{j+1}\in R_\Delta(a_j)$ for every $j$.
+\end{definition}
+
+The transitive closure of $R_\Delta$ reaches every finite forward time:
+given $T\geq0$, choose $n$ with $T/n\leq\Delta$ and use the semiflow law.
+Thus $\Delta$ is a proof-granularity datum rather than a claim that the source
+ceases to evolve after one step.  It is not a physical clock resolution.
+
+\begin{definition}[Nonzero components and occurrence token]
+The nonzero domain has two connected components
+\[
+ X_{\mathrm{src}}^\times=\R\setminus\{0\}=C_+\sqcup C_-,
+ \qquad C_\sigma=\{a:\sigma a>0\}.
+\]
+The proposal occurrence/component selector is
+\begin{equation}
+  \operatorname{Sel}_{\mathrm{src}}(\sigma)=C_\sigma,
+  \qquad \Us=C_\sigma.
+  \label{eq:selector}
+\end{equation}
+It selects a component, not an amplitude point, probability distribution,
+sample history, or physical initial condition.
+\end{definition}
+
+\begin{definition}[Normalized barrier and viability]
+Define
+\begin{equation}
+ \bs(a)=\frac{\sigma a}{\sqrt{a_\star^2+a^2}}.
+ \label{eq:barrier}
+\end{equation}
+Then $\Us=\{a:\bs(a)>0\}$.  For any $U\subseteq\R$,
+$\Viab_{R_\Delta}(U)$ is the set of $a_0\in U$ for which every finite
+admitted path beginning at $a_0$ remains in $U$.
+\end{definition}
+
+The square root in~\eqref{eq:barrier} is a certificate expression over the
+ordered real field.  All machine controls use rational $a^2$, $a_\star^2$,
+$\gamma$, and $t$, so the squared inequalities are exact rather than
+floating-point tests.
+
+\section{Uniform source-barrier theorem}
+
+\begin{theorem}[Normalized bounded-step propagation]
+\label{thm:barrier}
+Let $\gamma,\Delta,a_\star>0$ and set
+\begin{equation}
+ \lambda=
+ \left(1+2\gamma\Delta a_\star^2\right)^{-1/2}>0.
+ \label{eq:lambda}
+\end{equation}
+For every $a\in\Us$ and every $0\leq t\leq\Delta$,
+\begin{equation}
+ \bs(\phi_t(a))\geq\lambda\bs(a)>0.
+ \label{eq:bound}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+The flow has the same sign as $a$ for every finite $t\geq0$.  Direct
+substitution gives
+\[
+ \frac{\bs(\phi_t(a))^2}{\bs(a)^2}
+ =\frac{a_\star^2+a^2}
+ {a_\star^2+\left(1+2\gamma t a_\star^2\right)a^2}.
+\]
+Write $A=a_\star^2$, $u=a^2$, $c_t=2\gamma tA$, and
+$C=2\gamma\Delta A$.  Comparing the last expression with
+$\lambda^2=(1+C)^{-1}$ and clearing positive denominators leaves
+\[
+ (1+C)(A+u)-\bigl(A+(1+c_t)u\bigr)
+ =CA+(C-c_t)u\geq0,
+\]
+because $A,u,C>0$ and $0\leq c_t\leq C$.  Both barriers are positive on
+$\Us$, so taking positive square roots proves~\eqref{eq:bound}.
+\end{proof}
+
+The normalization is essential only for the displayed uniform factor on the
+noncompact amplitude line.  With the unnormalized barrier $\sigma a$, the
+one-step ratio tends to zero as $|a|\to\infty$.  The reference $a_\star$ is
+therefore disclosed as certificate data rather than smuggled in as a physical
+amplitude scale.
+
+\begin{theorem}[Exact viability kernel]
+\label{thm:viability}
+For the law above,
+\begin{equation}
+ \Viab_{R_\Delta}(\Us)=\Us.
+ \label{eq:kernel}
+\end{equation}
+Moreover, every admitted path $a_0,\ldots,a_n$ beginning in $\Us$ obeys
+\begin{equation}
+ \bs(a_n)\geq\lambda^n\bs(a_0)>0.
+ \label{eq:pathbound}
+\end{equation}
+\end{theorem}
+
+\begin{proof}
+Theorem~\ref{thm:barrier} applies at every step.  Induction gives
+equation~\eqref{eq:pathbound}, so every point of $\Us$ is viable.  By
+definition the viability kernel is a subset of $\Us$, proving equality.
+\end{proof}
+
+Equation~\eqref{eq:kernel} is universal over all admitted successors.  It
+does not discard a failing branch after observing its diagnostic output.
+
+\section{Selection and protection are independent}
+
+\begin{theorem}[Occurrence--viability independence]
+\label{thm:independence}
+The transition and barrier law without $\sigma$ selects no component, while a
+component token without a sign-preserving successor law does not protect its
+selected component.
+\end{theorem}
+
+\begin{proof}
+Without $\sigma$, equation~\eqref{eq:flow} preserves both $C_+$ and $C_-$.
+Both are nonempty exact viability components, and the unsigned law is
+invariant under their exchange.  Hence it supplies no unique selection.
+Conversely, retain a token $\sigma$ but admit the successor $a\mapsto-a$.
+For every $a\in C_\sigma$, this successor lies in $C_{-\sigma}$ and satisfies
+$\bs(-a)=-\bs(a)<0$.  Thus the selector alone does not imply viability.
+\end{proof}
+
+This theorem also fixes the interpretation of~\eqref{eq:selector}.  The
+candidate selects exactly one of two viable connected components because the
+new token says which one.  It does not prove that the unsigned current
+ontology already prefers that component.
+
+\section{Source covariance and symmetry-breaking boundary}
+
+\begin{theorem}[Reflection-equivariant candidate family]
+\label{thm:reflection}
+Let $J(a,\sigma)=(-a,-\sigma)$, leaving
+$\gamma,\Delta,a_\star$ fixed.  Then
+\[
+ J\phi_t=\phi_tJ,\qquad
+ J(C_\sigma)=C_{-\sigma},\qquad
+ b_{-\sigma}(-a)=b_\sigma(a).
+\]
+Therefore reflection transports the $\sigma$ candidate to the
+$-\sigma$ candidate and preserves every barrier and viability theorem.
+\end{theorem}
+
+\begin{proof}
+The flow is odd in $a$.  The component statement follows from
+$(-\sigma)(-a)=\sigma a$, and direct substitution proves the barrier
+identity.  The path and viability statements then transport pointwise.
+\end{proof}
+
+A fixed value of $\sigma$ is not itself invariant under reflection.  The
+theorem establishes equivariance of the family of augmented laws; it does not
+turn reflection into declared redundancy or a physical gauge transformation.
+The choice of one oriented law is explicit proposal-level symmetry breaking.
+
+\begin{proposition}[Positive regraduation covariance]
+\label{prop:regraduation}
+For $d,c>0$, use the passive coordinate changes
+\[
+ a'=da,\quad a_\star'=da_\star,\quad t'=ct,\quad
+ \Delta'=c\Delta,\quad \gamma'=\frac{\gamma}{cd^2}.
+\]
+Then $\phi'_{t'}(a')=d\phi_t(a)$,
+$b'_{\sigma}(a')=b_\sigma(a)$, and
+$\gamma'\Delta'(a_\star')^2=\gamma\Delta a_\star^2$.
+Thus $\lambda$ and all typed candidate statements are unchanged.
+\end{proposition}
+
+\begin{proof}
+Substitute the transformed data into equations~\eqref{eq:flow},
+\eqref{eq:barrier}, and~\eqref{eq:lambda}.  All factors of $c$ and $d$
+cancel as displayed.
+\end{proof}
+
+This is source-coordinate naturality of the conditional model, not physical
+unit calibration, physical covariance, or a proof that arbitrary source
+presentation arrows are gauge.
+
+\section{Independence from the four frozen routes}
+
+The candidate's dependency graph is acyclic:
+\[
+ (\gamma,\Delta,a_\star,\sigma)
+ \longrightarrow (\phi,R_\Delta,C_\sigma,b_\sigma)
+ \longrightarrow \Viab_{R_\Delta}(C_\sigma).
+\]
+Every root is fixed before optional diagnostic evaluation.  No shared
+$\tau$, repaired $Q_{\mathrm{ray}}$, common character, anchor/cochain
+holonomy law, or $\operatorname{Bridge}_{\mathrm{OM}}$ covector, circuit,
+totality, refinement, or wall output occurs in this graph.  Such outputs may
+be evaluated after an independently supplied source trajectory, but cannot
+choose $\sigma$, $R_\Delta$, $\Us$, or $\bs$.
+
+Accordingly, these four local freezes remain active and untouched:
+\begin{itemize}
+ \item \path{NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR};
+ \item \path{NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS};
+ \item \path{NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION};
+ \item \path{NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS}.
+\end{itemize}
+
+\section{Exact controls and failure branches}
+
+The task-local exact model works in the squared-amplitude chart
+\[
+ u_t=\frac{u}{1+2\gamma tu},\qquad
+ b^2(u)=\frac{u}{a_\star^2+u}.
+\]
+It checks twenty rational $(u,t)$ fixtures, the exact semiflow composition
+identity, both positive regraduations, reflection transport, sign
+preservation, the sign-flip countermodel, and the $2\to1$ component-selection
+count.  All ten semantic checks pass.  Fixture success is validation of the
+proof implementation, not source evidence or ontology authority.
+
+\begin{longtable}{P{0.22\linewidth}P{0.48\linewidth}P{0.22\linewidth}}
+\toprule
+Branch & Exact trigger & Disposition \\
+\midrule
+\endfirsthead
+\toprule
+Branch & Exact trigger & Disposition \\
+\midrule
+\endhead
+FB--01 & $\Qamp$ or the amplitude coordinate is untyped. & Invalid domain.\\
+FB--02 & The conditional P5 flow is withheld and no $R_{\rm src}$ is added. & Missing-transition obstruction.\\
+FB--03 & $\sigma$ or $U$ is chosen from desired diagnostic, target, empirical, or benchmark success. & Forbidden goal/target import.\\
+FB--04 & $a_\star=0$ makes the printed barrier singular at $a=0$, or the barrier is not total with $U=\{b>0\}$; negative $a_\star$ is normalized to $|a_\star|$. & Candidate invalid or redundant representative.\\
+FB--05 & A sign flip or unbounded one-step time is admitted while one uniform $\lambda>0$ is claimed. & Exact propagation countermodel.\\
+FB--06 & Every selected state has an admitted exiting path. & Empty-kernel obstruction.\\
+FB--07 & $\sigma$ is absent while both $C_+$ and $C_-$ remain viable. & Exact two-component nonselection.\\
+FB--08 & Reflection does not transport $\sigma$, or regraduation leaves proposal data fixed inconsistently. & Covariance defect.\\
+FB--09 & A frozen diagnostic output chooses any candidate root. & Barred route replay.\\
+FB--10 & Source sign, parameter, barrier, or viability is called physical causality, response, scale, or geometry. & Claim block.\\
+FB--11 & Only obligations are restated without the candidate, proof, controls, and countermodels. & Invalid fog completion.\\
+\bottomrule
+\end{longtable}
+
+\section{What the construction does and does not explain}
+
+The candidate demonstrates a logically coherent way to add both structures
+isolated by RT002: $\sigma$ selects a component and the source evolution plus
+barrier protects it.  It therefore establishes existence of one target-free
+proposal syntax with exact mathematics.  It does not explain why nature, the
+current ontology, or an experiment should choose this syntax, the cubic law,
+the sign token, or the certificate normalization.  Its explanatory status is
+therefore constructive rather than discriminating.
+
+The sign of $a$ is an orbit label in the P5 model.  It is not by itself a
+future physical time orientation, causal arrow, particle/antiparticle label,
+detector sign, energy sign, or spacetime orientation.  Likewise $t$ is a
+source action parameter and $a_\star$ is a certificate reference, not a
+physical clock or measured amplitude scale.
+
+\section{Distance-to-GR matrix}
+
+\begin{longtable}{P{0.27\linewidth}P{0.63\linewidth}}
+\toprule
+Burden & Status after this task \\
+\midrule
+\endfirsthead
+\toprule
+Burden & Status after this task \\
+\midrule
+\endhead
+Source ontology primitives & One complete proposal-only candidate exists; current-ontology derivation and adoption remain absent.  No delta.\\
+Source equivalence $\mathsf{EqSrc}$ & Reflection/regraduation transport is conditional mathematical covariance only.  No delta.\\
+$\mathsf{RetainH}$ & No retention primitive or theorem is supplied.  No delta.\\
+$\mathsf{GenH}$ & The cubic generator remains proposal-only, candidate-specific, and unadopted.  No delta.\\
+$\mathsf{ObsLoc}_{lc}$ & No observer-localization or operational readout map is supplied.  No delta.\\
+$\mathsf{Resp}_{lc}$ & Barrier values and viability are not detector or empirical responses.  No delta.\\
+$M_{\mathrm{src}}$ & The one-mode amplitude line is not adopted physical source spacetime.  No delta.\\
+$g_{\mathrm{eff}}$ & No physical cone, conformal class, scale, or effective metric is constructed.  No delta.\\
+Matter coupling & No universal sector or coupling law is derived.  No delta.\\
+Einstein equations & No action, stress-energy semantics, variation principle, or field equation is supplied.  No delta.\\
+Finite-variation robustness & Only the exact one-mode law is protected; off-family and source-law perturbations remain unaudited.  No delta.\\
+Benchmark promotion & No exact-GR comparison, benchmark test, or promotion occurs.  No delta.\\
+Gate Chair status & No protected adoption, activation, disposition, or verdict occurs.  No delta.\\
+Route freeze or hard-fail & All four local freezes remain active; no new freeze or global no-go is created.  No delta.\\
+\bottomrule
+\end{longtable}
+
+\section{Disposition and next bounded question}
+
+The decisive disposition is
+\begin{center}
+\status{proposal\_only\_candidate\_source\_law\_formalized\_pending\_smuggling\_audit}.
+\end{center}
+The candidate is mathematically complete on its stated domain and explicitly
+source-syntactic.  Because its success is constructively loaded through
+$\sigma$, $\Delta$, and $a_\star$, the next separately admitted packet should
+be one focused \path{source_extension_smuggling_audit} under
+\path{smuggling-auditor@0.2.0}.  That audit is selected but not executed here.
+
+The audit must distinguish: (i) absence of literal target or workflow import;
+(ii) transparent proposal-level constructive preload; (iii) absence of
+current-ontology derivation or epistemic preference; and (iv) the narrower
+question whether the candidate earns any continued P4--T02 relevance.  A
+later Refuter stress is not yet authorized.
+
+\section{Explicit non-conclusions}
+
+This packet does not:
+\begin{itemize}
+ \item adopt, reject, or modify canonical ontology or a source law;
+ \item derive $\gamma$, $\Delta$, $a_\star$, $\sigma$, or a probability law
+ from the current ontology;
+ \item establish a point-valued occurrence, physical time orientation,
+ causality, empirical response, physical scale, or physical gauge;
+ \item establish D7 adequacy, activate or dispose B2, or unlock P4--T03;
+ \item construct a universal matter cone, conformal geometry,
+ $g_{\mathrm{eff}}$, coupling, action, stress energy, or Einstein equations;
+ \item reopen any frozen family, prove a global no-go, or exclude materially
+ distinct future source extensions;
+ \item create Gate Chair, proof, publication, release, push, or external
+ action authority;
+ \item create benchmark promotion or completed derivation authority.
+\end{itemize}
+
+\end{document}

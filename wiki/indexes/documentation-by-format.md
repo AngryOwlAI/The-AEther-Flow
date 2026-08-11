@@ -710,6 +710,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-ORIENTED-MATROID-REFUTER-SELECTOR-V1` `research_control/tasks/RT-20260811-002/artifacts/parent_fusion_notes_p4_t02_b2_post_oriented_matroid_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-REFUTER-SELECTION-V1` `research_control/tasks/RT-20260810-009/artifacts/parent_fusion_notes_p4_t02_b2_post_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/parent_fusion_notes_p4_t02_b2_selector.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1` `research_control/tasks/RT-20260811-003/artifacts/parent_fusion_notes_p4_t02_b2_source_dynamical_viability_admissibility_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `research_control/tasks/RT-20260810-001/artifacts/parent_fusion_notes_p4_t02_b2_source_intrinsic_interface_repair.md`
 - `MD-V22-P4-T02-PARENT-FUSION-HARD-FAIL-SCREEN-V1` `research_control/tasks/RT-20260809-019/artifacts/parent_fusion_notes_p4_t02_screen.md`
 - `MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `markdown/publication-briefs/validator-operator-workflow.publication-brief.md`
@@ -1419,6 +1420,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-ORIENTED-MATROID-REFUTER-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-oriented-matroid-refuter-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-REFUTER-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-refuter-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-selection-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-dynamical-viability-admissibility-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-intrinsic-interface-repair-v1.md`
 - `WIKI-MD-V22-P4-T02-PARENT-FUSION-HARD-FAIL-SCREEN-V1` `wiki/markdown/md-v22-p4-t02-parent-fusion-hard-fail-screen-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`

@@ -479,6 +479,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_post_line_lock_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-ORIENTED-MATROID-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-009/artifacts/v22_p4_t02_b2_post_refuter_route_selection_v1.tex`
+- `TEX-V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-LAW-V1` `research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_law_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_v1.tex`
 - `TEX-V22-P4-T02-HYPERBOLICITY-UNIVERSALITY-ROBUSTNESS-HARD-FAIL-SCREEN-V1` `research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex`
 

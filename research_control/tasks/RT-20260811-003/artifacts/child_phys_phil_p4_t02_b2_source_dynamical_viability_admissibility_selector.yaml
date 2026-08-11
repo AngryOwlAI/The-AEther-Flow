@@ -1,0 +1,719 @@
+schema_id: "v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_child_phys_phil_v1"
+artifact_id: "CHILD-RT020-PHYS-PHIL-SIGNED-CUBIC-VIABILITY-SELECTOR"
+task_id: "RT-20260811-003"
+job_id: "AJ-RT-20260811-003-001"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260811-003"
+authority: "science_draft"
+status: "completed_child_review"
+generated_at: "2026-08-11T10:35:39Z"
+source_head: "d98b6dd027b4bbe5cfd00668e5edd6355e43ab4f"
+claim_boundary_id: "CB-V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-FORMALIZATION-001"
+incoming_packet_id: "PKT-V22-P4T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION-V1"
+candidate_id: "CAND-V22-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1"
+candidate_law_name: "SignedCubicViabilitySelector_v1"
+
+decisive_result:
+  result_count: 1
+  result: "complete_proposal_only_candidate_supported_pending_smuggling_audit"
+  formalization_attempt_status: "proposal_only_candidate_source_law_formalized_pending_smuggling_audit"
+  allowed_result_type: "theorem_with_hypotheses_and_proof"
+  candidate_complete_under_packet_contract: true
+  precise_obstruction_returned: false
+  no_fog_check: true
+  decisive_statement: "The signed cubic construction is a mathematically complete component-selector and finite-path viability candidate under its explicit proposal roots. Its success is constructively preloaded by sigma and the inherited cubic flow, but the inspected source syntax imports no target atlas, metric, desired cone, empirical response, benchmark answer, or frozen selector. It therefore qualifies only as proposal-only new ontology primitive data pending a separately admitted Smuggling Auditor review."
+  decisive_reason: "For fixed gamma>0, Delta>0, a_star>0, and sigma in {+1,-1}, the registered cubic flow preserves the component U_sigma, the normalized barrier has a uniform positive bounded-step factor, and Sel_src(sigma)=U_sigma selects exactly one invariant component. Sigma is not derived and supplies no point or probability occurrence; those limits constrain explanation without invalidating the packet's expressly disjunctive component-selector contract."
+  source_extension_classification: "new_ontology_primitive_candidate"
+  source_import_classification: "constructive_preload_disclosed_no_forbidden_target_import_detected_at_formalization_scope_pending_smuggling_audit"
+  adoption_status: "blocked_adoption_open_continuation"
+  target_derivation_milestone: "effective_metric_g_eff"
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+fixed_authority_boundary:
+  selected_packet_executed_here: true
+  child_is_internal_execution_unit: true
+  child_agentjob_created: false
+  predecessor_corrections_performed: false
+  frozen_route_reconstruction_performed: false
+  formal_smuggling_audit_executed: false
+  refuter_stress_executed: false
+  source_law_adoption_requested: false
+  source_law_adoption_authorized: false
+  d7_adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  successor_execution_authorized: false
+  scientific_boundary: "This child may assess the task-local proposal and its conditional theorems. It cannot convert proposal roots, labels, exact fixtures, source hashes, or workflow PASS into ontology derivation, physical meaning, empirical support, adoption, or downstream GR authority."
+
+candidate_under_audit:
+  source_state_space: "X_src=Q_amp, identified with the full real amplitude line a in R."
+  nonzero_components:
+    - "C_plus={a:a>0}"
+    - "C_minus={a:a<0}"
+  inherited_conditional_flow: "Phi_gamma(t,a)=a/sqrt(1+2*gamma*t*a^2), with gamma>0 and t>=0."
+  bounded_successor_relation: "R_Delta(a)={Phi_gamma(t,a):0<=t<=Delta}."
+  selected_domain: "U_sigma={a:sigma*a>0}."
+  normalized_barrier: "b_sigma(a)=sigma*a/sqrt(a_star^2+a^2)."
+  component_selector: "Sel_src(sigma)=U_sigma."
+  viability_definition: "Viab_RDelta(U_sigma) consists of states in U_sigma whose every finite R_Delta path remains in U_sigma."
+  proposal_roots:
+    - root: "gamma>0"
+      provenance: "Inherited from the registered proposal-only P5 cubic dynamics candidate; not derived or adopted."
+    - root: "Delta>0"
+      provenance: "New proposal-only proof-granularity datum fixed before diagnostic evaluation."
+    - root: "a_star>0"
+      provenance: "New proposal-only barrier-normalization datum fixed before diagnostic evaluation."
+    - root: "sigma in {+1,-1}"
+      provenance: "New proposal-only source component-orientation datum fixed before diagnostic evaluation."
+  forbidden_inputs_used: []
+
+mathematical_validity_audit:
+  status: "conditionally_valid"
+  barrier_domain_identity: "Because a_star>0, b_sigma is total on R, takes values in (-1,1), and U_sigma={a:b_sigma(a)>0}; a=0 is a regular boundary point with b_sigma(0)=0."
+  exact_flow_identity: "Writing u=a^2 and A=a_star^2, the squared amplitude evolves as u_t=u/(1+2*gamma*t*u)."
+  exact_barrier_ratio: "For a in U_sigma, [b_sigma(Phi_gamma(t,a))/b_sigma(a)]^2=(A+u)/(A+u+2*gamma*t*A*u)."
+  uniform_bounded_step_factor: "For 0<=t<=Delta, the ratio is at least 1/(1+2*gamma*Delta*A); hence b_sigma(Phi_gamma(t,a))>=lambda_Delta*b_sigma(a)>0 with lambda_Delta=(1+2*gamma*Delta*A)^(-1/2)."
+  inequality_certificate: "After cross multiplication, the nonnegative difference is 2*gamma*Delta*A^2+2*gamma*A*(Delta-t)*u."
+  finite_path_propagation: "Induction gives b_sigma(a_n)>=lambda_Delta^n*b_sigma(a_0)>0 for every finite R_Delta path."
+  exact_viability_kernel: "Every admitted successor preserves amplitude sign, so Viab_RDelta(U_sigma)=U_sigma."
+  nonselection_without_sigma: "Removing sigma leaves both C_plus and C_minus invariant and viable; the flow alone selects neither."
+  sign_flip_falsifier: "Admitting a successor a->-a makes b_sigma change sign and immediately violates the positive barrier and viability claim."
+  reflection_transport: "J(a,sigma)=(-a,-sigma) intertwines Phi_gamma, maps U_sigma to U_minus_sigma, and satisfies b_minus_sigma(-a)=b_sigma(a)."
+  simultaneous_regraduation: "For a'=d*a, a_star'=d*a_star, t'=c*t, Delta'=c*Delta with c,d>0, gamma'=gamma/(c*d^2) preserves gamma*t*a^2, gamma*Delta*a_star^2, b_sigma, lambda_Delta, and component structure."
+  continuum_scope: "The proofs cover the full one-dimensional amplitude continuum and all finite paths generated by bounded steps; they do not cover off-family source perturbations, independent local modes, or all declared matter sectors."
+  theorem_truth_scope: "These are exact conditional mathematical statements about supplied proposal data, not current-ontology derivations or project-level proof promotion."
+
+preload_and_import_audit:
+  item_count: 8
+  items:
+    - item: "gamma"
+      source_syntax: "A positive coefficient in the already registered cubic generator."
+      ontology_derivation: "underived_inherited_proposal"
+      role_in_success: "Makes the conditional forward flow decay in magnitude while preserving sign."
+      constructive_preload: true
+      selects_component_identity: false
+      forbidden_target_import_as_written: false
+      philosophical_finding: "Its sign, power, and coefficient are stipulated rather than explained. Registration before the current bridge problem supports provenance independence but is not evidence that nature or current ontology selects this law."
+    - item: "Delta"
+      source_syntax: "A positive bounded-step horizon for R_Delta."
+      ontology_derivation: "underived_proposal_certificate_parameter"
+      role_in_success: "Makes one uniform positive lower factor available for each admitted step."
+      constructive_preload: true
+      selects_component_identity: false
+      forbidden_target_import_as_written: false
+      philosophical_finding: "Delta packages proof granularity and may be universally quantified over positive values. It is not a physical time interval, clock calibration, or explanation of component occurrence."
+    - item: "a_star"
+      source_syntax: "A positive amplitude reference in a bounded monotone barrier."
+      ontology_derivation: "underived_proposal_certificate_parameter"
+      role_in_success: "Normalizes b_sigma and yields a uniform lower factor on the noncompact amplitude line."
+      constructive_preload: true
+      selects_component_identity: false
+      forbidden_target_import_as_written: false
+      philosophical_finding: "Changing a_star changes the certificate but not U_sigma, Sel_src, or viability. Co-transport under amplitude regraduation prevents it from becoming an absolute physical scale."
+    - item: "sigma"
+      source_syntax: "A two-valued source orientation token."
+      ontology_derivation: "underived_new_ontology_primitive_candidate"
+      role_in_success: "Performs all component-identity selection by choosing C_plus or C_minus."
+      constructive_preload: true
+      selects_component_identity: true
+      forbidden_target_import_as_written: false
+      philosophical_finding: "Sigma is the decisive explanatory debt. It transparently supplies the distinction the prior source tuple lacked, but the construction gives no law, fact, probability, or reason selecting which sigma obtains."
+    - item: "R_Delta"
+      source_syntax: "A relation derived from the inherited conditional semiflow and Delta."
+      ontology_derivation: "conservative_definition_relative_to_proposal_roots"
+      role_in_success: "Defines the universally quantified finite variation class."
+      constructive_preload: false
+      selects_component_identity: false
+      forbidden_target_import_as_written: false
+      philosophical_finding: "Excluding sign flips is lawful only because R_Delta is generated by the predeclared cubic flow, not because successful diagnostic branches were retained after evaluation."
+    - item: "U_sigma"
+      source_syntax: "The sign component defined by sigma*a>0."
+      ontology_derivation: "conservative_definition_relative_to_sigma"
+      role_in_success: "Declares the selected admissible component."
+      constructive_preload: false
+      selects_component_identity: true
+      forbidden_target_import_as_written: false
+      philosophical_finding: "U_sigma is not an independently discovered admissibility law; it expands the content of the supplied token. It becomes forbidden goal filtering if sigma or the inequality is selected from Bridge_OM, cone, response, or benchmark success."
+    - item: "b_sigma"
+      source_syntax: "A normalized scalar certificate derived from sigma, a, and a_star."
+      ontology_derivation: "conservative_definition_relative_to_proposal_roots"
+      role_in_success: "Certifies positivity and finite-step propagation."
+      constructive_preload: false
+      selects_component_identity: false
+      forbidden_target_import_as_written: false
+      philosophical_finding: "The barrier is a mathematical certificate, not a physical magnitude, energy, response, clock, norm, or calibrated observable."
+    - item: "Sel_src"
+      source_syntax: "The map sigma->C_sigma."
+      ontology_derivation: "conservative_definition_relative_to_sigma"
+      role_in_success: "Returns one component once sigma is supplied."
+      constructive_preload: false
+      selects_component_identity: true
+      forbidden_target_import_as_written: false
+      philosophical_finding: "The map is exact but nearly definitional; its explanatory force cannot exceed the independent provenance of sigma."
+  constructive_selector_preload_detected: true
+  goal_property_or_target_outcome_preload_detected_as_written: false
+  forbidden_target_import_detected_as_written: false
+  formal_source_purity_verdict_issued: false
+  audit_boundary: "This child finding supports formalization. The separately admitted Smuggling Auditor must still test whether any parent wording, provenance edge, diagnostic ordering, or future use silently selects sigma or another root by desired outcome."
+
+reflection_and_symmetry_audit:
+  registered_predecessor_fact: "P5-T04 proves amplitude reflection a->-a is a global Z2 state-space symmetry but not declared source redundancy and not a physical gauge symmetry."
+  family_level_result: "The two token-indexed candidates are reflection-equivariant under (a,sigma)->(-a,-sigma)."
+  fixed_token_result: "At fixed sigma, amplitude reflection alone leaves the selected candidate instance and maps it to the opposite-token instance."
+  symmetry_breaking_classification: "explicit_primitive_indexing_not_dynamical_or_spontaneous_selection"
+  hides_symmetry_breaking: false
+  explanation: "Equivariance establishes coherence of the two-member family. It does not establish invariance of a fixed-token law, derive sigma, select an actual token, or prove the two candidates physically equivalent. Calling family covariance a derivation of absolute orientation would hide the primitive choice and is forbidden."
+  quotient_warning: "If a future EqSrc declares reflection a redundancy while sigma is not transformed as source data, Sel_src will not descend and PO-08 fails. Current identity-only Red_src creates no such defect."
+  sharp_falsifier: "A justified source equivalence that fixes sigma while sending a to -a, or a claim that reflection is gauge while U_sigma is physical, falsifies the present covariance/naturality reading."
+
+occurrence_granularity_audit:
+  component_selection_established_conditionally: true
+  selected_component_unique_given_sigma: true
+  sigma_selected_by_candidate: false
+  point_occurrence_selected: false
+  probability_measure_selected: false
+  initial_amplitude_selected: false
+  empirical_frequency_selected: false
+  actual_world_occurrence_claimed: false
+  contract_fit: "The incoming packet permits O_src or Sel_src and explicitly allows selection of a unique invariant component. Sel_src therefore discharges the component-selection alternative only."
+  explanatory_limit: "C_sigma contains continuum many amplitudes. The candidate narrows which sign component is admissible after sigma is supplied, but it gives no reason for an actual a_0, no distribution on C_sigma, and no empirical occurrence semantics."
+  forbidden_overread: "Component selection is not point occurrence, probabilistic initial-data selection, physical orientation, observed arrow of time, or universal matter-sector selection."
+
+category_separation:
+  source_syntax:
+    result: "well_typed_proposal_only"
+    statement: "All candidate objects are written on Q_amp and the P5 forward parameter with explicit new roots; no target-side object occurs in their definitions."
+  mathematical_model:
+    result: "conditionally_valid_complete_candidate"
+    statement: "The barrier, kernel, component selector, reflection transport, and regraduation formulas follow exactly from the displayed assumptions."
+  ontology_derivation:
+    result: "not_derived_from_current_ontology"
+    statement: "Current ontology derives neither the cubic law nor gamma, Delta, a_star, sigma, occurrence, or admissibility. The full package remains a new ontology primitive candidate."
+  epistemic_selection:
+    result: "conditional_component_selection_only"
+    statement: "Sigma selects one component by stipulation. No evidence or probability prefers a value of sigma or a point within that component."
+  explanatory_relevance:
+    result: "real_but_limited"
+    statement: "The proposal answers how a supplied source token can coherently select and protect a sign component. It does not answer why the token exists, which value obtains, or why the cubic law is preferred."
+  physical_interpretation:
+    result: "none"
+    statement: "Source sign, forward parameter, reflection, barrier, and viability are not physical time orientation, causality, cone, conformal geometry, scale, energy, or g_eff."
+  empirical_interpretation:
+    result: "none"
+    statement: "No detector map, response variable, calibration, units, data, distribution, likelihood, or measurement semantics are supplied."
+  universality:
+    result: "not_established"
+    statement: "The result is confined to the one-mode Q_amp candidate and finite R_Delta paths. It supplies no off-family robustness, independent local modes, all-P7 sector coverage, or universal matter propagation."
+  adoption:
+    result: "blocked_adoption_open_continuation"
+    statement: "A complete proposal is not a canonical-ontology candidate, adopted law, rejected law, or protected decision."
+  workflow_authority:
+    result: "traceability_only"
+    statement: "Hashes, exact-model PASS, validation, role assignment, child agreement, registration, and checkpoint status provide conformance and provenance only; they do not establish theorem truth, source derivation, physical reality, empirical adequacy, or adoption."
+
+new_mathematical_and_philosophical_payload:
+  - payload_id: "PAYLOAD-RT020-PHIL-EQUIVARIANT-FAMILY-NONSELECTION"
+    payload_type: "lemma"
+    object_name: "equivariant-family nonselection lemma"
+    statement: "Let C_plus and C_minus be exchanged by reflection and let Sel(sigma)=C_sigma. The equality Sel(-sigma)=-Sel(sigma) proves equivariance of the indexed family, but no reflection-invariant absolute choice of one member follows."
+    proof: "Reflection maps C_plus bijectively to C_minus and the sets are distinct. An absolute member fixed by reflection would have to equal its reflected opposite, contradicting C_plus != C_minus. Supplying sigma removes the contradiction by transporting the index, not by deriving an index value."
+    philosophical_payload: "Naturality can coordinate alternatives without explaining which alternative is actual. Reflection equivariance is therefore quarantine against presentation dependence, not evidence for occurrence or hidden symmetry breaking."
+    sharp_falsifier: "A separately derived source asymmetry or occurrence law that fixes one sigma from current ontology would invalidate the present nonselection premise and upgrade the explanation; none is supplied here."
+    claim_status: "draft/control"
+    burden_effect: "narrows"
+  - payload_id: "PAYLOAD-RT020-PHIL-CERTIFICATE-SELECTOR-SEPARATION"
+    payload_type: "lemma"
+    object_name: "certificate-selector separation lemma"
+    statement: "For fixed sigma, varying Delta>0 or a_star>0 changes R_Delta granularity, b_sigma, and lambda_Delta but leaves U_sigma and Sel_src(sigma) unchanged."
+    proof: "U_sigma and Sel_src depend only on the sign of sigma*a. Neither definition contains Delta or a_star. These parameters occur only in the successor packaging and normalized barrier certificate."
+    philosophical_payload: "Delta and a_star preload certificate form, not branch identity. Treating either as physical time or scale would add interpretation not present in their mathematical role."
+    sharp_falsifier: "Any future definition of U_sigma or Sel_src that depends on Delta, a_star, a target cone, or empirical success would falsify this separation and trigger goal-filtering review."
+    claim_status: "draft/control"
+    burden_effect: "narrows"
+  - payload_id: "PAYLOAD-RT020-PHIL-COMPONENT-OCCURRENCE-GRANULARITY"
+    payload_type: "proposition"
+    object_name: "component-occurrence granularity proposition"
+    statement: "Sel_src(sigma)=C_sigma reduces two viable components to one but cannot select a point or probability measure because every a in C_sigma remains compatible with the same selector output."
+    proof: "Sel_src is constant on the continuum C_sigma as a component label. Distinct a_1 and a_2 in C_sigma therefore have identical selected-component status, and no weights are assigned."
+    philosophical_payload: "Sector selection is a legitimate but coarse form of occurrence control; it must not be renamed initial-state or empirical occurrence."
+    sharp_falsifier: "An independently defined point map O_src(sigma) in C_sigma or normalized measure mu_sigma would add the missing finer occurrence structure; neither is present."
+    claim_status: "draft/control"
+    burden_effect: "narrows"
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT020-PHIL-EQUIVARIANT-FAMILY-NONSELECTION"
+    payload_type: "lemma"
+    object_name: "equivariant-family nonselection lemma"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-003/artifacts/child_phys_phil_p4_t02_b2_source_dynamical_viability_admissibility_selector.yaml"
+    burden_effect: "narrows"
+    summary: "Reflection covariance transports token-indexed alternatives but selects no token value."
+  - payload_id: "PAYLOAD-RT020-PHIL-CERTIFICATE-SELECTOR-SEPARATION"
+    payload_type: "lemma"
+    object_name: "certificate-selector separation lemma"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-003/artifacts/child_phys_phil_p4_t02_b2_source_dynamical_viability_admissibility_selector.yaml"
+    burden_effect: "narrows"
+    summary: "Delta and a_star determine certificate form without selecting component identity."
+  - payload_id: "PAYLOAD-RT020-PHIL-COMPONENT-OCCURRENCE-GRANULARITY"
+    payload_type: "lemma"
+    object_name: "component-occurrence granularity proposition"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260811-003/artifacts/child_phys_phil_p4_t02_b2_source_dynamical_viability_admissibility_selector.yaml"
+    burden_effect: "narrows"
+    summary: "A component selector does not select an amplitude point or probability law."
+
+proof_obligation_audit:
+  obligation_count: 14
+  all_addressed: true
+  obligations:
+    - obligation_id: "PO-01-SOURCE-STATE-TYPING"
+      status: "discharged_scoped"
+      finding: "X_src is exactly the registered proposal-only Q_amp amplitude line; it is not an adopted M_src or full local source theory."
+    - obligation_id: "PO-02-TRANSITION-PROVENANCE"
+      status: "discharged_with_proposal_debt"
+      finding: "R_Delta is derived from the registered proposal-only cubic semiflow plus explicit gamma and Delta; current ontology does not derive or adopt them."
+    - obligation_id: "PO-03-ADMISSIBLE-DOMAIN-PREDECLARATION"
+      status: "discharged_with_proposal_debt"
+      finding: "Sigma and U_sigma are fixed before diagnostics. The candidate would fail if either were chosen from desired downstream success."
+    - obligation_id: "PO-04-BARRIER-DEFINITION"
+      status: "discharged"
+      finding: "For a_star>0, b_sigma is total, nonsingular at zero, and has U_sigma as its positive superlevel set."
+    - obligation_id: "PO-05-BARRIER-PROPAGATION-THEOREM"
+      status: "discharged_conditionally"
+      finding: "The exact ratio inequality supplies lambda_Delta>0 and finite-path induction."
+    - obligation_id: "PO-06-VIABILITY-NONEMPTINESS"
+      status: "discharged_conditionally"
+      finding: "Every state in nonempty U_sigma is viable under R_Delta, so the kernel equals U_sigma."
+    - obligation_id: "PO-07-OCCURRENCE-OR-COMPONENT-SELECTION"
+      status: "discharged_component_only_with_proposal_debt"
+      finding: "Sel_src uniquely selects one viable component given sigma. It selects neither sigma, a point, nor a measure, and no stronger occurrence claim is allowed."
+    - obligation_id: "PO-08-SOURCE-COVARIANCE"
+      status: "discharged_conditionally"
+      finding: "Reflection and positive simultaneous regraduation transport are exact after gamma transforms as gamma/(c*d^2); neither transport is promoted to EqSrc or physical gauge."
+    - obligation_id: "PO-09-FOUR-FREEZE-INDEPENDENCE"
+      status: "discharged_by_source_order_and_exclusion"
+      finding: "The flow and all proposal roots are fixed without any output from shared-tau, Q_ray, common-character, or Bridge_OM families; diagnostics remain downstream-only."
+    - obligation_id: "PO-10-REALIZATION-SENSITIVITY-WITHOUT-TARGET-METRIC"
+      status: "discharged_with_proposal_debt"
+      finding: "Amplitude and a_star are source-coordinate data with exact regraduation covariance. No target norm or physical normalization is used."
+    - obligation_id: "PO-11-FINITE-AND-CONTINUUM-SCOPE"
+      status: "discharged"
+      finding: "The scope is the one-dimensional amplitude continuum and finite R_Delta paths only; off-family and all-sector generalizations are forbidden."
+    - obligation_id: "PO-12-PHYSICAL-EMPIRICAL-SEPARATION"
+      status: "discharged"
+      finding: "Every source sign, parameter, barrier, and viability claim is explicitly separated from physical causality, empirical response, geometry, scale, and g_eff."
+    - obligation_id: "PO-13-SOURCE-EXTENSION-CLASSIFICATION"
+      status: "discharged"
+      finding: "The roots are classified proposal-only source-extension data and the package is a new ontology primitive candidate with blocked adoption and open continuation."
+    - obligation_id: "PO-14-DECISIVE-FORMALIZATION-OR-FAIL"
+      status: "discharged"
+      finding: "The candidate has explicit objects, maps, conditional proofs, controls, falsifiers, and one decisive status; it is not an obligations-only packet."
+
+failure_branch_audit:
+  failure_branch_count: 11
+  any_triggered_as_written: false
+  branches:
+    - branch_id: "FB-01-UNTYPED-SOURCE-STATE"
+      triggered_as_written: false
+      evaluation: "Q_amp and a are registered proposal-only source objects. Removing that provenance makes the candidate invalid."
+    - branch_id: "FB-02-NO-SOURCE-TRANSITION-LAW"
+      triggered_as_written: false
+      evaluation: "The P5 cubic semiflow conditionally supplies transitions. Refusing that proposal premise returns the precise missing transition-law primitive."
+    - branch_id: "FB-03-GOAL-OR-TARGET-SELECTED-DOMAIN"
+      triggered_as_written: false
+      evaluation: "The inspected definitions use sigma and amplitude sign only. Selecting sigma or U_sigma from Bridge_OM, desired cones, response, metric, or benchmark output triggers fail-closed forbidden import."
+    - branch_id: "FB-04-BARRIER-REPRESENTATION-FAILURE"
+      triggered_as_written: false
+      evaluation: "a_star>0 makes b_sigma total with the exact positive-superlevel identity."
+    - branch_id: "FB-05-BARRIER-PROPAGATION-FAILURE"
+      triggered_as_written: false
+      evaluation: "All R_Delta successors preserve sign and satisfy the exact bound. A sign flip or unbounded one-step horizon with one uniform lambda is a sharp countermodel."
+    - branch_id: "FB-06-EMPTY-VIABILITY-KERNEL"
+      triggered_as_written: false
+      evaluation: "The kernel equals nonempty U_sigma. A law admitting a sign-crossing trajectory from every state would trigger this branch."
+    - branch_id: "FB-07-NONSELECTION"
+      triggered_as_written: false
+      evaluation: "Sigma supplies a component selector. The branch recurs immediately if sigma is removed, because two viable sign components remain."
+    - branch_id: "FB-08-SOURCE-COVARIANCE-DEFECT"
+      triggered_as_written: false
+      evaluation: "Reflection transports both a and sigma, and simultaneous regraduation transports gamma as gamma/(c*d^2). Treating reflection as redundancy while fixing sigma would trigger a defect."
+    - branch_id: "FB-09-FROZEN-ROUTE-REPLAY"
+      triggered_as_written: false
+      evaluation: "No frozen output defines gamma, Delta, a_star, sigma, R_Delta, U_sigma, or b_sigma. Any future such dependency rejects the route without reopening a freeze."
+    - branch_id: "FB-10-PHYSICAL-OR-EMPIRICAL-OVERREAD"
+      triggered_as_written: false
+      evaluation: "The candidate assigns no physical or empirical semantics. Calling sigma time orientation or b_sigma a physical response triggers a claim-boundary failure."
+    - branch_id: "FB-11-OBLIGATIONS-ONLY-FOG"
+      triggered_as_written: false
+      evaluation: "Exact candidate data, proofs, controls, classifications, and a decisive pending-audit status are present."
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "CAND-V22-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1"
+  item_source_path: "research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_spec_v1.yaml"
+  item_kind: "proposal-only source law and theorem candidate"
+  classification: "new_ontology_primitive_candidate"
+  adoption_classification: "blocked_adoption_open_continuation"
+  evidence_paths:
+    - "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+    - "research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex"
+    - "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+    - "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex"
+    - "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+    - "research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_selected_future_packet_v1.yaml"
+  relation_to_current_ontology: "missing_primitive"
+  exact_missing_or_underived_data:
+    - "preference for the cubic exponent and positive gamma"
+    - "bounded-step horizon Delta if treated as law data rather than universally quantified proof granularity"
+    - "amplitude reference a_star if retained as source data"
+    - "orientation token sigma and any law selecting its value"
+    - "point-valued or probabilistic occurrence within C_sigma"
+  component_classifications:
+    inherited_cubic_flow: "proposal-only prior source-extension data accepted as a conditional premise"
+    sigma: "proposal-only new ontology primitive candidate"
+    delta_and_a_star: "proposal-only quantitative certificate data; not component selectors or physical calibrations"
+    relation_domain_barrier_and_selector: "conservative definitions relative to the proposal roots"
+  relation_to_target_side_structures: "none used in the inspected formal syntax"
+  import_classification: "constructive_preload_disclosed_no_forbidden_target_import_detected_at_formalization_scope_pending_smuggling_audit"
+  target_import_detected: false
+  target_import_fail_closed_if: "Any root, domain, transition, barrier, or token is selected using target atlas, metric, desired GR cone, physical time, empirical calibration, benchmark outcome, or frozen diagnostic success."
+  protected_authority_required_now: false
+  protected_authority_required_for_adoption: true
+  physics_promotion_authorized: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "A mathematically complete proposal-only new ontology primitive candidate exists and is ready for a separately admitted source-extension smuggling audit; adoption and physics consequences remain blocked."
+  forbidden_overreads:
+    - "derived from current ontology"
+    - "source law or sigma adopted"
+    - "point or probabilistic occurrence established"
+    - "physical time orientation or causality"
+    - "empirical response or physical scale"
+    - "universal P7 coverage or B2 sufficiency"
+    - "g_eff, matter coupling, or Einstein equations"
+    - "benchmark, proof, Gate, publication, or completed derivation"
+    - "global no-go or future source-extension impossibility"
+  next_route_if_blocked: "source_extension_smuggling_audit"
+
+successor_selection:
+  selected_successor_count: 1
+  packet_id: "PKT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1"
+  packet_type: "source_extension_smuggling_audit"
+  next_role: "smuggling-auditor@0.2.0"
+  status: "selected_not_executed"
+  selected_packet_executed: false
+  requires_separate_agentjob: true
+  requires_human_gate: false
+  objective: "Audit whether gamma, Delta, a_star, sigma, U_sigma, R_Delta, b_sigma, and Sel_src remain source-only proposal data or hide desired Bridge, cone, physical, empirical, benchmark, process, or adoption imports."
+  exact_decision_consequence: "A source-pure audit may later route separately to Refuter stress; an import finding must fail closed or name a bounded repair. Neither branch is executed here."
+  automatic_adoption: false
+  automatic_refuter_stress: false
+  automatic_b2_action: false
+
+freeze_preservation:
+  freeze_count: 4
+  all_preserved: true
+  any_reopened: false
+  new_freeze_created: false
+  freezes:
+    - freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "active_untouched"
+      independence: "No shared tau, common tangent line, or line stabilizer defines the signed cubic candidate."
+    - freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "active_untouched"
+      independence: "No Q_ray, midpoint plane, fixed representative, or response-ray quotient is used."
+    - freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "active_untouched"
+      independence: "No common character, anchor, cochain, or holonomy protection is used."
+    - freeze_label: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      status: "active_untouched"
+      independence: "Bridge_OM is excluded from selection and may remain diagnostic only after independent source evaluation."
+  p5_one_mode_geometry_support_freeze_preserved: true
+  p5_freeze_boundary: "The signed candidate uses the registered one-mode cubic dynamics as conditional source mathematics only. It does not reopen the P5-T07/P5-T08 freeze of the unchanged one-mode route as positive geometry support."
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_source_dynamical_viability_selector"
+  current_cycle_step: "ontology_formalization"
+  prior_related_tasks:
+    - "RT-20260725-003"
+    - "RT-20260725-007"
+    - "RT-20260725-008"
+    - "RT-20260725-010"
+    - "RT-20260726-001"
+    - "RT-20260811-001"
+    - "RT-20260811-002"
+  cycle_risk: "medium_due_to_explicit_selector_preload"
+  orbit_avoidance_reason: "The task adds a named sigma-indexed component law, exact normalized barrier, complete viability theorem, and sharp falsifiers rather than restating prior occurrence obligations."
+  replay_trigger: "If sigma or U_sigma is selected by a frozen diagnostic or desired physical output, the candidate is orbital goal filtering and fails closed."
+  next_role_consequence: "smuggling-auditor@0.2.0"
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Determine whether existing proposal-level source dynamics can support a covariant component selector and finite-path viability law without target or frozen-route import."
+  explanation: "A complete task-local proposal-only source-law candidate is formalized and conditionally proved. It remains underived, unaudited, unstressed, unadopted, candidate-specific, and physically uninterpreted, so no Distance-to-GR burden changes."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "P4-T02 stable common physical causal geometry not established"
+  new_status: "P4-T02 stable common physical causal geometry not established"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "source-extension smuggling audit and Refuter stress"
+    - "D7 adequacy and B2 disposition"
+    - "P4-T02 acceptance and P4-T03"
+    - "physical causality, conformal geometry, scale, and g_eff"
+    - "matter coupling and Einstein equations"
+    - "Gate Chair review, benchmark promotion, proof promotion, and completed derivation"
+  explanation: "Proposal construction narrows one source-law question but does not establish source-law adoption, physical interpretation, empirical adequacy, universality, or downstream geometry."
+
+distance_to_gr_status:
+  target_derivation_milestone: "effective_metric_g_eff"
+  changed: false
+  effect: "no_distance_delta"
+  ledger_updated: false
+  row_count: 14
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      basis: "A complete proposal-only primitive candidate exists, but current ontology does not derive or adopt gamma, Delta, a_star, sigma, or the law."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      basis: "Reflection and regraduation transport are candidate-level mathematics, not adopted EqSrc or physical gauge."
+    - burden: "RetainH"
+      status: "no_delta"
+      basis: "No RetainH primitive or theorem is constructed."
+    - burden: "GenH"
+      status: "no_delta"
+      basis: "The inherited cubic generator remains proposal-only, candidate-specific, and unadopted."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      basis: "No observer-localization map or semantics is supplied."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      basis: "Source sign, barrier, component selection, and viability are not detector or empirical response."
+    - burden: "M_src"
+      status: "no_delta"
+      basis: "Q_amp is a task-local one-mode source family, not an adopted physical source manifold."
+    - burden: "g_eff"
+      status: "no_delta"
+      basis: "No physical cone, time orientation, conformal structure, scale, source-to-metric map, or effective metric is derived."
+    - burden: "matter coupling"
+      status: "no_delta"
+      basis: "No universal matter sector, propagation semantics, response law, or coupling is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      basis: "No action, stress tensor, variational principle, dynamics-to-field-equation map, or Einstein equation is supplied."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      basis: "Exact finite-path viability holds only inside the supplied one-mode law; off-family and source-law robustness remain unaudited."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      basis: "No exact-GR comparison, benchmark result, or promotion occurs."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      basis: "No protected review, ontology adoption, activation, disposition, or verdict is requested or issued."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      basis: "All four local freezes and the one-mode geometry-support freeze remain active; the new candidate creates no freeze or global no-go."
+
+authority_limits:
+  source_law_constructed_as_proposal: true
+  conditional_mathematics_supported: true
+  source_law_derived_from_current_ontology: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  smuggling_audit_executed: false
+  refuter_stress_executed: false
+  sigma_occurrence_derived: false
+  point_occurrence_constructed: false
+  probability_law_constructed: false
+  physical_or_empirical_interpretation_constructed: false
+  d7_adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t02_acceptance_satisfied: false
+  p4_t03_unlocked: false
+  universal_p7_coverage_constructed: false
+  physical_causality_constructed: false
+  physical_time_orientation_derived: false
+  conformal_geometry_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_constructed: false
+  einstein_equations_derived: false
+  gate_verdict_created: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  physics_promotion_authorized: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "Do not infer that current ontology derives or adopts the cubic law, gamma, Delta, a_star, sigma, U_sigma, b_sigma, or Sel_src."
+    - "Do not infer that reflection equivariance selects sigma, hides a proved spontaneous symmetry breaking mechanism, or makes reflection physical gauge."
+    - "Do not infer point occurrence, probability, empirical frequency, or actual-world selection from component selection."
+    - "Do not call the source sign physical time orientation, the forward parameter physical time, the barrier physical response or energy, or a_star a physical scale."
+    - "Do not infer physical causality, all-sector universality, conformal geometry, g_eff, matter coupling, or Einstein equations."
+    - "Do not reevaluate D7, act on B2, accept P4-T02, or unlock P4-T03."
+    - "Do not infer Gate Chair action, benchmark or proof promotion, publication, push, external action, or completed derivation."
+    - "Do not infer a global no-go, global theory rejection, or future source-extension impossibility."
+  summary: "The child supports one transparent, falsifiable, proposal-only mathematical candidate. Constructive preload and workflow traceability are not ontology derivation, physical explanation, empirical evidence, adoption, or promotion."
+
+conflict_resolution_record:
+  conflict_count_detected: 1
+  conflict_kind: "simultaneous_regraduation_metadata_formula"
+  detected_in: "research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_spec_v1.yaml"
+  prior_value: "The map signature sent gamma to gamma/d^2 while also sending t and Delta to c times their values."
+  exact_issue: "That signature would multiply gamma*t*a^2 and gamma*Delta*a_star^2 by c under simultaneous regraduation."
+  canonical_repair: "gamma'=gamma/(c*d^2) with a'=d*a, a_star'=d*a_star, t'=c*t, and Delta'=c*Delta."
+  parent_acknowledged_and_repaired: true
+  repaired_source_hash_recorded_below: true
+  scientific_result_changed: false
+  unresolved_blocking_conflict_count: 0
+
+memory_and_registry_navigation:
+  active_job_memory_preflight_inherited: true
+  child_refresh_rerun: false
+  no_refresh_reason: "The active AgentJob records PASS with no refresh needed, and this child's write ownership is one artifact only."
+  targeted_query_executed: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V22-P4-T02-B2-POST-ORIENTED-MATROID-REFUTER-ROUTE-SELECTION-V1 --json"
+  canonical_source_from_query_inspected: "research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_route_selection_v1.tex"
+  registry_used_as_navigation_only: true
+  generated_memory_or_cache_used_as_authority: false
+
+source_provenance:
+  hash_algorithm: "sha256"
+  hash_observation_time: "2026-08-11T10:35:39Z"
+  source_count: 25
+  sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      use: "project scientific conduct"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      use: "root research and ontology-law boundary"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      use: "research-control continuation and protected authority"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      use: "single outer AgentJob and ontology-law packet procedure"
+    - path: "research_control/tasks/RT-20260811-003/00_TASK.yaml"
+      sha256: "590078a0531b1448b8d1f119de0463b13c78955fe94bf4beac24db773bae6249"
+      use: "active task and exact claim boundary"
+    - path: "research_control/tasks/RT-20260811-003/DDR-20260811-003.md"
+      sha256: "2d77320267e9b48976333dc5edd6ea53461e7b2baceec55116e5624c0ae57e84"
+      use: "active Director decision and parent-child responsibilities"
+    - path: "research_control/tasks/RT-20260811-003/jobs/AJ-RT-20260811-003-001.yaml"
+      sha256: "98a0df4f25516fbef804e29240b9fc656c36b7c999f79919d3b4de8c2a4bc2b5"
+      use: "complete active AgentJob, preflight receipt, obligations, branches, and freezes"
+    - path: "research_control/tasks/RT-20260811-003/roles/ontology-formalizer@0.2.0--RT-20260811-003.yaml"
+      sha256: "d11be50a2005fd8e3d8cb24c8927de223f395d8b340a85dd56b424c2b600afda"
+      use: "task-local role overlay"
+    - path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+      sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+      use: "base formalization and ontology-law authority"
+    - path: ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+      sha256: "2ec5a542caffa90a54d11f0c03630fde839e92f4917d5dbd55b80b724a46c882"
+      use: "successor audit boundary"
+    - path: "research_control/handoffs/handoff-1016.yaml"
+      sha256: "9f4bedc712544cf85044fe6ea9676f8d0646ea62e3fef11e8864e8c59d26f507"
+      use: "authoritative incoming packet and downstream blocks"
+    - path: "research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_selected_future_packet_v1.yaml"
+      sha256: "daf708d2646fb111ece049f89158222f6327d0cedc72b096b1aa01682b431f07"
+      use: "fourteen obligations, eleven failure branches, and formal packet contract"
+    - path: "research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_route_selection_v1.tex"
+      sha256: "03c20bbf44168a197c9a1137df24eb6164114709babd4f4d8002c70ede4b1f63"
+      use: "registered selector theorems and source-barrier boundary"
+    - path: "research_control/tasks/RT-20260725-003/artifacts/compact_source_theory_object_v1.tex"
+      sha256: "2520f82e54edcb2668446579ceed7a7dfc7a8abf995572aa9889a3d9a3a4467c"
+      use: "P5-T01 source tuple, Q_amp witness, observables, variations, and open slots"
+    - path: "research_control/tasks/RT-20260725-007/artifacts/phi_src_semiflow_semantics_v1.tex"
+      sha256: "60f7358e0643195d4e2b79f7fda921da223ef940d00968588a4175d23cc0b70f"
+      use: "P5-T02 forward semiflow semantics and reparameterization boundary"
+    - path: "research_control/tasks/RT-20260725-008/artifacts/cubic_amplitude_source_dynamics_v1.tex"
+      sha256: "98ce6833f6e4d8be22837d25845d7fa62d6886049e168d121de5de0093703f6a"
+      use: "P5-T03 registered cubic flow, sign preservation, and proposal status"
+    - path: "research_control/tasks/RT-20260725-010/artifacts/cubic_amplitude_structural_analysis_v1.tex"
+      sha256: "a9a9f42ff016febc0f40a8a4db32b09f670084bda2248704e290cf5bee02a06b"
+      use: "P5-T04 reflection symmetry, identity redundancy, locality, and conditional probability boundary"
+    - path: "research_control/tasks/RT-20260726-001/artifacts/source_dynamics_milestone_synthesis_v1.tex"
+      sha256: "a2b9c6670cdb0e09ca2e19ff30f71d9bb954e3ab2fc73a5c9727a2df10db93aa"
+      use: "P5-T08 one-mode rank obstruction, local freeze, and open continuation"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      use: "milestone, fourteen Distance-to-GR rows, and source-extension category"
+    - path: "research_control/design/source_extension_classification_checklist_v1.md"
+      sha256: "ecf6db3bd8372801e6c7ac12d6727e7eb270d1605747af77194b90815faaf6c0"
+      use: "derived, definitional, new-primitive, target-import, and blocked-adoption classification"
+    - path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+      sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789"
+      use: "decisive result, payload, progress, and forbidden-conclusion vocabulary"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      use: "P4-T02 stable common physical cone burden and P4-T03 lock"
+    - path: "registries/TEX_SOURCE_REGISTRY.csv"
+      sha256: "9c618ee55bca7c7de93cefa6d2f0a9ecf6b19310ce5ba3822f4133752931225d"
+      use: "canonical registered TeX path and status navigation"
+    - path: "research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_model.py"
+      sha256: "deb4827eab5195098b62fb722430715b333aad8f393faa7f4c5cb1126f6631a5"
+      use: "live exact rational model, barrier, symmetry, and countermodel controls"
+    - path: "research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_spec_v1.yaml"
+      sha256: "f990e4e6048b268545e3f818a2088d7951d13c2310e0a113e018b3c39fa2af0e"
+      use: "live complete candidate contract and repaired simultaneous-regraduation identity"
+
+verification:
+  source_head_matches_job: true
+  source_hashes_recomputed: true
+  yaml_parse: "PASS"
+  duplicate_key_scan: "PASS"
+  decisive_result_count: 1
+  proof_obligation_count: 14
+  all_proof_obligations_addressed: true
+  failure_branch_count: 11
+  all_failure_branches_evaluated: true
+  freeze_count: 4
+  all_freezes_preserved: true
+  distance_row_count: 14
+  distance_row_names_unique: true
+  all_distance_rows_literal_no_delta: true
+  mathematical_payload_count: 3
+  selected_successor_count: 1
+  selected_successor_executed: false
+  exact_model_status: "PASS"
+  exact_model_fixture_count: 20
+  exact_model_check_count: 10
+  exact_model_passed_check_count: 10
+  live_parent_spec_regraduation_repair_verified: true
+  source_extension_classification_complete: true
+  claim_blocks_preserved: true
+  git_diff_check: "PASS"
+  owned_write_path_only: true
+  full_outer_job_validation_run_by_child: false
+  verification_level: "strict unique-key YAML, live source hashes, exact rational model, semantic and cardinality checks, and whitespace"
+
+blocking_conflicts_and_risks:
+  unresolved_blocking_conflict_count: 0
+  blocking_conflict_present: false
+  parent_candidate_result_alignment: true
+  dominant_nonblocking_risks:
+    - "Sigma may be laundered from an explicit selector primitive into an allegedly derived source fact."
+    - "Reflection equivariance may be overstated as absolute orientation selection, spontaneous symmetry breaking, or physical gauge equivalence."
+    - "Component selection may be overstated as point occurrence, probability, empirical frequency, or actual-world selection."
+    - "Delta or a_star may be overread as physical time or scale despite their certificate-only role and regraduation covariance."
+    - "The one-mode conditional law may be overread as off-family robustness, universal sector coverage, or positive geometry support."
+  parent_action_required: "Fuse this conditional support and its explanatory limits with the Physicist-Mathematician result, preserve the repaired regraduation identity, and route only the selected unexecuted Smuggling Auditor packet."

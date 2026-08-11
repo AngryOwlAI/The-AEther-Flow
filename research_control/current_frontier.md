@@ -3,14 +3,14 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260811-002` and `handoff-1016`.
+`RT-20260811-003` and `handoff-1017`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T09:06:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"227b3106675d56608c18e18033986bf15bd34534","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"fa2330cbd6aade1f11dd9d73d45f68284ab1885e4815aa883184d29ea26afd8c"},{"path":"research_control/handoffs/handoff-1016.yaml","sha256":"9f4bedc712544cf85044fe6ea9676f8d0646ea62e3fef11e8864e8c59d26f507"},{"path":"research_control/program_state.yaml","sha256":"0d4260618dec5ec9937cd38af075386d60c95732af7a1ca80107f40da58395ff"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"ee6b385af601af272f6f0159012830662fce4be2f54e146e6c74d768e9ba712a","source_path_count":"12","task_count":"1271"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T10:52:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"d98b6dd027b4bbe5cfd00668e5edd6355e43ab4f","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"1ee835f8c0f3e7b34a5958cd7116ec9a05db1b4cc8670714b7023a50f2866e8e"},{"path":"research_control/handoffs/handoff-1017.yaml","sha256":"21946600d826f6f6e0a1398243ac5da387b03ed9b1201a25b341abd9b880dec5"},{"path":"research_control/program_state.yaml","sha256":"220541acdb0aff7947e98d76e67c5f1d6786123c836a195f5f19800112596e66"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"a99ba2d0cb9c34156afae5bcdc0877daf453dfeca2982baa158907611f0d4b32","source_path_count":"12","task_count":"1272"} -->
 
 ## Generated-Report Provenance
 
@@ -19,11 +19,11 @@ tracked authority files govern.
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `current_frontier` |
-| Source commit | `227b3106675d56608c18e18033986bf15bd34534` |
-| Source-derived generation time | `2026-08-11T09:06:00Z` |
-| Tracked task count | 1271 |
+| Source commit | `d98b6dd027b4bbe5cfd00668e5edd6355e43ab4f` |
+| Source-derived generation time | `2026-08-11T10:52:00Z` |
+| Tracked task count | 1272 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `ee6b385af601af272f6f0159012830662fce4be2f54e146e6c74d768e9ba712a` |
+| Source manifest SHA-256 | `a99ba2d0cb9c34156afae5bcdc0877daf453dfeca2982baa158907611f0d4b32` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -31,9 +31,9 @@ tracked authority files govern.
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `fa2330cbd6aade1f11dd9d73d45f68284ab1885e4815aa883184d29ea26afd8c`
-- `research_control/handoffs/handoff-1016.yaml`: `9f4bedc712544cf85044fe6ea9676f8d0646ea62e3fef11e8864e8c59d26f507`
-- `research_control/program_state.yaml`: `0d4260618dec5ec9937cd38af075386d60c95732af7a1ca80107f40da58395ff`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `1ee835f8c0f3e7b34a5958cd7116ec9a05db1b4cc8670714b7023a50f2866e8e`
+- `research_control/handoffs/handoff-1017.yaml`: `21946600d826f6f6e0a1398243ac5da387b03ed9b1201a25b341abd9b880dec5`
+- `research_control/program_state.yaml`: `220541acdb0aff7947e98d76e67c5f1d6786123c836a195f5f19800112596e66`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_current_frontier.py`: `62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6`
@@ -47,15 +47,15 @@ or claim-promotion authority.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260811-002` |
-| Latest handoff ID | `handoff-1016` |
-| Current status | `v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_formalization_selected_not_executed_checkpoint_pending` |
+| Active task ID | `RT-20260811-003` |
+| Latest handoff ID | `handoff-1017` |
+| Current status | `v22_p4_t02_b2_signed_cubic_viability_selector_candidate_formalized_pending_smuggling_audit_precheckpoint` |
 | V16 completed | false |
-| Current route family | integration or selection (scientific) |
+| Current route family | formalization or theorem (scientific) |
 | Target derivation milestone | `effective_metric_g_eff` |
 | Current burden | `g_eff` |
-| Required next authority | One governed RT-20260811-002 checkpoint followed by one separately admitted Ontology Formalizer source-law formalization-or-obstruction packet. |
-| Next recommended action | Run the single governed checkpoint for AJ-RT-20260811-002-001. After it commits execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION-V1. Formalize or precisely obstruct target-free source occurrence O_src, admissible domain U_src, transition relation R_src, barrier b_src, and viability certificate from independently source-provenanced premises. Preserve all four freezes. Do not execute any later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
+| Required next authority | One governed RT-20260811-003 checkpoint followed by one separately admitted focused Smuggling Auditor source-extension audit. |
+| Next recommended action | Run the single governed checkpoint for AJ-RT-20260811-003-001. After it commits execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1. Audit only the disclosed gamma Delta a_star sigma roots predeclaration dependency graph reflection-equivariant family component-not-point occurrence boundary and certificate normalization for literal target goal or workflow-authority import. Preserve all four freezes. Do not execute Refuter stress adopt a source law or ontology reevaluate D7 act on B2 unlock P4-T03 promote publish push or take external action. |
 
 ## Active-State Bifurcation
 
@@ -66,9 +66,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260811-002` |
-| Latest research handoff ID | `handoff-1016` |
-| Latest research next action | Run the single governed checkpoint for AJ-RT-20260811-002-001. After it commits execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION-V1. Formalize or precisely obstruct target-free source occurrence O_src, admissible domain U_src, transition relation R_src, barrier b_src, and viability certificate from independently source-provenanced premises. Preserve all four freezes. Do not execute any later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
+| Latest research task ID | `RT-20260811-003` |
+| Latest research handoff ID | `handoff-1017` |
+| Latest research next action | Run the single governed checkpoint for AJ-RT-20260811-003-001. After it commits execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1. Audit only the disclosed gamma Delta a_star sigma roots predeclaration dependency graph reflection-equivariant family component-not-point occurrence boundary and certificate normalization for literal target goal or workflow-authority import. Preserve all four freezes. Do not execute Refuter stress adopt a source law or ontology reevaluate D7 act on B2 unlock P4-T03 promote publish push or take external action. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -101,12 +101,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260811-002/00_TASK.yaml`.
-- Active task objective: Compare exactly the four handoff-1015 continuations after the Bridge_OM selection-robustness obstruction: a source-side selection or admissibility theorem, a realization-sensitive bridge, a source-side irrelevance theorem, and a protected human-gated ontology stop; preserve all four freezes; select exactly one materially distinct future packet without executing it.
-- Latest handoff path: `research_control/handoffs/handoff-1016.yaml`.
-- Latest handoff summary: RT-20260811-002 compares exactly four post-Bridge_OM continuations and selects Route A: one target-free source dynamical viability admissibility and occurrence-selector formalization-or-obstruction packet under ontology-formalizer@0.2.0. The parent synthesis adds representation-occurrence separation, an exact reachability-component robustness criterion, a conditional source-barrier propagation theorem, and rational controls. The selected ontology-law research packet remains proposal-only and unexecuted. All four freezes, fourteen Distance-to-GR no-delta rows, D7 non-evaluation, B2 inactivity, P4-T03 lock, and every promotion boundary remain unchanged.
-- Current route family: integration or selection (scientific).
-- Next recommended action: Run the single governed checkpoint for AJ-RT-20260811-002-001. After it commits execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION-V1. Formalize or precisely obstruct target-free source occurrence O_src, admissible domain U_src, transition relation R_src, barrier b_src, and viability certificate from independently source-provenanced premises. Preserve all four freezes. Do not execute any later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
+- Active task path: `research_control/tasks/RT-20260811-003/00_TASK.yaml`.
+- Active task objective: Execute PKT-V22-P4T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION-V1 by formalizing target-free X_src, R_src or Phi_src, U_src, b_src, Viab, and O_src or Sel_src with exact theorems and source-provenance separation, or return the smallest precise missing primitive or countermodel; preserve all four freezes and every downstream block.
+- Latest handoff path: `research_control/handoffs/handoff-1017.yaml`.
+- Latest handoff summary: RT-20260811-003 constructs SignedCubicViabilitySelector_v1 as a complete proposal-only source-extension candidate under explicit roots gamma>0 Delta>0 a_star>0 and sigma in {+1,-1}. It proves the sharp bounded-step normalized-barrier factor the exact universal finite-path viability kernel token-relative component selection reflection transport and simultaneous positive regraduation covariance. Sigma transparently preloads component identity and remains underived; the candidate selects neither an amplitude point nor a probability law and has no physical or empirical semantics. Both internal physics perspectives converge with zero unresolved blocking conflicts. The focused source-purity audit remains unexecuted. All four freezes fourteen Distance-to-GR no-delta rows D7 non-evaluation B2 inactivity P4-T03 lock and every promotion boundary remain unchanged.
+- Current route family: formalization or theorem (scientific).
+- Next recommended action: Run the single governed checkpoint for AJ-RT-20260811-003-001. After it commits execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1. Audit only the disclosed gamma Delta a_star sigma roots predeclaration dependency graph reflection-equivariant family component-not-point occurrence boundary and certificate normalization for literal target goal or workflow-authority import. Preserve all four freezes. Do not execute Refuter stress adopt a source law or ontology reevaluate D7 act on B2 unlock P4-T03 promote publish push or take external action.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -336,7 +336,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the single governed checkpoint for AJ-RT-20260811-002-001. After it commits execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-FORMALIZATION-V1. Formalize or precisely obstruct target-free source occurrence O_src, admissible domain U_src, transition relation R_src, barrier b_src, and viability certificate from independently source-provenanced premises. Preserve all four freezes. Do not execute any later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
+Run the single governed checkpoint for AJ-RT-20260811-003-001. After it commits execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1. Audit only the disclosed gamma Delta a_star sigma roots predeclaration dependency graph reflection-equivariant family component-not-point occurrence boundary and certificate normalization for literal target goal or workflow-authority import. Preserve all four freezes. Do not execute Refuter stress adopt a source law or ontology reevaluate D7 act on B2 unlock P4-T03 promote publish push or take external action.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -364,9 +364,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260811-002`;
-- latest handoff: `handoff-1016`;
-- current status: `v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_formalization_selected_not_executed_checkpoint_pending`;
+- active task: `RT-20260811-003`;
+- latest handoff: `handoff-1017`;
+- current status: `v22_p4_t02_b2_signed_cubic_viability_selector_candidate_formalized_pending_smuggling_audit_precheckpoint`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -376,8 +376,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-1016.yaml`
-- `research_control/tasks/RT-20260811-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-1017.yaml`
+- `research_control/tasks/RT-20260811-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -393,7 +393,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 1016*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 1017*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

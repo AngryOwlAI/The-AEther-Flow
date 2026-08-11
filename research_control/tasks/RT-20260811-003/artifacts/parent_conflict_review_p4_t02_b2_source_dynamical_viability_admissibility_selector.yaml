@@ -1,0 +1,99 @@
+schema_id: "parent_conflict_review_v1"
+task_id: "RT-20260811-003"
+job_id: "AJ-RT-20260811-003-001"
+status: "resolved"
+reviewed_child_outputs:
+  - execution_unit_id: "child_phys_math"
+    perspective: "physicist_mathematician"
+    path: "research_control/tasks/RT-20260811-003/artifacts/child_phys_math_p4_t02_b2_source_dynamical_viability_admissibility_selector.yaml"
+    final_sha256: "4983c5f90ff46124a8125a34818db6fb63f7e548622bb204c0ac2f91f5de0450"
+    final_result_type: "theorem_with_hypotheses_and_proof"
+    final_result_status: "proposal_only_candidate_source_law_formalized_pending_smuggling_audit"
+    final_successor_packet_id: "PKT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1"
+    selected_successor_executed: false
+  - execution_unit_id: "child_phys_phil"
+    perspective: "physicist_philosopher"
+    path: "research_control/tasks/RT-20260811-003/artifacts/child_phys_phil_p4_t02_b2_source_dynamical_viability_admissibility_selector.yaml"
+    final_sha256: "09b3aedf36feda2a11387be3f8ed8330fcdca138977737fea68c6486dc76c40b"
+    final_result_type: "theorem_with_hypotheses_and_proof"
+    final_result_status: "proposal_only_candidate_source_law_formalized_pending_smuggling_audit"
+    final_successor_packet_id: "PKT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1"
+    selected_successor_executed: false
+
+initial_consensus:
+  result: "Both children support one mathematically complete proposal-only SignedCubicViabilitySelector candidate pending a separately admitted Smuggling Auditor review."
+  theorem_scope: "Both children accept the bounded-step barrier theorem, exact finite-path viability kernel, token-relative component selection, reflection transport, and positive regraduation covariance under explicit proposal roots."
+  ontology_scope: "Both children state that current ontology derives neither the cubic source law nor gamma, Delta, a_star, sigma, or the selected component."
+  occurrence_scope: "Both children distinguish component selection from point occurrence, probability, empirical frequency, and physical realization."
+  successor: "Both children select the same source_extension_smuggling_audit packet under smuggling-auditor@0.2.0 and require selected_not_executed."
+  freezes: "Both children preserve all four local freezes and all fourteen literal no_delta burden rows."
+
+precision_findings:
+  - finding_id: "PRECISION-RT003-SIMULTANEOUS-REGRADUATION"
+    raised_by: "physicist_philosopher"
+    original_issue: "The draft simultaneous amplitude/time regraduation omitted the factor c in the transformed cubic coefficient."
+    resolution: "The parent specification and manuscript use gamma'=gamma/(c*d^2), which preserves gamma*t*a^2 and gamma*Delta*a_star^2 when t'=c*t and a'=d*a."
+    scientific_result_changed: false
+    blocking_after_resolution: false
+  - finding_id: "PRECISION-RT003-AMPLITUDE-REFERENCE-SIGN"
+    raised_by: "physicist_mathematician"
+    original_issue: "The draft failure-branch wording treated all a_star<=0 as singular even though only a_star^2 appears."
+    resolution: "The parent records a_star>0 as the nonredundant representative convention; a_star<0 is equivalent to |a_star|, and only a_star=0 makes the printed normalized barrier singular at a=0."
+    scientific_result_changed: false
+    blocking_after_resolution: false
+
+resolution_rounds: []
+resolution_round_count: 0
+maximum_resolution_rounds: 2
+parallel_child_revision_required: false
+unresolved_conflicts: []
+unresolved_blocking_conflict_count: 0
+
+parent_review_findings:
+  candidate_identity:
+    status: "converged"
+    candidate_id: "CAND-V22-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1"
+    candidate_law_name: "SignedCubicViabilitySelector_v1"
+    result_type: "theorem_with_hypotheses_and_proof"
+    result_status: "proposal_only_candidate_source_law_formalized_pending_smuggling_audit"
+  successor_identity:
+    status: "converged"
+    packet_id: "PKT-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1"
+    packet_type: "source_extension_smuggling_audit"
+    next_role_family: "smuggling-auditor@0.2.0"
+    status_label: "selected_not_executed"
+  source_purity_boundary:
+    status: "audit_still_required"
+    finding: "The formal syntax is target-free and the constructive preload is disclosed, but this Ontology Formalizer task cannot issue the protected Smuggling Auditor verdict."
+  distance_to_gr:
+    changed: false
+    literal_no_delta_rows: 14
+  downstream_state:
+    d7_adequacy_reevaluated: false
+    b2_activated_or_disposed: false
+    p4_t03_unlocked: false
+    source_law_adopted: false
+    physics_promotion_authorized: false
+
+shared_consensus:
+  - "The normalized source barrier has the sharp factor lambda=(1+2*gamma*Delta*a_star^2)^(-1/2) over each bounded step."
+  - "The universal finite-path viability kernel of U_sigma equals U_sigma, while the lower bound decays along arbitrarily long paths."
+  - "Without sigma both reflection-related nonzero components remain viable and neither is selected."
+  - "Sigma selects a component only by explicit constructive preload; the construction selects no amplitude point or probability law."
+  - "Reflection equivariance transports the two token-indexed candidates but selects no token and proves no physical gauge or spontaneous symmetry breaking."
+  - "Positive regraduation is covariance of the whole proposal record, not evidence for an absolute physical scale."
+  - "No frozen selector is reconstructed, all four freezes remain active, and all fourteen Distance-to-GR rows remain no_delta."
+
+unique_child_contributions:
+  physicist_mathematician:
+    - "Sharpness proof for the bounded-step barrier factor and exact reachability/viability calculation."
+    - "Precise positive-regraduation law gamma'=gamma/(c*d^2) and the a_star sign-convention correction."
+    - "Exact rational controls for semigroup, reflection, countermodel, and covariance identities."
+  physicist_philosopher:
+    - "Constructive-preload audit identifying sigma as the sole component-identity selector."
+    - "Separation of component selection from point occurrence, probability, physical orientation, and empirical meaning."
+    - "Reflection-family nonselection and source-syntax versus ontology/adoption authority analysis."
+
+selected_successor_executed: false
+claim_boundary_preserved: true
+parent_fusion_authorized: true
