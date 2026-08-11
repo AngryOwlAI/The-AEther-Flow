@@ -3,14 +3,14 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260811-010` and `handoff-1024`.
+`RT-20260811-011` and `handoff-1025`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T20:52:45Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"8fa4225e3bb9bdb31ab61be6139b93550c00f80c","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"cdfc7c6d5dad49094589ef78e60c67f8a455d6587c6ff8f69d1f6bdcad3314f9"},{"path":"research_control/handoffs/handoff-1024.yaml","sha256":"dc1338db28488aec8a1db94cb297ee3d8b32f29a19af7989eafebd66f4bff7fb"},{"path":"research_control/program_state.yaml","sha256":"d406374af2eb4e45414f790b049513afe82d203eb6e4f7d98986241b276b4c46"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"f3c65743819eab3220b131f919dc07263d90acfa4bca92cd9032f3581853108e","source_path_count":"12","task_count":"1279"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T22:06:44Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"6b8cf1b6bb6854bdbb38d18d1609240c77cc88d2","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"8b9bf6eee753c5a2dfe5ebd1ab657b003e44e5822334f8e39526de3f4d3002a1"},{"path":"research_control/handoffs/handoff-1025.yaml","sha256":"c8648f08597cd2124d80bc71d4fed0beb94bca1a443855e674d96e7494910736"},{"path":"research_control/program_state.yaml","sha256":"fe535f0371208167fa28d47654242a1a4824d73f28a6429ab0c0aaccb2cd7545"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"37dd3aa59023cab1fc1164c21f83957d40e2f5815d08a2b50dda53de8cfe96ee","source_path_count":"12","task_count":"1280"} -->
 
 ## Generated-Report Provenance
 
@@ -19,11 +19,11 @@ tracked authority files govern.
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `current_frontier` |
-| Source commit | `8fa4225e3bb9bdb31ab61be6139b93550c00f80c` |
-| Source-derived generation time | `2026-08-11T20:52:45Z` |
-| Tracked task count | 1279 |
+| Source commit | `6b8cf1b6bb6854bdbb38d18d1609240c77cc88d2` |
+| Source-derived generation time | `2026-08-11T22:06:44Z` |
+| Tracked task count | 1280 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `f3c65743819eab3220b131f919dc07263d90acfa4bca92cd9032f3581853108e` |
+| Source manifest SHA-256 | `37dd3aa59023cab1fc1164c21f83957d40e2f5815d08a2b50dda53de8cfe96ee` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -31,9 +31,9 @@ tracked authority files govern.
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `cdfc7c6d5dad49094589ef78e60c67f8a455d6587c6ff8f69d1f6bdcad3314f9`
-- `research_control/handoffs/handoff-1024.yaml`: `dc1338db28488aec8a1db94cb297ee3d8b32f29a19af7989eafebd66f4bff7fb`
-- `research_control/program_state.yaml`: `d406374af2eb4e45414f790b049513afe82d203eb6e4f7d98986241b276b4c46`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `8b9bf6eee753c5a2dfe5ebd1ab657b003e44e5822334f8e39526de3f4d3002a1`
+- `research_control/handoffs/handoff-1025.yaml`: `c8648f08597cd2124d80bc71d4fed0beb94bca1a443855e674d96e7494910736`
+- `research_control/program_state.yaml`: `fe535f0371208167fa28d47654242a1a4824d73f28a6429ab0c0aaccb2cd7545`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_current_frontier.py`: `62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6`
@@ -47,15 +47,15 @@ or claim-promotion authority.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260811-010` |
-| Latest handoff ID | `handoff-1024` |
-| Current status | `v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_law_formalization_selected_checkpoint_pending` |
+| Active task ID | `RT-20260811-011` |
+| Latest handoff ID | `handoff-1025` |
+| Current status | `v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_precise_obstruction_theoretical_selector_checkpoint_pending` |
 | V16 completed | false |
-| Current route family | integration or selection (scientific) |
+| Current route family | formalization or theorem (scientific) |
 | Target derivation milestone | `effective_metric_g_eff` |
 | Current burden | `g_eff` |
-| Required next authority | One governed RT-20260811-010 checkpoint followed by one separately admitted Ontology Formalizer source-generated compact-root-family coercive-protection formalization-or-obstruction packet. |
-| Next recommended action | Run the single governed checkpoint for AJ-RT-20260811-010-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION-V1. Derive or precisely obstruct Pres_src, the nonempty compact total-root functor G_src, an independent finite positive lower-semicontinuous natural kappa, and complete variation, transverse, and EqSrc closure before any downstream protection test. Preserve all six freezes. Do not execute a later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
+| Required next authority | One governed RT-20260811-011 checkpoint followed by one separately admitted Theoretical Continuation Selector packet choosing a materially distinct source-side consequence or bounded source-extension investigation. |
+| Next recommended action | Run the single governed checkpoint for AJ-RT-20260811-011-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-OBSTRUCTION-THEORETICAL-CONTINUATION-SELECTION-V1. Select one materially distinct source-side consequence or bounded source-extension investigation. Do not replay the obstructed presentation/root/modulus proposal, adopt a source primitive or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
 
 ## Active-State Bifurcation
 
@@ -66,9 +66,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260811-010` |
-| Latest research handoff ID | `handoff-1024` |
-| Latest research next action | Run the single governed checkpoint for AJ-RT-20260811-010-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION-V1. Derive or precisely obstruct Pres_src, the nonempty compact total-root functor G_src, an independent finite positive lower-semicontinuous natural kappa, and complete variation, transverse, and EqSrc closure before any downstream protection test. Preserve all six freezes. Do not execute a later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
+| Latest research task ID | `RT-20260811-011` |
+| Latest research handoff ID | `handoff-1025` |
+| Latest research next action | Run the single governed checkpoint for AJ-RT-20260811-011-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-OBSTRUCTION-THEORETICAL-CONTINUATION-SELECTION-V1. Select one materially distinct source-side consequence or bounded source-extension investigation. Do not replay the obstructed presentation/root/modulus proposal, adopt a source primitive or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -101,12 +101,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260811-010/00_TASK.yaml`.
-- Active task objective: Compare exactly four handoff-1023 continuations after the SourceLawSpaceRobustInvarianceProtection_v1 family-protection obstruction: a materially distinct source-derived family-protection law, a source-side irrelevance theorem, a materially distinct bridge class, and a protected human-gated ontology stop; preserve all six freezes; select exactly one future packet without executing it.
-- Latest handoff path: `research_control/handoffs/handoff-1024.yaml`.
-- Latest handoff summary: RT-20260811-010 compares exactly four post-RT009 continuations and selects Route A: one SourceGeneratedCompactRootFamilyCoerciveProtectionLaw_v1 formalization-or-obstruction packet under ontology-formalizer@0.2.0. The future source law consists of a source-presentation functor to nonempty compact total root spaces and an independently source-derived finite positive lower-semicontinuous natural coercive modulus, with variation, transverse, and EqSrc closure. The fused draft/control result proves the conditional compact-total minimum theorem, supplies exact noncompact and non-lower-semicontinuous zero-infimum controls, and shows why diagnostic nonfactorization is not P4-T02 irrelevance without a source-derived Pi_prin. The selected packet remains proposal-only and unexecuted. All six freezes, fourteen Distance-to-GR no-delta rows, D7 non-evaluation, B2 inactivity, P4-T03 lock, and every promotion boundary remain unchanged.
-- Current route family: integration or selection (scientific).
-- Next recommended action: Run the single governed checkpoint for AJ-RT-20260811-010-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION-V1. Derive or precisely obstruct Pres_src, the nonempty compact total-root functor G_src, an independent finite positive lower-semicontinuous natural kappa, and complete variation, transverse, and EqSrc closure before any downstream protection test. Preserve all six freezes. Do not execute a later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
+- Active task path: `research_control/tasks/RT-20260811-011/00_TASK.yaml`.
+- Active task objective: Execute PKT-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION-V1 by deriving or precisely obstructing Pres_src, a functor G_src to nonempty compact total root spaces, an independently source-derived finite strictly positive lower-semicontinuous natural modulus kappa, and complete variation, transverse, and EqSrc closure before any downstream protection test; preserve all six freezes and every downstream block.
+- Latest handoff path: `research_control/handoffs/handoff-1025.yaml`.
+- Latest handoff summary: RT-20260811-011 returns one precise current-ontology obstruction. The canonical source reduct does not derive Pres_src admission/category formation, so G_src has no source-derived domain; if Pres_src is bookkeeping, CompleteRoot and G_src generation are the first nondefinitional missing laws. The compact positive lower-semicontinuous minimum theorem remains valid conditionally. Exact one-root and two-root same-reduct completions prove nonselection without a global no-go. A new ontology primitive is required for positive construction, but none is adopted and proposal-only continuation remains open. All six freezes, fourteen Distance-to-GR no-delta rows, D7 non-evaluation, B2 inactivity, P4-T03 lock, and promotion boundaries remain unchanged.
+- Current route family: formalization or theorem (scientific).
+- Next recommended action: Run the single governed checkpoint for AJ-RT-20260811-011-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-OBSTRUCTION-THEORETICAL-CONTINUATION-SELECTION-V1. Select one materially distinct source-side consequence or bounded source-extension investigation. Do not replay the obstructed presentation/root/modulus proposal, adopt a source primitive or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -336,7 +336,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the single governed checkpoint for AJ-RT-20260811-010-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION-V1. Derive or precisely obstruct Pres_src, the nonempty compact total-root functor G_src, an independent finite positive lower-semicontinuous natural kappa, and complete variation, transverse, and EqSrc closure before any downstream protection test. Preserve all six freezes. Do not execute a later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
+Run the single governed checkpoint for AJ-RT-20260811-011-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-OBSTRUCTION-THEORETICAL-CONTINUATION-SELECTION-V1. Select one materially distinct source-side consequence or bounded source-extension investigation. Do not replay the obstructed presentation/root/modulus proposal, adopt a source primitive or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -364,9 +364,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260811-010`;
-- latest handoff: `handoff-1024`;
-- current status: `v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_law_formalization_selected_checkpoint_pending`;
+- active task: `RT-20260811-011`;
+- latest handoff: `handoff-1025`;
+- current status: `v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_precise_obstruction_theoretical_selector_checkpoint_pending`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -376,8 +376,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-1024.yaml`
-- `research_control/tasks/RT-20260811-010/00_TASK.yaml`
+- `research_control/handoffs/handoff-1025.yaml`
+- `research_control/tasks/RT-20260811-011/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -393,7 +393,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 1024*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 1025*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

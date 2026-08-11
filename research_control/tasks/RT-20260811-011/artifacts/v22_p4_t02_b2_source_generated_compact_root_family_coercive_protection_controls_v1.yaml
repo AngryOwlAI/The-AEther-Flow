@@ -1,0 +1,73 @@
+schema_id: "v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_controls_v1"
+status: "PASS"
+authority: "science_draft"
+task_id: "RT-20260811-011"
+job_id: "AJ-RT-20260811-011-001"
+obstruction_id: "OB-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-PRES-SRC-PROVENANCE-001"
+
+canonical_source_reduct:
+  data:
+    - "smooth four-dimensional source manifold as explicit primitive debt"
+    - "unresolved abstract Phi_src slot"
+  absent_structure:
+    - "presentation admission rule"
+    - "EqSrc object and arrow formation"
+    - "complete-root generator"
+    - "root-family topology or compactness"
+    - "independent coercive functional"
+    - "variation and transverse closure laws"
+
+two_expansion_control:
+  common_forgetful_image: "(smooth four-manifold, unresolved Phi_src)"
+  expansion_A:
+    presentation_category: "one object with identity arrow"
+    root_space: ["r0"]
+    topology: "finite discrete"
+    kappa: {r0: "1"}
+    variations: ["identity"]
+    transverse_operations: ["identity"]
+    formal_axiom_status: "PASS"
+  expansion_B:
+    presentation_category: "one object with a C2 automorphism s satisfying s^2=id"
+    root_space: ["r0", "r1"]
+    topology: "finite discrete"
+    kappa: {r0: "1", r1: "1"}
+    eqsrc_action: "involution swapping r0 and r1"
+    variations: ["identity", "swap"]
+    transverse_operations: ["identity"]
+    formal_axiom_status: "PASS"
+  nonisomorphism_witness: "root-space cardinality 1 versus 2"
+  conclusion: "The current canonical reduct selects neither formally admissible completion."
+
+regularity_controls:
+  - control_id: "CTRL-NONCOMPACT-001"
+    root_space: "N with discrete topology"
+    kappa: "kappa(n)=1/(n+1)"
+    pointwise_positive: true
+    compact: false
+    infimum: "0"
+    conclusion: "Pointwise positivity does not imply a uniform positive bound without compactness."
+  - control_id: "CTRL-NONLSC-001"
+    root_space: "{0} union {1/n:n>=1} with the subspace topology"
+    kappa: "kappa(0)=1 and kappa(1/n)=1/n"
+    compact: true
+    pointwise_positive: true
+    lower_semicontinuous_at_zero: false
+    infimum: "0"
+    conclusion: "Compactness and pointwise positivity do not imply a uniform positive bound without lower semicontinuity."
+  - control_id: "CTRL-GOAL-FILTER-001"
+    total_roots: ["pass", "fail"]
+    outcome_filtered_roots: ["pass"]
+    conclusion: "Selecting the root family by a desired downstream pass changes totality and is not source generation."
+
+exact_model:
+  path: "research_control/tasks/RT-20260811-011/artifacts/v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_model.py"
+  check_count: 19
+  pass_count: 19
+  status: "PASS"
+
+nonconclusions:
+  - "No global impossibility theorem is proved."
+  - "No new source primitive is adopted."
+  - "No target metric cone empirical response or benchmark answer defines the controls."
+  - "No Distance-to-GR burden changes."

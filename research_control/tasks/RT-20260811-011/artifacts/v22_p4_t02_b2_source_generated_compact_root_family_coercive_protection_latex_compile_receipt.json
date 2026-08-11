@@ -1,0 +1,42 @@
+{
+  "schema_id": "v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_latex_compile_receipt_v1",
+  "task_id": "RT-20260811-011",
+  "job_id": "AJ-RT-20260811-011-001",
+  "status": "PASS",
+  "source_path": "research_control/tasks/RT-20260811-011/artifacts/v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_law_v1.tex",
+  "source_sha256": "6f006bdc446f772e7a93c5868edc17a5032068f0ae2ebd9613b6ef53425e61c7",
+  "compiler": "bundled tectonic 0.16.9",
+  "compile_command": "python3 /Users/alex.omegapy/.codex/plugins/cache/openai-bundled/latex/0.2.4/scripts/compile_latex.py <absolute-source> --output-directory <temporary-directory> --json",
+  "compile_exit_code": 0,
+  "compile_json_sha256": "059b7db87b4ed2748aec6f820a4c1bda2707615903546c8869776a64324c295f",
+  "pdf_exists": true,
+  "pdf_required_by_registry": false,
+  "pdf_tracked": false,
+  "temporary_pdf_sha256": "43563c7bd69c6959a11452f324f62b381d614deac6b681b039ac02d8b750cde8",
+  "page_count": 5,
+  "final_pass_overfull_box_count": 0,
+  "final_pass_underfull_box_count": 0,
+  "visual_inspection": {
+    "status": "PASS",
+    "render_command": "pdftoppm -png -r 150 <temporary-pdf> <temporary-page-prefix>",
+    "all_pages_inspected": true,
+    "inspected_page_count": 5,
+    "criteria": {
+      "text_clipped_or_overlapping": false,
+      "tables_clipped": false,
+      "equations_clipped": false,
+      "identifier_wrapping_unreadable": false,
+      "unexpected_blank_pages": false,
+      "page_numbering_present": true,
+      "overall_legibility": "PASS"
+    },
+    "rendered_page_sha256es": [
+      "a49bfc8fe06075944eab7980539a04efd0d2831185dec1836e480713979bfe8c",
+      "f74e93aae6b9454b778960e09578c71db6ba5aeea95284d654557496030cebc9",
+      "0e9a8bfd83101c651fde87856968b3b314e8302195414f9717b3552573b3029b",
+      "2d74eccc9a223b8716050118e45211424af7d6f646af4a4cc3713bf84a8d3fd7",
+      "727cf2815bdb5b31dd7ede9436583ac7fd1d8f93d900a86a5010467f8b838ddb"
+    ]
+  },
+  "authority_note": "Compilation and visual inspection are conformance evidence only. They do not prove the scientific claims, promote the draft/control manuscript, or authorize a PDF derivative as independent authority."
+}

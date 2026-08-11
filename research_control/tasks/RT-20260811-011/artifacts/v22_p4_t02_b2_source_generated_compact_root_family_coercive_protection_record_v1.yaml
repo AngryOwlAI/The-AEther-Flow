@@ -1,0 +1,191 @@
+schema_id: "v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_record_v1"
+authority: "science_draft"
+status: "draft/control"
+task_id: "RT-20260811-011"
+job_id: "AJ-RT-20260811-011-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+claim_boundary_id: "CB-V22-P4-T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-FORMALIZATION-001"
+packet_id: "PKT-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-FORMALIZATION-V1"
+candidate_id: "CAND-V22-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-V1"
+candidate_law_name: "SourceGeneratedCompactRootFamilyCoerciveProtectionLaw_v1"
+
+decisive_result:
+  result_type: "precise_obstruction"
+  obstruction_id: "OB-V22-P4T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-PRES-SRC-PROVENANCE-001"
+  no_fog_check: true
+  no_fog_explanation: "The current canonical source reduct contains a smooth four-manifold as primitive debt and an unresolved Phi_src slot, but no source-derived admission/category-formation law for Pres_src. Therefore G_src has no source-derived domain. If Pres_src is treated as bookkeeping only, G_src/CompleteRoot generation is the first nondefinitional missing law."
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+obstruction_record:
+  present: true
+  scope: "current_ontology_only"
+  failed_object: "source-derived Pres_src admission and category-formation law"
+  exact_failure: "The canonical source package does not specify which presentations are admitted, which EqSrc arrows exist, or which source rule generates complete roots. Thus the proposed functor G_src cannot be formed as a derivation from current ontology."
+  first_nondefinitional_failure_if_pres_src_is_bookkeeping: "G_src and CompleteRoot generation"
+  minimal_counterexample_path: "research_control/tasks/RT-20260811-011/artifacts/v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_controls_v1.yaml"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "selector_required"
+  forbidden_overread: "This obstruction applies to derivation from the current canonical source reduct. It does not prove that every conservative source extension is impossible, reject the global ontology, or authorize adoption of a new primitive."
+
+dependency_order:
+  - order: 1
+    object: "Pres_src admission and category formation"
+    status: "first_missing_source_primitive"
+    reason: "Current ontology supplies no admission predicate for presentations and no EqSrc arrow law."
+  - order: 2
+    object: "G_src and CompleteRoot"
+    status: "first_nondefinitional_missing_law_if_pres_src_is_bookkeeping"
+    reason: "A formal shell category does not generate roots or prove totality."
+  - order: 3
+    object: "compact total-root topology"
+    status: "not_source_derived"
+    reason: "No topology or compactness law on complete-root families is selected."
+  - order: 4
+    object: "independent natural kappa"
+    status: "not_source_derived"
+    reason: "No source functional supplies finite strict positivity or lower semicontinuity."
+  - order: 5
+    object: "variation transverse and EqSrc closure"
+    status: "not_source_derived"
+    reason: "No canonical variation law transverse operation or nontrivial EqSrc coherence is adopted."
+
+conditional_mathematics_preserved:
+  compact_minimum_theorem:
+    statement: "If R_P is nonempty compact and kappa_P:R_P->R_{>0} is finite and lower-semicontinuous, then kappa_star(P)=min kappa_P exists, is attained, and is strictly positive."
+    proof: "A finite lower-semicontinuous real function attains its minimum on a nonempty compact space. Because the attained value is one of the strictly positive point values, it is positive."
+    status: "valid_conditional_theorem_no_source_derivation_credit"
+  two_expansion_nonselection_theorem:
+    statement: "The same canonical source reduct admits a one-root identity-groupoid completion and a two-root swap-groupoid completion, both finite compact with orbit-constant kappa=1 and coherent naturality, but the completions are nonisomorphic by root cardinality."
+    proof: "Both forget to the same pair (smooth four-manifold, unresolved Phi_src). Finite discrete root spaces are compact, constant kappa is positive and lower-semicontinuous, and the swap squares to identity while preserving kappa. Root cardinality distinguishes the completions. Hence the canonical reduct alone selects neither completion."
+    status: "proved_exact_control"
+  noncompact_control:
+    statement: "R=N with the discrete topology and kappa(n)=1/(n+1) is pointwise positive but has infimum zero."
+    status: "proved_exact_control"
+  compact_non_lsc_control:
+    statement: "R={0} union {1/n:n>=1} with kappa(0)=1 and kappa(1/n)=1/n is compact and pointwise positive but not lower-semicontinuous at zero and has infimum zero."
+    status: "proved_exact_control"
+
+formal_object_disposition:
+  - object_id: "DOM-01/OBJ-01-domain"
+    object: "Pres_src"
+    disposition: "precisely_obstructed_at_source_provenance"
+  - object_id: "OBJ-01"
+    object: "G_src"
+    disposition: "not_formable_as_current_ontology_derivation"
+  - object_id: "OBJ-02"
+    object: "CompleteRoot_P"
+    disposition: "not_source_generated"
+  - object_id: "OBJ-03"
+    object: "kappa_P"
+    disposition: "independent_source_derivation_absent"
+  - object_id: "OBJ-04"
+    object: "kappa_star_P"
+    disposition: "conditionally_defined_only"
+  - object_id: "OBJ-05"
+    object: "VarClosure_P"
+    disposition: "source_operation_absent"
+  - object_id: "OBJ-06"
+    object: "TransClosure_P"
+    disposition: "source_operation_absent"
+  - object_id: "OBJ-07"
+    object: "EqSrcNat"
+    disposition: "nontrivial_source_arrows_absent"
+  - object_id: "OBJ-08"
+    object: "DownstreamCompare"
+    disposition: "not_evaluated_due_upstream_obstruction"
+
+proof_obligations:
+  - {obligation_id: "PO-01", status: "failed_first", finding: "Pres_src objects arrows topology fibres and source provenance are not derived."}
+  - {obligation_id: "PO-02", status: "failed", finding: "No current source primitive generates a nonempty complete-root family."}
+  - {obligation_id: "PO-03", status: "not_reached", finding: "Total-family compactness has no generated carrier on which to be proved."}
+  - {obligation_id: "PO-04", status: "not_reached", finding: "Complete-root membership lacks a source-generation law."}
+  - {obligation_id: "PO-05", status: "not_reached", finding: "No independent kappa source functional exists."}
+  - {obligation_id: "PO-06", status: "conditional_only", finding: "Finite positivity and lower semicontinuity may be imposed but are not derived."}
+  - {obligation_id: "PO-07", status: "discharged_conditionally", finding: "The compact-minimum theorem is proved under the packet hypotheses."}
+  - {obligation_id: "PO-08", status: "not_reached", finding: "No source-derived nontrivial EqSrc arrow category exists."}
+  - {obligation_id: "PO-09", status: "not_reached", finding: "No declared source-derived variation operation exists."}
+  - {obligation_id: "PO-10", status: "not_reached", finding: "No declared source-derived transverse operation exists."}
+  - {obligation_id: "PO-11", status: "discharged", finding: "Exact noncompact and compact-non-lower-semicontinuous zero-infimum controls pass."}
+  - {obligation_id: "PO-12", status: "discharged", finding: "Two-expansion and goal-filtering falsifiers show nonselection and replay risk."}
+  - {obligation_id: "PO-13", status: "discharged", finding: "Formal coercivity is explicitly separated from causality response gauge sectors geometry scale and g_eff."}
+  - {obligation_id: "PO-14", status: "discharged", finding: "Exactly one precise obstruction is returned; the result is not obligations-only."}
+
+failure_branches:
+  - {failure_id: "FB-01", status: "triggered", result: "precise_source_category_obstruction"}
+  - {failure_id: "FB-02", status: "triggered_if_pres_src_is_bookkeeping", result: "precise_generator_provenance_obstruction"}
+  - {failure_id: "FB-03", status: "not_reached", result: "totality_not_assessable_without_generator"}
+  - {failure_id: "FB-04", status: "control_confirmed", result: "zero_infimum_noncompact_countermodel"}
+  - {failure_id: "FB-05", status: "control_confirmed", result: "precise_modulus_regularity_obstruction"}
+  - {failure_id: "FB-06", status: "guard_preserved", result: "frozen_route_replay_forbidden"}
+  - {failure_id: "FB-07", status: "not_reached", result: "presentation_transport_not_source_formed"}
+  - {failure_id: "FB-08", status: "not_reached", result: "variation_closure_not_source_formed"}
+  - {failure_id: "FB-09", status: "not_reached", result: "transverse_closure_not_source_formed"}
+  - {failure_id: "FB-10", status: "not_triggered", result: "no_literal_target_import_detected"}
+  - {failure_id: "FB-11", status: "not_triggered", result: "decisive_precise_obstruction_returned"}
+
+source_extension_classification:
+  classification: "new_ontology_primitive_required_for_positive_construction"
+  current_ontology_derivation: false
+  conservative_definitional_extension_sufficient: false
+  proposal_only_source_extension_remains_possible: true
+  forbidden_target_gr_import_detected: false
+  adoption_status: "blocked_adoption_open_continuation"
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+
+distance_to_gr_status:
+  - {burden: "Source ontology primitives", status: "no_delta"}
+  - {burden: "Source equivalence EqSrc", status: "no_delta"}
+  - {burden: "RetainH", status: "no_delta"}
+  - {burden: "GenH", status: "no_delta"}
+  - {burden: "ObsLoc_lc", status: "no_delta"}
+  - {burden: "Resp_lc", status: "no_delta"}
+  - {burden: "M_src", status: "no_delta"}
+  - {burden: "g_eff", status: "no_delta"}
+  - {burden: "matter coupling", status: "no_delta"}
+  - {burden: "Einstein equations", status: "no_delta"}
+  - {burden: "finite-variation robustness", status: "no_delta"}
+  - {burden: "benchmark promotion", status: "no_delta"}
+  - {burden: "Gate Chair status", status: "no_delta"}
+  - {burden: "current route freeze or hard-fail status", status: "no_delta"}
+
+selected_successor:
+  packet_id: "PKT-V22-P4T02-B2-POST-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-OBSTRUCTION-THEORETICAL-CONTINUATION-SELECTION-V1"
+  packet_type: "theoretical_continuation_selector"
+  next_role_family: "theoretical-continuation-selector@0.1.0"
+  selection_reason: "A new primitive or materially distinct source-side consequence must be selected after the current-ontology provenance obstruction; the Ontology Formalizer cannot adopt the missing primitive."
+  selected_not_executed: true
+
+authority_limits:
+  theorem_with_current_ontology_derivation_proved: false
+  source_law_formalized_as_positive_candidate: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  physical_component_selected: false
+  physical_cone_constructed: false
+  universal_matter_propagation_derived: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  gate_b_verdict_issued: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
