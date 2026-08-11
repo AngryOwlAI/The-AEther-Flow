@@ -1,0 +1,276 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,booktabs,longtable,array,enumitem}
+\usepackage[hidelinks]{hyperref}
+\setlength{\emergencystretch}{2em}
+
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\Cstar}{\mathcal{C}^{*}}
+\newcommand{\Cirp}{\operatorname{Cir}_{+}}
+\newcommand{\Bridge}{\operatorname{Bridge}_{\mathrm{OM}}}
+\newcommand{\GammaA}{\Gamma(A)}
+
+\title{A Proposal-Only Finite Oriented-Matroid Covector--Circuit Bridge}
+\author{The \AE ther-Flow Research Project}
+\date{RT-20260810-014 --- draft/control source-extension data}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This packet constructs, on explicitly declared finite exact source-sector
+configurations, the complete realized sign-covector set, every minimal positive
+circuit, an exclusive strict feasible-or-obstructed certificate, presentation
+transport, finite-refinement maps, and finite-complexity path-wall records.  The
+result is the proposal-only candidate map
+\[
+  \Bridge(A)=\bigl(\Cstar(A),\Cirp(A),\operatorname{Tot}(A),
+  \operatorname{Ref}(A),\operatorname{Strat}(A)\bigr).
+\]
+Three typing corrections are essential: quotient values contain certificate
+orbits rather than raw certificates; finite wall enumeration is restricted to
+predeclared finite semialgebraic or piecewise-rational paths; and the exact
+input representation must decide homogeneous linear feasibility and isolate
+path roots in addition to sign and rank.  Exact rational fixtures exercise both
+terminal branches and all declared controls.  Nothing here derives the sector
+configuration from current ontology, assigns physical or empirical meaning,
+establishes all-sector universality, or constructs conformal geometry or an
+effective metric.
+\end{abstract}
+
+\section{Authority and question}
+
+The authorized question is finite and source-side: given one predeclared set
+$S$ of nonzero oriented proposal-only sector rays in a finite-dimensional
+source space $V$, can one construct a complete normalization-free
+sign/circuit/refinement classifier without importing any of the three frozen
+P4--T02 routes?  The allowed result is a draft/control construction or a
+precise typed obstruction.  Ontology adoption, D7 adequacy, B2 activation or
+disposition, P4--T03, physical causality, empirical response, Gate action,
+benchmark promotion, publication, and external action are outside this packet.
+
+The three inherited freezes remain unchanged:
+\begin{itemize}[leftmargin=*]
+  \item \texttt{NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR};
+  \item \texttt{NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS};
+  \item \texttt{NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION}.
+\end{itemize}
+
+\section{Exact domain and objects}
+
+Let $F$ be an ordered exact field, or an exact representation with decidable
+sign, matrix rank, homogeneous linear feasibility, and root isolation for the
+admitted path class.  The executable fixtures use $F=\Q$.  Let $S$ be a finite
+nonempty sector set and
+\[
+  A:F^S\longrightarrow V,\qquad A e_s=v_s,
+\]
+where each $v_s\ne0$ is a predeclared oriented ray representative with explicit
+proposal-only provenance.  The declared rank is $1\le r=\operatorname{rank}A
+\le4$.  No claim is made that $S$ exhausts the P7 matter sectors.
+
+For $k\in V^*$ define
+\[
+ \sigma_A(k)=\operatorname{sgn}(A^*k)\in\{-,0,+\}^{S},\qquad
+ \Cstar(A)=\{\sigma_A(k):k\in V^*\},
+\]
+and the strict chamber
+\[
+ \GammaA=\{k\in V^*:k(v_s)>0\text{ for every }s\in S\}.
+\]
+A positive circuit is an inclusion-minimal support $C\subseteq S$ admitting
+$\alpha_C\in F^C_{>0}$ with $A_C\alpha_C=0$; the complete set is
+$\Cirp(A)$.  The total certificate is tagged either
+$\operatorname{Feasible}(k)$ with $k\in\GammaA$ or
+$\operatorname{Obstructed}(C,\alpha_C)$ with
+$C\in\Cirp(A)$.
+
+\section{Complete construction}
+
+\subsection{Covectors and circuits}
+
+Because the sign cube is finite, complete covector construction reduces each
+$\sigma\in\{-,0,+\}^S$ to exact homogeneous feasibility:
+\[
+ k(v_s)=0\ (\sigma_s=0),\qquad
+ \sigma_s k(v_s)>0\ (\sigma_s\ne0).
+\]
+The algorithm retains exactly the feasible cells and an exact witness for each.
+It does not select one preferred covector or stop at the all-positive cell.
+
+Every support-minimal positive dependence has at most $r+1$ columns.  The
+constructor therefore enumerates supports $C$ with $|C|\le r+1$, computes the
+exact kernel of $A_C$, and retains precisely those for which
+\[
+ \operatorname{rank}(A_C)=|C|-1,\qquad
+ \dim\ker A_C=1,
+\]
+and the kernel generator has one strict positive sign after a global
+rescaling.  Proper supports are tested, so the returned inventory is complete
+and support-minimal.
+
+\subsection{Strict total alternative}
+
+Exactly one of the following holds:
+\begin{align*}
+ &\exists k\in V^*\quad k(v_s)>0\quad\forall s\in S,\\
+ &\exists \alpha\in F^S_{\ge0}\setminus\{0\}\quad A\alpha=0.
+\end{align*}
+They cannot both hold because pairing $A\alpha=0$ with a strict feasible $k$
+would give $0=\sum_s\alpha_s k(v_s)>0$.  If the first system is infeasible,
+finite-dimensional separation supplies the second; minimizing its nonzero
+support gives a positive circuit.  Thus $\operatorname{Tot}(A)$ is exhaustive
+and exclusive.  Either branch is a valid construction result, so no
+goal-selected success filtering occurs.
+
+\section{Presentation typing and transport}
+
+The natural presentation arrows are
+\[
+ A\longmapsto T A D P^{-1},
+\]
+where $T\in\operatorname{GL}(V)$, $D$ is positive diagonal, and $P$ relabels
+sectors.  Covectors, ranks, circuit supports, coefficient rays, total branches,
+and refinement structure transport naturally.  Negative column scaling is not
+an arrow: it is a source reorientation and may change the total branch.
+
+The raw feasible witness and raw obstruction coefficients transform as
+\[
+ k\longmapsto T^{-\mathsf T}k,
+ \qquad
+ \alpha\longmapsto P D^{-1}\alpha.
+\]
+Consequently a literal map from the presentation quotient to a raw $k$ or raw
+$\alpha$ is ill-typed.  The corrected construction first assigns equivariant
+data to the configuration groupoid.  Its quotient value is an isomorphism
+class of $\Bridge$ data together with the appropriate certificate orbit.  This
+is mathematical presentation naturality, not a claim of physical gauge
+equivalence.
+
+\section{Finite refinements}
+
+For a declared inclusion $i:S\hookrightarrow T$ preserving every old oriented
+ray up to positive scaling, restriction gives
+\[
+ \rho_i:\Cstar(A_T)\longrightarrow\Cstar(A_S).
+\]
+It is surjective: a dual witness for an old covector also evaluates all newly
+adjoined columns and therefore supplies an extending covector.  The strict
+chambers obey
+\[
+ \Gamma(A_T)\subseteq\Gamma(A_S),
+\]
+because adjoining inequalities can only shrink the feasible region.  A
+positive circuit supported entirely on $S$ persists after adjoining sectors;
+a smaller positive dependence inside its old support would already have
+contradicted its old minimality.  Restrictions compose for nested inclusions.
+These finite statements do not establish a continuum limit or all-sector
+robustness.
+
+\section{Finite-complexity path stratification}
+
+For an arbitrary continuous compact-interval path, determinant walls may be
+crossed infinitely often.  The finite wall claim is therefore restricted to a
+predeclared finite semialgebraic or piecewise-rational exact path family for
+which all zero-vector, rank, and relevant determinant-minor roots can be
+isolated.  On this domain the isolated roots form an ordered finite event
+record; the oriented-matroid data are constant on each wall-free stratum.
+
+The rational control path
+\[
+ v_1=e_1,\quad v_2=e_2,\quad v_3=e_3,\quad
+ v_4(t)=(1,1,t),\qquad -1\le t\le1,
+\]
+has the unique relevant wall
+$\det(v_1,v_2,v_4)=t=0$.  Its exact covector/tope counts are
+$51/14$, $39/12$, and $51/14$ at $t=-1,0,1$, respectively.  This is a
+stratumwise combinatorial record, not arbitrary finite-variation or continuum
+robustness.
+
+\section{Exact rational controls}
+
+The six declared rank-three configurations use
+\[
+ v_1=(1,0,0),\quad v_2=(0,1,0),\quad v_3=(0,0,1),
+\]
+with $v_4=(1,1,1)$ in the feasible tower and
+$v_4=(-1,-1,-1)$ in the obstructed tower.  Refinements adjoin
+$v_5=(1,-1,1)$ and $v_6=(2,1,-1)$.
+
+\begin{center}
+\begin{tabular}{lrrrrl}
+\toprule
+Configuration & rank & covectors & topes & positive circuits & branch\\
+\midrule
+$A_{F4}$ & 3 & 51 & 14 & 0 & Feasible\\
+$A_{F5}$ & 3 & 71 & 20 & 0 & Feasible\\
+$A_{F6}$ & 3 & 99 & 28 & 0 & Feasible\\
+$A_{O4}$ & 3 & 51 & 14 & 1 & Obstructed\\
+$A_{O5}$ & 3 & 71 & 20 & 2 & Obstructed\\
+$A_{O6}$ & 3 & 99 & 28 & 3 & Obstructed\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Every reported covector has an exact rational witness.  The base obstruction is
+\[
+ v_1+v_2+v_3+v_4=0
+\]
+for the negative reorientation $A_{O4}$.  The feasible tower admits
+$k=(1,1,1)$.  All six refinement restrictions are surjective, both towers
+compose, and the base positive circuit persists through the obstructed tower.
+A nontrivial source-linear transform of determinant $2$, positive column scales
+$(2,3,5,7)$, and a nonidentity permutation verify presentation transport for
+both branches.  Reorienting only $v_4$ flips the fourth covector coordinate and
+changes Feasible to Obstructed, confirming that negative reorientation is new
+source data rather than presentation gauge.
+
+An independent child construction uses five asymmetric rational
+configurations.  It exhaustively lists $295$ covectors, verifies three
+fixture-level positive circuits and four refinement maps, and follows
+\[
+ d(t)=(1-2t,1-3t,1-4t),\qquad \tfrac{1}{10}\le t\le1,
+\]
+through exactly isolated walls at $t=1/4$, $1/3$, and $1/2$.  Its primary
+kernel cone is
+\[
+ \ker A_{P5}=\{(t-u,2t-u,3t-u,t,u):t\ge u\ge0\},
+\]
+whose two extreme positive rays give supports
+$\{a,b,c,d\}$ and $\{b,c,d,e\}$.  This is a separately counted independent
+conformance suite; its counts are not added to the six-configuration suite as
+if they formed one physical sector census.
+
+These fixtures are conformance constructions.  Their branch design is not
+source evidence, empirical data, physical sector identification, ontology
+derivation, or a selected common-time law.
+
+\section{Result and limitations}
+
+The decisive Candidate Constructor result is a constructed candidate.  The
+complete map $\Bridge(A)$ is constructed
+on the declared finite exact domain after the three typing corrections above.
+It is materially distinct from a single common-envelope witness because it
+contains the full covector and circuit inventories, the total certificate,
+presentation-equivariant certificate orbits, refinement functoriality, and
+finite-complexity wall stratification.
+
+This result earns no Distance-to-GR delta.  The sector rays, coverage boundary,
+provenance law, exact-domain choice, refinement family, and bridge-facing
+interpretation are proposal-only inputs not derived from current ontology.
+Sign compatibility is not physical causality or empirical response.  The
+construction does not establish P7 universality, PDE hyperbolicity, a quadratic
+cone, conformal structure, scale, $g_{\mathrm{eff}}$, matter coupling, or the
+Einstein equations.  D7 remains unevaluated, B2 remains inactive and
+undisposed, and P4--T03 remains locked.
+
+The next lawful packet is one separately admitted
+\texttt{source\_extension\_smuggling\_audit} under
+\texttt{smuggling-auditor@0.2.0}.  It must audit the sector, orientation,
+provenance, exact-domain, presentation, refinement, and bridge-status inputs for
+hidden target, goal-property, empirical-answer, or workflow-authority imports.
+That packet is selected but not executed here; no adoption follows
+automatically.
+
+\end{document}

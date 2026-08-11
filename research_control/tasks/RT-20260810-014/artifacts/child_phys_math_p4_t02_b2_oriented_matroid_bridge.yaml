@@ -1,0 +1,744 @@
+schema_id: "v22_p4_t02_b2_oriented_matroid_bridge_child_math_v1"
+artifact_id: "child_phys_math_p4_t02_b2_oriented_matroid_bridge"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260810-014"
+job_id: "AJ-RT-20260810-014-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+status: "completed"
+authority: "science_draft"
+status_label: "draft/control"
+claim_boundary_id: "CB-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-CONSTRUCTION-001"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Determine whether the finite proposal-only sector configuration supports the complete target-free oriented-matroid bridge or carries a precise bounded obstruction."
+independent_agentjob_created: false
+outer_agentjob_count: 1
+child_agentjob_count: 0
+owned_output_only: true
+
+decisive_child_result:
+  result_type: "constructed_candidate"
+  result_status: "candidate_map_constructed_proposal_only_pending_smuggling_audit"
+  exact_candidate_map: "Bridge_OM(A)=(Cstar(A),Cir_plus(A),Tot(A),Ref(A),Strat(A))"
+  typed_realization: "A groupoid-equivariant exact classifier on finite oriented configurations over an effective exact ordered field, with Tot descending as a tagged certificate-orbit bundle and Strat defined only for predeclared finite piecewise-rational path data with effective root isolation."
+  primary_fixture_id: "P5-OBSTRUCTED-RANK3"
+  primary_branch: "Obstructed(C_abcd,(1,2,3,1))"
+  feasible_control_id: "F5-FEASIBLE-RANK3"
+  feasible_control_branch: "Feasible((1,1,1))"
+  complete_fixture_count: 5
+  complete_covector_count_across_fixtures: 295
+  complete_positive_circuit_count_across_fixtures: 3
+  typing_repairs_applied: 3
+  unresolved_blocking_conflict: false
+  next_required_role: "smuggling-auditor@0.2.0"
+  next_role_executed: false
+  no_fog_check: true
+  no_fog_explanation: "The exact rank-three primary configuration has all 83 realized covectors, exactly two support-minimal positive circuits, an exclusive obstructed certificate, nonvacuous refinement maps, presentation transport, and three exact wall events. A second exact rank-three control has all 83 covectors and an exclusive feasible certificate. The three packet typing defects are resolved by certificate orbits, an effectively finite path domain, and an effective exact ordered field; no required component remains ill-typed."
+
+source_manifest:
+  source_count: 14
+  hash_algorithm: "SHA-256"
+  all_hashes_verified_live: true
+  source_head: "6cbcc2631949b7f8a48332aa607201555d6f5760"
+  source_tree: "6f69a0e6d1d23fa0585d5d8c59639383ac4d8a66"
+  entries:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      use: "mandatory reasoning, mathematical rigor, and claim restraint"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      use: "root authority and generated-output boundary"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      use: "research-control continuation and immutable-control boundary"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      use: "one outer AgentJob and parent-child synthesis contract"
+    - path: ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+      sha256: "f6534fd2950c2a6eefb8f2a4b255cd0794ceeb1462556be60af288bceb9d51d5"
+      use: "bridge-or-fail and no-fog role contract"
+    - path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+      sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789"
+      use: "allowed Candidate Constructor result and freeze vocabulary"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      use: "effective-metric milestone and fourteen-row burden matrix"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      use: "P4-T02 implementation burden and scope"
+    - path: "research_control/tasks/RT-20260810-014/00_TASK.yaml"
+      sha256: "cb2178e4cc365e83822cb8c6b3d8cf0e1aca841001eef3a0ef7248e4845ce804"
+      use: "active task, exact claim boundary, and completion contract"
+    - path: "research_control/tasks/RT-20260810-014/DDR-20260810-014.md"
+      sha256: "8b6b9c7a0804787bd65adc356508564c93c762ed301738876044cba96101c0e7"
+      use: "Director decision and child responsibility"
+    - path: "research_control/tasks/RT-20260810-014/jobs/AJ-RT-20260810-014-001.yaml"
+      sha256: "2d3830a52e9d40ac8743d6f145eec7f9fc80ba52bffb3b3a148bcd943c83aec0"
+      use: "single AgentJob, admitted payload, writes, and forbidden classes"
+    - path: "research_control/tasks/RT-20260810-014/roles/candidate-constructor@0.2.0--RT-20260810-014.yaml"
+      sha256: "64f3c57b51808410aecbfd006d55316299d0deb63d11612438f73d1c24bf82ac"
+      use: "task overlay and exact removed permissions"
+    - path: "research_control/handoffs/handoff-1010.yaml"
+      sha256: "0fb76f09b633929ff03ab2ff8f7ae3cfa3e212ba6ab9c1b15e4f68085545ff8d"
+      use: "predecessor result, selected next packet, and three freezes"
+    - path: "research_control/tasks/RT-20260810-013/artifacts/v22_p4_t02_b2_post_common_character_selected_future_packet_v1.yaml"
+      sha256: "bebd67ecf717e44bfa9677309c7d5fe483efac3aeb3d82bdebcfb66d52bb218a"
+      use: "complete Bridge_OM domains, maps, obligations, and failure branches"
+
+inherited_authority:
+  authority_source: "handoff-1010 plus committed RT013 checkpoint 6cbcc2631949b7f8a48332aa607201555d6f5760"
+  exact_scope: "One task-local proposal-only exact finite Bridge_OM construction or one precise typed obstruction."
+  all_three_freezes_held_fixed: true
+  d7_adequacy_evaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  target_geometry_import_authorized: false
+  physical_interpretation_authorized: false
+  canonical_ontology_write_authorized: false
+  protected_action_authorized: false
+  publication_or_push_authorized: false
+
+typing_audit_and_repairs:
+  audit_status: "all_three_defects_resolved_inside_the_admitted_exact_domain"
+  repairs_are_definitionally_material: true
+  repairs_expand_scientific_authority: false
+  items:
+    - repair_id: "TR-01-CERTIFICATE-ORBIT-DESCENT"
+      original_defect: "The raw signature Alt_A:Conf_plus(S,V)->Feasible(k) disjoint_union Obstructed(C,alpha) is not a function on presentation classes because k and alpha are representative-dependent and no natural raw witness is selected by the quotient."
+      exact_repair: "Define Alt_rep on configuration-groupoid objects and transport raw certificates along every (T,D,p) arrow. Define Tot on the quotient as the invariant branch tag together with the isomorphism class of the nonempty transported certificate bundle. Fixture evaluators may record one raw certificate only at their declared presentation."
+      feasible_transport: "For A'=T A D P^{-1}, transport k to k'=T^{-*}k; then A'^*k'=P D A^*k has the transported strictly positive coordinates."
+      obstructed_transport: "For A alpha=0, transport alpha to alpha'=P D^{-1}alpha; then A'alpha'=T A alpha=0 and positivity plus support minimality are preserved."
+      raw_certificate_claim_on_quotient: false
+      groupoid_equivariance_proved: true
+      blocking_after_repair: false
+    - repair_id: "TR-02-EFFECTIVELY-FINITE-PATH-DOMAIN"
+      original_defect: "An arbitrary continuous path on a compact interval can meet a determinant wall infinitely often, so an unqualified finite ordered wall record is false."
+      exact_repair: "Restrict Strat to a predeclared finite piecewise-polynomial or piecewise-rational path family over the effective exact field, with nonvanishing denominators and each relevant nonzero minor numerator supplied to exact root isolation. Identically zero minors define a declared lower stratum instead of an infinite event list."
+      arbitrary_continuous_path_robustness_claimed: false
+      continuum_robustness_claimed: false
+      root_isolation_required: true
+      blocking_after_repair: false
+    - repair_id: "TR-03-EFFECTIVE-EXACT-ORDERED-FIELD"
+      original_defect: "Decidable sign and rank alone do not type exact strict linear feasibility or exact ordering of algebraic wall parameters."
+      exact_repair: "Require an effective exact ordered field K embedded in R with exact arithmetic, equality and order, Gaussian elimination, strict linear-feasibility decision with certificates, and real-root isolation plus comparison for the univariate path polynomials used by Strat."
+      fixture_field: "Q"
+      general_admitted_field: "Any effective exact ordered real algebraic field satisfying the stated algorithms."
+      approximate_floating_point_authority: false
+      blocking_after_repair: false
+  counterfactual_fail_condition: "If any downstream artifact reverts to a raw quotient-to-witness function, arbitrary-continuous finite wall enumeration, or a representation lacking exact feasibility and root isolation, the constructed-candidate verdict no longer applies and FB-06, FB-08, or FB-11 must fail closed."
+
+exact_domain:
+  field_symbol: "K"
+  field_requirements:
+    - "K is an effective exact ordered field embedded in R."
+    - "Arithmetic, equality, order, Gaussian elimination, rank, kernel, and strict linear feasibility are decidable with exact certificates."
+    - "The path sublanguage supports exact isolation and ordering of all real roots of each supplied univariate determinant-minor numerator."
+  fixture_field: "Q subset K"
+  source_space: "V_src=K^3 with ordered basis (e1,e2,e3); this basis is a declared presentation, not physical geometry."
+  dual_space: "V_src^*"
+  sector_scope: "Five synthetic proposal-only labels a,b,c,d,e plus declared subconfigurations; no P7 completeness claim."
+  orientation_rule: "Each listed nonzero column fixes an oriented positive ray before feasibility evaluation; negative reorientation is new input."
+  exact_enumeration_order: "Sign words are listed lexicographically with alphabet - then 0 then + and coordinates in each fixture's declared label order."
+  provenance_status: "task-local synthetic source-extension data"
+  predeclared_before_evaluation: true
+  external_sources_used: false
+
+predeclared_source_vectors:
+  a: ["1", "0", "0"]
+  b: ["0", "1", "0"]
+  c: ["0", "0", "1"]
+  d_primary: ["-1", "-2", "-3"]
+  d_feasible: ["4/5", "7/10", "3/5"]
+  e: ["1", "1", "1"]
+  provenance:
+    a_b_c: "Exact coordinate-ray controls fixing rank three without importing a target atlas or metric."
+    d_primary: "Exact asymmetric negative proposal ray chosen to expose the full positive-circuit branch."
+    d_feasible: "Exact t=1/10 endpoint of the predeclared wall path; all entries are positive."
+    e: "Exact auxiliary proposal ray furnishing a second primary positive circuit and a feasible refinement subconfiguration."
+  goal_filtering_used: false
+  branch_acceptance_rule: "Feasible and obstructed outputs are equally terminal mathematical outcomes."
+
+complete_covector_method:
+  method_id: "EXACT-SIGN-COVECTOR-ENUMERATION-BY-PROJECTED-GORDAN"
+  sign_cube_exhausted: true
+  rule: "For every sigma in {-,0,+}^S, compute the exact nullspace N_sigma of the columns with sigma_s=0. Project each signed nonzero column to N_sigma. The word is realized exactly when the projected signed family has no nonzero nonnegative dependence. Exact Gordan elimination checks every support-minimal dependence of size at most dim(N_sigma)+1."
+  completeness_proof: "Every dual k determines one tested sign word. Conversely, absence of a nonnegative dependence in the projected signed family gives a strict dual witness on the equality subspace by Gordan's alternative. Exhausting all 3^|S| words therefore constructs exactly Cstar(A)."
+  arithmetic: "Reduced rational arithmetic only for the five fixtures."
+  approximate_tolerance_used: false
+  aggregate_newline_digest: "3821927e9469e78cd90c9361db4ec12994c68db5019a7fb9b808527c33142a82"
+
+fixtures:
+  - fixture_id: "R3-COORDINATE-BASE"
+    labels: ["a", "b", "c"]
+    columns: [["1", "0", "0"], ["0", "1", "0"], ["0", "0", "1"]]
+    rank: 3
+    kernel_dimension: 0
+    total_branch: "Feasible"
+    raw_certificate: ["1", "1", "1"]
+    raw_certificate_evaluations: ["1", "1", "1"]
+    positive_circuit_count: 0
+    covector_count: 27
+    covector_zero_histogram: {"0": 8, "1": 12, "2": 6, "3": 1}
+    covector_newline_sha256: "bdef8be32523d22d3aa3aa62db9c0840ea60812c865f839e1cf8002074117fac"
+    all_realized_covectors: ["---", "--0", "--+", "-0-", "-00", "-0+", "-+-", "-+0", "-++", "0--", "0-0", "0-+", "00-", "000", "00+", "0+-", "0+0", "0++", "+--", "+-0", "+-+", "+0-", "+00", "+0+", "++-", "++0", "+++"]
+  - fixture_id: "O4-OBSTRUCTED-REFINEMENT-BASE"
+    labels: ["a", "b", "c", "d"]
+    columns: [["1", "0", "0"], ["0", "1", "0"], ["0", "0", "1"], ["-1", "-2", "-3"]]
+    rank: 3
+    kernel_dimension: 1
+    total_branch: "Obstructed"
+    raw_certificate_support: ["a", "b", "c", "d"]
+    raw_certificate_coefficients: ["1", "2", "3", "1"]
+    raw_certificate_residual: ["0", "0", "0"]
+    positive_circuit_count: 1
+    covector_count: 51
+    covector_zero_histogram: {"0": 14, "1": 24, "2": 12, "4": 1}
+    covector_newline_sha256: "a01341cfc4469e5d7c725e3698490bf0c90df7673f36d3a0b04d018a5e5ddb1a"
+    all_realized_covectors: ["---+", "--0+", "--+-", "--+0", "--++", "-0-+", "-00+", "-0+-", "-0+0", "-0++", "-+--", "-+-0", "-+-+", "-+0-", "-+00", "-+0+", "-++-", "-++0", "-+++", "0--+", "0-0+", "0-+-", "0-+0", "0-++", "00-+", "0000", "00+-", "0+--", "0+-0", "0+-+", "0+0-", "0++-", "+---", "+--0", "+--+", "+-0-", "+-00", "+-0+", "+-+-", "+-+0", "+-++", "+0--", "+0-0", "+0-+", "+00-", "+0+-", "++--", "++-0", "++-+", "++0-", "+++-"]
+  - fixture_id: "F4-FEASIBLE-REFINEMENT-BASE"
+    labels: ["a", "b", "c", "e"]
+    columns: [["1", "0", "0"], ["0", "1", "0"], ["0", "0", "1"], ["1", "1", "1"]]
+    rank: 3
+    kernel_dimension: 1
+    total_branch: "Feasible"
+    raw_certificate: ["1", "1", "1"]
+    raw_certificate_evaluations: ["1", "1", "1", "3"]
+    positive_circuit_count: 0
+    covector_count: 51
+    covector_zero_histogram: {"0": 14, "1": 24, "2": 12, "4": 1}
+    covector_newline_sha256: "d8520d0355936abbc680421e28b008b7ab556f376726ac65766d90c241ca91a2"
+    all_realized_covectors: ["----", "--0-", "--+-", "--+0", "--++", "-0--", "-00-", "-0+-", "-0+0", "-0++", "-+--", "-+-0", "-+-+", "-+0-", "-+00", "-+0+", "-++-", "-++0", "-+++", "0---", "0-0-", "0-+-", "0-+0", "0-++", "00--", "0000", "00++", "0+--", "0+-0", "0+-+", "0+0+", "0+++", "+---", "+--0", "+--+", "+-0-", "+-00", "+-0+", "+-+-", "+-+0", "+-++", "+0--", "+0-0", "+0-+", "+00+", "+0++", "++--", "++-0", "++-+", "++0+", "++++"]
+  - fixture_id: "P5-OBSTRUCTED-RANK3"
+    labels: ["a", "b", "c", "d", "e"]
+    columns: [["1", "0", "0"], ["0", "1", "0"], ["0", "0", "1"], ["-1", "-2", "-3"], ["1", "1", "1"]]
+    rank: 3
+    kernel_dimension: 2
+    total_branch: "Obstructed"
+    raw_certificate_support: ["a", "b", "c", "d"]
+    raw_certificate_coefficients: ["1", "2", "3", "1"]
+    raw_certificate_residual: ["0", "0", "0"]
+    positive_circuit_count: 2
+    covector_count: 83
+    covector_zero_histogram: {"0": 22, "1": 40, "2": 20, "5": 1}
+    covector_newline_sha256: "74a475f135907c30516dc3ff8d299610a648007d4282483cc4b5108f520a0858"
+    all_realized_covectors: ["---+-", "--0+-", "--+--", "--+-0", "--+-+", "--+0-", "--++-", "-0-+-", "-00+-", "-0+--", "-0+-0", "-0+-+", "-0+0-", "-0++-", "-+---", "-+--0", "-+--+", "-+-0-", "-+-00", "-+-0+", "-+-+-", "-+-+0", "-+-++", "-+0--", "-+0-0", "-+0-+", "-+00-", "-+0+-", "-++--", "-++-0", "-++-+", "-++0-", "-+++-", "0--+-", "0-0+-", "0-+--", "0-+-0", "0-+-+", "0-+0-", "0-++-", "00-+-", "00000", "00+-+", "0+--+", "0+-0+", "0+-+-", "0+-+0", "0+-++", "0+0-+", "0++-+", "+---+", "+--0+", "+--+-", "+--+0", "+--++", "+-0-+", "+-00+", "+-0+-", "+-0+0", "+-0++", "+-+--", "+-+-0", "+-+-+", "+-+0-", "+-+00", "+-+0+", "+-++-", "+-++0", "+-+++", "+0--+", "+0-0+", "+0-+-", "+0-+0", "+0-++", "+00-+", "+0+-+", "++--+", "++-0+", "++-+-", "++-+0", "++-++", "++0-+", "+++-+"]
+  - fixture_id: "F5-FEASIBLE-RANK3"
+    labels: ["a", "b", "c", "d", "e"]
+    columns: [["1", "0", "0"], ["0", "1", "0"], ["0", "0", "1"], ["4/5", "7/10", "3/5"], ["1", "1", "1"]]
+    rank: 3
+    kernel_dimension: 2
+    total_branch: "Feasible"
+    raw_certificate: ["1", "1", "1"]
+    raw_certificate_evaluations: ["1", "1", "1", "21/10", "3"]
+    positive_circuit_count: 0
+    covector_count: 83
+    covector_zero_histogram: {"0": 22, "1": 40, "2": 20, "5": 1}
+    covector_newline_sha256: "b6f99acd5a85114d3abaec95c32258fc6494494bc8f45f66fd94d831915ca9e7"
+    all_realized_covectors: ["-----", "--0--", "--+--", "--+-0", "--+-+", "--+0+", "--+++", "-0---", "-00--", "-0+--", "-0+-0", "-0+-+", "-0+0+", "-0+++", "-+---", "-+--0", "-+--+", "-+-0-", "-+-00", "-+-0+", "-+-+-", "-+-+0", "-+-++", "-+0--", "-+0-0", "-+0-+", "-+00+", "-+0++", "-++--", "-++-0", "-++-+", "-++0+", "-++++", "0----", "0-0--", "0-+--", "0-+-0", "0-+-+", "0-+0+", "0-+++", "00---", "00000", "00+++", "0+---", "0+-0-", "0+-+-", "0+-+0", "0+-++", "0+0++", "0++++", "+----", "+--0-", "+--+-", "+--+0", "+--++", "+-0--", "+-00-", "+-0+-", "+-0+0", "+-0++", "+-+--", "+-+-0", "+-+-+", "+-+0-", "+-+00", "+-+0+", "+-++-", "+-++0", "+-+++", "+0---", "+0-0-", "+0-+-", "+0-+0", "+0-++", "+00++", "+0+++", "++---", "++-0-", "++-+-", "++-+0", "++-++", "++0++", "+++++"]
+
+positive_circuit_package:
+  completeness_argument: "For P5, every kernel vector has the exact form (t-u,2t-u,3t-u,t,u). Its nonnegative cone is t>=u>=0, whose two extreme rays are u=0 and u=t. Therefore the two listed supports are all and only the support-minimal nonnegative kernel supports. O4 is the u=0 restriction; a strictly positive dual witness excludes positive circuits in R3, F4, and F5."
+  primary_kernel_parameterization: "ker(A_P5)={(t-u,2t-u,3t-u,t,u):t,u in K}"
+  primary_nonnegative_kernel_cone: "{t>=u>=0}"
+  circuits:
+    - circuit_id: "C-P5-ABCD"
+      fixture_ids: ["P5-OBSTRUCTED-RANK3", "O4-OBSTRUCTED-REFINEMENT-BASE"]
+      support: ["a", "b", "c", "d"]
+      primitive_positive_coefficients: ["1", "2", "3", "1"]
+      exact_identity: "a+2b+3c+d=0"
+      rank: 3
+      support_size: 4
+      kernel_dimension_on_support: 1
+      kernel_ray: "K_{>0}(1,2,3,1)"
+      proper_positive_subsupport_exists: false
+      support_bound: "4=r+1<=5"
+    - circuit_id: "C-P5-BCDE"
+      fixture_ids: ["P5-OBSTRUCTED-RANK3"]
+      support: ["b", "c", "d", "e"]
+      primitive_positive_coefficients: ["1", "2", "1", "1"]
+      exact_identity: "b+2c+d+e=0"
+      rank: 3
+      support_size: 4
+      kernel_dimension_on_support: 1
+      kernel_ray: "K_{>0}(1,2,1,1)"
+      proper_positive_subsupport_exists: false
+      support_bound: "4=r+1<=5"
+  all_coefficients_strictly_positive: true
+  all_rank_kernel_support_checks_pass: true
+
+strict_total_alternative:
+  theorem: "For a finite exact configuration A, exactly one of Gamma(A) nonempty and a nonzero alpha>=0 with A alpha=0 holds. If both held, k(A alpha)=sum_s alpha_s k(v_s)>0 would equal zero. If Gamma is empty, exact Gordan separation returns a nonzero nonnegative kernel vector; minimizing its finite support returns a listed positive circuit of size at most r+1."
+  exact_decision_procedure: "Use exact strict linear feasibility over K for A^*k>0. On failure, use its exact nonnegative-kernel certificate and lexicographic support minimization only at the declared presentation."
+  invariant_output: "The unique branch tag plus the transported certificate-orbit bundle."
+  representative_output: "One exact raw witness at each declared fixture presentation."
+  fixture_branch_counts: {"Feasible": 3, "Obstructed": 2}
+  every_fixture_has_exactly_one_branch_tag: true
+  no_fixture_has_both_branches: true
+  no_fixture_has_neither_branch: true
+  both_total_branches_exercised: true
+
+presentation_groupoid_and_transport:
+  groupoid_id: "G_PLUS-CONFIGURATION-PRESENTATIONS"
+  objects: "Exact labeled oriented configurations A over K."
+  arrows: "Triples (T,D,p) with T in GL(V_src), D positive diagonal, and p a sector bijection, acting as A'=T A D P^{-1}."
+  physical_gauge_claimed: false
+  negative_reorientation_is_new_input: true
+  covector_transport: "sigma maps to P sigma because A'^*T^{-*}k=P D A^*k and D is positive."
+  chamber_transport: "k maps bijectively to T^{-*}k."
+  circuit_transport: "(C,[alpha]_{>0}) maps to (p(C),[P D^{-1}alpha]_{>0})."
+  rank_kernel_branch_transport: "Invertible T, D, and P preserve rank, kernel dimension, support minimality, coefficient signs, and the Feasible/Obstructed tag."
+  total_certificate_descent: "Raw certificate sets form an equivariant bundle; the quotient receives their isomorphism class, not a presentation-independent raw k or alpha."
+  exact_nontrivial_control:
+    T: [["1", "1", "0"], ["0", "1", "1"], ["0", "0", "1"]]
+    det_T: "1"
+    D_diagonal_by_old_label: {a: "2", b: "3", c: "5", d: "7", e: "11"}
+    relabeling: {a: "c", b: "a", c: "e", d: "b", e: "d"}
+    feasible_witness_before: ["1", "1", "1"]
+    feasible_witness_after: ["1", "0", "1"]
+    circuit_abcd_after_coefficients_by_new_label: {c: "1/2", a: "2/3", e: "3/5", b: "1/7"}
+    circuit_bcde_after_coefficients_by_new_label: {a: "1/3", e: "2/5", b: "1/7", d: "1/11"}
+    primary_covector_count_after: 83
+    primary_positive_circuit_count_after: 2
+    exact_transport_checks_pass: true
+
+refinement_package:
+  general_proof:
+    covector_restriction: "For every k realizing sigma on S, the same k evaluates every added T-sector, so sign(A_T^*k)|_S=sigma after positive old-ray rescaling. Hence rho_i is well-defined, surjective, and rho_i composed with rho_j equals rho_{j composed with i}."
+    chamber_inclusion: "Every inequality for S remains among those for T, so Gamma(A_T) is a subset of Gamma(A_S)."
+    circuit_persistence: "A proper positive subdependence of an old supported circuit after adjoining columns would use a strict subset of that same old support and would already contradict old minimality."
+  exact_refinements:
+    - refinement_id: "REF-R3-O4"
+      source: "R3-COORDINATE-BASE"
+      target: "O4-OBSTRUCTED-REFINEMENT-BASE"
+      restriction_surjective: true
+      source_covector_count: 27
+      target_covector_count: 51
+      fiber_cardinality_histogram: {"1": 15, "3": 12}
+      old_positive_circuit_count: 0
+    - refinement_id: "REF-O4-P5"
+      source: "O4-OBSTRUCTED-REFINEMENT-BASE"
+      target: "P5-OBSTRUCTED-RANK3"
+      restriction_surjective: true
+      source_covector_count: 51
+      target_covector_count: 83
+      fiber_cardinality_histogram: {"1": 35, "3": 16}
+      persistent_circuit: "C-P5-ABCD"
+      circuit_persistence_nonvacuous: true
+    - refinement_id: "REF-R3-P5-COMPOSITE"
+      source: "R3-COORDINATE-BASE"
+      target: "P5-OBSTRUCTED-RANK3"
+      restriction_surjective: true
+      source_covector_count: 27
+      target_covector_count: 83
+      fiber_cardinality_histogram: {"1": 15, "5": 10, "9": 2}
+      equals_nested_restriction: true
+    - refinement_id: "REF-F4-P5"
+      source: "F4-FEASIBLE-REFINEMENT-BASE"
+      target: "P5-OBSTRUCTED-RANK3"
+      restriction_surjective: true
+      source_covector_count: 51
+      target_covector_count: 83
+      fiber_cardinality_histogram: {"1": 35, "3": 16}
+      source_chamber_nonempty: true
+      target_chamber_empty: true
+      chamber_inclusion_proper_and_nonvacuous: true
+  nested_composition_verified: true
+  universal_p7_refinement_claimed: false
+
+variation_stratification:
+  path_id: "PATH-RT014-D-LINEAR-001"
+  path_domain: "t in [1/10,1] subset Q"
+  path_class: "single polynomial configuration path admitted by the finite piecewise-rational path domain"
+  fixed_columns: {a: ["1", "0", "0"], b: ["0", "1", "0"], c: ["0", "0", "1"], e: ["1", "1", "1"]}
+  moving_column: "d(t)=(1-2t,1-3t,1-4t)"
+  endpoints: {"t=1/10": "F5-FEASIBLE-RANK3", "t=1": "P5-OBSTRUCTED-RANK3"}
+  no_zero_column_on_domain: true
+  rank_constant: 3
+  rank_reason: "The fixed columns a,b,c form the identity basis."
+  determinant_minors:
+    abc: "1"
+    abd: "1-4t"
+    abe: "1"
+    acd: "3t-1"
+    ace: "-1"
+    ade: "t"
+    bcd: "1-2t"
+    bce: "1"
+    bde: "-2t"
+    cde: "t"
+  exact_root_isolation:
+    isolated_roots_on_domain: ["1/4", "1/3", "1/2"]
+    ordered_roots: "1/10 < 1/4 < 1/3 < 1/2 < 1"
+    identically_zero_minor_count: 0
+    unisolated_root_count: 0
+  ordered_wall_records:
+    - wall_order: 1
+      parameter: "1/4"
+      zero_minors: ["abd"]
+      moving_column: ["1/2", "1/4", "0"]
+      covector_count_at_wall: 71
+      covector_zero_histogram: {"0": 20, "1": 34, "2": 14, "3": 2, "5": 1}
+      total_branch_at_wall: "Feasible"
+      positive_circuit_count_at_wall: 0
+    - wall_order: 2
+      parameter: "1/3"
+      zero_minors: ["acd"]
+      moving_column: ["1/3", "0", "-1/3"]
+      covector_count_at_wall: 71
+      covector_zero_histogram: {"0": 20, "1": 34, "2": 14, "3": 2, "5": 1}
+      total_branch_at_wall: "Feasible"
+      positive_circuit_count_at_wall: 0
+    - wall_order: 3
+      parameter: "1/2"
+      zero_minors: ["bcd"]
+      moving_column: ["0", "-1/2", "-1"]
+      covector_count_at_wall: 71
+      covector_zero_histogram: {"0": 20, "1": 34, "2": 14, "3": 2, "5": 1}
+      total_branch_at_wall: "Obstructed"
+      positive_circuit_count_at_wall: 1
+      positive_circuit_support_at_wall: ["b", "c", "d"]
+      positive_circuit_coefficients_at_wall: ["1", "2", "2"]
+  wall_free_strata:
+    - interval: "[1/10,1/4)"
+      covector_count: 83
+      total_branch: "Feasible"
+      positive_circuit_count: 0
+    - interval: "(1/4,1/3)"
+      covector_count: 83
+      total_branch: "Feasible"
+      positive_circuit_count: 0
+    - interval: "(1/3,1/2)"
+      covector_count: 83
+      total_branch: "Feasible"
+      positive_circuit_count: 0
+    - interval: "(1/2,1]"
+      covector_count: 83
+      total_branch: "Obstructed"
+      positive_circuit_count: 2
+      positive_circuit_families:
+        - "C_abcd(t)=(2t-1,3t-1,4t-1,1)"
+        - "C_bcde(t)=(t,2t,1,2t-1)"
+  combinatorial_stability_claim: "Cstar and signed circuit data are constant only inside each listed open wall-free stratum; the exact wall configurations are separate lower strata."
+  arbitrary_continuous_path_claimed: false
+  continuum_robustness_claimed: false
+
+three_freeze_independence:
+  freeze_count: 3
+  preserved_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  shared_tau_forgetting:
+    proof: "Bridge_OM contains the complete covector set and chamber, not a selected common dual line. In F5 both k=(1,1,1) and k=(2,1,1) lie in Gamma and yield the same all-plus tope, so the Bridge output does not reconstruct a distinguished tau."
+    frozen_route_reopened: false
+  fine_magnitude_and_repaired_quotient_forgetting:
+    proof: "A and A D for arbitrary positive diagonal D have transported identical Bridge_OM data while every inter-sector representative magnitude ratio can change. Therefore Q_ray, midpoint, repaired rank plane, and fine descent magnitude data are absent from and not reconstructible from this bridge."
+    frozen_route_reopened: false
+  common_character_holonomy_forgetting:
+    proof: "Extend the input set formally by an arbitrary holonomy tuple h in H^S. Bridge_OM factors through projection (A,h)->A. For nonzero eta and at least two sectors, (A,(0,...,0)) and (A,(0,eta,0,...)) have identical Bridge output but different diagonal-holonomy status, so common character, cochain, anchor, holonomy, and protection law are not reconstructed."
+    frozen_route_reopened: false
+  all_freezes_active_unchanged: true
+  any_frozen_object_imported: false
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT014-MATH-001"
+    payload_type: "construction"
+    object_name: "Exact rank-three P5 oriented-matroid bridge fixture"
+    claim_status: "draft/control"
+    burden_effect: "narrows"
+    summary: "Constructs all 83 covectors, exactly two positive circuits, and one exclusive obstruction certificate."
+  - payload_id: "NMP-RT014-MATH-002"
+    payload_type: "theorem"
+    object_name: "Certificate-orbit presentation descent theorem"
+    claim_status: "draft/control"
+    burden_effect: "narrows"
+    summary: "Repairs the quotient typing by proving equivariant transport of raw k and alpha and descent of the branch plus certificate bundle."
+  - payload_id: "NMP-RT014-MATH-003"
+    payload_type: "finite_model"
+    object_name: "Exact three-wall semialgebraic variation model"
+    claim_status: "draft/control"
+    burden_effect: "narrows"
+    summary: "Isolates three rational determinant roots and records the exact feasible-to-obstructed transition without arbitrary-path overread."
+  - payload_id: "NMP-RT014-MATH-004"
+    payload_type: "theorem"
+    object_name: "Finite refinement functoriality and exact fiber census"
+    claim_status: "draft/control"
+    burden_effect: "narrows"
+    summary: "Proves surjective covector restriction, composition, chamber inclusion, and nonvacuous positive-circuit persistence with exact fiber counts."
+
+proof_obligation_results:
+  obligation_count: 14
+  all_discharged_for_declared_exact_domain: true
+  results:
+    - obligation_id: "PO-01-INPUT-TYPING-AND-PROVENANCE"
+      status: "PASS"
+      evidence: "Exact K-domain, five labels, six rational representatives, orientations, and task-local provenance are fixed before evaluation."
+    - obligation_id: "PO-02-COMPLETE-COVECTOR-CONSTRUCTION"
+      status: "PASS"
+      evidence: "All 295 words across five fixtures are listed with exact counts, zero histograms, and digests after exhaustive sign-cube elimination."
+    - obligation_id: "PO-03-COMPLETE-POSITIVE-CIRCUIT-CONSTRUCTION"
+      status: "PASS"
+      evidence: "The exact P5 kernel cone has two and only two extreme positive rays; O4 has one; strict feasible witnesses exclude every other fixture circuit."
+    - obligation_id: "PO-04-STRICT-GORDAN-TOTALITY"
+      status: "PASS"
+      evidence: "Exact strict feasibility and nonnegative-kernel alternatives are exclusive; three feasible and two obstructed fixture tags are verified."
+    - obligation_id: "PO-05-CIRCUIT-RANK-KERNEL-AND-SUPPORT"
+      status: "PASS"
+      evidence: "Every listed primary circuit has rank 3, one-dimensional kernel, positive coefficient ray, minimal support 4, and bound 4=r+1<=5."
+    - obligation_id: "PO-06-PRESENTATION-INVARIANCE"
+      status: "PASS_WITH_TYPED_REPAIR"
+      evidence: "TR-01 replaces the ill-typed raw quotient witness by an equivariant certificate bundle and proves T, D, and p transport, including one exact nontrivial control."
+    - obligation_id: "PO-07-REFINEMENT-FUNCTORIALITY"
+      status: "PASS"
+      evidence: "Four exact maps are surjective, the R3-O4-P5 composition agrees, F4-P5 chamber inclusion is strict, and C-P5-ABCD persists nonvacuously."
+    - obligation_id: "PO-08-FINITE-VARIATION-BOUNDARY"
+      status: "PASS_WITH_TYPED_REPAIR"
+      evidence: "TR-02 and TR-03 restrict the domain to effective finite path data and exactly isolate walls at 1/4, 1/3, and 1/2."
+    - obligation_id: "PO-09-TOTAL-ALTERNATIVE-PRELOAD-NEUTRALITY"
+      status: "PASS"
+      evidence: "The rational fixtures and path are predeclared; both certificate branches are accepted and exercised without target or empirical selection."
+    - obligation_id: "PO-10-THREE-FREEZE-INDEPENDENCE"
+      status: "PASS"
+      evidence: "Explicit many-to-one forgetful fibers separate the bridge from shared tau, fine quotient magnitude, and character-holonomy data."
+    - obligation_id: "PO-11-MATERIAL-DISTINCTNESS"
+      status: "PASS"
+      evidence: "The output contains full covectors, all circuits, total certificates, quotient transport, four refinements, and a three-wall path; it is not an RT005 witness replay."
+    - obligation_id: "PO-12-SOURCE-PURITY"
+      status: "PASS_CHILD_PREAUDIT"
+      evidence: "No target geometry, calibration, benchmark, workflow state, or frozen family object appears in any mathematical input; independent Smuggling Auditor review remains required."
+    - obligation_id: "PO-13-FINITE-SECTOR-AND-SEMANTIC-SCOPE"
+      status: "PASS"
+      evidence: "Every conclusion is finite formal compatibility only; no P7 universality, causality, response, quadratic cone, conformal geometry, scale, or g_eff is asserted."
+    - obligation_id: "PO-14-DECISIVE-BRIDGE-OR-FAIL"
+      status: "PASS"
+      evidence: "Exactly one constructed_candidate result, the exact bridge map, no-fog statement, next role, and downstream blocks are present."
+
+failure_branch_results:
+  branch_count: 11
+  triggered_failure_count: 0
+  resolved_typing_defect_count: 3
+  results:
+    - branch_id: "FB-01-INVALID-OR-UNPROVENANCED-INPUT"
+      disposition: "not_triggered"
+      reason: "Every finite nonzero exact ray and provenance class is declared."
+    - branch_id: "FB-02-TARGET-OR-GOAL-SELECTED-INPUT"
+      disposition: "not_triggered"
+      reason: "Only synthetic rational source labels are used and both branches are accepted."
+    - branch_id: "FB-03-INCOMPLETE-RT005-REPLAY"
+      disposition: "not_triggered"
+      reason: "The complete 295-covector, three-circuit, refinement, transport, and wall package is materially larger than one Gordan witness."
+    - branch_id: "FB-04-TOTAL-ALTERNATIVE-DEFECT"
+      disposition: "not_triggered"
+      reason: "Every fixture has exactly one verified branch tag; representative witnesses and quotient certificate bundles are separately typed."
+    - branch_id: "FB-05-CIRCUIT-MINIMALITY-OR-SUPPORT-DEFECT"
+      disposition: "not_triggered"
+      reason: "Exact kernel cones prove completeness, minimality, rank, kernel, positivity, and support bounds."
+    - branch_id: "FB-06-PRESENTATION-TRANSPORT-DEFECT"
+      disposition: "resolved_by_TR-01"
+      reason: "The raw quotient signature was defective; certificate-orbit descent and explicit transport remove the defect without claiming physical gauge."
+    - branch_id: "FB-07-REFINEMENT-DEFECT"
+      disposition: "not_triggered"
+      reason: "Restriction, composition, chamber inclusion, and old-circuit persistence are proved generally and checked exactly."
+    - branch_id: "FB-08-VARIATION-OVERREAD"
+      disposition: "resolved_by_TR-02"
+      reason: "The arbitrary-continuous interpretation was false; the repaired path domain has a finite root-isolated event record and no continuum claim."
+    - branch_id: "FB-09-FROZEN-ROUTE-REPLAY"
+      disposition: "not_triggered"
+      reason: "All forbidden frozen inputs are absent and explicit forgetful-fiber counterpairs prevent reconstruction."
+    - branch_id: "FB-10-PHYSICAL-EMPIRICAL-OR-UNIVERSAL-OVERREAD"
+      disposition: "not_triggered"
+      reason: "The output remains finite proposal-only combinatorics with all physical and universal readings blocked."
+    - branch_id: "FB-11-EXACT-COMPUTATION-DEFECT"
+      disposition: "resolved_by_TR-03"
+      reason: "The effective exact ordered field now requires sign, rank, strict feasibility, and root-isolation algorithms; fixtures use Q exactly."
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  category: "source_extension_candidate"
+  classification: "conservative_oriented_matroid_mathematics_over_new_proposal_only_sector_inputs_pending_smuggling_audit"
+  relation_to_current_ontology: "Current ontology derives neither these sector rays and their coverage/provenance nor the bridge-facing use of their total oriented-matroid classifier."
+  conservative_mathematical_layer:
+    - "exact dual evaluation and complete realized sign-covector construction"
+    - "strict Gordan alternative and support-minimal positive-dependence theory"
+    - "groupoid-equivariant GL, positive-diagonal, permutation, and finite-inclusion transport"
+    - "effective semialgebraic wall stratification"
+  new_primitive_or_input_layer:
+    - "finite label set and coverage boundary"
+    - "oriented source rays and task-local provenance"
+    - "effective exact ordered field and predeclared path family"
+    - "bridge-facing status of the total classifier"
+  target_import_detected_by_child: false
+  hidden_import_independent_audit_completed: false
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  adoption_human_gated: true
+  adoption_status: "blocked_adoption_open_continuation"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  prior_attempts_considered:
+    - "RT-20260810-005"
+    - "RT-20260810-008"
+    - "RT-20260810-010"
+    - "RT-20260810-012"
+    - "RT-20260810-013"
+  freeze_if:
+    - "The same oriented-matroid package recurs without new mathematical payload."
+    - "A separately admitted audit proves hidden target or frozen-route import that cannot be removed inside the declared exact domain."
+    - "A Refuter later supplies a precise scoped obstruction to the repaired candidate."
+  do_not_freeze_if:
+    - "A materially new constructed candidate is complete and is routed directly to its first independent smuggling audit."
+  freeze_decision: "not_frozen"
+  decision_reason: "RT014 adds a complete non-orbital candidate with three explicit typing repairs, exact fixtures, refinements, and wall data; the inherited routes stay frozen while this distinct candidate proceeds only to audit."
+  next_allowed_route: "smuggling_auditor"
+
+distance_to_gr_status:
+  row_count: 14
+  all_task_deltas_none: true
+  rows:
+    - burden: "Source ontology primitives"
+      status: "No change; the exact field, sector labels, rays, path family, and bridge role remain proposal-only source-extension inputs, not adopted primitives."
+      task_delta: "none"
+    - burden: "Source equivalence EqSrc"
+      status: "No change; presentation-groupoid equivariance is not an adopted ontology-wide EqSrc theorem."
+      task_delta: "none"
+    - burden: "RetainH"
+      status: "No change; no retention map or theorem is constructed or adopted."
+      task_delta: "none"
+    - burden: "GenH"
+      status: "No change; no generator law or theorem is constructed or adopted."
+      task_delta: "none"
+    - burden: "ObsLoc_lc"
+      status: "No change; finite sign covectors and circuits do not construct observer localization."
+      task_delta: "none"
+    - burden: "Resp_lc"
+      status: "No change; formal common admissibility has no response sign, normalization, token, detector, or empirical semantics."
+      task_delta: "none"
+    - burden: "M_src"
+      status: "No change; a finite vector configuration and its refinements do not construct or alter M_src."
+      task_delta: "none"
+    - burden: "g_eff"
+      status: "No change; Gamma is an open dual feasibility chamber, not a causal cone, conformal class, scale, or effective metric."
+      task_delta: "none"
+    - burden: "matter coupling"
+      status: "No change; no target matter coupling, stress tensor, action, or universality result is supplied."
+      task_delta: "none"
+    - burden: "Einstein equations"
+      status: "No change; no field equation, action variation, or dynamics is supplied."
+      task_delta: "none"
+    - burden: "finite-variation robustness"
+      status: "No ledger change; only one exact finite piecewise-rational path is stratified, with arbitrary continuous and continuum robustness expressly excluded."
+      task_delta: "none"
+    - burden: "benchmark promotion"
+      status: "No change; no GR recovery, benchmark evidence, promotion, or publication authority is supplied."
+      task_delta: "none"
+    - burden: "Gate Chair status"
+      status: "No change; no protected review, adoption, activation, disposition, or verdict is requested."
+      task_delta: "none"
+    - burden: "current route freeze or hard-fail status"
+      status: "All three inherited local freezes remain active; this materially distinct oriented-matroid candidate is constructed but unadopted and awaits its first separate Smuggling Auditor packet."
+      task_delta: "none"
+
+distance_to_gr_delta:
+  changed: false
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "one separately admitted source-extension smuggling audit only"
+  downstream_still_blocked:
+    - "D7 adequacy reevaluation and complete P4-T02 disposition"
+    - "B2 activation, adoption, rejection, disposal, viability, or sufficiency"
+    - "P4-T03 conformal reconstruction"
+    - "physical causality, scale, g_eff, matter coupling, Einstein equations, benchmark promotion, and completed derivation"
+  explanation: "A complete proposal-only finite classifier narrows a construction burden but supplies no current-ontology law, physical semantics, audit verdict, or Distance-to-GR status change."
+
+bridge_attempt_status:
+  required: true
+  candidate_map: "Bridge_OM(A)=(Cstar(A),Cir_plus(A),Tot(A),Ref(A),Strat(A))"
+  status: "candidate_map_constructed_proposal_only_pending_smuggling_audit"
+  typed_domain: "finite exact ordered-field configuration groupoid plus predeclared effective finite path family"
+  typed_codomain: "covectors, coefficient-ray circuits, invariant branch plus certificate-orbit bundle, refinement functor, and finite root-isolated wall record"
+  missing_primitive: "none_for_the_repaired_finite_mathematical_candidate"
+  current_ontology_derivation_claimed: false
+  physical_bridge_claimed: false
+  downstream_claim_blocks_preserved: true
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260810-014/artifacts/child_phys_math_p4_t02_b2_oriented_matroid_bridge.yaml"
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  formal_objects:
+    - "effective exact ordered field K and finite oriented configuration groupoid"
+    - "complete Cstar(A) for five exact fixtures"
+    - "Cir_plus(A) with primitive positive coefficient rays"
+    - "Tot(A) as representative certificate evaluator and quotient certificate-orbit bundle"
+    - "Ref(A_S,A_T) for four exact inclusions"
+    - "Strat(A(t)) for one exact root-isolated polynomial path"
+  maps:
+    - "sign evaluation and exhaustive projected-Gordan classifier"
+    - "GL-positive-diagonal-permutation certificate transport"
+    - "covector restriction, chamber inclusion, and positive-circuit persistence"
+    - "ordered determinant-minor wall record"
+  proof_obligations:
+    - "one separately admitted hidden target and frozen-route import audit"
+    - "one later Refuter stress packet only after a source-pure audit"
+  failed_components: []
+  next_required_role: "smuggling_auditor"
+  no_fog_check: true
+  no_fog_explanation: "The repaired exact Bridge_OM candidate is fully constructed on its finite domain: every declared fixture covector and positive circuit is enumerated, both total branches are exactly certified, presentation data descend via certificate orbits, refinements are functorial, and the path has exactly three isolated walls."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "research_control/tasks/RT-20260810-014/00_TASK.yaml#CB-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-CONSTRUCTION-001"
+
+child_conflict_report:
+  conflicts_detected: 3
+  blocking_conflicts_remaining: 0
+  resolutions:
+    - "Raw quotient certificates were replaced by representative-level raw witnesses plus quotient certificate-orbit bundles."
+    - "Arbitrary continuous wall enumeration was replaced by a predeclared effective piecewise-rational path domain with exact root isolation."
+    - "Sign-and-rank-only arithmetic was strengthened to an effective exact ordered field supporting strict feasibility and root isolation."
+  parent_attention_required: "The fused artifact and validator must preserve all three repairs verbatim in substance; reverting any one invalidates this child's constructed-candidate verdict."
+
+limits_and_forbidden_conclusions:
+  finite_sector_coverage_only: true
+  exhaustive_of_p7: false
+  formal_signs_are_physical_causality: false
+  strict_chamber_is_lorentzian_cone: false
+  presentation_groupoid_is_physical_gauge: false
+  finite_refinement_is_continuum_robustness: false
+  arbitrary_continuous_path_covered: false
+  d7_adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  conformal_geometry_constructed: false
+  g_eff_constructed: false
+  matter_coupling_constructed: false
+  einstein_equations_constructed: false
+  benchmark_or_gate_status_changed: false
+  source_law_or_ontology_adopted: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  proof_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_claimed: false
+  exact_limit: "This child establishes only an exact finite proposal-level oriented-matroid classifier on the repaired domain. It does not establish source provenance adequacy, hidden-import freedom, physical meaning, universality, adoption, or any downstream GR object."
+
+recommended_parent_fusion:
+  decisive_result: "constructed_candidate"
+  preserve_exact_counts: "five fixtures, 295 listed covectors, three listed fixture circuits, four refinement maps, and three ordered wall events"
+  preserve_typing_repairs:
+    - "certificate-orbit groupoid equivariance"
+    - "finite piecewise-rational or semialgebraic path domain with exact root isolation"
+    - "effective exact ordered field with sign, rank, strict feasibility, and root-isolation algorithms"
+  next_unexecuted_role: "smuggling-auditor@0.2.0"
+  audit_question: "Does the repaired finite configuration, its provenance, its orientation choices, its exact-field/path restrictions, or its bridge-facing use covertly import a frozen route, target geometry, desired positivity, empirical calibration, or protected workflow status?"

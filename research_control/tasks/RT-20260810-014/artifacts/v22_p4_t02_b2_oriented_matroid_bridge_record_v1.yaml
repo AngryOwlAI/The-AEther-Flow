@@ -1,0 +1,388 @@
+schema_id: "v22_p4_t02_b2_oriented_matroid_bridge_record_v1"
+task_id: "RT-20260810-014"
+job_id: "AJ-RT-20260810-014-001"
+packet_id: "PKT-V22-P4T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+candidate_id: "CAND-V22-B2-NONCHARACTER-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+candidate_family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+authority: "science_draft"
+status_label: "proposal-only"
+material_class: "source-extension data"
+decisive_result: "constructed_candidate"
+result_disposition: "constructed_candidate_pending_source_extension_smuggling_audit"
+no_fog_check: true
+no_fog_explanation: "The packet constructs the complete finite Bridge_OM classifier on the declared exact configurations, including all covectors, all minimal positive circuits, an exclusive strict alternative, presentation-equivariant certificate orbits, refinement maps, and finite-complexity wall records. It does not derive the sector configuration from current ontology, select a physical common time law, establish P7 universality, or construct conformal geometry or g_eff."
+
+bridge_attempt_status:
+  required: true
+  status: "candidate_map_constructed_proposal_only_pending_smuggling_audit"
+  candidate_map: "Bridge_OM(A)=(Cstar(A),Cir_plus(A),Tot(A),Ref(A),Strat(A))"
+  construction_scope: "Finite predeclared nonzero oriented source-sector rays over an adequate exact ordered field."
+  quotient_value: "An isomorphism class of equivariant Bridge_OM data together with a feasible- or obstructed-certificate orbit; a raw k or alpha is fiber data and is not a literal value on the presentation quotient."
+  variation_scope: "Predeclared finite semialgebraic or piecewise-rational paths for which determinant, rank, zero-vector, and path-root events are exactly isolable."
+  smallest_unresolved_primitive: "A source-derived sector configuration, coverage rule, provenance law, and bridge-status justification; none is supplied by the oriented-matroid construction itself."
+  downstream_promotion_blocks_preserved: true
+
+type_repairs:
+  - repair_id: "BR-01-CERTIFICATE-ORBIT-DESCENT"
+    original_hazard: "Alt_A was ill-typed if a presentation quotient was said to return a raw dual witness k or raw positive kernel vector alpha."
+    repair: "Define Bridge_OM first as equivariant data on the configuration groupoid. Its quotient value is an isomorphism class with a certificate orbit; raw certificates transport by k -> T^{-T}k and alpha -> P D^{-1}alpha."
+    result: "repaired"
+  - repair_id: "BR-02-FINITE-COMPLEXITY-PATH-DOMAIN"
+    original_hazard: "An arbitrary continuous compact-interval path can cross determinant walls infinitely often, so finite wall enumeration is false at that generality."
+    repair: "Restrict Strat to predeclared finite semialgebraic or piecewise-rational exact paths with root isolation; make no finite-enumeration claim for arbitrary continuous paths."
+    result: "repaired"
+  - repair_id: "BR-03-ADEQUATE-EXACT-DECISION-DOMAIN"
+    original_hazard: "Decidable sign and rank alone do not decide complete sign-cell feasibility or isolate every admitted wall event."
+    repair: "Require an ordered exact field or representation with decidable sign, rank, homogeneous linear feasibility, and path-root isolation. All executable fixtures use Q."
+    result: "repaired"
+
+formal_domain:
+  sector_set: "A finite nonempty predeclared set S_decl; no exhaustiveness claim over P7 sectors."
+  source_space: "A finite-dimensional vector space V_src over an adequate ordered exact field F, with 1 <= rank(A)=r <= 4 in the selected packet."
+  configuration: "A:R^{S_decl}->V_src with nonzero columns v_s carrying positive orientation and explicit proposal-only provenance."
+  exact_input_class: "F=Q for the fixtures; generally, an exact ordered field or representation with decidable sign, rank, homogeneous linear feasibility, and root isolation on the admitted path class."
+  dual_domain: "V_src^*, used only to realize sign covectors and return certificate fibers."
+  presentation_groupoid: "Objects are oriented configurations; arrows are source-linear isomorphisms, independent positive column scalings, and sector relabelings."
+  refinement_domain: "Finite inclusions that preserve each old oriented ray up to positive rescaling and add independently provenance-bound sectors."
+  variation_domain: "Predeclared finite semialgebraic or piecewise-rational exact paths; arbitrary continuous paths are excluded from finite wall enumeration."
+
+formal_objects:
+  realized_covectors:
+    notation: "Cstar(A)={sgn(A^*k):k in V_src^*}"
+    construction: "Test every element of {-,0,+}^{S_decl} by exact homogeneous equality and strict-inequality feasibility, retaining every feasible sign cell with an exact witness."
+  strict_positive_chamber:
+    notation: "Gamma(A)={k:k(v_s)>0 for every s}"
+    meaning: "Formal common sign admissibility only; not physical causality or a Lorentzian cone."
+  minimal_positive_circuits:
+    notation: "Cir_plus(A)"
+    construction: "Enumerate supports of size at most r+1, retain exactly the support-minimal one-dimensional kernel rays with a strictly positive generator, and verify rank and kernel dimension."
+  total_alternative:
+    notation: "Tot(A)"
+    construction: "Return exactly Feasible(k) when Gamma(A) is nonempty or Obstructed(C,alpha) for one verified minimal positive circuit."
+  refinement_package:
+    notation: "Ref(A_S,A_T)"
+    construction: "Covector restriction, Gamma inclusion, persistence of already supported positive circuits, and nested-inclusion composition."
+  path_stratification:
+    notation: "Strat(A(t))"
+    construction: "Isolate zero-vector, rank, and determinant-minor roots in the admitted path class, then record ordered events and wall-free intervals."
+
+constructed_theorems:
+  - theorem_id: "THM-V22-P4T02-B2-OM-COVECTOR-COMPLETENESS-001"
+    statement: "Exact feasibility over the finite sign cube constructs all and only realized covectors, including zero coordinates, without selecting a preferred all-positive sign."
+    scope: "finite exact configurations"
+  - theorem_id: "THM-V22-P4T02-B2-OM-STRICT-ALTERNATIVE-002"
+    statement: "Gordan's strict alternative makes Feasible(k) and Obstructed(C,alpha) exhaustive and exclusive; a nonzero nonnegative kernel certificate contains a support-minimal positive circuit."
+    scope: "finite exact configurations"
+  - theorem_id: "THM-V22-P4T02-B2-OM-CIRCUIT-BOUND-003"
+    statement: "Every minimal positive circuit C has rank(A_C)=|C|-1, one-dimensional kernel, a uniform positive coefficient ray, and |C|<=r+1<=5."
+    scope: "selected rank bound r<=4"
+  - theorem_id: "THM-V22-P4T02-B2-OM-PRESENTATION-EQUIVARIANCE-004"
+    statement: "Cstar, Cir_plus, the total branch, rank, and refinement structure transport naturally under GL(V_src), positive diagonal column scaling, and permutation; raw certificates form transported fibers."
+    scope: "configuration groupoid, not physical gauge"
+  - theorem_id: "THM-V22-P4T02-B2-OM-REFINEMENT-005"
+    statement: "For a finite inclusion S into T, covector restriction is surjective, Gamma(A_T) is contained in Gamma(A_S), old supported positive circuits persist, and restrictions compose."
+    scope: "declared finite inclusions"
+  - theorem_id: "THM-V22-P4T02-B2-OM-PATH-STRATIFICATION-006"
+    statement: "On the admitted finite-complexity exact path class, isolated zero, rank, and determinant-minor events give a finite ordered wall record and constant oriented-matroid data on wall-free strata."
+    scope: "not arbitrary continuous paths and not continuum robustness"
+
+exact_fixture_evidence:
+  model_path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_model.py"
+  fixture_path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_fixtures_v1.yaml"
+  model_payload_sha256: "f6ef9867663c31f1a36f4f1c11407e59afe68874de7c11f61af31e71ef1e733a"
+  field: "Q"
+  configurations:
+    - configuration_id: "A_F4"
+      rank: 3
+      realized_covector_count: 51
+      tope_count: 14
+      minimal_positive_circuit_count: 0
+      total_branch: "Feasible"
+    - configuration_id: "A_F5"
+      rank: 3
+      realized_covector_count: 71
+      tope_count: 20
+      minimal_positive_circuit_count: 0
+      total_branch: "Feasible"
+    - configuration_id: "A_F6"
+      rank: 3
+      realized_covector_count: 99
+      tope_count: 28
+      minimal_positive_circuit_count: 0
+      total_branch: "Feasible"
+    - configuration_id: "A_O4"
+      rank: 3
+      realized_covector_count: 51
+      tope_count: 14
+      minimal_positive_circuit_count: 1
+      total_branch: "Obstructed"
+    - configuration_id: "A_O5"
+      rank: 3
+      realized_covector_count: 71
+      tope_count: 20
+      minimal_positive_circuit_count: 2
+      total_branch: "Obstructed"
+    - configuration_id: "A_O6"
+      rank: 3
+      realized_covector_count: 99
+      tope_count: 28
+      minimal_positive_circuit_count: 3
+      total_branch: "Obstructed"
+  refinement_towers:
+    - "A_F4 -> A_F5 -> A_F6"
+    - "A_O4 -> A_O5 -> A_O6"
+  exact_checks:
+    every_covector_has_exact_witness: true
+    all_total_certificates_exclusive: true
+    both_total_branches_exercised: true
+    all_circuit_rank_kernel_and_support_bounds: true
+    all_refinement_restrictions_surjective: true
+    all_old_positive_circuits_persist: true
+    nested_refinement_composition: true
+    presentation_equivariance_and_certificate_transport: true
+    negative_reorientation_control: true
+    finite_complexity_wall_record: true
+  evidentiary_boundary: "The fixtures validate the construction and both branches. Their branch engineering is not source evidence, empirical calibration, ontology derivation, or a selected shared-time law."
+
+independent_child_fixture_evidence:
+  source_path: "research_control/tasks/RT-20260810-014/artifacts/child_phys_math_p4_t02_b2_oriented_matroid_bridge.yaml"
+  source_sha256: "9e4896f243f3c649229198104710327b7338a3ab71f3d8bee990b002b1c6f926"
+  field: "Q"
+  fixture_count: 5
+  complete_covector_count: 295
+  fixture_level_positive_circuit_count: 3
+  refinement_map_count: 4
+  isolated_wall_parameters: ["1/4", "1/3", "1/2"]
+  principal_configuration: "P5-OBSTRUCTED-RANK3"
+  principal_kernel_cone: "ker(A_P5)={(t-u,2t-u,3t-u,t,u):t>=u>=0}"
+  principal_positive_circuit_supports:
+    - ["a", "b", "c", "d"]
+    - ["b", "c", "d", "e"]
+  variation_path: "d(t)=(1-2t,1-3t,1-4t), t in [1/10,1]"
+  independence_note: "This independently constructed suite verifies the same finite theorems with asymmetric rays and a three-wall transition. Its counts remain separate from the six-configuration parent model and are not added into a physical or ontology-derived sector census."
+  evidentiary_boundary: "The child fixtures are conformance evidence only, not source evidence, empirical data, physical sector identification, or a selected common-time law."
+
+proof_obligation_status:
+  - obligation_id: "PO-01-INPUT-TYPING-AND-PROVENANCE"
+    status: "satisfied_for_declared_fixtures"
+    evidence: "Every sector label, nonzero oriented rational column, representative, provenance class, and finite scope is declared before evaluation."
+  - obligation_id: "PO-02-COMPLETE-COVECTOR-CONSTRUCTION"
+    status: "satisfied"
+    evidence: "All 3^n sign strings are decided; exact witness inventories contain 51, 71, or 99 realized covectors as appropriate."
+  - obligation_id: "PO-03-COMPLETE-POSITIVE-CIRCUIT-CONSTRUCTION"
+    status: "satisfied"
+    evidence: "All supports through r+1 are enumerated and 0, 1, 2, or 3 minimal positive circuits are exactly verified."
+  - obligation_id: "PO-04-STRICT-GORDAN-TOTALITY"
+    status: "satisfied"
+    evidence: "All six fixtures return exactly one verified Feasible or Obstructed branch and both branches occur."
+  - obligation_id: "PO-05-CIRCUIT-RANK-KERNEL-AND-SUPPORT"
+    status: "satisfied"
+    evidence: "Every circuit has rank |C|-1, kernel dimension one, positive coefficients, and support at most r+1."
+  - obligation_id: "PO-06-PRESENTATION-INVARIANCE"
+    status: "satisfied_after_BR_01"
+    evidence: "A nontrivial GL transform, independent positive diagonal, and permutation preserve transported structure; raw certificates are handled as orbits."
+  - obligation_id: "PO-07-REFINEMENT-FUNCTORIALITY"
+    status: "satisfied"
+    evidence: "Six restriction maps are surjective, both towers compose, Gamma has the correct inclusion direction, and the A_O4 circuit persists."
+  - obligation_id: "PO-08-FINITE-VARIATION-BOUNDARY"
+    status: "satisfied_after_BR_02"
+    evidence: "The rational path v_s4(t)=(1,1,t) has exactly one isolated minor wall at t=0 and no arbitrary-path claim."
+  - obligation_id: "PO-09-TOTAL-ALTERNATIVE-PRELOAD-NEUTRALITY"
+    status: "satisfied_for_conformance"
+    evidence: "Inputs are fixed before evaluation and both terminal branches are accepted; fixtures are not treated as source evidence."
+  - obligation_id: "PO-10-THREE-FREEZE-INDEPENDENCE"
+    status: "satisfied"
+    evidence: "Bridge_OM uses sign, kernel, inclusion, and wall data only and forgets shared-line, fine Q_ray, midpoint, and character-holonomy data."
+  - obligation_id: "PO-11-MATERIAL-DISTINCTNESS"
+    status: "satisfied"
+    evidence: "The output includes complete covectors, all circuits, support bounds, totality, presentation, refinement, and wall records rather than one RT005 witness."
+  - obligation_id: "PO-12-SOURCE-PURITY"
+    status: "satisfied_as_written_pending_independent_audit"
+    evidence: "No target, empirical, physical, benchmark, or workflow-status input appears; independent Smuggling Auditor review remains required."
+  - obligation_id: "PO-13-FINITE-SECTOR-AND-SEMANTIC-SCOPE"
+    status: "satisfied"
+    evidence: "All claims are finite formal compatibility claims with explicit physical, empirical, universal, conformal, scale, and g_eff blocks."
+  - obligation_id: "PO-14-DECISIVE-BRIDGE-OR-FAIL"
+    status: "satisfied"
+    evidence: "The result is exactly constructed_candidate, bridge_attempt_status is named, no_fog_check is true, and downstream promotion remains blocked."
+
+failure_branch_status:
+  - branch_id: "FB-01-INVALID-OR-UNPROVENANCED-INPUT"
+    status: "not_triggered"
+    basis: "All fixture inputs are finite, nonzero, oriented, exact, and explicitly provenance-labeled as project constructions."
+  - branch_id: "FB-02-TARGET-OR-GOAL-SELECTED-INPUT"
+    status: "not_triggered_for_construction"
+    basis: "Neither total branch is filtered and no target, empirical, or benchmark input is used."
+  - branch_id: "FB-03-INCOMPLETE-RT005-REPLAY"
+    status: "not_triggered"
+    basis: "The complete total bridge package is delivered."
+  - branch_id: "FB-04-TOTAL-ALTERNATIVE-DEFECT"
+    status: "not_triggered"
+    basis: "Every fixture returns one exact exclusive certificate."
+  - branch_id: "FB-05-CIRCUIT-MINIMALITY-OR-SUPPORT-DEFECT"
+    status: "not_triggered"
+    basis: "All circuit minimality, coefficient, rank, kernel, and support checks pass."
+  - branch_id: "FB-06-PRESENTATION-TRANSPORT-DEFECT"
+    status: "not_triggered_after_BR_01"
+    basis: "Equivariant data and certificate-orbit transport are exactly verified."
+  - branch_id: "FB-07-REFINEMENT-DEFECT"
+    status: "not_triggered"
+    basis: "Restriction, inclusion, persistence, and composition checks pass."
+  - branch_id: "FB-08-VARIATION-OVERREAD"
+    status: "not_triggered_after_BR_02"
+    basis: "Finite wall enumeration is restricted to the admitted path class and no continuum robustness is claimed."
+  - branch_id: "FB-09-FROZEN-ROUTE-REPLAY"
+    status: "not_triggered"
+    basis: "No shared tau, Q_ray, midpoint, repaired plane, common character, anchor, cochain, holonomy, or protection law is an input or output."
+  - branch_id: "FB-10-PHYSICAL-EMPIRICAL-OR-UNIVERSAL-OVERREAD"
+    status: "not_triggered"
+    basis: "Formal sign compatibility is not assigned physical, empirical, universal, conformal, or metric semantics."
+  - branch_id: "FB-11-EXACT-COMPUTATION-DEFECT"
+    status: "not_triggered_after_BR_03"
+    basis: "The fixture field Q decides every calculation; the general domain explicitly requires feasibility and root-isolation capabilities."
+
+new_mathematical_payload:
+  - payload_id: "PAYLOAD-OM-COMPLETE-COVECTOR-AND-CIRCUIT-ENUMERATION"
+    result: "Exact complete sign-covector and minimal-positive-circuit inventories for two six-member refinement towers."
+  - payload_id: "PAYLOAD-OM-CERTIFICATE-ORBIT-EQUIVARIANCE"
+    result: "A corrected presentation-groupoid theorem separates quotient-level structure from transported raw feasible and obstructed certificates."
+  - payload_id: "PAYLOAD-OM-REFINEMENT-FUNCTORIALITY"
+    result: "Surjective covector restriction, strict-chamber antitonicity, old-circuit persistence, and nested composition are proved and exercised."
+  - payload_id: "PAYLOAD-OM-FINITE-COMPLEXITY-WALL-STRATIFICATION"
+    result: "An exact rational path realizes an isolated determinant wall and a corrected finite-complexity stratification domain."
+  - payload_id: "PAYLOAD-OM-NEGATIVE-REORIENTATION-CONTROL"
+    result: "A single negative reorientation flips the fourth covector coordinate and changes Feasible to Obstructed, proving it is source data rather than positive-presentation gauge."
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  category: "source_extension_candidate"
+  classification: "conservative_oriented_matroid_mathematics_over_new_proposal_only_sector_inputs_pending_smuggling_audit"
+  current_ontology_derivation_claimed: false
+  conservative_mathematical_layer: "Finite exact dual evaluation, sign covectors, positive circuits, Gordan alternative, presentation equivariance, finite inclusions, and finite-complexity path stratification."
+  new_primitive_or_input_layer: "The finite sector set, nonzero oriented rays, their provenance and coverage boundary, an adequate exact representation, refinement family, and bridge-facing interpretation."
+  target_import_detected_in_construction: false
+  workflow_import_detected_in_construction: false
+  source_pure_declared_pending_independent_audit: true
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  adoption_status: "blocked_adoption_open_continuation"
+
+freeze_criteria_status:
+  inherited_freezes:
+    - freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "preserved_not_reopened"
+  new_freeze_added: false
+  repeated_burden_without_payload: false
+  scoped_obstruction_result: false
+  rationale: "The branch is materially distinct and adds a complete exact mathematical payload; it neither repairs nor reconstructs a frozen family."
+
+distance_to_gr_status:
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Determine whether a finite proposal-only source-sector vector configuration supports a target-free, normalization-free, refinement-aware common-admissibility bridge or carries a bounded positive-circuit obstruction, without reconstructing any frozen route."
+  changed: false
+  effect: "no_distance_delta"
+  ledger_updated: false
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      basis: "The sector configuration and bridge status are proposal-only inputs, not current-ontology derivations."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      basis: "Presentation arrows are mathematical naturality, not adopted EqSrc or physical gauge."
+    - burden: "RetainH"
+      status: "no_delta"
+      basis: "No source-history retention theorem is supplied."
+    - burden: "GenH"
+      status: "no_delta"
+      basis: "No source-history generation theorem is supplied."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      basis: "Sign evaluations have no adopted operational-observable semantics."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      basis: "No empirical or P7 response map is constructed."
+    - burden: "M_src"
+      status: "no_delta"
+      basis: "No source atlas, glue, or adopted source geometry is constructed."
+    - burden: "g_eff"
+      status: "no_delta"
+      basis: "A formal sign classifier is not a conformal structure, scale, or effective metric."
+    - burden: "matter coupling"
+      status: "no_delta"
+      basis: "No matter coupling law is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      basis: "No action, field equation, or Einstein recovery is derived."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      basis: "Only exact stratumwise wall records for a restricted finite-complexity path class are constructed."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      basis: "No benchmark is run or promoted."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      basis: "No Gate verdict or protected authority is exercised."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      basis: "All three inherited freezes remain active; this distinct branch is constructed pending audit."
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  candidate_id: "CAND-V22-B2-NONCHARACTER-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+  artifact_path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_covector_circuit_bridge_v1.tex"
+  formal_objects_constructed:
+    - "complete realized sign-covector set"
+    - "all minimal positive circuits"
+    - "exclusive strict feasible-or-obstructed alternative"
+    - "configuration-groupoid presentation transport with certificate orbits"
+    - "finite-refinement restriction, chamber inclusion, circuit persistence, and composition"
+    - "finite-complexity exact path wall stratification"
+  obligations_remaining:
+    - "independently audit sector, orientation, provenance, exact-domain, and bridge-status inputs for hidden goal or target imports"
+    - "derive or adopt a source-side sector configuration and coverage law before any ontology credit"
+    - "establish P7 operational and empirical response semantics before any physical interpretation"
+    - "establish all-sector universality, PDE hyperbolicity, physical cone, conformal reconstruction, scale, and g_eff through separate authorized work"
+  next_required_role: "smuggling-auditor@0.2.0"
+
+selected_successor_packet:
+  packet_id: "PKT-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SMUGGLING-AUDIT-V1"
+  packet_type: "source_extension_smuggling_audit"
+  role_family: "smuggling-auditor@0.2.0"
+  objective: "Audit the constructed Bridge_OM sector, orientation, provenance, exact-domain, presentation, refinement, and bridge-status inputs for hidden target, goal-property, empirical-answer, or workflow-authority imports."
+  status: "selected_not_executed"
+  executed_in_rt014: false
+  separately_admitted_after_checkpoint: true
+  automatic_adoption: false
+  automatic_b2_disposition: false
+
+authority_limits:
+  proposal_only_bridge_constructed: true
+  source_bridge_adopted: false
+  canonical_ontology_modified: false
+  source_primitives_derived_from_current_ontology: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  physical_causality_constructed: false
+  empirical_response_constructed: false
+  universal_p7_coverage_constructed: false
+  conformal_structure_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  gate_b_verdict_issued: false
+  benchmark_promoted: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  distance_to_gr_changed: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

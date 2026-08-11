@@ -1,0 +1,287 @@
+schema_id: "v22_p4_t02_b2_oriented_matroid_bridge_fixtures_v1"
+task_id: "RT-20260810-014"
+job_id: "AJ-RT-20260810-014-001"
+status: "PASS_EXACT_RATIONAL_FIXTURES"
+candidate_map: "Bridge_OM(A)=(Cstar(A),Cir_plus(A),Tot(A),Ref(A),Strat(A))"
+model_path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_model.py"
+model_payload_sha256: "f6ef9867663c31f1a36f4f1c11407e59afe68874de7c11f61af31e71ef1e733a"
+exact_domain:
+  fixture_field: "Q"
+  general_admission: "An ordered exact field with decidable sign, rank, homogeneous linear feasibility, and root isolation for the admitted finite-complexity paths."
+  arbitrary_exact_representation_with_only_sign_and_rank: false
+
+fixture_design:
+  purpose: "Conformance fixtures for a total classifier; they are new project constructions and are not source evidence, empirical data, physical sectors, or ontology-derived inputs."
+  predeclared_before_evaluation: true
+  branch_filtering_used: false
+  primary_fixture: "A_F4"
+  feasible_refinement_tower: "A_F4 -> A_F5 -> A_F6"
+  obstructed_refinement_tower: "A_O4 -> A_O5 -> A_O6"
+  negative_reorientation_control: "A_O4 differs from A_F4 only by v_s4 -> -v_s4; this is new oriented source data, not presentation gauge."
+
+declared_columns:
+  common:
+    s1: ["1", "0", "0"]
+    s2: ["0", "1", "0"]
+    s3: ["0", "0", "1"]
+    s5: ["1", "-1", "1"]
+    s6: ["2", "1", "-1"]
+  feasible_s4: ["1", "1", "1"]
+  obstructed_s4: ["-1", "-1", "-1"]
+
+complete_rank_three_base_inventories:
+  A_F4:
+    labels: ["s1", "s2", "s3", "s4"]
+    rank: 3
+    kernel_dimension: 1
+    sign_cube_size: 81
+    realized_covector_count: 51
+    unrealized_sign_count: 30
+    tope_count: 14
+    realized_covectors:
+      - "++++"
+      - "++-+"
+      - "++--"
+      - "++-0"
+      - "++0+"
+      - "+-++"
+      - "+-+-"
+      - "+-+0"
+      - "+--+"
+      - "+---"
+      - "+--0"
+      - "+-0+"
+      - "+-0-"
+      - "+-00"
+      - "+0++"
+      - "+0-+"
+      - "+0--"
+      - "+0-0"
+      - "+00+"
+      - "-+++"
+      - "-++-"
+      - "-++0"
+      - "-+-+"
+      - "-+--"
+      - "-+-0"
+      - "-+0+"
+      - "-+0-"
+      - "-+00"
+      - "--++"
+      - "--+-"
+      - "--+0"
+      - "----"
+      - "--0-"
+      - "-0++"
+      - "-0+-"
+      - "-0+0"
+      - "-0--"
+      - "-00-"
+      - "0+++"
+      - "0+-+"
+      - "0+--"
+      - "0+-0"
+      - "0+0+"
+      - "0-++"
+      - "0-+-"
+      - "0-+0"
+      - "0---"
+      - "0-0-"
+      - "00++"
+      - "00--"
+      - "0000"
+    covector_inventory_sha256: "0e7ce899edab89daf03e9b8921ff3eed0e631cbedbcd3627a43f207cfe6c3e36"
+    exact_witness_count: 51
+    exact_witness_inventory_location: "v22_p4_t02_b2_oriented_matroid_bridge_model.py --json#.inventories.A_F4.covector_witnesses"
+    minimal_positive_circuits: []
+    total_certificate:
+      tag: "Feasible"
+      witness: ["1", "1", "1"]
+      evaluations: ["1", "1", "1", "3"]
+  A_O4:
+    labels: ["s1", "s2", "s3", "s4"]
+    rank: 3
+    kernel_dimension: 1
+    sign_cube_size: 81
+    realized_covector_count: 51
+    unrealized_sign_count: 30
+    tope_count: 14
+    realized_covectors:
+      - "+++-"
+      - "++-+"
+      - "++--"
+      - "++-0"
+      - "++0-"
+      - "+-++"
+      - "+-+-"
+      - "+-+0"
+      - "+--+"
+      - "+---"
+      - "+--0"
+      - "+-0+"
+      - "+-0-"
+      - "+-00"
+      - "+0+-"
+      - "+0-+"
+      - "+0--"
+      - "+0-0"
+      - "+00-"
+      - "-+++"
+      - "-++-"
+      - "-++0"
+      - "-+-+"
+      - "-+--"
+      - "-+-0"
+      - "-+0+"
+      - "-+0-"
+      - "-+00"
+      - "--++"
+      - "--+-"
+      - "--+0"
+      - "---+"
+      - "--0+"
+      - "-0++"
+      - "-0+-"
+      - "-0+0"
+      - "-0-+"
+      - "-00+"
+      - "0++-"
+      - "0+-+"
+      - "0+--"
+      - "0+-0"
+      - "0+0-"
+      - "0-++"
+      - "0-+-"
+      - "0-+0"
+      - "0--+"
+      - "0-0+"
+      - "00+-"
+      - "00-+"
+      - "0000"
+    covector_inventory_sha256: "35cf85d6bdb43a849da1258b2972100dd132d3c8a91032a2ad75d5071486ca9e"
+    exact_witness_count: 51
+    exact_witness_inventory_location: "v22_p4_t02_b2_oriented_matroid_bridge_model.py --json#.inventories.A_O4.covector_witnesses"
+    minimal_positive_circuits:
+      - support: ["s1", "s2", "s3", "s4"]
+        coefficients: [1, 1, 1, 1]
+        exact_relation: "v_s1 + v_s2 + v_s3 + v_s4 = 0"
+        rank: 3
+        kernel_dimension: 1
+    total_certificate:
+      tag: "Obstructed"
+      circuit_support: ["s1", "s2", "s3", "s4"]
+      coefficients: [1, 1, 1, 1]
+
+complete_refinement_inventory_summaries:
+  A_F5:
+    labels: ["s1", "s2", "s3", "s4", "s5"]
+    rank: 3
+    kernel_dimension: 2
+    realized_covector_count: 71
+    tope_count: 20
+    minimal_positive_circuit_count: 0
+    covector_inventory_sha256: "1edfd1b9d8928486155604db046413d64f14cca56bee7b849da48aa327b114a5"
+    full_inventory_location: "v22_p4_t02_b2_oriented_matroid_bridge_model.py --json#.inventories.A_F5"
+    total_certificate: "Feasible(k=(1,1,1))"
+  A_F6:
+    labels: ["s1", "s2", "s3", "s4", "s5", "s6"]
+    rank: 3
+    kernel_dimension: 3
+    realized_covector_count: 99
+    tope_count: 28
+    minimal_positive_circuit_count: 0
+    covector_inventory_sha256: "90a1c1e994fe267d57625d68b618ce4270379024ce560c318dd231b5c7728be4"
+    full_inventory_location: "v22_p4_t02_b2_oriented_matroid_bridge_model.py --json#.inventories.A_F6"
+    total_certificate: "Feasible(k=(1,1,1))"
+  A_O5:
+    labels: ["s1", "s2", "s3", "s4", "s5"]
+    rank: 3
+    kernel_dimension: 2
+    realized_covector_count: 71
+    tope_count: 20
+    minimal_positive_circuit_count: 2
+    covector_inventory_sha256: "50bdf45ecc126ed4a0a7274fd53b63ddd58da2bd49c1c84c479d981d08a2e70b"
+    full_inventory_location: "v22_p4_t02_b2_oriented_matroid_bridge_model.py --json#.inventories.A_O5"
+    circuit_supports:
+      - ["s2", "s4", "s5"]
+      - ["s1", "s2", "s3", "s4"]
+    total_certificate: "Obstructed(C={s2,s4,s5}, alpha=(2,1,1))"
+  A_O6:
+    labels: ["s1", "s2", "s3", "s4", "s5", "s6"]
+    rank: 3
+    kernel_dimension: 3
+    realized_covector_count: 99
+    tope_count: 28
+    minimal_positive_circuit_count: 3
+    covector_inventory_sha256: "c7cbb9615dacaf5059ff4a6e6981b780363b58a28fb3358c39cfb16582fb97c2"
+    full_inventory_location: "v22_p4_t02_b2_oriented_matroid_bridge_model.py --json#.inventories.A_O6"
+    circuit_supports:
+      - ["s2", "s4", "s5"]
+      - ["s1", "s2", "s3", "s4"]
+      - ["s2", "s3", "s4", "s6"]
+    total_certificate: "Obstructed(C={s2,s4,s5}, alpha=(2,1,1))"
+
+refinement_checks:
+  restriction_surjective_for_all_six_maps: true
+  feasible_tower_composition: true
+  obstructed_tower_composition: true
+  strict_chamber_inclusion_direction: "Gamma(A_T) subseteq Gamma(A_S)"
+  nonvacuous_old_circuit_persistence:
+    support: ["s1", "s2", "s3", "s4"]
+    persists_from_A_O4_through_A_O5_and_A_O6: true
+
+presentation_transport:
+  source_linear_transform: [["1", "1", "0"], ["0", "1", "1"], ["1", "0", "1"]]
+  determinant: "2"
+  positive_diagonal: ["2", "3", "5", "7"]
+  permutation_new_to_old: [2, 0, 3, 1]
+  feasible_covectors_rank_branch_and_raw_witness_transport: true
+  obstructed_covectors_rank_branch_support_and_coefficient_ray_transport: true
+  raw_certificate_transport_mode: "k maps by T^{-T}; alpha maps by P D^{-1}; raw certificates remain fiber data."
+  quotient_value_kind: "isomorphism class of Bridge_OM data plus certificate orbit"
+  raw_witnesses_are_values_on_the_presentation_quotient: false
+
+negative_reorientation_check:
+  fourth_covector_coordinate_flips_exactly: true
+  A_F4_branch: "Feasible"
+  A_O4_branch: "Obstructed"
+  conclusion: "Negative reorientation changes source data and is not a presentation equivalence."
+
+variation_stratification:
+  admitted_path: "v_s4(t)=(1,1,t), t in [-1,1], with s1,s2,s3 fixed as the rational basis"
+  admitted_path_class: "predeclared finite semialgebraic or piecewise-rational paths with exact root isolation"
+  arbitrary_continuous_paths_admitted: false
+  unique_wall:
+    determinant_minor: "det(v_s1,v_s2,v_s4)=t"
+    crossing_parameter: "0"
+    signs: ["-", "0", "+"]
+  wall_free_intervals: ["[-1,0)", "(0,1]"]
+  sample_counts:
+    t_minus_1: {covectors: 51, topes: 14, branch: "Feasible"}
+    t_0: {covectors: 39, topes: 12, branch: "Feasible"}
+    t_plus_1: {covectors: 51, topes: 14, branch: "Feasible"}
+  stratumwise_stability_only: true
+  arbitrary_finite_variation_or_continuum_robustness_claimed: false
+
+exact_checks:
+  every_covector_has_exact_witness: true
+  all_total_certificates_exclusive: true
+  both_total_branches_exercised: true
+  all_circuit_rank_kernel_and_support_bounds: true
+  all_refinement_restrictions_surjective: true
+  all_old_positive_circuits_persist: true
+  nested_refinement_composition: true
+  presentation_equivariance_and_certificate_transport: true
+  negative_reorientation_control: true
+  finite_complexity_wall_record: true
+
+authority_limits:
+  proposal_only: true
+  source_extension_data: true
+  current_ontology_derivation_claimed: false
+  physical_causality_constructed: false
+  empirical_response_constructed: false
+  universal_p7_coverage_constructed: false
+  conformal_geometry_constructed: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
