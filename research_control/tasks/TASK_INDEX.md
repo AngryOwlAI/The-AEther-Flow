@@ -2,7 +2,7 @@
 
 Generated navigation support only. This index is not task authority, physics proof authority, benchmark authority, Gate Chair authority, or completed-derivation evidence.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T03:24:12Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"715eddea1d2f8207b3aa2bed0d0aa491d0bab347","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"a7378f62ad619aea70622c3764d517f41f9cafbcb4de828cfa394cd0c048295b"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"4a4ff71d2bffb86cf3fb399d87d0063729db9aee2fa9f6dbaa4c3235c7467e96"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"a2d386de762199086ba7fb51a904a60ae63904c9f1faeee5a59b4993cdedb44d"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"836ea9a028b15ba4b094df7c06b8da398c443d7603c47d0b73fd412cd30bbbc1","source_path_count":"5082","task_count":"1272"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T04:56:06Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"593168057fd892f08d4c7d3fb4638f3956a7dc05","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"290bfcf6b9ddb43b096423cd9ef51514f7dc7e5a1aeae8cde0cb9f5a524b8d17"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"8f362b7113a5a4602f9b783c091bed89cce7a94290740c43ba5ac09b801ee26f"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"14ac2ca32e19b5c1c6369f82cba874818aa9e28c20557dd820bbadbf83d4700c"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"8eccb901eba92e468c4817290632e84873d916dc43f1763d3f0c707fe52d19fd","source_path_count":"5086","task_count":"1273"} -->
 
 ## Generated-Report Provenance
 
@@ -11,21 +11,21 @@ Generated navigation support only. This index is not task authority, physics pro
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_task_index` |
-| Source commit | `715eddea1d2f8207b3aa2bed0d0aa491d0bab347` |
-| Source-derived generation time | `2026-08-11T03:24:12Z` |
-| Tracked task count | 1272 |
-| Exact source-path count | 5082 |
-| Source manifest SHA-256 | `836ea9a028b15ba4b094df7c06b8da398c443d7603c47d0b73fd412cd30bbbc1` |
+| Source commit | `593168057fd892f08d4c7d3fb4638f3956a7dc05` |
+| Source-derived generation time | `2026-08-11T04:56:06Z` |
+| Tracked task count | 1273 |
+| Exact source-path count | 5086 |
+| Source manifest SHA-256 | `8eccb901eba92e468c4817290632e84873d916dc43f1763d3f0c707fe52d19fd` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `a7378f62ad619aea70622c3764d517f41f9cafbcb4de828cfa394cd0c048295b`
+- `registries/AGENT_JOB_REGISTRY.csv`: `290bfcf6b9ddb43b096423cd9ef51514f7dc7e5a1aeae8cde0cb9f5a524b8d17`
 - `registries/AGENT_ROLE_REGISTRY.csv`: `847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `4a4ff71d2bffb86cf3fb399d87d0063729db9aee2fa9f6dbaa4c3235c7467e96`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `a2d386de762199086ba7fb51a904a60ae63904c9f1faeee5a59b4993cdedb44d`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `8f362b7113a5a4602f9b783c091bed89cce7a94290740c43ba5ac09b801ee26f`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `14ac2ca32e19b5c1c6369f82cba874818aa9e28c20557dd820bbadbf83d4700c`
 - `research_control/design/task_index_schema_v2.md`: `4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f`
 - `research_control/design/v21_recommendation_backlog.yaml`: `849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f`
 - `research_control/design/v21_task_taxonomy_policy.md`: `7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b`
@@ -41,9 +41,9 @@ or claim-promotion authority.
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `030f77ebb5f60168d8d7f645b792e495e6fc2094a298abd3c54491843def867d`
-- Generated-at source timestamp: `2026-08-11T03:24:12Z`
-- Row count: `1272`
+- Source fingerprint: `ff7c5d2c2b674c0245346d78e60a9f7b397919ba89666f39195a9c15f5ec7996`
+- Generated-at source timestamp: `2026-08-11T04:56:06Z`
+- Row count: `1273`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -51,6 +51,7 @@ or claim-promotion authority.
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260810-017|RT-20260810-016|2026-08-11T04:56:06Z|2026-08-11T05:22:10Z|Audit the repaired arbitrary-finite-rank P4-T02 oriented-matroid bridge|v22_p4_t02_b2_oriented_matroid_bridge_general_rank_post_repair_smuggling_audit|audit_or_review|effective_metric_g_eff|v22_b2_matter_principal_polynomial|audit_verdict_or_precise_repair|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Audit whether the repaired arbitrary-finite-rank domain and conformance quarantine remain source-pure while every other candidate input and boundary stays fixed.|smuggling-auditor@0.2.0|false|false|13|After the governed RT017 checkpoint, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REFUTER-STRESS-V1. Preserve all three freezes and do not reevaluate D7, act on B2, unlock P4-T03, adopt, promote, publish, push, or take external action.|PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-017/jobs/completions/AJC-AJ-RT-20260810-017-001.yaml|
 |RT-20260810-016|RT-20260810-015|2026-08-11T03:24:12Z|2026-08-11T03:59:32Z|Repair or precisely obstruct the arbitrary-finite-rank P4-T02 oriented-matroid bridge|v22_p4_t02_b2_oriented_matroid_bridge_general_rank_repair_or_obstruction|construction_or_implementation|effective_metric_g_eff|v22_b2_matter_principal_polynomial|candidate_or_precise_obstruction|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Remove the exact unnecessary rank-at-most-four domain restriction without changing any other proposal-only Bridge_OM theorem input or authority boundary.|candidate-constructor@0.2.0|false|false|14||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-016/jobs/completions/AJC-AJ-RT-20260810-016-001.yaml|
 |RT-20260810-015|RT-20260810-014|2026-08-11T01:49:17Z|2026-08-11T02:29:03Z|Audit the finite P4-T02 oriented-matroid bridge for hidden imports|v22_p4_t02_b2_oriented_matroid_bridge_source_extension_smuggling_audit|audit_or_review|effective_metric_g_eff|v22_b2_matter_principal_polynomial|audit_verdict_or_precise_repair|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Determine whether the complete proposal-only finite oriented-matroid bridge is source-pure as written or depends on a hidden target, empirical, physical, or workflow import.|smuggling-auditor@0.2.0|false|false|15||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-015/jobs/completions/AJC-AJ-RT-20260810-015-001.yaml|
 |RT-20260810-014|RT-20260810-013|2026-08-11T00:09:34Z|2026-08-11T00:58:56Z|Construct or precisely obstruct the finite P4-T02 oriented-matroid bridge|v22_p4_t02_b2_noncharacter_oriented_matroid_bridge_construction_or_obstruction|construction_or_implementation|effective_metric_g_eff|v22_b2_matter_principal_polynomial|candidate_or_precise_obstruction|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Determine whether the finite proposal-only sector configuration supports the complete target-free oriented-matroid bridge or carries a precise bounded obstruction.|candidate-constructor@0.2.0|false|false|14||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260810-014/jobs/completions/AJC-AJ-RT-20260810-014-001.yaml|
