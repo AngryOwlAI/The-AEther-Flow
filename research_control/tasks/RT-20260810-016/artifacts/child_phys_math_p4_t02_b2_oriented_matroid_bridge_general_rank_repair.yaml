@@ -1,0 +1,651 @@
+schema_id: "rt016_child_phys_math_oriented_matroid_bridge_general_rank_repair_v1"
+artifact_id: "CHILD-RT016-PHYS-MATH-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REPAIR"
+artifact_type: "parent_child_synthesis_child_output"
+task_id: "RT-20260810-016"
+job_id: "AJ-RT-20260810-016-001"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+status: "completed"
+source_candidate_id: "CAND-V22-B2-NONCHARACTER-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+repaired_candidate_id: "CAND-V22-B2-NONCHARACTER-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-GENERAL-RANK-V2"
+candidate_status: "proposal-only"
+material_class: "source-extension data"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Remove the exact unnecessary rank-at-most-four domain restriction without changing any other proposal-only Bridge_OM theorem input or authority boundary."
+exactly_one_candidate_constructor_result: true
+no_fog_check: true
+no_fog_explanation: >-
+  The fixed proposal-only Bridge_OM construction is repaired at exactly two
+  syntactic locations: its theorem domain is now every finite rank r>=1, and
+  the positive-circuit ceiling is card(C)<=r+1 with no numeric cap. The support
+  theorem is proved over the unchanged adequate exact ordered domain and is
+  sharp for [e_1,...,e_r,-sum_i e_i]. Exact Q controls at ranks five and six
+  exercise both Feasible and Obstructed branches, enumerate 5072 realized
+  covectors and 376 topes in aggregate, and realize sharp circuits of sizes six
+  and seven. All bounded fixtures are labeled nonphysical conformance samples.
+  Every other object, map, certificate-fiber/groupoid repair, refinement, tame
+  path restriction, input-status boundary, freeze, and downstream authority
+  block is unchanged.
+
+claim_boundary:
+  boundary_id: "CB-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REPAIR-001"
+  allowed_change_count: 2
+  allowed_changes:
+    - change_id: "RC-01-GENERAL-RANK-DOMAIN"
+      before: "1<=rank(A)=r<=4"
+      after: "1<=rank(A)=r<infinity, with r an arbitrary finite integer"
+    - change_id: "RC-02-RANK-GENERIC-SUPPORT-CEILING"
+      before: "card(C)<=r+1<=5"
+      after: "card(C)<=r+1"
+  changed_definition_count_beyond_allowed_changes: 0
+  audit_executed: false
+  refuter_stress_executed: false
+  d7_adequacy_evaluated: false
+  b2_action_taken: false
+  p4_t03_unlocked: false
+  adoption_or_promotion_executed: false
+
+bridge_attempt_status:
+  required: true
+  status: "general_rank_domain_repaired_proposal_only_pending_post_repair_smuggling_audit"
+  candidate_map: "Bridge_OM(A)=(Cstar(A),Cir_plus(A),Tot(A),Ref(A),Strat(A))"
+  map_changed: false
+  repaired_domain: "Finite nonempty S and finite rank r=rank(A)>=1 over the unchanged adequate exact ordered domain."
+  repaired_support_bound: "Every C in Cir_plus(A) satisfies card(C)<=r+1."
+  sharpness_witness: "A_r^-=[e_1,...,e_r,-sum_i e_i] over Q has one minimal positive circuit of support r+1."
+  fixed_quotient_value: "The isomorphism class of equivariant Bridge_OM data with the full transported certificate fiber or orbit space; no raw k or alpha is a quotient value."
+  fixed_variation_scope: "Predeclared finite effectively encoded semialgebraic or piecewise-rational exact paths with the previously required root isolation or finite cell record."
+  bounded_fixture_status: "Nonphysical conformance-only; no finite fixture range restricts the theorem or encodes target dimension."
+  smallest_unresolved_primitive: "A source-derived sector configuration, coverage and provenance law, physical response semantics, and bridge-status justification remain absent exactly as before."
+  downstream_promotion_blocks_preserved: true
+
+fixed_input_contract:
+  exact_domain: >-
+    F remains an ordered exact field or exact ordered representation supporting
+    sign, matrix rank, homogeneous linear feasibility, and the root-isolation
+    and ordering operations needed by the admitted tame path class. The repair
+    adds no field, norm, topology, metric, or physical dimension.
+  sector_input: "S remains finite and nonempty; each v_s is nonzero, oriented, predeclared, and proposal-only provenance-bound."
+  coverage_boundary: "No finite S is claimed to exhaust P7 matter sectors."
+  orientation_boundary: "Independent negative reorientation remains new source data, not a presentation arrow or physical time orientation."
+  presentation_groupoid: "A maps to T A D P^{-1} for T in GL(V), D positive diagonal, and P a sector relabeling."
+  certificate_fiber_typing: >-
+    Feasible certificates remain the full fiber Gamma(A); Obstructed
+    certificates remain the full set of minimal positive circuit coefficient
+    rays. Raw certificates transport by k->T^{-T}k and
+    alpha->P D^{-1}alpha and are not canonical quotient values.
+  refinement_boundary: "Only supplied finite inclusions preserving old oriented rays up to positive scaling are admitted; no continuum limit or universality is claimed."
+  tame_path_boundary: "Arbitrary continuous paths remain excluded from finite wall enumeration; no continuum or arbitrary finite-variation robustness is claimed."
+  semantic_boundary: "Sign covectors, strict chambers, positive circuits, and total branches remain formal compatibility data without physical or empirical semantics."
+  status_boundary: "Proposal, role, registry, validator, and checkpoint status remain control metadata without theorem, physics, adoption, or Gate authority."
+
+formal_objects:
+  object_count: 9
+  objects:
+    - object_id: "FO-01-FINITE-SECTOR-SET"
+      notation: "S"
+      definition: "A finite nonempty declared sector index set."
+    - object_id: "FO-02-GENERAL-FINITE-RANK-CONFIGURATION"
+      notation: "A:F^S->V"
+      definition: "A finite tuple of nonzero oriented columns with r=rank(A)>=1 finite and with no upper rank cap."
+    - object_id: "FO-03-COLUMN-SPAN"
+      notation: "W_A=span_F{v_s:s in S}"
+      definition: "The r-dimensional effective source span through which every fixed Bridge_OM object factors."
+    - object_id: "FO-04-REALIZED-COVECTORS"
+      notation: "Cstar(A)"
+      definition: "The complete set {sgn(A^*k):k in V^*}, unchanged from RT014."
+    - object_id: "FO-05-STRICT-CHAMBER"
+      notation: "Gamma(A)"
+      definition: "The set of k with k(v_s)>0 for every s, unchanged and nonphysical."
+    - object_id: "FO-06-MINIMAL-POSITIVE-CIRCUITS"
+      notation: "Cir_plus(A)"
+      definition: "All inclusion-minimal supports C admitting alpha_C>0 with A_C alpha_C=0."
+    - object_id: "FO-07-TOTAL-CERTIFICATE-FIBER"
+      notation: "Tot(A)"
+      definition: "The unchanged exclusive Feasible or Obstructed tag with its full transported certificate fiber."
+    - object_id: "FO-08-REFINEMENT-PACKAGE"
+      notation: "Ref(A)"
+      definition: "The unchanged finite restriction, chamber inclusion, circuit persistence, and composition data."
+    - object_id: "FO-09-TAME-PATH-STRATIFICATION"
+      notation: "Strat(A)"
+      definition: "The unchanged exact finite-cell or isolated-wall record on the admitted tame path class."
+
+formal_maps:
+  map_count: 8
+  maps:
+    - map_id: "FM-01-SECTOR-VECTOR-MAP"
+      signature: "A:F^S->W_A subseteq V"
+      status: "rank_domain_generalized_only"
+    - map_id: "FM-02-SIGN-EVALUATION"
+      signature: "sigma_A:V^*->{-,0,+}^S"
+      status: "unchanged"
+    - map_id: "FM-03-BRIDGE-CLASSIFIER"
+      signature: "Bridge_OM:A|->(Cstar,Cir_plus,Tot,Ref,Strat)"
+      status: "unchanged_map_on_generalized_domain"
+    - map_id: "FM-04-PRESENTATION-TRANSPORT"
+      signature: "Trans_(T,D,P):A|->T A D P^{-1}"
+      status: "unchanged"
+    - map_id: "FM-05-COVECTOR-RESTRICTION"
+      signature: "rho_i:Cstar(A_T)->Cstar(A_S)"
+      status: "unchanged"
+    - map_id: "FM-06-CHAMBER-INCLUSION"
+      signature: "Gamma(A_T)->Gamma(A_S)"
+      status: "unchanged"
+    - map_id: "FM-07-OLD-CIRCUIT-PERSISTENCE"
+      signature: "Cir_plus(A_S)->Cir_plus(A_T) on old supported circuits"
+      status: "unchanged"
+    - map_id: "FM-08-TAME-WALL-RECORD"
+      signature: "Wall:path(A(t))->finite ordered exact cell or event record"
+      status: "unchanged"
+
+constructed_theorems:
+  theorem_count: 8
+  theorems:
+    - theorem_id: "THM-RT016-GENERAL-FINITE-RANK-BRIDGE-001"
+      name: "Arbitrary finite-rank Bridge_OM typing and construction"
+      statement: >-
+        For every finite S and every admitted exact configuration A of finite
+        rank r>=1, all five components of Bridge_OM are typed and finite where
+        finiteness is claimed. The sign cube has 3^card(S) elements, the support
+        search is finite, the presentation groupoid acts in every finite rank,
+        declared refinements remain finite, and Strat retains its fixed tame
+        path restriction.
+      proof: >-
+        Cstar enumeration depends on finite S, not a rank ceiling. Circuit
+        enumeration needs only the rank-generic support theorem below. The
+        Gordan, transport, refinement, and tame-path proofs use finite matrices
+        and finitely many admitted minor events, with no step invoking r<=4.
+    - theorem_id: "THM-RT016-SPAN-FACTOR-002"
+      name: "Effective-span factorization"
+      statement: "Bridge_OM(A) depends only on W_A=span(A), so unused ambient dimensions do not create or remove any Bridge_OM datum."
+      proof: >-
+        Restriction V^*->W_A^* is surjective after extending a basis of W_A;
+        hence the realized sign image and strict-chamber nonemptiness agree.
+        Kernels, circuits, ranks, refinements, and column-minor records depend
+        only on the columns in W_A. Presentation and certificate transport
+        restrict accordingly.
+    - theorem_id: "THM-RT016-CIRCUIT-BOUND-003"
+      name: "General positive-circuit rank, nullity, and support theorem"
+      statement: >-
+        If C is support-minimal and alpha in F^C_{>0} satisfies A_C alpha=0,
+        then dim ker(A_C)=1, rank(A_C)=card(C)-1, and card(C)<=r+1 for
+        r=rank(A), with no finite-rank upper ceiling.
+      proof_steps:
+        - "All coefficients are nonzero by the definition of support and are strictly positive by hypothesis."
+        - >-
+          If beta in ker(A_C) is not proportional to alpha, choose its sign so
+          some beta_i>0 and let t=min_{beta_i>0}(alpha_i/beta_i), which exists
+          because C is finite and F is ordered. Then gamma=alpha-t beta is
+          nonzero, nonnegative, lies in ker(A_C), and has a zero coordinate,
+          contradicting support minimality.
+        - "Thus nullity is one; rank-nullity gives rank(A_C)=card(C)-1<=rank(A)=r, hence card(C)<=r+1."
+    - theorem_id: "THM-RT016-SHARP-SUPPORT-004"
+      name: "Sharpness of the r+1 support bound"
+      statement: >-
+        For every integer r>=1, A_r^-=[e_1,...,e_r,-u_r] over Q, with
+        u_r=sum_i e_i, has rank r and exactly one minimal positive circuit with
+        coefficient ray [(1,...,1,1)] and support r+1.
+      proof: >-
+        The leading identity minor has determinant one. The displayed positive
+        relation is zero. Omitting -u_r leaves a basis subset; omitting e_j
+        leaves coordinate j supplied only by -u_r, forcing its coefficient and
+        then all others to vanish. Every proper subset is independent, so the
+        dependence is minimal and the bound is sharp.
+    - theorem_id: "THM-RT016-STRICT-ALTERNATIVE-005"
+      name: "Strict total alternative at arbitrary finite rank"
+      statement: "The unchanged Feasible and Obstructed branches remain exhaustive and exclusive for every admitted finite-rank configuration."
+      proof: >-
+        The fixed finite-dimensional Gordan alternative has no upper-rank
+        premise. Pairing a strict k with a nonzero nonnegative kernel vector
+        contradicts positivity; infeasibility supplies a nonnegative kernel
+        certificate whose minimal support is a positive circuit.
+    - theorem_id: "THM-RT016-PRESENTATION-EQUIVARIANCE-006"
+      name: "General-rank presentation and certificate-fiber transport"
+      statement: "GL(V), positive diagonal, and permutation transport every Bridge_OM component and the full certificate fibers bijectively at arbitrary finite rank."
+      proof: >-
+        Invertibility preserves rank and kernels, D>0 preserves signs and
+        coefficient positivity, and P relabels. Raw certificates retain the
+        fixed transports k->T^{-T}k and alpha->P D^{-1}alpha. No selected raw
+        certificate is introduced.
+    - theorem_id: "THM-RT016-REFINEMENT-007"
+      name: "General-rank finite-refinement functoriality"
+      statement: "Covector restriction is surjective, Gamma shrinks under added inequalities, old supported positive circuits persist, and nested restrictions compose in every finite rank."
+      proof: "The fixed witness-extension, inequality-inclusion, support-minimality, and coordinate-composition proofs contain no rank ceiling."
+    - theorem_id: "THM-RT016-TAME-PATH-008"
+      name: "General-rank preservation of the tame path boundary"
+      statement: "On the unchanged effective finite tame path family, finitely many relevant minors yield the same exact finite cell or isolated-event stratification in every finite rank."
+      proof: >-
+        For finite S and finite r there are finitely many relevant column
+        minors. The admitted representation already requires exact root
+        isolation or finite semialgebraic cell decomposition. No claim is made
+        for arbitrary continuous paths or for continuum robustness.
+
+covector_count_derivation_for_standard_sum_controls:
+  family: "A_r^+=[I_r|u_r] and A_r^-=[I_r|-u_r], u_r=(1,...,1)^T."
+  first_coordinate_sign_patterns: "3^r"
+  one_sided_nonzero_patterns: "2*(2^r-1); their sum sign is forced."
+  mixed_positive_negative_patterns: "3^r-2^(r+1)+1; each realizes negative, zero, and positive sum signs."
+  all_zero_pattern: "One; its sum sign is zero."
+  realized_covector_formula: "3^(r+1)-2^(r+2)+2"
+  unrealized_sign_formula: "2^(r+2)-2"
+  tope_formula: "2^(r+1)-2"
+  constructive_integer_witness_recipe:
+    - "For a mixed sign pattern with positive index set P and negative index set N, set x_i=card(N) for i in P and x_j=-card(P) for j in N; the sum is zero."
+    - "Add one to a chosen positive coordinate to obtain positive sum, or subtract one from a chosen negative coordinate to obtain negative sum."
+    - "For one-sided patterns assign unit magnitudes; for the zero pattern use x=0."
+    - "For A_r^- reverse only the final sum sign. Thus every counted covector has an exact integer witness."
+
+exact_rational_controls:
+  control_count: 4
+  field: "Q"
+  control_payload_sha256: "247d561c1cdca43f6c740f88fe5a74b03b3f730acebae2c77cf1ea2b157baf70"
+  aggregate_counts:
+    sign_cube_size: 5832
+    realized_covectors: 5072
+    unrealized_signs: 760
+    topes: 376
+    minimal_positive_circuits: 2
+    feasible_controls: 2
+    obstructed_controls: 2
+  controls:
+    - control_id: "CTRL-RT016-R5-FEASIBLE"
+      matrix: "A_5^+=[I_5|(1,1,1,1,1)^T] in Q^(5x6)"
+      rank: 5
+      rank_certificate: "det(I_5)=1"
+      sector_count: 6
+      kernel_dimension: 1
+      kernel_generator: [-1, -1, -1, -1, -1, 1]
+      sign_cube_size: 729
+      realized_covector_count: 603
+      unrealized_sign_count: 126
+      tope_count: 62
+      minimal_positive_circuit_count: 0
+      total_branch: "Feasible"
+      exact_certificate: "k=(1,1,1,1,1), with evaluations (1,1,1,1,1,5)."
+      exact_exclusivity_check: "The kernel ray has mixed sign, so it contains no nonzero nonnegative vector."
+    - control_id: "CTRL-RT016-R5-OBSTRUCTED"
+      matrix: "A_5^-=[I_5|(-1,-1,-1,-1,-1)^T] in Q^(5x6)"
+      rank: 5
+      rank_certificate: "det(I_5)=1"
+      sector_count: 6
+      kernel_dimension: 1
+      kernel_generator: [1, 1, 1, 1, 1, 1]
+      sign_cube_size: 729
+      realized_covector_count: 603
+      unrealized_sign_count: 126
+      tope_count: 62
+      minimal_positive_circuit_count: 1
+      positive_circuit_support: ["e1", "e2", "e3", "e4", "e5", "minus_u5"]
+      positive_circuit_support_size: 6
+      positive_circuit_coefficients: [1, 1, 1, 1, 1, 1]
+      total_branch: "Obstructed"
+      exact_certificate: "e1+e2+e3+e4+e5-u5=0."
+      exact_exclusivity_check: "If k(e_i)>0 for every i, then k(-u5)=-sum_i k(e_i)<0."
+    - control_id: "CTRL-RT016-R6-FEASIBLE"
+      matrix: "A_6^+=[I_6|(1,1,1,1,1,1)^T] in Q^(6x7)"
+      rank: 6
+      rank_certificate: "det(I_6)=1"
+      sector_count: 7
+      kernel_dimension: 1
+      kernel_generator: [-1, -1, -1, -1, -1, -1, 1]
+      sign_cube_size: 2187
+      realized_covector_count: 1933
+      unrealized_sign_count: 254
+      tope_count: 126
+      minimal_positive_circuit_count: 0
+      total_branch: "Feasible"
+      exact_certificate: "k=(1,1,1,1,1,1), with evaluations (1,1,1,1,1,1,6)."
+      exact_exclusivity_check: "The kernel ray has mixed sign, so it contains no nonzero nonnegative vector."
+    - control_id: "CTRL-RT016-R6-OBSTRUCTED"
+      matrix: "A_6^-=[I_6|(-1,-1,-1,-1,-1,-1)^T] in Q^(6x7)"
+      rank: 6
+      rank_certificate: "det(I_6)=1"
+      sector_count: 7
+      kernel_dimension: 1
+      kernel_generator: [1, 1, 1, 1, 1, 1, 1]
+      sign_cube_size: 2187
+      realized_covector_count: 1933
+      unrealized_sign_count: 254
+      tope_count: 126
+      minimal_positive_circuit_count: 1
+      positive_circuit_support: ["e1", "e2", "e3", "e4", "e5", "e6", "minus_u6"]
+      positive_circuit_support_size: 7
+      positive_circuit_coefficients: [1, 1, 1, 1, 1, 1, 1]
+      total_branch: "Obstructed"
+      exact_certificate: "e1+e2+e3+e4+e5+e6-u6=0."
+      exact_exclusivity_check: "If k(e_i)>0 for every i, then k(-u6)=-sum_i k(e_i)<0."
+  all_controls_exact: true
+  both_total_branches_exercised_at_each_required_rank: true
+  support_bound_sharp_at_each_required_rank: true
+  every_count_has_constructive_integer_witness_proof: true
+
+bounded_fixture_quarantine:
+  fixture_set_count: 4
+  fixture_sets:
+    - fixture_set_id: "FIXTURE-RT014-SIX-CONFIGURATION-RANK3-SUITE"
+      scope: "A_F4,A_F5,A_F6,A_O4,A_O5,A_O6; all have rank three."
+      status: "nonphysical_conformance_only"
+      theorem_domain_restriction: false
+      target_dimension_evidence: false
+    - fixture_set_id: "FIXTURE-RT014-INDEPENDENT-RANK3-SUITE"
+      scope: "Five asymmetric rational configurations, 295 covectors, three fixture circuits, and four refinement maps."
+      status: "nonphysical_conformance_only"
+      theorem_domain_restriction: false
+      target_dimension_evidence: false
+    - fixture_set_id: "FIXTURE-ANY-LEGACY-RANK-AT-MOST-FOUR-RANGE"
+      scope: "Any bounded legacy conformance range whose largest tested rank is at most four."
+      status: "nonphysical_conformance_only"
+      theorem_domain_restriction: false
+      target_dimension_evidence: false
+    - fixture_set_id: "FIXTURE-RT016-RANK5-RANK6-CONTROLS"
+      scope: "The four exact Q controls in this child artifact."
+      status: "nonphysical_conformance_only"
+      theorem_domain_restriction: false
+      target_dimension_evidence: false
+  universal_sector_coverage_claimed: false
+  physical_rank_or_spacetime_dimension_inferred: false
+  empirical_data_used: false
+  source_ontology_derivation_claimed: false
+
+proof_obligations:
+  obligation_count: 14
+  obligations:
+    - obligation_id: "PO-01-EXACT-DOMAIN-DELTA"
+      status: "satisfied"
+      evidence: "Only the rank domain and derived numeric circuit ceiling change; the candidate map and all inputs remain fixed."
+    - obligation_id: "PO-02-ARBITRARY-FINITE-RANK-TYPING"
+      status: "satisfied"
+      evidence: "Finite S, finite r, finite sign cube, finite support search, and finitely many admitted path minors type all Bridge_OM components."
+    - obligation_id: "PO-03-COMPLETE-COVECTORS"
+      status: "satisfied"
+      evidence: "The unchanged exact feasibility construction tests all 3^card(S) sign strings at any finite rank."
+    - obligation_id: "PO-04-COMPLETE-POSITIVE-CIRCUITS"
+      status: "satisfied"
+      evidence: "The rank-generic support theorem reduces exhaustive circuit search to supports through r+1."
+    - obligation_id: "PO-05-RANK-NULLITY-SUPPORT-BOUND"
+      status: "satisfied"
+      evidence: "The exact ordered-field perturbation proof gives nullity one, rank card(C)-1, and card(C)<=r+1."
+    - obligation_id: "PO-06-SHARPNESS"
+      status: "satisfied"
+      evidence: "A_r^- has determinant-one rank certificate and a unique all-positive kernel ray on r+1 columns for every r>=1."
+    - obligation_id: "PO-07-STRICT-GORDAN-TOTALITY"
+      status: "satisfied"
+      evidence: "The fixed finite-dimensional alternative has no upper-rank premise; exact rank-five and rank-six controls exercise both branches."
+    - obligation_id: "PO-08-CERTIFICATE-FIBER-GROUPOID-TYPING"
+      status: "satisfied_unchanged"
+      evidence: "The full certificate fibers and their T,D,P transports are preserved; no canonical raw witness is added."
+    - obligation_id: "PO-09-REFINEMENT-FUNCTORIALITY"
+      status: "satisfied_unchanged"
+      evidence: "The fixed finite-inclusion proofs contain no upper-rank premise."
+    - obligation_id: "PO-10-TAME-PATH-BOUNDARY"
+      status: "satisfied_unchanged"
+      evidence: "The effective finite path domain and arbitrary-continuous exclusion remain exact."
+    - obligation_id: "PO-11-RANK-FIVE-CONTROLS"
+      status: "satisfied"
+      evidence: "Two Q rank-five controls have 603 covectors and 62 topes each and exercise Feasible plus sharp support-six Obstructed branches."
+    - obligation_id: "PO-12-RANK-SIX-CONTROLS"
+      status: "satisfied"
+      evidence: "Two Q rank-six controls have 1933 covectors and 126 topes each and exercise Feasible plus sharp support-seven Obstructed branches."
+    - obligation_id: "PO-13-CONFORMANCE-AND-FREEZE-BOUNDARY"
+      status: "satisfied"
+      evidence: "Every finite suite is explicitly nonphysical conformance-only and all three inherited freezes remain unopened."
+    - obligation_id: "PO-14-DECISIVE-RESULT-AND-AUTHORITY"
+      status: "satisfied"
+      evidence: "Exactly one constructed result, no_fog_check, bridge_attempt_status, 14 no-delta rows, and downstream blocks are present."
+
+failure_branches:
+  branch_count: 11
+  branches:
+    - branch_id: "FB-01-RANK-CAP-RETAINED"
+      status: "resolved_by_repair"
+      trigger: "The general theorem domain still contains r<=4 or another finite upper rank cap."
+    - branch_id: "FB-02-NUMERIC-SUPPORT-CEILING-RETAINED"
+      status: "resolved_by_repair"
+      trigger: "The theorem still states r+1<=5 instead of only card(C)<=r+1."
+    - branch_id: "FB-03-CIRCUIT-PROOF-DEFECT"
+      status: "not_triggered"
+      trigger: "Support minimality fails to imply one-dimensional kernel, rank card(C)-1, or the r+1 bound."
+    - branch_id: "FB-04-SHARPNESS-DEFECT"
+      status: "not_triggered"
+      trigger: "The negative-sum family is not minimal, positive, rank r, or support r+1."
+    - branch_id: "FB-05-RANK-FIVE-CONTROL-DEFECT"
+      status: "not_triggered"
+      trigger: "Either rank-five exact branch, count, kernel, or support check fails."
+    - branch_id: "FB-06-RANK-SIX-CONTROL-DEFECT"
+      status: "not_triggered"
+      trigger: "Either rank-six exact branch, count, kernel, or support check fails."
+    - branch_id: "FB-07-COMPLETE-INVENTORY-OR-TOTALITY-DEFECT"
+      status: "not_triggered"
+      trigger: "Covector or circuit construction becomes incomplete, or Gordan exclusivity or exhaustiveness fails."
+    - branch_id: "FB-08-CERTIFICATE-OR-PRESENTATION-TYPING-DRIFT"
+      status: "not_triggered"
+      trigger: "A raw certificate becomes a quotient value or any GL, positive-diagonal, or permutation transport changes."
+    - branch_id: "FB-09-REFINEMENT-EXACT-DOMAIN-OR-PATH-DRIFT"
+      status: "not_triggered"
+      trigger: "The repair changes refinement, exact decision, or tame path definitions beyond rank generalization."
+    - branch_id: "FB-10-PHYSICAL-EMPIRICAL-UNIVERSAL-OR-FIXTURE-OVERREAD"
+      status: "not_triggered"
+      trigger: "Finite rank or fixture coverage is called physical dimension, causality, empirical response, universality, conformal geometry, or g_eff."
+    - branch_id: "FB-11-FROZEN-ROUTE-OR-AUTHORITY-VIOLATION"
+      status: "not_triggered"
+      trigger: "A frozen object is replayed or D7, B2, P4-T03, adoption, promotion, Gate, proof, publication, push, or external authority is exercised."
+
+new_mathematical_payload:
+  payload_count: 4
+  payloads:
+    - payload_id: "NMP-RT016-001"
+      payload_type: "theorem"
+      result: "A complete arbitrary-finite-rank Bridge_OM extension with no upper rank cap."
+      distance_to_gr_delta: false
+    - payload_id: "NMP-RT016-002"
+      payload_type: "theorem_and_sharp_family"
+      result: "The exact support-minimal perturbation proof gives card(C)<=r+1, and [I_r|-1_r] attains equality for every r>=1."
+      distance_to_gr_delta: false
+    - payload_id: "NMP-RT016-003"
+      payload_type: "exact_finite_controls"
+      result: "Four Q controls at ranks five and six exercise both branches, sharp support sizes six and seven, 5072 covectors, and 376 topes."
+      distance_to_gr_delta: false
+    - payload_id: "NMP-RT016-004"
+      payload_type: "enumeration_theorem"
+      result: "The standard-sum family has exactly 3^(r+1)-2^(r+2)+2 covectors and 2^(r+1)-2 topes, with a constructive integer witness for every realized sign."
+      distance_to_gr_delta: false
+
+freeze_ledger:
+  inherited_freeze_count: 3
+  inherited_freezes:
+    - freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "preserved_not_reopened"
+      evidence: "No shared tau, common tangent line, or preselected positive dual witness is used."
+    - freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "preserved_not_reopened"
+      evidence: "No Q_ray, midpoint, repaired rank plane, six-cell quotient, or response-preserving variation class is used."
+    - freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "preserved_not_reopened"
+      evidence: "No G_src character, common line, anchor, cochain, holonomy, or protection law is used."
+  new_freeze_added: false
+  repeated_burden_without_payload: false
+
+distance_to_gr_status:
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Remove the exact unnecessary rank-at-most-four domain restriction without changing any other proposal-only Bridge_OM theorem input or authority boundary."
+  changed: false
+  effect: "no_distance_delta"
+  ledger_updated: false
+  no_unsupported_delta: true
+  row_count: 14
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      basis: "Removing an arbitrary rank cap does not derive the finite sector set, oriented rays, provenance, coverage, or bridge status from current ontology."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      basis: "Presentation-groupoid naturality remains conditional mathematics, not adopted EqSrc or physical gauge."
+    - burden: "RetainH"
+      status: "no_delta"
+      basis: "No retention object or theorem is constructed."
+    - burden: "GenH"
+      status: "no_delta"
+      basis: "No generation object or theorem is constructed."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      basis: "No observer-localization object or operational semantics is constructed."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      basis: "Covectors and certificate fibers remain formal and are not empirical response data."
+    - burden: "M_src"
+      status: "no_delta"
+      basis: "No source atlas, glue, manifold construction, or adopted source geometry is supplied."
+    - burden: "g_eff"
+      status: "no_delta"
+      basis: "Arbitrary finite rank is not a physical cone, conformal class, scale, or source-to-metric map."
+    - burden: "matter coupling"
+      status: "no_delta"
+      basis: "No physical matter sectors, propagation law, or coupling is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      basis: "No action, dynamics, variation, or field equation is constructed."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      basis: "The same restricted tame finite-path stratification is preserved; arbitrary variation and continuum robustness remain open."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      basis: "All rank-bounded suites are nonphysical conformance controls and no benchmark is run or promoted."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      basis: "No protected Gate review or verdict is requested or issued."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      basis: "All three inherited freezes remain active; the narrow domain defect is repaired without a new freeze or B2 disposition."
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  category: "source_extension_candidate"
+  classification: "conservative_general_rank_repair_of_the_existing_proposal_only_oriented_matroid_bridge"
+  current_ontology_derivation_claimed: false
+  conservative_mathematical_layer: "The same finite exact covector, circuit, strict-alternative, presentation, certificate-fiber, refinement, and tame-path construction stated at every finite rank."
+  repaired_input_layer: "The source-underived numeric rank ceiling is removed; no replacement rank selector or physical dimension is introduced."
+  new_ontology_primitive_added: false
+  target_atlas_or_metric_imported: false
+  empirical_answer_imported: false
+  workflow_authority_imported: false
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  adoption_status: "blocked_adoption_open_continuation"
+  post_repair_source_purity_audit_completed_here: false
+  post_repair_smuggling_audit_pending: true
+
+authority_limits:
+  proposal_only_general_rank_bridge_constructed: true
+  source_bridge_adopted: false
+  canonical_ontology_modified: false
+  source_primitives_derived_from_current_ontology: false
+  physical_or_spacetime_dimension_selected: false
+  descriptor_instance_complete: false
+  d7_adequacy_evaluated: false
+  b2_activated_or_disposed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  physical_causality_constructed: false
+  empirical_response_constructed: false
+  universal_p7_coverage_constructed: false
+  conformal_structure_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  gate_verdict_issued: false
+  benchmark_promoted: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  distance_to_gr_changed: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  candidate_id: "CAND-V22-B2-NONCHARACTER-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-GENERAL-RANK-V2"
+  artifact_path: "research_control/tasks/RT-20260810-016/artifacts/child_phys_math_p4_t02_b2_oriented_matroid_bridge_general_rank_repair.yaml"
+  formal_object_count: 9
+  formal_map_count: 8
+  theorem_count: 8
+  proof_obligation_count: 14
+  failure_branch_count: 11
+  exact_control_count: 4
+  repair_scope: "Only the general finite-rank domain and rank-generic circuit support ceiling."
+  obligations_remaining:
+    - "Independently audit the repaired domain statement and conformance labels without replaying this construction."
+    - "Derive or adopt sector configuration, coverage, provenance, and physical response semantics only through separately authorized work."
+    - "Establish P7 universality, hyperbolicity, physical cone, conformal reconstruction, scale, and g_eff only through downstream governed work."
+  next_required_role: "smuggling-auditor@0.2.0"
+
+selected_successor:
+  packet_id: "PKT-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-AUDIT-V1"
+  packet_type: "source_extension_smuggling_audit"
+  role_family: "smuggling-auditor@0.2.0"
+  objective: "Audit only that the repaired arbitrary-finite-rank domain and nonphysical conformance labels remove the RT015 defect while every other Bridge_OM input and authority boundary remains fixed."
+  justification: "Handoff-1012 states that Refuter stress remains premature until the repaired candidate is separately constructed and audited."
+  status: "selected_not_executed"
+  separately_admitted: true
+  executed_in_rt016: false
+  automatic_adoption: false
+  automatic_b2_disposition: false
+
+source_hashes:
+  hash_algorithm: "sha256"
+  source_count: 19
+  checkpoint_commit: "715eddea1d2f8207b3aa2bed0d0aa491d0bab347"
+  checkpoint_tree: "87608d8ff0980a51cebd5ec053093789b358f289"
+  files:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+    - path: ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+      sha256: "f6534fd2950c2a6eefb8f2a4b255cd0794ceeb1462556be60af288bceb9d51d5"
+    - path: "research_control/tasks/RT-20260810-016/00_TASK.yaml"
+      sha256: "0989608468c5efdcfcf59a6b7b261816a1b3e28cfffb034c004ebc4672e10a37"
+    - path: "research_control/tasks/RT-20260810-016/DDR-20260810-016.md"
+      sha256: "96f0b864eb1798375cb767a67c7db1ededa063661671a70ae267c1ce9d8fc740"
+    - path: "research_control/tasks/RT-20260810-016/jobs/AJ-RT-20260810-016-001.yaml"
+      sha256: "693b354840d880dfcb3952066f99301bfc3fc972ec0ff2bce02bab62cd0cad61"
+    - path: "research_control/tasks/RT-20260810-016/roles/candidate-constructor@0.2.0--RT-20260810-016.yaml"
+      sha256: "2c99f1ad069259776c128c2f362e6f54313a7541648b2ad12e7ffc9124591327"
+    - path: "research_control/handoffs/handoff-1012.yaml"
+      sha256: "279f064dfeac08dfce4b597c5d2a4ce1b7227f126b1d6273f9f12fd6f09ff8d7"
+    - path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_covector_circuit_bridge_v1.tex"
+      sha256: "20590d4e7386ac43757b73c636c023bb7884706c9352bf307819885185c29cab"
+    - path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_model.py"
+      sha256: "2f6f48daa86a7941edd3ecbc2056be7077814eb787f7499d1ff1ac8294fcf000"
+    - path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_record_v1.yaml"
+      sha256: "1e2ef686e1788fbb229f6560e88854422a2c0830b41a5aba6ea10a2dee1ec0e5"
+    - path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_fixtures_v1.yaml"
+      sha256: "54008f917b431469d8660f32e486d3671f93c052bc59ce4c57c904a6dbd4b7d7"
+    - path: "research_control/tasks/RT-20260810-015/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_smuggling_audit_v1.tex"
+      sha256: "910bc2565e6933f3e4ef134936c1f9cc37dd0592e2acdfbf89470755eb001621"
+    - path: "research_control/tasks/RT-20260810-015/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge_smuggling_audit.md"
+      sha256: "d4d48eaaa552563afa6ca78ce1e05e499495d56c9b4b1ae359e3ddf44dd5ecbf"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+    - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+
+validation_summary:
+  strict_unique_key_yaml: "PASS"
+  source_hashes_match: "PASS_19_OF_19"
+  exact_control_recalculation: "PASS_4_CONTROLS_5072_COVECTORS_376_TOPES_2_SHARP_CIRCUITS"
+  live_rt016_exact_model: "PASS_10_OF_10_CHECKS_RANK_FAMILY_CONTROLS_1_THROUGH_8"
+  live_rt016_model_payload_sha256: "626b418a602e98aa860702e3ef595cb847454994cf22eb0f96fc5c85e7c0e666"
+  required_counts_match: "PASS_9_OBJECTS_8_MAPS_8_THEOREMS_14_PROOFS_11_FAILURES_14_DISTANCE_ROWS_3_FREEZES_4_PAYLOADS"
+  whitespace_check: "PASS"
+  owned_path_only: true

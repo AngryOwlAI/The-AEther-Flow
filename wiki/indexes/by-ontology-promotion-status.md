@@ -469,6 +469,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-DESCRIPTOR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260809-022/artifacts/v22_p4_t02_b2_descriptor_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1` `research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex`
 - `TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_fallback_descriptor_selection_v1.tex`
+- `TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REPAIR-V1` `research_control/tasks/RT-20260810-016/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_repair_v1.tex`
 - `TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-015/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1` `research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_covector_circuit_bridge_v1.tex`
 - `TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.tex`

@@ -1,0 +1,116 @@
+schema_id: "v22_p4_t02_b2_oriented_matroid_bridge_general_rank_controls_v1"
+task_id: "RT-20260810-016"
+job_id: "AJ-RT-20260810-016-001"
+authority: "science_draft"
+status_label: "proposal-only"
+material_class: "source-extension data"
+field: "Q"
+purpose: "Exact nonphysical conformance controls for the arbitrary-finite-rank Bridge_OM repair."
+theorem_domain:
+  sector_set: "finite nonempty S"
+  rank: "arbitrary finite 1<=r=rank(A)<=card(S)"
+  circuit_support_bound: "card(C)<=r+1"
+  physical_dimension_selected: false
+  target_dimension_imported: false
+  p7_sector_exhaustion_claimed: false
+effective_span_factorization:
+  span: "W_A=span_F{v_s:s in S}"
+  dual_restriction_surjective: true
+  unused_ambient_dimensions_change_bridge_data: false
+  interpretation: "Intrinsic algebraic rank only; not physical or spacetime dimension."
+general_family:
+  basis_columns: "e_1,...,e_r"
+  feasible_extra_column: "+sum_i e_i"
+  feasible_certificate: "k=(1,...,1)"
+  feasible_evaluations: "(1,...,1,r)"
+  feasible_branch: "Feasible"
+  obstructed_extra_column: "-sum_i e_i"
+  obstructed_certificate: "alpha=(1,...,1)"
+  obstructed_support: "all r+1 columns"
+  obstructed_branch: "Obstructed"
+  sharpness: "The unique minimal positive circuit has support r+1, saturating card(C)<=r+1."
+mandatory_controls:
+  - control_id: "CTRL-R5-FEASIBLE"
+    rank: 5
+    sector_count: 6
+    columns: "[e_1,e_2,e_3,e_4,e_5,e_1+e_2+e_3+e_4+e_5]"
+    certificate: "k=(1,1,1,1,1)"
+    evaluations: [1, 1, 1, 1, 1, 5]
+    positive_circuit_count: 0
+    total_branch: "Feasible"
+    result: "PASS"
+  - control_id: "CTRL-R5-OBSTRUCTED"
+    rank: 5
+    sector_count: 6
+    columns: "[e_1,e_2,e_3,e_4,e_5,-e_1-e_2-e_3-e_4-e_5]"
+    certificate: "alpha=(1,1,1,1,1,1)"
+    positive_circuit_count: 1
+    circuit_support_size: 6
+    circuit_rank: 5
+    circuit_kernel_dimension: 1
+    total_branch: "Obstructed"
+    result: "PASS"
+  - control_id: "CTRL-R6-FEASIBLE"
+    rank: 6
+    sector_count: 7
+    columns: "[e_1,e_2,e_3,e_4,e_5,e_6,e_1+e_2+e_3+e_4+e_5+e_6]"
+    certificate: "k=(1,1,1,1,1,1)"
+    evaluations: [1, 1, 1, 1, 1, 1, 6]
+    positive_circuit_count: 0
+    total_branch: "Feasible"
+    result: "PASS"
+  - control_id: "CTRL-R6-OBSTRUCTED"
+    rank: 6
+    sector_count: 7
+    columns: "[e_1,e_2,e_3,e_4,e_5,e_6,-e_1-e_2-e_3-e_4-e_5-e_6]"
+    certificate: "alpha=(1,1,1,1,1,1,1)"
+    positive_circuit_count: 1
+    circuit_support_size: 7
+    circuit_rank: 6
+    circuit_kernel_dimension: 1
+    total_branch: "Obstructed"
+    result: "PASS"
+standard_sum_covector_counts:
+  realized_covector_formula: "3^(r+1)-2^(r+2)+2"
+  tope_formula: "2^(r+1)-2"
+  rank_five_per_control:
+    realized_covectors: 603
+    topes: 62
+  rank_six_per_control:
+    realized_covectors: 1933
+    topes: 126
+  aggregate_four_controls:
+    sign_cube_size: 5832
+    realized_covectors: 5072
+    unrealized_signs: 760
+    topes: 376
+  evidence_boundary: "Exact combinatorial conformance evidence only; not source occurrence, physical dimensionality, empirical response, representativeness, or P7 coverage."
+legacy_fixture_quarantine:
+  classification: "nonphysical_conformance_sample"
+  theorem_domain_restriction: false
+  target_dimension_evidence: false
+  source_ontology_evidence: false
+  empirical_evidence: false
+  fixtures:
+    - "A_F4"
+    - "A_F5"
+    - "A_F6"
+    - "A_O4"
+    - "A_O5"
+    - "A_O6"
+  note: "The identifiers count sectors, not source-space dimension. All use rank three and exist only to test exact finite construction behavior."
+exact_model:
+  path: "research_control/tasks/RT-20260810-016/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_repair_model.py"
+  model_payload_sha256: "626b418a602e98aa860702e3ef595cb847454994cf22eb0f96fc5c85e7c0e666"
+  tested_rank_range: "1 through 8"
+  infinite_domain_evidence_boundary: "Finite exact controls test the implementation. The arbitrary-rank claim is proved algebraically, not inferred from finite enumeration."
+authority_limits:
+  current_ontology_derivation_claimed: false
+  physical_causality_constructed: false
+  empirical_response_constructed: false
+  universal_p7_coverage_constructed: false
+  conformal_geometry_constructed: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  adoption_authorized: false
+  physics_promotion_authorized: false
