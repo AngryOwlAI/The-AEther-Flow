@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-1011.yaml",
+    "research_control/handoffs/handoff-1012.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "6cbcc2631949b7f8a48332aa607201555d6f5760",
+    "source_commit": "a1ad79579edd8cb40414d8ba8123f922cc63c19f",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "0628352d2aaeb5550f0b3da118b8e1a0cd2ab02fdda929c37e9953167f0f2a18"
+        "sha256": "0027ebc48fdc397a554078012e4faf87a22d221ef78c99be3ed9ab274baa9fd5"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "1e9b32d75b11b45d5f1181cd5cafc5870b28f6c68a5a95972a30c19d0ce9dada"
+        "sha256": "feb0592247e6ddf6f8c668c63a0e52bd08bf241b903957d1d8a73426cd1add6d"
       },
       {
-        "path": "research_control/handoffs/handoff-1011.yaml",
-        "sha256": "28a671c5c20fb79cb9a07402c4bb81c939f43fd477e32cb94db992104ad84b08"
+        "path": "research_control/handoffs/handoff-1012.yaml",
+        "sha256": "279f064dfeac08dfce4b597c5d2a4ce1b7227f126b1d6273f9f12fd6f09ff8d7"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "4eb42841e5691bcbdc7877d820b95fc5042ed0fd324fe33a19d3bb8ac8ed100c"
+        "sha256": "2bd8e2586508fef9fc284064de59a650ebefc48d1a849cc764ce0bed29485b90"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "5b368e69ccdc916ad66f8ac1d67934d009430ef9426788d63ed5de2ed09ad8d7",
+    "source_manifest_sha256": "cb13a2a5e49727c868a7be34f8cdf9a4a9566b840c56f51f249f61734763873a",
     "source_path_count": "12",
-    "generation_time": "2026-08-11T00:58:56Z",
-    "task_count": "1266",
+    "generation_time": "2026-08-11T02:29:03Z",
+    "task_count": "1267",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260810-014",
-    "latest_handoff_id": "handoff-1011",
-    "current_status": "v22_p4_t02_b2_oriented_matroid_bridge_constructed_pending_smuggling_audit_checkpoint",
+    "active_task_id": "RT-20260810-015",
+    "latest_handoff_id": "handoff-1012",
+    "current_status": "v22_p4_t02_b2_oriented_matroid_bridge_audited_general_rank_repair_required",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260810-014",
-    "latest_research_handoff_id": "handoff-1011",
-    "latest_research_next_action": "Run the single governed checkpoint for AJ-RT-20260810-014-001. After it commits, execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SMUGGLING-AUDIT-V1. Audit sector selection, orientation, provenance, predeclaration, refinement, exact-domain, path-family, and certificate-status inputs for hidden target geometry, empirical answers, physical semantics, or workflow authority. Do not reconstruct any frozen route; execute Refuter stress; reevaluate D7; act on B2; unlock P4-T03; adopt a source law; assign physical or empirical meaning; or take protected or external action.",
+    "latest_research_task_id": "RT-20260810-015",
+    "latest_research_handoff_id": "handoff-1012",
+    "latest_research_next_action": "Run the single governed checkpoint for AJ-RT-20260810-015-001. After it commits, execute exactly one separately admitted candidate-constructor@0.2.0 packet PKT-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REPAIR-V1. Generalize only the theorem domain to arbitrary finite rank with card(C)<=r+1 and label all rank-at-most-four fixtures as explicitly nonphysical conformance samples. Preserve every other definition, typing repair, input-status boundary, and all three freezes. Do not execute Refuter stress; reevaluate D7; act on B2; unlock P4-T03; adopt a source law; assign physical or empirical meaning; or take protected or external action.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "audit_v22_p4_t02_b2_oriented_matroid_bridge_hidden_imports_v1",
-    "role_family": "smuggling-auditor@0.2.0",
+    "route_id": "repair_v22_p4_t02_b2_oriented_matroid_bridge_general_rank_domain_v1",
+    "role_family": "candidate-constructor@0.2.0",
     "target_derivation_milestone": "effective_metric_g_eff",
-    "milestone_burden": "Determine whether the complete proposal-only finite oriented-matroid bridge is source-pure as written or depends on a hidden target empirical physical or workflow import.",
+    "milestone_burden": "Remove the exact unnecessary rank-at-most-four domain restriction without changing any other proposal-only Bridge_OM theorem input or authority boundary.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -445,7 +445,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "no_distance_delta",
+      "effect": "obstruction_recorded",
       "changed": false,
       "milestone": "effective_metric_g_eff",
       "burden_id": "g_eff"

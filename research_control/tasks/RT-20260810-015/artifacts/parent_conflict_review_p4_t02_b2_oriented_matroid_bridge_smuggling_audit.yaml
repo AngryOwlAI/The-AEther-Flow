@@ -1,0 +1,96 @@
+schema_id: "parent_conflict_review_p4_t02_b2_oriented_matroid_bridge_smuggling_audit_v1"
+task_id: "RT-20260810-015"
+job_id: "AJ-RT-20260810-015-001"
+parent_execution_unit: "physicist_mathematician_philosopher"
+status: "resolved"
+resolution_round_count: 1
+blocking_conflict_count: 0
+all_conflicts_resolved: true
+unresolved_blocking_conflicts: []
+completed_at: "2026-08-11T02:26:11Z"
+
+child_outputs:
+  - execution_unit: "child_phys_math"
+    perspective: "physicist_mathematician"
+    path: "research_control/tasks/RT-20260810-015/artifacts/child_phys_math_p4_t02_b2_oriented_matroid_bridge_smuggling_audit.yaml"
+    sha256: "c050a716c5b854ab0b6f974730dd7dbe425be34cea952f96c88fdd12725d99f9"
+    initial_verdict: "source_pure_as_written"
+    final_verdict: "repair_required"
+    blocking_conflicts_reported_after_revision: 0
+  - execution_unit: "child_phys_phil"
+    perspective: "physicist_philosopher"
+    path: "research_control/tasks/RT-20260810-015/artifacts/child_phys_phil_p4_t02_b2_oriented_matroid_bridge_smuggling_audit.yaml"
+    sha256: "0e3c49ddf1d935765244f45be127d84280809af9893a50cfa417f647d0297e48"
+    initial_verdict: "repair_required"
+    final_verdict: "repair_required"
+    blocking_conflicts_reported_after_revision: 0
+
+conflicts:
+  - conflict_id: "CONFLICT-01-RANK-CAP-SOURCE-PURITY"
+    type: "scientific_interpretation"
+    severity_before_resolution: "blocking"
+    math_child_initial_position: "The declared r<=4 restriction was transparent proposal syntax and could be read as a mathematically inessential conformance cap, so the fixed candidate was source-pure as written."
+    philosophy_child_initial_position: "The r<=4 clause occurs in the general theorem domain, is mathematically unnecessary, has no source rationale, and matches the target dimension, so source-purity acceptance requires repair."
+    governing_evidence:
+      - "The registered RT014 TeX lines 62-71 declare 1<=rank(A)=r<=4 in the general construction domain, not only in a fixture profile."
+      - "The same TeX lines 102-110 prove the circuit-support theorem in rank-generic form."
+      - "The RT015 exact family realizes the complete construction at ranks one through six, including support-six and support-seven circuits at ranks five and six."
+      - "No independent source-side rationale or explicit nonphysical-conformance-budget label is supplied for the numeral four."
+    resolution_round: 1
+    resolution: "Both children distinguish disclosure from justification and converge on repair_required. Disclosure rules out a concealed target-metric premise, but it does not make an unnecessary target-shaped theorem restriction source-pure as written."
+    blocking_after_resolution: false
+
+consensus:
+  decisive_verdict: "repair_required"
+  verdict_scope: "Only the unexplained general theorem-domain restriction r<=4."
+  conditional_bridge_mathematics_preserved: true
+  forbidden_target_import_proved: false
+  target_shaped_preload_risk_detected: true
+  candidate_repaired_in_rt015: false
+  agreed_points:
+    - "Complete covectors, minimal positive circuits, the strict total alternative, presentation transport, certificate-orbit typing, finite refinements, and tame-path records remain valid conditional mathematics."
+    - "The construction extends to arbitrary finite rank and every minimal positive circuit satisfies |C|<=r+1."
+    - "Independent negative reorientation can switch the total branch and therefore remains substantive supplied source data rather than presentation gauge."
+    - "Sector, orientation, provenance, exact-domain, refinement, path, fixture, and certificate choices are disclosed proposal or mathematical controls, not current-ontology derivations or physical or empirical selectors."
+    - "All three inherited freezes remain active and Distance-to-GR is unchanged."
+    - "D7 remains unevaluated, B2 inactive and undisposed, and P4-T03 locked."
+  selected_successor_packet: "PKT-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REPAIR-V1"
+  selected_successor_role: "candidate-constructor@0.2.0"
+  selected_successor_executed: false
+
+unique_contributions_preserved:
+  physicist_mathematician:
+    - "The span-factorization proof and sharp arbitrary-rank basis-plus-or-minus-sum family."
+    - "The exact orientation action on covectors and positive circuits."
+    - "The requirement that quotient certificates remain full transported fibers or orbit spaces rather than canonical raw witnesses."
+    - "The effective finite tame-cell and root-isolation interpretation of path data."
+  physicist_philosopher:
+    - "The disclosure-versus-source-purity distinction that resolves the rank-cap conflict."
+    - "The target-shaped-preload standard without overclaiming deliberate or forbidden target import."
+    - "The separation of source syntax, current-ontology derivation, epistemic selection, physical meaning, empirical semantics, adoption, and workflow authority."
+    - "The residual orientation, sector-coverage, refinement-family, and path-law debts that remain after the narrow repair."
+  parent:
+    - "The one-defect audit matrix, general-rank executable controls, and bounded general-rank repair packet identity."
+
+authority_resolution:
+  source_bridge_status: "proposal-only candidate requiring one domain repair"
+  current_ontology_derivation_claimed: false
+  source_bridge_adopted: false
+  physical_or_empirical_semantics_assigned: false
+  all_p7_sector_coverage_claimed: false
+  d7_adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  conformal_geometry_or_g_eff_constructed: false
+  distance_to_gr_changed: false
+  proof_or_promotion_authority: false
+  publication_push_or_external_action_authorized: false
+
+parent_decision:
+  decisive_verdict: "repair_required"
+  no_fog_check: true
+  blocking_conflict_present: false
+  proceed_to_fusion: true
+  selected_successor_packet: "PKT-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REPAIR-V1"
+  selected_successor_role: "candidate-constructor@0.2.0"
+  selected_successor_executed: false

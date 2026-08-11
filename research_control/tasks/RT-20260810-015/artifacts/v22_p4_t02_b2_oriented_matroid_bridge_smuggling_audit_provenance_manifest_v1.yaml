@@ -1,0 +1,91 @@
+schema_id: "v22_p4_t02_b2_oriented_matroid_bridge_smuggling_audit_provenance_manifest_v1"
+task_id: "RT-20260810-015"
+job_id: "AJ-RT-20260810-015-001"
+packet_id: "PKT-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SMUGGLING-AUDIT-V1"
+candidate_id: "CAND-V22-B2-NONCHARACTER-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+authority: "science_draft"
+status_label: "draft/control"
+source_extension_status: "proposal-only input audit"
+source_files:
+  - source_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+    sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    authority_use: "P4-T02 acceptance and stop boundary only"
+  - source_id: "HANDOFF-1011"
+    path: "research_control/handoffs/handoff-1011.yaml"
+    sha256: "28a671c5c20fb79cb9a07402c4bb81c939f43fd477e32cb94db992104ad84b08"
+    authority_use: "exact packet and role selection"
+  - source_id: "TEX-V22-P4-T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1"
+    path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_covector_circuit_bridge_v1.tex"
+    sha256: "20590d4e7386ac43757b73c636c023bb7884706c9352bf307819885185c29cab"
+    authority_use: "fixed candidate statement"
+  - source_id: "V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-RECORD-V1"
+    path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_record_v1.yaml"
+    sha256: "1e2ef686e1788fbb229f6560e88854422a2c0830b41a5aba6ea10a2dee1ec0e5"
+    authority_use: "fixed formal and status record"
+  - source_id: "V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-FIXTURES-V1"
+    path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_fixtures_v1.yaml"
+    sha256: "54008f917b431469d8660f32e486d3671f93c052bc59ce4c57c904a6dbd4b7d7"
+    authority_use: "fixed exact conformance fixtures"
+  - source_id: "V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-PROVENANCE-V1"
+    path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_provenance_manifest_v1.yaml"
+    sha256: "a17a990efd38fd9f0524ddbf053907a749d4151327cc9ade4f254afdfee6bb85"
+    authority_use: "declared proposal provenance inputs"
+  - source_id: "V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-MODEL-V1"
+    path: "research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_model.py"
+    sha256: "2f6f48daa86a7941edd3ecbc2056be7077814eb787f7499d1ff1ac8294fcf000"
+    authority_use: "frozen exact executable model"
+  - source_id: "V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-VALIDATOR-V1"
+    path: "research_control/tasks/RT-20260810-014/artifacts/validate_v22_p4_t02_b2_oriented_matroid_bridge.py"
+    sha256: "2ee953906e2e7b5aabbc6805c69bc3788b36d89cf3ede3a3328c318f995bcda6"
+    authority_use: "frozen conformance checker not scientific authority"
+  - source_id: "MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-V1"
+    path: "research_control/tasks/RT-20260810-014/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge.md"
+    sha256: "bcca28bd6ea18bfb7402de28f9839584358b7c2cad4cac91fc783db91e29f492"
+    authority_use: "fixed parent synthesis and typing repairs"
+  - source_id: "RT014-CHILD-PHYS-MATH"
+    path: "research_control/tasks/RT-20260810-014/artifacts/child_phys_math_p4_t02_b2_oriented_matroid_bridge.yaml"
+    sha256: "9e4896f243f3c649229198104710327b7338a3ab71f3d8bee990b002b1c6f926"
+    authority_use: "independent mathematical construction evidence"
+  - source_id: "RT014-CHILD-PHYS-PHIL"
+    path: "research_control/tasks/RT-20260810-014/artifacts/child_phys_phil_p4_t02_b2_oriented_matroid_bridge.yaml"
+    sha256: "4cf8aa13fc369248f99e28290f31288a64b43718038e043477734709791f2017"
+    authority_use: "independent status and typing analysis"
+  - source_id: "DISTANCE-TO-GR-LEDGER"
+    path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+    sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+    authority_use: "no-delta baseline"
+audit_input_classes:
+  - input_id: "AI-01-SECTOR-SET"
+    disclosed_status: "explicit proposal-only input"
+    self_selected_by_bridge: false
+  - input_id: "AI-02-ORIENTATION"
+    disclosed_status: "explicit proposal-only input"
+    self_selected_by_bridge: false
+  - input_id: "AI-03-RANK-CAP"
+    disclosed_status: "explicit selected packet scope r<=4 with no physical-dimension claim"
+    self_selected_by_bridge: false
+  - input_id: "AI-04-EXACT-DOMAIN"
+    disclosed_status: "explicit effective decision-domain assumption with Q fixtures"
+    self_selected_by_bridge: false
+  - input_id: "AI-05-REFINEMENT-FAMILY"
+    disclosed_status: "explicit finite predeclared inclusion family"
+    self_selected_by_bridge: false
+  - input_id: "AI-06-PATH-FAMILY"
+    disclosed_status: "explicit finite tame predeclared family"
+    self_selected_by_bridge: false
+  - input_id: "AI-07-FIXTURES"
+    disclosed_status: "explicit engineered conformance controls"
+    self_selected_by_bridge: false
+  - input_id: "AI-08-CERTIFICATE-STATUS"
+    disclosed_status: "mathematical proof fiber and orbit only"
+    self_selected_by_bridge: false
+authority_limits:
+  generated_derivatives_are_authority: false
+  registry_metadata_is_scientific_authority: false
+  validator_pass_is_scientific_authority: false
+  role_selection_is_scientific_authority: false
+  current_ontology_derivation_claimed: false
+  physical_or_empirical_semantics_claimed: false
+  adoption_authorized: false
+  distance_to_gr_changed: false
