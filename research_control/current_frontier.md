@@ -3,14 +3,14 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260811-006` and `handoff-1020`.
+`RT-20260811-007` and `handoff-1021`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T15:19:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"7fc891ba80f761c21ca54dfc7228c88f3acd24d5","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"1a6f171ceab71085b68402b88404ffc91ec569bddf3a9b6cc20d4434075d6baa"},{"path":"research_control/handoffs/handoff-1020.yaml","sha256":"9ca896f2c0dd8201294ae9b734d72cff28f2442d8e40398da2eec341605216bc"},{"path":"research_control/program_state.yaml","sha256":"7a14d5bd27953462f5f1bd223577abba624c04033a364e1fd80d5ed0f826035e"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"f9c4c537cfa31dc8bf61a2f2edcf745e1160f6b9225310b89fe5587951db1e31","source_path_count":"12","task_count":"1275"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-11T16:31:42Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"24ce83ec6e12c683aa166f44c4ac42c10f16c623","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"50d05d5b58fd346950b2ce14deb761e3402d2da7fa4c5cf75eac9ab538e97bfd"},{"path":"research_control/handoffs/handoff-1021.yaml","sha256":"5f633315e492e1addf8383d21337ccc4a49c91851d96164e19900b12a81e6b2c"},{"path":"research_control/program_state.yaml","sha256":"351653a662084f1996e170b93b3f557cd9eaee052baf38aaf28af90b011a3ff2"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"ebc4cfaa330e22ffef0c90a0688c77fe492877ffbb71d014b8d070c195f5b3e1","source_path_count":"12","task_count":"1276"} -->
 
 ## Generated-Report Provenance
 
@@ -19,11 +19,11 @@ tracked authority files govern.
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `current_frontier` |
-| Source commit | `7fc891ba80f761c21ca54dfc7228c88f3acd24d5` |
-| Source-derived generation time | `2026-08-11T15:19:00Z` |
-| Tracked task count | 1275 |
+| Source commit | `24ce83ec6e12c683aa166f44c4ac42c10f16c623` |
+| Source-derived generation time | `2026-08-11T16:31:42Z` |
+| Tracked task count | 1276 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `f9c4c537cfa31dc8bf61a2f2edcf745e1160f6b9225310b89fe5587951db1e31` |
+| Source manifest SHA-256 | `ebc4cfaa330e22ffef0c90a0688c77fe492877ffbb71d014b8d070c195f5b3e1` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -31,9 +31,9 @@ tracked authority files govern.
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `1a6f171ceab71085b68402b88404ffc91ec569bddf3a9b6cc20d4434075d6baa`
-- `research_control/handoffs/handoff-1020.yaml`: `9ca896f2c0dd8201294ae9b734d72cff28f2442d8e40398da2eec341605216bc`
-- `research_control/program_state.yaml`: `7a14d5bd27953462f5f1bd223577abba624c04033a364e1fd80d5ed0f826035e`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `50d05d5b58fd346950b2ce14deb761e3402d2da7fa4c5cf75eac9ab538e97bfd`
+- `research_control/handoffs/handoff-1021.yaml`: `5f633315e492e1addf8383d21337ccc4a49c91851d96164e19900b12a81e6b2c`
+- `research_control/program_state.yaml`: `351653a662084f1996e170b93b3f557cd9eaee052baf38aaf28af90b011a3ff2`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_current_frontier.py`: `62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6`
@@ -47,15 +47,15 @@ or claim-promotion authority.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260811-006` |
-| Latest handoff ID | `handoff-1020` |
-| Current status | `v22_p4_t02_b2_source_law_space_robust_invariance_protection_formalization_selected_checkpoint_pending` |
+| Active task ID | `RT-20260811-007` |
+| Latest handoff ID | `handoff-1021` |
+| Current status | `v22_p4_t02_b2_source_law_space_robust_invariance_theorem_candidate_pending_smuggling_audit_checkpoint_pending` |
 | V16 completed | false |
-| Current route family | integration or selection (scientific) |
+| Current route family | formalization or theorem (scientific) |
 | Target derivation milestone | `effective_metric_g_eff` |
 | Current burden | `g_eff` |
-| Required next authority | One governed RT-20260811-006 checkpoint followed by one separately admitted Ontology Formalizer source-law-space robust-invariance formalization-or-obstruction packet. |
-| Next recommended action | Run the single governed checkpoint for AJ-RT-20260811-006-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-FORMALIZATION-V1. Formalize or precisely obstruct a target-free source-law arena, independently source-provenanced K, admissible law family A, variation multifunction Delta, tangent or polar data, and EqSrc transport. Preserve all five freezes. Do not execute any later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
+| Required next authority | One governed RT-20260811-007 checkpoint followed by one separately admitted focused Smuggling Auditor source-extension audit. |
+| Next recommended action | Run the single governed checkpoint for AJ-RT-20260811-007-001. After it commits, execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1. Audit only whether K A Delta tangent orientation conormal margin and EqSrc arrows are target-free and independently source-provenanced rather than desired-outcome or countermodel-exclusion preload. Preserve all five freezes. Do not execute Refuter stress, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
 
 ## Active-State Bifurcation
 
@@ -66,9 +66,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260811-006` |
-| Latest research handoff ID | `handoff-1020` |
-| Latest research next action | Run the single governed checkpoint for AJ-RT-20260811-006-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-FORMALIZATION-V1. Formalize or precisely obstruct a target-free source-law arena, independently source-provenanced K, admissible law family A, variation multifunction Delta, tangent or polar data, and EqSrc transport. Preserve all five freezes. Do not execute any later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
+| Latest research task ID | `RT-20260811-007` |
+| Latest research handoff ID | `handoff-1021` |
+| Latest research next action | Run the single governed checkpoint for AJ-RT-20260811-007-001. After it commits, execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1. Audit only whether K A Delta tangent orientation conormal margin and EqSrc arrows are target-free and independently source-provenanced rather than desired-outcome or countermodel-exclusion preload. Preserve all five freezes. Do not execute Refuter stress, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -101,12 +101,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260811-006/00_TASK.yaml`.
-- Active task objective: Compare exactly four handoff-1019 continuations after the SignedCubicViabilitySelector_v1 robustness obstruction: a source-derived perturbative protection law, a source-side irrelevance theorem, a materially distinct bridge class, and a protected human-gated ontology stop; preserve all five freezes; select exactly one materially distinct future packet without executing it.
-- Latest handoff path: `research_control/handoffs/handoff-1020.yaml`.
-- Latest handoff summary: RT-20260811-006 compares exactly four post-signed-cubic-viability continuations and selects Route A: one full source-law-space robust-invariance protection formalization-or-obstruction packet under ontology-formalizer@0.2.0. The fused draft/control result makes RobInv_src(K,A,Delta) the primitive, retains barriers only as optional certificates, and adds a quantitative stability theorem, positive regraduation invariance, a balanced-normal-variation obstruction, and exact rational controls. The selected ontology-law research packet remains proposal-only and unexecuted. All five freezes, fourteen Distance-to-GR no-delta rows, D7 non-evaluation, B2 inactivity, P4-T03 lock, and every promotion boundary remain unchanged.
-- Current route family: integration or selection (scientific).
-- Next recommended action: Run the single governed checkpoint for AJ-RT-20260811-006-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-FORMALIZATION-V1. Formalize or precisely obstruct a target-free source-law arena, independently source-provenanced K, admissible law family A, variation multifunction Delta, tangent or polar data, and EqSrc transport. Preserve all five freezes. Do not execute any later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
+- Active task path: `research_control/tasks/RT-20260811-007/00_TASK.yaml`.
+- Active task objective: Execute PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-FORMALIZATION-V1 by formalizing a target-free source-law arena, independently source-provenanced K, admissible law family A, variation multifunction Delta, tangent or polar data, robust-invariance relation, and EqSrc transport with exact theorems, or return the smallest precise missing primitive or countermodel; preserve all five freezes and every downstream block.
+- Latest handoff path: `research_control/handoffs/handoff-1021.yaml`.
+- Latest handoff summary: RT-20260811-007 constructs SourceLawSpaceRobustInvarianceProtection_v1 as a complete conditional proposal-only theorem candidate. Under explicit roots X_law K A Delta and EqSrc_prot it proves regular tangent and conormal formulas, strict strong invariance, quantitative finite certificates, positive certificate regraduation, coherent source-presentation transport, a balanced-normal obstruction, and exact rational controls. Predeclaration proves within-packet nonadaptivity only; independent source provenance, source purity, current-ontology derivation, and adoption remain unaudited. Both internal physics perspectives converge with zero unresolved blocking conflicts. The focused source-purity audit remains unexecuted. All five freezes, fourteen Distance-to-GR no-delta rows, D7 non-evaluation, B2 inactivity, P4-T03 lock, and every promotion boundary remain unchanged.
+- Current route family: formalization or theorem (scientific).
+- Next recommended action: Run the single governed checkpoint for AJ-RT-20260811-007-001. After it commits, execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1. Audit only whether K A Delta tangent orientation conormal margin and EqSrc arrows are target-free and independently source-provenanced rather than desired-outcome or countermodel-exclusion preload. Preserve all five freezes. Do not execute Refuter stress, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -336,7 +336,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the single governed checkpoint for AJ-RT-20260811-006-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-FORMALIZATION-V1. Formalize or precisely obstruct a target-free source-law arena, independently source-provenanced K, admissible law family A, variation multifunction Delta, tangent or polar data, and EqSrc transport. Preserve all five freezes. Do not execute any later audit or stress packet, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
+Run the single governed checkpoint for AJ-RT-20260811-007-001. After it commits, execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1. Audit only whether K A Delta tangent orientation conormal margin and EqSrc arrows are target-free and independently source-provenanced rather than desired-outcome or countermodel-exclusion preload. Preserve all five freezes. Do not execute Refuter stress, adopt a source law or ontology, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -360,13 +360,23 @@ No validation-layer split is recorded in the latest handoff.
 
 Authorization layers:
 
-No authorization-layer split is recorded in the latest handoff.
+| Authorization field | Value | Meaning |
+| --- | --- | --- |
+| `protected_scoped_gate_review_authorized` | false (not authorized) | scoped review authority only |
+| `protected_scoped_gate_review_scope` | No protected Gate review is authorized for this proposal-only P4-T02 theorem candidate. | exact scope of protected review authority |
+| `protected_scoped_gate_review_authority_source_path` | none | tracked source for scoped review authority |
+| `downstream_physics_promotion_authorized` | false (not authorized) | authorizes downstream physics promotion only when true |
+| `downstream_physics_promotion_authority_source_path` | none | tracked source for downstream promotion authority |
+| `benchmark_promotion_authorized` | false (not authorized) | authorizes benchmark promotion only when true |
+| `benchmark_promotion_authority_source_path` | none | tracked source for benchmark authority |
+| `completed_derivation_authorized` | false (not authorized) | authorizes completed-derivation claim only when true |
+| `completed_derivation_authority_source_path` | none | tracked source for completed-derivation authority |
 
 Legacy compatibility records:
 
-- active task: `RT-20260811-006`;
-- latest handoff: `handoff-1020`;
-- current status: `v22_p4_t02_b2_source_law_space_robust_invariance_protection_formalization_selected_checkpoint_pending`;
+- active task: `RT-20260811-007`;
+- latest handoff: `handoff-1021`;
+- current status: `v22_p4_t02_b2_source_law_space_robust_invariance_theorem_candidate_pending_smuggling_audit_checkpoint_pending`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -376,8 +386,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-1020.yaml`
-- `research_control/tasks/RT-20260811-006/00_TASK.yaml`
+- `research_control/handoffs/handoff-1021.yaml`
+- `research_control/tasks/RT-20260811-007/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -393,7 +403,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 1020*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 1021*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

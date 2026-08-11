@@ -1,0 +1,463 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=0.84in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{url}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\R}{\mathbb R}
+\newcommand{\RobInv}{\mathsf{RobInv}_{\mathrm{src}}}
+\newcommand{\Vad}{\mathcal V_{\mathrm{adm}}}
+\newcommand{\EqSrc}{\mathsf{EqSrc}_{\mathrm{prot}}}
+\newcommand{\status}[1]{\textsf{#1}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlist{nosep,leftmargin=*}
+\urlstyle{tt}
+
+\title{Source-Law-Space Robust-Invariance Protection\\
+\large V22 P4--T02 B2 proposal-only formalization}
+\author{Ontology Formalizer parent synthesis, RT-20260811-007}
+\date{11 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\begin{minipage}{0.94\linewidth}
+\textbf{Decisive result:}
+\status{theorem\_with\_hypotheses\_and\_proof}.
+For one explicitly typed regular finite-barrier source-law datum, uniform
+strict conormal margins for every admitted generator and variation are
+equivalent to strict tangent inclusion and imply strong forward invariance on
+the declared solution domain.  The formal relation and its noncanonical
+certificate orbit descend through coherent \(C^1\) source-presentation
+arrows.  A balanced pair of admitted normal variations at a zero-margin face
+gives an exact obstruction.
+
+\smallskip
+\textbf{Status and stop.}
+The roots \(X_{\mathrm{law}},K,\mathcal A,\Delta\), and \(\EqSrc\) are
+disclosed \emph{proposal-only source-extension data}.  This theorem does not
+derive or adopt them from current ontology.  Exactly one focused Smuggling
+Auditor packet is selected but not executed.  All five local freezes remain;
+all fourteen Distance-to-GR rows remain \status{no\_delta}; D7 is not
+reevaluated; B2 is inactive; and P4--T03 is locked.
+\end{minipage}}
+\end{center}
+
+\section{Authorized question and fixed roots}
+
+Handoff-1020 authorizes exactly one formalization-or-obstruction packet:
+\begin{flushleft}
+\small\ttfamily
+PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-\\
+PROTECTION-FORMALIZATION-V1.
+\end{flushleft}
+The missing premise isolated by RT005 and selected by RT006 is not another
+token, quotient, common character, oriented-matroid classifier, or special
+cubic flow.  It is a law on a full source-state arena that specifies which
+states, generators, and variations are admissible and protects that set under
+every admitted variation.
+
+This task therefore predeclares the tuple
+\[
+  \mathcal D_{\mathrm{prot}}
+   =(X_{\mathrm{law}},K,\mathcal A,\Delta,\EqSrc)
+\]
+as new proposal-only source-extension data.  The tuple is fixed before the
+protection calculation.  Its predeclaration prevents adaptive alteration in
+this packet; it does not prove that current ontology selects or derives the
+tuple.  That epistemic question belongs to the separately admitted audit.
+
+No target atlas, metric, tetrad, coframe, desired GR cone, physical norm,
+detector response, empirical result, or benchmark calibration is an input.
+The source-law chart is not adopted \(M_{\mathrm{src}}\), its tangent cones
+are not physical characteristic cones, and its presentation arrows are not
+asserted to be physical gauge.
+
+\section{Typed source-law datum}
+
+\begin{definition}[Regular proposal-only protection datum]
+Let \(X_{\mathrm{law}}\) be a finite-dimensional real \(C^1\) chart.  Let
+\(K\subset X_{\mathrm{law}}\) be closed and full-dimensional.  Near every
+relevant boundary point it has a finite presentation
+\[
+ K=\{x:\rho_i(x)\geq0,\ i=1,\ldots,m\},                 \tag{1}
+\]
+where the active differentials are linearly independent.  Let \(\Theta\) be
+compact and let \(\mathcal A=\{F_\theta\}_{\theta\in\Theta}\) be a
+predeclared, jointly continuous, locally equi-Lipschitz family of source
+generators.  Let \(\Delta(x)\) be a predeclared, nonempty compact-valued,
+locally bounded, outer-semicontinuous variation multifunction, with the same
+properties inherited by \(\Vad\).  Its admitted selections satisfy the stated
+Carathéodory hypotheses.  Finally, let \(\EqSrc\) be a groupoid of justified
+locally \(C^{1,1}\) diffeomorphisms, coherent parameter homeomorphisms, and
+locally \(C^{1,1}\) inverse arrows for the complete tuple.
+\end{definition}
+
+For \(x\in\partial K\), write
+\(I(x)=\{i:\rho_i(x)=0\}\).  The regular tangent and positive-conormal
+objects are
+\begin{align}
+ T_K(x)&=\{v:d\rho_i(x)[v]\geq0\ \text{for every }i\in I(x)\}, \tag{2}\\
+ N_K^+(x)&=\operatorname{pos}\{d\rho_i(x):i\in I(x)\}.          \tag{3}
+\end{align}
+The second object uses inward conormals; it is not the signed physical normal
+to a causal cone.
+
+Define the admitted velocity multifunction
+\[
+ \Vad(x)=\bigcup_{F\in\mathcal A}\bigl(F(x)+\Delta(x)\bigr).
+\]
+
+\begin{definition}[Strict source-law-space robust invariance]
+\begin{equation}
+ \RobInv(K,\mathcal A,\Delta)
+ \quad\Longleftrightarrow\quad
+ \Vad(x)\subset\operatorname{Int}T_K(x)
+ \quad\text{for every relevant }x\in\partial K .
+ \label{eq:robinv}
+\end{equation}
+The result is \status{fail} when an exact violating velocity is supplied and
+\status{undefined} when a root, an effective boundary test, or its coherent
+transport is absent.  Missing data never count as a pass.
+\end{definition}
+
+\section{Tangent characterization and forward invariance}
+
+\begin{theorem}[Regular active-conormal characterization]
+\label{thm:tangent}
+Under the regularity in (1), the contingent tangent cone is (2), and
+\[
+ \operatorname{Int}T_K(x)
+ =\{v:d\rho_i(x)[v]>0\ \text{for every }i\in I(x)\}.
+\]
+\end{theorem}
+
+\begin{proof}
+The linear-independence constraint qualification identifies the contingent
+cone of the regular inequality set with its linearized feasible cone.  This
+is (2).  A finite intersection of independent closed half-spaces is
+full-dimensional; its ambient interior is obtained by making every active
+inequality strict.
+\end{proof}
+
+\begin{theorem}[Strict source-law-space strong invariance]
+\label{thm:invariance}
+Assume the regular datum above.  Assume every declared solution is absolutely
+continuous, remains in a compact local solution tube on each bounded time
+interval, and satisfies
+\(\dot x(t)\in\Vad(x(t))\) almost everywhere.  If \(\Vad\) is locally bounded
+and outer-semicontinuous and \eqref{eq:robinv} holds with locally uniform
+positive active-conormal margins,
+then every solution beginning in \(K\) remains in \(K\) throughout its
+declared forward domain.
+\end{theorem}
+
+\begin{proof}
+By Theorem~\ref{thm:tangent}, every active barrier derivative is positive for
+every admitted boundary velocity.  Local boundedness and outer
+semicontinuity of the velocity multifunction, continuity of the active
+differentials, and the locally uniform margin preserve a positive half-margin
+on a neighborhood of each contacted face.  On a bounded time interval the
+contacted boundary portion is compact, so finitely many such neighborhoods
+cover it.  If a solution had a first exit, at least one active
+\(\rho_i(x(t))\) would have to cross from nonnegative to negative while its
+absolutely continuous derivative is positive almost everywhere throughout
+the last face neighborhood.  Integration gives an increase, contradicting
+the crossing.  The argument applies simultaneously to every active face and
+every admitted generator and variation.
+\end{proof}
+
+The strict margin is stronger than the weakest possible viability condition,
+but it is deliberate: it supplies the perturbative protection that was absent
+from the frozen signed-cubic candidate.  The theorem is conditional on the
+declared solution and regularity class and makes no claim outside it.
+
+\section{Quantitative certificates and their orbit}
+
+\begin{theorem}[Finite conormal certificate]
+\label{thm:certificate}
+Suppose the barriers in (1) only present an independently supplied \(K\).
+If, for every relevant boundary point, every active \(i\), every
+\(F\in\mathcal A\), and every \(E\in\Delta(x)\), there are predeclared
+numbers \(\alpha_i(x)>\delta_i(x)\geq0\) with
+\begin{align}
+ d\rho_i(x)[F(x)]&\geq\alpha_i(x), \\
+ |d\rho_i(x)[E]|&\leq\delta_i(x),
+\end{align}
+then every active residual is at least
+\(\alpha_i-\delta_i>0\), so
+Theorem~\ref{thm:invariance} applies.
+\end{theorem}
+
+\begin{proof}
+For every admitted sum,
+\[
+ d\rho_i[F+E]
+ \geq d\rho_i[F]-|d\rho_i[E]|
+ \geq\alpha_i-\delta_i>0.
+\]
+Theorems~\ref{thm:tangent} and \ref{thm:invariance} finish the proof.
+\end{proof}
+
+The barriers are certificates, not canonical source laws.  If, near an active
+face,
+\[
+ \widetilde\rho_i=h_i\rho_{\pi(i)},\qquad h_i>0,
+\]
+then on that face
+\[
+ d\widetilde\rho_i=h_i\,d\rho_{\pi(i)}.
+\]
+Thus positive regraduation and face permutation scale the nominal bound,
+variation bound, and residual margin together.  Redundant presentations are
+retained as transported certificate fibres.  The output is an orbit or
+groupoid-valued certificate, never a canonically selected raw barrier.
+
+Positive regraduation preserves an already chosen inward orientation.  It
+does not select that orientation or justify \(K\).
+
+\section{Source-presentation transport}
+
+\begin{theorem}[\(C^{1,1}\) presentation transport]
+\label{thm:transport}
+Let \((g,\eta_g)\) be a declared presentation arrow, where
+\(g:X_{\mathrm{law}}\to X'_{\mathrm{law}}\) is locally \(C^{1,1}\) and
+\(\eta_g:\Theta\to\Theta'\) is a homeomorphism.  Transport the complete
+datum by
+\begin{align*}
+ K'&=gK,\\
+ F'_{\eta_g(\theta)}(gx)&=Dg_xF_\theta(x),\\
+ \Delta'(gx)&=Dg_x\Delta(x).
+\end{align*}
+Then
+\[
+ T_{K'}(gx)=Dg_xT_K(x),\qquad
+ \Vad'(gx)=Dg_x\Vad(x),
+\]
+and \(\RobInv\) has the same pass, fail, or undefined value in both
+presentations.  Declared solutions correspond by \(g\).
+\end{theorem}
+
+\begin{proof}
+The contingent-cone chain rule gives the first identity.  The second is the
+definition of complete pushforward.  Because \(Dg_x\) is an invertible linear
+open map, it maps the interior of \(T_K(x)\) to the interior of
+\(T_{K'}(gx)\).  Hence strict inclusion is equivalent.  The chain rule maps
+absolutely continuous solutions forward, and the inverse arrow maps them
+back.  Overlap coherence makes the result independent of a composable arrow
+factorization.
+\end{proof}
+
+This is mathematical presentation naturality.  No physical gauge statement
+follows.
+
+\section{Exact obstruction at zero margin}
+
+\begin{proposition}[Balanced-normal obstruction]
+\label{prop:balanced}
+Let \(x\in\partial K\), let \(\ell\in N_K^+(x)\) be a nonzero active inward
+conormal, and suppose \(\ell(F(x))=0\).  If \(\Delta(x)\) contains \(E\) and
+\(-E\) with \(\ell(E)\neq0\), then strict robust invariance fails at \(x\).
+One admitted velocity is outside even the weak tangent cone.
+\end{proposition}
+
+\begin{proof}
+The two admitted conormal velocities are
+\[
+ \ell(F+E)=\ell(E),\qquad
+ \ell(F-E)=-\ell(E).
+\]
+They are opposite and nonzero.  One is negative, so its velocity violates
+the corresponding weak tangent inequality in Theorem~\ref{thm:tangent}.
+\end{proof}
+
+The proposition is a falsifier for supplied data, not a global no-go theorem.
+If the source-provenanced variation class contains the balanced pair, the
+strict law fails.  Removing the pair only after seeing this failure would
+trigger the countermodel-exclusion branch; removal requires independent
+source provenance.
+
+\section{Exact rational controls}
+
+The positive fixture is the proposal-only orthant
+\[
+ K=\R_{\geq0}^3,
+ \qquad
+ F_\theta(x)=b_\theta-\operatorname{diag}(1,2,3)x,
+\]
+with
+\[
+ b_0=(3,4,5),\quad b_1=(4,5,6),\quad
+ \Delta=[-1,1]\times[-2,2]\times[-3,3].
+\]
+On every active face the worst nominal residuals for \(F_0\) are exactly
+\((2,2,2)\); for \(F_1\) they are \((3,3,3)\).  Every corner is covered
+because the active inequalities are componentwise.
+
+Regraduating the barriers by \((2,3,5)\) gives residuals
+\((4,6,10)\).  The positive monomial arrow
+\[
+ g(x_1,x_2,x_3)=(2x_2,3x_1,5x_3)
+\]
+transports the same family to exact residuals \((4,6,10)\) and preserves
+strictness.  The worst-case scalar
+equilibria for the first generator are \((2,1,2/3)\), all positive.
+
+For the balanced control, take \(x=(0,1,1)\),
+\(\ell(v)=v_1\), a tangent nominal velocity, and the admitted pair
+\(\pm(1,0,0)\).  The exact signs are \(+1\) and \(-1\).  A zero-margin
+fixture produces no strict certificate, and omitting the provenance of
+\(\Delta\) returns \status{undefined}, not pass.
+
+The task-local exact arithmetic model reports twelve of twelve checks passed.
+These fixtures validate equations and fail branches only.  They do not count
+as source evidence, ontology adoption, physical evidence, or benchmark
+recovery.
+
+\section{Selection, meaning, and authority boundaries}
+
+The map \(\RobInv\) classifies a supplied tuple.  It does not select the
+tuple.  In particular:
+\begin{itemize}
+  \item a pass value does not determine \(K\), \(\mathcal A\), \(\Delta\),
+  an orientation, or a presentation arrow;
+  \item predeclaration and hashing establish non-adaptivity within this task,
+  not an epistemic derivation from current source ontology;
+  \item a source-law tangent cone is not a physical characteristic cone;
+  \item forward invariance is not occurrence, probability, detector
+  response, universal matter propagation, or empirical adequacy; and
+  \item certificate naturality is not physical gauge or adoption authority.
+\end{itemize}
+
+The construction factors through none of the five frozen candidates.  It has
+no shared \(\tau\), response-ray quotient, common character, holonomy datum,
+oriented-matroid selector, binary sign token, half-line, or cubic generator.
+The following freezes remain exact:
+\begin{itemize}
+  \item \path{NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR};
+  \item \path{NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS};
+  \item \path{NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION};
+  \item \path{NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS};
+  \item \path{NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS}.
+\end{itemize}
+
+\section{Obligation and failure disposition}
+
+All fourteen packet obligations are discharged at the proposal-only theorem
+scope.  The source provenance obligations for \(K\), \(\mathcal A\), and
+\(\Delta\) pass only as disclosed fixed roots pending audit; no
+current-ontology derivation is claimed.  Regularity and solution hypotheses
+are explicit; every declared stratum is covered; certificate and presentation
+transport are proved; the balanced obstruction is proved; the result is
+exactly one allowed theorem; and all downstream locks are retained.
+
+The eleven fail branches remain executable guards.  Goal-selected \(K\),
+post-outcome filtering of \(\mathcal A\), countermodel-selected narrowing of
+\(\Delta\), or target-norm input would fail the candidate.  Exact tangent
+violation returns fail; balanced zero-margin data trigger
+Proposition~\ref{prop:balanced}; raw-certificate selection is replaced by an
+orbit; incoherent transport fails; frozen-route factorization is absent;
+physical overread is blocked; and missing or ineffective inputs return
+undefined.
+
+\section{Distance-to-GR matrix}
+
+\begin{longtable}{P{0.27\linewidth}P{0.63\linewidth}}
+\toprule
+Burden & Status after RT007 \\
+\midrule
+\endfirsthead
+\toprule
+Burden & Status after RT007 \\
+\midrule
+\endhead
+Source ontology primitives & \(X_{\mathrm{law}},K,\mathcal A,\Delta\), and
+\(\EqSrc\) are proposal-only roots, not adopted primitives.  No delta.\\
+Source equivalence \(\mathsf{EqSrc}\) & Conditional \(C^1\) transport is
+proved for the proposed tuple; current source equivalence and physical gauge
+are not derived.  No delta.\\
+\(\mathsf{RetainH}\) & No retention or history primitive is supplied.  No
+delta.\\
+\(\mathsf{GenH}\) & A proposal-only generator family is an input, not a
+current-ontology derivation.  No delta.\\
+\(\mathsf{ObsLoc}_{lc}\) & No observer-localization or operational readout
+map is supplied.  No delta.\\
+\(\mathsf{Resp}_{lc}\) & Formal invariance is not detector or empirical
+response semantics.  No delta.\\
+\(M_{\mathrm{src}}\) & The chart is not adopted physical source spacetime.
+No delta.\\
+\(g_{\mathrm{eff}}\) & A source-law tangent cone is not conformal geometry,
+physical scale, or an effective metric.  No delta.\\
+Matter coupling & No sector-universal propagation or coupling law is derived.
+No delta.\\
+Einstein equations & No action, stress energy, variation principle, or field
+equation is supplied.  No delta.\\
+Finite-variation robustness & A conditional proposal-only theorem exists,
+but source purity and current-ontology selection are unaudited.  No delta.\\
+Benchmark promotion & No exact-GR comparison, recovery, or promotion occurs.
+No delta.\\
+Gate Chair status & No protected review, adoption, or verdict occurs.  No
+delta.\\
+Route freeze or hard-fail & All five local freezes remain active and no global
+freeze is added.  No delta.\\
+\bottomrule
+\end{longtable}
+
+\section{Parent-child synthesis and next packet}
+
+The Physicist--Mathematician child supplies the regular domains, tangent and
+positive-conormal formulas, strong-invariance proof, certificate orbit,
+\(C^1\) transport theorem, balanced-normal obstruction, exact rational
+controls, and theorem-only scope.  The Physicist--Philosopher child supplies
+the distinction between predeclaration and epistemic derivation, orientation
+nonselection, separation of ontology from mathematical model, and separation
+of physical, empirical, adoption, and workflow status.  That child also
+supplies smuggling falsifiers and the protected-authority boundary.  Both
+select the same decisive
+result and report no blocking conflict.  The parent retains the stricter LICQ
+regular domain as an explicit theorem hypothesis; this narrows the theorem and
+does not import target structure.
+
+The positive result selects exactly one future packet:
+\begin{flushleft}
+\small\ttfamily
+PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-\\
+PROTECTION-SMUGGLING-AUDIT-V1.
+\end{flushleft}
+Its type is \path{source_extension_smuggling_audit}; its role is
+\path{smuggling-auditor@0.2.0}; its status is
+\status{selected\_not\_executed}.  It must audit only whether the disclosed
+roots and their orientation, margins, and arrows are genuinely target-free
+and independently source-provenanced.  It may not treat this theorem or its
+validation as adoption evidence.
+
+\section{Explicit non-conclusions}
+
+This task does not:
+\begin{itemize}
+  \item derive or adopt the candidate roots or law from current ontology;
+  \item execute the selected Smuggling Auditor or any later Refuter packet;
+  \item reopen or repair any frozen candidate;
+  \item derive occurrence, probability, detector response, physical
+  causality, time orientation, sector universality, conformal geometry,
+  physical scale, \(g_{\mathrm{eff}}\), coupling, or field equations;
+  \item reevaluate D7 or P2--T01 adequacy, act on B2, complete P4--T02 for
+  plan dependency, or unlock P4--T03;
+  \item prove a global no-go or future source-extension impossibility; or
+  \item create Gate Chair, benchmark, proof, publication, release, push,
+  external-action, or completed-derivation authority.
+\end{itemize}
+
+\end{document}

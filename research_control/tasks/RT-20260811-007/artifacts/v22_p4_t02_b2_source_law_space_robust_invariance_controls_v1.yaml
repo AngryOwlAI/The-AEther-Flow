@@ -1,0 +1,102 @@
+schema_id: "v22_p4_t02_b2_source_law_space_robust_invariance_controls_v1"
+status: "draft/control"
+authority: "science_draft_conformance_only"
+task_id: "RT-20260811-007"
+job_id: "AJ-RT-20260811-007-001"
+candidate_id: "CAND-V22-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1"
+purpose: "Exercise the conditional robust-invariance algebra and its exact fail branches without supplying ontology, physical, empirical, or adoption authority."
+
+exact_domain:
+  ambient_field: "Q embedded in R"
+  ambient_chart: "X_law=R^3"
+  admissible_set: "K={x in R^3: x_1>=0, x_2>=0, x_3>=0}"
+  active_barriers:
+    - "rho_1(x)=x_1"
+    - "rho_2(x)=x_2"
+    - "rho_3(x)=x_3"
+  law_family: "F_theta(x)=b_theta-Qx for theta in {0,1}"
+  nominal_offsets:
+    theta_0: [3, 4, 5]
+    theta_1: [4, 5, 6]
+  dissipation_diagonal: [1, 2, 3]
+  variation_multifunction: "Delta(x)=[-1,1]x[-2,2]x[-3,3]"
+  source_status: "proposal-only source-extension data predeclared before the protection test"
+
+positive_control:
+  control_id: "CTRL-SLSRIP-POS-01"
+  active_face_nominal_lower_bounds: [3, 4, 5]
+  conormal_variation_bounds: [1, 2, 3]
+  exact_residual_margins: [2, 2, 2]
+  all_faces_strictly_inward: true
+  all_intersections_covered: true
+  conditional_result: "strict robust tangent inclusion and forward invariance"
+
+law_family_control:
+  control_id: "CTRL-SLSRIP-POS-02"
+  second_law_offsets: [4, 5, 6]
+  exact_residual_margins: [3, 3, 3]
+  family_uniform_strictness: true
+
+certificate_regraduation_control:
+  control_id: "CTRL-SLSRIP-TRANSPORT-01"
+  positive_factors: [2, 3, 5]
+  scaled_nominal_bounds: [6, 12, 25]
+  scaled_variation_bounds: [2, 6, 15]
+  scaled_residual_margins: [4, 6, 10]
+  exact_relation: "scaled_margin_i=c_i*margin_i"
+  certificate_orbit_preserved: true
+
+presentation_transport_control:
+  control_id: "CTRL-SLSRIP-TRANSPORT-02"
+  arrow: "g(x_1,x_2,x_3)=(2*x_2,3*x_1,5*x_3)"
+  transported_residual_margins: [4, 6, 10]
+  exact_relation: "T_{gK}(gx)=Dg_x T_K(x) and transported velocity set equals Dg_x(F+Delta)"
+  robust_relation_preserved: true
+
+balanced_normal_countercontrol:
+  control_id: "CTRL-SLSRIP-NEG-01"
+  boundary_point: [0, 1, 1]
+  inward_conormal: "ell(v)=v_1"
+  nominal_normal_velocity: 0
+  admitted_balanced_pair:
+    positive: [1, 0, 0]
+    negative: [-1, 0, 0]
+  exact_normal_signs: [1, -1]
+  result: "strict robust tangent inclusion fails"
+
+zero_margin_countercontrol:
+  control_id: "CTRL-SLSRIP-NEG-02"
+  nominal_offsets: [1, 2, 3]
+  variation_radii: [1, 2, 3]
+  residual_margins: [0, 0, 0]
+  result: "weak tangency may remain but the declared strict relation fails"
+
+outward_countercontrol:
+  control_id: "CTRL-SLSRIP-NEG-03"
+  boundary_point: [0, 1, 1]
+  nominal_normal_velocity: 0
+  admitted_variation: [-1, 0, 0]
+  exact_normal_velocity: -1
+  result: "precise outward witness"
+
+missing_provenance_control:
+  control_id: "CTRL-SLSRIP-UNDEFINED-01"
+  omitted_root: "Delta source-provenance record"
+  result: "undefined, not pass"
+
+exact_model_receipt:
+  model_path: "research_control/tasks/RT-20260811-007/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_model.py"
+  check_count: 12
+  pass_count: 12
+  all_pass: true
+  payload_sha256: "6999f3d64ce4a1f2f1265d19ed84195df1b366f3d2afdefa49ea34e4e4b7cecc"
+
+interpretive_limits:
+  current_ontology_derivation_claimed: false
+  source_law_adopted: false
+  physical_causal_cone_claimed: false
+  empirical_response_claimed: false
+  sector_universality_claimed: false
+  effective_metric_claimed: false
+  validation_counts_as_science: false
+  conformance_fixture_counts_as_source_evidence: false

@@ -1,0 +1,688 @@
+schema_version: "1.0.0"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1"
+artifact_kind: "physicist_mathematician_child_analysis"
+task_id: "RT-20260811-007"
+agent_job_id: "AJ-RT-20260811-007-001"
+work_item_id: "P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-FORMALIZATION"
+candidate_id: "CAND-V22-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1"
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+role_id: "physicist-mathematician-internal-child"
+parent_role_family: "ontology-formalizer@0.2.0"
+created_at: "2026-08-11T16:14:19Z"
+
+ownership:
+  owned_path: "research_control/tasks/RT-20260811-007/artifacts/child_phys_math_p4_t02_b2_source_law_space_robust_invariance_protection.yaml"
+  sole_file_written: true
+  other_files_edited: false
+  parent_or_control_files_edited: false
+  registry_files_edited: false
+  generated_derivatives_edited: false
+  subagents_spawned: false
+
+source_binding:
+  hash_algorithm: "sha256"
+  sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      use: "project epistemic and conduct boundary"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      use: "root authority and ontology-law route boundary"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      use: "research-control local instructions"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      use: "one-bounded-AgentJob continuation protocol"
+    - path: "research_control/tasks/RT-20260811-007/00_TASK.yaml"
+      sha256: "5a2d496a5efc46bcb97d208b7314279de74888c0e669c285624ca2103b9e058c"
+      use: "active task boundary"
+    - path: "research_control/tasks/RT-20260811-007/DDR-20260811-007.md"
+      sha256: "e656d76ed1df29b9a75f69ee73c2a38bee36070bfdcc319a2bb96e461f078848"
+      use: "Director decision record"
+    - path: "research_control/tasks/RT-20260811-007/jobs/AJ-RT-20260811-007-001.yaml"
+      sha256: "85fbe47286c949898771bcd27882c5d925726787ff2bb58e1262c48ec0fc533d"
+      use: "complete active AgentJob contract"
+    - path: "research_control/tasks/RT-20260811-007/roles/ontology-formalizer@0.2.0--RT-20260811-007.yaml"
+      sha256: "0753a6636d8c0dc9eb218018efef3ee514a90732c1ba939c4f68b2e0a3fbe328"
+      use: "task-specific overlay"
+    - path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+      sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+      use: "base theoretical role"
+    - path: "research_control/handoffs/handoff-1020.yaml"
+      sha256: "9ca896f2c0dd8201294ae9b734d72cff28f2442d8e40398da2eec341605216bc"
+      use: "machine-readable predecessor handoff"
+    - path: "research_control/handoffs/handoff-1020.md"
+      sha256: "7883a21de36aeb7c8db31d9aed6a8452f43ace3998b8c5c76f3588e8e7624360"
+      use: "human-readable predecessor handoff"
+    - path: "research_control/tasks/RT-20260811-006/artifacts/v22_p4_t02_b2_post_signed_cubic_viability_refuter_selected_future_packet_v1.yaml"
+      sha256: "c1a9cef7259ec3b72d5a434af3acde1f01a76e5891ffeb07c231c5905726b4b9"
+      use: "selected formalization packet and exact obligations"
+    - path: "research_control/tasks/RT-20260811-006/artifacts/v22_p4_t02_b2_post_signed_cubic_viability_refuter_route_selection_v1.tex"
+      sha256: "34e2f27697cf0de4bad2cc1dcdda3aa66e1bb2a2490d0b451b0fb22dd0b0b31f"
+      registry_object_id: "TEX-V22-P4-T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-ROUTE-SELECTION-V1"
+      use: "registered canonical predecessor analysis"
+    - path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+      sha256: "562405dd78a03efde831806323081285c7850ee18dbeb2a6b6ecf900417c814c"
+      use: "decisive completion requirements"
+    - path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+      sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789"
+      use: "physics progress and burden-matrix schema"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      use: "active milestone and Distance-to-GR burden rows"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      use: "V22 P4-T02 implementation boundary"
+
+governing_boundary:
+  target_derivation_milestone: "P4-T02"
+  milestone_burden: "Derive or decisively obstruct a source-side law that protects an independently sourced full-state admissible region against an independently sourced class of admissible law variations, without importing target physical structure."
+  current_ontology_derives_candidate_law: false
+  canonical_adoption_status: "blocked_adoption_open_continuation"
+  current_packet_is_research_only: true
+  target_atlas_free: true
+  no_target_metric_or_norm: true
+  no_signed_token_component_or_cubic_primitive: true
+  no_goal_derived_admissibility_filter: true
+  exact_gr_recovery_obligation_preserved: true
+
+result_contract:
+  permitted_result_types:
+    - "theorem_with_hypotheses_and_proof"
+    - "precise_obstruction"
+  exact_permitted_result_count_returned: 1
+  no_fog: true
+  selected_result_type: "theorem_with_hypotheses_and_proof"
+  alternative_result_returned: false
+
+ontology_formalizer_result:
+  result_type: "theorem_with_hypotheses_and_proof"
+  result_id: "THM-V22-P4T02-B2-SLSRIP-CANDIDATE-V1"
+  verdict: "complete_proposal_only_theorem_candidate_pending_separate_smuggling_audit"
+  scientific_status: "draft/control"
+  candidate_status: "proposal-only"
+  source_extension_status: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  current_ontology_derivation_claimed: false
+  canonical_ontology_candidate_claimed: false
+  adopted_claimed: false
+  rejected_claimed: false
+  human_gated_status_preserved: true
+  exact_statement: "Given the explicitly proposal-only roots and hypotheses H-01 through H-11, the full source-law-space relation V(x)=A_x+Delta(x) subset Int T_K(x) on every boundary state is equivalent to strictly positive finite-barrier residuals and to strict negativity against every nonzero outward polar conormal; it strongly preserves K for every admitted perturbed law, is invariant under declared EqSrc diffeomorphisms, and descends only as a certificate orbit under positive regraduation and permutation. A zero-margin law with balanced nonzero normal variations gives an exact obstruction. None of these conditional conclusions selects or derives X_law, K, A, Delta, EqSrc, physical spacetime, a physical cone, or adoption."
+  decisive_reason: "The packet contains a closed conditional theorem, proof, exact positive controls, an arbitrary-small exact countercontrol, transport laws, and a first failed-premise branch. Its remaining uncertainty is epistemic provenance of the proposal-only roots, which is exactly the bounded downstream Smuggling Auditor question rather than missing mathematics inside this candidate."
+
+source_extension_classification:
+  extension_class: "new_ontology_primitive_candidate"
+  primitive_name: "typed_full_source_law_space_robust_invariance_relation"
+  classification_basis: "The tracked current ontology does not derive X_law, K, A, Delta, or their strict robust-invariance relation; they are written here only as explicit conditional roots."
+  fixed_before_outcome_tests_claim: "declared_in_the_formal_record_but_not_yet_epistemically_audited"
+  material_distinctness: "The candidate is a full-state law-space relation. It contains no signed token, selected component, cubic response law, quotient character, oriented matroid, holonomy character, or reconstructed frozen route."
+  status_vocabulary:
+    - "draft/control"
+    - "proposal-only"
+    - "source-extension data"
+    - "canonical-ontology candidate"
+    - "adopted"
+    - "rejected"
+    - "human-gated"
+  current_status: "proposal-only"
+  proposal_only_roots_are_adopted: false
+  proposal_only_roots_are_current_ontology_derivations: false
+  separate_smuggling_audit_required: true
+
+formal_objects_domains_and_maps:
+  scalar_field: "R"
+  physical_metric_used: false
+  physical_norm_used: false
+  objects:
+    - symbol: "X_law"
+      type: "finite-dimensional C2 source-law-state manifold"
+      domain_role: "proposal-only state domain; not identified with spacetime or M_src"
+      provenance: "proposal-only root pending independent source audit"
+    - symbol: "K"
+      type: "closed full-dimensional subset of X_law with finite regular C2 barrier presentation"
+      definition: "K={x in X_law: rho_i(x)>=0 for i=1,...,m}"
+      provenance: "proposal-only root fixed in the formal record before diagnostics; source independence unproved"
+    - symbol: "rho"
+      type: "finite family (rho_1,...,rho_m) of real C2 certificate functions"
+      role: "optional presentation of K, never the adopted primitive"
+      canonical: false
+    - symbol: "A"
+      type: "compactly parameterized family A={F_theta:theta in Theta} of locally Lipschitz source vector fields F_theta:X_law->T X_law"
+      fiber_evaluation: "A_x={F_theta(x):theta in Theta} subset T_x X_law"
+      provenance: "proposal-only root pending independent source audit"
+    - symbol: "Theta"
+      type: "compact metrizable source-law parameter space"
+      role: "parameter domain fixed before diagnostics; not a physical component or selected token"
+      provenance: "proposal-only root pending independent source audit"
+    - symbol: "Delta"
+      type: "upper-semicontinuous compact-valued variation multifunction Delta(x) subset T_x X_law"
+      role: "pointwise admitted variation values, with declared locally Lipschitz admissible sections"
+      provenance: "proposal-only root pending independent source audit"
+    - symbol: "E_Delta"
+      type: "declared class of locally Lipschitz sections e of Delta"
+      definition: "e(x) in Delta(x) wherever e is declared"
+      provenance: "proposal-only root; no after-the-fact removal of failing sections"
+    - symbol: "L_pert"
+      type: "admitted perturbed-law family"
+      definition: "L_pert={G=F+e:F in A and e in E_Delta}"
+    - symbol: "G_src"
+      type: "declared source-presentation groupoid of C1,1-local diffeomorphisms"
+      role: "EqSrc arrows; each arrow and inverse have locally Lipschitz differential"
+      provenance: "proposal-only root pending independent source audit"
+    - symbol: "I(x)"
+      type: "active finite index set"
+      definition: "I(x)={i:rho_i(x)=0}"
+    - symbol: "V(x)"
+      type: "nonempty compact-valued outer-semicontinuous pointwise velocity multifunction in T X_law"
+      definition: "V(x)=A_x+Delta(x)={a+d:a in A_x and d in Delta(x)}"
+    - symbol: "T_K(x)"
+      type: "Bouligand contingent tangent cone of K at x"
+      finite_barrier_formula: "T_K(x)={v in T_x X_law:d rho_i(x)[v]>=0 for every i in I(x)}"
+    - symbol: "N_out_K(x)"
+      type: "outward polar conormal cone"
+      definition: "N_out_K(x)={nu in T_x^* X_law:nu(v)<=0 for every v in T_K(x)}=cone{-d rho_i(x):i in I(x)}"
+    - symbol: "R_prot"
+      type: "boolean relation on the typed tuple (X_law,K,A,Delta,G_src)"
+      definition: "R_prot is true iff V(x) subset Int T_K(x) for every x in boundary K"
+  maps:
+    - map_id: "evaluation"
+      signature: "ev_x:A->T_x X_law"
+      rule: "ev_x(F)=F(x)"
+    - map_id: "velocity_sum"
+      signature: "A_x x Delta(x)->T_x X_law"
+      rule: "(a,d) maps to a+d"
+    - map_id: "barrier_differential"
+      signature: "d rho_i(x):T_x X_law->R"
+      rule: "v maps to the source directional derivative of rho_i at x"
+    - map_id: "field_pushforward"
+      signature: "phi_*:A->A_prime"
+      rule: "F_prime_{eta_phi(theta)}(phi(x))=D phi_x F_theta(x), where eta_phi:Theta->Theta_prime is the declared parameter homeomorphism"
+    - map_id: "variation_pushforward"
+      signature: "phi_*Delta(x)->Delta_prime(phi(x))"
+      rule: "Delta_prime(phi(x))=D phi_x[Delta(x)]"
+    - map_id: "conormal_pull_transport"
+      signature: "T_x^* X_law->T_{phi(x)}^* X_law_prime"
+      rule: "nu maps to (D phi_x^{-1})^* nu"
+    - map_id: "parameter_transport"
+      signature: "eta_phi:Theta->Theta_prime"
+      rule: "eta_phi is a homeomorphism, eta_identity is identity, and eta_{psi composed phi}=eta_psi composed eta_phi"
+
+exact_hypotheses:
+  - hypothesis_id: "H-01"
+    text: "X_law is a finite-dimensional C2 manifold. No spacetime, target metric, physical norm, physical cone, or matter structure is part of its type."
+  - hypothesis_id: "H-02"
+    text: "K is closed and full-dimensional and has a finite C2 presentation K={rho_i>=0}. At each boundary x, I(x) is nonempty and every active d rho_i(x) is nonzero."
+  - hypothesis_id: "H-03"
+    text: "The Mangasarian-Fromovitz inward condition holds on every boundary stratum: for each x in boundary K there is w_x in T_x X_law with d rho_i(x)[w_x]>0 for every i in I(x)."
+  - hypothesis_id: "H-04"
+    text: "Theta is compact metrizable; (theta,x) maps jointly continuously to F_theta(x); and on every compact source chart the family {F_theta} is uniformly bounded and equi-Lipschitz in x. Hence each A_x is compact. Admitted forward solutions of each declared perturbed field exist uniquely on a maximal interval."
+  - hypothesis_id: "H-05"
+    text: "Delta is nonempty compact-valued, locally bounded, and outer-semicontinuous in the source tangent bundle; E_Delta is a declared class of locally Lipschitz sections locally equi-Lipschitz on compact charts, fixed without inspecting the desired P4-T02 outcome. Consequently V is nonempty compact-valued, locally bounded, and outer-semicontinuous."
+  - hypothesis_id: "H-06"
+    text: "Every G in L_pert has the form F+e with F in A and e in E_Delta, so G(x) belongs to V(x) at every state in its domain."
+  - hypothesis_id: "H-07"
+    text: "The strict source relation holds with a locally uniform conormal margin: for every x in boundary K there are a source-chart neighborhood U_x and mu_x>0 such that nu(v)<=-mu_x for every y in U_x intersect boundary K, every nu in C_out(y), and every v in V(y). Equivalently, after shrinking U_x if needed, every active finite-barrier residual is bounded below by a positive local margin."
+  - hypothesis_id: "H-08"
+    text: "Each EqSrc arrow is a pair (phi,eta_phi): phi is a C1,1-local diffeomorphism with C1,1-local inverse, eta_phi is a homeomorphism of compact law-parameter spaces satisfying identity and composition coherence, and the pair transports K, A, Delta, and admitted sections by the declared pushforward rules."
+  - hypothesis_id: "H-09"
+    text: "Certificate changes use a permutation pi and positive C1 factors c_i, with rho_prime_i(y)=c_i(y) rho_{pi(i)}(phi^{-1}(y)); no zero or negative factor is admitted."
+  - hypothesis_id: "H-10"
+    text: "X_law, K, A, Delta, E_Delta, G_src, and their presentation data are explicit proposal-only roots. Their claimed source independence is not a theorem hypothesis disguised as a conclusion; it remains a separate audit obligation."
+  - hypothesis_id: "H-11"
+    text: "The construction neither factors through nor reconstructs any of the five frozen candidate routes."
+
+intrinsic_and_certificate_definitions:
+  strict_tangent_relation: "For all x in boundary K and all v in V(x), v lies in Int T_K(x)."
+  finite_barrier_residual: "r_i(x)=min{d rho_i(x)[v]:v in V(x)} for i in I(x)."
+  normalized_conormal_certificate_set: "C_out(x)={-sum_{i in I(x)} lambda_i d rho_i(x):lambda_i>=0 and sum_i lambda_i=1}."
+  polar_margin: "q(x)=min{-nu(v):nu in C_out(x), v in V(x)}."
+  normalization_status: "The coefficient simplex is finite certificate algebra only. It is not a physical norm, a canonical conormal normalization, or an adopted source magnitude."
+  certificate_orbit: "For a fixed finite regular presentation, its orbit consists of all presentations reached by declared EqSrc diffeomorphisms, active-index permutations, and positive C1 regraduations. Redundant presentations may define the same intrinsic tangent cone but are not declared canonical orbit representatives."
+  intrinsic_primitive: "R_prot on the typed full law-space tuple; barriers and conormal inequalities are optional certificates."
+
+theorem_and_proof:
+  theorem_name: "Conditional source-law-space robust-invariance, certificate-equivalence, transport, and balanced-normal obstruction theorem"
+  clauses:
+    - clause_id: "T-01-TANGENT-BARRIER-POLAR-EQUIVALENCE"
+      statement: "Under H-01 through H-06, at each boundary x the contingent cone equals the finite half-space intersection, its topological interior is obtained by making every active inequality strict, and its outward polar is cone{-d rho_i}. Consequently V(x) subset Int T_K(x) iff r_i(x)>0 for every active i, iff nu(v)<0 for every nonzero nu in N_out_K(x) and every v in V(x), iff q(x)>0."
+      proof:
+        - "The regular finite inequality tangent-cone formula follows from H-02 and the MFCQ inward vector in H-03; the same inward vector proves that the half-space intersection has nonempty interior and that its interior is exactly the simultaneous strict inequalities."
+        - "The finite-dimensional polar of an intersection of active closed half-spaces is the conic hull of their outward defining covectors -d rho_i. MFCQ excludes zero from C_out(x), because evaluation on w_x is strictly negative for every normalized nonnegative coefficient vector."
+        - "Compactness of V(x) and C_out(x) makes all displayed minima attained. The strict barrier inequalities are equivalent to positive r_i. Nonnegative conormal combinations then evaluate strictly negatively; conversely the generators -d rho_i recover every active strict barrier inequality. Compactness converts strict negativity on the product C_out(x) x V(x) to q(x)>0."
+    - clause_id: "T-02-STRONG-VIABILITY"
+      statement: "Under H-01 through H-07, K is forward invariant for every G in L_pert on the maximal forward interval of each admitted solution starting in K. The conclusion includes simultaneous active faces and corners."
+      proof:
+        - "For G=F+e, H-06 gives G(x) in V(x). T-01 and H-07 therefore give d rho_i(x)[G(x)]>0 for every active i at every boundary state."
+        - "Outer semicontinuity and local boundedness of V, continuity of d rho_i, compactness of the fibers, and the local margin in H-07 give a neighborhood of each boundary point on which every relevant admitted velocity retains at least a half-margin in each active exit direction. This bound is uniform over theta and admitted variation values, not selected separately for one favorable law."
+        - "Assume an admitted C1 solution starting in K has a first exit. At the first boundary time t_star, at least one constraint rho_i is zero and was nonnegative immediately before t_star. On a short interval ending at t_star, the half-margin gives d/dt rho_i(x(t))>0. Integrating yields rho_i(x(t_star))>rho_i(x(t_star-epsilon))>=0, contradicting rho_i(x(t_star))=0."
+        - "Every simultaneously active index obeys the same inequality, so no face or corner supplies an exit. Thus the solution remains in K throughout its maximal forward interval."
+    - clause_id: "T-03-QUANTITATIVE-FINITE-CERTIFICATE-STABILITY"
+      statement: "If at a boundary state x the individual residual vector r_I(x) is positive, then every admitted velocity has an exact positive source directional margin in every active barrier. Under a positive regraduation, residual i becomes c_i r_{pi(i)} at the transported boundary state."
+      proof:
+        - "The first claim is the definition of the attained minimum r_i and T-01."
+        - "At rho_{pi(i)}=0, differentiating c_i times rho_{pi(i)} eliminates the rho_{pi(i)} d c_i product term and leaves c_i d rho_{pi(i)}. Positivity of c_i preserves and rescales the strict sign."
+      scope: "This is certificate arithmetic, not an adopted primitive, physical scale, physical cone, or preferred normalization."
+    - clause_id: "T-04-EQSRC-AND-DIFFEOMORPHISM-TRANSPORT"
+      statement: "For every declared EqSrc arrow (phi,eta_phi), K_prime=phi(K), F_prime_{eta_phi(theta)}=phi_*F_theta, and Delta_prime(phi(x))=D phi_x Delta(x) satisfy T_{K_prime}(phi(x))=D phi_x T_K(x), Int T_{K_prime}(phi(x))=D phi_x Int T_K(x), and R_prot(K,A,Delta)=R_prot(K_prime,A_prime,Delta_prime). Outward conormals transport by inverse dual, and parameter labels satisfy the EqSrc cocycle."
+      proof:
+        - "A C1 diffeomorphism and its inverse map contingent sequences in both directions, proving equality of contingent cones. Its derivative is a linear homeomorphism, so it maps cone interiors bijectively."
+        - "The velocity pushforward rule gives V_prime(phi(x))=D phi_x V(x). Applying the tangent equality proves both directions of robust-relation invariance."
+        - "For nu in the outward polar, nu_prime=(D phi_x^{-1})^*nu satisfies nu_prime(D phi_x v)=nu(v), proving polar transport and overlap coherence. Composition and inversion of these rules give a certificate groupoid rather than a preferred representative."
+        - "The homeomorphisms eta_phi transport the compact parameter spaces without selecting a parameter; their identity and composition laws make the field-family pushforward coherent on EqSrc overlaps."
+    - clause_id: "T-05-BALANCED-NORMAL-OBSTRUCTION"
+      statement: "Let x lie in boundary K, let nonzero nu lie in N_out_K(x), and let a nominal velocity a satisfy nu(a)=0. If Delta(x) contains both e and -e with nu(e) nonzero, then one of a+e and a-e has positive outward evaluation and is outside T_K(x). Hence strict R_prot fails at x."
+      proof:
+        - "The two outward evaluations are nu(a+e)=nu(e) and nu(a-e)=-nu(e). Since nu(e) is nonzero, exactly one is positive."
+        - "Every tangent velocity has nonpositive evaluation against an outward polar conormal. The positive member is therefore not tangent, so V(x) cannot be contained in Int T_K(x)."
+      failed_premise: "H-07, the strict tangent inclusion, fails; the result does not establish a global no-go for other independently sourced positive-margin or asymmetric source extensions."
+    - clause_id: "T-06-NONSELECTION"
+      statement: "The truth of the conditional theorem and the existence of a certificate orbit do not derive or select X_law, K, A, Delta, E_Delta, G_src, a physical component, a physical cone, a matter sector, a causal interpretation, or canonical adoption."
+      proof:
+        - "These objects occur as typed roots in H-01 through H-10, not as theorem conclusions."
+        - "Different typed tuples can satisfy the same relation, and the negative control below can fail it. Therefore the predicate classifies supplied tuples but does not select one."
+
+certificate_orbit_and_material_distinctness:
+  orbit_generators:
+    - generator: "EqSrc diffeomorphism phi"
+      admissibility_test: "phi and phi_inverse are declared C1,1-local; all tuple data use the stated pushforward rules."
+    - generator: "active-index permutation pi"
+      admissibility_test: "pi is a bijection of the finite certificate indices and changes no intrinsic set."
+    - generator: "positive C1 regraduation factors c_i"
+      admissibility_test: "c_i(y)>0 on the certificate domain; zero and sign-changing factors fail."
+  composition_rule: "Compose diffeomorphisms and permutations and multiply the appropriately pulled-back positive factors."
+  inverse_rule: "Use phi_inverse, pi_inverse, and the reciprocal positive factor pulled back to the inverse chart."
+  identity_rule: "Identity diffeomorphism, identity permutation, and unit factors."
+  canonical_raw_barrier_selected: false
+  canonical_norm_selected: false
+  intrinsic_relation_preserved: true
+  frozen_route_factorization_tests:
+    - test_id: "MD-01"
+      query: "Does any definition use the shared tau selector?"
+      result: false
+    - test_id: "MD-02"
+      query: "Does any definition use repaired quotient descent or a common character?"
+      result: false
+    - test_id: "MD-03"
+      query: "Does any definition use holonomy or an oriented matroid?"
+      result: false
+    - test_id: "MD-04"
+      query: "Does any definition use the signed cubic token, selected component, or cubic law?"
+      result: false
+    - test_id: "MD-05"
+      query: "Is the primitive instead the full typed relation on all supplied source-law states and velocities?"
+      result: true
+  materially_distinct_from_all_five_freezes: true
+
+exact_rational_controls:
+  arithmetic_domain: "Q coefficients embedded exactly in the source chart R3"
+  positive_control:
+    control_id: "CTRL-SLSRIP-ORTHANT-B0-B1"
+    source_state_domain: "X_law=R3"
+    protected_set: "K=R3_nonnegative={x:x1>=0,x2>=0,x3>=0}"
+    barriers:
+      - "rho_1(x)=x1"
+      - "rho_2(x)=x2"
+      - "rho_3(x)=x3"
+    admissible_constant_laws:
+      - law_id: "b0"
+        vector: [3, 4, 5]
+        component_residuals_against_box: [2, 2, 2]
+      - law_id: "b1"
+        vector: [4, 5, 6]
+        component_residuals_against_box: [3, 3, 3]
+    variation_box:
+      formula: "Delta(x)=[-1,1] x [-2,2] x [-3,3]"
+      rational_radii: [1, 2, 3]
+      balanced: true
+    family_residual: [2, 2, 2]
+    every_boundary_stratum_passes: true
+    corner_check: "At x=(0,0,0), every v in V(x) has v1>=2, v2>=2, and v3>=2, hence V(x) subset Int R3_nonnegative."
+    outward_polar_check: "For active I, every nonzero nu=-sum_{i in I} lambda_i e_i^* with lambda_i>=0 evaluates every admitted velocity as at most -2 sum_i lambda_i<0."
+  positive_monomial_transport_control:
+    control_id: "CTRL-SLSRIP-POSITIVE-MONOMIAL-ORBIT"
+    diffeomorphism: "phi(x1,x2,x3)=(2*x2,3*x1,5*x3)"
+    permutation: [2, 1, 3]
+    positive_factors: [2, 3, 5]
+    determinant: -30
+    invertible: true
+    b0_pushed_forward: [8, 9, 25]
+    b1_pushed_forward: [10, 12, 30]
+    variation_radii_pushed_forward: [4, 3, 15]
+    b0_residuals_pushed_forward: [4, 6, 10]
+    b1_residuals_pushed_forward: [6, 9, 15]
+    family_residual_pushed_forward: [4, 6, 10]
+    exact_relation_preserved: true
+  balanced_countercontrol:
+    control_id: "CTRL-SLSRIP-BALANCED-E1-COUNTERCONTROL"
+    boundary_state: [0, 1, 1]
+    active_set: [1]
+    nominal_constant_law: [0, 4, 5]
+    outward_conormal: "nu=-e1^*"
+    rational_sequence: "epsilon_n=1/n for every positive integer n"
+    balanced_variations: "+epsilon_n*e1 and -epsilon_n*e1"
+    violating_velocity: "(0,4,5)-epsilon_n*e1=(-1/n,4,5)"
+    outward_evaluation: "nu((-1/n,4,5))=1/n>0"
+    tangent_failure: "The violating velocity has first component -1/n<0 and is outside T_K at the declared boundary state."
+    arbitrary_small_basis: "epsilon_n converges to zero in the source vector-space topology; no target or physical norm is selected."
+    exact_failed_premise: "H-07"
+    global_no_go_claimed: false
+  invalid_certificate_controls:
+    - control_id: "CTRL-SLSRIP-ZERO-FACTOR"
+      operation: "replace a positive factor by zero"
+      result: "invalid because it erases an active conormal and does not preserve the regular certificate"
+    - control_id: "CTRL-SLSRIP-NEGATIVE-FACTOR"
+      operation: "replace a positive factor by a negative factor"
+      result: "invalid because it reverses the protected half-space orientation"
+    - control_id: "CTRL-SLSRIP-AFTER-THE-FACT-DELTA-FILTER"
+      operation: "remove -epsilon_n*e1 only after observing the countercontrol"
+      result: "epistemically invalid unless an independent source premise derives that asymmetric restriction"
+
+proof_obligation_ledger:
+  exact_required_count: 14
+  actual_count: 14
+  obligations:
+    - obligation_id: "PO-01"
+      burden: "Type X_law without identifying it with physical spacetime or adopted M_src."
+      status: "satisfied_conditionally"
+      evidence: "X_law is typed as a proposal-only finite-dimensional source-law-state manifold and is explicitly not spacetime or M_src."
+    - obligation_id: "PO-02"
+      burden: "Derive or explicitly fail the source provenance of K before evaluating R_prot."
+      status: "explicit_proposal_only_root_pending_smuggling_audit"
+      evidence: "K is fixed in the formal tuple; no current-ontology derivation or source independence is claimed."
+    - obligation_id: "PO-03"
+      burden: "Derive or explicitly fail the source provenance of A before evaluating R_prot."
+      status: "explicit_proposal_only_root_pending_smuggling_audit"
+      evidence: "A is typed and fixed as proposal-only; exclusions after verdict inspection are prohibited."
+    - obligation_id: "PO-04"
+      burden: "Derive or explicitly fail the source provenance of Delta before excluding any perturbation."
+      status: "explicit_proposal_only_root_pending_smuggling_audit"
+      evidence: "Delta and its section class are proposal-only inputs; the balanced countercontrol records what a post-hoc exclusion would hide."
+    - obligation_id: "PO-05"
+      burden: "Declare regularity, existence, uniqueness, and boundary-domain hypotheses."
+      status: "satisfied"
+      evidence: "H-01 through H-06 state manifold, barrier, MFCQ, compactness, local-Lipschitz, section, and maximal-solution hypotheses."
+    - obligation_id: "PO-06"
+      burden: "Prove the tangent-inclusion viability implication on every declared stratum."
+      status: "satisfied"
+      evidence: "T-01 and T-02 prove the result for all active faces and simultaneous corners."
+    - obligation_id: "PO-07"
+      burden: "Prove barrier-certificate independence under positive regraduation and presentation transport."
+      status: "satisfied_conditionally"
+      evidence: "T-03 and T-04 prove positive regraduation and EqSrc transport; raw barriers remain noncanonical."
+    - obligation_id: "PO-08"
+      burden: "Prove the balanced-normal-variation obstruction and identify the exact failed premise."
+      status: "satisfied"
+      evidence: "T-05 and the rational e1 countercontrol prove failure of H-07."
+    - obligation_id: "PO-09"
+      burden: "Show that no target norm or desired physical failure locus defines the admitted variation bound."
+      status: "formally_satisfied_epistemic_audit_pending"
+      evidence: "Only source-chart vector topology and exact rational boxes occur; independence of the proposal roots remains for the Smuggling Auditor."
+    - obligation_id: "PO-10"
+      burden: "Separate source-law robustness from sector universality, response semantics, and physical causality."
+      status: "satisfied"
+      evidence: "T-06 and the authority blocks deny all such interpretations."
+    - obligation_id: "PO-11"
+      burden: "Preserve all five active freezes and demonstrate no factorization through a frozen candidate."
+      status: "satisfied"
+      evidence: "Five exact labels are preserved and MD-01 through MD-05 record material distinctness."
+    - obligation_id: "PO-12"
+      burden: "Return exactly one theorem-with-hypotheses-and-proof or precise-obstruction result."
+      status: "satisfied"
+      evidence: "Exactly one selected result type is returned: theorem_with_hypotheses_and_proof."
+    - obligation_id: "PO-13"
+      burden: "Keep D7 unevaluated, B2 inactive, and P4-T03 locked."
+      status: "satisfied"
+      evidence: "The downstream lock record preserves all three states."
+    - obligation_id: "PO-14"
+      burden: "Preserve every ontology, physical, empirical, Gate, proof, publication, push, and external-action block."
+      status: "satisfied"
+      evidence: "The explicit authority block matrix leaves every protected action false."
+
+failure_branch_ledger:
+  exact_required_count: 11
+  actual_count: 11
+  branches:
+    - failure_id: "FB-01"
+      trigger: "K is chosen by the desired protected component or P4-T02 outcome."
+      required_result: "goal_property_smuggling_obstruction"
+      evaluation: "not_triggered_in_formal_syntax_but_source_independence_pending_audit"
+      response: "K is an explicit proposal-only root; the downstream audit must reject it if outcome-selected."
+    - failure_id: "FB-02"
+      trigger: "A excludes failing laws only after observing the desired verdict."
+      required_result: "circular_admissibility_obstruction"
+      evaluation: "not_triggered_in_formal_syntax_but_source_independence_pending_audit"
+      response: "A is fixed before evaluation by H-05/H-10; any post-hoc exclusion invalidates the candidate."
+    - failure_id: "FB-03"
+      trigger: "Delta is narrowed to remove RT005-style outward or transverse witnesses without independent source provenance."
+      required_result: "countermodel_exclusion_smuggling_obstruction"
+      evaluation: "live_guard"
+      response: "The exact balanced countercontrol is retained, and its after-the-fact removal is an invalid control."
+    - failure_id: "FB-04"
+      trigger: "A target metric or physical norm supplies tangent, conormal, or variation magnitude."
+      required_result: "forbidden_target_import"
+      evaluation: "not_triggered"
+      response: "No metric or physical norm appears; tangent and polar objects are differential and dual-linear."
+    - failure_id: "FB-05"
+      trigger: "The strict tangent inclusion fails at any declared boundary stratum."
+      required_result: "precise_robust_invariance_obstruction"
+      evaluation: "branch_defined_and_countercontrol_triggered"
+      response: "Return the boundary state, active conormal, violating velocity, and failed H-07; do not generalize to a global no-go."
+    - failure_id: "FB-06"
+      trigger: "Balanced admitted normal variations meet a zero-margin boundary law."
+      required_result: "balanced_normal_variation_obstruction"
+      evaluation: "proved_and_exactly_instantiated"
+      response: "T-05 and +/-epsilon_n e1 give the obstruction; the positive controls avoid it by source directional margins."
+    - failure_id: "FB-07"
+      trigger: "Raw barrier functions are selected canonically despite positive regraduation or redundant presentations."
+      required_result: "certificate_presentation_nonuniqueness"
+      evaluation: "guarded"
+      response: "R_prot is intrinsic; certificates live in declared orbits/groupoids and no raw barrier is canonical."
+    - failure_id: "FB-08"
+      trigger: "K, A, Delta, or certificate data fail source-presentation transport or overlap coherence."
+      required_result: "inverse_or_cocycle_defect"
+      evaluation: "conditional_transport_proved"
+      response: "T-04 proves transport for H-08 arrows; an undeclared or irregular arrow triggers this branch."
+    - failure_id: "FB-09"
+      trigger: "The law is defined only on the frozen signed-cubic slice or factors through any other frozen route."
+      required_result: "frozen_route_replay"
+      evaluation: "not_triggered"
+      response: "The primitive is full-state and all five material-distinctness tests pass."
+    - failure_id: "FB-10"
+      trigger: "Robust source invariance is read as sector-universal propagation or a physical causal cone."
+      required_result: "physical_semantics_overread"
+      evaluation: "blocked"
+      response: "The theorem concludes only forward invariance of K for admitted source-law trajectories."
+    - failure_id: "FB-11"
+      trigger: "Required source objects or decision procedures are absent or ineffective."
+      required_result: "precise_missing_primitive_or_decidability_obstruction"
+      evaluation: "conditional_candidate_complete_current_ontology_roots_absent"
+      response: "The proposal-only theorem is effective on the finite rational subclass; current-ontology derivation of its roots remains absent and is not concealed."
+
+freeze_and_downstream_lock_record:
+  freeze_labels:
+    - freeze_id: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      preserved: true
+      reopened: false
+      reconstructed: false
+    - freeze_id: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      preserved: true
+      reopened: false
+      reconstructed: false
+    - freeze_id: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      preserved: true
+      reopened: false
+      reconstructed: false
+    - freeze_id: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      preserved: true
+      reopened: false
+      reconstructed: false
+    - freeze_id: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      preserved: true
+      reopened: false
+      reconstructed: false
+  exact_freeze_count: 5
+  d7_status: "not_reevaluated"
+  d7_reevaluated: false
+  b2_status: "inactive_undisposed"
+  b2_active: false
+  p4_t03_status: "locked"
+  p4_t03_unlocked: false
+  frozen_route_replay: false
+
+distance_to_gr_burden_matrix:
+  exact_row_count: 14
+  literal_no_delta_row_count: 14
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      reason: "All candidate roots remain proposal-only and unadopted."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      reason: "Transport is conditional on declared proposal-only arrows; EqSrc is not derived."
+    - burden: "RetainH"
+      status: "no_delta"
+      reason: "No retention law is derived or promoted."
+    - burden: "GenH"
+      status: "no_delta"
+      reason: "No source generator family is canonically derived."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      reason: "No observer localization or local causal observable is constructed."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      reason: "No response law is derived."
+    - burden: "M_src"
+      status: "no_delta"
+      reason: "X_law is not identified with or promoted to M_src."
+    - burden: "g_eff"
+      status: "no_delta"
+      reason: "No effective metric is constructed."
+    - burden: "matter coupling"
+      status: "no_delta"
+      reason: "No matter coupling or universality theorem is supplied."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      reason: "No Einstein-equation derivation is attempted."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      reason: "Only a conditional proposal-only law and controls are formalized; current ontology still does not derive the required roots."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      reason: "No benchmark is promoted or changed."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      reason: "No Gate Chair verdict or authority transition occurs."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      reason: "All five freezes, D7 non-reevaluation, B2 inactivity, and P4-T03 lock remain unchanged."
+
+new_mathematical_payload_manifest:
+  exact_payload_count: 6
+  payloads:
+    - payload_id: "NMP-RT007-PM-001"
+      kind: "formal_object_and_map_system"
+      location: "formal_objects_domains_and_maps"
+      new_content: "Typed full source-law-state tuple, pointwise velocity-set map, tangent/polar data, and intrinsic robust relation."
+    - payload_id: "NMP-RT007-PM-002"
+      kind: "theorem_with_proof"
+      location: "theorem_and_proof clauses T-01 through T-04"
+      new_content: "Finite-barrier/tangent/polar equivalence, strong viability, quantitative stability, and EqSrc transport."
+    - payload_id: "NMP-RT007-PM-003"
+      kind: "obstruction_lemma"
+      location: "theorem_and_proof clause T-05"
+      new_content: "Coordinate-free balanced-normal zero-margin obstruction with exact failed premise."
+    - payload_id: "NMP-RT007-PM-004"
+      kind: "certificate_groupoid_result"
+      location: "certificate_orbit_and_material_distinctness"
+      new_content: "Positive regraduation/permutation/diffeomorphism orbit rules and noncanonicity boundary."
+    - payload_id: "NMP-RT007-PM-005"
+      kind: "exact_control_family"
+      location: "exact_rational_controls positive and monomial controls"
+      new_content: "Two rational orthant laws, exact box radii and margins, and positive monomial transport arithmetic."
+    - payload_id: "NMP-RT007-PM-006"
+      kind: "exact_countercontrol_family"
+      location: "exact_rational_controls balanced countercontrol"
+      new_content: "Arbitrarily small rational +/-e1 family witnessing strict tangent failure without a target norm."
+
+physics_progress:
+  summary: "A mathematically complete conditional robust-invariance theorem candidate has been constructed as proposal-only source-extension data, with exact controls and countercontrol. The active current-ontology burden is unchanged pending a separate smuggling audit and any later protected adoption decision."
+  progress_kind: "proposal_only_candidate_constructed_pending_audit"
+  distance_to_gr_changed: false
+  current_ontology_derivation_completed: false
+  milestone_completed: false
+  global_no_go_established: false
+  same_milestone_continuation_open: true
+
+downstream_selected_packet:
+  packet_id: "PKT-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1"
+  packet_type: "source_extension_smuggling_audit"
+  role_family: "smuggling-auditor@0.2.0"
+  selection_status: "selected_not_executed"
+  selected_packet_executed: false
+  execution_authorized_by_this_child: false
+  exact_audit_question: "Determine whether X_law, K, A, Delta, E_Delta, G_src, the finite-barrier presentation, and all variation bounds are independently source-provenanced before outcome inspection, or whether any candidate root imports the desired protected region, excludes the exact countercontrol circularly, or introduces target physical structure."
+  positive_audit_does_not_adopt: true
+  obstruction_audit_does_not_establish_global_no_go: true
+
+authority_blocks:
+  canonical_ontology_edit_authorized: false
+  canonical_ontology_adoption_authorized: false
+  candidate_promotion_authorized: false
+  physical_spacetime_identification_authorized: false
+  physical_cone_claim_authorized: false
+  sector_universality_claim_authorized: false
+  g_eff_claim_authorized: false
+  matter_coupling_claim_authorized: false
+  einstein_equation_claim_authorized: false
+  exact_gr_derivation_completion_claim_authorized: false
+  benchmark_promotion_authorized: false
+  b2_activation_or_disposition_authorized: false
+  d7_reevaluation_authorized: false
+  p4_t03_unlock_authorized: false
+  gate_chair_claim_authorized: false
+  proof_declaration_authorized: false
+  publication_authorized: false
+  git_commit_authorized: false
+  git_push_authorized: false
+  external_action_authorized: false
+  external_search_performed: false
+  external_message_sent: false
+
+conflicts_and_uncertainties:
+  conflict_resolution_revision: "rt007_initial_converged_representation"
+  unresolved_cross_role_conflict: false
+  representation_resolution: "The primitive is R_prot on the full typed source-law-space tuple. Multi-barrier and conormal inequalities are optional certificates and fixtures, not adopted primitives, selected tokens, components, norms, physical cones, or goal-derived admissibility rules."
+  mathematical_issue_in_canonical_controls: false
+  remaining_uncertainties:
+    - uncertainty_id: "U-01"
+      text: "The formal record declares roots fixed before diagnostics, but this child cannot prove their epistemic independence from the desired outcome."
+      resolution_route: "the selected unexecuted Smuggling Auditor packet"
+    - uncertainty_id: "U-02"
+      text: "A merely C1 EqSrc arrow transports tangent cones algebraically but need not preserve the local-Lipschitz regularity used for uniqueness; H-08 therefore requires locally Lipschitz differentials for the full dynamical theorem."
+      resolution_route: "retain C1,1-local typing or downgrade transport to the algebraic tangent statement"
+    - uncertainty_id: "U-03"
+      text: "The theorem classifies supplied tuples and does not decide whether the current ontology can derive any nontrivial member of that class."
+      resolution_route: "source audit followed by the governed continuation selected by its verdict"
+  regularity_choice:
+    condition_used: "MFCQ plus nonzero active differentials"
+    licq_required: false
+    justification: "For a finite smooth inequality presentation, MFCQ is sufficient for equality of the Bouligand tangent cone with the linearized half-space cone and, because a common strict inward direction exists, for the strict-active-inequality characterization of its interior. LICQ would provide unique active multiplier coordinates but is stronger than the intrinsic tangent/polar and normalized-certificate-image arguments require."
+
+validation:
+  status: "PASS"
+  strict_yaml_parse: "PASS"
+  unique_key_check: "PASS"
+  source_hash_check: "PASS_17_OF_17"
+  exact_result_cardinality_check: "PASS_1"
+  proof_obligation_cardinality_check: "PASS_14"
+  failure_branch_cardinality_check: "PASS_11"
+  freeze_cardinality_check: "PASS_5"
+  literal_no_delta_cardinality_check: "PASS_14"
+  exact_rational_arithmetic_check: "PASS"
+  successor_identity_check: "PASS_SELECTED_NOT_EXECUTED"
+  lock_and_authority_check: "PASS"
+  whitespace_check: "PASS"
+  artifact_sha256_reporting: "computed_out_of_band_after_final_write_to_avoid_self_referential_digest"
