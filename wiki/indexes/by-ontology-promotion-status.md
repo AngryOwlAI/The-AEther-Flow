@@ -476,6 +476,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-015/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1` `research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_covector_circuit_bridge_v1.tex`
 - `TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.tex`
+- `TEX-V22-P4-T02-B2-POST-BOUNDED-CURRENT-SIGNATURE-CENSUS-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260812-001/artifacts/v22_p4_t02_b2_post_bounded_current_signature_census_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-COMMON-CHARACTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-013/artifacts/v22_p4_t02_b2_post_common_character_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_post_line_lock_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-ORIENTED-MATROID-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_route_selection_v1.tex`

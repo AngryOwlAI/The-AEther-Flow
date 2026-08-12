@@ -1,0 +1,41 @@
+schema_id: "v22_p4_t02_b2_post_bounded_current_signature_census_source_provenance_manifest_v1"
+status: "draft/control"
+authority: "science_draft"
+task_id: "RT-20260812-001"
+job_id: "AJ-RT-20260812-001-001"
+source_head: "4807672338db2ff644873cc43f6f6d771fe2071d"
+source_tree: "1d0c918172ec9528b6add407f732c12273066e53"
+hash_algorithm: "sha256"
+sources:
+  - {source_id: "SOUL", path: "SOUL.md", sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b", source_class: "registered_markdown"}
+  - {source_id: "ROOT-AGENTS", path: "AGENTS.md", sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29", source_class: "registered_markdown"}
+  - {source_id: "RESEARCH-CONTROL-AGENTS", path: "research_control/AGENTS.md", sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae", source_class: "registered_markdown"}
+  - {source_id: "CONTINUE-RESEARCH-SKILL", path: ".codex/skills/continue-research/SKILL.md", sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea", source_class: "role_contract"}
+  - {source_id: "DIRECTOR-ROLE", path: ".agents/roles/research_ops/director-of-research.v0.3.0.md", sha256: "66c116620dbef591f93a6db190395b46bef6cf0443baec1c11255ef552cfdbc6", source_class: "role_contract"}
+  - {source_id: "SELECTOR-ROLE", path: ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md", sha256: "85550a50a4be3fc2b1fbf6e22b22c160b25923944276d0b555e75fb10380ff79", source_class: "role_contract"}
+  - {source_id: "ONTOLOGY-FORMALIZER-ROLE", path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md", sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c", source_class: "role_contract"}
+  - {source_id: "CANDIDATE-CONSTRUCTOR-ROLE", path: ".agents/roles/physics/candidate-constructor.v0.2.0.md", sha256: "f6534fd2950c2a6eefb8f2a4b255cd0794ceeb1462556be60af288bceb9d51d5", source_class: "role_contract"}
+  - {source_id: "REFUTER-ROLE", path: ".agents/roles/physics/refuter.v0.2.0.md", sha256: "01b7897ecf5861d952d7349e3eb743feed6f178112264de73f5226d3c88946fc", source_class: "role_contract"}
+  - {source_id: "V22-PLAN", path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md", sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65", source_class: "registered_markdown"}
+  - {source_id: "GR-BURDEN-MAP", path: "research_control/design/gr_derivation_burden_map.md", sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e", source_class: "tracked_control_state"}
+  - {source_id: "DECISIVENESS-CONTRACT", path: "research_control/design/mathematical_decisiveness_completion_contract.md", sha256: "562405dd78a03efde831806323081285c7850ee18dbeb2a6b6ecf900417c814c", source_class: "tracked_control_state"}
+  - {source_id: "PHYSICS-COMPLETION-SCHEMA", path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md", sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789", source_class: "tracked_control_state"}
+  - {source_id: "HANDOFF-1027", path: "research_control/handoffs/handoff-1027.yaml", sha256: "41bc8ee1fe3454e0a9c5246d24ac1df3d84dabd9115a2cffa10621ec37ea9b03", source_class: "tracked_control_state"}
+  - {source_id: "RT013-PARENT-FUSION", path: "research_control/tasks/RT-20260811-013/artifacts/parent_fusion_notes_p4_t02_b2_bounded_natural_invariant_presentation_admission_census.md", sha256: "0b45291884e450caa8f9aa58a88c148ea0d90db5d6ab1a85ebe68658a2d7f34b", source_class: "registered_markdown"}
+  - {source_id: "RT013-MANUSCRIPT", path: "research_control/tasks/RT-20260811-013/artifacts/v22_p4_t02_b2_bounded_natural_invariant_presentation_admission_census_v1.tex", sha256: "cc085f8c1eba1da27cdab75941f975e0310ac05d785609f2eac9495067b7af7d", source_class: "registered_tex"}
+  - {source_id: "RT013-FUTURE-PACKET", path: "research_control/tasks/RT-20260811-013/artifacts/v22_p4_t02_b2_bounded_natural_invariant_presentation_admission_selected_future_packet_v1.yaml", sha256: "1881b69dc497496f96f749fa7926e6585bc03c85b44f8fc0f0d5ffd37d777670", source_class: "tracked_control_state"}
+  - {source_id: "ONTOLOGY-FOUNDATIONS", path: "ontology/tex/aether_flow_foundations.tex", sha256: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59", source_class: "registered_canonical_tex"}
+  - {source_id: "ONTOLOGY-DYNAMICS", path: "ontology/tex/aether_flow_dynamics.tex", sha256: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7", source_class: "registered_canonical_tex"}
+  - {source_id: "RT001-SELECTOR-MODEL", path: "research_control/tasks/RT-20260812-001/artifacts/v22_p4_t02_b2_post_bounded_current_signature_census_selector_model.py", sha256: "e1ee02e291bb084305e2788ea707955a32b820ce61b2f0fdda2c7c591e0a470d", source_class: "task_local_exact_control"}
+  - {source_id: "RT001-CHILD-PHYS-MATH", path: "research_control/tasks/RT-20260812-001/artifacts/child_phys_math_p4_t02_b2_post_bounded_current_signature_census_selector.yaml", sha256: "3b4c66d738477a334234357ec1681a1ca738db328c276a8110c6b77274948846", source_class: "task_local_draft_control"}
+  - {source_id: "RT001-CHILD-PHYS-PHIL", path: "research_control/tasks/RT-20260812-001/artifacts/child_phys_phil_p4_t02_b2_post_bounded_current_signature_census_selector.yaml", sha256: "8d241d1899266761bd283a80bb8e42a3ddd0ac4b20a79f830fcb235ddc4051da", source_class: "task_local_draft_control"}
+source_count: 22
+authority_note: "Tracked registered sources and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local retrieval layers are navigation or operational evidence only."
+source_extension_boundary:
+  selected_route: "C_FINITE_TYPED_PRESENTATION_ADMISSION_BRIDGE_WITNESS"
+  selected_packet_executed: false
+  source_extension_constructed: false
+  current_ontology_modified: false
+  rooted_asymmetry_source_derived: false
+  target_or_empirical_import_used: false
+  adoption_status: "blocked_adoption_open_continuation"

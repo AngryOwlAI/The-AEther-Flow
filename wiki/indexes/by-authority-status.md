@@ -155,6 +155,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-015/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge_smuggling_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-V1` `research_control/tasks/RT-20260810-014/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POPULATED-INSTANCE-AUDIT-V1` `research_control/tasks/RT-20260809-026/artifacts/parent_fusion_notes_p4_t02_b2_populated_instance_audit.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-POST-BOUNDED-CURRENT-SIGNATURE-CENSUS-SELECTION-V1` `research_control/tasks/RT-20260812-001/artifacts/parent_fusion_notes_p4_t02_b2_post_bounded_current_signature_census_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-COMMON-CHARACTER-SELECTOR-V1` `research_control/tasks/RT-20260810-013/artifacts/parent_fusion_notes_p4_t02_b2_post_common_character_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-LINE-LOCK-SELECTION-V1` `research_control/tasks/RT-20260810-002/artifacts/parent_fusion_notes_p4_t02_b2_post_line_lock_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-ORIENTED-MATROID-REFUTER-SELECTOR-V1` `research_control/tasks/RT-20260811-002/artifacts/parent_fusion_notes_p4_t02_b2_post_oriented_matroid_refuter_selector.md`
@@ -633,6 +634,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-015/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1` `research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_covector_circuit_bridge_v1.tex`
 - `TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.tex`
+- `TEX-V22-P4-T02-B2-POST-BOUNDED-CURRENT-SIGNATURE-CENSUS-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260812-001/artifacts/v22_p4_t02_b2_post_bounded_current_signature_census_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-COMMON-CHARACTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-013/artifacts/v22_p4_t02_b2_post_common_character_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_post_line_lock_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-ORIENTED-MATROID-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_route_selection_v1.tex`
@@ -1430,6 +1432,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-oriented-matroid-bridge-smuggling-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-oriented-matroid-bridge-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POPULATED-INSTANCE-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-populated-instance-audit-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-BOUNDED-CURRENT-SIGNATURE-CENSUS-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-bounded-current-signature-census-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-COMMON-CHARACTER-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-common-character-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-LINE-LOCK-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-line-lock-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-ORIENTED-MATROID-REFUTER-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-oriented-matroid-refuter-selector-v1.md`
@@ -1941,6 +1944,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-oriented-matroid-bridge-smuggling-audit-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1` `wiki/tex/tex-v22-p4-t02-b2-oriented-matroid-covector-circuit-bridge-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-populated-instance-smuggling-audit-v1.md`
+- `WIKI-TEX-V22-P4-T02-B2-POST-BOUNDED-CURRENT-SIGNATURE-CENSUS-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-bounded-current-signature-census-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-COMMON-CHARACTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-common-character-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-line-lock-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-ORIENTED-MATROID-REFUTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-oriented-matroid-refuter-route-selection-v1.md`

@@ -1,0 +1,295 @@
+schema_id: "v22_p4_t02_b2_post_bounded_current_signature_census_selected_future_packet_v1"
+status: "selected_not_executed"
+authority: "science_draft"
+task_id: "RT-20260812-001"
+job_id: "AJ-RT-20260812-001-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+
+packet:
+  packet_id: "PKT-V22-P4T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-CONSTRUCTION-OR-PROVENANCE-OBSTRUCTION-V1"
+  packet_type: "source_extension_candidate"
+  route_id: "C_FINITE_TYPED_PRESENTATION_ADMISSION_BRIDGE_WITNESS"
+  route_label: "ordinary-research-packet"
+  next_role_family: "candidate-constructor@0.2.0"
+  worker_skill: "continue-research"
+  selected_packet_executed: false
+  execution_authorized_in_rt001: false
+  requires_separate_agentjob: true
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Construct or precisely obstruct one finite typed presentation-admission bridge only after independent source provenance and all minimum-interface gates pass."
+  status_label: "proposal-only"
+  adoption_status: "blocked_adoption_open_continuation"
+
+objective: "Over one exact current source reduct, define the minimum finite presentation-admission interface, prove its old-language conservativity, exhaust its automorphisms and naturality squares, and audit every asymmetric datum for independent noncircular source provenance before either constructing one proposal-only finite bridge witness or returning one precise obstruction."
+
+dependency_contract:
+  predecessor_task_id: "RT-20260812-001"
+  predecessor_job_id: "AJ-RT-20260812-001-001"
+  predecessor_checkpoint_required: true
+  predecessor_checkpoint_commit: "pending_rt001_checkpoint"
+  predecessor_selected_route: "C_FINITE_TYPED_PRESENTATION_ADMISSION_BRIDGE_WITNESS"
+  predecessor_typing_obstruction_held_fixed: true
+  predecessor_six_freezes_held_fixed: true
+  selected_packet_executed: false
+
+formal_domains:
+  - domain_id: "DOM-01"
+    symbol: "Sigma_cur"
+    definition: "The exact registered current source language and theory with Sub a smooth four-dimensional source arena and Phi_src unresolved."
+  - domain_id: "DOM-02"
+    symbol: "R_cur"
+    definition: "One exact current-language reduct, bound before extension construction."
+  - domain_id: "DOM-03"
+    symbol: "Sigma_min"
+    definition: "A proposed finite typed interface containing PresObj, PresArrow, Boolean admission, category structure, and transport."
+  - domain_id: "DOM-04"
+    symbol: "Ext_R"
+    definition: "Finite Sigma_min expansions whose old-language reduct is exactly R_cur."
+  - domain_id: "DOM-05"
+    symbol: "G_swap"
+    definition: "The mandatory two-object swap groupoid negative control."
+  - domain_id: "DOM-06"
+    symbol: "G_asym"
+    definition: "A finite branch with one or more disclosed asymmetric data, admitted only after independent provenance passes."
+  - domain_id: "DOM-07"
+    symbol: "Prov_src"
+    definition: "The typed source-provenance relation from every added carrier, arrow, law, and asymmetric datum to authorized source-side inputs fixed before outcome inspection."
+  - domain_id: "DOM-08"
+    symbol: "Cert"
+    definition: "Construction or obstruction certificates with no physical or adoption semantics."
+
+formal_objects:
+  - object_id: "OBJ-01"
+    symbol: "PresObj"
+    type: "finite carrier"
+  - object_id: "OBJ-02"
+    symbol: "PresArrow"
+    type: "finite arrow carrier"
+  - object_id: "OBJ-03"
+    symbol: "src_and_tgt"
+    type: "endpoint maps"
+  - object_id: "OBJ-04"
+    symbol: "id_and_comp"
+    type: "category operations"
+  - object_id: "OBJ-05"
+    symbol: "admit"
+    type: "PresObj to Bool"
+  - object_id: "OBJ-06"
+    symbol: "transport"
+    type: "typed transport along declared arrows"
+  - object_id: "OBJ-07"
+    symbol: "Aut"
+    type: "complete automorphism set"
+  - object_id: "OBJ-08"
+    symbol: "rho_or_asym"
+    type: "conditional asymmetric datum"
+  - object_id: "OBJ-09"
+    symbol: "U"
+    type: "forgetful reduct map"
+  - object_id: "OBJ-10"
+    symbol: "Prov_src"
+    type: "independent provenance certificate or obstruction"
+
+formal_maps:
+  - map_id: "MAP-01"
+    signature: "src,tgt:PresArrow->PresObj"
+  - map_id: "MAP-02"
+    signature: "id:PresObj->PresArrow"
+  - map_id: "MAP-03"
+    signature: "comp:PresArrow times_PresObj PresArrow->PresArrow"
+  - map_id: "MAP-04"
+    signature: "admit:PresObj->Bool"
+  - map_id: "MAP-05"
+    signature: "transport_a:Bool->Bool"
+  - map_id: "MAP-06"
+    signature: "Nat_a:transport_a(admit(src(a)))=admit(tgt(a))"
+  - map_id: "MAP-07"
+    signature: "U:Ext_R->Mod(Sigma_cur)"
+  - map_id: "MAP-08"
+    signature: "Aut:Ext_R->FiniteGroup"
+  - map_id: "MAP-09"
+    signature: "Prov_src:AddedDatum->AuthorizedSourceEvidence"
+  - map_id: "MAP-10"
+    signature: "Outcome:Ext_R->ConstructionCert coproduct ObstructionCert"
+
+theorem_targets:
+  - theorem_id: "THM-01"
+    name: "Minimum-interface well-typedness and category coherence"
+    target: "Every object, arrow, identity, composition, admission, and transport expression is well typed and satisfies the declared finite laws."
+  - theorem_id: "THM-02"
+    name: "Old-language conservativity"
+    target: "Forgetting every extension datum returns exactly R_cur and changes no Sigma_cur sentence."
+  - theorem_id: "THM-03"
+    name: "Complete automorphism and naturality classification"
+    target: "Enumerate every automorphism and every Boolean predicate; prove exactly which predicates satisfy every declared naturality square."
+  - theorem_id: "THM-04"
+    name: "Independent provenance or precise obstruction"
+    target: "For every asymmetric datum, prove a noncircular source-only provenance path fixed before outcome inspection or return source_provenance_obstruction."
+  - theorem_id: "THM-05"
+    name: "Conditional finite construction"
+    target: "Only after THM-01 through THM-04 pass, construct one finite unique-admission witness and verify every category, automorphism, transport, reduct, and import condition."
+  - theorem_id: "THM-06"
+    name: "Semantic nonpromotion"
+    target: "Prove that the finite admission predicate has no physical, empirical, causal, metric, or adoption meaning in this packet."
+
+mandatory_preconstruction_gates:
+  gate_count: 6
+  gates:
+    - gate_id: "GATE-01"
+      requirement: "Complete minimum typed interface and all finite category laws."
+      failure_result: "precise_extension_typing_or_category_obstruction"
+    - gate_id: "GATE-02"
+      requirement: "Theory-scope old-language conservativity over the exact fixed reduct."
+      failure_result: "nonconservative_reduct_obstruction"
+    - gate_id: "GATE-03"
+      requirement: "Exhaustive automorphism, predicate, and nonidentity naturality classification."
+      failure_result: "automorphism_or_naturality_obstruction"
+    - gate_id: "GATE-04"
+      requirement: "Independent noncircular source provenance for every asymmetric datum before the positive branch."
+      failure_result: "source_provenance_obstruction"
+    - gate_id: "GATE-05"
+      requirement: "No target atlas, metric, desired cone, empirical label, benchmark answer, workflow status, or frozen-route import."
+      failure_result: "forbidden_import_obstruction"
+    - gate_id: "GATE-06"
+      requirement: "Proposal-only status, blocked adoption, and explicit separation of syntax, mathematics, provenance, physical meaning, empirical meaning, and workflow authority."
+      failure_result: "semantic_layer_or_authority_obstruction"
+
+proof_obligations:
+  - obligation_id: "PO-01"
+    requirement: "Bind the exact current reduct, RT013 obstruction, source files, registry rows, and predecessor checkpoint by recomputed hashes."
+  - obligation_id: "PO-02"
+    requirement: "Declare finite carriers and fully type src, tgt, identity, composition, admit, and transport."
+  - obligation_id: "PO-03"
+    requirement: "Verify endpoint, identity, associativity, and every declared inverse law."
+  - obligation_id: "PO-04"
+    requirement: "Prove old-language conservativity at the claimed theory scope rather than only displaying a shared reduct."
+  - obligation_id: "PO-05"
+    requirement: "Construct the mandatory unbroken two-object swap control."
+  - obligation_id: "PO-06"
+    requirement: "Enumerate all automorphisms and all Boolean predicates in every finite branch."
+  - obligation_id: "PO-07"
+    requirement: "Check every nonidentity naturality square; exclusions require an independently sourced typing rule."
+  - obligation_id: "PO-08"
+    requirement: "List every asymmetric datum before outcome inspection and prove its provenance without using desired admission or P4 success."
+  - obligation_id: "PO-09"
+    requirement: "If provenance fails, return source_provenance_obstruction and prohibit positive construction."
+  - obligation_id: "PO-10"
+    requirement: "If provenance passes, construct the finite branch and verify all gates again on the completed object."
+  - obligation_id: "PO-11"
+    requirement: "Audit all inputs for target, empirical, benchmark, workflow, or frozen-route import."
+  - obligation_id: "PO-12"
+    requirement: "Separate current ontology, extension syntax, mathematics, source provenance, physical meaning, empirical meaning, adoption, and workflow authority."
+  - obligation_id: "PO-13"
+    requirement: "Return exactly one permitted result with falsifier and no fog."
+  - obligation_id: "PO-14"
+    requirement: "Preserve six freezes, fourteen no-delta rows, D7 non-evaluation, B2 inactivity, and the P4-T03 lock."
+
+failure_branches:
+  - failure_id: "FB-01"
+    trigger: "A required sort, operation, endpoint, or law is missing or ill typed."
+    result: "precise_extension_typing_or_category_obstruction"
+  - failure_id: "FB-02"
+    trigger: "The forgetful map does not return the exact fixed reduct or old-language truth changes."
+    result: "nonconservative_reduct_obstruction"
+  - failure_id: "FB-03"
+    trigger: "Automorphism or predicate enumeration is incomplete."
+    result: "automorphism_coverage_obstruction"
+  - failure_id: "FB-04"
+    trigger: "Unique admission is claimed under the unbroken swap with trivial transport."
+    result: "swap_orbit_naturality_obstruction"
+  - failure_id: "FB-05"
+    trigger: "Any nonidentity naturality square fails or is omitted without a sourced typing rule."
+    result: "nonidentity_transport_obstruction"
+  - failure_id: "FB-06"
+    trigger: "A root, orientation, order, label, admission bit, or other asymmetry lacks independent noncircular source provenance."
+    result: "source_provenance_obstruction"
+  - failure_id: "FB-07"
+    trigger: "The desired bridge result or P4 success is used to define provenance or select asymmetry."
+    result: "goal_smuggling_obstruction"
+  - failure_id: "FB-08"
+    trigger: "Target geometry, empirical labels, benchmark answers, workflow status, or a frozen route enters."
+    result: "forbidden_import_obstruction"
+  - failure_id: "FB-09"
+    trigger: "A finite admission predicate is called physical response, causality, time orientation, cone, or g_eff."
+    result: "physical_semantic_overread_obstruction"
+  - failure_id: "FB-10"
+    trigger: "The packet edits or adopts canonical ontology or requests a protected verdict."
+    result: "human_gated_ontology_change_required"
+  - failure_id: "FB-11"
+    trigger: "The packet returns only obligations without an exact construction or precise obstruction."
+    result: "decisiveness_contract_failure"
+  - failure_id: "FB-12"
+    trigger: "A freeze, Distance-to-GR, D7, B2, or P4-T03 boundary is changed."
+    result: "completion_contract_failure"
+
+permitted_results:
+  - result_type: "finite_typed_bridge_witness_constructed_proposal_only"
+    condition: "All six gates and fourteen proof obligations pass, including independent provenance."
+    next_route: "one separately admitted source-extension smuggling audit"
+  - result_type: "source_provenance_obstruction"
+    condition: "The minimum typed model is coherent but any required asymmetric datum lacks independent noncircular source provenance."
+    next_route: "one theoretical-continuation selector or protected human-gated ontology-change decision, selected separately"
+  - result_type: "precise_typed_bridge_witness_obstruction"
+    condition: "Typing, category, conservativity, automorphism, naturality, or import gates fail with an exact witness."
+    next_route: "one theoretical-continuation selector, selected separately"
+
+material_distinctness_contract:
+  same_grammar_rerun_forbidden: true
+  frozen_candidate_replay_forbidden: true
+  root_as_derived_premise_forbidden: true
+  target_answer_as_source_provenance_forbidden: true
+  exact_new_object: "finite typed construction-or-provenance-obstruction problem"
+  route_b_subsumed_as_mandatory_gates: true
+  positive_branch_requires_independent_provenance: true
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+
+distance_to_gr_status:
+  - {burden: "Source ontology primitives", status: "no_delta"}
+  - {burden: "Source equivalence EqSrc", status: "no_delta"}
+  - {burden: "RetainH", status: "no_delta"}
+  - {burden: "GenH", status: "no_delta"}
+  - {burden: "ObsLoc_lc", status: "no_delta"}
+  - {burden: "Resp_lc", status: "no_delta"}
+  - {burden: "M_src", status: "no_delta"}
+  - {burden: "g_eff", status: "no_delta"}
+  - {burden: "matter coupling", status: "no_delta"}
+  - {burden: "Einstein equations", status: "no_delta"}
+  - {burden: "finite-variation robustness", status: "no_delta"}
+  - {burden: "benchmark promotion", status: "no_delta"}
+  - {burden: "Gate Chair status", status: "no_delta"}
+  - {burden: "current route freeze or hard-fail status", status: "no_delta"}
+
+downstream_locks:
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+  p4_t03_unlocked_or_executed: false
+  effective_metric_constructed: false
+
+authority_limits:
+  selected_packet_executed: false
+  agentjob_created_for_selected_packet: false
+  source_extension_constructed: false
+  source_law_derived_from_current_ontology: false
+  source_law_adopted_or_rejected: false
+  canonical_ontology_modified: false
+  rooted_asymmetry_source_derived: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_claimed: false
