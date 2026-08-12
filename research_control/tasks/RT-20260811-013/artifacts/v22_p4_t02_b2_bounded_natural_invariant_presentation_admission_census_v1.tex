@@ -1,0 +1,273 @@
+\documentclass[11pt]{article}
+% obstruction_id: OB-V22-P4T02-B2-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS-TYPING-001
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=0.84in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{url}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newcommand{\Src}{\mathsf{SrcArena}}
+\newcommand{\Nat}{\mathsf{Nat}}
+\newcommand{\Bool}{\mathsf{Bool}}
+\newcommand{\Pres}{\mathsf{PresCand}_{\mathrm{src}}}
+\newcommand{\Adm}{\mathsf{AdmissionPredicate}_{\mathrm{src}}}
+\newcommand{\EqSrc}{\mathsf{EqSrc}}
+\newcommand{\status}[1]{\textsf{#1}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlist{nosep,leftmargin=*}
+\urlstyle{tt}
+
+\title{Bounded Current-Signature Presentation-Admission Census\\
+\large V22 P4--T02 B2 precise typing obstruction}
+\author{Ontology Formalizer parent synthesis, RT-20260811-013}
+\date{12 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\begin{minipage}{0.94\linewidth}
+\textbf{Decisive result: \status{precise\_census\_typing\_obstruction}.}
+The exact registered current source signature and a pre-outcome depth-two
+meta-grammar were frozen and exhaustively enumerated.  The grammar contains
+one \(\Src\) term, two \(\Nat\) terms, and 357 \(\Bool\) terms: 360 terms in
+all.  It contains no \(\Pres\), \(\Adm\), or \(\EqSrc\)-arrow type and no
+constructor into any such type.  Hence no term can inhabit the requested
+presentation-admission codomain.  All 357 Boolean terms are constant on the
+declared reduct class \(\dim(\mathcal A)=4\).
+
+\smallskip
+The obstruction identifier is
+\begin{flushleft}
+\small\ttfamily
+OB-V22-P4T02-B2-BOUNDED-NATURAL-INVARIANT-\\
+PRESENTATION-ADMISSION-CENSUS-TYPING-001.
+\end{flushleft}
+It is relative to this exact signature, grammar, depth, reduct class,
+congruence, and identity-only arrow coverage.  It is not a global no-go.
+\end{minipage}}
+\end{center}
+
+\section{Authority and source extraction}
+
+The canonical foundations source supplies a smooth four-dimensional source
+manifold \(\mathcal A\) as explicit primitive debt.  It retains
+\(\Phi_{\mathrm{src}}\) only as an unresolved slot: no parameter domain,
+algebraic structure, action signature, invertibility, stochastic law, gauge
+meaning, generator, or physical-time interpretation is fixed.  Therefore
+\(\Phi_{\mathrm{src}}\) is not a typed terminal in this calculation.
+
+The registered dynamics source states target-side exact-GR closure.  Its
+metric, action, coupling, causal, and field-equation data are excluded from
+the source grammar.  The current source signature contains no presentation
+sort, admission predicate, equivalence-arrow sort, source metric, distinguished
+point, orientation, slice map, source fields, or source-to-target map.
+
+\begin{definition}[Frozen meta-grammar]
+The calculation grammar has types \(\Src,\Nat,\Bool\); terminals
+\[
+  \mathcal A:\Src,\qquad 4:\Nat,\qquad
+  \mathsf{true},\mathsf{false}:\Bool;
+\]
+and constructors
+\[
+\begin{aligned}
+ \dim &: \Src\to\Nat, &
+ \mathsf{eq}_{\Nat}&:\Nat\times\Nat\to\Bool,\\
+ \neg&:\Bool\to\Bool, &
+ \wedge,\vee&:\Bool\times\Bool\to\Bool.
+\end{aligned}
+\]
+Term height is at most two.  Deduplication is literal equality of typed
+abstract syntax trees.  The axiom \(\dim(\mathcal A)=4\), natural-number
+equality, and Boolean truth tables govern evaluation only; they are not an
+unstated semantic quotient.  The only declared arrow controls are identities.
+\end{definition}
+
+These logical types and constructors are meta-level calculation machinery.
+They are not promoted into the source ontology.  The grammar hash is
+\begin{flushleft}
+\small\ttfamily
+26dca0ec1771a53d7d11625dde2effb4\\
+09a84fd44ef3052e1d6380c6b032c42a.
+\end{flushleft}
+
+\section{Complete finite census}
+
+Let \(S_d,N_d,B_d\) denote the cumulative numbers of terms of the three types
+through height \(d\).  Structural decomposition by the final constructor gives
+\[
+ S_d=1,\qquad N_d=1+S_{d-1},\qquad
+ B_d=2+N_{d-1}^{,2}+B_{d-1}+2B_{d-1}^{,2}.
+\]
+
+\begin{theorem}[Enumeration completeness]
+For every \(d\geq 1\), the recurrence above counts every well-typed term of
+height at most \(d\), exactly once under literal typed-tree equality.  At
+\(d=2\),
+\[
+ (S_2,N_2,B_2)=(1,2,357),\qquad S_2+N_2+B_2=360.
+\]
+\end{theorem}
+
+\begin{proof}
+At height zero the four terminals give \((S_0,N_0,B_0)=(1,1,2)\).  For the
+inductive step, each nonterminal term has a unique final constructor.  Its
+ordered arguments have smaller height and the declared input types.  The five
+constructor summands count exactly those ordered tuples.  Conversely every
+counted tuple yields a well-typed term.  Literal typed-tree equality prevents
+distinct final-constructor decompositions from being identified.
+\end{proof}
+
+\begin{longtable}{P{0.28\linewidth}rrrP{0.32\linewidth}}
+\toprule
+Bound & \(\Src\) & \(\Nat\) & \(\Bool\) & Total and interpretation \\
+\midrule
+\endfirsthead
+\toprule
+Bound & \(\Src\) & \(\Nat\) & \(\Bool\) & Total and interpretation \\
+\midrule
+\endhead
+Height zero & 1 & 1 & 2 & 4 terminals \\
+Height at most one & 1 & 2 & 13 & 16 cumulative terms \\
+Height at most two & 1 & 2 & 357 & 360 cumulative terms \\
+Requested admission codomain & 0 & 0 & 0 & Type absent, not merely empty by search \\
+\bottomrule
+\end{longtable}
+
+\section{The precise obstruction}
+
+\begin{theorem}[Empty-codomain typing]
+Let a typed signature contain neither a type \(P\) nor a terminal or
+constructor with codomain \(P\).  Its initial closed-term algebra contains no
+term of type \(P\).  In the frozen grammar there is consequently no term of
+type \(\Pres\), \(\Adm\), or \(\EqSrc\)-arrow.
+\end{theorem}
+
+\begin{proof}
+Structural induction on terms.  Every terminal has one of the three declared
+types.  Each constructor has codomain \(\Nat\) or \(\Bool\).  Thus neither the
+base cases nor any induction case can produce \(P\).
+\end{proof}
+
+This is the first and decisive failure.  The census does not create a missing
+codomain in order to report that no inhabitant was found.  In particular,
+closed Boolean values cannot be retyped as presentation descriptors.
+
+\begin{proposition}[Constant Boolean census]
+Every one of the 357 closed Boolean terms has a constant value on the declared
+class of current reducts satisfying \(\dim(\mathcal A)=4\).  Exactly two
+semantic values, true and false, occur.
+\end{proposition}
+
+\begin{proof}
+The only reduct-dependent terminal is \(\mathcal A\), and the only constructor
+that consumes it is \(\dim\).  The reduct axiom fixes its value at four.
+Every later natural-number and Boolean evaluation is therefore a fixed truth
+function of four and the two Boolean constants.
+\end{proof}
+
+This proposition is secondary: even a nonconstant Boolean would not inhabit
+the absent presentation-admission type without an independently typed bridge.
+
+\begin{proposition}[Identity-only naturality]
+Every term commutes with the declared identity controls.  This does not prove
+naturality for any nonidentity source equivalence, because no
+\(\EqSrc\)-arrow type or transport map belongs to the current signature.
+\end{proposition}
+
+\begin{proof}
+Identity transport fixes every value, so the identity square commutes.  A
+nonidentity square cannot be typed without its arrow, source and target, and
+value transport.
+\end{proof}
+
+\section{Exact nonselection controls}
+
+The typing obstruction is not a claim that an extension is impossible.  To
+make that boundary constructive, fix one current reduct
+\(R=(\mathcal A,\dim\mathcal A=4)\).  Two finite conservative extensions are:
+\begin{itemize}
+  \item \(E_1\): one added presentation \(p\), its identity arrow, and
+  \(\mathsf{Admit}(p)=\mathsf{true}\);
+  \item \(E_2\): two added presentations \(p_0,p_1\), a swap arrow, and both
+  presentations admitted.
+\end{itemize}
+Forgetting the new sorts and arrows sends both extensions to the same \(R\),
+while their presentation cardinalities are one and two.  Thus the current
+reduct does not select a completion.  This is a finite nonuniqueness witness,
+not a rejection of either proposal.
+
+Separately, on the declared affine \(\mathbb R^4\) control, no point is fixed by
+all translations: for any \(x\), choose \(v\neq0\), giving \(x+v\neq x\).
+This familiar control is restricted to the affine action; an arbitrary smooth
+four-manifold is not silently assigned translations.
+
+\section{Failure branches and result scope}
+
+Two task-defined branches fire.  \path{FB-02} fires because the requested
+result and arrow types have no stable canonical source type, and the unresolved
+\(\Phi_{\mathrm{src}}\) cannot repair that defect.  \path{FB-06} fires only
+secondarily: every remaining Boolean term is constant on the reduct class.
+The other ten branches do not fire: the domain is finite and predeclared;
+enumeration is complete; congruence is explicit; identity squares commute; no
+frozen route or target answer enters; scope is not globalized; and the result
+is an exact obstruction rather than an obligation list.
+
+The successor packet is
+\begin{flushleft}
+\small\ttfamily
+PKT-V22-P4T02-B2-POST-BOUNDED-NATURAL-INVARIANT-\\
+PRESENTATION-ADMISSION-CENSUS-THEORETICAL-\\
+CONTINUATION-SELECTION-V1,
+\end{flushleft}
+for \path{theoretical-continuation-selector@0.1.0}.  It is selected but not
+executed.  Its purpose is to compare materially distinct next routes without
+merely increasing an arbitrary grammar depth or renaming the missing type as a
+derived invariant.
+
+\section{Distance to GR and non-conclusions}
+
+\begin{longtable}{P{0.31\linewidth}P{0.14\linewidth}P{0.45\linewidth}}
+\toprule
+Burden & Delta & Finding \\
+\midrule
+\endfirsthead
+\toprule
+Burden & Delta & Finding \\
+\midrule
+\endhead
+Source ontology primitives & \status{no\_delta} & An absent type is proved; none is added or adopted. \\
+Source equivalence \(\EqSrc\) & \status{no\_delta} & Identity control is vacuous; no nonidentity arrow is derived. \\
+RetainH & \status{no\_delta} & No retention or history primitive is constructed. \\
+GenH & \status{no\_delta} & No generator is constructed. \\
+ObsLoc\(_{\rm lc}\) & \status{no\_delta} & No observer-localization map is supplied. \\
+Resp\(_{\rm lc}\) & \status{no\_delta} & Syntax is not detector response. \\
+\(M_{\rm src}\) & \status{no\_delta} & No source spacetime or presentation category is adopted. \\
+\(g_{\rm eff}\) & \status{no\_delta} & No cone, conformal class, scale, or metric is constructed. \\
+Matter coupling & \status{no\_delta} & No propagation or coupling law is derived. \\
+Einstein equations & \status{no\_delta} & No action, variation, or field equation is supplied. \\
+Finite-variation robustness & \status{no\_delta} & No candidate law is constructed or stressed. \\
+Benchmark promotion & \status{no\_delta} & No benchmark case is promoted. \\
+Gate Chair status & \status{no\_delta} & No protected verdict is issued. \\
+Route freeze or hard-fail status & \status{no\_delta} & Six inherited freezes remain exact; none is reopened. \\
+\bottomrule
+\end{longtable}
+
+The result does not type \(\Phi_{\mathrm{src}}\), adopt a presentation law,
+construct physical causality or response, recover \(g_{\rm eff}\), establish
+matter coupling or Einstein equations, reevaluate D7, act on B2, unlock
+P4--T03, prove a global no-go, promote a claim, publish, push, or take an
+external action.  It narrows one expressibility boundary and leaves
+conservative source extension open.
+
+\end{document}

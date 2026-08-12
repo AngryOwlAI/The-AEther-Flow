@@ -1,0 +1,51 @@
+{
+  "schema_id": "v22_p4_t02_b2_bounded_natural_invariant_presentation_admission_census_latex_compile_receipt_v1",
+  "task_id": "RT-20260811-013",
+  "job_id": "AJ-RT-20260811-013-001",
+  "status": "PASS",
+  "source_path": "research_control/tasks/RT-20260811-013/artifacts/v22_p4_t02_b2_bounded_natural_invariant_presentation_admission_census_v1.tex",
+  "source_sha256": "cc085f8c1eba1da27cdab75941f975e0310ac05d785609f2eac9495067b7af7d",
+  "compiler": "bundled tectonic 0.16.9",
+  "compile_command": "python3 /Users/alex.omegapy/.codex/plugins/cache/openai-bundled/latex/0.2.4/scripts/compile_latex.py <absolute-source> --output-directory <temporary-directory> --json",
+  "compile_exit_code": 0,
+  "compile_pass_count": 2,
+  "undefined_reference_count": 0,
+  "pdf_exists": true,
+  "pdf_required_by_registry": false,
+  "pdf_tracked": false,
+  "temporary_pdf_path": "/private/tmp/rt013-tex.xK4FRx/v22_p4_t02_b2_bounded_natural_invariant_presentation_admission_census_v1.pdf",
+  "temporary_pdf_sha256": "2bdb93573727537c69e247b454ce9529c1b8fb982a75717b7a7a05fa48dfb1eb",
+  "temporary_pdf_byte_count": 61643,
+  "page_count": 4,
+  "page_size": "letter",
+  "final_pass_overfull_box_count": 0,
+  "final_pass_underfull_box_count": 0,
+  "visual_inspection": {
+    "status": "PASS",
+    "render_command": "pdftoppm -png -r 150 <temporary-pdf> <temporary-page-prefix>",
+    "all_pages_inspected": true,
+    "inspected_page_count": 4,
+    "criteria": {
+      "text_clipped_or_overlapping": false,
+      "tables_clipped": false,
+      "equations_clipped": false,
+      "identifier_wrapping_unreadable": false,
+      "unexpected_blank_pages": false,
+      "page_numbering_present": true,
+      "overall_legibility": "PASS"
+    },
+    "page_notes": [
+      "Page 1: title, decisive obstruction, source extraction, grammar, and split identifiers are legible with no clipping or overlap.",
+      "Page 2: recurrence, exact count table, typing theorem, and constant-Bool theorem are legible and contained.",
+      "Page 3: naturality limitation, conservative extensions, successor contract, and opening Distance-to-GR rows are legible.",
+      "Page 4: remaining Distance-to-GR rows and non-conclusions are legible with intact numbering and no unexpected blank page."
+    ],
+    "rendered_page_sha256es": [
+      "4efca6458da34d851f3d850587e2f571afb2367be9e5551ef27fa9b38cb8a204",
+      "1d79df1f86848a411d5298cb9b78bfe6d11798aec6eb9ef59f80a04a6dd07823",
+      "92666dd2c40e94fa026739af080182a0ed6f30de3ea71c218b1289246a7906c8",
+      "3860fcde2c949ee4c899196d097289fce6d053cbbe9c6bfba8a44dc5eefa1028"
+    ]
+  },
+  "authority_note": "Compilation and visual inspection are conformance evidence only. They do not prove the scientific claims, promote the draft/control manuscript, execute the selected successor, or authorize the PDF derivative as independent authority."
+}

@@ -1,0 +1,279 @@
+schema_id: "v22_p4_t02_b2_bounded_natural_invariant_presentation_admission_census_record_v1"
+status: "complete_proposal_only_calculation"
+authority: "science_draft"
+task_id: "RT-20260811-013"
+job_id: "AJ-RT-20260811-013-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+work_item_id: "P4-T02-B2-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS"
+packet_id: "PKT-V22-P4T02-B2-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS-V1"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Determine whether the current source signature alone expresses a natural presentation-admission discriminator required upstream of a source-to-metric map."
+
+decisive_result:
+  result_type: "precise_census_typing_obstruction"
+  obstruction_id: "OB-V22-P4T02-B2-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS-TYPING-001"
+  obstruction_scope: "exact registered current source signature plus the frozen depth-two meta-grammar reduct class congruence and identity-only arrow coverage"
+  first_missing_type: "PresCand_src"
+  companion_missing_types:
+    - "AdmissionPredicate_src"
+    - "EqSrcArrow"
+  first_failed_premise: "The registered current source signature has no presentation-descriptor or admission-predicate result type and no constructor into such a type."
+  exact_conclusion: "No well-typed term in the frozen 360-term grammar can inhabit the requested presentation-admission codomain; the grammar instead contains 357 closed Bool terms, all constant across the dim(Sub)=4 reduct class."
+  source_extension_implication: "open"
+  global_no_go_claimed: false
+  future_extension_impossibility_claimed: false
+  no_fog_check: "PASS"
+
+source_signature_audit:
+  typed_source_carrier_count: 1
+  typed_source_carriers:
+    - "Sub:SmoothManifold with dim(Sub)=4"
+  unresolved_symbol_count: 1
+  unresolved_symbols:
+    - symbol: "Phi_src"
+      census_status: "excluded"
+      reason: "No canonical domain codomain parameter law or algebraic status is supplied."
+  presentation_descriptor_type_present: false
+  admission_predicate_type_present: false
+  eqsrc_arrow_type_present: false
+  target_side_closure_excluded: true
+
+enumeration_result:
+  grammar_sha256: "26dca0ec1771a53d7d11625dde2effb409a84fd44ef3052e1d6380c6b032c42a"
+  maximum_depth: 2
+  congruence: "literal typed abstract-syntax-tree equality"
+  src_arena_term_count: 1
+  nat_term_count: 2
+  bool_term_count: 357
+  total_term_count: 360
+  pres_candidate_term_count: 0
+  admission_predicate_term_count: 0
+  nonidentity_eqsrc_arrow_count: 0
+  exact_model_check_count: 12
+  exact_model_pass_count: 12
+  exhaustive_enumeration_status: "PASS"
+  identity_naturality_status: "PASS_TRIVIAL_CONTROL_ONLY"
+  substantive_eqsrc_naturality_status: "NOT_TESTABLE_TYPE_ABSENT"
+
+theorems:
+  - theorem_id: "THM-01"
+    name: "Bounded typed enumeration completeness"
+    statement: "The recurrence S_d=1, N_d=1+S_(d-1), B_d=2+N_(d-1)^2+B_(d-1)+2*B_(d-1)^2 enumerates every well-typed structural term of height at most d. At d=2 the counts are S_2=1, N_2=2, B_2=357."
+    proof: "Induct on term height. Every terminal is counted at height zero. The last constructor of a nonterminal term uniquely determines its output type and an ordered tuple of lower-height typed arguments; the recurrence contains exactly those tuples. Literal typed AST equality makes the decomposition injective."
+  - theorem_id: "THM-02"
+    name: "Empty admission-codomain typing theorem"
+    statement: "If a typed signature has neither a type P nor any constructor with codomain P, then its initial term algebra contains no closed term of type P. Hence this grammar contains no PresCand_src or AdmissionPredicate_src term."
+    proof: "Structural induction. Terminals have only the three declared types. Each constructor has codomain Nat or Bool. No induction case produces P."
+  - theorem_id: "THM-03"
+    name: "Constant closed-Bool census"
+    statement: "Every one of the 357 Bool terms has the same value on every reduct in the declared class."
+    proof: "The only reduct-dependent terminal is Sub, and the only constructor consuming it is dim. The reduct axiom fixes dim(Sub)=4. Every later Nat and Bool evaluation therefore depends only on 4 and the fixed truth tables."
+  - theorem_id: "THM-04"
+    name: "Identity-only naturality limitation"
+    statement: "Every term commutes with declared identity controls, but this supplies no theorem for a nonidentity EqSrc arrow because the current signature has no EqSrcArrow type."
+    proof: "Identity transport preserves every value by definition. A nonidentity naturality square cannot be formed without an arrow object and source and target transport maps."
+  - theorem_id: "THM-05"
+    name: "Conservative-extension nonselection"
+    statement: "The same current reduct admits a one-presentation identity extension and a two-presentation swap extension. Their presentation-cardinality outputs differ, so the current reduct cannot select between them without extra extension data."
+    proof: "Forget the added presentation sorts and arrows in each finite extension. Both forgetful images are the identical carrier Sub with dimension four, while the added sorts have cardinalities one and two."
+  - theorem_id: "THM-06"
+    name: "Affine translation control"
+    statement: "For the separately declared affine R4 control, no point is fixed by every translation."
+    proof: "For any point x choose a nonzero translation v; then x+v is not x. This control is not promoted to a theorem about an arbitrary smooth source manifold."
+
+new_mathematical_payload:
+  - payload_id: "PAYLOAD-01"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    summary: "Exact recurrence and structural-induction proof enumerate 360 typed terms through depth two."
+  - payload_id: "PAYLOAD-02"
+    payload_type: "countermodel_or_obstruction"
+    summary: "The absent PresCand_src and AdmissionPredicate_src codomains force an empty closed-term set independently of Boolean evaluation."
+  - payload_id: "PAYLOAD-03"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    summary: "All 357 closed Bool terms are constant across the declared dim(Sub)=4 reduct class."
+  - payload_id: "PAYLOAD-04"
+    payload_type: "countermodel_or_obstruction"
+    summary: "One-object identity and two-object swap presentation extensions share the same current reduct but differ in presentation cardinality."
+  - payload_id: "PAYLOAD-05"
+    payload_type: "source_side_irrelevance_proof"
+    summary: "Identity-only naturality is vacuous and cannot supply nonidentity EqSrc covariance without an arrow type."
+
+proof_obligations:
+  - obligation_id: "PO-01"
+    disposition: "PASS"
+    evidence: "Every source terminal is bound to the two registered canonical TeX sources and recomputed hashes."
+  - obligation_id: "PO-02"
+    disposition: "PASS"
+    evidence: "The AgentJob and grammar receipt freeze types terminals constructors equations depth reduct class and arrow coverage before evaluation."
+  - obligation_id: "PO-03"
+    disposition: "PASS"
+    evidence: "The structural recurrence and exact enumerator prove soundness and completeness."
+  - obligation_id: "PO-04"
+    disposition: "PASS"
+    evidence: "Deduplication uses literal typed AST equality; evaluation truth tables are not an unstated quotient."
+  - obligation_id: "PO-05"
+    disposition: "PASS"
+    evidence: "Eval uses only dim(Sub)=4 Nat equality and Boolean truth tables."
+  - obligation_id: "PO-06"
+    disposition: "PASS_WITH_EXACT_COVERAGE_LIMIT"
+    evidence: "Identity transport commutes; composition and inverse reduce to identity; no nonidentity EqSrc arrow is claimed."
+  - obligation_id: "PO-07"
+    disposition: "NOT_APPLICABLE_NEGATIVE_BRANCH"
+    evidence: "No positive admission term exists because its result type is absent."
+  - obligation_id: "PO-08"
+    disposition: "PASS"
+    evidence: "The frozen grammar has no CompleteRoot kappa RobInv target or frozen-candidate symbol."
+  - obligation_id: "PO-09"
+    disposition: "PASS"
+    evidence: "No all-reduct uniqueness claim is made; conservative extensions are compared only over their common forgetful image."
+  - obligation_id: "PO-10"
+    disposition: "PASS"
+    evidence: "Translation nonselection is stated only for the separately declared affine R4 action."
+  - obligation_id: "PO-11"
+    disposition: "PASS"
+    evidence: "Exactly one precise_census_typing_obstruction and machine-readable witness are returned."
+  - obligation_id: "PO-12"
+    disposition: "PASS"
+    evidence: "This is a current-signature expressibility census and reconstructs none of the six frozen candidates."
+  - obligation_id: "PO-13"
+    disposition: "PASS"
+    evidence: "Source syntax mathematical result physical meaning empirical meaning adoption and workflow authority are separately recorded."
+  - obligation_id: "PO-14"
+    disposition: "PASS"
+    evidence: "D7 remains unevaluated B2 inactive P4-T03 locked and every Distance-to-GR row is no_delta."
+
+failure_branches:
+  - failure_id: "FB-01"
+    triggered: false
+    finding: "The grammar and depth are finite and predeclared."
+  - failure_id: "FB-02"
+    triggered: true
+    finding: "The requested result and arrow types are absent; Phi_src lacks a stable canonical type."
+  - failure_id: "FB-03"
+    triggered: false
+    finding: "Exact enumeration passes 12 model checks."
+  - failure_id: "FB-04"
+    triggered: false
+    finding: "Literal typed AST congruence is stated and exact."
+  - failure_id: "FB-05"
+    triggered: false
+    finding: "Every declared identity square commutes; no nonidentity square is claimed."
+  - failure_id: "FB-06"
+    triggered: true
+    finding: "All closed Bool terms are constants on the reduct class, secondary to the prior typing obstruction."
+  - failure_id: "FB-07"
+    triggered: false
+    finding: "No root modulus robust-invariance or frozen-route token occurs in the grammar."
+  - failure_id: "FB-08"
+    triggered: false
+    finding: "No target atlas metric cone empirical label or benchmark answer enters."
+  - failure_id: "FB-09"
+    triggered: false
+    finding: "The negative result is explicitly grammar signature depth reduct congruence and arrow-coverage relative."
+  - failure_id: "FB-10"
+    triggered: false
+    finding: "No unjustified all-reduct uniqueness claim is made."
+  - failure_id: "FB-11"
+    triggered: false
+    finding: "No formal term is called causality response geometry or g_eff."
+  - failure_id: "FB-12"
+    triggered: false
+    finding: "The result is an exact typing obstruction with finite witnesses, not an obligation list."
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    task_delta: "no_delta"
+    finding: "The census proves a type is absent; it does not add or adopt one."
+  - burden: "Source equivalence EqSrc"
+    task_delta: "no_delta"
+    finding: "Identity controls are vacuous and no nonidentity arrow type is derived."
+  - burden: "RetainH"
+    task_delta: "no_delta"
+    finding: "No retention or history primitive is constructed."
+  - burden: "GenH"
+    task_delta: "no_delta"
+    finding: "No generator is constructed or adopted."
+  - burden: "ObsLoc_lc"
+    task_delta: "no_delta"
+    finding: "No observer-localization or operational-readout map is supplied."
+  - burden: "Resp_lc"
+    task_delta: "no_delta"
+    finding: "A syntactic admission census is not detector-response semantics."
+  - burden: "M_src"
+    task_delta: "no_delta"
+    finding: "No source spacetime or presentation category is adopted."
+  - burden: "g_eff"
+    task_delta: "no_delta"
+    finding: "No physical cone conformal class scale or metric is constructed."
+  - burden: "matter coupling"
+    task_delta: "no_delta"
+    finding: "No universal propagation or coupling law is derived."
+  - burden: "Einstein equations"
+    task_delta: "no_delta"
+    finding: "No action stress energy variation principle or field equation is supplied."
+  - burden: "finite-variation robustness"
+    task_delta: "no_delta"
+    finding: "No candidate law is constructed or stress-tested."
+  - burden: "benchmark promotion"
+    task_delta: "no_delta"
+    finding: "No benchmark case is run or promoted."
+  - burden: "Gate Chair status"
+    task_delta: "no_delta"
+    finding: "No protected verdict is requested or issued."
+  - burden: "current route freeze or hard-fail status"
+    task_delta: "no_delta"
+    finding: "All six inherited freezes remain active; none is reopened and no new freeze is created."
+
+selected_successor:
+  packet_id: "PKT-V22-P4T02-B2-POST-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS-THEORETICAL-CONTINUATION-SELECTION-V1"
+  packet_type: "theoretical_continuation_selector"
+  next_role_family: "theoretical-continuation-selector@0.1.0"
+  selection_reason: "The current signature cannot type the requested census codomain, while conservative extensions remain possible; a fresh selector must choose a materially distinct consequence or extension investigation."
+  selected_not_executed: true
+
+source_extension_classification:
+  category: "not_a_source_extension"
+  current_signature_calculation: true
+  new_primitive_introduced: false
+  current_ontology_derivation_claimed: false
+  source_extension_remains_open: true
+  adoption_authorized: false
+
+downstream_locks:
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  descriptor_instance_complete: false
+
+authority_limits:
+  calculation_executed: true
+  theorem_scope_bounded: true
+  source_natural_admission_term_constructed: false
+  source_law_formalized: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  meta_grammar_promoted_to_ontology: false
+  phi_src_typed: false
+  physical_component_selected: false
+  physical_cone_constructed: false
+  universal_matter_propagation_derived: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  gate_b_verdict_issued: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  successor_executed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

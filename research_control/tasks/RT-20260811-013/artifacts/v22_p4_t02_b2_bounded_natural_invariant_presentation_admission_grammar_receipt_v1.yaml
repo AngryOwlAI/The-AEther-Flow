@@ -1,0 +1,108 @@
+schema_id: "v22_p4_t02_b2_bounded_natural_invariant_presentation_admission_grammar_receipt_v1"
+status: "frozen_and_exhaustively_enumerated"
+authority: "science_draft"
+task_id: "RT-20260811-013"
+job_id: "AJ-RT-20260811-013-001"
+packet_id: "PKT-V22-P4T02-B2-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS-V1"
+frozen_at: "2026-08-12T00:21:23Z"
+freeze_precedes_outcome_evaluation: true
+grammar_sha256: "26dca0ec1771a53d7d11625dde2effb409a84fd44ef3052e1d6380c6b032c42a"
+
+registered_current_signature:
+  typed_source_items:
+    - symbol: "Sub"
+      type: "smooth_manifold"
+      axiom: "dim(Sub)=4"
+      source_path: "ontology/tex/aether_flow_foundations.tex"
+      source_lines: "110-136"
+      source_sha256: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+  unresolved_items:
+    - symbol: "Phi_src"
+      status: "excluded_from_typed_terminals"
+      reason: "The canonical source assigns no parameter domain, algebraic structure, action signature, invertibility, stochastic law, gauge meaning, generator, or physical-time meaning."
+      source_path: "ontology/tex/aether_flow_foundations.tex"
+      source_lines: "119-139"
+  absent_types:
+    - "PresCand_src"
+    - "AdmissionPredicate_src"
+    - "EqSrcArrow"
+  absent_constructors:
+    - "source_presentation_constructor"
+    - "source_admission_predicate_constructor"
+    - "source_equivalence_arrow_constructor"
+    - "function_abstraction_or_comprehension"
+  target_side_exclusion:
+    source_path: "ontology/tex/aether_flow_dynamics.tex"
+    source_lines: "61-83,127-214"
+    rule: "The adopted effective metric, action, coupling, null structure, and benchmark field equations are target-side closure data and are not grammar terminals."
+
+meta_grammar:
+  ontology_status: "calculation_machinery_only"
+  types:
+    - "SrcArena"
+    - "Nat"
+    - "Bool"
+  terminals:
+    - signature: "Sub:SrcArena"
+    - signature: "four:Nat"
+    - signature: "true:Bool"
+    - signature: "false:Bool"
+  constructors:
+    - signature: "dim:SrcArena->Nat"
+    - signature: "eqNat:Nat*Nat->Bool"
+    - signature: "not:Bool->Bool"
+    - signature: "and:Bool*Bool->Bool"
+    - signature: "or:Bool*Bool->Bool"
+  maximum_depth: 2
+  term_height_definition: "Terminals have height zero; a constructor application has height one plus the maximum height of its arguments."
+  enumeration_congruence: "literal typed abstract-syntax-tree equality"
+  evaluation_equations:
+    - "dim(Sub)=4"
+    - "standard equality on Nat"
+    - "standard Boolean truth tables"
+  reduct_class: "all registered current source reducts satisfying dim(Sub)=4"
+  eqsrc_coverage: "declared identity controls only"
+  nonidentity_eqsrc_arrow_count: 0
+
+exhaustive_counts:
+  depth_zero:
+    src_arena: 1
+    nat: 1
+    bool: 2
+    all: 4
+  height_at_most_one:
+    src_arena: 1
+    nat: 2
+    bool: 13
+    all: 16
+  height_at_most_two:
+    src_arena: 1
+    nat: 2
+    bool: 357
+    all: 360
+  pres_candidate: 0
+  admission_predicate: 0
+  eqsrc_arrow: 0
+  recurrence: "B_0=2, N_0=1, S_0=1; S_d=1, N_d=1+S_(d-1), B_d=2+N_(d-1)^2+B_(d-1)+2*B_(d-1)^2."
+
+evaluation_result:
+  every_bool_term_constant_on_reduct_class: true
+  realized_bool_values:
+    - "false"
+    - "true"
+  source_natural_admission_term_count: 0
+  decisive_reason: "The requested presentation/admission result type and every constructor into it are absent before evaluation; Boolean constants cannot be retyped into that absent codomain."
+  naturality_result: "Identity squares commute trivially, but the registered signature supplies no nonidentity EqSrc arrows on which a substantive naturality theorem could be tested."
+  result_type: "precise_census_typing_obstruction"
+  obstruction_id: "OB-V22-P4T02-B2-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS-TYPING-001"
+
+scope_limits:
+  finite_grammar_only: true
+  current_signature_only: true
+  source_extension_remains_possible: true
+  meta_grammar_is_source_ontology: false
+  phi_src_typed: false
+  global_no_go_claimed: false
+  future_extension_impossibility_claimed: false
+  physical_meaning_claimed: false
+  distance_to_gr_changed: false
