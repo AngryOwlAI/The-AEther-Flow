@@ -1,0 +1,51 @@
+{
+  "schema_id": "v22_p4_t02_b2_post_pres_src_provenance_obstruction_selector_latex_compile_receipt_v1",
+  "task_id": "RT-20260811-012",
+  "job_id": "AJ-RT-20260811-012-001",
+  "status": "PASS",
+  "source_path": "research_control/tasks/RT-20260811-012/artifacts/v22_p4_t02_b2_post_pres_src_provenance_obstruction_route_selection_v1.tex",
+  "source_sha256": "af6a9a51fd266bc73663105e6507268e9134bda8788f441e36dfe5dc03e557e4",
+  "compiler": "bundled tectonic 0.16.9",
+  "compile_command": "python3 /Users/alex.omegapy/.codex/plugins/cache/openai-bundled/latex/0.2.4/scripts/compile_latex.py <absolute-source> --output-directory <temporary-directory> --json",
+  "compile_exit_code": 0,
+  "compile_pass_count": 2,
+  "undefined_reference_count": 0,
+  "pdf_exists": true,
+  "pdf_required_by_registry": false,
+  "pdf_tracked": false,
+  "temporary_pdf_path": "/private/tmp/rt012-tex-final.0lMQ0T/v22_p4_t02_b2_post_pres_src_provenance_obstruction_route_selection_v1.pdf",
+  "temporary_pdf_sha256": "0448f7611b270c3e034303b0b5ed2fb674f7b5afcf94be8fe66ec6147b5052f7",
+  "temporary_pdf_byte_count": 56266,
+  "page_count": 4,
+  "page_size": "letter",
+  "final_pass_overfull_box_count": 0,
+  "final_pass_underfull_box_count": 0,
+  "visual_inspection": {
+    "status": "PASS",
+    "render_command": "pdftoppm -png -r 150 <temporary-pdf> <temporary-page-prefix>",
+    "all_pages_inspected": true,
+    "inspected_page_count": 4,
+    "criteria": {
+      "text_clipped_or_overlapping": false,
+      "tables_clipped": false,
+      "equations_clipped": false,
+      "identifier_wrapping_unreadable": false,
+      "unexpected_blank_pages": false,
+      "page_numbering_present": true,
+      "overall_legibility": "PASS"
+    },
+    "page_notes": [
+      "Page 1: title, selected result, and six-freeze list are legible with no clipping or overlap.",
+      "Page 2: four-route comparison and exact theorem statements are legible and correctly contained.",
+      "Page 3: future-packet contract and opening Distance-to-GR rows are legible.",
+      "Page 4: remaining Distance-to-GR rows and non-conclusions are legible with intact numbering."
+    ],
+    "rendered_page_sha256es": [
+      "5b63d3339b0e20b925d19abe03cb8533b3f8aa3e61e74e652f90e14eeceb36e9",
+      "181a391c5c49676a834f3c93f360233f60749beecf36e0eeec0e509b572ac4c6",
+      "4125550689dc1c705dea605085a85bcef11311b12d6b9b9a94e079e81395d108",
+      "4e604e683a274d6ac062aa256329f13b8e0941f170afffaa1feba3aac84c6fcc"
+    ]
+  },
+  "authority_note": "Compilation and visual inspection are conformance evidence only. They do not prove the scientific claims, promote the draft/control manuscript, execute the selected future packet, or authorize a PDF derivative as independent authority."
+}

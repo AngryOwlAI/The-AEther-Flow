@@ -1,0 +1,33 @@
+schema_id: "v22_p4_t02_b2_post_pres_src_provenance_obstruction_source_provenance_manifest_v1"
+status: "draft/control"
+authority: "science_draft"
+task_id: "RT-20260811-012"
+job_id: "AJ-RT-20260811-012-001"
+source_head: "5c673367c6feb7b36297114284783a5b48e6784b"
+source_tree: "1c04f855f815e375855ce1a7b5fb70ba18380d1e"
+hash_algorithm: "sha256"
+sources:
+  - {source_id: "SOUL", path: "SOUL.md", sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b", source_class: "registered_markdown"}
+  - {source_id: "ROOT-AGENTS", path: "AGENTS.md", sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29", source_class: "registered_markdown"}
+  - {source_id: "RESEARCH-CONTROL-AGENTS", path: "research_control/AGENTS.md", sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae", source_class: "registered_markdown"}
+  - {source_id: "CONTINUE-RESEARCH-SKILL", path: ".codex/skills/continue-research/SKILL.md", sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea", source_class: "role_contract"}
+  - {source_id: "DIRECTOR-ROLE", path: ".agents/roles/research_ops/director-of-research.v0.3.0.md", sha256: "66c116620dbef591f93a6db190395b46bef6cf0443baec1c11255ef552cfdbc6", source_class: "role_contract"}
+  - {source_id: "SELECTOR-ROLE", path: ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md", sha256: "85550a50a4be3fc2b1fbf6e22b22c160b25923944276d0b555e75fb10380ff79", source_class: "role_contract"}
+  - {source_id: "ONTOLOGY-FORMALIZER-ROLE", path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md", sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c", source_class: "role_contract"}
+  - {source_id: "CANDIDATE-CONSTRUCTOR-ROLE", path: ".agents/roles/physics/candidate-constructor.v0.2.0.md", sha256: "f6534fd2950c2a6eefb8f2a4b255cd0794ceeb1462556be60af288bceb9d51d5", source_class: "role_contract"}
+  - {source_id: "REFUTER-ROLE", path: ".agents/roles/physics/refuter.v0.2.0.md", sha256: "01b7897ecf5861d952d7349e3eb743feed6f178112264de73f5226d3c88946fc", source_class: "role_contract"}
+  - {source_id: "V22-PLAN", path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md", sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65", source_class: "registered_markdown"}
+  - {source_id: "GR-BURDEN-MAP", path: "research_control/design/gr_derivation_burden_map.md", sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e", source_class: "tracked_control_state"}
+  - {source_id: "HANDOFF-1025", path: "research_control/handoffs/handoff-1025.yaml", sha256: "c8648f08597cd2124d80bc71d4fed0beb94bca1a443855e674d96e7494910736", source_class: "tracked_control_state"}
+  - {source_id: "RT011-PARENT-FUSION", path: "research_control/tasks/RT-20260811-011/artifacts/parent_fusion_notes_p4_t02_b2_source_generated_compact_root_family_coercive_protection_law.md", sha256: "475abf42ce7e77106c3246cbc15e05100b1d5a0f49c8e3c4965580f4141a3404", source_class: "registered_markdown"}
+  - {source_id: "RT011-MANUSCRIPT", path: "research_control/tasks/RT-20260811-011/artifacts/v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_law_v1.tex", sha256: "6f006bdc446f772e7a93c5868edc17a5032068f0ae2ebd9613b6ef53425e61c7", source_class: "registered_tex"}
+  - {source_id: "RT011-OBSTRUCTION-RECORD", path: "research_control/tasks/RT-20260811-011/artifacts/v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_record_v1.yaml", sha256: "7ede6805569498546faf861a3f9d2ff93b4c85d0e751f99bf1a991d930d9be99", source_class: "task_local_draft_control"}
+  - {source_id: "RT011-CHILD-PHYS-MATH", path: "research_control/tasks/RT-20260811-011/artifacts/child_phys_math_p4_t02_b2_source_generated_compact_root_family_coercive_protection_law.yaml", sha256: "31be8072cfef4fd676dcbf1ae9b0d62f93130ba202149bfe74ab1330e84c65ed", source_class: "task_local_draft_control"}
+  - {source_id: "RT011-CHILD-PHYS-PHIL", path: "research_control/tasks/RT-20260811-011/artifacts/child_phys_phil_p4_t02_b2_source_generated_compact_root_family_coercive_protection_law.yaml", sha256: "3f476155ecc29545b88b1d81a7be29aec7dbf944dd3957a4d50cd8a7fd661c11", source_class: "task_local_draft_control"}
+source_count: 17
+authority_note: "Tracked registered sources and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local retrieval layers are noncanonical and are not scientific authority."
+source_extension_boundary:
+  selected_packet_uses_current_registered_signature_only: true
+  source_extension_executed: false
+  new_primitive_adopted: false
+  target_geometry_imported: false

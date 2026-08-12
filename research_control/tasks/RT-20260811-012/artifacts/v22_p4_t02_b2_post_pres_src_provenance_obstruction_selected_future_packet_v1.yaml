@@ -1,0 +1,165 @@
+schema_id: "v22_p4_t02_b2_post_pres_src_provenance_obstruction_selected_future_packet_v1"
+status: "selected_not_executed"
+authority: "science_draft"
+task_id: "RT-20260811-012"
+job_id: "AJ-RT-20260811-012-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+claim_boundary_id: "CB-V22-P4-T02-B2-POST-PRES-SRC-PROVENANCE-OBSTRUCTION-THEORETICAL-SELECTION-001"
+
+packet:
+  packet_id: "PKT-V22-P4T02-B2-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS-V1"
+  packet_type: "bounded_theoretical_calculation"
+  route_label: "ordinary-research-packet"
+  candidate_status: "proposal-only"
+  material_class: "bounded current-source-signature calculation"
+  next_role_family: "ontology-formalizer@0.2.0"
+  supporting_perspective: "refuter@0.2.0"
+  next_plan_task_id: "P4-T02"
+  next_work_item_id: "P4-T02-B2-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS"
+  next_task_type: "v22_p4_t02_b2_bounded_natural_invariant_presentation_admission_census"
+  strategy_id: "compute_v22_p4_t02_b2_bounded_natural_invariant_presentation_admission_census_v1"
+  selected_packet_executed: false
+  execution_authorized_in_rt012: false
+  requires_human_gate_now: false
+  adoption_status: "not_applicable_calculation_only"
+
+objective: "Freeze an exact finite typed grammar over the registered current source signature before outcome inspection; enumerate every well-typed term to the declared depth; test evaluation, EqSrc naturality, and nontrivial presentation-admission behavior; and return either one explicit source-derived admission term with proof or one exact grammar-relative obstruction, never a global no-go."
+
+material_distinctness_contract:
+  operates_on_current_registered_source_signature: true
+  adds_no_new_source_primitive: true
+  grammar_fixed_before_outcome: true
+  negative_result_is_grammar_relative_only: true
+  may_not_define_grammar_from_complete_root: true
+  may_not_define_grammar_from_kappa: true
+  may_not_define_grammar_from_rob_inv: true
+  may_not_filter_terms_by_p4_success: true
+  may_not_use_target_atlas_metric_or_desired_cone: true
+  may_not_reconstruct_any_six_frozen_routes: true
+  required_statement: "The census domain, finite bounds, terminals, constructors, equations, and naturality arrows must be hashed before evaluating any presentation-admission or P4-T02 diagnostic."
+
+formal_domains:
+  - domain_id: "DOM-01"
+    name: "Sigma_src_current"
+    definition: "The exact typed registered current source signature extracted read-only from canonical source files and their registry rows."
+  - domain_id: "DOM-02"
+    name: "Red_src"
+    definition: "The declared class of current source reduct instances on which candidate terms are evaluated."
+  - domain_id: "DOM-03"
+    name: "NatGram_src_le_d"
+    definition: "A finite typed grammar with finite terminals, finite constructors, fixed equations, and fixed maximum depth d, all predeclared before outcome evaluation."
+  - domain_id: "DOM-04"
+    name: "Term_src_le_d"
+    definition: "The finite set of every well-typed grammar term through the declared depth modulo the declared syntactic congruence."
+  - domain_id: "DOM-05"
+    name: "PresCand_src"
+    definition: "Typed presentation descriptors and admission predicates expressible without roots, kappa, frozen classifiers, target geometry, or empirical labels."
+  - domain_id: "DOM-06"
+    name: "EqSrc_test"
+    definition: "The explicitly sourced current EqSrc arrows or declared symmetry controls on which naturality is tested."
+  - domain_id: "DOM-07"
+    name: "CensusResult"
+    definition: "Exactly one construction certificate, grammar-relative obstruction, or precise census-typing obstruction."
+
+formal_objects:
+  - {object_id: "OBJ-01", name: "GrammarReceipt", type: "pre-outcome hash-bound grammar and bound record"}
+  - {object_id: "OBJ-02", name: "TermEnumerator", type: "complete bounded typed term enumerator"}
+  - {object_id: "OBJ-03", name: "Eval_src", type: "typed term evaluator on Red_src"}
+  - {object_id: "OBJ-04", name: "NatCheck", type: "EqSrc naturality and covariance checker"}
+  - {object_id: "OBJ-05", name: "AdmCandidate", type: "nontrivial presentation-admission term candidate"}
+  - {object_id: "OBJ-06", name: "ConstructionCertificate", type: "source-term derivation and naturality proof receipt"}
+  - {object_id: "OBJ-07", name: "RelativeObstruction", type: "complete grammar-relative no-term certificate"}
+  - {object_id: "OBJ-08", name: "SymmetryControl", type: "explicit action witnessing nonselection within the declared domain"}
+
+formal_maps:
+  - {map_id: "MAP-01", signature: "ExtractSig:registered_sources->Sigma_src_current", purpose: "bind exact source terminals and types"}
+  - {map_id: "MAP-02", signature: "Enum_d:NatGram_src_le_d->Term_src_le_d", purpose: "enumerate every declared bounded term"}
+  - {map_id: "MAP-03", signature: "Eval_src:Term_src_le_d x Red_src->Value", purpose: "evaluate a term only where typed"}
+  - {map_id: "MAP-04", signature: "Transport_f:Value_R->Value_Rprime", purpose: "transport values along a declared EqSrc arrow"}
+  - {map_id: "MAP-05", signature: "NatCheck(t,f)", purpose: "test the naturality square for term t and arrow f"}
+  - {map_id: "MAP-06", signature: "Admit_t:R->PresCand_src", purpose: "form a presentation-admission candidate from a passing term"}
+  - {map_id: "MAP-07", signature: "Cert:Term_src_le_d->CensusResult", purpose: "return construction or exact relative obstruction evidence"}
+
+theorem_targets:
+  - {theorem_id: "THM-01", name: "Bounded grammar termination and completeness", target: "Prove Enum_d terminates and enumerates every well-typed declared term modulo the declared congruence."}
+  - {theorem_id: "THM-02", name: "Naturality verification", target: "Prove any positive admission term commutes with every declared EqSrc arrow and state the exact arrow coverage."}
+  - {theorem_id: "THM-03", name: "Positive source-term construction", target: "If a nontrivial natural term exists, give its registered-source derivation and show that no new primitive or outcome filter enters."}
+  - {theorem_id: "THM-04", name: "Grammar-relative obstruction", target: "If no term exists, prove nonexistence only within the frozen grammar, depth, reduct class, equations, and arrow coverage."}
+  - {theorem_id: "THM-05", name: "Fibre-factorization precision", target: "Prove factorization iff fibre constancy on im(U) and state the surjectivity requirement for uniqueness on all reducts."}
+
+proof_obligations:
+  - {obligation_id: "PO-01", requirement: "Bind every source terminal to a live registered canonical source path and recomputed hash."}
+  - {obligation_id: "PO-02", requirement: "Freeze finite types, terminals, constructors, constants, equations, depth, reduct class, and EqSrc coverage before outcome evaluation."}
+  - {obligation_id: "PO-03", requirement: "Prove every enumerated term is well-typed and every well-typed declared term is enumerated."}
+  - {obligation_id: "PO-04", requirement: "State and prove the exact syntactic or semantic equivalence used for deduplication."}
+  - {obligation_id: "PO-05", requirement: "Define Eval_src without adding undefined target, empirical, or outcome-selected constants."}
+  - {obligation_id: "PO-06", requirement: "Check identity, composition, inverse where present, and naturality for every declared EqSrc test arrow."}
+  - {obligation_id: "PO-07", requirement: "For a positive term, prove nontriviality and trace its full current-source derivation."}
+  - {obligation_id: "PO-08", requirement: "Prove the grammar and result do not factor through CompleteRoot, kappa, RobInv, or any six frozen candidates."}
+  - {obligation_id: "PO-09", requirement: "State the fibre-factorization theorem only on im(U), adding surjectivity before claiming uniqueness on all Red_src."}
+  - {obligation_id: "PO-10", requirement: "State the translation nonselection control only for the declared affine R4 translation action."}
+  - {obligation_id: "PO-11", requirement: "Return exactly one permitted decisive result and machine-readable witness or certificate."}
+  - {obligation_id: "PO-12", requirement: "Prove material distinctness from the RT011 proposal and all six frozen routes."}
+  - {obligation_id: "PO-13", requirement: "Separate source syntax, current-ontology derivation, mathematical result, physical meaning, empirical meaning, adoption, and workflow authority."}
+  - {obligation_id: "PO-14", requirement: "Preserve D7 non-evaluation, B2 inactivity, P4-T03 lock, fourteen no-delta rows, and every promotion block."}
+
+failure_branches:
+  - {failure_id: "FB-01", trigger: "The grammar or its depth/constant set is not finite and predeclared.", result: "precise_census_domain_obstruction"}
+  - {failure_id: "FB-02", trigger: "A source terminal lacks a registered canonical source or stable type.", result: "precise_source_signature_obstruction"}
+  - {failure_id: "FB-03", trigger: "Enumeration omits or ill-types a declared term.", result: "census_completeness_failure"}
+  - {failure_id: "FB-04", trigger: "The deduplication congruence is unstated or unsound.", result: "term_equivalence_failure"}
+  - {failure_id: "FB-05", trigger: "A candidate term fails a declared naturality square.", result: "candidate_rejected_naturality_failure"}
+  - {failure_id: "FB-06", trigger: "Only constant, empty, universal, or otherwise nonselective terms remain.", result: "grammar_relative_nonselection_obstruction"}
+  - {failure_id: "FB-07", trigger: "The grammar or candidate uses roots, kappa, RobInv, a frozen classifier, or the desired P4 outcome.", result: "obstructed_or_frozen_route_replay"}
+  - {failure_id: "FB-08", trigger: "A target atlas, metric, desired cone, physical norm, empirical label, or benchmark answer enters.", result: "forbidden_target_import"}
+  - {failure_id: "FB-09", trigger: "A negative bounded census is stated as an unrestricted current-ontology or future-extension no-go.", result: "scope_overreach_failure"}
+  - {failure_id: "FB-10", trigger: "Factorization is claimed uniquely on all reducts without surjectivity.", result: "factorization_domain_error"}
+  - {failure_id: "FB-11", trigger: "A formal admission term is called physical causality, response, geometry, or g_eff.", result: "physical_semantic_overread"}
+  - {failure_id: "FB-12", trigger: "The result remains an obligation list without one exact construction or obstruction.", result: "fog_failure"}
+
+result_contract:
+  selected_packet_executed: false
+  execution_authorized_in_rt012: false
+  permitted_result_types:
+    - "source_natural_admission_term_constructed"
+    - "grammar_relative_symmetry_obstruction"
+    - "precise_census_typing_obstruction"
+  exactly_one_result_required: true
+  no_fog_required: true
+  positive_result_next_role: "smuggling-auditor@0.2.0"
+  negative_result_next_role: "theoretical-continuation-selector@0.1.0"
+  next_roles_are_not_executed: true
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+
+authority_limits:
+  packet_selected_only: true
+  selected_packet_executed: false
+  census_executed: false
+  current_ontology_derivation_proved: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  physical_component_selected: false
+  physical_cone_constructed: false
+  universal_matter_propagation_derived: false
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  gate_b_verdict_issued: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
