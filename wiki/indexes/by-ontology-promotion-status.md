@@ -467,6 +467,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-006/artifacts/v22_p4_t02_b2_common_envelope_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CANDIDATE-V1` `research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_v1.tex`
 - `TEX-V22-P4-T02-B2-CONTINUUM-LIFT-DESCRIPTOR-FORMALIZATION-V1` `research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex`
+- `TEX-V22-P4-T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1` `research_control/tasks/RT-20260814-002/artifacts/v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-DESCRIPTOR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260809-022/artifacts/v22_p4_t02_b2_descriptor_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1` `research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex`
 - `TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_fallback_descriptor_selection_v1.tex`

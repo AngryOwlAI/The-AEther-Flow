@@ -1,0 +1,143 @@
+schema_id: "v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_controls_v1"
+status: "draft_control"
+authority: "science_draft"
+task_id: "RT-20260814-002"
+job_id: "AJ-RT-20260814-002-001"
+result_type: "current_source_equivariant_asymmetry_derivation_theorem"
+theorem_id: "THM-V22-P4T02-B2-CURRENT-SOURCE-KSTAR-ARROW-SUBCLASS-001"
+
+signature_extraction:
+  semantic_signature:
+    symbol: "Sub"
+    type: "smooth manifold"
+    dimension: 4
+    primitive_debt: true
+    semantic_type_complete: true
+  unresolved_marker:
+    symbol: "Phi_src"
+    declared_status: "unresolved abstract source-order or evolution debt marker"
+    interpreted_as_nonlogical_semantic_symbol: false
+    sort: "not_assigned"
+    arity: "not_assigned"
+    domain: "not_assigned"
+    codomain: "not_assigned"
+    action_or_relation_law: "not_assigned"
+    precision_guard: "No Phi_src semantics are required or supplied; treating the marker as an action would be a forbidden source extension."
+  maximal_current_typed_groupoid_formable: true
+  current_typed_groupoid: "SmoothMan_4^iso, smooth four-manifolds and all diffeomorphisms"
+  current_typed_groupoid_is_full_semantic_interpretation_of_Phi_src: false
+  current_typed_groupoid_is_adopted_EqSrc: false
+
+candidate_grammar:
+  fixed_before_outcomes: true
+  exact_count: 6
+  positive_candidate_count: 1
+  candidates:
+    - candidate_id: "ASYM-POINT"
+      status: "typed_but_no_natural_terminal_section"
+      exact_falsifier: "On R4, every nonzero translation gives each point an infinite orbit, so no point or nonempty finite point set is invariant under all automorphisms."
+    - candidate_id: "ASYM-ORIENTATION"
+      status: "typed_on_orientable_subcategory_but_no_natural_sheet"
+      exact_falsifier: "The R4 reflection diag(-1,1,1,1) has determinant -1 and exchanges the two orientation sheets."
+    - candidate_id: "ASYM-ORDER"
+      status: "typed_but_no_natural_terminal_section"
+      exact_falsifier: "The affine diffeomorphism x maps to e1-x exchanges 0 and e1, contradicting invariance of any strict total order."
+    - candidate_id: "ASYM-ROOT-LABEL"
+      status: "formation_failure"
+      missing_type: "presentation carrier, root sort, label sort, and transport"
+    - candidate_id: "ASYM-ADMISSION"
+      status: "formation_failure"
+      missing_type: "presentation-candidate carrier, Boolean admission predicate, and transport"
+    - candidate_id: "ASYM-ARROW-SUBCLASS"
+      status: "positive_current_source_theorem"
+      witness: "K_star(M)=Diff_c(M) when Diff_c(M) is proper in Diff(M), and K_star(M)={id_M} otherwise; C_star has these automorphism groups and no cross-object arrows"
+      identity: "The identity has empty compact support."
+      inverse: "supp(f^-1)=f(supp(f)), hence compact."
+      composition: "supp(f composed with g) is contained in supp(g) union g^-1(supp(f)), hence compact."
+      conjugation: "supp(h composed with f composed with h^-1)=h(supp(f)), hence h Diff_c(M) h^-1=Diff_c(N)."
+      branch_naturality: "Conjugation identifies Diff_c and Diff and therefore preserves the predicate Diff_c(M) proper-subgroup Diff(M); it also sends identities to identities."
+      nonidentity: "A compactly supported nonzero smooth vector field on R4 has a nonidentity small-time flow in K_star(R4)=Diff_c(R4)."
+      properness: "K_star(M) is proper for every nonempty model: by definition in the first branch, and in the fallback branch because every nonempty smooth manifold has a nonidentity compactly supported diffeomorphism, so {id_M} is proper."
+      current_reduct_factorization: "The support predicate uses only smooth topology and is constant across every proposal-only expansion of one current reduct."
+      exact_scope: "mathematical semantic-arrow subclass only"
+      not_established:
+        - "source-allowed physical equivalence"
+        - "adopted EqSrc"
+        - "root orientation order label or admission selector"
+        - "P4-T02 physical-cone relevance"
+
+exact_control_families:
+  - control_id: "CTRL-R4-TRANSLATION"
+    scope: "current smooth-manifold groupoid"
+    result: "no invariant point or nonempty finite subset; translation excluded from compact-support subgroupoid"
+  - control_id: "CTRL-R4-ORIENTATION-REVERSAL"
+    scope: "current smooth-manifold groupoid"
+    determinant: -1
+    result: "no natural orientation sheet"
+  - control_id: "CTRL-R4-ORDER-EXCHANGE"
+    scope: "current smooth-manifold groupoid"
+    result: "no diffeomorphism-invariant strict total order"
+  - control_id: "CTRL-COMPACT-SUPPORT-GROUPOID"
+    scope: "all current typed models and diffeomorphisms"
+    result: "wide normal subgroupoid, contains nonidentity arrows globally, and is objectwise proper on every nonempty model"
+  - control_id: "CTRL-SIX-SAME-REDUCT-PAIRS"
+    scope: "proposal-only expansion diagnostics"
+    result: "Arbitrary supplied expansion asymmetries vary in fibres; the canonical compact-support witness is separately fibre-constant."
+    rt002_pair_groupoid_replayed: false
+  - control_id: "CTRL-FIBRE-FACTORIZATION-EXHAUSTIVE"
+    domain_size: 6
+    fibre_count: 3
+    boolean_maps_checked: 64
+    factorable_maps: 8
+
+theorem_results:
+  - theorem_id: "THM-01"
+    status: "formed"
+    result: "The maximal exact typed current signature is the smooth four-manifold primitive; Phi_src remains an uninterpreted debt marker, so SmoothMan_4^iso forms without adding semantics."
+  - theorem_id: "THM-02"
+    status: "proved"
+    result: "For a well-typed G-action A, Nat(1,A) is the fixed-point subobject A^G."
+  - theorem_id: "THM-03"
+    status: "proved"
+    result: "At set level, q factors through U on im(U) iff q is constant on every U-fibre; uniqueness on the whole codomain additionally requires surjectivity."
+  - theorem_id: "THM-04"
+    status: "proved"
+    result: "The full translation subgroup of Diff(R4) fixes no point or nonempty finite subset."
+  - theorem_id: "THM-05"
+    status: "proved"
+    result: "An orientation-reversing R4 automorphism excludes a natural orientation sheet."
+  - theorem_id: "THM-06"
+    status: "complete"
+    result: "All six candidates were audited: three fail natural selection, two fail formation, and compactly supported automorphisms supply one positive arrow-subclass theorem."
+  - theorem_id: "THM-07"
+    status: "exclusive_positive_decision"
+    result: "The K_star compact-support-or-identity witness satisfies the strongest objectwise-proper reading of the literal mathematical candidate while carrying no EqSrc, selector, physical, empirical, adoption, or P4-T02 completion authority."
+
+material_distinctness:
+  full_current_typed_groupoid_audited: true
+  full_diffeomorphism_naturality_proved: true
+  rt002_pair_groupoid_replayed: false
+  conditional_root_fixture_replayed: false
+  new_source_primitive_added: false
+  source_law_proposed: false
+  route_c_preselected: false
+
+authority_limits:
+  semantic_groupoid_adopted_as_EqSrc: false
+  compact_support_subgroupoid_adopted_as_allowed_physical_arrows: false
+  current_source_language_modified: false
+  canonical_ontology_modified: false
+  source_extension_constructed: false
+  source_extension_adopted_or_rejected: false
+  physical_gauge_claimed: false
+  physical_time_orientation_claimed: false
+  empirical_response_claimed: false
+  effective_metric_constructed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

@@ -4,7 +4,7 @@
 
 This generated index mirrors `output/compact_current_frontier_v16.yaml` and `output/compact_current_frontier_v16.json`. It is a snapshot-only reader aid. If it differs from tracked control state, tracked control state governs.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-14T14:33:30Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"compact_current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"0762d5589e5073dfbd27fb824b659c6af7457fdf","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"565e8c306f144ff8487266a647ea393cdb9d4802d4af7b1f74e30c10f110ff06"},{"path":"research_control/current_frontier.md","sha256":"b2601e69f2b260b1f97c23824a35c525fc2113e20f37ba96ac43ec42f4a61c55"},{"path":"research_control/handoffs/handoff-1031.yaml","sha256":"1a0188a8f69e22ec989b4e440732ada0679fcd4763de68f3979ebf8251675860"},{"path":"research_control/program_state.yaml","sha256":"95ed5d60e01e24b862d26657ceb9679d74180e993389d5aa29a3a455c98a748f"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_compact_current_frontier_v16.py","sha256":"3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"}],"source_manifest_sha256":"99f994a74b5e7385f39e912560dfc167bc6849db5911e786534500765cc45a33","source_path_count":"12","task_count":"1286"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-14T16:15:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"compact_current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"8b69d6823206670dfcee79d3a6a8d68cb7c0f2f5","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"b19d14d61c84484091ed5eea70443fe2ae7305f05489ef83210e8c5cb6e77f12"},{"path":"research_control/current_frontier.md","sha256":"34f592b48a86db9d78f72dcaeeb3b6c6144c1848b09d8bdc00e7de9f49a4ddf2"},{"path":"research_control/handoffs/handoff-1032.yaml","sha256":"d0a050e0b58e55f7370a16fa0ad37688bf04584381f5af0a2cdf8c1589e83d11"},{"path":"research_control/program_state.yaml","sha256":"8aa07222ad9f98623556d5cd2d7c60e3bb5e2f0093892fdfd894943fac5471f3"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_compact_current_frontier_v16.py","sha256":"3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"}],"source_manifest_sha256":"b09291572682b04c933f6342a3ca3fc6694583ab2a19c3cabc71642629cf2b4e","source_path_count":"12","task_count":"1287"} -->
 
 ## Generated-Report Provenance
 
@@ -13,11 +13,11 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `compact_current_frontier` |
-| Source commit | `0762d5589e5073dfbd27fb824b659c6af7457fdf` |
-| Source-derived generation time | `2026-08-14T14:33:30Z` |
-| Tracked task count | 1286 |
+| Source commit | `8b69d6823206670dfcee79d3a6a8d68cb7c0f2f5` |
+| Source-derived generation time | `2026-08-14T16:15:00Z` |
+| Tracked task count | 1287 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `99f994a74b5e7385f39e912560dfc167bc6849db5911e786534500765cc45a33` |
+| Source manifest SHA-256 | `b09291572682b04c933f6342a3ca3fc6694583ab2a19c3cabc71642629cf2b4e` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -25,10 +25,10 @@ This generated index mirrors `output/compact_current_frontier_v16.yaml` and `out
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `565e8c306f144ff8487266a647ea393cdb9d4802d4af7b1f74e30c10f110ff06`
-- `research_control/current_frontier.md`: `b2601e69f2b260b1f97c23824a35c525fc2113e20f37ba96ac43ec42f4a61c55`
-- `research_control/handoffs/handoff-1031.yaml`: `1a0188a8f69e22ec989b4e440732ada0679fcd4763de68f3979ebf8251675860`
-- `research_control/program_state.yaml`: `95ed5d60e01e24b862d26657ceb9679d74180e993389d5aa29a3a455c98a748f`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `b19d14d61c84484091ed5eea70443fe2ae7305f05489ef83210e8c5cb6e77f12`
+- `research_control/current_frontier.md`: `34f592b48a86db9d78f72dcaeeb3b6c6144c1848b09d8bdc00e7de9f49a4ddf2`
+- `research_control/handoffs/handoff-1032.yaml`: `d0a050e0b58e55f7370a16fa0ad37688bf04584381f5af0a2cdf8c1589e83d11`
+- `research_control/program_state.yaml`: `8aa07222ad9f98623556d5cd2d7c60e3bb5e2f0093892fdfd894943fac5471f3`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_compact_current_frontier_v16.py`: `3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564`
@@ -39,17 +39,17 @@ or claim-promotion authority.
 
 ## Active State
 
-- Active task: `RT-20260814-001`
-- Latest handoff: `handoff-1031`
-- Current status: `v22_p4_t02_current_source_equivariant_asymmetry_audit_selected_checkpoint_pending`
+- Active task: `RT-20260814-002`
+- Latest handoff: `handoff-1032`
+- Current status: `v22_p4_t02_current_source_k_star_theorem_selector_selected_checkpoint_pending`
 - V15 completed: `false`
 - V16 plan registered: `true`
 
 ## Active-State Bifurcation
 
-- Latest research task: `RT-20260814-001`
-- Latest research handoff: `handoff-1031`
-- Latest research next action: Run the single governed checkpoint for AJ-RT-20260814-001-001. After it commits execute exactly one separately admitted ontology-formalizer@0.2.0 bounded theoretical calculation PKT-V22-P4T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1. Return exactly one current-source derivation theorem scoped naturality-factorization obstruction or precise model-groupoid typing obstruction. Do not replay RT002 stipulate source asymmetry propose or adopt ontology reevaluate D7 act on B2 unlock P4-T03 promote publish push or take external action.
+- Latest research task: `RT-20260814-002`
+- Latest research handoff: `handoff-1032`
+- Latest research next action: Run the single governed checkpoint for AJ-RT-20260814-002-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-THEOREM-THEORETICAL-CONTINUATION-SELECTION-V1. Decide whether K_star has a materially distinct bridge-facing P4-T02 role or is source-side classification only. Do not replay the six-candidate audit, adopt K_star, preselect Route C, assign Phi_src semantics, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
 - Latest project-system task: `none`
 - Latest project-system status: `none`
 - Latest project-system sidecar task: `none`
@@ -59,10 +59,10 @@ or claim-promotion authority.
 
 ## Next Route
 
-- Route ID: `audit_v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_v1`
-- Role family: `ontology-formalizer@0.2.0`
+- Route ID: `select_v22_p4_t02_b2_post_current_source_asymmetry_theorem_continuation_v1`
+- Role family: `theoretical-continuation-selector@0.1.0`
 - Target milestone: `effective_metric_g_eff`
-- Milestone burden: Decide current-source equivariant asymmetry before proposing a new source law without finite-fixture replay target import or root stipulation.
+- Milestone burden: Decide whether the current-source K_star theorem has bridge-facing relevance or only classification value before any new law is proposed.
 - Requires human gate: `false`
 
 ## High-Risk Rows
@@ -97,8 +97,8 @@ These cards render high-risk rows in the required order: positive status, exact 
 
 ## Snapshot Hashes
 
-- YAML SHA-256: `951ed90a175961f59e550acf9eb78adca8f4a1282600d56529f8009f8ef94393`
-- JSON SHA-256: `8a7270da90366281b183e5d7a06748d9cc31f9dd0c3d2b5608850840950cd298`
+- YAML SHA-256: `875033bcd3d6d63dd52567f9317a5c07c48d8069ec946614453c1b0178e5d25f`
+- JSON SHA-256: `64b60d553cda21054cf511c6734fc98301eb5ce785a37bd49423b1e853c7324a`
 
 ## Authority Warning
 

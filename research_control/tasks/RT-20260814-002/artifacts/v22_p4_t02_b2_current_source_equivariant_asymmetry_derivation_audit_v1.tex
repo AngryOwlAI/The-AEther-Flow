@@ -1,0 +1,322 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.92in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,enumitem,microtype}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.48em}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newcommand{\Sub}{\mathcal{A}}
+\newcommand{\PhiSrc}{\Phi_{\mathrm{src}}}
+\newcommand{\ModCur}{\mathbf{Mod}_{\mathrm{cur}}}
+\newcommand{\IsoCur}{\mathbf{Iso}_{\mathrm{cur}}}
+\newcommand{\DiffFour}{\mathbf{Diff}_{4}}
+\newcommand{\NoDelta}{\texttt{no\_delta}}
+\title{P4--T02 Current-Source Equivariant-Asymmetry\\Derivation Audit}
+\author{RT-20260814-002 parent synthesis}
+\date{14 August 2026}
+
+\begin{document}
+\maketitle
+
+\section{Decisive result}
+
+The exclusive result is
+\texttt{current\_source\_equivariant\_asymmetry\_derivation\_theorem},
+with identifier
+\begin{center}
+\small\ttfamily
+THM-V22-P4T02-B2-CURRENT-SOURCE-KSTAR-ARROW-SUBCLASS-001.
+\end{center}
+
+The maximal exact typed source signature has one semantic primitive:
+\(\Sub\) is a smooth four-dimensional manifold carried as primitive debt.
+The registered \(\PhiSrc\) token remains an unresolved debt marker rather than
+a typed function or relation.  Preserving it that way adds no semantics and
+leaves the model groupoid \(\ModCur=\DiffFour\), smooth four-manifolds and all
+diffeomorphisms.  Interpreting \(\PhiSrc\) as an action would instead be a
+forbidden source extension.
+
+Inside \(\DiffFour\), define
+\[
+  K_{\!*}(M)=
+  \begin{cases}
+    \operatorname{Diff}_{c}(M), &
+      \operatorname{Diff}_{c}(M)\subsetneq\operatorname{Diff}(M),\\
+    \{\operatorname{id}_{M}\}, &
+      \operatorname{Diff}_{c}(M)=\operatorname{Diff}(M).
+  \end{cases}
+\]
+Under the ordinary nonempty-manifold convention, this defines an objectwise
+proper wide normal arrow subclass, natural under every diffeomorphism and
+containing nonidentity arrows globally.  It is determined by the current
+smooth topology and factors through the current reduct.  This satisfies the
+strongest literal mathematical
+\texttt{ASYM-ARROW-SUBCLASS} candidate.  It does not adopt the subclass as
+\(\mathrm{Eq}_{\mathrm{src}}\), declare its arrows physically allowed, or
+supply a point, root, orientation, order, admission law, causal structure, or
+P4--T02 cone selector.
+
+\section{Exact registered signature}
+
+The canonical foundations and dynamics sources give the following exact
+formation table.
+
+\begin{center}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.16\linewidth}
+                >{\raggedright\arraybackslash}p{0.27\linewidth}
+                >{\raggedright\arraybackslash}p{0.43\linewidth}}
+\toprule
+Symbol & Registered status & Semantic consequence \\
+\midrule
+\(\Sub\) & Smooth manifold, \(\dim\Sub=4\), primitive debt & A
+smooth-manifold reduct has a standard model groupoid. \\
+\(\PhiSrc\) & Unresolved abstract source-order or evolution debt marker & No
+semantic interpretation is assigned; the typed signature remains the
+smooth-manifold primitive. \\
+Target benchmark & Exact GR action, metric, coupling, and equations adopted
+separately at effective level & None may be used to complete the source
+signature. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{proposition}[Unresolved-marker boundary]
+Representing \(\PhiSrc\) as an uninterpreted debt marker adds no object or
+arrow condition to \(\DiffFour\).  Any assignment of a domain, codomain,
+arity, action, relation, or preservation equation to it would be a proper
+extension of the registered semantic signature.
+\end{proposition}
+
+\begin{proof}
+The marker supplies no well-formed term to interpret and hence no commutation
+square to impose.  The only semantic object type stated by the registered
+source package is the smooth four-manifold.  Adding any of the listed data
+changes that set of semantic types and equations.
+\end{proof}
+
+This reading is exact but modest: it forms only the maximal currently typed
+groupoid and does not pretend to resolve the debt marker.
+
+\section{Well-typed bare-reduct controls}
+
+Write \(\DiffFour\) for the groupoid whose objects are smooth
+four-manifolds and whose arrows are diffeomorphisms.  Identities, inverses,
+and composition preserve exactly the smooth structure and dimension.  The
+following calculations concern \(\DiffFour\) only.
+
+\begin{lemma}[Equivariant terminal sections]
+If a group \(G\) acts on a set \(P\), then
+\[
+  \operatorname{Hom}_{G}(1,P)\cong P^{G}.
+\]
+Thus a natural choice on an object must be fixed by every automorphism of that
+object.
+\end{lemma}
+
+\begin{proof}
+An equivariant map from the singleton is determined by its value \(p\).  Its
+equivariance equations are exactly \(g p=p\) for every \(g\in G\).
+\end{proof}
+
+\subsection{Point and nonempty finite-set control}
+
+On \(\mathbb{R}^{4}\), let \(T(x)=x+e_{1}\).  Every orbit
+\(\{T^{n}p:n\in\mathbb{Z}\}\) is infinite.  Hence no point is fixed by the
+translation subgroup.  If a nonempty finite set \(F\) were invariant, it
+would contain the infinite orbit of any \(p\in F\), a contradiction.  The
+point/finite-set candidate therefore has no natural terminal section on the
+bare reduct.
+
+\subsection{Orientation control}
+
+The reflection
+\[
+ r(x_{1},x_{2},x_{3},x_{4})=(-x_{1},x_{2},x_{3},x_{4})
+\]
+is a diffeomorphism of \(\mathbb{R}^{4}\) with determinant \(-1\).  It
+exchanges the two sheets of the orientation torsor.  Therefore no sheet is
+fixed by every automorphism.  This already blocks a natural orientation even
+after restricting attention to the orientable control object.  It says
+nothing about physical time orientation.
+
+\subsection{Total-order control}
+
+The affine diffeomorphism \(s(x)=e_{1}-x\) exchanges \(0\) and \(e_{1}\).
+If a strict total order were invariant under every diffeomorphism, either
+\(0<e_{1}\) or \(e_{1}<0\).  Applying \(s\) reverses the selected relation,
+contradicting asymmetry of the strict order.  Thus the bare smooth structure
+selects no diffeomorphism-invariant total order.
+
+These are full automorphism-subgroup controls on one registered-type model,
+not the RT002 two-object pair-groupoid calculation.
+
+\section{Presentation candidates and the positive arrow witness}
+
+Two presentation candidates do not have source-output types in the current
+typed signature.
+\begin{itemize}[leftmargin=2em]
+  \item A root or label needs a presentation carrier, root sort, label sort,
+        and transport law.
+  \item A nonconstant admission predicate needs a presentation-candidate
+        carrier, a Boolean map, and arrow transport.
+\end{itemize}
+
+The arrow-subclass candidate is different because compact support is already a
+topological notion on every smooth manifold.
+
+\begin{theorem}[Objectwise-proper compact-support arrow subgroupoid]
+For every nonempty smooth four-manifold \(M\), define \(K_{\!*}(M)\) by the
+displayed two-branch rule.  Let \(\mathcal{C}_{\!*}\) have all objects of
+\(\DiffFour\), arrows
+\(\mathcal{C}_{\!*}(M,M)=K_{\!*}(M)\), and no arrows between distinct objects.
+Then \(\mathcal{C}_{\!*}\) is a wide normal subgroupoid, the assignment is
+natural under every diffeomorphism, it is proper at every object, and it
+contains nonidentity arrows globally.
+\end{theorem}
+
+\begin{proof}
+The identity has empty compact support.  If \(f\) has compact support, then
+\(\operatorname{supp}(f^{-1})=f(\operatorname{supp}f)\), which is compact.
+Moreover
+\[
+ \operatorname{supp}(f\circ g)
+ \subseteq \operatorname{supp}(g)\cup g^{-1}(\operatorname{supp}f),
+\]
+so composition preserves compact support.  For every diffeomorphism
+\(h:M\to N\),
+\[
+ \operatorname{supp}(hfh^{-1})=h(\operatorname{supp}f),
+ \qquad
+ h\operatorname{Diff}_{c}(M)h^{-1}=\operatorname{Diff}_{c}(N).
+\]
+Thus conjugation preserves both \(\operatorname{Diff}_{c}\) and the equality
+predicate \(\operatorname{Diff}_{c}=\operatorname{Diff}\), so it transports
+\(K_{\!*}(M)\) exactly to \(K_{\!*}(N)\).  Properness holds by definition in
+the first branch.  In the second branch, a coordinate ball supports a nonzero
+compactly supported smooth vector field whose sufficiently small-time flow is
+a nonidentity diffeomorphism; hence \(\operatorname{Diff}(M)\) is nontrivial
+and \(\{\operatorname{id}_{M}\}\) is proper.  On \(\mathbb{R}^{4}\), compactly
+supported bump flows show the family is not identity-only, while the
+translation \(x\mapsto x+e_{1}\) shows
+\(\operatorname{Diff}_{c}(\mathbb{R}^{4})\) is proper.
+\end{proof}
+
+No cross-object arrow is required by the definition of a wide subgroupoid.
+The theorem supplies a mathematical natural arrow subclass, not a normative
+law saying that precisely these arrows are source-equivalent or physically
+allowed.  That semantic and bridge-facing question remains open.
+
+\section{Current-reduct factorization}
+
+Let \(U:E\to R\) forget proposal-only expansion data and let \(q:E\to Q\)
+record one proposed asymmetry.
+
+\begin{theorem}[Fibre-constancy criterion]
+There is a map \(\bar q:U(E)\to Q\) such that
+\(q=\bar q\circ U\) if and only if \(q\) is constant on every \(U\)-fibre.
+The factor is unique on \(U(E)\); uniqueness on all of \(R\) additionally
+requires \(U\) to be surjective or values off the image to be specified.
+\end{theorem}
+
+\begin{proof}
+If \(q=\bar q\circ U\), equal \(U\)-values give equal \(q\)-values.
+Conversely, fibre constancy makes \(\bar q(U(e))=q(e)\) well defined.  The
+final uniqueness statement is immediate from the domain \(U(E)\).
+\end{proof}
+
+For each of the six predeclared candidates, two arbitrary proposal-only
+expansions over the same \(\mathbb{R}^{4}\) reduct may carry different
+candidate data; those supplied values fail factorization.  The compact-support
+witness is different: it is computed from the smooth topology, so its value is
+constant on every expansion fibre and does factor.  The six-pair hexad is a
+same-current-reduct diagnostic; it neither stipulates a successful root nor
+replays the finite rooted-admission fixture.  The executable exact model also
+checks all \(2^{6}=64\) Boolean maps on three two-element fibres and finds
+exactly \(2^{3}=8\) factorable maps.
+
+\section{Six-candidate audit matrix}
+
+\begin{center}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.19\linewidth}
+                >{\raggedright\arraybackslash}p{0.28\linewidth}
+                >{\raggedright\arraybackslash}p{0.39\linewidth}}
+\toprule
+Candidate & Full-package status & Bare-reduct diagnostic \\
+\midrule
+Point / finite set & Negative naturality & Translation subgroup has no fixed
+point or nonempty finite invariant subset. \\
+Orientation & Negative naturality & Reflection exchanges orientation sheets. \\
+Order & Negative naturality & Affine point exchange contradicts invariant
+strict total order. \\
+Root / label & Formation failure & No presentation or label type. \\
+Admission & Formation failure & No candidate carrier or admission predicate
+type. \\
+Arrow subclass & Positive theorem & \(M\mapsto K_{*}(M)\)
+is natural, objectwise proper, and globally nonidentity. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Exactly one candidate is positive.  The result follows from smooth topology
+alone and leaves \(\PhiSrc\) unresolved.  The five negative candidates remain
+useful boundaries on what the theorem does not select.
+
+\section{Result classification and continuation boundary}
+
+The current-source derivation branch is selected because the compact-support
+assignment is typed, natural under every current arrow, and current-reduct
+factorable.  Negative fixed-point and formation branches remain candidate-local
+and do not replace the exclusive positive result.  No target or desired-output
+premise was used, and no source-extension candidate was constructed.
+
+The separately admitted future packet is
+\begin{center}
+\small\ttfamily
+PKT-V22-P4T02-B2-POST-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-\\
+DERIVATION-THEOREM-THEORETICAL-CONTINUATION-SELECTION-V1.
+\end{center}
+Its type is \texttt{theoretical\_continuation\_selector}, its role is
+Theoretical Continuation Selector version 0.1.0, and it is selected but not
+executed.  It must decide whether the compact-support theorem has any
+bridge-facing P4--T02 relevance or is source-side classification only.  Route C
+is not preselected here.
+
+\section{Freeze and Distance-to-GR status}
+
+All six inherited local freezes remain unchanged:
+\begin{enumerate}[leftmargin=2em]
+  \item \texttt{NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR};
+  \item \texttt{NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS};
+  \item \texttt{NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION};
+  \item \texttt{NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS};
+  \item \texttt{NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS};
+  \item \texttt{NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-}
+        \texttt{PROTECTION-ROBUSTNESS}.
+\end{enumerate}
+
+Every expanded Distance-to-GR burden remains \NoDelta{}: source ontology
+primitives, source equivalence, RetainH, GenH, ObsLoc, Resp, source manifold,
+effective metric, matter coupling, Einstein equations, finite-variation
+robustness, benchmark promotion, Gate Chair status, and current route-freeze
+status.  The result adds a mathematical classifier but no physical object.
+
+\section{Non-conclusions}
+
+The current model groupoid and compact-support subgroupoid are not adopted
+\(\mathrm{Eq}_{\mathrm{src}}\), physical gauge groups, allowed physical-arrow
+laws, or causal structures.  Mathematical orientation is not physical time
+orientation.  No source primitive, source law, point/root selector,
+presentation ontology, empirical response, universal propagation, effective
+metric, matter coupling, or Einstein equation is derived.  D7 is not
+reevaluated, B2 remains inactive, and P4--T03 remains locked.  The theorem does
+not imply that every conservative source extension is unnecessary or
+impossible.  No Gate verdict, benchmark promotion, proof authority,
+publication, push, external action, or completed derivation follows.
+
+\end{document}

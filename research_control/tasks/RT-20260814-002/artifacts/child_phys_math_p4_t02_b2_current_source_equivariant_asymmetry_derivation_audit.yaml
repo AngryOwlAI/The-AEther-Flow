@@ -1,0 +1,800 @@
+schema_id: "child_phys_math_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-001"
+artifact_type: "parent_child_synthesis_child_output"
+authority: "science_draft"
+status: "complete_for_parent_synthesis"
+status_label: "draft/control"
+task_id: "RT-20260814-002"
+job_id: "AJ-RT-20260814-002-001"
+decision_id: "DDR-20260814-002"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260814-002"
+claim_boundary_id: "CB-V22-P4-T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-001"
+created_at: "2026-08-14T15:45:34Z"
+source_head: "8b69d6823206670dfcee79d3a6a8d68cb7c0f2f5"
+source_tree: "e5e02c2d8b86778ebfb7c85c57d8e09d88cfc30c"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+work_item_id: "P4-T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT"
+selected_packet_id: "PKT-V22-P4T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Decide current-source equivariant asymmetry before proposing a new source law, without finite-fixture replay, target import, or root stipulation."
+
+ownership_boundary:
+  owned_path: "research_control/tasks/RT-20260814-002/artifacts/child_phys_math_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit.yaml"
+  files_written_count: 1
+  other_files_modified: false
+  peer_child_file_inspected: false
+  parent_artifact_modified: false
+  control_file_modified: false
+  registry_modified: false
+  canonical_ontology_modified: false
+  completion_created: false
+  handoff_created: false
+  checkpoint_executed: false
+  child_agentjob_created: false
+  note: "This child owns only the displayed path and supplies mathematics for parent synthesis."
+
+execution_controls:
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  candidate_grammar_budget: 6
+  candidate_grammar_count: 6
+  proof_obligation_required_count: 14
+  proof_obligation_recorded_count: 14
+  failure_branch_required_count: 12
+  failure_branch_recorded_count: 12
+  preserved_freeze_required_count: 6
+  preserved_freeze_recorded_count: 6
+  distance_to_gr_required_count: 14
+  distance_to_gr_recorded_count: 14
+  literal_no_delta_count: 14
+  permitted_result_count_selected: 1
+  finite_pair_groupoid_replayed: false
+  conditional_root_fixture_replayed: false
+  root_stipulated: false
+  orientation_stipulated: false
+  order_stipulated: false
+  label_stipulated: false
+  admission_bit_stipulated: false
+  eqsrc_adopted: false
+  phi_src_semantics_assigned: false
+  source_primitive_added: false
+  source_law_added: false
+  target_or_empirical_import_used: false
+  frozen_route_reopened: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+
+source_binding:
+  hash_algorithm: "sha256"
+  source_count: 19
+  live_hashes_recomputed: true
+  governing_sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      authority: "control"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      authority: "control"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      authority: "control"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      authority: "workflow_contract"
+    - path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+      sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+      authority: "role_contract"
+    - path: "research_control/tasks/RT-20260814-002/00_TASK.yaml"
+      sha256: "e9c773906a49f720d7026a95e0dce7715bd7222c72ecdaa08b699a8f021e84c1"
+      authority: "tracked_control_state"
+      record_status: "completed"
+      validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    - path: "research_control/tasks/RT-20260814-002/DDR-20260814-002.md"
+      sha256: "41b8009815e98e3de4db95ef965557af3f47ced78a8e682f527a2700f4699778"
+      authority: "tracked_control_state"
+      record_status: "completed"
+      validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    - path: "research_control/tasks/RT-20260814-002/jobs/AJ-RT-20260814-002-001.yaml"
+      sha256: "07b3d7b671dc8630b5daca53504b538a3961ad9624db7eaf4365f5f80c67f430"
+      authority: "tracked_control_state"
+      record_status: "completed"
+      validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    - path: "research_control/tasks/RT-20260814-002/roles/ontology-formalizer@0.2.0--RT-20260814-002.yaml"
+      sha256: "45be1f65fa7f2b998f0f932e537d7f3cbc4a083039bec159272b04832a542e80"
+      authority: "execution_role"
+      record_status: "expired"
+      validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    - path: "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selected_future_packet_v1.yaml"
+      sha256: "034d0158c423484091ecd0963dd87e2e9a28affef8ebe20dc21065b7c094853e"
+      authority: "science_draft_packet"
+    - path: "research_control/tasks/RT-20260814-001/artifacts/parent_conflict_review_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.yaml"
+      sha256: "899abf86209e14405bc6f6d3cb54a67a27efaf5ea4fb9eaed82cee6a266c34f1"
+      authority: "science_draft_parent_selector"
+    - path: "research_control/tasks/RT-20260814-001/artifacts/parent_fusion_notes_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.md"
+      sha256: "325f91604f868c32465db0115501e6df272f1abd8dda799c7c93604e81acece3"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector_decision_v1.yaml"
+      sha256: "b48a449dc299892fb60d00c354be6aa669d714c7dfc8f7562aabc8fe82913bd0"
+      authority: "science_draft_parent_selector"
+    - path: "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_route_selection_v1.tex"
+      sha256: "a3f00094119f970f8a22b538c2329d7e8869e2162832cb14ec03c5b72e027e1b"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260812-002/artifacts/parent_fusion_notes_p4_t02_b2_finite_typed_presentation_admission_bridge_witness.md"
+      sha256: "bb9e59b3ebcac94ee56565c9c6f10ca937e332f41bae5321f0ea4338a704bfc6"
+      authority: "registered_science_draft_predecessor"
+    - path: "research_control/tasks/RT-20260812-002/artifacts/v22_p4_t02_b2_finite_typed_presentation_admission_bridge_witness_or_provenance_obstruction_record_v1.yaml"
+      sha256: "bbb9dd06859e280a134a021b9f3fa3236b714a58db44e4859a30a2a3719d5601"
+      authority: "science_draft_predecessor"
+    - path: "ontology/tex/aether_flow_foundations.tex"
+      sha256: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+      authority: "canonical_registered_tex"
+    - path: "ontology/tex/aether_flow_dynamics.tex"
+      sha256: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+      authority: "canonical_registered_tex"
+    - path: "registries/TEX_SOURCE_REGISTRY.csv"
+      sha256: "859565653007bc2ddf05a3784d1bca0d7b9159c89ae81c0de9fc92034fb1963f"
+      authority: "source_registry"
+  canonical_registry_bindings:
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      registry_source_hash: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+      live_source_hash: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+      live_hash_matches_registry: true
+      authority_status: "canonical"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      registry_source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+      live_source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+      live_hash_matches_registry: true
+      authority_status: "canonical"
+  authority_note: "Tracked canonical TeX and tracked control records govern. The current task, DDR, and AgentJob are completed and the one-job role overlay is expired, all at PASS_PRECHECKPOINT_STAGING_REQUIRED; RT014 and RT002 artifacts remain predecessor draft/control evidence rather than canonical ontology."
+
+exact_current_source_signature:
+  signature_record_id: "SIG-V22-CURRENT-SOURCE-TYPED-BOUNDARY-001"
+  typed_fragment:
+    object_symbol: "Sub"
+    object_type: "smooth four-dimensional manifold"
+    axioms:
+      - "Sub has a topology and smooth structure as part of being a smooth manifold."
+      - "dim(Sub)=4."
+    explicit_status: "primitive_debt"
+    source_spacetime_identification: false
+    operations: []
+    relations: []
+    distinguished_points: []
+    orientations: []
+    orders: []
+    labels: []
+    presentation_carriers: []
+    admission_predicates: []
+    source_equivalence_arrows: []
+  unresolved_vocabulary_boundary:
+    token: "Phi_src"
+    exact_packet_phrase: "represented only at its declared type boundary"
+    treatment: "nonsemantic_debt_marker_outside_the_typed_nonlogical_signature"
+    reason: "The canonical source says that Phi_src has no parameter domain, action, algebra, invertibility, stochastic law, gauge meaning, generator, order, or physical-time meaning; even Phi_lambda:Sub->Sub would add unregistered structure."
+    interpreted_model_component: false
+    arrow_preservation_condition: false
+    semantics_assigned: false
+  extraction_conclusion: "The exact semantic signature currently formable is the smooth-four-manifold typed fragment. Phi_src remains attached to the source record as unresolved debt and contributes neither a model component nor an arrow constraint. Treating it as an ill-typed function symbol would contradict the packet instruction to retain it only at its declared type boundary."
+  competing_strict_first_order_reading: "If a formalism insists that every displayed token is a nonlogical signature symbol requiring arity and codomain, then Phi_src produces a precise signature-formation obstruction. That is not the preferred reading because the canonical text explicitly describes it as a symbol for a later specification rather than an interpreted symbol now."
+
+current_model_groupoid:
+  groupoid_id: "MOD-CUR-SMOOTH4-BOUNDARY-001"
+  notation: "Mod_cur"
+  size_convention: "Use a fixed set-theoretic universe or a small skeleton for products of components; this is a meta-level size convention and adds no source structure."
+  object_class: "Smooth four-dimensional source manifolds realizing the typed fragment, with the unresolved Phi_src debt marker retained externally and uninterpreted."
+  arrow_class: "Iso_cur(M,N)=Diff(M,N), all smooth bijections f:M->N with smooth inverse."
+  all_isomorphisms_characterized: true
+  characterization_proof: "The only interpreted structure is the smooth manifold. An isomorphism must and need only preserve the topology and smooth atlas, hence it is exactly a diffeomorphism. Phi_src supplies no interpreted datum to preserve, and restricting arrows by a root, orientation, order, label, EqSrc, or desired result would add structure."
+  identity_law:
+    status: "proved"
+    proof: "id_M is a diffeomorphism and is the left and right identity for composition."
+  inverse_law:
+    status: "proved"
+    proof: "Every arrow is defined to have a smooth inverse, which is again a diffeomorphism."
+  composition_law:
+    status: "proved"
+    proof: "The composite of smooth bijections with smooth inverses is a smooth bijection with smooth inverse; associativity is ordinary function associativity."
+  automorphism_groups: "Aut_cur(M)=Diff(M), the complete diffeomorphism group, not an identity-only subgroup and not the RT002 pair swap."
+  mod_cur_formed_without_new_source_structure: true
+  iso_cur_formed_without_new_source_structure: true
+  adopted_eqsrc: false
+  physical_gauge_group: false
+  phi_src_action_used: false
+
+terminal_section_fixed_point_theorem:
+  theorem_id: "THM-V22-CUR-GROUPOID-TERMINAL-SECTIONS-001"
+  name: "GroupoidTerminalSectionFixedPointClassification"
+  hypotheses:
+    - "C is a small groupoid or a groupoid replaced by a small skeleton."
+    - "A:C->Set is a well-typed functor."
+    - "1_C is the constant terminal singleton functor."
+  statement: "For one representative M_c of every connected component c of C, Nat(1_C,A) is naturally bijective to the product over c of A(M_c) fixed by Aut_C(M_c). In particular, evaluation at any M maps every natural section into A(M)^{Aut(M)}, and one object with empty fixed set obstructs every global natural section."
+  proof_steps:
+    - "A natural section eta gives eta_M in A(M). Naturality for every g in Aut(M) gives A(g)(eta_M)=eta_M."
+    - "Conversely choose a_c in A(M_c) fixed by every automorphism. For N in component c and any f:M_c->N, set eta_N=A(f)(a_c)."
+    - "If f and g both map M_c to N, then g^{-1}f is an automorphism of M_c and fixes a_c, so A(f)(a_c)=A(g)(a_c); the definition is independent of transport."
+    - "For h:N->P, functoriality gives A(h)(eta_N)=eta_P, so eta is natural. The constructions are inverse."
+  exact_scope: "This is a theorem about typed semantic groupoids and set-valued functors. It does not identify semantic isomorphisms with EqSrc, physical gauge, causality, time, or empirical response."
+  smallest_falsifier: "A typed groupoid functor and component representative for which the displayed transport construction is not well defined, or a natural section whose value is moved by an automorphism."
+
+current_reduct_factorization_theorem:
+  theorem_id: "THM-V22-CUR-REDUCT-FIBRE-FACTORIZATION-001"
+  name: "CurrentReductFactorizationIffFibreConstancy"
+  hypotheses:
+    - "U:E->R and q:E->Q are set-level maps."
+    - "The factor is first required on im(U); if a factor on all R is demanded, U is assumed surjective or an extension outside im(U) is separately supplied."
+  statement: "There is a unique map q_bar:im(U)->Q satisfying q=q_bar composed with U exactly when q is constant on every U-fibre. If U is surjective, q_bar is the unique factor R->Q."
+  proof_steps:
+    - "If q=q_bar composed with U and U(e0)=U(e1), then q(e0)=q_bar(U(e0))=q_bar(U(e1))=q(e1)."
+    - "If q is fibre-constant, define q_bar(U(e))=q(e). Fibre constancy makes this well defined and the defining equation holds."
+    - "Every point of im(U) has a preimage, so the factor on im(U) is unique. Surjectivity identifies im(U) with R."
+  full_target_caveat: "When U is not surjective, fibre constancy alone fixes only the factor on im(U). Extending it to R can require a chosen value in Q and is not silently assumed."
+  exact_scope: "This theorem is general set-level mathematics, not the RT002 finite four-point enumeration and not a source-law adoption."
+  smallest_falsifier: "A fibre-constant q with no factor on im(U), or a factorable q that differs on one U-fibre."
+
+predeclared_candidate_grammar_audit:
+  budget: 6
+  candidate_count: 6
+  grammar_fixed_before_outcomes: true
+  grammar_is_current_ontology: false
+  grammar_is_physical_semantics: false
+  candidates:
+    - candidate_id: "ASYM-POINT"
+      output: "a distinguished source point or nonempty finite point set"
+      formation_status: "typed_on_Mod_cur"
+      functor_definition: "A_point(M)=M disjoint_union Fin_nonempty(M), where Fin_nonempty(M) is the set of nonempty finite subsets of the underlying set of M."
+      complete_arrow_action: "For every f in Diff(M,N), A_point(f)(p)=f(p) and A_point(f)(S)=f[S]."
+      functor_laws: "Direct image respects identities and composition."
+      terminal_section_status: "obstructed"
+      fixed_point_control: "For M=R4, every translation T_v is in Diff(R4). No point is fixed by all translations. If a nonempty finite S were fixed by all translations, choose p in S and v nonzero; p+n v lies in S for every integer n, an infinite contradiction."
+      current_reduct_factorization_status: "expansion_supplied_choices_do_not_factor"
+      same_reduct_control: "The expansions (R4,p0) and (R4,p1) with p0 not equal to p1 have the same current reduct and distinct point data. The analogous singleton finite sets also differ."
+      candidate_result: "scoped_naturality_and_factorization_obstruction"
+      exact_scope: "Bare smooth R4 under its full diffeomorphism group; registered enrichment could lawfully shrink automorphisms in a later separately authorized source extension."
+      smallest_falsifier: "A point or nonempty finite subset of R4 fixed by every translation, or a registered current-source term whose natural value survives every diffeomorphism."
+    - candidate_id: "ASYM-ORIENTATION"
+      output: "one sheet of the orientation double cover"
+      formation_status: "typed_on_Mod_cur"
+      functor_definition: "A_or(M) is the set of global orientations, equivalently global sheet choices of the orientation double cover; it is empty on nonorientable M."
+      complete_arrow_action: "Every f in Diff(M,N) pushes an orientation forward, giving a bijection A_or(M)->A_or(N)."
+      functor_laws: "Pushforward of orientations respects identities and composition."
+      terminal_section_status: "obstructed"
+      fixed_point_control: "On R4, r(x1,x2,x3,x4)=(-x1,x2,x3,x4) is a diffeomorphism and exchanges the two global orientations, so A_or(R4)^{Diff(R4)} is empty."
+      current_reduct_factorization_status: "expansion_supplied_choices_do_not_factor"
+      same_reduct_control: "The two oppositely oriented expansions of the same bare R4 have identical current reduct and distinct orientation data."
+      candidate_result: "scoped_naturality_and_factorization_obstruction"
+      exact_scope: "A mathematical orientation of a source manifold only; no physical time orientation, cone, or causal direction is inferred."
+      smallest_falsifier: "An orientation of bare R4 fixed by the displayed reflection, or registered current structure that excludes every orientation-reversing diffeomorphism."
+    - candidate_id: "ASYM-ORDER"
+      output: "a total source or presentation order"
+      formation_status: "source_total_order_functor_typed_presentation_order_untyped"
+      functor_definition: "For the source-only reading, A_ord(M) is the set of total orders on the underlying set of M."
+      complete_arrow_action: "For f in Diff(M,N), push the order forward by y1 <=_f y2 exactly when f^{-1}(y1) <= f^{-1}(y2)."
+      functor_laws: "Order pushforward respects identities and composition."
+      terminal_section_status: "obstructed"
+      fixed_point_control: "On R4 choose p=e1 and q=-e1. The diffeomorphism s(x)=-x exchanges p and q. Any total order compares p and q strictly; invariance under s reverses that comparison and contradicts antisymmetry."
+      presentation_reading_first_failure: "No presentation carrier is registered, so a presentation-order functor has no domain or arrow action."
+      current_reduct_factorization_status: "expansion_supplied_choices_do_not_factor"
+      same_reduct_control: "Lexicographic order and its reverse are distinct order expansions of the same bare R4 reduct."
+      candidate_result: "scoped_naturality_and_factorization_obstruction"
+      exact_scope: "Underlying-set total order only; Phi_src is not interpreted as an order generator and no physical-time meaning is assigned."
+      smallest_falsifier: "A total order on R4 fixed by every diffeomorphism, or a registered source-order law and transport absent from the bound sources."
+    - candidate_id: "ASYM-ROOT-LABEL"
+      output: "a distinguished presentation root or label"
+      formation_status: "first_exact_formation_failure"
+      first_missing_type: "No presentation-object sort, presentation carrier, label sort, root map, labeling map, or isomorphism transport is present in the current signature."
+      source_point_coercion_status: "forbidden_candidate_collapse"
+      source_point_coercion_reason: "Replacing presentation root by a source point would merge ASYM-ROOT-LABEL into ASYM-POINT after the grammar was fixed and would not type a presentation label."
+      terminal_section_status: "not_formed_at_exact_presentation_reading"
+      current_reduct_factorization_status: "conditional_expansion_data_do_not_factor"
+      same_reduct_control: "For any proposal-only presentation expansion fibre admitting two distinct roots or labels ell0 and ell1 over the same M, the readout differs inside one U_cur fibre and therefore cannot descend. This is a generic fibre argument, not reconstruction of the RT002 pair groupoid."
+      candidate_result: "precise_candidate_functor_typing_obstruction"
+      exact_scope: "Current signature only; no claim that a future conservative extension cannot add a typed presentation carrier and label law."
+      smallest_falsifier: "A registered current-source presentation carrier with root or label map and transport under every current isomorphism."
+    - candidate_id: "ASYM-ADMISSION"
+      output: "a nonconstant natural admission predicate"
+      formation_status: "presentation_reading_untyped_source_point_surrogate_typed_and_obstructed"
+      first_missing_type: "The exact presentation reading lacks a presentation carrier, predicate domain, Boolean transport, and admission naturality law."
+      conservative_source_surrogate: "A_adm(M) can be typed as the set of nonconstant maps chi:M->{false,true}, with diffeomorphism action by transport."
+      complete_arrow_action: "For f in Diff(M,N), (A_adm(f)(chi))(y)=chi(f^{-1}(y))."
+      terminal_section_status: "obstructed_even_for_source_surrogate"
+      fixed_point_control: "Translations act transitively on R4. A Boolean predicate fixed by every translation has chi(x)=chi(y) for every x,y and is constant, so the nonconstant-predicate fixed set is empty."
+      current_reduct_factorization_status: "expansion_supplied_choices_do_not_factor"
+      same_reduct_control: "Two distinct nonconstant Boolean predicates supplied only as expansions of the same bare R4 reduct differ in one U_cur fibre."
+      candidate_result: "precise_formation_or_scoped_naturality_factorization_obstruction"
+      exact_scope: "The surrogate is a source-point predicate, not presentation admission, detector response, physical selection, or empirical acceptance."
+      smallest_falsifier: "A nonconstant Boolean predicate on R4 invariant under all translations, or a registered presentation carrier and natural admission law."
+    - candidate_id: "ASYM-ARROW-SUBCLASS"
+      output: "a proper natural allowed-arrow subclass"
+      formation_status: "typed_under_literal_task_local_semantic_subobject_reading"
+      candidate_functor: "A_arr(M)=PropNorm(Diff(M)), the set of proper normal subgroups of the complete automorphism group, with conjugation transport along every f in Diff(M,N)."
+      complete_arrow_action: "A_arr(f)(H)=f H f^{-1}; group isomorphisms preserve subgroup, normality, and properness."
+      witness_symbol: "K_star"
+      witness_definition: "Let D_c(M) be compactly supported diffeomorphisms. Set K_star(M)=D_c(M) when D_c(M) is proper in Diff(M), and K_star(M)={id_M} otherwise."
+      objectwise_properness: "For every nonempty smooth four-manifold, Diff(M) is nontrivial because a coordinate ball supports a nonzero compactly supported vector field with nonidentity time flow. Hence either branch makes K_star(M) proper."
+      global_nonidentity_control: "For R4, D_c(R4) is proper because nonzero translations are not compactly supported, and it is nontrivial because compactly supported bump flows exist; therefore the family is not identity-only globally."
+      naturality_proof: "For every f:M->N, conjugation maps D_c(M) bijectively to D_c(N) because supp(f h f^{-1})=f[supp(h)], and it maps Diff(M) to Diff(N). Thus the predicate D_c=Diff is isomorphism invariant and f K_star(M) f^{-1}=K_star(N)."
+      terminal_section_status: "positive_natural_section"
+      terminal_section: "eta_star:1=>A_arr with eta_star(M)=K_star(M)"
+      fixed_point_status: "K_star(M) is fixed under conjugation by every automorphism because it is normal."
+      wide_subgroupoid_definition: "K_cur has every object of Mod_cur, only endomorphism arrows h:M->M with h in K_star(M), and no cross-object arrows."
+      identity_check: "id_M belongs to K_star(M) in both branches."
+      inverse_check: "D_c(M) and {id_M} are subgroups; inverse support is the image of support and remains compact."
+      composition_check: "For compactly supported h and k, supp(h composed with k) is contained in supp(k) union k^{-1}(supp(h)), a compact set."
+      conjugation_check: "Arbitrary current isomorphisms carry K_star(M) exactly to K_star(N), so the subgroupoid family is normal under the full Iso_cur groupoid."
+      cross_object_arrow_check: "A wide subgroupoid is required to retain all objects and identities, not to be full. Omitting cross-object arrows is therefore allowed by the literal closure, identity, inverse, composition, and conjugation contract."
+      global_properness: "K_cur is a proper arrow subclass because a nonzero translation of R4 belongs to Iso_cur but not to K_cur."
+      current_reduct_factorization_status: "passes"
+      current_reduct_factor: "q_bar_star(M)=K_star(M); for every conservative expansion e, q_star(e)=K_star(U_cur(e)), so q_star=q_bar_star composed with U_cur and is constant on every fibre."
+      candidate_result: "current_source_equivariant_asymmetry_derivation_theorem_witness"
+      exact_scope: "Task-local definable subobject of the semantic isomorphism groupoid. It is not an adopted EqSrc category, an allowed physical transformation law, a presentation selector, a gauge group, or P4 evidence."
+      smallest_falsifier: "A current isomorphism f for which compact support is not preserved by conjugation; a failure of subgroup closure; a nonempty smooth four-manifold with trivial diffeomorphism group; or a controlling interpretation that requires a registered semantic allowedness predicate or cross-object fullness beyond the literal packet."
+
+arrow_subclass_literal_contract_audit:
+  audit_id: "AUDIT-ASYM-ARROW-SUBCLASS-KSTAR-001"
+  literal_packet_reading:
+    object_and_arrow_typing: "pass"
+    identity: "pass"
+    inverse: "pass"
+    composition: "pass"
+    conjugation_under_every_current_isomorphism: "pass"
+    global_properness: "pass"
+    objectwise_properness: "pass_under_nonempty_source_arena_convention"
+    nonidentity_content: "pass_globally_on_R4"
+    absence_of_cross_object_arrows: "permitted_for_a_wide_nonfull_subgroupoid"
+    current_reduct_factorization: "pass"
+    desired_result_stipulation_used: false
+    source_topology_only: true
+    result: "literal_contract_admits_witness"
+  compact_support_unrefined_control:
+    symbol: "K_c"
+    definition: "K_c(M)=D_c(M)"
+    global_wide_normal_subgroupoid: true
+    global_properness: true
+    objectwise_properness: false
+    objectwise_failure_example: "If M is compact then every diffeomorphism has compact support, so D_c(M)=Diff(M)."
+    purpose: "Separates global from objectwise properness and motivates the intrinsic K_star refinement."
+  competing_semantic_reading:
+    issue_id: "PARENT-RESOLUTION-ARROW-ALLOWEDNESS-001"
+    reading: "The word allowed may require a registered source-semantic EqSrc or arrow-admission predicate rather than a merely definable subgroupoid of the audit groupoid."
+    consequence_if_adopted: "ASYM-ARROW-SUBCLASS fails formation because no EqSrc category or allowedness predicate is registered; all six candidates are then obstructed and the aggregate result becomes scoped_current_source_naturality_factorization_obstruction."
+    reason_not_preferred_by_math_child: "The packet states that the grammar is not current ontology, gives adoption effect none, and asks for a task-local semantic groupoid audit with closure and conjugation checks. Under that literal audit contract, definability as a semantic subobject is enough, while adoption remains separately blocked."
+    requires_parent_adjudication: true
+    blocking_for_child_decision: false
+    child_recommendation: "Preserve the literal positive theorem and state zero EqSrc, adoption, selector, physical, and P4 credit."
+  empty_manifold_boundary_note: "The objectwise K_star proof uses the ordinary nonempty source-arena convention. If the exact model class explicitly admitted the empty manifold as a source arena, Diff(empty) is trivial and PropNorm(Diff(empty)) is empty; that would be a precise object-level falsifier. The canonical physical source-arena wording is read as nonempty, but the parent should preserve this hypothesis."
+
+exact_control_families:
+  - control_id: "CTRL-TRANSLATION-R4-001"
+    model: "bare smooth R4"
+    arrows: "all translations T_v(x)=x+v, v in R4"
+    exact_results:
+      - "No point is fixed by all translations."
+      - "No nonempty finite subset is fixed by all translations."
+      - "Every Boolean predicate fixed by all translations is constant."
+    scope: "Automorphisms of one typed current reduct only; these are not physical spacetime translations or empirical symmetries."
+    falsifier: "A fixed point, invariant nonempty finite subset, or nonconstant translation-invariant Boolean predicate under the displayed full translation action."
+  - control_id: "CTRL-ORIENTATION-REVERSAL-R4-001"
+    model: "bare smooth R4"
+    arrow: "r(x1,x2,x3,x4)=(-x1,x2,x3,x4)"
+    exact_result: "The arrow exchanges the two global orientations, so neither is fixed."
+    scope: "Mathematical source orientation only, not time orientation or causal orientation."
+    falsifier: "A global orientation of R4 fixed by r."
+  - control_id: "CTRL-ORDER-SWAP-R4-001"
+    model: "bare smooth R4"
+    arrow: "s(x)=-x"
+    exact_result: "The arrow swaps e1 and -e1; invariance of a total order would reverse their strict comparison and is impossible."
+    scope: "Underlying-set total order only; Phi_src remains uninterpreted."
+    falsifier: "A total order fixed by s."
+  - control_id: "CTRL-SAME-REDUCT-FIBRES-001"
+    reduct: "one exact bare smooth current model M"
+    pairs:
+      - "two distinct source points or finite subsets over M"
+      - "the two orientations of R4"
+      - "two distinct total orders on the same underlying M"
+      - "two proposal-only presentation roots or labels over M, if such an expansion carrier is supplied"
+      - "two distinct nonconstant admission predicates over M"
+      - "two distinct proposal-only arrow-subclass choices over M"
+    exact_result: "Every displayed expansion readout that differs inside one U_cur fibre fails to factor through the current reduct. The positive K_star readout is different: it is computed from M itself and is fibre-constant."
+    scope: "General fibre-factorization controls only; no finite pair groupoid, rooted construction, or candidate adoption is performed."
+    falsifier: "A factor through U_cur for one readout that still takes different values on an exact common fibre."
+
+material_distinctness_from_rt002:
+  predecessor_task_id: "RT-20260812-002"
+  predecessor_domain: "One proposal-only two-object pair groupoid over one fixed current reduct, four Boolean predicates, and a conditional root fixture."
+  current_domain: "The complete semantic groupoid of smooth four-manifold current models and all diffeomorphisms."
+  distinct_payloads:
+    - "Groupoid-wide terminal-section classification by automorphism fixed points on every connected component."
+    - "Continuum R4 translation, reflection, and order-swap controls."
+    - "General image-level fibre-factorization theorem, not a finite Boolean enumeration."
+    - "A current-source-definable conjugation-natural proper arrow-subclass witness K_star."
+  pair_groupoid_reconstructed: false
+  pair_swap_used_as_new_evidence: false
+  conditional_root_used_as_new_evidence: false
+  labels_zero_and_one_used_as_source_data: false
+  material_distinctness_status: "pass"
+
+decisive_result:
+  result_type: "current_source_equivariant_asymmetry_derivation_theorem"
+  result_count: 1
+  exclusive_result_selected: true
+  theorem_id: "THM-V22-CUR-ARROW-SUBCLASS-KSTAR-001"
+  positive_candidate_count: 1
+  positive_candidate_ids:
+    - "ASYM-ARROW-SUBCLASS"
+  nonpositive_candidate_ids:
+    - "ASYM-POINT"
+    - "ASYM-ORIENTATION"
+    - "ASYM-ORDER"
+    - "ASYM-ROOT-LABEL"
+    - "ASYM-ADMISSION"
+  theorem_statement: "At the exact typed current-source boundary, Mod_cur and Iso_cur form as smooth four-manifolds and all diffeomorphisms. The intrinsic family K_star of proper normal automorphism subgroups is transported by conjugation under every current isomorphism, assembles to a proper wide subgroupoid, and factors through the current reduct. Hence the literal ASYM-ARROW-SUBCLASS candidate has a current-source equivariant task-local derivation."
+  no_fog_check: true
+  no_fog_explanation: "Five candidates fail by exact typing, fixed-point, or factorization results, while K_star satisfies the sixth candidate's literal object, arrow, closure, conjugation, properness, naturality, and factorization contract."
+  adoption_effect: "none"
+  selector_force: "none_established"
+  physical_effect: "none"
+  p4_t02_effect: "no_completion_or_unlock"
+  smallest_falsifier: "Fail one K_star groupoid law or all-arrow conjugation square, show that K_star is not proper, show that its expansion readout is not fibre-constant, or establish that the controlling word allowed requires an already registered EqSrc semantic predicate rather than a task-local definable subobject."
+  competing_result_if_parent_chooses_semantic_allowedness_reading: "scoped_current_source_naturality_factorization_obstruction"
+  precise_model_groupoid_typing_obstruction_selected: false
+  scoped_naturality_factorization_obstruction_selected: false
+  global_no_go_claimed: false
+
+new_mathematical_payload:
+  payload_count: 5
+  items:
+    - payload_id: "NMP-RT002-PM-001"
+      payload_type: "theorem_with_hypotheses_and_proof"
+      object_name: "GroupoidTerminalSectionFixedPointClassification_v1"
+      result: "Natural sections of a set-valued functor on a groupoid are classified componentwise by automorphism-fixed elements, with transport independence proved using inverses."
+      burden_effect: "decides_current_source_naturality_on_full_model_groupoid"
+      source_path: "research_control/tasks/RT-20260814-002/artifacts/child_phys_math_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit.yaml"
+      falsifier: "A counterexample to the componentwise fixed-point construction under the stated groupoid hypotheses."
+    - payload_id: "NMP-RT002-PM-002"
+      payload_type: "theorem_with_hypotheses_and_proof"
+      object_name: "BareSmoothR4AsymmetryFixedPointControls_v1"
+      result: "The full R4 translation and diffeomorphism actions admit no invariant point, nonempty finite set, global orientation, total order, or nonconstant Boolean admission predicate."
+      burden_effect: "scoped_obstruction_for_five_predeclared_candidate_readings"
+      source_path: "research_control/tasks/RT-20260814-002/artifacts/child_phys_math_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit.yaml"
+      falsifier: "A fixed element in any displayed R4 candidate fibre under the stated complete control subgroup."
+    - payload_id: "NMP-RT002-PM-003"
+      payload_type: "theorem_with_hypotheses_and_proof"
+      object_name: "CompactSupportProperNormalArrowSubclass_v1"
+      result: "The K_star family is objectwise proper, conjugation-natural under every diffeomorphism, globally nonidentity, closed under the groupoid laws, and current-reduct factorizable."
+      burden_effect: "supplies_literal_ASYM_ARROW_SUBCLASS_positive_witness"
+      source_path: "research_control/tasks/RT-20260814-002/artifacts/child_phys_math_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit.yaml"
+      falsifier: "A failure of compact-support conjugation, properness, subgroup closure, or current-reduct factorization."
+    - payload_id: "NMP-RT002-PM-004"
+      payload_type: "theorem_with_hypotheses_and_proof"
+      object_name: "GeneralCurrentReductFibreFactorization_v1"
+      result: "For arbitrary set-level reduct maps, factorization on the image is equivalent to fibre constancy; surjectivity is isolated as the exact condition for a unique full-codomain factor."
+      burden_effect: "separates_current_derivation_from_expansion_choice_without_finite_fixture"
+      source_path: "research_control/tasks/RT-20260814-002/artifacts/child_phys_math_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit.yaml"
+      falsifier: "A fibre-constant map lacking its image factor or a factorable map varying on a fibre."
+    - payload_id: "NMP-RT002-PM-005"
+      payload_type: "dependency_map_update"
+      object_name: "SemanticSubobjectVersusAllowedEqSrcBoundary_v1"
+      result: "A definable normal subgroupoid is enough for the literal non-adoptive audit candidate but is not itself an EqSrc or allowed physical transformation law; requiring the latter changes the result and is explicitly reserved for parent adjudication."
+      burden_effect: "prevents_positive_mathematics_from_being_laundered_into_source_law_or_P4_credit"
+      source_path: "research_control/tasks/RT-20260814-002/artifacts/child_phys_math_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit.yaml"
+      falsifier: "Controlling task text that equates the audit candidate with an adopted semantic allowedness predicate."
+
+proof_obligations:
+  obligation_count: 14
+  rows:
+    - obligation_id: "PO-01"
+      status: "pass"
+      evidence: "Nineteen governing sources were rebound by live SHA-256; both canonical TeX hashes match their TEX_SOURCE_REGISTRY rows."
+    - obligation_id: "PO-02"
+      status: "pass"
+      evidence: "Sub is isolated as the only typed semantic object; Phi_src remains a nonsemantic debt marker and all target benchmark structure is excluded."
+    - obligation_id: "PO-03"
+      status: "pass"
+      evidence: "Mod_cur is the smooth-four-manifold groupoid and Iso_cur consists of all diffeomorphisms, with no metric, orientation, order, root, label, or presentation carrier imported."
+    - obligation_id: "PO-04"
+      status: "pass"
+      evidence: "Identity, inverse, composition, associativity, and exact smooth-structure preservation are proved for all declared isomorphisms."
+    - obligation_id: "PO-05"
+      status: "pass"
+      evidence: "Exactly six packet candidate IDs are retained with no budget or grammar change."
+    - obligation_id: "PO-06"
+      status: "pass"
+      evidence: "Point, orientation, source order, source admission surrogate, and arrow-subclass functors are typed; presentation root-label and presentation-admission failures identify their first missing carriers and transports."
+    - obligation_id: "PO-07"
+      status: "pass"
+      evidence: "Every current arrow is characterized as a diffeomorphism and every typed candidate action is given for arbitrary f, while separating controls establish empty fixed sets where applicable."
+    - obligation_id: "PO-08"
+      status: "pass"
+      evidence: "The K_star naturality equation f K_star(M) f^{-1}=K_star(N) is proved for every f in Iso_cur, not merely identities or a pair swap."
+    - obligation_id: "PO-09"
+      status: "pass"
+      evidence: "The general fibre theorem is applied to all expansion-supplied candidate readings; K_star alone has an explicit current-reduct factor."
+    - obligation_id: "PO-10"
+      status: "pass"
+      evidence: "Exact translation, orientation-reversal, order-swap, and same-reduct controls include scope statements and falsifiers."
+    - obligation_id: "PO-11"
+      status: "pass"
+      evidence: "The current audit uses the full smooth-manifold groupoid and continuum controls; it reconstructs neither the RT002 pair groupoid nor its conditional root."
+    - obligation_id: "PO-12"
+      status: "pass"
+      evidence: "Target atlas, metric, cone, empirical label, benchmark result, workflow status, and all six frozen families are absent from definitions and proofs."
+    - obligation_id: "PO-13"
+      status: "pass"
+      evidence: "Exactly one permitted result is selected, with one explicit positive candidate, exact hypotheses, proof, factorization, and falsifier; no ontology is added, adopted, rejected, or edited."
+    - obligation_id: "PO-14"
+      status: "pass"
+      evidence: "All physical, empirical, adequacy, B2, P4-T03, Gate, proof, publication, push, and external-action non-conclusions are explicit."
+
+failure_branches:
+  branch_count: 12
+  rows:
+    - branch_id: "FB-01"
+      packet_result: "precise_current_source_model_groupoid_typing_obstruction"
+      trigger: "Mod_cur or Iso_cur cannot be formed without adding unregistered structure."
+      condition_observed: false
+      terminal_triggered: false
+      disposition: "The typed boundary forms as smooth four-manifolds and all diffeomorphisms; Phi_src is retained as a nonsemantic debt marker."
+    - branch_id: "FB-02"
+      packet_result: "invalid_audit"
+      trigger: "Phi_src is assigned an undeclared domain action invertibility order generator gauge or physical-time meaning."
+      condition_observed: false
+      terminal_triggered: false
+      disposition: "No Phi_src semantics are assigned."
+    - branch_id: "FB-03"
+      packet_result: "invalid_audit"
+      trigger: "The candidate grammar or budget is changed after outcomes are inspected."
+      condition_observed: false
+      terminal_triggered: false
+      disposition: "Exactly six fixed candidate IDs are audited."
+    - branch_id: "FB-04"
+      packet_result: "scoped_current_source_naturality_factorization_obstruction"
+      trigger: "A candidate is moved by a current-structure automorphism and no registered structure excludes that arrow."
+      condition_observed: true
+      terminal_triggered: false
+      disposition: "Candidate-local for ASYM-POINT, ASYM-ORIENTATION, ASYM-ORDER, and the source admission surrogate; it does not select the aggregate obstruction because ASYM-ARROW-SUBCLASS passes."
+    - branch_id: "FB-05"
+      packet_result: "scoped_current_source_naturality_factorization_obstruction"
+      trigger: "Candidate asymmetry data vary inside one U_cur fibre."
+      condition_observed: true
+      terminal_triggered: false
+      disposition: "Candidate-local for expansion-supplied data; the positive K_star datum is fibre-constant and factors."
+    - branch_id: "FB-06"
+      packet_result: "invalid_audit"
+      trigger: "Only identity arrows or the RT002 pair swap are tested while the declared groupoid has more arrows."
+      condition_observed: false
+      terminal_triggered: false
+      disposition: "All arrows are characterized as diffeomorphisms and K_star naturality is proved for arbitrary f."
+    - branch_id: "FB-07"
+      packet_result: "invalid_audit"
+      trigger: "A root orientation order label admission bit or arrow restriction is stipulated as current-source derived."
+      condition_observed: false
+      terminal_triggered: false
+      disposition: "K_star is defined from compact support and intrinsic group equality, not stipulated by desired selection; adoption as allowed EqSrc remains blocked."
+    - branch_id: "FB-08"
+      packet_result: "invalid_audit"
+      trigger: "A target atlas metric cone empirical response benchmark answer or desired P4 outcome enters a definition."
+      condition_observed: false
+      terminal_triggered: false
+      disposition: "No target or desired-outcome input is used."
+    - branch_id: "FB-09"
+      packet_result: "invalid_audit"
+      trigger: "Any of the six frozen candidate families is reconstructed or renamed."
+      condition_observed: false
+      terminal_triggered: false
+      disposition: "All six freezes are preserved without reconstruction."
+    - branch_id: "FB-10"
+      packet_result: "overclaim_block"
+      trigger: "A scoped current-source obstruction is stated as a global no-go or future-extension impossibility theorem."
+      condition_observed: false
+      terminal_triggered: false
+      disposition: "Every negative result is explicitly candidate-local and current-signature scoped."
+    - branch_id: "FB-11"
+      packet_result: "overclaim_block"
+      trigger: "A mathematical natural transformation is called physical gauge causality time orientation or empirical response."
+      condition_observed: false
+      terminal_triggered: false
+      disposition: "K_star is only a task-local semantic subgroupoid witness with zero physical credit."
+    - branch_id: "FB-12"
+      packet_result: "authority_block"
+      trigger: "The packet edits or adopts ontology acts on B2 unlocks P4-T03 promotes proof publication push or external action."
+      condition_observed: false
+      terminal_triggered: false
+      disposition: "No protected action is taken."
+
+source_extension_classification:
+  category: "not_a_source_extension_current_source_derivation_audit"
+  status_label: "draft/control"
+  current_ontology_edit: false
+  new_source_primitive: false
+  proposal_only_source_law: false
+  source_extension_constructed: false
+  source_extension_adopted: false
+  source_extension_rejected: false
+  eqsrc_adopted: false
+  target_import_status: "forbidden_and_audited_absent"
+  adoption_status: "not_applicable_current_source_audit"
+  note: "K_star is a definable subobject of the audit groupoid, not a source-language extension or adopted allowed-arrow law."
+
+freeze_preservation:
+  freeze_count: 6
+  all_freezes_preserved: true
+  new_freeze_created: false
+  frozen_route_replay_performed: false
+  rows:
+    - freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+
+freeze_criteria_status:
+  repeated_burden: true
+  scoped_obstruction_subresults_present: true
+  freeze_evaluation_required: true
+  active_new_freeze_label: "none"
+  freeze_decision: "not_frozen"
+  decision_reason: "The full current groupoid audit supplies new theorem-level payload and a literal positive arrow-subclass witness; it is not a repeated finite-fixture or frozen-family reconstruction."
+  freeze_if:
+    - "A later packet treats K_star as EqSrc, physical gauge, presentation admission, or P4 progress without a separately registered source law and gate."
+    - "A later packet repeats only the R4 fixed-point controls without a new mathematical payload."
+    - "A later packet reconstructs RT002 or one of the six frozen routes."
+  do_not_freeze_if:
+    - "Parent synthesis resolves the allowedness reading and preserves the exact mathematical and semantic boundary."
+    - "A later separately authorized packet supplies a genuinely new typed source law or refutation."
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+distance_to_gr_status:
+  row_count: 14
+  changed: false
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      finding: "No primitive is added; K_star is derived only in the task-local audit groupoid."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      finding: "Iso_cur and K_star are semantic audit objects, not adopted EqSrc or an allowedness law."
+    - burden: "RetainH"
+      status: "no_delta"
+      finding: "No history-retention primitive or theorem is supplied."
+    - burden: "GenH"
+      status: "no_delta"
+      finding: "No generator or source evolution law is supplied."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      finding: "No observer-localization map is supplied."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      finding: "No localized response or detector semantics is supplied."
+    - burden: "M_src"
+      status: "no_delta"
+      finding: "The source manifold remains primitive debt and is not identified with physical spacetime."
+    - burden: "g_eff"
+      status: "no_delta"
+      finding: "No cone, conformal class, scale, or effective metric is constructed."
+    - burden: "matter coupling"
+      status: "no_delta"
+      finding: "No propagation or coupling law is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      finding: "No source action, variation, stress-energy law, or field equation is derived."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      finding: "Exact diffeomorphism naturality is not perturbative physical robustness."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      finding: "No benchmark comparison or promotion occurs."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      finding: "No protected review verdict, adoption, or rejection occurs."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      finding: "All six inherited freezes remain unchanged and no new route freeze is created."
+
+downstream_locks:
+  d7_reevaluated: false
+  d7_coverage_claimed: false
+  descriptor_instance_complete: false
+  b2_active: false
+  b2_activated: false
+  b2_adopted: false
+  b2_rejected: false
+  b2_disposed: false
+  b2_viability_claimed: false
+  b2_adequacy_claimed: false
+  b2_sufficiency_claimed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+  p4_t03_unlocked_or_executed: false
+  physical_causality_assigned: false
+  physical_time_orientation_assigned: false
+  empirical_response_semantics_assigned: false
+  sector_universality_established: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+
+authority_blocks:
+  parent_completion_created_by_child: false
+  parent_fusion_created_by_child: false
+  selected_successor_created: false
+  selected_successor_executed: false
+  source_primitive_added: false
+  source_law_proposed: false
+  source_law_formalized: false
+  source_law_proved: false
+  source_law_adopted: false
+  source_law_rejected: false
+  canonical_ontology_candidate_created: false
+  canonical_ontology_modified: false
+  phi_src_typed: false
+  phi_src_action_assigned: false
+  phi_src_physical_meaning_assigned: false
+  eqsrc_category_adopted: false
+  k_star_adopted_as_allowed_eqsrc: false
+  target_atlas_imported: false
+  target_metric_imported: false
+  target_orientation_or_cone_imported: false
+  detector_response_imported: false
+  empirical_label_imported: false
+  benchmark_answer_imported: false
+  workflow_status_used_as_scientific_evidence: false
+  frozen_route_imported: false
+  scientific_claim_status_promoted: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  d7_authority_exercised: false
+  b2_authority_exercised: false
+  p4_t03_authority_exercised: false
+  gate_chair_verdict_issued: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  publication_authorized: false
+  public_release_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  global_no_go_claimed: false
+  global_theory_rejection_claimed: false
+  future_source_extension_impossibility_claimed: false
+  completed_derivation_claimed: false
+
+explicit_non_conclusions:
+  - "K_star is not EqSrc, an adopted arrow law, a physical gauge group, or a presentation-admission rule."
+  - "The positive ASYM-ARROW-SUBCLASS theorem does not derive a point, root, orientation, order, label, nonconstant admission predicate, physical causality, physical time orientation, or empirical response."
+  - "Phi_src remains unresolved and has no domain, action, generator, gauge, order, or physical-time semantics."
+  - "The R4 controls are mathematical separating models, not identifications of Sub with physical spacetime."
+  - "The result does not establish a source-to-presentation map, source equivalence law, RetainH, GenH, ObsLoc_lc, Resp_lc, M_src, a causal cone, conformal class, scale, or g_eff."
+  - "D7 is not reevaluated, B2 remains inactive and undisposed, P4-T02 is not completed for dependency purposes, and P4-T03 remains locked."
+  - "No matter coupling, Einstein equation, benchmark promotion, Gate verdict, proof authority, publication, push, external action, global no-go, future-extension impossibility, or completed derivation follows."
+
+validation_evidence:
+  strict_yaml_unique_keys: "PASS_DUPLICATE_KEY_REJECTING_PYYAML_LOADER"
+  yaml_parse: "PASS_PYYAML_SAFE_MODEL"
+  exact_candidate_count: "PASS_EXACTLY_6_IN_PACKET_ORDER"
+  exact_proof_obligation_count: "PASS_EXACTLY_14"
+  exact_failure_branch_count: "PASS_EXACTLY_12"
+  freeze_cardinality: "PASS_EXACTLY_6_UNIQUE_PRESERVED"
+  distance_to_gr_cardinality: "PASS_EXACTLY_14"
+  literal_no_delta_cardinality: "PASS_EXACTLY_14"
+  live_source_hash_recheck: "PASS_19_OF_19"
+  whitespace_check: "PASS_NO_TRAILING_WHITESPACE"
+  ownership_check: "PASS_EXACTLY_OWNED_CHILD_PATH"
+  artifact_sha256_reported_out_of_band: true
+  validation_scope_note: "Child validation covers only this owned draft/control artifact, its strict YAML structure, source hashes, mathematical definitions, exact cardinalities, and claim boundary. It does not validate the peer output, parent synthesis, completion, repository transaction, checkpoint, or promoted physics truth."
