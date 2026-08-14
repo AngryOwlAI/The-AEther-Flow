@@ -1,0 +1,248 @@
+schema_id: "v22_p4_t02_b2_kstar_localization_bridge_irrelevance_theorem_packet_v1"
+status: "selected_not_executed"
+authority: "science_draft"
+task_id: "RT-20260814-003"
+job_id: "AJ-RT-20260814-003-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+
+packet:
+  packet_id: "PKT-V22-P4T02-B2-KSTAR-LOCALIZATION-AND-BRIDGE-IRRELEVANCE-THEOREM-V1"
+  packet_type: "source_side_irrelevance_theorem"
+  route_id: "A_KSTAR_LOCALIZATION_AND_BRIDGE_IRRELEVANCE_THEOREM"
+  route_label: "ordinary-research-packet"
+  next_role_family: "refuter@0.2.0"
+  selected_packet_executed: false
+  requires_human_gate: false
+  objective: "Determine, under exact object-class, locality, first-jet, and quotient hypotheses, whether the fixed K_star assignment has any nontrivial source-defined local bridge force, or prove a scoped irrelevance/typing obstruction for the unchanged assignment."
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Establish or refute restriction-compatible local P4-T02 bridge relevance of K_star without adding EqSrc, physical allowedness, target geometry, or response semantics."
+  result_scope: "unchanged_K_star_localization_and_bridge_relevance_only"
+
+fixed_inputs:
+  theorem_id: "THM-V22-P4T02-B2-CURRENT-SOURCE-KSTAR-ARROW-SUBCLASS-001"
+  assignment: "K_star(M)=Diff_c(M) when Diff_c(M) is proper in Diff(M), and K_star(M)={id_M} otherwise."
+  theorem_status: "fixed mathematical current-smooth-source theorem"
+  semantic_nonclaims:
+    - "not EqSrc"
+    - "not physical allowedness"
+    - "not gauge"
+    - "not a causal or response map"
+    - "not an effective metric bridge"
+    - "not adopted ontology or source law"
+  inherited_freeze_count: 6
+
+formal_domains:
+  - domain_id: "DOM-01"
+    name: "Obj4"
+    definition: "The explicitly declared nonempty smooth four-manifold object class, including compact objects and noncompact coordinate balls used by the theorem."
+  - domain_id: "DOM-02"
+    name: "Open4"
+    definition: "Pairs (M,U) with U a declared nonempty open submanifold and typed inclusion i:U->M."
+  - domain_id: "DOM-03"
+    name: "KStarObj"
+    definition: "The fixed objectwise K_star assignment and its RT002 conjugation law."
+  - domain_id: "DOM-04"
+    name: "LocalGerms"
+    definition: "Compactly supported diffeomorphism germs and first jets at declared points under explicit realization hypotheses."
+  - domain_id: "DOM-05"
+    name: "LargeQuotients"
+    definition: "Diff(M)/Diff_c(M) only where normality and the chosen object class make the quotient well formed."
+  - domain_id: "DOM-06"
+    name: "BridgeGrammar"
+    definition: "A predeclared source-only finite grammar of local codomains and natural maps; no target cone, metric, detector label, or desired answer is admitted."
+  - domain_id: "DOM-07"
+    name: "CoverData"
+    definition: "Finite declared covers, restrictions, overlaps, and composition/gluing checks."
+  - domain_id: "DOM-08"
+    name: "Evidence"
+    definition: "Exact witnesses, countermodels, factorization records, hypotheses, and falsifiers."
+  - domain_id: "DOM-09"
+    name: "Result"
+    definition: "Exclusive theorem result: scoped irrelevance, nontrivial localization-compatible bridge witness, or precise typing obstruction."
+
+formal_objects:
+  - object_id: "OBJ-01"
+    name: "CompactOpenWitness"
+    type: "(M,U,h) with M compact, U a coordinate ball, and nonidentity h in Diff_c(U)"
+  - object_id: "OBJ-02"
+    name: "RestrictionExtensionLedger"
+    type: "typed comparison of K_star(M), K_star(U), restrictions, and identity extensions"
+  - object_id: "OBJ-03"
+    name: "LocalFirstJetGroup"
+    type: "realized derivative group at a declared point"
+  - object_id: "OBJ-04"
+    name: "InvariantTensorConeAudit"
+    type: "fixed-vector, fixed-covector, and invariant-cone classifier"
+  - object_id: "OBJ-05"
+    name: "LargeQuotientRecord"
+    type: "normal subgroup quotient plus local-germ and end-data comparison"
+  - object_id: "OBJ-06"
+    name: "LocalBridgeCandidateFamily"
+    type: "finite source-defined local codomain/map grammar"
+  - object_id: "OBJ-07"
+    name: "OrbitFactorizationRecord"
+    type: "factor or exact same-orbit counterpair"
+  - object_id: "OBJ-08"
+    name: "CoverCompatibilityRecord"
+    type: "restriction, composition, overlap, and gluing evidence"
+  - object_id: "OBJ-09"
+    name: "ScopedIrrelevanceResult"
+    type: "exclusive theorem/witness/typing-obstruction sum"
+
+formal_maps:
+  - map_id: "MAP-01"
+    signature: "Restrict_K:(M,U)->Relation(K_star(M),K_star(U))"
+    purpose: "Test whether the printed objectwise assignment supplies a restriction law."
+  - map_id: "MAP-02"
+    signature: "ExtendByIdentity:Diff_c(U)->Diff(M)"
+    purpose: "Construct the compact-open witness and compare it with K_star(M)."
+  - map_id: "MAP-03"
+    signature: "Jet_x:Stab_c(x)->GL+(T_xM)"
+    purpose: "State and test the exact realized first-jet group."
+  - map_id: "MAP-04"
+    signature: "InvariantAudit:LocalFirstJetGroup x CandidateTensorCone->Bool"
+    purpose: "Test fixed vector, covector, and cone candidates under explicit hypotheses."
+  - map_id: "MAP-05"
+    signature: "EndQuotient:Diff(M)->Diff(M)/Diff_c(M)"
+    purpose: "Separate local germ data from large/end data where the quotient is valid."
+  - map_id: "MAP-06"
+    signature: "BridgeMap_i:LocalSourceData->B_i"
+    purpose: "Represent only independently source-defined local bridge candidates."
+  - map_id: "MAP-07"
+    signature: "Factor_i(BridgeMap_i,OrbitLocal)->Option(FactorWitness)"
+    purpose: "Decide collapse through full local-diffeomorphism orbits."
+  - map_id: "MAP-08"
+    signature: "Glue_i(CoverData,BridgeMap_i)->CompatibilityRecord"
+    purpose: "Check restrictions, overlaps, composition, and gluing."
+  - map_id: "MAP-09"
+    signature: "Decide(Evidence)->Result"
+    purpose: "Return exactly one scoped result without promotion."
+
+theorem_targets:
+  - theorem_id: "THM-01"
+    name: "CompactOpenRestrictionNonExhaustion"
+    target: "Prove that the unchanged K_star assignment is not a restriction-exhaustive presheaf on the compact-open witness."
+  - theorem_id: "THM-02"
+    name: "LocalFirstJetNoCanonicalVectorCovectorCone"
+    target: "Under the stated first-jet realization hypothesis, prove absence of a nonzero invariant vector/covector and proper invariant Lorentzian cone."
+  - theorem_id: "THM-03"
+    name: "LargeQuotientLocalInformationSeparation"
+    target: "Prove that large-diffeomorphism cosets can vary while the declared local germ is fixed, or identify the first failed quotient hypothesis."
+  - theorem_id: "THM-04"
+    name: "BridgeRelevanceFactorCriterion"
+    target: "Establish the necessary source-codomain, naturality, nonfactorization, restriction, and gluing conditions for K_star bridge force."
+  - theorem_id: "THM-05"
+    name: "ExclusiveScopedDecision"
+    target: "Return scoped irrelevance, a nontrivial local bridge witness, or a precise typing obstruction."
+
+proof_obligations:
+  - obligation_id: "PO-01"
+    text: "Bind the RT002 theorem, parent fusion, handoff, plan, and current source files by live hashes."
+  - obligation_id: "PO-02"
+    text: "Hold the RT002 piecewise K_star definition and conjugation theorem fixed."
+  - obligation_id: "PO-03"
+    text: "Declare the object class and compact/noncompact hypotheses before selecting witnesses."
+  - obligation_id: "PO-04"
+    text: "Construct a nonidentity compactly supported chart diffeomorphism and its identity extension exactly."
+  - obligation_id: "PO-05"
+    text: "Distinguish restriction nonexhaustion from impossibility of every enriched localization."
+  - obligation_id: "PO-06"
+    text: "State the exact local first-jet realization and regularity hypotheses."
+  - obligation_id: "PO-07"
+    text: "Prove the vector, covector, and proper-cone claims representation by representation."
+  - obligation_id: "PO-08"
+    text: "Distinguish mathematical orientation sheets from physical time orientation."
+  - obligation_id: "PO-09"
+    text: "Use Diff/Diff_c only where normality and object-class hypotheses are verified."
+  - obligation_id: "PO-10"
+    text: "Exhibit same-local-germ/different-large-data representatives or return a precise obstruction."
+  - obligation_id: "PO-11"
+    text: "Predeclare every bridge codomain/map and prove independent current-source provenance."
+  - obligation_id: "PO-12"
+    text: "Check naturality, orbit factorization, restrictions, compositions, overlaps, and gluing."
+  - obligation_id: "PO-13"
+    text: "Preserve all six freezes and every downstream claim block."
+  - obligation_id: "PO-14"
+    text: "Return one exclusive scoped result with falsifier and no global no-go overread."
+
+failure_branches:
+  - branch_id: "FB-01"
+    trigger: "The RT002 K_star definition or theorem is altered."
+    result: "invalid_packet_boundary"
+  - branch_id: "FB-02"
+    trigger: "The object class or compactness assumptions are not predeclared."
+    result: "precise_object_class_typing_obstruction"
+  - branch_id: "FB-03"
+    trigger: "A restriction or gluing law is assumed from objectwise conjugation naturality."
+    result: "locality_smuggling_obstruction"
+  - branch_id: "FB-04"
+    trigger: "The local first-jet realization hypothesis is absent or false."
+    result: "scoped_first_jet_typing_obstruction"
+  - branch_id: "FB-05"
+    trigger: "A mathematical orientation result is labeled physical time orientation."
+    result: "physical_semantics_overread"
+  - branch_id: "FB-06"
+    trigger: "Diff/Diff_c is used without normality or a valid object class."
+    result: "quotient_formation_obstruction"
+  - branch_id: "FB-07"
+    trigger: "A large/end quotient is called a local response without a source-defined map."
+    result: "bridge_semantics_smuggling_obstruction"
+  - branch_id: "FB-08"
+    trigger: "A bridge codomain or map is selected by target cone, metric, response label, or desired P4 success."
+    result: "forbidden_target_import"
+  - branch_id: "FB-09"
+    trigger: "The candidate map factors through full local orbits or fails restriction/gluing."
+    result: "scoped_k_star_bridge_irrelevance_theorem"
+  - branch_id: "FB-10"
+    trigger: "A nontrivial source-provenanced map passes naturality, nonfactorization, restriction, and gluing."
+    result: "localization_compatible_nontrivial_bridge_relevance_witness"
+  - branch_id: "FB-11"
+    trigger: "A scoped result is promoted to universal source-extension impossibility or global theory rejection."
+    result: "claim_boundary_violation"
+  - branch_id: "FB-12"
+    trigger: "EqSrc, physical allowedness, adoption, D7/B2/P4-T03, or downstream GR claims are assigned."
+    result: "authority_boundary_violation"
+
+permitted_results:
+  - "scoped_k_star_bridge_irrelevance_theorem"
+  - "localization_compatible_nontrivial_bridge_relevance_witness"
+  - "precise_localization_or_factorization_typing_obstruction"
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+
+distance_to_gr_contract:
+  row_count: 14
+  every_row_status: "no_delta"
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+
+authority_limits:
+  selected_packet_executed: false
+  theorem_truth_inferred: false
+  source_extension_constructed: false
+  eqsrc_assigned: false
+  k_star_adopted: false
+  physical_allowedness_assigned: false
+  physical_causality_assigned: false
+  empirical_response_semantics_assigned: false
+  source_law_adopted_or_rejected: false
+  canonical_ontology_modified: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

@@ -480,6 +480,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-BOUNDED-CURRENT-SIGNATURE-CENSUS-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260812-001/artifacts/v22_p4_t02_b2_post_bounded_current_signature_census_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-COMMON-CHARACTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-013/artifacts/v22_p4_t02_b2_post_common_character_route_selection_v1.tex`
+- `TEX-V22-P4-T02-B2-POST-CURRENT-SOURCE-KSTAR-THEOREM-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260814-003/artifacts/v22_p4_t02_b2_post_current_source_k_star_theorem_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-FINITE-BRIDGE-PROVENANCE-OBSTRUCTION-THEORETICAL-SELECTION-V1` `research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_post_line_lock_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-ORIENTED-MATROID-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_route_selection_v1.tex`

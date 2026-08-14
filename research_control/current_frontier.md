@@ -3,14 +3,14 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260814-002` and `handoff-1032`.
+`RT-20260814-003` and `handoff-1033`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-14T16:15:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"8b69d6823206670dfcee79d3a6a8d68cb7c0f2f5","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"b19d14d61c84484091ed5eea70443fe2ae7305f05489ef83210e8c5cb6e77f12"},{"path":"research_control/handoffs/handoff-1032.yaml","sha256":"d0a050e0b58e55f7370a16fa0ad37688bf04584381f5af0a2cdf8c1589e83d11"},{"path":"research_control/program_state.yaml","sha256":"8aa07222ad9f98623556d5cd2d7c60e3bb5e2f0093892fdfd894943fac5471f3"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"f0822dbdf7ccc0503888256447833054921c270c05ec626b4083195f13a2de77","source_path_count":"12","task_count":"1287"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-14T22:20:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"4080512fcec14b072f59eecf1d29b690dbfc87af","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"f372b61b673da76240303c3793c1d92cc4e94bfbaad4b1892b190fb661bbf828"},{"path":"research_control/handoffs/handoff-1033.yaml","sha256":"962ce5ef0e3691f76581f844e4eddd0670f59191dbf8a14466a6e232b55dbcf8"},{"path":"research_control/program_state.yaml","sha256":"932429139a66eba18988881bc06d5f41f1b872ec2fc5e0a3fea55a7860978200"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"8c84b5242f004ff93a162854f6544f7286c9075510c9394ecf4ba895464b587a","source_path_count":"12","task_count":"1288"} -->
 
 ## Generated-Report Provenance
 
@@ -19,11 +19,11 @@ tracked authority files govern.
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `current_frontier` |
-| Source commit | `8b69d6823206670dfcee79d3a6a8d68cb7c0f2f5` |
-| Source-derived generation time | `2026-08-14T16:15:00Z` |
-| Tracked task count | 1287 |
+| Source commit | `4080512fcec14b072f59eecf1d29b690dbfc87af` |
+| Source-derived generation time | `2026-08-14T22:20:00Z` |
+| Tracked task count | 1288 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `f0822dbdf7ccc0503888256447833054921c270c05ec626b4083195f13a2de77` |
+| Source manifest SHA-256 | `8c84b5242f004ff93a162854f6544f7286c9075510c9394ecf4ba895464b587a` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -31,9 +31,9 @@ tracked authority files govern.
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `b19d14d61c84484091ed5eea70443fe2ae7305f05489ef83210e8c5cb6e77f12`
-- `research_control/handoffs/handoff-1032.yaml`: `d0a050e0b58e55f7370a16fa0ad37688bf04584381f5af0a2cdf8c1589e83d11`
-- `research_control/program_state.yaml`: `8aa07222ad9f98623556d5cd2d7c60e3bb5e2f0093892fdfd894943fac5471f3`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `f372b61b673da76240303c3793c1d92cc4e94bfbaad4b1892b190fb661bbf828`
+- `research_control/handoffs/handoff-1033.yaml`: `962ce5ef0e3691f76581f844e4eddd0670f59191dbf8a14466a6e232b55dbcf8`
+- `research_control/program_state.yaml`: `932429139a66eba18988881bc06d5f41f1b872ec2fc5e0a3fea55a7860978200`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_current_frontier.py`: `62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6`
@@ -47,15 +47,15 @@ or claim-promotion authority.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260814-002` |
-| Latest handoff ID | `handoff-1032` |
-| Current status | `v22_p4_t02_current_source_k_star_theorem_selector_selected_checkpoint_pending` |
+| Active task ID | `RT-20260814-003` |
+| Latest handoff ID | `handoff-1033` |
+| Current status | `v22_p4_t02_kstar_localization_bridge_irrelevance_theorem_selected_checkpoint_pending` |
 | V16 completed | false |
-| Current route family | formalization or theorem (scientific) |
+| Current route family | integration or selection (scientific) |
 | Target derivation milestone | `effective_metric_g_eff` |
 | Current burden | `g_eff` |
-| Required next authority | One governed RT-20260814-002 checkpoint followed by one separately admitted theoretical selector comparing materially distinct bridge-facing consequences or source-side irrelevance of K_star. |
-| Next recommended action | Run the single governed checkpoint for AJ-RT-20260814-002-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-THEOREM-THEORETICAL-CONTINUATION-SELECTION-V1. Decide whether K_star has a materially distinct bridge-facing P4-T02 role or is source-side classification only. Do not replay the six-candidate audit, adopt K_star, preselect Route C, assign Phi_src semantics, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
+| Required next authority | One governed RT-20260814-003 checkpoint followed by one separately admitted Refuter theorem packet for the unchanged K_star localization and bridge-relevance burden. |
+| Next recommended action | Run the single governed checkpoint for AJ-RT-20260814-003-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-KSTAR-LOCALIZATION-AND-BRIDGE-IRRELEVANCE-THEOREM-V1. Return a scoped K_star bridge-irrelevance theorem, a nontrivial localization-compatible source-provenanced bridge witness, or the first precise localization/factorization typing obstruction. Do not execute the packet before checkpoint, adopt K_star, add EqSrc or physical allowedness, overread orientation, claim a global no-go, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
 
 ## Active-State Bifurcation
 
@@ -66,9 +66,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260814-002` |
-| Latest research handoff ID | `handoff-1032` |
-| Latest research next action | Run the single governed checkpoint for AJ-RT-20260814-002-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-THEOREM-THEORETICAL-CONTINUATION-SELECTION-V1. Decide whether K_star has a materially distinct bridge-facing P4-T02 role or is source-side classification only. Do not replay the six-candidate audit, adopt K_star, preselect Route C, assign Phi_src semantics, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
+| Latest research task ID | `RT-20260814-003` |
+| Latest research handoff ID | `handoff-1033` |
+| Latest research next action | Run the single governed checkpoint for AJ-RT-20260814-003-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-KSTAR-LOCALIZATION-AND-BRIDGE-IRRELEVANCE-THEOREM-V1. Return a scoped K_star bridge-irrelevance theorem, a nontrivial localization-compatible source-provenanced bridge witness, or the first precise localization/factorization typing obstruction. Do not execute the packet before checkpoint, adopt K_star, add EqSrc or physical allowedness, overread orientation, claim a global no-go, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -101,12 +101,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260814-002/00_TASK.yaml`.
-- Active task objective: Execute PKT-V22-P4T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1 by extracting the exact registered current-source signature, forming or precisely obstructing its semantic model/isomorphism groupoid, and auditing exactly six predeclared asymmetry codomains for typing, naturality, automorphism invariance, and current-reduct factorization without finite-fixture replay or new source structure.
-- Latest handoff path: `research_control/handoffs/handoff-1032.yaml`.
-- Latest handoff summary: RT-20260814-002 returns the exact current_source_equivariant_asymmetry_derivation_theorem. Under the inert unresolved-debt-marker reading, the current semantic groupoid is SmoothMan_4^iso. The K_star compact-support-or-identity assignment is a current-smooth-structure-defined, all-diffeomorphism-natural, objectwise proper, globally nonidentity wide normal subgroupoid and the only positive member of the six-candidate audit. This is mathematical classification only: K_star is not adopted EqSrc, physical allowedness, a presentation selector, causality, empirical response, or effective geometry. All six freezes and fourteen no-delta rows remain fixed. One theoretical selector packet is selected but not executed.
-- Current route family: formalization or theorem (scientific).
-- Next recommended action: Run the single governed checkpoint for AJ-RT-20260814-002-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-THEOREM-THEORETICAL-CONTINUATION-SELECTION-V1. Decide whether K_star has a materially distinct bridge-facing P4-T02 role or is source-side classification only. Do not replay the six-candidate audit, adopt K_star, preselect Route C, assign Phi_src semantics, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
+- Active task path: `research_control/tasks/RT-20260814-003/00_TASK.yaml`.
+- Active task objective: Compare exactly four post-theorem routes after K_star was derived as a current-smooth-source natural arrow classifier: a scoped locality and bridge-irrelevance theorem, a localization-compatible bridge candidate, a proposal-only K_star-to-EqSrc source-law formalization, and a protected human-gated ontology stop; preserve all six freezes; select exactly one future packet without executing it.
+- Latest handoff path: `research_control/handoffs/handoff-1033.yaml`.
+- Latest handoff summary: RT-20260814-003 compared exactly four post-K_star continuations and selected Route A by parent-child consensus. The selected future source_side_irrelevance_theorem tests compact-open restriction, local first-jet isotropy, large-quotient locality, and a source-defined bridge-factor criterion for the unchanged K_star assignment. The packet is not executed. K_star remains mathematical objectwise classification only, not EqSrc physical allowedness gauge response causality or an effective-metric bridge. All six freezes and fourteen no-delta rows remain fixed.
+- Current route family: integration or selection (scientific).
+- Next recommended action: Run the single governed checkpoint for AJ-RT-20260814-003-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-KSTAR-LOCALIZATION-AND-BRIDGE-IRRELEVANCE-THEOREM-V1. Return a scoped K_star bridge-irrelevance theorem, a nontrivial localization-compatible source-provenanced bridge witness, or the first precise localization/factorization typing obstruction. Do not execute the packet before checkpoint, adopt K_star, add EqSrc or physical allowedness, overread orientation, claim a global no-go, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -336,7 +336,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the single governed checkpoint for AJ-RT-20260814-002-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-THEOREM-THEORETICAL-CONTINUATION-SELECTION-V1. Decide whether K_star has a materially distinct bridge-facing P4-T02 role or is source-side classification only. Do not replay the six-candidate audit, adopt K_star, preselect Route C, assign Phi_src semantics, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
+Run the single governed checkpoint for AJ-RT-20260814-003-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-KSTAR-LOCALIZATION-AND-BRIDGE-IRRELEVANCE-THEOREM-V1. Return a scoped K_star bridge-irrelevance theorem, a nontrivial localization-compatible source-provenanced bridge witness, or the first precise localization/factorization typing obstruction. Do not execute the packet before checkpoint, adopt K_star, add EqSrc or physical allowedness, overread orientation, claim a global no-go, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -364,9 +364,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260814-002`;
-- latest handoff: `handoff-1032`;
-- current status: `v22_p4_t02_current_source_k_star_theorem_selector_selected_checkpoint_pending`;
+- active task: `RT-20260814-003`;
+- latest handoff: `handoff-1033`;
+- current status: `v22_p4_t02_kstar_localization_bridge_irrelevance_theorem_selected_checkpoint_pending`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -376,8 +376,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-1032.yaml`
-- `research_control/tasks/RT-20260814-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-1033.yaml`
+- `research_control/tasks/RT-20260814-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -393,7 +393,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 1032*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 1033*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

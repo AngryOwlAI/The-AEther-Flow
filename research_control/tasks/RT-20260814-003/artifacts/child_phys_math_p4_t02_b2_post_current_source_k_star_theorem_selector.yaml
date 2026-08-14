@@ -1,0 +1,820 @@
+schema_id: "child_phys_math_p4_t02_b2_post_current_source_k_star_theorem_selector_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-POST-CURRENT-SOURCE-KSTAR-THEOREM-SELECTOR-001"
+artifact_type: "parent_child_synthesis_child_output"
+authority: "science_draft"
+status: "complete_for_parent_synthesis"
+status_label: "draft/control"
+task_id: "RT-20260814-003"
+job_id: "AJ-RT-20260814-003-001"
+decision_id: "DDR-20260814-003"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260814-003"
+claim_boundary_id: "CB-V22-P4-T02-B2-POST-CURRENT-SOURCE-KSTAR-THEOREM-THEORETICAL-SELECTION-001"
+created_at: "2026-08-14T22:08:30Z"
+source_head: "4080512fcec14b072f59eecf1d29b690dbfc87af"
+source_tree: "55b345fcbfa0481c35c895617efb824c915f76c6"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Decide whether K_star has any source-derived local bridge-facing P4-T02 role or only global mathematical classification value before proposing a new source law or bridge."
+
+ownership_boundary:
+  owned_path: "research_control/tasks/RT-20260814-003/artifacts/child_phys_math_p4_t02_b2_post_current_source_k_star_theorem_selector.yaml"
+  files_written_count: 1
+  other_files_modified: false
+  peer_child_file_inspected: false
+  parent_artifact_modified: false
+  control_file_modified: false
+  registry_modified: false
+  canonical_ontology_modified: false
+  completion_created: false
+  handoff_created: false
+  checkpoint_executed: false
+  child_agentjob_created: false
+
+execution_controls:
+  outer_agentjob_count: 1
+  internal_child_count: 2
+  child_agentjob_count: 0
+  exact_route_count: 4
+  selected_route_count: 1
+  selected_future_packet_count: 1
+  selected_future_packet_executed: false
+  successor_created: false
+  six_candidate_audit_replayed: false
+  k_star_repaired_or_redefined: false
+  k_star_adopted_as_eqsrc: false
+  k_star_adopted_as_physical_allowedness: false
+  phi_src_typed: false
+  frozen_route_reopened: false
+  source_primitive_adopted: false
+  source_law_adopted: false
+  target_or_empirical_import_used: false
+  d7_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked_or_executed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+
+fixed_predecessor_result:
+  predecessor_task_id: "RT-20260814-002"
+  predecessor_job_id: "AJ-RT-20260814-002-001"
+  completion_id: "AJC-AJ-RT-20260814-002-001"
+  result_type: "current_source_equivariant_asymmetry_derivation_theorem"
+  theorem_id: "THM-V22-P4T02-B2-CURRENT-SOURCE-KSTAR-ARROW-SUBCLASS-001"
+  positive_candidate_id: "ASYM-ARROW-SUBCLASS"
+  fixed_statement: "Under the inert unresolved-debt-marker reading, the current typed semantic groupoid is SmoothMan_4^iso. For every nonempty smooth four-manifold M, K_star(M) is Diff_c(M) when Diff_c(M) is a proper subgroup of Diff(M), and is {id_M} otherwise. This defines an all-diffeomorphism-natural, objectwise proper, globally nonidentity wide normal subgroupoid and is current-reduct factorable."
+  exact_caveat: "The theorem is mathematical classification only. It does not adopt K_star as EqSrc, a physical allowed-arrow law, a presentation selector, causality, response, a cone, or an effective metric."
+  held_fixed_without_replay: true
+  theorem_reproved_or_corrected: false
+  current_source_derivation_scope: "objectwise_global_mathematical_arrow_classifier"
+  local_restriction_or_gluing_established_by_predecessor: false
+  bridge_relevance_established_by_predecessor: false
+  physical_meaning_established_by_predecessor: false
+
+source_binding:
+  binding_note: "Tracked registered sources and control records govern. The hashes below were recomputed from live bytes before child completion. Mutable current-task control hashes require parent terminal rebinding after completion-state edits."
+  hash_algorithm: "sha256"
+  governing_source_count: 22
+  governing_sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      authority: "control"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      authority: "control"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      authority: "control"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      authority: "workflow_contract"
+    - path: "research_control/tasks/RT-20260814-003/00_TASK.yaml"
+      sha256: "e2d465fea8f20c911083677c97672c221b2b5f8b5af4c8069943a5e957d3efe7"
+      authority: "tracked_control_state_terminal"
+    - path: "research_control/tasks/RT-20260814-003/DDR-20260814-003.md"
+      sha256: "435505cc4d80ae42143213d7ee2dfb2093ddab8a20756b685ee2d948041808b2"
+      authority: "tracked_control_state_terminal"
+    - path: "research_control/tasks/RT-20260814-003/jobs/AJ-RT-20260814-003-001.yaml"
+      sha256: "1a6d9e719fcd3a4e40374a4c981eff17bc0039ea137cc9924832bb3afa0ba2b4"
+      authority: "tracked_control_state_terminal"
+    - path: "research_control/tasks/RT-20260814-003/roles/theoretical-continuation-selector@0.1.0--RT-20260814-003.yaml"
+      sha256: "ac627e01d41e4c087e7c7f75c21183d7070c62d8d871daee02cc621c7775c39c"
+      authority: "execution_role_terminal"
+    - path: "research_control/handoffs/handoff-1032.yaml"
+      sha256: "d0a050e0b58e55f7370a16fa0ad37688bf04584381f5af0a2cdf8c1589e83d11"
+      authority: "tracked_control_state"
+    - path: "research_control/handoffs/handoff-1032.md"
+      sha256: "502d6f60b6896f687cd1d6beb0a5d23621618d97b207d9d8bbbcfa58f7b62996"
+      authority: "tracked_control_state"
+    - path: ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+      sha256: "85550a50a4be3fc2b1fbf6e22b22c160b25923944276d0b555e75fb10380ff79"
+      authority: "role_contract"
+    - path: ".agents/roles/physics/refuter.v0.2.0.md"
+      sha256: "01b7897ecf5861d952d7349e3eb743feed6f178112264de73f5226d3c88946fc"
+      authority: "role_contract"
+    - path: ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+      sha256: "f6534fd2950c2a6eefb8f2a4b255cd0794ceeb1462556be60af288bceb9d51d5"
+      authority: "role_contract"
+    - path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+      sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+      authority: "role_contract"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      authority: "control"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      authority: "project_control"
+    - path: "research_control/tasks/RT-20260814-002/artifacts/v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_v1.tex"
+      sha256: "66953e112dee3ca9c5a7c6de9f255979c4fedbccd32be924c24563de8c5d372f"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260814-002/artifacts/parent_fusion_notes_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit.md"
+      sha256: "5a006c8bc8340f75fef73e4437dbd2ed47b0519a5e70ba561a8c76e2586863d2"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260814-002/artifacts/v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_record_v1.yaml"
+      sha256: "4dc2f288b45abf16a36384842cd757d6707c549c9968495581ee313086cf71c8"
+      authority: "science_draft"
+    - path: "research_control/tasks/RT-20260814-002/artifacts/v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_controls_v1.yaml"
+      sha256: "e730c73d3fb9641eb18e1d1b71aaf37c08e082c24cee4cbc654024a98d5ccfc6"
+      authority: "science_draft"
+    - path: "registries/TEX_SOURCE_REGISTRY.csv"
+      sha256: "801ecfa75ebf7f3d5607f8ea8af1de31213e076e7145b7f6105c8b76be33bbd6"
+      authority: "registry"
+    - path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      sha256: "88a24678134d9608369fedb86439cbafa50fa0f390db75efb87b5af673244574"
+      authority: "registry"
+  registry_row_checks:
+    tex_object_id: "TEX-V22-P4-T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1"
+    tex_registered_hash_matches: true
+    markdown_object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1"
+    markdown_registered_hash_matches: true
+
+formal_domains:
+  domain_count: 13
+  domains:
+    - domain_id: "DOM-01"
+      symbol: "C_cur"
+      definition: "SmoothMan_4^iso, the RT002 current typed groupoid of nonempty smooth four-manifolds and all diffeomorphisms, used for mathematical naturality only and not adopted as EqSrc."
+    - domain_id: "DOM-02"
+      symbol: "Open(M)"
+      definition: "The poset of nonempty open subsets U of one M in C_cur, with inclusions V subset U."
+    - domain_id: "DOM-03"
+      symbol: "LDiff(M)"
+      definition: "The local-diffeomorphism pseudogroup whose arrows are triples (U,V,f) with U and V open in M and f:U->V a diffeomorphism."
+    - domain_id: "DOM-04"
+      symbol: "K_star(U)"
+      definition: "The exact RT002 two-branch object assignment applied to U as a nonempty smooth four-manifold; it is not silently replaced by a sheafification or local pseudogroup."
+    - domain_id: "DOM-05"
+      symbol: "Diff_c(U)"
+      definition: "Diffeomorphisms of U whose support is compact in the intrinsic topology of U."
+    - domain_id: "DOM-06"
+      symbol: "Emb_c(U,M)"
+      definition: "Open inclusions U into M together with diffeomorphisms of U supported in a compact subset of U, so identity extension to M is smooth."
+    - domain_id: "DOM-07"
+      symbol: "Germ_x(M)"
+      definition: "The groupoid of germs at x of local diffeomorphisms fixing x, with first-jet map to GL(T_xM)."
+    - domain_id: "DOM-08"
+      symbol: "J_x(K_star)"
+      definition: "The subgroup of GL(T_xM) realized as first derivatives at x of K_star(M) elements fixing x."
+    - domain_id: "DOM-09"
+      symbol: "Q_inf(M)"
+      definition: "The algebraic quotient Diff(M)/Diff_c(M) on the declared noncompact object class, using normality of Diff_c(M); no topology or universal end structure is assumed."
+    - domain_id: "DOM-10"
+      symbol: "X_src"
+      definition: "A future packet's explicitly source-defined presheaf or sheaf of local source data, formed without target atlas, metric, cone, response label, or Phi_src semantics."
+    - domain_id: "DOM-11"
+      symbol: "B_loc"
+      definition: "A future packet's independently source-defined local bridge codomain with declared restriction and gluing operations; it is not physical merely by being local."
+    - domain_id: "DOM-12"
+      symbol: "X_src/LDiff"
+      definition: "The full local-diffeomorphism orbit quotient used only to test whether a proposed K_star-sensitive map has discriminator force beyond the bare smooth local symmetry."
+    - domain_id: "DOM-13"
+      symbol: "Cert_A"
+      definition: "The coproduct of one scoped K_star localization or bridge-irrelevance theorem certificate and one explicit source-only counterexample certificate defeating that theorem."
+
+formal_maps:
+  map_count: 13
+  maps:
+    - map_id: "MAP-01"
+      signature: "res_(Uprime subset U):(U,V,f)->(Uprime,f(Uprime),f|Uprime)"
+      definition: "The canonical restriction of a local diffeomorphism to a smaller open domain."
+    - map_id: "MAP-02"
+      signature: "res^U_V:Stab(V;Diff(U))->Diff(V)"
+      definition: "The partial group restriction f->f|V, defined only when f(V)=V; the selected theorem tests whether it lands in K_star(V)."
+    - map_id: "MAP-03"
+      signature: "ext^M_U:Diff_c(U)->Diff(M)"
+      definition: "Extend a compactly supported diffeomorphism of U by the identity outside U."
+    - map_id: "MAP-04"
+      signature: "glue:{f_i on U_i compatible on overlaps}->f on union(U_i)"
+      definition: "The standard local-diffeomorphism gluing operation; a claimed K_star local law must be closed under it."
+    - map_id: "MAP-05"
+      signature: "germ_x:Stab_x(Diff(M))->Germ_x(M)"
+      definition: "Take the local germ at x of a global diffeomorphism fixing x."
+    - map_id: "MAP-06"
+      signature: "j1_x:Germ_x(M)->GL(T_xM)"
+      definition: "Take the derivative of a local germ at its fixed point."
+    - map_id: "MAP-07"
+      signature: "q_inf:Diff(M)->Q_inf(M)"
+      definition: "Quotient by compactly supported diffeomorphisms on the declared object class."
+    - map_id: "MAP-08"
+      signature: "pi_U:X_src(U)->X_src(U)/LDiff(U)"
+      definition: "The full local-diffeomorphism orbit quotient for one explicit action on local source data."
+    - map_id: "MAP-09"
+      signature: "b_U:X_src(U)->B_loc(U)"
+      definition: "A hypothetical source-defined local bridge map whose K_star invariance, restriction compatibility, gluing, and nonfactorization through pi_U must all be proved."
+    - map_id: "MAP-10"
+      signature: "rho^X_UV:X_src(U)->X_src(V)"
+      definition: "The declared restriction map for local source data."
+    - map_id: "MAP-11"
+      signature: "rho^B_UV:B_loc(U)->B_loc(V)"
+      definition: "The declared restriction map for the local bridge codomain."
+    - map_id: "MAP-12"
+      signature: "NatBridge:{b_U}_U with rho^B_UV composed b_U = b_V composed rho^X_UV"
+      definition: "The restriction-naturality square required before local bridge relevance can be claimed."
+    - map_id: "MAP-13"
+      signature: "Outcome_A:Audit(K_star,res,ext,germ,q_inf,NatBridge)->Cert_A"
+      definition: "Return exactly one scoped irrelevance certificate or one explicit source-only bridge-facing counterexample; no adoption follows."
+
+locality_and_germ_hypotheses:
+  printed_assignment_scope: "K_star is held exactly as RT002 defined it objectwise on every nonempty smooth four-manifold."
+  compact_control_object: "Any compact nonempty smooth four-manifold M with a relatively compact coordinate ball U diffeomorphic to R4."
+  open_control_object: "The coordinate ball U, intrinsically noncompact."
+  restriction_control_pair: "M=R4 and U=R4 minus {0}, with a compactly supported diffeomorphism fixing 0 but moving every sufficiently small nonzero point."
+  germ_control_object: "M=R4 at x=0."
+  jet_regularities:
+    - "All manifolds and maps are smooth."
+    - "Only orientation-preserving first jets are asserted realizable by compactly supported diffeomorphisms of connected R4."
+    - "The no-cone result uses the exact hypothesis J_0(K_star) contains GL^+(4,R)."
+    - "No claim is made that every nonlinear local diffeomorphism germ extends compactly."
+  local_cone_hypothesis: "A proposed cone at x is a nonempty proper subset of T_xM minus {0}, or of T_x^*M minus {0}, invariant under every admitted K_star germ fixing x."
+  lorentzian_cone_scope: "A time or hyperbolicity cone is proper and nonempty, so invariance under the transitive GL^+(4,R) action is impossible."
+  orientation_precision: "Compactly supported diffeomorphisms on connected oriented R4 have positive Jacobian orientation class, but invariance of both mathematical orientation sheets does not select one and does not establish physical time orientation."
+  quotient_scope: "Q_inf is algebraic and object-class dependent. Without an independently defined topology, ends, asymptotic condition, or local codomain, it carries only a coarse large-transformation classification."
+
+new_mathematical_payload:
+  payload_count: 5
+  items:
+    - payload_id: "PAYLOAD-RT003-PM-001"
+      payload_type: "countermodel_or_obstruction"
+      name: "compact-versus-open identity-extension and gluing countermodel"
+      statement: "Let M be compact and let U be a coordinate ball diffeomorphic to R4. Then K_star(M)={id_M}, while K_star(U)=Diff_c(U). A nonidentity f in Diff_c(U) extends by identity to a nonidentity diffeomorphism ext^M_U(f), which is excluded from K_star(M). The compatible pair f on U and id on M minus supp(f) therefore glues outside the printed K_star assignment."
+      proof: "Every support in compact M is compact, so Diff_c(M)=Diff(M) and the fallback branch gives K_star(M)={id_M}. Intrinsic noncompactness of U and a transported translation show Diff_c(U) is proper in Diff(U), so K_star(U)=Diff_c(U). Choose a nonzero compactly supported vector field in U and a nonidentity small-time flow f. Because f is identity near the boundary of its compact support, it extends smoothly by identity and glues with the outside identity, but the resulting global map is nonidentity and hence not in K_star(M)."
+      falsifier: "Show that M is not compact, U is not intrinsically noncompact, f is not compactly supported in U, identity extension is not smooth, or ext^M_U(f) equals id_M."
+      scope_limit: "This countermodel proves that the printed objectwise assignment supplies no extension-and-gluing-compatible local law. It does not prove that every enriched localization or new source law is impossible."
+      burden_effect: "pressures_K_star_bridge_relevance"
+    - payload_id: "PAYLOAD-RT003-PM-002"
+      payload_type: "countermodel_or_obstruction"
+      name: "punctured-open restriction countermodel"
+      statement: "There exists f in K_star(R4) fixing 0 such that f restricts to a diffeomorphism of U=R4 minus {0}, but f|U is not in K_star(U)."
+      proof: "Let X(x)=chi(|x|)x for a smooth compactly supported bump chi equal to one near zero, and take a nonzero sufficiently small-time flow f. Then f fixes zero, moves every sufficiently small nonzero point, and has compact support in R4, so f lies in K_star(R4)=Diff_c(R4). The restriction preserves U. Its support in U accumulates at the deleted point and is not compact in U. Since a dilation on U has noncompact support, Diff_c(U) is proper and K_star(U)=Diff_c(U); hence f|U is excluded."
+      falsifier: "Prove that the restricted support is compact in U, that f does not preserve U, or that Diff_c(U)=Diff(U)."
+      scope_limit: "The statement concerns the canonical partial restriction of the printed assignment along one invariant open subset; it is not a no-go for all alternative pseudogroups."
+      burden_effect: "shows_restriction_failure"
+    - payload_id: "PAYLOAD-RT003-PM-003"
+      payload_type: "theorem_with_hypotheses_and_proof"
+      name: "compact-support first-jet isotropy and local no-cone lemma"
+      statement: "At zero in R4, first jets of compactly supported diffeomorphisms fixing zero contain GL^+(4,R). Consequently no nonempty proper vector or covector cone, nonzero vector or covector, or Lorentzian conformal class is invariant under all such first jets."
+      proof: "For A in GL^+(4,R), choose a smooth path A_t from I to A. Near zero use the time-dependent linear vector field X_t(y)=dot(A_t) A_t^{-1} y and multiply it by a bump equal to one near zero. Its compactly supported flow fixes zero and has derivative A_t there, so the time-one derivative is A. GL^+(4,R) acts transitively on nonzero vectors and on nonzero covectors; an invariant nonempty subset is therefore the entire punctured space, not a proper Lorentzian cone. A fixed nonzero vector or covector and a conformal Lorentzian class would have proper stabilizers, so none is selected."
+      falsifier: "Exhibit A in GL^+(4,R) that cannot be realized by the stated compactly supported flow construction, or exhibit a nonempty proper subset of the punctured vector or covector space invariant under all GL^+(4,R)."
+      scope_limit: "The conclusion holds under the displayed smooth first-jet and invariance hypotheses at the R4 control object. It does not assert a global no-go for richer source data, and mathematical spatial orientation is not physical time orientation."
+      burden_effect: "rules_out_cone_from_K_star_invariance_alone"
+    - payload_id: "PAYLOAD-RT003-PM-004"
+      payload_type: "source_side_irrelevance_proof"
+      name: "quotient-at-infinity local-jet erasure lemma"
+      statement: "For noncompact M, q_inf:Diff(M)->Diff(M)/Diff_c(M) kills every compactly supported local bump. On R4 it therefore identifies the identity with representatives realizing every GL^+(4,R) first jet at zero. Any construction factoring only through q_inf loses that first-order local information and cannot by itself select a proper Lorentzian cone or local principal-symbol response."
+      proof: "Normality of Diff_c(M) makes q_inf well formed. Every f_A from PAYLOAD-RT003-PM-003 lies in the kernel, so q_inf(f_A)=q_inf(id). A factorized output is constant on this kernel and hence invariant under all realized GL^+ first jets. The no-cone lemma applies."
+      falsifier: "Reject normality or the declared quotient, show that one f_A is not in Diff_c(R4), or give a quotient-factorized local output that distinguishes two representatives in the same coset."
+      scope_limit: "The quotient can classify large or asymptotic transformation classes on a declared object class. No universal topology, end structure, local response semantics, or global impossibility claim is inferred."
+      burden_effect: "classifies_Q_inf_as_global_not_local_bridge_data"
+    - payload_id: "PAYLOAD-RT003-PM-005"
+      payload_type: "packet_selection"
+      name: "restriction-germ-factor bridge relevance criterion"
+      statement: "K_star can have bridge-facing force only if a separately source-defined local datum X_src, local codomain B_loc, and natural family b_U are restriction and gluing compatible, invariant under the declared K_star action, and do not factor through the full local-diffeomorphism orbit quotient. The currently printed assignment provides none of these data and fails the two exact locality controls."
+      proof: "Restriction and gluing are formation requirements for a local bridge. If b_U factors through the full local-diffeomorphism quotient, K_star supplies no additional discriminator beyond bare smooth local equivalence. The compact-open and punctured-open controls show that the objectwise K_star groups themselves do not define the required local functor."
+      falsifier: "Construct X_src, B_loc, and b from registered current-source data, prove every restriction and gluing square, prove K_star invariance, and exhibit two full-local-diffeomorphism-related cases on which the K_star-sensitive output remains nonfactorable without importing target or empirical labels."
+      scope_limit: "This is a decision criterion and future proof burden, not an adopted bridge or a physical interpretation."
+      burden_effect: "selects_route_A_before_any_bridge_or_law_packet"
+
+theorem_results:
+  - theorem_id: "THM-RT003-PM-001"
+    name: "compact_open_identity_extension_gluing_failure"
+    status: "proved_as_selector_level_countercontrol"
+  - theorem_id: "THM-RT003-PM-002"
+    name: "punctured_open_restriction_failure"
+    status: "proved_as_selector_level_countercontrol"
+  - theorem_id: "THM-RT003-PM-003"
+    name: "GL_plus_first_jet_isotropy_no_cone"
+    status: "proved_under_exact_displayed_hypotheses"
+  - theorem_id: "THM-RT003-PM-004"
+    name: "quotient_at_infinity_local_jet_erasure"
+    status: "proved_under_noncompact_normal_quotient_hypotheses"
+  - theorem_id: "THM-RT003-PM-005"
+    name: "full_K_star_localization_and_bridge_irrelevance_theorem"
+    status: "not_executed_selected_future_packet"
+
+exact_four_route_comparison:
+  route_count: 4
+  routes:
+    - route_id: "A_KSTAR_LOCALIZATION_AND_BRIDGE_IRRELEVANCE_THEOREM"
+      packet_type: "source_side_irrelevance_theorem"
+      next_role_family: "refuter@0.2.0"
+      route_label: "ordinary-research-packet"
+      source_assumption_delta: "none"
+      source_extension_category: "derivation_from_current_ontology"
+      source_extension_import_classification: "current_smooth_source_only_no_target_import"
+      material_distinctness: "PASS"
+      material_difference_from_rt002: "RT002 proved global objectwise conjugation naturality and current-reduct factorization. Route A changes the indexing category to open subsets and local diffeomorphisms, tests partial restriction, identity extension, sheaf-style gluing, germs, first jets, quotient-at-infinity information loss, and the exact bridge-factor criterion."
+      constructive_branch: "A source-only restriction-and-gluing-compatible local codomain and nonfactorizing map would falsify irrelevance and provide an exact separately executable Route B candidate."
+      obstruction_branch: "The compact-open and punctured-open controls, together with local isotropy and quotient erasure, can prove that the printed K_star assignment has only global classification value under the exact hypotheses."
+      decision_consequence: "A scoped theorem prevents relabeling K_star as a P4 bridge and identifies the exact missing local law burden; an explicit falsifier supplies the formal inputs needed for a later constructive bridge packet."
+      tractability: "bounded_by_two_countercontrols_one_jet_model_one_quotient_test_and_one_predeclared_bridge_factor_criterion"
+      target_import_risk: "low_if_every_local_object_and_map_is_formed_from_registered_current_source_data"
+      smallest_falsifier: "One fully typed source-only local bridge family satisfying restriction, gluing, K_star invariance, and nonfactorization through the full local-diffeomorphism quotient."
+      disposition: "SELECTED"
+    - route_id: "B_KSTAR_LOCALIZATION_COMPATIBLE_BRIDGE_CANDIDATE"
+      packet_type: "source_extension_candidate"
+      next_role_family: "candidate-constructor@0.2.0"
+      route_label: "ordinary-research-packet"
+      source_assumption_delta: "At minimum, a new local pseudogroup or relation, an independently source-defined local codomain, and a natural bridge map absent from the printed K_star theorem."
+      source_extension_category: "unresolved_between_conservative_definitional_extension_and_new_ontology_primitive_until_exact_candidate_is_given"
+      source_extension_import_classification: "source_side_proposal_only_with_target_smuggling_test_required"
+      material_distinctness: "PASS_IF_EXACT_CODOMAIN_AND_MAP_ARE_PREDECLARED"
+      constructive_availability: "NOT_YET_FORMED"
+      reason_not_formed: "Sheafifying or taking germs of K_star is mathematically possible, but no independently source-defined P4-relevant codomain or map is currently provided. The R4 germ isotropy is already large enough to erase a proper cone under invariance."
+      risk: "Calling the generated local pseudogroup a bridge would merely relabel smooth local symmetry; choosing its codomain from a desired cone or response would import the target."
+      smallest_falsifier_of_deferral: "Supply the exact X_src, B_loc, b_U, restriction and gluing proofs, and a no-target provenance certificate now."
+      disposition: "DEFER_PENDING_ROUTE_A_FORMATION_OR_FALSIFIER"
+    - route_id: "C_KSTAR_EQSRC_SOURCE_LAW_FORMALIZATION"
+      packet_type: "ontology_law_research_packet"
+      next_role_family: "ontology-formalizer@0.2.0"
+      route_label_if_later_selected: "ontology-law-research-packet"
+      trigger_classification: "derivation_critical_missing_source_law"
+      current_trigger_status: "NOT_YET_ESTABLISHED_ROUTE_A_CURRENT_SOURCE_CALCULATION_REMAINS_OPEN"
+      source_assumption_delta: "A proposal-only K_star-related EqSrc, allowed-arrow, localization, or discriminator law not derived by RT002."
+      source_extension_category: "new_ontology_primitive_or_source_law_proposal"
+      source_extension_import_classification: "source_side_proposal_only_pending_smuggling_refutation_and_human_gated_adoption"
+      material_distinctness: "PASS_FORMALLY_DISTINCT"
+      adoption_status: "blocked_adoption_open_continuation"
+      reason_not_selected: "Current ontology can still be tested for a precise locality and irrelevance theorem. Proposing a law before that test would obscure whether the burden is an ordinary proof consequence or a derivation-critical missing law."
+      smallest_falsifier_of_deferral: "Show that the selected Route A objects or calculations require a new primitive before the locality question can even be formed."
+      disposition: "DEFER_UNTIL_EXACT_ROUTE_A_RESULT"
+    - route_id: "D_PROTECTED_HUMAN_GATED_ONTOLOGY_STOP"
+      packet_type: "human_gated_ontology_change_required"
+      next_role_family: "human_gate"
+      route_label: "human-gated"
+      source_assumption_delta: "none_before_explicit_human_authority"
+      source_extension_category: "human-gated"
+      material_distinctness: "PASS"
+      current_trigger_status: "NOT_MET"
+      reason_not_selected: "Route A is a lawful nonpromotional current-source theorem packet and requires no ontology adoption."
+      smallest_falsifier_of_deferral: "Prove that every Route A theorem statement or countercontrol requires canonical ontology edit or adoption rather than read-only use of the current smooth source."
+      disposition: "NOT_SELECTED_PREMATURE"
+
+constructive_preference_audit:
+  constructive_preference_required: true
+  formed_nonpromotional_constructive_packet_available_now: false
+  route_B_label_alone_counts_as_formed_candidate: false
+  route_B_missing_formal_inputs:
+    - "an independently source-defined local data domain"
+    - "a local bridge codomain"
+    - "a natural map"
+    - "restriction and gluing proofs"
+    - "a proof of nonfactorization through full local diffeomorphism"
+    - "a source-provenance and target-smuggling audit"
+  selected_route_has_constructive_falsifier_branch: true
+  constructive_falsifier_branch: "If Route A finds X_src, B_loc, and b_U satisfying every bridge-relevance criterion, its output is bridge_facing_candidate_path and supplies an exact Route B packet rather than a generic obligation."
+  reason_theorem_route_is_allowed: "The scoped theorem is genuinely new, includes four new mathematical payloads, and has a clear binary roadmap consequence. No fully typed constructive bridge candidate currently exists."
+  result: "PASS_SELECT_ROUTE_A_WITH_CONSTRUCTIVE_FALSIFIER"
+
+material_distinctness_test_for_route_A:
+  rt002_indexing_domain: "Objects and arrows of SmoothMan_4^iso under global diffeomorphisms."
+  rt002_completed_work: "Objectwise K_star definition, subgroup closure, conjugation naturality, objectwise properness, global nonidentity, and current-reduct factorization."
+  route_A_indexing_domain: "Open-subset posets, local-diffeomorphism pseudogroups, invariant-open partial restrictions, identity extensions, gluing covers, germ groupoids, first-jet isotropy, and noncompact quotient-at-infinity classes."
+  new_formal_objects:
+    - "Open(M) and LDiff(M)"
+    - "partial restriction and identity-extension maps"
+    - "Germ_x and J_x(K_star)"
+    - "Q_inf and its kernel action on local jets"
+    - "X_src, B_loc, and the bridge-factor criterion"
+  new_exact_controls:
+    - "compact M versus noncompact coordinate ball U"
+    - "R4 versus punctured R4 invariant-open restriction"
+    - "GL^+(4,R) first-jet isotropy at zero"
+    - "q_inf kernel erasure of all compactly supported first-jet variations"
+  prohibited_replay:
+    - "No re-audit of the six asymmetry candidates."
+    - "No correction of the K_star theorem."
+    - "No point orientation order root label or admission candidate reconstruction."
+    - "No use of global conjugation naturality as proof of locality."
+  exact_new_decision_consequence: "A scoped irrelevance theorem classifies K_star as global source-side mathematics and identifies a missing local law; an exact counterexample yields a formed bridge-facing candidate path."
+  result: "PASS_MATERIALLY_DISTINCT"
+
+conflict_resolution:
+  child_independent_selection: "A_KSTAR_LOCALIZATION_AND_BRIDGE_IRRELEVANCE_THEOREM"
+  parent_confirmation_received: true
+  parent_confirmed_packet_id: "PKT-V22-P4T02-B2-KSTAR-LOCALIZATION-AND-BRIDGE-IRRELEVANCE-THEOREM-V1"
+  parent_confirmed_packet_type: "source_side_irrelevance_theorem"
+  parent_confirmed_next_role: "refuter@0.2.0"
+  parent_confirmed_status: "selected_not_executed"
+  consensus_status: "aligned_without_revision"
+  blocking_conflict_present: false
+  unresolved_conflicts: []
+  peer_child_file_inspected: false
+  communication_channel: "parent_mediated_confirmation"
+  risk_note: "Consensus is valid only with the scoped hypotheses and explicit prohibition on generalizing from the printed assignment to every enriched localization or future source extension."
+
+theoretical_decision_output:
+  selected_route_id: "A_KSTAR_LOCALIZATION_AND_BRIDGE_IRRELEVANCE_THEOREM"
+  selected_next_packet_id: "PKT-V22-P4T02-B2-KSTAR-LOCALIZATION-AND-BRIDGE-IRRELEVANCE-THEOREM-V1"
+  selected_next_packet_type: "source_side_irrelevance_theorem"
+  selected_next_role_family: "refuter@0.2.0"
+  selection_status: "selected_not_executed"
+  decision_basis: "The printed K_star assignment fails exact restriction, identity-extension, and gluing controls, while its R4 compact-support germs realize GL^+(4,R) first jets and its quotient-at-infinity erases those local jets. Route A is the least assumption-expanding packet that can decide whether these facts make K_star bridge-irrelevant or admit one exact source-only counterexample. Route B is not formed without a local codomain and map, Route C is premature while a current-source computation remains, and Route D is untriggered."
+  theoretical_method: "Form the open/local-diffeomorphism domain; prove or falsify restriction, extension, gluing, germ-isotropy, quotient-erasure, and bridge-factor claims on preregistered controls; return exactly one scoped irrelevance certificate or one explicit source-only bridge-facing counterexample."
+  preserves_claim_blocks:
+    - "the exact RT002 K_star theorem and all semantic caveats"
+    - "all six inherited freezes"
+    - "all fourteen literal no_delta burdens"
+    - "Phi_src remains an unresolved debt marker"
+    - "K_star remains unadopted as EqSrc or physical allowedness"
+    - "D7 remains unevaluated and B2 remains inactive and undisposed"
+    - "P4-T03 remains locked"
+    - "no physical response cone time orientation conformal class scale g_eff coupling or Einstein equation"
+    - "no global no-go future-extension impossibility benchmark Gate proof promotion publication push or external action"
+  requires_human_gate: false
+  human_gate_reason: ""
+  source_extension_category: "derivation_from_current_ontology"
+  source_extension_import_classification: "current_smooth_source_only_no_extension_no_target_import"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Determine whether the global current-source K_star classifier has any lawful local bridge force before proposing a localization law or EqSrc extension."
+  decision_consequence: "A proved scoped irrelevance theorem makes K_star classification-only and exposes the exact missing local-law dependency; a source-only falsifier produces one separately admitted bridge-facing Candidate Constructor packet."
+  new_payload_novelty: "Moves from global objectwise conjugation naturality to two exact locality countercontrols, local first-jet isotropy, quotient-at-infinity information loss, and a restriction/gluing/nonfactorization bridge criterion."
+
+selected_future_packet_contract:
+  packet_id: "PKT-V22-P4T02-B2-KSTAR-LOCALIZATION-AND-BRIDGE-IRRELEVANCE-THEOREM-V1"
+  packet_type: "source_side_irrelevance_theorem"
+  route_id: "A_KSTAR_LOCALIZATION_AND_BRIDGE_IRRELEVANCE_THEOREM"
+  next_role_family: "refuter@0.2.0"
+  status: "selected_not_executed"
+  route_label: "ordinary-research-packet"
+  objective: "Determine, under exact source-only hypotheses, whether the printed K_star object assignment can induce any restriction-and-gluing-compatible local discriminator with bridge-facing force, or whether compact-open mismatch, germ isotropy, and quotient-at-infinity erasure prove a scoped source-side irrelevance theorem."
+  exact_current_source_inputs:
+    - "the RT002 SmoothMan_4^iso current typed groupoid"
+    - "the exact two-branch K_star assignment"
+    - "ordinary smooth open subsets local diffeomorphisms germs first jets and compact support"
+    - "Phi_src retained only as an unresolved debt marker"
+  forbidden_inputs:
+    - "a repaired or redefined K_star chosen to pass locality"
+    - "adopted EqSrc gauge or physical allowed-arrow semantics"
+    - "a target atlas target metric desired cone empirical response label or desired P4 answer"
+    - "a new Phi_src domain action generator order orientation or physical-time meaning"
+    - "reconstruction or replay of any of the six frozen candidate routes"
+    - "D7 adequacy B2 action P4-T03 Gate benchmark or promotion authority"
+  required_formal_objects:
+    - "Open(M) and LDiff(M)"
+    - "K_star(U) held to the printed assignment"
+    - "partial restriction res^U_V and identity extension ext^M_U"
+    - "compatible local gluing covers"
+    - "Germ_x and J_x(K_star)"
+    - "Q_inf on an explicit noncompact object class"
+    - "an explicitly typed candidate X_src, B_loc, and b_U only if the irrelevance theorem is challenged"
+    - "Cert_A with exactly two terminal scientific branches"
+  required_maps:
+    - "local-diffeomorphism restriction"
+    - "invariant-open partial group restriction"
+    - "identity extension of compactly supported local diffeomorphisms"
+    - "germ and first-jet maps"
+    - "q_inf quotient map"
+    - "source and codomain restrictions plus every NatBridge square"
+    - "full local-diffeomorphism orbit quotient pi_U"
+    - "Outcome_A returning one decisive certificate"
+  proof_obligations:
+    - obligation_id: "PO-A01"
+      requirement: "Bind the live RT002 theorem, fusion, record, controls, registries, plan, burden map, handoff, and task authority hashes."
+    - obligation_id: "PO-A02"
+      requirement: "Hold K_star exactly fixed and distinguish global conjugation naturality from locality."
+    - obligation_id: "PO-A03"
+      requirement: "Define Open(M), LDiff(M), partial restriction, identity extension, and gluing with all domains and compactness conventions explicit."
+    - obligation_id: "PO-A04"
+      requirement: "Reproduce the compact-versus-open countercontrol and state precisely which locality or gluing claim it defeats."
+    - obligation_id: "PO-A05"
+      requirement: "Reproduce the punctured-open restriction countercontrol or give an exact correction with a smaller valid counterexample."
+    - obligation_id: "PO-A06"
+      requirement: "Declare the exact germ and regularity hypotheses and prove which first jets compactly supported diffeomorphisms realize."
+    - obligation_id: "PO-A07"
+      requirement: "Prove the no-cone conclusion only for invariants under the displayed local isotropy group and distinguish mathematical orientation from physical time orientation."
+    - obligation_id: "PO-A08"
+      requirement: "Form Q_inf only on an object class where the quotient and normality assumptions are explicit; state what asymptotic or large-transformation information is and is not encoded."
+    - obligation_id: "PO-A09"
+      requirement: "Prove which local germ or jet data q_inf erases and do not promote algebraic quotient data to response semantics."
+    - obligation_id: "PO-A10"
+      requirement: "If a bridge-facing falsifier is proposed, define X_src, B_loc, b_U, every restriction and gluing square, K_star invariance, and failure to factor through the full local-diffeomorphism quotient."
+    - obligation_id: "PO-A11"
+      requirement: "Audit every candidate local codomain and map for target atlas metric cone empirical label desired P4 outcome and workflow-status imports."
+    - obligation_id: "PO-A12"
+      requirement: "Return exactly one source_side_irrelevance_theorem_path or bridge_facing_candidate_path with an exact theorem, proof or counterexample, falsifier, and roadmap consequence."
+    - obligation_id: "PO-A13"
+      requirement: "If irrelevance is proved, state only that the printed K_star assignment under the declared current-source hypotheses supplies no local bridge; do not infer global impossibility or future-extension failure."
+    - obligation_id: "PO-A14"
+      requirement: "Preserve six freezes, fourteen literal no_delta rows, Phi_src nonsemantics, D7 non-evaluation, B2 inactivity, and the P4-T03 lock."
+  terminal_branches:
+    - branch_id: "TERM-A-IRRELEVANCE"
+      required_refuter_classification: "source_side_irrelevance_theorem_path"
+      result_type: "scoped_K_star_localization_and_bridge_irrelevance_theorem"
+      consequence: "Classify K_star as global current-source mathematical data under the displayed hypotheses and route one separate law-formalization or materially new construction selector; do not adopt a law in the theorem packet."
+    - branch_id: "TERM-A-BRIDGE-FALSIFIER"
+      required_refuter_classification: "bridge_facing_candidate_path"
+      result_type: "explicit_source_only_K_star_local_bridge_counterexample"
+      consequence: "Route one separate Candidate Constructor or Smuggling Auditor packet using the exact X_src, B_loc, and b_U; do not execute construction or adoption in the theorem packet."
+  failure_branches:
+    - failure_id: "FB-A01"
+      trigger: "The packet silently changes either branch of K_star."
+      result: "predecessor_redefinition_failure"
+    - failure_id: "FB-A02"
+      trigger: "Global conjugation naturality is treated as restriction, extension, or gluing compatibility."
+      result: "locality_category_error"
+    - failure_id: "FB-A03"
+      trigger: "A restriction is used outside its invariant-domain or local-diffeomorphism domain."
+      result: "ill_typed_restriction_failure"
+    - failure_id: "FB-A04"
+      trigger: "A germ or no-cone conclusion omits the exact realized-jet and regularity hypotheses."
+      result: "overbroad_local_isotropy_claim"
+    - failure_id: "FB-A05"
+      trigger: "Q_inf is asserted universal without normality object-class or topology qualifications."
+      result: "quotient_scope_failure"
+    - failure_id: "FB-A06"
+      trigger: "An orientation sheet is relabeled physical time orientation."
+      result: "physical_semantics_smuggling"
+    - failure_id: "FB-A07"
+      trigger: "A bridge codomain or map is selected from target geometry empirical behavior or the desired P4 verdict."
+      result: "target_or_goal_smuggling_obstruction"
+    - failure_id: "FB-A08"
+      trigger: "The printed-assignment obstruction is generalized to every conservative localization or future source extension."
+      result: "global_no_go_overclaim"
+    - failure_id: "FB-A09"
+      trigger: "Only obligations or generic future work are returned with neither theorem nor explicit counterexample."
+      result: "decisiveness_contract_failure"
+    - failure_id: "FB-A10"
+      trigger: "The packet proposes adopts or edits EqSrc a source law or canonical ontology."
+      result: "authority_boundary_failure"
+    - failure_id: "FB-A11"
+      trigger: "The six-candidate audit or any frozen family is replayed."
+      result: "material_distinctness_and_freeze_failure"
+    - failure_id: "FB-A12"
+      trigger: "Any Distance-to-GR row D7 B2 P4-T03 physical Gate proof publication push or external boundary changes."
+      result: "completion_contract_failure"
+  selected_packet_executed: false
+  separate_agentjob_required: true
+  successor_creation_authorized_here: false
+
+source_extension_classification:
+  classification_required: true
+  selected_route_category: "derivation_from_current_ontology"
+  selected_route_status: "draft/control selected_not_executed"
+  selected_route_import_classification: "current_smooth_source_only_no_extension_no_target_import"
+  current_ontology_modified: false
+  source_extension_constructed: false
+  source_law_proposed: false
+  source_law_adopted: false
+  route_B_classification: "proposal-only source_extension_candidate unresolved between conservative definitional extension and new ontology primitive until exact local relation codomain and map are supplied"
+  route_C_classification: "new ontology primitive or source-law proposal under ontology-law-research-packet only after derivation_critical_missing_source_law is established"
+  route_C_adoption_status: "blocked_adoption_open_continuation"
+  route_D_classification: "human-gated ontology change required only after every lawful nonpromotional continuation is exhausted"
+  target_atlas_free: true
+  exact_gr_recovery_claimed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+
+freeze_preservation:
+  freeze_count: 6
+  all_freezes_preserved: true
+  new_freeze_created: false
+  frozen_route_replay_performed: false
+  rows:
+    - freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+
+freeze_criteria_status:
+  repeated_burden: false
+  scoped_obstruction_selected_for_future_test: true
+  freeze_evaluation_required_in_selected_packet: true
+  active_freeze_label: "none_new"
+  freeze_if:
+    - "The selected packet only repeats RT002 global naturality without the open restriction gluing germ and quotient controls."
+    - "A later route calls a K_star sheafification bridge-facing without an independently source-defined codomain and map."
+    - "A later route repeats the printed-assignment locality obstruction with no new falsifier or decision consequence."
+  do_not_freeze_if:
+    - "The selected packet proves the scoped theorem under exact hypotheses and thereby changes the dependency map."
+    - "The selected packet constructs an explicit source-only bridge-facing falsifier."
+  freeze_decision: "not_frozen_by_selector"
+  decision_reason: "The Route A packet is materially distinct and can return a decisive theorem or constructive falsifier."
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+distance_to_gr_status:
+  row_count: 14
+  changed: false
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      finding: "No primitive is added and Phi_src remains an unresolved debt marker."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      finding: "K_star is not adopted as EqSrc; local restriction tests are mathematical diagnostics only."
+    - burden: "RetainH"
+      status: "no_delta"
+      finding: "No retention object or law is constructed."
+    - burden: "GenH"
+      status: "no_delta"
+      finding: "No source generator localization law or EqSrc law is constructed."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      finding: "No observer-localization object or map is constructed."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      finding: "No response selector codomain map or empirical semantics is constructed."
+    - burden: "M_src"
+      status: "no_delta"
+      finding: "Open subsets of the primitive smooth source arena are mathematical controls, not a derived source spacetime."
+    - burden: "g_eff"
+      status: "no_delta"
+      finding: "The no-cone control derives no cone conformal class scale or effective metric."
+    - burden: "matter coupling"
+      status: "no_delta"
+      finding: "No propagation sector or coupling law is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      finding: "No action variation field equation or closure law is supplied."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      finding: "Exact restriction and germ controls are not perturbative robustness evidence."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      finding: "No benchmark comparison execution or promotion occurs."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      finding: "No protected review verdict or adoption request occurs."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      finding: "All six inherited freezes remain exact and no new freeze or global hard fail is created."
+
+downstream_locks:
+  d7_reevaluated: false
+  d7_coverage_claimed: false
+  descriptor_instance_complete: false
+  b2_active: false
+  b2_activated: false
+  b2_disposed: false
+  b2_adopted: false
+  b2_rejected: false
+  b2_viability_claimed: false
+  b2_adequacy_claimed: false
+  b2_sufficiency_claimed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+  p4_t03_unlocked_or_executed: false
+  physical_response_semantics_assigned: false
+  physical_causality_assigned: false
+  physical_time_orientation_assigned: false
+  physical_cone_or_conformal_class_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+
+falsifier_matrix:
+  - claim_id: "COMPACT_OPEN_GLUE_FAILURE"
+    current_result: "The printed assignment excludes a global identity extension that its local section assignment admits and glues."
+    smallest_falsifier: "A failure of compactness branch selection, intrinsic noncompactness of U, smooth identity extension, or nonidentity of the extension."
+  - claim_id: "PUNCTURED_RESTRICTION_FAILURE"
+    current_result: "One K_star(R4) element restricts outside K_star(R4 minus {0})."
+    smallest_falsifier: "Compactness of the restricted support in the punctured topology or failure of U invariance."
+  - claim_id: "LOCAL_GL_PLUS_ISOTROPY"
+    current_result: "Compactly supported stabilizers realize every positive-determinant first jet at zero."
+    smallest_falsifier: "One A in GL^+(4,R) outside the derivative image of every compactly supported stabilizer."
+  - claim_id: "NO_PROPER_GL_PLUS_INVARIANT_CONE"
+    current_result: "No nonempty proper vector or covector cone is invariant under all realized GL^+ jets."
+    smallest_falsifier: "A nonempty proper GL^+(4,R)-invariant subset of the punctured vector or covector space."
+  - claim_id: "Q_INF_LOCAL_JET_ERASURE"
+    current_result: "The quotient kills all compactly supported representatives and therefore all realized local first-jet variations."
+    smallest_falsifier: "A quotient-factorized map that distinguishes two representatives of the same Diff_c coset."
+  - claim_id: "ROUTE_A_MATERIAL_DISTINCTNESS"
+    current_result: "The selected packet studies opens restrictions gluing germs jets and quotient information rather than the RT002 six-candidate global audit."
+    smallest_falsifier: "Evidence that RT002 already executed the same local domains maps controls and bridge-factor theorem."
+  - claim_id: "ROUTE_B_FORMATION"
+    current_result: "No exact source-defined local codomain and bridge map are currently formed."
+    smallest_falsifier: "A live registered current-source X_src B_loc and b_U with complete restriction gluing nonfactorization and provenance proofs."
+  - claim_id: "ROUTE_C_TRIGGER"
+    current_result: "The missing-source-law trigger is premature while Route A current-source mathematics remains open."
+    smallest_falsifier: "A proof that Route A cannot be formed without a new derivation-critical source law."
+
+risk_register:
+  - risk_id: "RISK-01"
+    risk: "Overstating the compact-open control as failure of every possible local enrichment."
+    mitigation: "State only that the printed objectwise assignment lacks extension-and-gluing compatibility; an enriched source-defined pseudogroup remains a separate proposal."
+  - risk_id: "RISK-02"
+    risk: "Using restriction where f(V) is not V or confusing group restriction with local-diffeomorphism restriction."
+    mitigation: "Keep MAP-01 total on local arrows and MAP-02 explicitly partial on invariant opens."
+  - risk_id: "RISK-03"
+    risk: "Claiming all nonlinear germs rather than only the first jets actually constructed."
+    mitigation: "Use the exact GL^+(4,R) first-jet realization hypothesis and derive only its no-cone consequences."
+  - risk_id: "RISK-04"
+    risk: "Treating orientation preservation as a physical time-orientation selector."
+    mitigation: "Record that both mathematical orientation sheets remain invariant and no physical semantics is supplied."
+  - risk_id: "RISK-05"
+    risk: "Treating Diff/Diff_c as a universal topological or asymptotic object."
+    mitigation: "Use only the algebraic quotient on a named noncompact object class and declare all topology ends and asymptotic semantics absent."
+  - risk_id: "RISK-06"
+    risk: "Violating constructive preference by selecting a negative theorem."
+    mitigation: "Record that Route B is not yet a formed candidate and require Route A to return an explicit bridge-facing candidate path if its theorem is falsified."
+  - risk_id: "RISK-07"
+    risk: "Promoting source-side irrelevance to global impossibility."
+    mitigation: "Scope the theorem to the exact printed K_star assignment current smooth-source signature declared objects and maps; preserve future source-extension possibility."
+  - risk_id: "RISK-08"
+    risk: "Treating selector consensus or validation as physics truth."
+    mitigation: "The selected packet remains unexecuted and all outputs remain draft/control without proof promotion."
+
+authority_blocks:
+  parent_completion_created_by_child: false
+  selected_future_packet_executed: false
+  selected_future_agentjob_created: false
+  k_star_redefined: false
+  k_star_adopted_as_eqsrc: false
+  k_star_adopted_as_physical_allowedness: false
+  k_star_bridge_relevance_proved: false
+  source_extension_constructed: false
+  source_law_proposed_or_adopted: false
+  canonical_ontology_modified: false
+  phi_src_typed: false
+  target_atlas_imported: false
+  target_metric_imported: false
+  desired_cone_imported: false
+  empirical_label_imported: false
+  benchmark_answer_imported: false
+  workflow_status_used_as_scientific_evidence: false
+  frozen_route_imported: false
+  scientific_claim_status_promoted: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  d7_authority_exercised: false
+  b2_authority_exercised: false
+  p4_t03_authority_exercised: false
+  gate_chair_verdict_issued: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  publication_authorized: false
+  public_release_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  global_no_go_claimed: false
+  global_theory_rejection_claimed: false
+  future_source_extension_impossibility_claimed: false
+  completed_derivation_claimed: false
+
+explicit_non_conclusions:
+  - "The RT002 K_star theorem is not corrected replayed or weakened."
+  - "The selector-level locality controls do not adopt K_star as EqSrc a gauge group physical allowedness or a bridge."
+  - "The compact-open and punctured-open countermodels refute only the printed assignment's restriction extension and gluing compatibility."
+  - "The GL^+ first-jet theorem derives no physical time orientation cone conformal class or effective metric."
+  - "Q_inf is not a local principal symbol response selector or empirical observable."
+  - "Route B remains unconstructed Route C remains proposal-only and Route D is not triggered."
+  - "The selected Route A packet has not been executed and its full scoped theorem is not claimed complete."
+  - "No conservative future source extension is declared impossible."
+  - "D7 has not been reevaluated B2 has not been activated or disposed and P4-T03 remains locked."
+  - "No physical or empirical status Distance-to-GR row benchmark Gate Chair status proof authority publication authority push authority or external-action authority changes."
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  summary: "The child analysis proves bounded locality and jet controls sufficient to select one future Refuter theorem packet. It does not execute that packet add source structure supply physical meaning change P4 status or promote any protected claim."
+
+validation_evidence:
+  strict_yaml_unique_keys: "PASS_DUPLICATE_KEY_REJECTING_PYYAML_LOADER"
+  yaml_parse: "PASS_REPOSITORY_STRICT_YAML_AND_PYYAML"
+  exact_route_count: "PASS_EXACTLY_4_UNIQUE"
+  selected_route_count: "PASS_EXACTLY_1_ROUTE_A"
+  selected_packet_execution_status: "PASS_SELECTED_NOT_EXECUTED"
+  formal_domain_cardinality: "PASS_EXACTLY_13"
+  formal_map_cardinality: "PASS_EXACTLY_13"
+  new_payload_cardinality: "PASS_EXACTLY_5"
+  freeze_cardinality: "PASS_EXACTLY_6_UNIQUE_PRESERVED"
+  distance_to_gr_cardinality: "PASS_EXACTLY_14"
+  literal_no_delta_cardinality: "PASS_EXACTLY_14"
+  source_hash_recomputation: "PASS_22_OF_22_LIVE_AT_CHILD_COMPLETION_PARENT_TERMINAL_REBIND_REQUIRED_FOR_4_MUTABLE_CONTROLS"
+  whitespace_check: "PASS_NO_TABS_TRAILING_WHITESPACE_AND_FINAL_NEWLINE_PRESENT"
+  ownership_check: "PASS_ONLY_ASSIGNED_CHILD_PATH_WRITTEN_BY_THIS_EXECUTION_UNIT"
+  artifact_sha256_reported_out_of_band: true
+  validation_scope_note: "Child validation covers only this owned draft/control artifact, its syntax, source bindings, theorem statements, route cardinalities, claim boundary, and selected future packet contract. It does not validate the peer output, parent fusion, full theorem execution, repository transaction, checkpoint, or any promoted physics claim."

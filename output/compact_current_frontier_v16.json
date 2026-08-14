@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-1032.yaml",
+    "research_control/handoffs/handoff-1033.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "8b69d6823206670dfcee79d3a6a8d68cb7c0f2f5",
+    "source_commit": "4080512fcec14b072f59eecf1d29b690dbfc87af",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "b19d14d61c84484091ed5eea70443fe2ae7305f05489ef83210e8c5cb6e77f12"
+        "sha256": "f372b61b673da76240303c3793c1d92cc4e94bfbaad4b1892b190fb661bbf828"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "34f592b48a86db9d78f72dcaeeb3b6c6144c1848b09d8bdc00e7de9f49a4ddf2"
+        "sha256": "38a8a33904edb7a85c682bfd92f56c40302ce8f0f1b95807e78260745154c264"
       },
       {
-        "path": "research_control/handoffs/handoff-1032.yaml",
-        "sha256": "d0a050e0b58e55f7370a16fa0ad37688bf04584381f5af0a2cdf8c1589e83d11"
+        "path": "research_control/handoffs/handoff-1033.yaml",
+        "sha256": "962ce5ef0e3691f76581f844e4eddd0670f59191dbf8a14466a6e232b55dbcf8"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "8aa07222ad9f98623556d5cd2d7c60e3bb5e2f0093892fdfd894943fac5471f3"
+        "sha256": "932429139a66eba18988881bc06d5f41f1b872ec2fc5e0a3fea55a7860978200"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "b09291572682b04c933f6342a3ca3fc6694583ab2a19c3cabc71642629cf2b4e",
+    "source_manifest_sha256": "3790ad31c0fdfb58cf39e13c7a4cb31c702ec5ef440e212d35f5954c7cf80ed5",
     "source_path_count": "12",
-    "generation_time": "2026-08-14T16:15:00Z",
-    "task_count": "1287",
+    "generation_time": "2026-08-14T22:20:00Z",
+    "task_count": "1288",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260814-002",
-    "latest_handoff_id": "handoff-1032",
-    "current_status": "v22_p4_t02_current_source_k_star_theorem_selector_selected_checkpoint_pending",
+    "active_task_id": "RT-20260814-003",
+    "latest_handoff_id": "handoff-1033",
+    "current_status": "v22_p4_t02_kstar_localization_bridge_irrelevance_theorem_selected_checkpoint_pending",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260814-002",
-    "latest_research_handoff_id": "handoff-1032",
-    "latest_research_next_action": "Run the single governed checkpoint for AJ-RT-20260814-002-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-THEOREM-THEORETICAL-CONTINUATION-SELECTION-V1. Decide whether K_star has a materially distinct bridge-facing P4-T02 role or is source-side classification only. Do not replay the six-candidate audit, adopt K_star, preselect Route C, assign Phi_src semantics, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.",
+    "latest_research_task_id": "RT-20260814-003",
+    "latest_research_handoff_id": "handoff-1033",
+    "latest_research_next_action": "Run the single governed checkpoint for AJ-RT-20260814-003-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-KSTAR-LOCALIZATION-AND-BRIDGE-IRRELEVANCE-THEOREM-V1. Return a scoped K_star bridge-irrelevance theorem, a nontrivial localization-compatible source-provenanced bridge witness, or the first precise localization/factorization typing obstruction. Do not execute the packet before checkpoint, adopt K_star, add EqSrc or physical allowedness, overread orientation, claim a global no-go, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "select_v22_p4_t02_b2_post_current_source_asymmetry_theorem_continuation_v1",
-    "role_family": "theoretical-continuation-selector@0.1.0",
+    "route_id": "execute_v22_p4_t02_b2_kstar_localization_bridge_irrelevance_theorem_v1",
+    "role_family": "refuter@0.2.0",
     "target_derivation_milestone": "effective_metric_g_eff",
-    "milestone_burden": "Decide whether the current-source K_star theorem has bridge-facing relevance or only classification value before any new law is proposed.",
+    "milestone_burden": "Establish or refute restriction-compatible local P4-T02 bridge relevance of K_star without adding EqSrc physical allowedness target geometry or response semantics.",
     "requires_human_gate": false
   },
   "claim_boundary": {

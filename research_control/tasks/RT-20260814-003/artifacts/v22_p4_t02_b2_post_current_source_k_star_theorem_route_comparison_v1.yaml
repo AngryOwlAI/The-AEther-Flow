@@ -1,0 +1,114 @@
+schema_id: "v22_p4_t02_b2_post_current_source_k_star_theorem_route_comparison_v1"
+status: "complete"
+authority: "science_draft"
+task_id: "RT-20260814-003"
+job_id: "AJ-RT-20260814-003-001"
+decision_id: "DDR-20260814-003"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Decide whether K_star has a source-derived local bridge-facing P4-T02 role or only global mathematical classification value before proposing a new source law or bridge."
+
+fixed_predecessor:
+  theorem_id: "THM-V22-P4T02-B2-CURRENT-SOURCE-KSTAR-ARROW-SUBCLASS-001"
+  result_type: "current_source_equivariant_asymmetry_derivation_theorem"
+  exact_scope: "K_star is an objectwise diffeomorphism-natural wide normal arrow-subclass assignment on the ordinary smooth-four-manifold arena."
+  semantic_boundary: "K_star is not EqSrc, physical allowedness, gauge, a response map, causal structure, a bridge, or an adopted source law."
+  fixed_without_reinterpretation: true
+
+decision_controls:
+  compact_open_localization:
+    statement: "For compact M, Diff_c(M)=Diff(M), so the printed K_star branch is {id}; for a noncompact coordinate ball U, Diff_c(U) is proper and nontrivial, so K_star(U)=Diff_c(U)."
+    consequence: "Restriction of the sole global K_star(M) arrow cannot exhaust K_star(U); the printed objectwise theorem therefore supplies no restriction or gluing law."
+    scope_guard: "This is a defect in the bridge force of the printed assignment, not a no-go theorem against every enriched localization."
+  local_isotropy:
+    hypotheses: "dimension at least two and compactly supported local diffeomorphism germs realizing the positive linear group at a point"
+    statement: "Positive scalings fix no nonzero vector or covector, and GL+ transitivity on nonzero tangent vectors leaves no proper invariant Lorentzian conformal cone."
+    scope_guard: "No physical time orientation, response semantics, or empirical cone is inferred."
+  quotient_at_infinity:
+    statement: "Where Diff_c is normal, Diff/Diff_c separates large or end behavior that can differ while a local germ is fixed."
+    consequence: "The quotient is not, without an additional source map, a local principal-symbol or detector-response selector."
+    scope_guard: "No universal quotient or global irrelevance claim is made outside the declared object class."
+  bridge_factor_criterion:
+    statement: "Bridge-facing force requires a source-defined local codomain and natural map, restriction and gluing compatibility, and a demonstrated failure to collapse through the full local-diffeomorphism orbit quotient."
+    status: "future proof burden, not physical meaning"
+
+routes:
+  - route_id: "A_KSTAR_LOCALIZATION_AND_BRIDGE_IRRELEVANCE_THEOREM"
+    packet_type: "source_side_irrelevance_theorem"
+    next_role_family: "refuter@0.2.0"
+    constructive_preference_rank: 1
+    disposition: "selected_not_executed"
+    selected: true
+    material_distinctness: "high"
+    decision_value: "Proves or precisely obstructs the locality, isotropy, quotient-at-infinity, and bridge-factor conditions for the already fixed K_star theorem."
+    selection_reason: "It tests the first missing bridge premise without inventing a source law or calling objectwise arrow classification a physical bridge."
+    permitted_results:
+      - "scoped_k_star_bridge_irrelevance_theorem"
+      - "localization_compatible_nontrivial_bridge_relevance_witness"
+      - "precise_localization_or_factorization_typing_obstruction"
+    no_go_scope: "unchanged printed K_star assignment and declared source-only bridge grammar only"
+  - route_id: "B_KSTAR_LOCALIZATION_COMPATIBLE_BRIDGE_CANDIDATE"
+    packet_type: "source_extension_candidate"
+    next_role_family: "candidate-constructor@0.2.0"
+    constructive_preference_rank: 2
+    disposition: "not_selected"
+    selected: false
+    material_distinctness: "conditional"
+    decision_value: "Could add a localization-compatible pseudogroup, local codomain, and bridge map."
+    rejection_reason: "No independently current-source-defined P4-relevant codomain or map is presently available; selecting construction first would risk relabeling K_star or stipulating the desired bridge output."
+    later_condition: "Route A exhibits the exact missing local object or a source-defined nontrivial factor target."
+  - route_id: "C_KSTAR_EQSRC_SOURCE_LAW_FORMALIZATION"
+    packet_type: "ontology_law_research_packet"
+    next_role_family: "ontology-formalizer@0.2.0"
+    constructive_preference_rank: 3
+    disposition: "not_selected"
+    selected: false
+    material_distinctness: "high but assumption-expanding"
+    decision_value: "Could propose an EqSrc or allowedness law making an arrow class normative."
+    rejection_reason: "RT002 expressly withheld EqSrc and allowedness semantics; formalizing them before the locality test would add a new underived law and risk desired-result preload."
+  - route_id: "D_PROTECTED_HUMAN_GATED_ONTOLOGY_STOP"
+    packet_type: "human_gated_ontology_change_required"
+    next_role_family: "human_gate"
+    constructive_preference_rank: 4
+    disposition: "not_triggered"
+    selected: false
+    material_distinctness: "protected stop"
+    decision_value: "Stops before ontology adoption if no bounded non-promotional continuation remains."
+    rejection_reason: "Route A is bounded, source-side, non-promotional, and executable, so the protected stop is premature."
+
+selection:
+  selected_route_id: "A_KSTAR_LOCALIZATION_AND_BRIDGE_IRRELEVANCE_THEOREM"
+  selected_packet_id: "PKT-V22-P4T02-B2-KSTAR-LOCALIZATION-AND-BRIDGE-IRRELEVANCE-THEOREM-V1"
+  selected_packet_type: "source_side_irrelevance_theorem"
+  selected_next_role_family: "refuter@0.2.0"
+  selected_packet_executed: false
+  route_label: "ordinary-research-packet"
+  source_extension_import_classification: "No source extension is constructed or imported; the future packet audits the bridge relevance of an already proved source-side mathematical assignment."
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+
+authority_limits:
+  selected_packet_executed: false
+  theorem_truth_inferred: false
+  source_extension_constructed: false
+  eqsrc_assigned: false
+  k_star_adopted: false
+  physical_allowedness_assigned: false
+  physical_causality_assigned: false
+  empirical_response_semantics_assigned: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
