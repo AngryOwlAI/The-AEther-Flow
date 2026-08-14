@@ -1,0 +1,365 @@
+schema_id: "v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_packet_v1"
+status: "selected_not_executed"
+authority: "science_draft"
+task_id: "RT-20260814-001"
+job_id: "AJ-RT-20260814-001-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+
+packet:
+  packet_id: "PKT-V22-P4T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1"
+  packet_type: "bounded_theoretical_calculation"
+  route_id: "A_CURRENT_SOURCE_EQUIVARIANT_ASYMMETRY_DERIVATION_AUDIT"
+  route_label: "ordinary-research-packet"
+  next_role_family: "ontology-formalizer@0.2.0"
+  selected_packet_executed: false
+  requires_human_gate: false
+  objective: "Construct the semantic model and isomorphism groupoid of the exact registered current-source signature, then decide whether any predeclared presentation-relevant asymmetry is a natural current-source construction or whether a precise scoped typing naturality or factorization obstruction holds."
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Decide current-source equivariant asymmetry before proposing a new source law, without finite-fixture replay, target import, or root stipulation."
+  result_scope: "current_source_derivation_audit_only"
+  adoption_status: "not_applicable_current_source_audit"
+
+fixed_inputs:
+  current_source_package:
+    source_arena: "Sub is a smooth four-dimensional source manifold carried as primitive debt"
+    unresolved_slot: "Phi_src is an unresolved abstract source-order or evolution slot with no assigned domain action invertibility gauge or physical-time meaning"
+    excluded_structure:
+      - "source metric"
+      - "source orientation"
+      - "distinguished point or root"
+      - "source order"
+      - "presentation carrier or labels"
+      - "admission predicate"
+      - "EqSrc arrow category"
+      - "source-to-presentation map"
+  fixed_predecessor_obstruction_id: "OB-V22-P4T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-SOURCE-PROVENANCE-001"
+  fixed_predecessor_failed_gate: "GATE-04"
+  finite_pair_groupoid_replay_permitted: false
+  conditional_root_fixture_replay_permitted: false
+
+formal_domains:
+  - domain_id: "DOM-01"
+    name: "Sigma_cur"
+    definition: "The exact registered current-source signature extracted from canonical foundations and dynamics, with unresolved Phi_src represented only at its declared type boundary."
+  - domain_id: "DOM-02"
+    name: "Mod_cur"
+    definition: "The predeclared class of models of Sigma_cur admitted by the audit, or an exact typing-obstruction result if that class cannot be formed without extra structure."
+  - domain_id: "DOM-03"
+    name: "Iso_cur"
+    definition: "All isomorphisms preserving exactly the typed Sigma_cur structure, with identities inverses and composition checked."
+  - domain_id: "DOM-04"
+    name: "Exp_cur"
+    definition: "Meta-level conservative presentation-data expansions used only to test factorization; no expansion is adopted as source ontology."
+  - domain_id: "DOM-05"
+    name: "AsymGrammar_cur"
+    definition: "The finite predeclared candidate-codomain grammar for point root orientation order label admission and arrow-subclass asymmetries."
+  - domain_id: "DOM-06"
+    name: "NatCur"
+    definition: "Natural transformations from the terminal current-source functor or another explicitly current-source-defined input functor into a candidate asymmetry functor."
+  - domain_id: "DOM-07"
+    name: "ControlFamilies"
+    definition: "Exact translation reflection permutation and same-reduct families declared before outcome computation."
+  - domain_id: "DOM-08"
+    name: "AuditEvidence"
+    definition: "Typed formation naturality factorization automorphism and falsifier records with exact source provenance."
+  - domain_id: "DOM-09"
+    name: "AuditResult"
+    definition: "The exclusive result sum of current-source derivation theorem scoped naturality-factorization obstruction or current-source groupoid typing obstruction."
+
+formal_objects:
+  - object_id: "OBJ-01"
+    name: "CurrentSourceSignatureRecord"
+    type: "finite registered signature and explicit unresolved-slot boundary"
+  - object_id: "OBJ-02"
+    name: "CurrentSourceModelGroupoid"
+    type: "groupoid or precise formation obstruction"
+  - object_id: "OBJ-03"
+    name: "CandidateAsymmetryFunctorFamily"
+    type: "finite predeclared functor grammar"
+  - object_id: "OBJ-04"
+    name: "NaturalAsymmetryTransformationSpace"
+    type: "disjoint union of natural-transformation spaces over the grammar"
+  - object_id: "OBJ-05"
+    name: "CurrentReductForgetfulMap"
+    type: "U_cur:Exp_cur->Mod_cur"
+  - object_id: "OBJ-06"
+    name: "ExpansionAsymmetryDatum"
+    type: "q:Exp_cur->AsymData"
+  - object_id: "OBJ-07"
+    name: "AutomorphismWitnessFamily"
+    type: "typed nonidentity automorphisms and invariant failures"
+  - object_id: "OBJ-08"
+    name: "FactorizationWitnessOrCountermodel"
+    type: "q_bar with q=q_bar o U_cur or a same-fibre counterpair"
+  - object_id: "OBJ-09"
+    name: "SourceHashAndDefinitionManifest"
+    type: "acyclic provenance record"
+  - object_id: "OBJ-10"
+    name: "CurrentSourceAsymmetryAuditResult"
+    type: "exclusive three-branch result"
+
+formal_maps:
+  - map_id: "MAP-01"
+    signature: "Models:Sigma_cur->Mod_cur"
+    purpose: "Form the exact current-source semantic model class."
+  - map_id: "MAP-02"
+    signature: "Iso:Mod_cur^op x Mod_cur->Set"
+    purpose: "Enumerate or characterize every declared current-structure isomorphism."
+  - map_id: "MAP-03"
+    signature: "A_i:Mod_cur->GSet_i"
+    purpose: "Interpret each predeclared asymmetry codomain functor."
+  - map_id: "MAP-04"
+    signature: "eta_i:1=>A_i"
+    purpose: "Represent a candidate current-source natural asymmetry."
+  - map_id: "MAP-05"
+    signature: "U_cur:Exp_cur->Mod_cur"
+    purpose: "Forget proposal-only presentation-expansion data."
+  - map_id: "MAP-06"
+    signature: "q_i:Exp_cur->AsymData_i"
+    purpose: "Expose whether asymmetry varies inside one current-reduct fibre."
+  - map_id: "MAP-07"
+    signature: "Factor_i(q_i,U_cur)->Option(q_bar_i)"
+    purpose: "Construct a factor or return an exact fibre countermodel."
+  - map_id: "MAP-08"
+    signature: "AutoTest_i(eta_i,g)->Bool"
+    purpose: "Check naturality under every declared current-structure automorphism."
+  - map_id: "MAP-09"
+    signature: "DecideAudit(Evidence)->AuditResult"
+    purpose: "Return exactly one permitted result without adoption or extension."
+
+predeclared_candidate_codomain_grammar:
+  budget: 6
+  candidates:
+    - candidate_id: "ASYM-POINT"
+      output: "a distinguished source point or nonempty finite point set"
+      primary_control: "translations of affine R4 viewed only as a model control"
+    - candidate_id: "ASYM-ORIENTATION"
+      output: "one sheet of the orientation double cover"
+      primary_control: "orientation-reversing diffeomorphism"
+    - candidate_id: "ASYM-ORDER"
+      output: "a total source or presentation order"
+      primary_control: "order-reversing or permutation automorphism where typed"
+    - candidate_id: "ASYM-ROOT-LABEL"
+      output: "a distinguished presentation root or label"
+      primary_control: "formation check followed by full automorphism nonselection"
+    - candidate_id: "ASYM-ADMISSION"
+      output: "a nonconstant natural admission predicate"
+      primary_control: "formation check and orbit constancy"
+    - candidate_id: "ASYM-ARROW-SUBCLASS"
+      output: "a proper natural allowed-arrow subclass"
+      primary_control: "closure identity inverse composition and conjugation checks"
+  grammar_fixed_before_outcomes: true
+  grammar_is_current_ontology: false
+  grammar_is_physical_semantics: false
+
+theorem_targets:
+  - theorem_id: "THM-01"
+    name: "CurrentSourceModelGroupoidFormationOrObstruction"
+    target: "Form Mod_cur and Iso_cur from only the registered signature, or identify the first exact missing type or law."
+  - theorem_id: "THM-02"
+    name: "EquivariantTerminalSectionFixedPointCriterion"
+    target: "Prove Nat(1,A) is naturally identified with the fixed-point subobject when the declared action is well typed."
+  - theorem_id: "THM-03"
+    name: "CurrentReductFactorizationIffFibreConstancy"
+    target: "Prove q factors through U_cur exactly when q is constant on every U_cur fibre under the declared set-level hypotheses."
+  - theorem_id: "THM-04"
+    name: "BareSmoothSourceTranslationPointControl"
+    target: "Show the affine R4 translation control admits no natural distinguished point or nonempty finite subset under its full translation subgroup."
+  - theorem_id: "THM-05"
+    name: "BareSmoothSourceOrientationReversalControl"
+    target: "Show a natural orientation fails in a groupoid containing an orientation-reversing automorphism unless extra current-source structure excludes it."
+  - theorem_id: "THM-06"
+    name: "PresentationAsymmetryFormationAndNaturalityAudit"
+    target: "For root label order admission and arrow-subclass candidates, either type the output functor from registered source data and test all arrows or return the first precise formation obstruction."
+  - theorem_id: "THM-07"
+    name: "ExclusiveCurrentSourceAuditDecision"
+    target: "Return exactly one permitted result with a constructive witness or minimal scoped obstruction and explicit falsifier."
+
+proof_obligations:
+  - obligation_id: "PO-01"
+    text: "Bind every canonical source and registry row by live hash before forming Sigma_cur."
+  - obligation_id: "PO-02"
+    text: "Separate typed current primitives from unresolved interpretive vocabulary and target benchmark structure."
+  - obligation_id: "PO-03"
+    text: "Construct Mod_cur and Iso_cur without importing a source metric orientation order root label or presentation carrier."
+  - obligation_id: "PO-04"
+    text: "Check identities inverses composition and structure preservation for every declared isomorphism class."
+  - obligation_id: "PO-05"
+    text: "Fix the six-candidate asymmetry grammar and all budgets before inspecting results."
+  - obligation_id: "PO-06"
+    text: "Type each asymmetry candidate as a functor or record its first exact formation failure."
+  - obligation_id: "PO-07"
+    text: "Compute or characterize the complete relevant automorphism action rather than an identity-only or pair-swap subset."
+  - obligation_id: "PO-08"
+    text: "Prove naturality for any positive candidate under every arrow in the declared groupoid."
+  - obligation_id: "PO-09"
+    text: "Apply the fibre-constancy factorization theorem to every expansion-supplied asymmetry claim."
+  - obligation_id: "PO-10"
+    text: "Include exact translation reflection and same-reduct controls with explicit scopes and falsifiers."
+  - obligation_id: "PO-11"
+    text: "Demonstrate material distinctness from the RT002 pair-groupoid and conditional-root fixtures."
+  - obligation_id: "PO-12"
+    text: "Audit target atlas metric desired cone empirical label benchmark answer workflow status and all six frozen-family imports."
+  - obligation_id: "PO-13"
+    text: "Return one exclusive theorem or scoped obstruction without adding adopting rejecting or editing source ontology."
+  - obligation_id: "PO-14"
+    text: "State all physical empirical adequacy B2 P4-T03 Gate proof publication push and external-action non-conclusions."
+
+failure_branches:
+  - branch_id: "FB-01"
+    result: "precise_current_source_model_groupoid_typing_obstruction"
+    trigger: "Mod_cur or Iso_cur cannot be formed without adding unregistered structure."
+  - branch_id: "FB-02"
+    result: "invalid_audit"
+    trigger: "Phi_src is assigned an undeclared domain action invertibility order generator gauge or physical-time meaning."
+  - branch_id: "FB-03"
+    result: "invalid_audit"
+    trigger: "The candidate grammar or budget is changed after outcomes are inspected."
+  - branch_id: "FB-04"
+    result: "scoped_current_source_naturality_factorization_obstruction"
+    trigger: "A candidate is moved by a current-structure automorphism and no registered structure excludes that arrow."
+  - branch_id: "FB-05"
+    result: "scoped_current_source_naturality_factorization_obstruction"
+    trigger: "Candidate asymmetry data vary inside one U_cur fibre."
+  - branch_id: "FB-06"
+    result: "invalid_audit"
+    trigger: "Only identity arrows or the RT002 pair swap are tested while the declared groupoid has more arrows."
+  - branch_id: "FB-07"
+    result: "invalid_audit"
+    trigger: "A root orientation order label admission bit or arrow restriction is stipulated as current-source derived."
+  - branch_id: "FB-08"
+    result: "invalid_audit"
+    trigger: "A target atlas metric cone empirical response benchmark answer or desired P4 outcome enters a definition."
+  - branch_id: "FB-09"
+    result: "invalid_audit"
+    trigger: "Any of the six frozen candidate families is reconstructed or renamed."
+  - branch_id: "FB-10"
+    result: "overclaim_block"
+    trigger: "A scoped current-source obstruction is stated as a global no-go or future-extension impossibility theorem."
+  - branch_id: "FB-11"
+    result: "overclaim_block"
+    trigger: "A mathematical natural transformation is called physical gauge causality time orientation or empirical response."
+  - branch_id: "FB-12"
+    result: "authority_block"
+    trigger: "The packet edits or adopts ontology acts on B2 unlocks P4-T03 promotes proof publication push or external action."
+
+permitted_results:
+  - result_type: "current_source_equivariant_asymmetry_derivation_theorem"
+    meaning: "At least one predeclared candidate is explicitly typed from registered current-source data factors through the current reduct and is natural under every declared arrow."
+    adoption_effect: "none"
+  - result_type: "scoped_current_source_naturality_factorization_obstruction"
+    meaning: "The formed current-source groupoid and exact controls obstruct every predeclared candidate in the bounded grammar."
+    adoption_effect: "none; a later selector may consider Route C"
+  - result_type: "precise_current_source_model_groupoid_typing_obstruction"
+    meaning: "The current signature cannot type the required semantic groupoid or candidate functors without extra source structure."
+    adoption_effect: "none; a later selector may consider Route C"
+
+material_distinctness_contract:
+  full_current_source_groupoid_required: true
+  rt002_pair_groupoid_replay_forbidden: true
+  conditional_root_fixture_replay_forbidden: true
+  no_new_source_primitive: true
+  no_source_law_proposal_or_adoption: true
+  route_c_not_preselected: true
+  target_free_required: true
+  exact_falsifier_required: true
+  fail_closed: true
+
+source_extension_classification:
+  category: "not_a_source_extension_current_source_derivation_audit"
+  current_ontology_edit: false
+  new_source_primitive: false
+  proposal_only_source_law: false
+  source_extension_constructed: false
+  source_extension_adopted: false
+  source_extension_rejected: false
+  target_import_status: "forbidden_and_audited"
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_delta"
+    finding: "The future packet audits registered primitives and adds none."
+  - burden: "Source equivalence EqSrc"
+    status: "no_delta"
+    finding: "A semantic isomorphism groupoid is an audit object and not adopted EqSrc."
+  - burden: "RetainH"
+    status: "no_delta"
+    finding: "No history-retention primitive is supplied."
+  - burden: "GenH"
+    status: "no_delta"
+    finding: "No generator or source law is supplied."
+  - burden: "ObsLoc_lc"
+    status: "no_delta"
+    finding: "No observer-localization map is supplied."
+  - burden: "Resp_lc"
+    status: "no_delta"
+    finding: "No localized response semantics is assigned."
+  - burden: "M_src"
+    status: "no_delta"
+    finding: "The source manifold remains primitive debt and no target identification occurs."
+  - burden: "g_eff"
+    status: "no_delta"
+    finding: "No cone conformal class scale or effective metric is constructed."
+  - burden: "matter coupling"
+    status: "no_delta"
+    finding: "No propagation or coupling law is derived."
+  - burden: "Einstein equations"
+    status: "no_delta"
+    finding: "No action variation stress-energy law or field equation is supplied."
+  - burden: "finite-variation robustness"
+    status: "no_delta"
+    finding: "Automorphism naturality is not perturbative physical robustness."
+  - burden: "benchmark promotion"
+    status: "no_delta"
+    finding: "No benchmark comparison or promotion occurs."
+  - burden: "Gate Chair status"
+    status: "no_delta"
+    finding: "No protected review verdict occurs."
+  - burden: "current route freeze or hard-fail status"
+    status: "no_delta"
+    finding: "All six inherited freezes remain unchanged and no new freeze is created by selection."
+
+downstream_locks:
+  d7_reevaluated: false
+  descriptor_instance_complete: false
+  b2_activated: false
+  b2_adopted: false
+  b2_rejected: false
+  b2_disposed: false
+  b2_viability_claimed: false
+  b2_adequacy_claimed: false
+  b2_sufficiency_claimed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+  physical_causality_assigned: false
+  empirical_response_semantics_assigned: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+
+authority_limits:
+  selected_packet_executed: false
+  source_extension_constructed: false
+  source_law_formalized_proved_adopted_or_rejected: false
+  current_source_language_modified: false
+  canonical_ontology_modified: false
+  scientific_status_changed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_claimed: false

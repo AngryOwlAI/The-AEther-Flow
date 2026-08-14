@@ -1,0 +1,446 @@
+job_id: "AJ-RT-20260814-001-001"
+task_id: "RT-20260814-001"
+decision_id: "DDR-20260814-001"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260814-001"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-14T14:01:47Z"
+started_at: "2026-08-14T14:01:47Z"
+completed_at: "2026-08-14T14:33:30Z"
+completion_path: "research_control/tasks/RT-20260814-001/jobs/completions/AJC-AJ-RT-20260814-001-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active full-V22 goal, committed recovery checkpoint 0762d5589e5073dfbd27fb824b659c6af7457fdf, and handoff-1030 authorize exactly one P4-T02 theoretical selector and one checkpoint. The selected future packet and every downstream scientific or external action remain separate and unauthorized."
+objective: "Compare exactly four post-obstruction continuations, preserve the exact finite-bridge GATE-04 source-provenance obstruction and all six local freezes, and select exactly one materially distinct future packet and next role without executing it."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Select one materially distinct source-side continuation or protected stop after the exact finite presentation-admission bridge was blocked at independent source provenance, without stipulating a root, replaying the finite bridge, or reopening a frozen family."
+route_label: "ordinary-research-packet"
+route_reason: "handoff_1030_selects_one_fresh_theoretical_continuation_selector_after_committed_recovery_checkpoint"
+route_strategy_id: "select_v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_continuation_v1"
+immutable_route_sha256: "385d41a5a89a415e23edbdce1e8a9f2c7a1c639f1c41e6e4f1dc72ffc57bda4d"
+source_head: "0762d5589e5073dfbd27fb824b659c6af7457fdf"
+source_tree: "dd6019f9285ebba9176e42fdad0fb34481a5cf9e"
+assembly_parent_head: "0762d5589e5073dfbd27fb824b659c6af7457fdf"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+recommendation_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R10"
+  - "V22-R13"
+declared_coverage_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R13"
+  - "S5"
+sequence_step_ids:
+  - "S5"
+cross_cutting_directive_ids:
+  - "V22-X02"
+  - "V22-X04"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P4-T02"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1030"
+  source_handoff_path: "research_control/handoffs/handoff-1030.yaml"
+  source_handoff_sha256: "385d41a5a89a415e23edbdce1e8a9f2c7a1c639f1c41e6e4f1dc72ffc57bda4d"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite:
+    task_id: "RT-20260813-001"
+    commit: "0762d5589e5073dfbd27fb824b659c6af7457fdf"
+    committed: true
+  immutable_handoff_checkpoint_note: "Handoff-1030 was emitted before checkpoint and remains immutable; commit 0762d5589e5073dfbd27fb824b659c6af7457fdf contains the complete bounded recovery transaction and satisfies its allowed-next-scope prerequisite."
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1230
+    relationship_row_count: 6339
+    semantic_row_count: 1230
+    vault_row_count: 1230
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'finite typed presentation admission bridge source provenance obstruction' --limit 10 --json"
+      query_type: "search"
+      query_text: "finite typed presentation admission bridge source provenance obstruction"
+      returned_object_ids:
+        - "TEX-V22-P4-T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-OR-PROVENANCE-OBSTRUCTION-V1"
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-V1"
+  canonical_inspections:
+    - object_id: "TEX-V22-P4-T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-OR-PROVENANCE-OBSTRUCTION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260812-002/artifacts/v22_p4_t02_b2_finite_typed_presentation_admission_bridge_witness_or_provenance_obstruction_v1.tex"
+      source_hash: "578fcf429c603fa83fa443b58c0aa75ecff6f95e1bb9eb2eb6af52ba0684dc23"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260812-002/artifacts/parent_fusion_notes_p4_t02_b2_finite_typed_presentation_admission_bridge_witness.md"
+      source_hash: "bb9e59b3ebcac94ee56565c9c6f10ca937e332f41bae5321f0ea4338a704bfc6"
+  additional_control_inspections:
+    - object_id: "HANDOFF-1030"
+      control_path: "research_control/handoffs/handoff-1030.yaml"
+      source_hash: "385d41a5a89a415e23edbdce1e8a9f2c7a1c639f1c41e6e4f1dc72ffc57bda4d"
+    - object_id: "RT-20260812-002-COMPLETION"
+      control_path: "research_control/tasks/RT-20260812-002/jobs/completions/AJC-AJ-RT-20260812-002-001.yaml"
+      source_hash: "78c8549750385f7ac4e0f09489bad3b82db447a0176acecca817664c11d3a6c2"
+    - object_id: "OB-V22-P4T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-SOURCE-PROVENANCE-001"
+      control_path: "research_control/tasks/RT-20260812-002/artifacts/v22_p4_t02_b2_finite_typed_presentation_admission_bridge_witness_or_provenance_obstruction_record_v1.yaml"
+      source_hash: "bbb9dd06859e280a134a021b9f3fa3236b714a58db44e4859a30a2a3719d5601"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      control_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      control_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      control_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  authority_note: "Tracked registered source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  assumption_delta:
+    - "Hold the exact RT002 GATE-04 source-provenance obstruction and every correct predecessor theorem fixed."
+    - "Preserve all six local freeze labels and prohibit reconstruction repair audit or stress replay of every frozen route."
+    - "Compare exactly four routes: current-source equivariant-asymmetry derivation audit, root-free orbit-valued bridge, source-generated asymmetry-law formalization, and protected human-gated ontology stop."
+    - "Require constructive preference material distinctness source-only provenance a clear roadmap consequence and a separately executable next-role contract."
+    - "Import no target atlas target metric empirical response semantics physical calibration desired cone benchmark answer or protected status."
+  materiality_basis: "RT002 proves the finite typed bridge lacks independently source-provenanced asymmetry, but it does not determine whether a current-source audit, root-free quotient bridge, proposal-only source law, or protected stop is the next honest route."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "V22-P4-T02-B2-POST-FINITE-BRIDGE-PROVENANCE-OBSTRUCTION-PACKET-SELECTION-001"
+    not_already_encoded_evidence: "Handoff-1030 contains no exact four-route comparison, torsor fixed-point theorem, quotient information-loss audit, provenance-factorization criterion, or next-role selection."
+    route_candidates:
+      - route_id: "A_CURRENT_SOURCE_EQUIVARIANT_ASYMMETRY_DERIVATION_AUDIT"
+        packet_type: "bounded_theoretical_calculation"
+        next_role_family: "ontology-formalizer@0.2.0"
+      - route_id: "B_ROOT_FREE_ORBIT_VALUED_PRESENTATION_BRIDGE"
+        packet_type: "source_extension_candidate"
+        next_role_family: "candidate-constructor@0.2.0"
+      - route_id: "C_SOURCE_GENERATED_ASYMMETRY_LAW_FORMALIZATION"
+        packet_type: "ontology_law_research_packet"
+        next_role_family: "ontology-formalizer@0.2.0"
+      - route_id: "D_PROTECTED_HUMAN_GATED_ONTOLOGY_STOP"
+        packet_type: "human_gated_ontology_change_required"
+        next_role_family: "human_gate"
+    selection_status: "current_source_equivariant_asymmetry_derivation_audit_selected_not_executed"
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P4-T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-OR-PROVENANCE-OBSTRUCTION-V1"
+    - "MD-V22-P4-T02-B2-PARENT-FUSION-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-V1"
+    - "research_control/handoffs/handoff-1030.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_route_selection_v1.tex"
+    - "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector_decision_v1.yaml"
+    - "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_route_comparison_v1.yaml"
+    - "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selected_future_packet_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+    - "latex_compile_pass"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+selector_mathematical_payload_contract:
+  required: true
+  candidate_payloads:
+    - payload_id: "PAYLOAD-A-TORSOR-FIXED-POINT"
+      statement: "For a G-set P, a G-equivariant map from the terminal G-object to P exists exactly when P has a G-fixed point; a nonempty free torsor under a nontrivial group therefore has no equivariant root."
+      required_precision: "State this as a source-side symmetry theorem only; do not identify G with physical gauge or infer impossibility in richer source theories."
+    - payload_id: "PAYLOAD-B-QUOTIENT-INFORMATION-LOSS"
+      statement: "The orbit quotient P/G can be a singleton even when P has no equivariant root, so an orbit-valued classifier preserves symmetry but cannot recover a unique presentation or admission choice."
+      required_precision: "Separate root-free diagnostic information from selection physical meaning and P4-T02 sufficiency."
+    - payload_id: "PAYLOAD-C-PROVENANCE-FACTORIZATION"
+      statement: "A proposed asymmetry is current-source derived only if it factors naturally through the registered source presentation functor; two admissible expansions over the same current reduct with different asymmetry data refute such factorization."
+      required_precision: "Do not elevate a finite same-reduct countermodel to a global no-go against all conservative source extensions."
+    - payload_id: "PAYLOAD-D-ROOT-FREE-BRIDGE-RELEVANCE"
+      statement: "A root-free bridge may be a well-typed equivariant invariant and still have zero selector force; relevance requires an independently source-defined downstream codomain and map."
+      required_precision: "Treat relevance as a future proof burden not as an empirical or physical conclusion."
+  minimum_payload_count: 1
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "select_v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_continuation_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  family_identity_sha256: "16817d3d1fb608b1fc8e9cf53064e06c5cb0c3b796ad82a22cd3b6d63a381778"
+  assumption_sha256es:
+    - "385d41a5a89a415e23edbdce1e8a9f2c7a1c639f1c41e6e4f1dc72ffc57bda4d"
+    - "bb9e59b3ebcac94ee56565c9c6f10ca937e332f41bae5321f0ea4338a704bfc6"
+    - "bbb9dd06859e280a134a021b9f3fa3236b714a58db44e4859a30a2a3719d5601"
+    - "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  route_kind: "theorem_investigation"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V22-P4-T02-B2-POST-FINITE-BRIDGE-PROVENANCE-OBSTRUCTION-THEORETICAL-CONTINUATION-SELECTION"
+    material_difference_basis: "This selector does not rebuild the finite pair-groupoid or conditional rooted fixture and does not revisit any frozen classifier. It compares an audit of existing source primitives, a root-free orbit bridge, a new proposal-only asymmetry law, and a protected stop."
+    reconstructs_frozen_candidate: false
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered draft/control post-obstruction four-route selector manuscript"
+      - "one exact route comparison decision and one selected unexecuted future packet"
+    project_system:
+      - "task-local model focused validator compact receipt LaTeX receipt provenance parent-child synthesis and standard synchronization"
+  acceptance_criteria:
+    physics:
+      - "exactly four materially distinct post-obstruction routes are compared and exactly one future packet is selected but not executed"
+      - "the GATE-04 obstruction and all six freezes remain fixed"
+      - "all fourteen Distance-to-GR rows remain literal no-delta"
+    project_system:
+      - "source hashes artifacts registries backlog program state and handoff pass deterministic validation"
+      - "the registered TeX source compiles and every rendered page passes visual inspection"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the RT002 obstruction all six freeze labels plan and source hashes fixed"
+      - "compare exactly four lawful routes and select exactly one"
+      - "enforce constructive preference material distinctness and a clear roadmap consequence"
+      - "separate mathematical source data physical meaning empirical semantics adoption and workflow authority"
+      - "review child outputs for conflicts and fuse one exact unexecuted packet decision"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260814-001/artifacts/child_phys_math_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260814-001/artifacts/child_phys_phil_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260814-001/artifacts/parent_conflict_review_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260814-001/artifacts/parent_fusion_notes_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.md"
+    fused_output_path: "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_route_selection_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+  rationale: "Two internal child execution units work in parallel under one outer AgentJob one selector overlay one claim boundary and one completion record."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-1030.yaml"
+  - "research_control/handoffs/handoff-1030.md"
+  - "research_control/tasks/RT-20260811-013/**"
+  - "research_control/tasks/RT-20260812-001/**"
+  - "research_control/tasks/RT-20260812-002/**"
+  - "research_control/tasks/RT-20260813-001/**"
+  - "registries/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-1031.yaml"
+  - "research_control/handoffs/handoff-1031.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260814-001/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - ".local/**"
+forbidden_paths:
+  - "ontology/**"
+  - "papers/**"
+  - "manuscripts/**"
+  - "experiments/**"
+  - ".git/**"
+allowed_source_classes:
+  - "registered_tex"
+  - "registered_markdown"
+  - "tracked_control_state"
+  - "task_local_draft_control"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "candidate_reconstruction"
+  - "gate_chair_verdict"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "generated_derivative_authority"
+  - "new_source_primitive"
+  - "source_law_adoption"
+  - "target_atlas"
+  - "target_metric"
+  - "desired_gr_cone"
+  - "empirical_response_label"
+expected_outputs:
+  - "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_route_selection_v1.tex"
+  - "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_route_comparison_v1.yaml"
+  - "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector_decision_v1.yaml"
+  - "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selected_future_packet_v1.yaml"
+  - "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector_model.py"
+  - "research_control/tasks/RT-20260814-001/artifacts/child_phys_math_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.yaml"
+  - "research_control/tasks/RT-20260814-001/artifacts/child_phys_phil_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.yaml"
+  - "research_control/tasks/RT-20260814-001/artifacts/parent_conflict_review_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.yaml"
+  - "research_control/tasks/RT-20260814-001/artifacts/parent_fusion_notes_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.md"
+  - "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260814-001/artifacts/validate_v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.py"
+  - "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector_validation.json"
+  - "research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector_compact_receipt.json"
+  - "research_control/tasks/RT-20260814-001/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260814-001/jobs/completions/AJC-AJ-RT-20260814-001-001.yaml"
+  - "research_control/handoffs/handoff-1031.yaml"
+  - "research_control/handoffs/handoff-1031.md"
+
+validation_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector_model.py --json"
+  - ".venv/bin/python research_control/tasks/RT-20260814-001/artifacts/validate_v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.py --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths research_control/tasks/RT-20260814-001"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260814-001-001"
+
+stop_conditions:
+  - "live HEAD or tree differs from the bound source before activation"
+  - "handoff-1030 or source hashes do not match"
+  - "any route replays the finite pair-groupoid or conditional root fixture"
+  - "any route stipulates root orientation order label admission bit arrow restriction or source authority"
+  - "any route reconstructs a frozen candidate"
+  - "any route imports target geometry physical response empirical labels or desired P4 success"
+  - "children have an unresolved blocking conflict after two rounds"
+  - "selected packet execution is attempted"
+  - "validation or checkpoint fails"
