@@ -1,0 +1,59 @@
+{
+  "schema_id": "v22_p4_t02_b2_finite_typed_presentation_admission_bridge_witness_latex_compile_receipt_v1",
+  "task_id": "RT-20260812-002",
+  "job_id": "AJ-RT-20260812-002-001",
+  "status": "PASS",
+  "source_path": "research_control/tasks/RT-20260812-002/artifacts/v22_p4_t02_b2_finite_typed_presentation_admission_bridge_witness_or_provenance_obstruction_v1.tex",
+  "source_sha256": "578fcf429c603fa83fa443b58c0aa75ecff6f95e1bb9eb2eb6af52ba0684dc23",
+  "compiler": "TeX Live 2026 pdfTeX 1.40.29 fallback",
+  "compile_command": "python3 /Users/alex.omegapy/.codex/plugins/cache/openai-bundled/latex/0.2.4/scripts/compile_latex.py <absolute-source> --output-directory <temporary-directory> --json",
+  "compile_exit_code": 0,
+  "compile_pass_count": 2,
+  "bundled_tectonic_attempt": {
+    "version": "0.16.9",
+    "exit_code": 101,
+    "accepted": false,
+    "failure_class": "local_reqwest_system_configuration_runtime_panic",
+    "fallback_used": true
+  },
+  "undefined_reference_count": 0,
+  "pdf_exists": true,
+  "pdf_required_by_registry": false,
+  "pdf_tracked": false,
+  "temporary_pdf_path": "/private/tmp/rt002-tex.NV9DnI/v22_p4_t02_b2_finite_typed_presentation_admission_bridge_witness_or_provenance_obstruction_v1.pdf",
+  "temporary_pdf_sha256": "7ab0bb6807d5a008d2a2e13c272e77c7301b60c58a5f62150a94d70d7da0da4e",
+  "temporary_pdf_byte_count": 313269,
+  "page_count": 4,
+  "page_size": "letter",
+  "final_pass_overfull_box_count": 0,
+  "final_pass_underfull_box_count": 1,
+  "underfull_box_disposition": "Accepted intentional line breaking of the long obstruction identifier; rendered text is complete and legible.",
+  "visual_inspection": {
+    "status": "PASS",
+    "render_command": "pdftoppm -png -r 150 <temporary-pdf> <temporary-page-prefix>",
+    "all_pages_inspected": true,
+    "inspected_page_count": 4,
+    "criteria": {
+      "text_clipped_or_overlapping": false,
+      "tables_clipped": false,
+      "equations_clipped": false,
+      "identifier_wrapping_unreadable": false,
+      "unexpected_blank_pages": false,
+      "page_numbering_present": true,
+      "overall_legibility": "PASS"
+    },
+    "page_notes": [
+      "Page 1: title, decisive obstruction box, source boundary, and minimum interface are legible with no clipping or overlap.",
+      "Page 2: pair-groupoid definitions, category proof, full naturality theorem, root corollary, and conservativity proof are legible and contained.",
+      "Page 3: conditional-root boundary, six-gate table, falsifier, bridge-attempt statement, and nonpromotion limits are legible with no table overflow.",
+      "Page 4: all fourteen Distance-to-GR rows and terminal non-conclusions are legible with intact page numbering and no unexpected blank page."
+    ],
+    "rendered_page_sha256es": [
+      "bb0458b7a571728b305d28a4ccc8a559db97a999ee409568cc5790432dbb7250",
+      "cda493e7ef65166a19c4354d97683bae5f105c221ff218dd134ac70e394b279c",
+      "7af5dec2d0286e6abb4eb8554ee106159c752dcaeb07674896cb79317c8ed55f",
+      "70c9ea6b1bd77901a42b6f029666b7bdf034cff8790645b6bc6bc37490a39e20"
+    ]
+  },
+  "authority_note": "Compilation and visual inspection are conformance evidence only. They do not prove scientific claims, supply source provenance, promote the draft/control manuscript, execute the selected successor, or authorize the temporary PDF as independent authority."
+}

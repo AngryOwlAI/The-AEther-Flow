@@ -1,0 +1,274 @@
+\documentclass[11pt]{article}
+% obstruction_id: OB-V22-P4T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-SOURCE-PROVENANCE-001
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage[margin=0.84in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs,longtable,array}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xcolor}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage{url}
+
+\newtheorem{definition}{Definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{corollary}{Corollary}
+\newcommand{\PresObj}{\mathsf{PresObj}}
+\newcommand{\PresArrow}{\mathsf{PresArrow}}
+\newcommand{\Bool}{\mathsf{Bool}}
+\newcommand{\Ext}{\mathsf{Ext}_{R}}
+\newcommand{\Prov}{\mathsf{Prov}_{\rm src}}
+\newcommand{\EqSrc}{\mathsf{EqSrc}}
+\newcommand{\status}[1]{\textsf{#1}}
+\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
+\setlist{nosep,leftmargin=*}
+\urlstyle{tt}
+
+\title{Finite Typed Presentation--Admission Bridge Attempt\\
+\large V22 P4--T02 B2 source-provenance obstruction}
+\author{Candidate Constructor parent synthesis, RT-20260812-002}
+\date{12 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\begin{minipage}{0.94\linewidth}
+\textbf{Decisive Candidate Constructor result:
+\status{precise\_obstruction}.}
+The minimum finite presentation--admission interface is well typed.  Its
+two-object pair-groupoid control is category coherent, and adjoining it by an
+independent product is conservative over every fixed current source reduct.
+All two automorphisms, all four Boolean predicates, and every nonidentity
+naturality square were exhausted.  With trivial Boolean transport the only
+natural predicates are constant false and constant true; neither uniquely
+admits an object.  A root makes unique admission possible only conditionally,
+but the canonical current source package supplies no presentation root,
+orientation, order, label-selection law, admission bit, or equivalent
+asymmetry.  Gate 4 therefore fails as
+\status{source\_provenance\_obstruction}, and the positive construction is
+prohibited.
+
+\smallskip
+\texttt{OB-V22-P4T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-}\allowbreak
+\texttt{BRIDGE-SOURCE-PROVENANCE-001}.
+This is a current-source, candidate-local obstruction, not a global no-go or
+a proof that every conservative future extension fails.
+\end{minipage}}
+\end{center}
+
+\section{Authority and exact source boundary}
+
+The registered foundations source takes a smooth four-dimensional source
+manifold as explicit primitive debt and retains only an unresolved abstract
+slot $\Phi_{\rm src}$.  It does not identify the source arena with physical
+spacetime or assign $\Phi_{\rm src}$ a domain, algebra, action, gauge meaning,
+or physical-time semantics.  The registered dynamics source supplies the
+target-side exact-GR benchmark, which is excluded from this source-extension
+attempt.  The current source signature has no presentation carrier, root,
+orientation, order, admission predicate, nonidentity presentation arrow, or
+source law selecting any of them.
+
+The packet extends one fixed current reduct $R$ only as draft/control syntax.
+It does not edit the canonical ontology.  The source manifold and unresolved
+$\Phi_{\rm src}$ are held fixed; target metric, cone, tetrad, clock, empirical
+label, benchmark answer, and workflow status are forbidden inputs.
+
+\section{Minimum typed interface}
+
+\begin{definition}[Finite presentation--admission interface]
+An object of $\Ext$ contains finite carriers $\PresObj$ and $\PresArrow$,
+maps
+\[
+ s,t:\PresArrow\to\PresObj,\qquad
+ \mathrm{id}:\PresObj\to\PresArrow,
+\]
+partial composition
+\[
+ \circ:\PresArrow\mathbin{\times_{\PresObj}}\PresArrow\to\PresArrow,
+\]
+an admission predicate $a:\PresObj\to\Bool$, and typed Boolean transport
+$T_f:\Bool\to\Bool$ for every arrow $f$.  Endpoint, identity, associativity,
+and declared inverse laws hold.  Admission naturality is
+\[
+ T_f(a(s(f)))=a(t(f)).
+\]
+The forgetful map $U:\Ext\to\mathrm{Mod}(\Sigma_{\rm cur})$ drops every new
+carrier, map, and axiom.
+\end{definition}
+
+Deleting any one of the two carriers, endpoint maps, identity, composition,
+admission, or transport makes at least one displayed expression ill typed.
+Together they are syntactically sufficient for the declared finite problem.
+This is a formation result, not a derivation of source semantics.
+
+\section{Pair-groupoid calculation}
+
+Let $P=\{0,1\}$ and
+\[
+ G=P\times P,
+ \quad s(i,j)=i,\quad t(i,j)=j,\quad
+ \mathrm{id}(i)=(i,i),
+\]
+with $(i,j)\circ(j,k)=(i,k)$ and $(i,j)^{-1}=(j,i)$.
+
+\begin{theorem}[Complete category and automorphism control]
+$G\rightrightarrows P$ is the pair groupoid.  Its object-induced
+automorphism group is $S_2=\{\mathrm{id},\tau\}$, where
+$\tau(0)=1$ and $\tau(1)=0$.  These are all automorphisms and both preserve
+source, target, identities, composition, and inverses.
+\end{theorem}
+
+\begin{proof}
+The endpoint and inverse equations follow immediately from ordered pairs.
+For every composable triple,
+\[
+ ((i,j)\circ(j,k))\circ(k,l)=(i,l)
+ =(i,j)\circ((j,k)\circ(k,l)),
+\]
+so composition is associative; the displayed identities are two-sided.
+Every object permutation uniquely induces $(i,j)\mapsto(\pi i,\pi j)$, and
+every groupoid automorphism restricts to an object permutation.  A two-element
+set has exactly the identity and swap permutations.
+\end{proof}
+
+Take $T_f=\mathrm{id}_{\Bool}$ for every arrow.  The four Boolean predicates
+on $P$ are
+\[
+ (0,0),\ (0,1),\ (1,0),\ (1,1),
+\]
+where $1$ denotes admitted.
+
+\begin{theorem}[Total naturality classification]
+A predicate $a:P\to\Bool$ is natural along every arrow of $G$ exactly when
+$a(0)=a(1)$.  Therefore the only natural predicates are constant false and
+constant true, and no natural predicate uniquely admits one object.
+\end{theorem}
+
+\begin{proof}
+The two identity squares commute automatically.  The two nonidentity arrows
+$(0,1)$ and $(1,0)$ each impose $a(0)=a(1)$ under trivial transport.  The two
+constant predicates satisfy both equalities; the two remaining predicates do
+not.  This exhausts all four functions $P\to\Bool$ and all four arrows.
+\end{proof}
+
+\begin{corollary}[No natural root on the unbroken torsor]
+There is no $S_2$-equivariant choice $\rho\in P$ from the unrooted
+two-object control.
+\end{corollary}
+
+\begin{proof}
+Equivariance would require $\tau(\rho)=\rho$, but the swap has no fixed
+object.
+\end{proof}
+
+\section{Conservativity and the conditional rooted fixture}
+
+\begin{proposition}[Theory-scope old-language conservativity]
+Let $T_{\rm cur}$ be the exact current source theory.  Adjoin an independent
+copy of the finite pair groupoid and axioms involving only its new sorts and
+maps.  Every model $M\models T_{\rm cur}$ expands to $M\times G$, and the
+old-language reduct of $M\times G$ is exactly $M$.  Hence an old-language
+sentence is valid in all such expansions exactly when it is valid in all
+models of $T_{\rm cur}$.
+\end{proposition}
+
+\begin{proof}
+Existence of an expansion is witnessed by the fixed finite $G$.  The new
+axioms constrain only new carriers and maps, so satisfaction of every
+old-language formula is evaluated in the unchanged reduct $M$.  Conversely,
+forgetting the new data returns $M$.  The two model classes therefore have
+the same old-language consequences.
+\end{proof}
+
+If a root $\rho=0$ is stipulated and only root-preserving arrows are admitted,
+$a_\rho(p)=[p=\rho]$ is a unique natural admission predicate.  This proves
+conditional tractability only.  It neither selects $\rho$ nor turns the
+fixture into current-source evidence.  Object labels $0,1$ are calculation
+metadata and cannot perform the missing epistemic work.
+
+\section{Six-gate disposition}
+
+\begin{longtable}{P{0.12\linewidth}P{0.12\linewidth}P{0.66\linewidth}}
+\toprule
+Gate & Status & Exact disposition \\
+\midrule
+\endfirsthead
+\toprule
+Gate & Status & Exact disposition \\
+\midrule
+\endhead
+1 & \status{PASS} & The minimum carriers, maps, category laws, admission, and transport are fully typed. \\
+2 & \status{PASS} & Independent finite product expansion is conservative at the stated old-language theory scope. \\
+3 & \status{PASS} & Two automorphisms, four predicates, and every identity and nonidentity naturality square are exhausted. \\
+4 & \status{FAIL} & Every uniquely selecting branch needs a root or equivalent asymmetry, but no such datum has independent noncircular current-source provenance. \\
+5 & \status{PASS} & No target, empirical, benchmark, workflow, or frozen-route input enters. \\
+6 & \status{PASS} & Extension syntax, mathematics, provenance, physical meaning, empirical meaning, adoption, and workflow authority remain separated. \\
+\bottomrule
+\end{longtable}
+
+The failure of Gate 4 activates proof obligation PO-09: return
+\status{source\_provenance\_obstruction} and prohibit PO-10's positive
+construction.  The falsifier is concrete: produce a registered, pre-outcome,
+current-source term or law selecting the presentation asymmetry and prove its
+coherent transport under every admitted nonidentity $\EqSrc$ arrow without
+using unique admission, desired P4 success, target geometry, or workflow
+status.
+
+\section{Bridge attempt and semantic limits}
+
+The attempted task-level map is
+\[
+ \mathsf{Outcome}:\Ext\longrightarrow
+ \mathsf{ConstructionCert}\sqcup\mathsf{ObstructionCert}.
+\]
+The candidate branch would use $a:\PresObj\to\Bool$, but its first missing
+primitive is a source-derived presentation asymmetry/admission law.  The exact
+output is therefore an obstruction certificate, not a bridge to physical
+response.  A finite admission predicate is not a clock, detector response,
+causal cone, time orientation, conformal class, scale, or effective metric.
+
+The result preserves all six local freezes.  It does not reevaluate D7, act on
+B2, complete P4--T02 for plan dependency, or unlock P4--T03.  A future
+conservative extension may add independently justified structure; this packet
+proves only that the current canonical source package does not supply it.
+
+\section{Distance to GR and non-conclusions}
+
+\begin{longtable}{P{0.31\linewidth}P{0.14\linewidth}P{0.45\linewidth}}
+\toprule
+Burden & Delta & Finding \\
+\midrule
+\endfirsthead
+\toprule
+Burden & Delta & Finding \\
+\midrule
+\endhead
+Source ontology primitives & \status{no\_delta} & No root or admission law is added or adopted. \\
+Source equivalence $\EqSrc$ & \status{no\_delta} & The pair groupoid is proposal-only syntax, not canonical source equivalence. \\
+RetainH & \status{no\_delta} & No retention law is constructed. \\
+GenH & \status{no\_delta} & No generator is constructed. \\
+ObsLoc$_{\rm lc}$ & \status{no\_delta} & No observer-localization map is supplied. \\
+Resp$_{\rm lc}$ & \status{no\_delta} & Boolean admission is not detector response. \\
+$M_{\rm src}$ & \status{no\_delta} & No physical source spacetime is adopted. \\
+$g_{\rm eff}$ & \status{no\_delta} & No cone, conformal class, scale, or metric is constructed. \\
+Matter coupling & \status{no\_delta} & No propagation or coupling law is derived. \\
+Einstein equations & \status{no\_delta} & No action, variation, or field equation is supplied. \\
+Finite-variation robustness & \status{no\_delta} & No physical candidate law is admitted for stress. \\
+Benchmark promotion & \status{no\_delta} & No benchmark is executed or promoted. \\
+Gate Chair status & \status{no\_delta} & No protected verdict is issued. \\
+Route freeze or hard-fail status & \status{no\_delta} & Six inherited freezes remain exact and no global freeze is added. \\
+\bottomrule
+\end{longtable}
+
+The separately admitted next packet is a theoretical continuation selection,
+not executed here.  No canonical ontology or source law is edited, adopted,
+rejected, or promoted.  No global no-go, future-extension impossibility,
+physical geometry, Gate result, benchmark status, proof promotion,
+publication, push, external action, or completed first-principles derivation
+follows.
+
+\end{document}

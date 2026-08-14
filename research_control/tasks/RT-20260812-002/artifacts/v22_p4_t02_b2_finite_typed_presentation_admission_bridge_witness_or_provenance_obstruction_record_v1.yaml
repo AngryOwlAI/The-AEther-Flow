@@ -1,0 +1,202 @@
+schema_id: "v22_p4_t02_b2_finite_typed_presentation_admission_bridge_witness_or_provenance_obstruction_record_v1"
+task_id: "RT-20260812-002"
+job_id: "AJ-RT-20260812-002-001"
+packet_id: "PKT-V22-P4T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-CONSTRUCTION-OR-PROVENANCE-OBSTRUCTION-V1"
+status: "draft_control"
+authority: "science_draft"
+
+candidate_constructor_result:
+  result_type: "precise_obstruction"
+  scientific_subresult: "source_provenance_obstruction"
+  obstruction_id: "OB-V22-P4T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-SOURCE-PROVENANCE-001"
+  result_artifact: "research_control/tasks/RT-20260812-002/artifacts/v22_p4_t02_b2_finite_typed_presentation_admission_bridge_witness_or_provenance_obstruction_v1.tex"
+  failed_components:
+    - "independent noncircular current-source provenance for a presentation root or equivalent asymmetry"
+    - "independent current-source provenance for a uniquely selecting admission law"
+  no_fog_check: true
+  no_fog_explanation: "The finite typed interface, category laws, conservativity, automorphisms, predicates, and naturality squares are complete. Every unique-admission branch requires asymmetry, but the canonical current source package supplies none; Gate 4 fails and the positive branch is prohibited."
+
+bridge_attempt_status:
+  attempted_candidate_map: "Outcome:Ext_R->ConstructionCert coproduct ObstructionCert"
+  proposed_internal_map: "admit:PresObj->Bool"
+  status: "precisely_obstructed_before_positive_construction"
+  missing_primitive: "source-derived presentation asymmetry and admission law with coherent nonidentity EqSrc transport"
+  current_source_derivation_present: false
+  positive_branch_executed: false
+  descriptor_instance_complete: false
+  physical_bridge_claimed: false
+
+source_extension_classification:
+  category: "proposal_only_finite_typed_interface_with_source_provenance_obstruction"
+  status_label: "source-extension data"
+  adoption_status: "blocked_adoption_open_continuation"
+  current_ontology_derivation: false
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected_globally: false
+  human_gated: false
+
+formal_domains:
+  - {domain_id: "DOM-01", symbol: "Sigma_cur", definition: "Exact registered current source theory."}
+  - {domain_id: "DOM-02", symbol: "R_cur", definition: "One fixed current-language reduct."}
+  - {domain_id: "DOM-03", symbol: "Sigma_min", definition: "Minimum finite presentation-admission extension signature."}
+  - {domain_id: "DOM-04", symbol: "Ext_R", definition: "Finite Sigma_min expansions with old reduct R_cur."}
+  - {domain_id: "DOM-05", symbol: "G_pair", definition: "Two-object pair-groupoid negative control."}
+  - {domain_id: "DOM-06", symbol: "G_rooted", definition: "Conditional rooted control with no source credit."}
+  - {domain_id: "DOM-07", symbol: "Prov_src", definition: "Independent pre-outcome source-provenance relation."}
+  - {domain_id: "DOM-08", symbol: "Cert", definition: "Construction or obstruction certificate sum."}
+
+formal_objects:
+  - {object_id: "OBJ-01", symbol: "PresObj", type: "finite carrier"}
+  - {object_id: "OBJ-02", symbol: "PresArrow", type: "finite arrow carrier"}
+  - {object_id: "OBJ-03", symbol: "src,tgt", type: "PresArrow->PresObj"}
+  - {object_id: "OBJ-04", symbol: "id,comp,inverse", type: "finite groupoid operations"}
+  - {object_id: "OBJ-05", symbol: "admit", type: "PresObj->Bool"}
+  - {object_id: "OBJ-06", symbol: "transport", type: "PresArrow->End(Bool)"}
+  - {object_id: "OBJ-07", symbol: "Aut", type: "complete automorphism group"}
+  - {object_id: "OBJ-08", symbol: "rho_or_asym", type: "conditional asymmetric datum"}
+  - {object_id: "OBJ-09", symbol: "U", type: "forgetful reduct functor"}
+  - {object_id: "OBJ-10", symbol: "Prov_src", type: "provenance certificate or obstruction"}
+
+formal_maps:
+  - {map_id: "MAP-01", signature: "src,tgt:PresArrow->PresObj"}
+  - {map_id: "MAP-02", signature: "id:PresObj->PresArrow"}
+  - {map_id: "MAP-03", signature: "comp:PresArrow times_PresObj PresArrow->PresArrow"}
+  - {map_id: "MAP-04", signature: "inverse:PresArrow->PresArrow"}
+  - {map_id: "MAP-05", signature: "admit:PresObj->Bool"}
+  - {map_id: "MAP-06", signature: "transport:PresArrow->End(Bool)"}
+  - {map_id: "MAP-07", signature: "Nat_f:transport_f(admit(src(f)))=admit(tgt(f))"}
+  - {map_id: "MAP-08", signature: "U:Ext_R->Mod(Sigma_cur)"}
+  - {map_id: "MAP-09", signature: "Prov_src:AddedDatum->AuthorizedSourceEvidence"}
+  - {map_id: "MAP-10", signature: "Outcome:Ext_R->ConstructionCert coproduct ObstructionCert"}
+
+gate_results:
+  - {gate_id: "GATE-01", status: "pass", result: "complete_typed_pair_groupoid_interface"}
+  - {gate_id: "GATE-02", status: "pass", result: "theory_scope_old_language_conservativity"}
+  - {gate_id: "GATE-03", status: "pass", result: "complete_s2_predicate_and_naturality_classification"}
+  - {gate_id: "GATE-04", status: "fail", result: "source_provenance_obstruction"}
+  - {gate_id: "GATE-05", status: "pass", result: "no_forbidden_import"}
+  - {gate_id: "GATE-06", status: "pass", result: "semantic_and_authority_layers_separated"}
+
+theorem_results:
+  - theorem_id: "THM-01"
+    name: "pair_groupoid_category_coherence"
+    status: "proved_in_task_scope"
+  - theorem_id: "THM-02"
+    name: "theory_scope_product_extension_conservativity"
+    status: "proved_in_task_scope"
+  - theorem_id: "THM-03"
+    name: "complete_two_object_naturality_classification"
+    status: "proved_in_task_scope"
+  - theorem_id: "THM-04"
+    name: "no_equivariant_natural_root_on_two_object_torsor"
+    status: "proved_in_task_scope"
+  - theorem_id: "THM-05"
+    name: "current_source_provenance_obstruction"
+    status: "proved_from_bound_current_sources"
+  - theorem_id: "THM-06"
+    name: "semantic_nonpromotion"
+    status: "boundary_preserved"
+
+proof_obligations:
+  - {obligation_id: "PO-01", status: "pass", evidence: "Bound source manifest and predecessor checkpoint."}
+  - {obligation_id: "PO-02", status: "pass", evidence: "All finite carriers and operations are typed."}
+  - {obligation_id: "PO-03", status: "pass", evidence: "Endpoint identity associativity and inverse laws exhaustively verified."}
+  - {obligation_id: "PO-04", status: "pass", evidence: "Product-expansion theorem proves old-language theory conservativity."}
+  - {obligation_id: "PO-05", status: "pass", evidence: "Unbroken pair groupoid constructed."}
+  - {obligation_id: "PO-06", status: "pass", evidence: "Two automorphisms and four Boolean predicates exhausted."}
+  - {obligation_id: "PO-07", status: "pass", evidence: "Both nonidentity and both identity naturality squares checked."}
+  - {obligation_id: "PO-08", status: "exact_fail", evidence: "Root and admission asymmetry have no independent current-source provenance."}
+  - {obligation_id: "PO-09", status: "pass", evidence: "source_provenance_obstruction returned and positive branch prohibited."}
+  - {obligation_id: "PO-10", status: "not_applicable_prohibited", evidence: "Gate 4 prevents construction."}
+  - {obligation_id: "PO-11", status: "pass", evidence: "Import audit finds no forbidden input."}
+  - {obligation_id: "PO-12", status: "pass", evidence: "Eight semantic and authority layers separated."}
+  - {obligation_id: "PO-13", status: "pass", evidence: "One precise no-fog obstruction with falsifier returned."}
+  - {obligation_id: "PO-14", status: "pass", evidence: "Six freezes fourteen no-delta rows and D7 B2 P4-T03 locks preserved."}
+
+failure_branches:
+  - {failure_id: "FB-01", triggered: false, disposition: "interface_complete"}
+  - {failure_id: "FB-02", triggered: false, disposition: "reduct_conservative"}
+  - {failure_id: "FB-03", triggered: false, disposition: "enumeration_complete"}
+  - {failure_id: "FB-04", triggered: false, disposition: "unique_admission_not_claimed_under_swap"}
+  - {failure_id: "FB-05", triggered: false, disposition: "all_naturality_squares_pass_or_witness_failure"}
+  - {failure_id: "FB-06", triggered: true, disposition: "source_provenance_obstruction"}
+  - {failure_id: "FB-07", triggered: false, disposition: "goal_result_not_used_as_provenance"}
+  - {failure_id: "FB-08", triggered: false, disposition: "no_forbidden_import"}
+  - {failure_id: "FB-09", triggered: false, disposition: "no_physical_semantic_overread"}
+  - {failure_id: "FB-10", triggered: false, disposition: "no_ontology_edit_or_protected_verdict"}
+  - {failure_id: "FB-11", triggered: false, disposition: "exact_obstruction_returned"}
+  - {failure_id: "FB-12", triggered: false, disposition: "completion_boundaries_preserved"}
+
+new_mathematical_payload:
+  - payload_id: "NMP-01"
+    result: "Complete category-law proof for the two-object pair groupoid."
+    falsifier: "Produce one enumerated composable triple or inverse equation that fails."
+  - payload_id: "NMP-02"
+    result: "Complete S2 automorphism and four-predicate naturality classification."
+    falsifier: "Produce an omitted automorphism predicate or naturality square."
+  - payload_id: "NMP-03"
+    result: "No S2-equivariant root exists on the unbroken two-object torsor."
+    falsifier: "Exhibit an object fixed by the swap."
+  - payload_id: "NMP-04"
+    result: "Independent finite product expansion is conservative for the old source language."
+    falsifier: "Give an old-language sentence whose truth changes under the displayed reduct-preserving expansion."
+  - payload_id: "NMP-05"
+    result: "The rooted unique-admission fixture is conditional and cannot satisfy Gate 4 without a source provenance term."
+    falsifier: "Bind a registered current-source term or law to the root without using the desired admission outcome."
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+
+distance_to_gr_status:
+  - {burden: "Source ontology primitives", status: "no_delta"}
+  - {burden: "Source equivalence EqSrc", status: "no_delta"}
+  - {burden: "RetainH", status: "no_delta"}
+  - {burden: "GenH", status: "no_delta"}
+  - {burden: "ObsLoc_lc", status: "no_delta"}
+  - {burden: "Resp_lc", status: "no_delta"}
+  - {burden: "M_src", status: "no_delta"}
+  - {burden: "g_eff", status: "no_delta"}
+  - {burden: "matter coupling", status: "no_delta"}
+  - {burden: "Einstein equations", status: "no_delta"}
+  - {burden: "finite-variation robustness", status: "no_delta"}
+  - {burden: "benchmark promotion", status: "no_delta"}
+  - {burden: "Gate Chair status", status: "no_delta"}
+  - {burden: "current route freeze or hard-fail status", status: "no_delta"}
+
+downstream_locks:
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+  p4_t03_unlocked_or_executed: false
+  effective_metric_constructed: false
+
+selected_successor:
+  packet_id: "PKT-V22-P4T02-B2-POST-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-PROVENANCE-OBSTRUCTION-THEORETICAL-CONTINUATION-SELECTION-V1"
+  packet_type: "theoretical_continuation_selector"
+  next_role_family: "theoretical-continuation-selector@0.1.0"
+  status: "selected_not_executed"
+  reason: "Select one materially distinct source-side consequence or protected human-gated stop after the exact current-source provenance obstruction without replaying the finite bridge or any frozen route."
+
+authority_limits:
+  source_extension_constructed: false
+  source_law_derived_from_current_ontology: false
+  source_law_adopted_or_rejected: false
+  canonical_ontology_modified: false
+  rooted_asymmetry_source_derived: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_claimed: false

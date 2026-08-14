@@ -700,6 +700,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-AUDIT-V1` `research_control/tasks/RT-20260809-022/artifacts/parent_fusion_notes_p4_t02_b2_descriptor_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-CONSTRUCTION-V1` `research_control/tasks/RT-20260809-023/artifacts/parent_fusion_notes_p4_t02_b2_descriptor_construction.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-V1` `research_control/tasks/RT-20260812-002/artifacts/parent_fusion_notes_p4_t02_b2_finite_typed_presentation_admission_bridge_witness.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-017/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge_general_rank_post_repair_smuggling_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REFUTER-STRESS-V1` `research_control/tasks/RT-20260811-001/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge_general_rank_refuter_stress.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REPAIR-V1` `research_control/tasks/RT-20260810-016/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge_general_rank_repair.md`
@@ -1421,6 +1422,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-CONSTRUCTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-construction-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-finite-typed-presentation-admission-bridge-witness-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-oriented-matroid-bridge-general-rank-post-repair-smuggling-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REFUTER-STRESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-oriented-matroid-bridge-general-rank-refuter-stress-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REPAIR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-oriented-matroid-bridge-general-rank-repair-v1.md`

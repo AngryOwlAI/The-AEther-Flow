@@ -1,0 +1,106 @@
+schema_id: "v22_p4_t02_b2_finite_typed_presentation_admission_bridge_witness_fixtures_v1"
+task_id: "RT-20260812-002"
+job_id: "AJ-RT-20260812-002-001"
+status: "draft_control"
+authority: "science_draft"
+
+fixed_reduct:
+  reduct_id: "R-CUR-V22-P4T02-B2-001"
+  source_arena: "Sub"
+  source_arena_dimension: 4
+  source_arena_status: "explicit_primitive_debt"
+  phi_src_status: "unresolved_abstract_slot"
+  physical_spacetime_identification: false
+  presentation_root_supplied: false
+  presentation_orientation_supplied: false
+  presentation_order_supplied: false
+  admission_bit_supplied: false
+
+minimum_interface:
+  sorts:
+    - "PresObj"
+    - "PresArrow"
+    - "Bool"
+  maps:
+    - "src:PresArrow->PresObj"
+    - "tgt:PresArrow->PresObj"
+    - "id:PresObj->PresArrow"
+    - "comp:PresArrow times_PresObj PresArrow->PresArrow"
+    - "admit:PresObj->Bool"
+    - "transport:PresArrow->End(Bool)"
+  laws:
+    - "endpoint"
+    - "left_identity"
+    - "right_identity"
+    - "associativity"
+    - "inverse_for_groupoid_control"
+    - "admission_naturality"
+
+pair_groupoid_control:
+  object_carrier: [0, 1]
+  arrow_carrier:
+    - [0, 0]
+    - [0, 1]
+    - [1, 0]
+    - [1, 1]
+  source_rule: "src(i,j)=i"
+  target_rule: "tgt(i,j)=j"
+  identity_rule: "id(i)=(i,i)"
+  composition_rule: "(i,j) composed_with (j,k)=(i,k)"
+  inverse_rule: "inverse(i,j)=(j,i)"
+  automorphisms:
+    - id: "identity"
+      object_action: [0, 1]
+    - id: "swap"
+      object_action: [1, 0]
+  boolean_transport: "identity_on_Bool_for_every_arrow"
+  all_boolean_predicates:
+    - [false, false]
+    - [false, true]
+    - [true, false]
+    - [true, true]
+  natural_boolean_predicates:
+    - [false, false]
+    - [true, true]
+  unique_natural_admission_count: 0
+  nonidentity_arrow_count: 2
+  nonidentity_naturality_square_count: 2
+
+rooted_conditional_control:
+  root: 0
+  root_status: "stipulated_fixture_only"
+  admission_predicate: [true, false]
+  root_preserving_automorphism_count: 1
+  unique_admission: true
+  independent_current_source_provenance: false
+  positive_candidate_credit: false
+  falsifier: "Exhibit a registered pre-outcome current-source term or law whose value is the root and whose transport is noncircular under every admitted EqSrc arrow."
+
+gate_results:
+  - gate_id: "GATE-01"
+    status: "pass"
+    result: "complete_typed_pair_groupoid_interface"
+  - gate_id: "GATE-02"
+    status: "pass"
+    result: "semantic_product_expansion_is_old_language_conservative"
+  - gate_id: "GATE-03"
+    status: "pass"
+    result: "s2_automorphisms_four_predicates_and_all_naturality_squares_exhausted"
+  - gate_id: "GATE-04"
+    status: "fail"
+    result: "source_provenance_obstruction"
+  - gate_id: "GATE-05"
+    status: "pass"
+    result: "no_target_empirical_benchmark_workflow_or_frozen_route_import"
+  - gate_id: "GATE-06"
+    status: "pass"
+    result: "proposal_only_and_blocked_adoption_layers_separated"
+
+decisive_result:
+  candidate_constructor_result_type: "precise_obstruction"
+  scientific_subresult: "source_provenance_obstruction"
+  obstruction_id: "OB-V22-P4T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-SOURCE-PROVENANCE-001"
+  positive_construction_prohibited: true
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  no_fog_check: true
