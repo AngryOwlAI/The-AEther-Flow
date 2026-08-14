@@ -7,50 +7,50 @@ generated_from:
   - "research_control/current_frontier.md"
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
-  - "research_control/handoffs/handoff-1029.yaml"
+  - "research_control/handoffs/handoff-1030.yaml"
   - "research_control/program_state.yaml"
 report_provenance:
   schema_id: "generated_report_provenance_v1"
   policy_id: "p13_t07_live_generated_report_freshness_v1"
   report_class: "compact_current_frontier"
-  source_commit: "7d6ee1f30ec871b4dc717af15da697a3695d8d4f"
+  source_commit: "e32d8fb9405ed4b0eafa1f0186119b62a5d11823"
   source_hashes:
     - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
       sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
     - path: "registries/RESEARCH_TASK_REGISTRY.csv"
-      sha256: "26003c43b3afdaedd1fedc54c2e135175f02da3ba4cc84203071bb2258b911c6"
+      sha256: "f2d714aaf19bab8f1b3dd7c7e8fc8d6f8a9f2b0fe159a3935231644e87f74858"
     - path: "research_control/current_frontier.md"
-      sha256: "03b75bb2ad0b874314bcaf5cb5164887e715f9b996c2696ba781e987f54f359e"
-    - path: "research_control/handoffs/handoff-1029.yaml"
-      sha256: "a75e047cbb08ff46b1dde246ffe9cf87284c3d394e1a4861dfec588b953a08d1"
+      sha256: "1128510dce4f2a9baae6af7e47c384841fcfa0b243e95d7cd1aac64545811d1e"
+    - path: "research_control/handoffs/handoff-1030.yaml"
+      sha256: "385d41a5a89a415e23edbdce1e8a9f2c7a1c639f1c41e6e4f1dc72ffc57bda4d"
     - path: "research_control/program_state.yaml"
-      sha256: "f6b2f93638022e187d116138fe6b1e673cd36b77c29bd40cc53ab02fbe267bfc"
+      sha256: "24990ac4def5e81054f010ac3b3c8b95f692a21e338c5b37a9567e03e6428708"
     - path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml"
       sha256: "dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"
     - path: "scripts/research_control/generated_report_provenance.py"
       sha256: "af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"
     - path: "scripts/research_control/render_compact_current_frontier_v16.py"
       sha256: "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
-  source_manifest_sha256: "e47d86ae562237eb05ef14b2c47e9d171e020ae7e19798f3be74196c82ff735d"
+  source_manifest_sha256: "5d53035db252f3da05f6e8fbf241e203ad9c23890f603ff1fbda8d78ca805db1"
   source_path_count: "12"
-  generation_time: "2026-08-13T05:41:01Z"
-  task_count: "1284"
+  generation_time: "2026-08-14T03:06:47Z"
+  task_count: "1285"
   maximum_commit_lag: "1"
   freshness_status: "fresh_at_generation"
   generated_view_is_authority: false
   physics_promotion_authorized: false
   proof_authority: false
 active_state:
-  active_task_id: "RT-20260812-002"
-  latest_handoff_id: "handoff-1029"
-  current_status: "v22_p4_t02_b2_finite_typed_bridge_source_provenance_obstruction_checkpoint_pending"
+  active_task_id: "RT-20260813-001"
+  latest_handoff_id: "handoff-1030"
+  current_status: "v22_p4_t02_handoff_1029_markdown_identity_recovery_checkpoint_pending"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260812-002"
-  latest_research_handoff_id: "handoff-1029"
-  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260812-002-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-PROVENANCE-OBSTRUCTION-THEORETICAL-CONTINUATION-SELECTION-V1. Select a materially distinct source-side theorem, source-acquisition packet, conservative-extension investigation, or protected human-gated stop. Do not replay this finite bridge, stipulate the missing asymmetry, reopen any frozen route, reevaluate D7, act on B2, unlock P4-T03, adopt ontology, promote, publish, push, or take external action."
+  latest_research_task_id: "RT-20260813-001"
+  latest_research_handoff_id: "handoff-1030"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260813-001-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-PROVENANCE-OBSTRUCTION-THEORETICAL-CONTINUATION-SELECTION-V1. Select but do not execute one materially distinct source-side continuation or protected human-gated stop. Do not replay the finite bridge, stipulate the missing asymmetry, reopen any frozen route, reevaluate D7, act on B2, unlock P4-T03, adopt ontology, promote, publish, push, or take external action."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -371,7 +371,7 @@ blocked_physical_targets:
       - "no_global_theory_rejection"
 distance_to_gr:
   delta:
-    effect: "obstruction_recorded"
+    effect: "no_distance_delta"
     changed: false
     milestone: "effective_metric_g_eff"
     burden_id: "g_eff"

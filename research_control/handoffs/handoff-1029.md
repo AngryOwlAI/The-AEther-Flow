@@ -1,6 +1,6 @@
 <!-- authority: control -->
 
-# Handoff 1029
+# handoff-1029
 
 RT-20260812-002 completed one bounded Candidate Constructor packet and returned
 `precise_obstruction` / `source_provenance_obstruction`.
