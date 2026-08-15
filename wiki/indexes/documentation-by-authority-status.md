@@ -153,6 +153,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/parent_fusion_notes_p4_t02_b2_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-V1` `research_control/tasks/RT-20260811-005/artifacts/parent_fusion_notes_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-004/artifacts/parent_fusion_notes_p4_t02_b2_signed_cubic_viability_selector_smuggling_audit.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1` `research_control/tasks/RT-20260815-003/artifacts/parent_fusion_notes_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1` `research_control/tasks/RT-20260811-003/artifacts/parent_fusion_notes_p4_t02_b2_source_dynamical_viability_admissibility_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-V1` `research_control/tasks/RT-20260811-011/artifacts/parent_fusion_notes_p4_t02_b2_source_generated_compact_root_family_coercive_protection_law.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `research_control/tasks/RT-20260810-001/artifacts/parent_fusion_notes_p4_t02_b2_source_intrinsic_interface_repair.md`
@@ -945,6 +946,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-signed-cubic-viability-selector-refuter-stress-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-signed-cubic-viability-selector-smuggling-audit-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-derived-occurrence-admissibility-descent-kernel-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-dynamical-viability-admissibility-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-generated-compact-root-family-coercive-protection-law-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-intrinsic-interface-repair-v1.md`

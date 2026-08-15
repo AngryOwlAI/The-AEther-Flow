@@ -1,0 +1,336 @@
+\documentclass[11pt]{article}
+\usepackage[letterpaper,margin=0.82in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,array,enumitem,microtype,url}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newcommand{\Src}{\mathsf{Src}}
+\newcommand{\Prop}{\mathsf{Prop}}
+\newcommand{\Fib}{\mathsf{Fib}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\Prob}{\operatorname{Prob}}
+\newcommand{\Sub}{\mathsf{Sub}}
+
+\title{V22 P4--T02 Source-Derived Occurrence, Admissibility,\\
+Descent, and Kernel Formalization}
+\author{Physicist--Mathematician--Philosopher Parent Synthesis}
+\date{15 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The exclusive result is
+\texttt{current\_source\_provenance\_or\_typing\_obstruction}.
+The exact current typed source signature contains a smooth four-dimensional
+manifold and retains $\Phi_{\rm src}$ only as an unresolved nonsemantic debt
+marker.  It forms the audit groupoid of smooth four-manifolds and
+diffeomorphisms, but it does not contain a proposal category, a forgetful
+projection to source objects, proposal fibers or actions, measurable fiber
+structures, a source restriction site, an admissibility subfunctor, an
+occurrence kernel, or an occurrence generator.  Consequently no deterministic
+section, proper invariant admissible subfunctor, or normalized equivariant
+kernel is currently source-derived.  Five general results remain valid under
+explicit proposal-only hypotheses: a stabilizer fixed-point criterion for
+natural sections, an invariant-subfunctor criterion, an invariant-measure
+criterion for kernels, a local descent criterion, and a same-reduct
+factorization criterion.  Exact swap, translation-torsor, overlap, and
+same-reduct controls prove that the three occurrence notions are distinct.
+The obstruction is scoped to current typing and provenance; it is not a global
+no-go against a conservative source extension.  All eight freezes and all
+fourteen Distance-to-GR rows remain unchanged.
+\end{abstract}
+
+\section{Fixed scope and current source boundary}
+
+The selected packet asks a logically prior question: before another
+representation-valued bridge is built, can the current source determine which
+proposal is allowed or occurs?  The packet is a bounded theoretical
+calculation under the route \texttt{ontology-law-research-packet}.  It neither
+adopts a law nor edits canonical ontology.
+
+The registered current source package types $\Sub$ as a smooth
+four-dimensional manifold.  It explicitly leaves $\Phi_{\rm src}$ without a
+parameter domain, source or target, arity, action law, invertibility,
+stochastic interpretation, generator, or physical-time meaning.  Therefore
+the maximal exact typed audit groupoid available here is
+\[
+  \Src_{\rm cur}=\mathsf{SmoothMan}_{4}^{\cong},
+\]
+whose arrows are all diffeomorphisms.  This mathematical audit groupoid is not
+an adopted $\mathrm{EqSrc}$ law.
+
+The first missing primitive is a target-free current-source-derived proposal
+pseudofunctor, equivalently a category $\Prop$ with a projection
+\[
+  U:\Prop\longrightarrow\Src_{\rm cur}
+\]
+and coherent source-arrow transport on its fibers.  Without it, there is no
+typed object on which a section, admissibility subfunctor, or occurrence
+kernel could live.  Adding such a grammar as a disclosed proposal can support
+conditional theorems; it does not make the grammar current-source-derived.
+
+\section{Three occurrence notions}
+
+Assume temporarily that a groupoid $\Src$, a proposal-fiber functor
+$F:\Src\to\mathsf{Set}$, and the required measurable and local structures
+have been supplied.  The following notions are not interchangeable.
+
+\begin{enumerate}[label=(\roman*)]
+\item A deterministic natural section is a natural transformation
+      $\sigma:1\Rightarrow F$.  It chooses one proposal in every fiber.
+\item An invariant admissible subfunctor is a family
+      $A_s\subseteq F(s)$ transported bijectively by every source arrow.  It is
+      discriminating only when its fibers are nonempty and proper; the empty
+      and full choices are nonselecting.
+\item A normalized equivariant kernel is a family
+      $K_s\in\Prob(F(s))$ such that $F(f)_*K_s=K_t$ for every arrow
+      $f:s\to t$.  It is a mathematical measure, not a realized token.
+\end{enumerate}
+
+Each notion has additional locality and provenance burdens.  Local data need
+restriction maps, overlap agreement, cocycle compatibility, and gluing.
+Source derivation further requires every output to factor through typed
+pre-outcome source data, rather than through a desired bridge label.
+
+\section{Conditional theorem family}
+
+\subsection{Natural sections and stabilizer fixed points}
+
+\begin{theorem}[Groupoid fixed-point criterion]
+Let $F:\Src\to\mathsf{Set}$ be a functor from a small groupoid.  On each
+connected component, natural sections $1\Rightarrow F$ are in bijection with
+elements of $F(s_0)$ fixed by $\Aut(s_0)$ for one representative $s_0$.
+\end{theorem}
+
+\begin{proof}
+If $\sigma$ is natural and $a\in\Aut(s_0)$, then
+$F(a)\sigma_{s_0}=\sigma_{s_0}$, so the representative value is fixed.
+Conversely, let $x\in F(s_0)$ be fixed.  For an object $s$ choose any arrow
+$f:s_0\to s$ and set $\sigma_s=F(f)x$.  If $g:s_0\to s$ is another choice,
+then $g^{-1}f\in\Aut(s_0)$ fixes $x$, hence $F(f)x=F(g)x$.  Functoriality now
+gives naturality.  The construction is componentwise and inverse to
+evaluation at the representatives.
+\end{proof}
+
+This theorem is exact, but the current signature supplies no $F$ to which it
+could be applied as a source-derived occurrence law.
+
+\subsection{Invariant admissible subfunctors}
+
+\begin{theorem}[Invariant-subfunctor criterion]
+For a groupoid action $F$, subfunctors $A\subseteq F$ are equivalent,
+component by component, to $\Aut(s_0)$-invariant subsets of representative
+fibers.  A discriminating admissibility layer requires each relevant subset
+to be nonempty and proper.
+\end{theorem}
+
+\begin{proof}
+A subfunctor satisfies $F(f)A_s=A_t$ for every arrow.  Restriction to
+automorphisms makes $A_{s_0}$ invariant.  Conversely, transport an invariant
+representative subset along any arrow.  The same stabilizer argument used for
+sections proves independence of the arrow and functorial compatibility.
+Empty and full subsets always satisfy the equations but exclude everything or
+nothing, so they have no discriminating force.
+\end{proof}
+
+\subsection{Equivariant kernels}
+
+\begin{theorem}[Invariant-measure criterion]
+Assume every $F(s)$ is measurable and each $F(f)$ is a measurable
+isomorphism.  Normalized equivariant kernels are equivalent, component by
+component, to $\Aut(s_0)$-invariant probability measures on representative
+fibers.
+\end{theorem}
+
+\begin{proof}
+An equivariant kernel restricts to an invariant representative measure.
+Conversely, push the representative measure forward along an arrow to each
+object.  Invariance makes the result independent of the chosen arrow, and
+functoriality gives equivariance.  Normalization is preserved by pushforward.
+\end{proof}
+
+Existence is action-dependent.  Finite orbits admit uniform measures, whereas
+noncompact torsors can fail to admit any invariant probability.  Moreover, a
+probability measure supplies weights, not an individual outcome.  The theorem
+does not define physical probability, empirical frequency, a point event, a
+clock, or a causal orientation.
+
+\subsection{Local descent}
+
+\begin{theorem}[Kernel descent criterion]
+Let proposal data form a measurable stack or sheaf on a declared source
+restriction site.  A family of normalized local kernels glues uniquely to a
+global kernel exactly when all restricted kernels agree on every overlap and
+satisfy the ordinary cocycle compatibility.
+\end{theorem}
+
+\begin{proof}
+Any global kernel has equal restrictions, proving necessity.  For compatible
+local kernels, the gluing axiom produces a global object; separatedness gives
+uniqueness.  Normalization is local and therefore preserved.  The same
+argument applies to sections and invariant subfunctors in their respective
+categories.
+\end{proof}
+
+This result requires a declared restriction site and descent structure.  The
+current source signature contains neither.
+
+\subsection{Current-source provenance}
+
+\begin{theorem}[Same-reduct factorization criterion]
+Let $U:E\to S$ be surjective and $q:E\to Y$.  There is a unique map
+$\bar q:S\to Y$ with $q=\bar q\circ U$ if and only if $q$ is constant on
+every fiber of $U$.
+\end{theorem}
+
+\begin{proof}
+Every factorization is fiber-constant.  Conversely, for $s\in S$ choose a
+lift $e$ and set $\bar q(s)=q(e)$.  Surjectivity supplies a lift and fiber
+constancy makes the value well-defined.  The factorization and uniqueness are
+immediate.
+\end{proof}
+
+Thus two proposal expansions with the same typed current-source reduct cannot
+receive opposite source-derived occurrence labels unless some independently
+typed source datum distinguishes their reducts.  A desired output label is not
+such a datum.
+
+\section{Exact controls}
+
+\subsection{Two-point swap}
+
+Let $F=\{0,1\}$ and let the nontrivial automorphism exchange the two points.
+There is no fixed element, so there is no deterministic natural section.  The
+only invariant subsets are $\varnothing$ and $F$, so there is no proper
+nonempty invariant admissible subfunctor.  A probability $(p,1-p)$ is
+invariant exactly when $p=1-p$, yielding the unique kernel
+$(1/2,1/2)$.  Equal weights select neither token.  This single control proves
+that deterministic selection, invariant admissibility, and probabilistic
+equivariance are logically distinct.
+
+\subsection{Translation torsor}
+
+\begin{proposition}
+There is no normalized translation-invariant Borel probability measure on
+$\mathbb R$ under its additive translation action.
+\end{proposition}
+
+\begin{proof}
+Let $m=\mu([0,1))$.  The integer translates are disjoint and have equal mass.
+If $m>0$, a sufficiently large finite union has mass greater than one, so
+$m=0$.  Countable additivity over all integer translates then gives
+$\mu(\mathbb R)=0$, contradicting normalization.
+\end{proof}
+
+Failure of a deterministic section therefore does not guarantee a
+probabilistic replacement.
+
+\subsection{Compatible and incompatible local kernels}
+
+On a two-chart cover, assign $(1/2,1/2)$ on both copies of the overlap.  The
+restrictions agree and glue uniquely.  Replacing them by the opposite Dirac
+measures $(1,0)$ and $(0,1)$ makes the overlap equations inconsistent, so no
+global kernel can restrict to both.  Local formulae alone do not establish
+descent.
+
+\subsection{Same-reduct enumeration}
+
+For the finite reduct map represented by the fibers
+$(0,0,1,1)$, there are $2^4=16$ binary output maps.  Exactly four are
+fiber-constant, one for each binary value on the two reduct points.  The
+opposite-label pair $(0,1)$ over a single reduct point is not fiber-constant
+and cannot factor.  The task-local exact model independently checks all
+sixteen cases.
+
+\section{Decisive obstruction}
+
+The five results above prove a conditional mathematical architecture.  They
+do not supply the architecture's input.  In the exact current signature:
+
+\begin{itemize}
+\item $\Src_{\rm cur}$ is formable, but $\Prop$ and $U$ are not;
+\item proposal fibers and source-arrow actions are not typed;
+\item no fiber sigma algebra or measurable category is supplied;
+\item no source restriction site, stack, or sheaf supplies descent;
+\item no source generator constructs an admissible subset, section, or kernel;
+\item $\Phi_{\rm src}$ cannot be used to fill any gap without adding forbidden
+      semantics; and
+\item same-reduct opposite desired labels fail the factorization criterion.
+\end{itemize}
+
+% canonical result: current_source_provenance_or_typing_obstruction
+% canonical obstruction: OB-V22-P4T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-CURRENT-SOURCE-TYPING-PROVENANCE-001
+Accordingly the exact result is recorded under the following canonical
+identifier:
+\begin{center}
+\small\ttfamily
+OB-V22-P4T02-B2-SOURCE-DERIVED-OCCURRENCE-\\
+ADMISSIBILITY-DESCENT-KERNEL-CURRENT-SOURCE-\\
+TYPING-PROVENANCE-001
+\end{center}
+The first failure is formation: no current-source proposal-fiber
+pseudofunctor exists.  Provenance failure is corroborating, not a reason to
+pretend the missing objects have already been formed.
+
+The obstruction is scoped.  A separately admitted target-free conservative
+source extension could propose $\Prop$, $U$, transport, measurable and local
+structures, and a generator.  Such an extension would still require a
+Smuggling Audit and protected human authority before adoption.  Nothing here
+proves that every future source extension is impossible.
+
+\section{Ontology and interpretation boundaries}
+
+Mathematical naturality is not adopted $\mathrm{EqSrc}$.  A nonempty invariant
+subset is not an occurring proposal.  A normalized measure is not a realized
+event or an empirical probability.  Restriction and gluing are not by
+themselves physical locality.  Pre-outcome declaration demonstrates
+within-packet nonadaptivity, not independent source provenance or epistemic
+justification.  A validator, source hash, registry row, compiled PDF, or
+checkpoint provides conformance and traceability, not scientific truth or
+ontology adoption.
+
+No target atlas, tetrad, coframe, metric, desired cone, detector response,
+benchmark answer, or protected status is used.  The result neither repairs
+nor reconstructs the shared-$\tau$, repaired quotient, common-character,
+oriented-matroid, signed-cubic, robust-invariance, $K_\star$, or
+projective-conormal families.
+
+\section{Distance to GR and continuation}
+
+All eight inherited candidate-local freezes remain active and untouched.  The
+current obstruction creates no global theory freeze.  Each expanded
+Distance-to-GR burden remains \texttt{no\_delta}: source ontology,
+$\mathrm{EqSrc}$, $\mathrm{RetainH}$, $\mathrm{GenH}$,
+$\mathrm{ObsLoc}_{lc}$, $\mathrm{Resp}_{lc}$, $M_{\rm src}$,
+$g_{\rm eff}$, matter coupling, Einstein equations, finite-variation
+robustness, benchmark promotion, Gate Chair status, and route-freeze status.
+
+% canonical successor: PKT-V22-P4T02-B2-POST-OCCURRENCE-ADMISSIBILITY-TYPING-PROVENANCE-OBSTRUCTION-THEORETICAL-CONTINUATION-SELECTION-V1
+Exactly one later packet is selected and not executed:
+\begin{center}
+\small\ttfamily
+PKT-V22-P4T02-B2-POST-OCCURRENCE-ADMISSIBILITY-\\
+TYPING-PROVENANCE-OBSTRUCTION-THEORETICAL-\\
+CONTINUATION-SELECTION-V1
+\end{center}
+Its packet type is \texttt{theoretical\_continuation\_selector}.  Its role is
+\begin{center}
+\small\path{theoretical-continuation-selector@0.1.0}.
+\end{center}
+It may compare one
+materially distinct source-side irrelevance theorem, a conservative
+proposal-only source-law construction with a separate Smuggling Audit, a
+different occurrence carrier justified from current source data, and a
+protected human-gated ontology stop.  It is not executed in this transaction.
+
+D7 is not reevaluated, B2 remains inactive, and P4--T03 remains locked.  No
+source law, physical occurrence, probability semantics, causal structure,
+effective metric, coupling, Einstein equation, proof promotion, publication,
+push, external action, or completed derivation is authorized.
+
+\end{document}

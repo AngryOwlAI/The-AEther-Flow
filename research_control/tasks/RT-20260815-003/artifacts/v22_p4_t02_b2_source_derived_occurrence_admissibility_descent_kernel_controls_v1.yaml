@@ -1,0 +1,141 @@
+schema_id: "v22_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel_controls_v1"
+status: "draft_control"
+authority: "science_draft"
+task_id: "RT-20260815-003"
+job_id: "AJ-RT-20260815-003-001"
+packet_id: "PKT-V22-P4T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-THEOREM-V1"
+result_type: "current_source_provenance_or_typing_obstruction"
+obstruction_id: "OB-V22-P4T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-CURRENT-SOURCE-TYPING-PROVENANCE-001"
+model_path: "research_control/tasks/RT-20260815-003/artifacts/v22_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel_model.py"
+model_status: "PASS_36_OF_36"
+first_missing_primitive: "The exact current source signature has no typed proposal category Prop and forgetful projection U:Prop->Src. Consequently its fibers, groupoid actions, measurable structures, admissible subfunctors, occurrence kernels, restriction site, and source generator cannot be formed as current-ontology objects."
+
+conditional_theorem_family:
+  - theorem_id: "THM-RT003-SECTION-FIXED-POINT-001"
+    status: "proved_conditionally"
+    hypotheses: "Let Src be a small groupoid and F:Src->Set a typed proposal-fiber functor."
+    conclusion: "On each connected component, natural sections 1=>F are in bijection with Aut(s)-fixed elements of F(s) at one representative s, transported along arrows."
+    proof: "Naturality makes the representative value stabilizer-fixed. Conversely, a fixed value transported along any representative arrow is independent of the arrow because two choices differ by a stabilizer, and functoriality gives a natural section."
+    current_source_instantiation: "not_formable_without_Prop_U_and_fiber_action"
+  - theorem_id: "THM-RT003-INVARIANT-SUBFUNCTOR-001"
+    status: "proved_conditionally"
+    hypotheses: "Let F:Src->Set be a typed groupoid action and let A_s be subsets of F(s)."
+    conclusion: "A is an invariant subfunctor exactly when every arrow transports A_s bijectively to A_t. Selector force requires every A_s to be nonempty and proper; empty and full choices are nonselecting."
+    proof: "The subfunctor square is precisely arrowwise subset transport. In a connected component it reduces to a stabilizer-invariant subset at one representative."
+    current_source_instantiation: "not_formable_without_typed_proposal_fibers_and_actions"
+  - theorem_id: "THM-RT003-EQUIVARIANT-KERNEL-001"
+    status: "proved_conditionally"
+    hypotheses: "Let every F(s) carry a declared measurable structure and every arrow act measurably."
+    conclusion: "Normalized equivariant kernels are exactly transport-compatible stabilizer-invariant probability measures on representative fibers."
+    proof: "Equivariance restricts a kernel to invariant representative measures and transports them uniquely; invariance makes transport independent of the chosen arrow."
+    semantic_boundary: "A normalized mathematical measure does not select a realized token, empirical frequency, physical probability, time orientation, or causal structure."
+    current_source_instantiation: "not_formable_without_sigma_algebras_actions_and_kernel_generator"
+  - theorem_id: "THM-RT003-KERNEL-DESCENT-001"
+    status: "proved_conditionally"
+    hypotheses: "Let the proposal assignment be a declared stack or sheaf on a typed source restriction site, with measurable restriction maps."
+    conclusion: "Normalized local kernels glue uniquely exactly when all overlap restrictions agree and satisfy the ordinary cocycle compatibility."
+    proof: "Necessity follows by restricting a global kernel. Sufficiency and uniqueness are the separated gluing axiom applied to compatible local measures."
+    current_source_instantiation: "not_formable_without_restriction_site_stack_or_sheaf_and_kernel_restrictions"
+  - theorem_id: "THM-RT003-SAME-REDUCT-FACTORIZATION-001"
+    status: "proved_conditionally"
+    hypotheses: "Let U:E->Src be a surjective forgetful map and q:E->Y a proposed generator output."
+    conclusion: "There is a unique q_bar:Src->Y with q=q_bar composed with U exactly when q is constant on every U-fiber."
+    proof: "Factorization implies fiber constancy. For the converse, define q_bar(s) by any lift e with U(e)=s; surjectivity gives a lift and constancy gives well-definedness and uniqueness."
+    current_source_instantiation: "fails_formation_without_U_and_fails_provenance_for_same_reduct_opposite_labels"
+
+exact_controls:
+  - control_id: "CTRL-01-TWO-POINT-SWAP"
+    domain: "One source object with proposal fiber {0,1} and automorphism swapping 0 and 1."
+    exact_results:
+      - "There is no fixed element and therefore no deterministic natural section."
+      - "The only invariant subsets are empty and full, so no proper nonempty invariant admissible subfunctor exists."
+      - "The unique normalized invariant probability is (1/2,1/2)."
+      - "The uniform kernel supplies no token selection because both weights agree."
+    falsifier: "A source-derived asymmetry that removes the swap or distinguishes one token could change these results; none is present in the exact current signature."
+  - control_id: "CTRL-02-TRANSLATION-TORSOR"
+    domain: "The additive translation action of R on itself with its Borel sigma algebra."
+    exact_results:
+      - "No normalized translation-invariant Borel probability exists."
+      - "If m is the measure of [0,1), its disjoint integer translates force infinite mass for m>0 and total mass zero for m=0."
+    falsifier: "A compact quotient, non-invariant normalization, or independently sourced confining law changes the hypotheses; none is current-source data here."
+  - control_id: "CTRL-03-COMPATIBLE-UNIFORM-DESCENT"
+    domain: "A two-chart finite cover with a shared overlap and the uniform two-point kernel on both charts."
+    exact_results:
+      - "The overlap restrictions agree."
+      - "The kernels glue uniquely to the three-region global assignment."
+    falsifier: "Changing either overlap restriction destroys the compatibility hypothesis."
+  - control_id: "CTRL-04-OPPOSITE-DIRAC-NONDESCENT"
+    domain: "The same cover with delta_0 on the left overlap and delta_1 on the right overlap."
+    exact_results:
+      - "The overlap restrictions disagree."
+      - "No global kernel can restrict to both local assignments."
+    falsifier: "Equal overlap Dirac measures would remove the descent obstruction."
+  - control_id: "CTRL-05-SAME-REDUCT-OPPOSITE-LABEL"
+    domain: "Two proposal expansions with identical typed current-source reduct and opposite desired occurrence labels."
+    exact_results:
+      - "The desired label is not constant on the U-fiber."
+      - "The label does not factor through the current reduct."
+      - "An exhaustive binary control checks 16 maps and finds exactly 4 fiber-constant maps."
+    falsifier: "A typed independently source-derived datum that differs between the reducts could support factorization; a desired output label cannot."
+
+typing_audit:
+  current_typed_signature:
+    - symbol: "Sub"
+      type: "smooth four-dimensional manifold"
+      status: "typed_primitive_debt"
+    - symbol: "Phi_src"
+      type: "none"
+      status: "unresolved_nonsemantic_debt_marker"
+  missing_required_types:
+    - "Prop source proposal category"
+    - "U:Prop->Src forgetful projection"
+    - "proposal fibers U^-1(s)"
+    - "source-arrow action on fibers"
+    - "fiber sigma algebras or measurable structures"
+    - "proper invariant admissible subfunctor type"
+    - "normalized equivariant occurrence-kernel type"
+    - "source restriction site and stack or sheaf descent data"
+    - "Gen_occ current-source generator"
+    - "Law_src occurrence or admissibility law"
+  phi_src_semantics_added: false
+  target_import_detected: false
+  empirical_import_detected: false
+  benchmark_answer_imported: false
+
+source_extension_classification:
+  category: "not_constructed_current_source_typing_and_provenance_obstruction"
+  conditional_grammar_status: "proposal-only theorem schema"
+  current_ontology_derivation: false
+  proposal_only_source_extension_constructed: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  adoption_status: "blocked_adoption_open_continuation"
+  physical_or_empirical_meaning: false
+  p4_t02_acceptance_credit: false
+
+authority_limits:
+  theorem_schemas_proved_conditionally: true
+  current_source_occurrence_law_derived: false
+  deterministic_occurrence_selected: false
+  invariant_admissible_subfunctor_derived: false
+  normalized_kernel_derived: false
+  realized_event_selected: false
+  physical_probability_assigned: false
+  physical_time_or_causality_assigned: false
+  eqsrc_adopted: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  adequacy_reevaluated: false
+  d7_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

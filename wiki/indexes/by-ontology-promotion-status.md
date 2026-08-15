@@ -492,6 +492,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-V1` `research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1.tex`
 - `TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-004/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_source_extension_smuggling_audit_v1.tex`
+- `TEX-V22-P4-T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1` `research_control/tasks/RT-20260815-003/artifacts/v22_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-DYNAMICAL-VIABILITY-ADMISSIBILITY-SELECTOR-LAW-V1` `research_control/tasks/RT-20260811-003/artifacts/v22_p4_t02_b2_source_dynamical_viability_admissibility_selector_law_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-GENERATED-COMPACT-ROOT-FAMILY-COERCIVE-PROTECTION-LAW-V1` `research_control/tasks/RT-20260811-011/artifacts/v22_p4_t02_b2_source_generated_compact_root_family_coercive_protection_law_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-INTRINSIC-INTERFACE-REPAIR-V1` `research_control/tasks/RT-20260810-001/artifacts/v22_p4_t02_b2_source_intrinsic_interface_repair_v1.tex`
