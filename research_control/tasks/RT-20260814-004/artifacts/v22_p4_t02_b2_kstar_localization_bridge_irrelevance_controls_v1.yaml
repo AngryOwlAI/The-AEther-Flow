@@ -1,0 +1,216 @@
+schema_id: "v22_p4_t02_b2_kstar_localization_bridge_irrelevance_controls_v1"
+status: "draft_control"
+authority: "science_draft"
+task_id: "RT-20260814-004"
+job_id: "AJ-RT-20260814-004-001"
+packet_id: "PKT-V22-P4T02-B2-KSTAR-LOCALIZATION-AND-BRIDGE-IRRELEVANCE-THEOREM-V1"
+result_type: "scoped_k_star_bridge_irrelevance_theorem"
+refuter_result_class: "source_side_irrelevance_theorem_path"
+theorem_id: "THM-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE-001"
+
+fixed_predecessor:
+  theorem_id: "THM-V22-P4T02-B2-CURRENT-SOURCE-KSTAR-ARROW-SUBCLASS-001"
+  assignment: "K_star(M)=Diff_c(M) when Diff_c(M) is proper in Diff(M), and K_star(M)={id_M} otherwise."
+  conjugation_law: "For every diffeomorphism f:M->N, f K_star(M) f^-1=K_star(N)."
+  assignment_changed: false
+  adopted_as_eqsrc: false
+  adopted_as_physical_allowedness: false
+
+declared_hypotheses:
+  - hypothesis_id: "H-01"
+    statement: "M is a compact connected smooth four-manifold."
+  - hypothesis_id: "H-02"
+    statement: "U is a relatively compact coordinate ball in M."
+  - hypothesis_id: "H-03"
+    statement: "Compactly supported diffeomorphisms of U extend by the identity across M."
+  - hypothesis_id: "H-04"
+    statement: "The derivative of the compact-support stabilizer at a declared chart point is evaluated in the ordinary smooth category."
+  - hypothesis_id: "H-05"
+    statement: "Diff_c(M) is used as a normal subgroup only where compact-support conjugation proves normality."
+  - hypothesis_id: "H-06"
+    statement: "The bridge grammar is fixed before candidate outcomes and imports no target or empirical structure."
+
+predeclared_bridge_grammar:
+  fixed_before_outcomes: true
+  exact_candidate_count: 6
+  candidates:
+    - candidate_id: "BRIDGE-NONZERO-VECTOR"
+      result: "no_standalone_selector"
+      falsifier: "The realized positive scaling 2I fixes only zero."
+    - candidate_id: "BRIDGE-NONZERO-COVECTOR"
+      result: "no_standalone_selector"
+      falsifier: "Pullback by realized 2I fixes only zero."
+    - candidate_id: "BRIDGE-PROPER-CONE"
+      result: "no_standalone_selector"
+      falsifier: "GL+(4) is transitive on the punctured tangent space."
+    - candidate_id: "BRIDGE-LORENTZIAN-CONFORMAL-CONE"
+      result: "no_standalone_selector"
+      falsifier: "A Lorentzian cone is proper and cannot be invariant under the transitive GL+(4) orbit."
+    - candidate_id: "BRIDGE-ORIENTATION-SHEET"
+      result: "no_standalone_selector"
+      falsifier: "The compact-support orientation-preserving stabilizer preserves both opposite sheets and chooses neither."
+    - candidate_id: "BRIDGE-SCALAR-LOCAL-RESPONSE"
+      result: "no_standalone_selector"
+      falsifier: "Local transitivity makes invariant scalar readouts constant, while K_star selects no constant value or response meaning."
+
+exact_control_families:
+  - control_id: "CTRL-COMPACT-OPEN-RESTRICTION"
+    result: "K_star(M) restricts only to id_U while K_star(U)=Diff_c(U) contains nonidentity bumps."
+  - control_id: "CTRL-IDENTITY-EXTENSION"
+    result: "A nonidentity h in Diff_c(U) extends smoothly to a nonidentity global diffeomorphism excluded from K_star(M)."
+  - control_id: "CTRL-FIRST-JET-REALIZATION"
+    result: "A compactly supported time-dependent vector field realizes every A in GL+(4) as the derivative of a stabilizer arrow."
+  - control_id: "CTRL-POSITIVE-SCALING"
+    result: "The matrix 2I has positive determinant and fixes no nonzero vector or covector."
+  - control_id: "CTRL-DOUBLE-FLIP"
+    result: "diag(-1,-1,1,1) has positive determinant and maps a vector direction to its negative without reversing mathematical orientation."
+  - control_id: "CTRL-TRANSITIVE-ORBIT"
+    result: "GL+(4) acts transitively on nonzero vectors, excluding a proper invariant cone."
+  - control_id: "CTRL-ORIENTATION-NONSELECTION"
+    result: "The same compact-support subgroup preserves both orientation sheets."
+  - control_id: "CTRL-SCALAR-CONSTANCY"
+    result: "Every invariant scalar function on a connected chart is constant."
+  - control_id: "CTRL-QUOTIENT-LOCAL-BUMP"
+    result: "Diff/Diff_c sends every compact local bump to the neutral class."
+  - control_id: "CTRL-QUOTIENT-END-SEPARATION"
+    result: "Identity and a radial dilation-at-infinity diffeomorphism agree near zero but have distinct quotient classes."
+  - control_id: "CTRL-ORBIT-FACTORIZATION"
+    result: "Invariant readouts on a free two-point orbit factor through its quotient; a distinguishing readout breaks naturality."
+
+theorem_results:
+  - theorem_id: "THM-01"
+    status: "proved"
+    result: "The unchanged objectwise K_star assignment is not restriction-exhaustive on the compact/open witness."
+  - theorem_id: "THM-02"
+    status: "proved"
+    result: "The local compact-support stabilizer realizes GL+(4) first jets."
+  - theorem_id: "THM-03"
+    status: "proved"
+    result: "No nonzero vector, covector, proper cone, Lorentzian cone, orientation sheet, or nontrivial scalar response is selected by local K_star invariance."
+  - theorem_id: "THM-04"
+    status: "proved"
+    result: "Diff/Diff_c erases compact local bumps and can distinguish same-germ representatives by end data."
+  - theorem_id: "THM-05"
+    status: "exclusive_scoped_result"
+    result: "K_star alone has no standalone local bridge force in the six-candidate grammar."
+
+proof_obligations:
+  - obligation_id: "PO-01"
+    status: "discharged"
+    evidence: "The RT002 theorem, RT003 packet, plan, handoff, and current task controls are live-source bound."
+  - obligation_id: "PO-02"
+    status: "discharged"
+    evidence: "The K_star piecewise definition and conjugation theorem are held fixed."
+  - obligation_id: "PO-03"
+    status: "discharged"
+    evidence: "Compact M and relatively compact coordinate ball U are declared before the witness."
+  - obligation_id: "PO-04"
+    status: "discharged"
+    evidence: "A nonidentity compact-support flow and smooth identity extension are constructed."
+  - obligation_id: "PO-05"
+    status: "discharged"
+    evidence: "Restriction nonexhaustion is distinguished from impossibility of enriched localization."
+  - obligation_id: "PO-06"
+    status: "discharged"
+    evidence: "The GL+(4) first-jet realization is proved by a compact-support flow."
+  - obligation_id: "PO-07"
+    status: "discharged"
+    evidence: "Vector, covector, proper-cone, Lorentzian-cone, orientation, and scalar candidates each have exact falsifiers."
+  - obligation_id: "PO-08"
+    status: "discharged"
+    evidence: "Mathematical orientation is explicitly separated from physical time orientation."
+  - obligation_id: "PO-09"
+    status: "discharged"
+    evidence: "Normality of Diff_c is proved by the support-conjugation identity."
+  - obligation_id: "PO-10"
+    status: "discharged"
+    evidence: "A radial dilation-at-infinity has the identity germ near zero and a different quotient class."
+  - obligation_id: "PO-11"
+    status: "discharged"
+    evidence: "Exactly six source-only bridge candidates are fixed before outcomes."
+  - obligation_id: "PO-12"
+    status: "discharged"
+    evidence: "Naturality, factorization, restriction, overlap, and gluing are stated as necessary bridge gates."
+  - obligation_id: "PO-13"
+    status: "discharged"
+    evidence: "Six inherited freezes, fourteen no-delta rows, D7/B2/P4-T03 locks, and all authority blocks are preserved."
+  - obligation_id: "PO-14"
+    status: "discharged"
+    evidence: "Exactly one scoped result, one local freeze, one falsifiable theorem boundary, and one unexecuted successor are recorded."
+
+failure_branches:
+  - branch_id: "FB-01"
+    status: "not_triggered"
+    result: "invalid_packet_boundary"
+  - branch_id: "FB-02"
+    status: "not_triggered"
+    result: "precise_object_class_typing_obstruction"
+  - branch_id: "FB-03"
+    status: "triggered_and_resolved_as_theorem_input"
+    result: "locality_nonexhaustion_proved"
+  - branch_id: "FB-04"
+    status: "not_triggered"
+    result: "scoped_first_jet_typing_obstruction"
+  - branch_id: "FB-05"
+    status: "not_triggered"
+    result: "physical_semantics_overread"
+  - branch_id: "FB-06"
+    status: "not_triggered"
+    result: "quotient_formation_obstruction"
+  - branch_id: "FB-07"
+    status: "not_triggered"
+    result: "bridge_semantics_smuggling_obstruction"
+  - branch_id: "FB-08"
+    status: "not_triggered"
+    result: "forbidden_target_import"
+  - branch_id: "FB-09"
+    status: "triggered"
+    result: "scoped_k_star_bridge_irrelevance_theorem"
+  - branch_id: "FB-10"
+    status: "not_triggered"
+    result: "localization_compatible_nontrivial_bridge_relevance_witness"
+  - branch_id: "FB-11"
+    status: "not_triggered"
+    result: "claim_boundary_violation"
+  - branch_id: "FB-12"
+    status: "not_triggered"
+    result: "authority_boundary_violation"
+
+freeze_criteria_status:
+  evaluated: true
+  freeze_decision: "candidate_local_freeze"
+  inherited_freeze_count: 6
+  new_freeze_count: 1
+  active_freeze_count: 7
+  new_freeze_id: "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+  scope: "Only unchanged K_star replay as a standalone local P4-T02 bridge is frozen."
+  still_open:
+    - "diagnostic use of K_star"
+    - "materially distinct independently source-provenanced local law"
+    - "separately sourced bridge codomain and map"
+
+model_receipt:
+  path: "research_control/tasks/RT-20260814-004/artifacts/v22_p4_t02_b2_kstar_localization_bridge_irrelevance_model.py"
+  expected_status: "PASS"
+  expected_check_count: 18
+  expected_pass_count: 18
+
+authority_limits:
+  current_source_language_modified: false
+  canonical_ontology_modified: false
+  source_extension_constructed: false
+  source_law_adopted_or_rejected: false
+  eqsrc_assigned: false
+  physical_allowedness_assigned: false
+  physical_gauge_claimed: false
+  physical_time_orientation_claimed: false
+  empirical_response_claimed: false
+  effective_metric_constructed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  scientific_status_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

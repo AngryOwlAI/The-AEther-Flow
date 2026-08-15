@@ -1,0 +1,289 @@
+% object_id: TEX-V22-P4-T02-B2-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-THEOREM-V1
+% authority: science_draft
+% task_id: RT-20260814-004
+\documentclass[11pt]{article}
+\usepackage[margin=0.84in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,enumitem,microtype,url}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.40em}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newtheorem{proposition}{Proposition}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Diffc}{\operatorname{Diff}_{c}}
+\newcommand{\Kstar}{K_{\star}}
+\newcommand{\NoDelta}{\texttt{no\_delta}}
+\title{P4--T02/B2 $K_{\star}$ Localization and\\ Standalone-Bridge Irrelevance Theorem}
+\author{RT-20260814-004 parent synthesis}
+\date{14 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+The fixed current-smooth-source theorem assigns an objectwise natural proper
+arrow subgroup $\Kstar(M)$ to every nonempty smooth four-manifold.  This note
+proves that the unchanged assignment is not restriction-exhaustive on a
+compact-manifold/coordinate-ball pair, that its local compact-support
+stabilizer realizes $GL^{+}(4)$ first jets and therefore selects no nonzero
+vector, covector, proper cone, Lorentzian conformal cone, orientation sheet,
+or nontrivial scalar response, and that $\Diff/\Diffc$ erases compact local
+bumps while retaining end data.  Consequently $\Kstar$ alone has no
+standalone local bridge force in the predeclared grammar.  This is a scoped
+source-side irrelevance theorem, not a global no-go against enriched source
+structure.  It assigns no physical, empirical, ontological, or promotion
+status.
+\end{abstract}
+
+\section{Exclusive result and fixed boundary}
+
+The exclusive scientific result is
+\begin{center}
+\texttt{scoped\_k\_star\_bridge\_irrelevance\_theorem},
+\end{center}
+and the Refuter result class is
+\texttt{source\_side\_irrelevance\_theorem\_path}.  The theorem identifier is
+\begin{center}
+\small\ttfamily
+THM-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE-001.
+\end{center}
+
+The predecessor assignment is held fixed:
+\begin{equation}
+\Kstar(M)=
+\begin{cases}
+\Diffc(M),&\Diffc(M)\subsetneq\Diff(M),\\
+\{\operatorname{id}_{M}\},&\Diffc(M)=\Diff(M).
+\end{cases}
+\label{eq:kstar}
+\end{equation}
+For every diffeomorphism $f:M\to N$, the predecessor theorem proves
+$f\Kstar(M)f^{-1}=\Kstar(N)$.  That theorem is mathematical objectwise
+conjugation naturality.  It is not a restriction functor, a sheaf law,
+adopted \texttt{EqSrc}, physical allowedness, gauge, response semantics,
+causality, or an effective metric bridge.
+
+The declared local bridge grammar contains exactly six candidates: a nonzero
+tangent vector, a nonzero cotangent covector, a proper nonempty tangent cone,
+a Lorentzian conformal cone, an orientation sheet, and a scalar local
+response.  Any positive bridge must be independently current-source-defined,
+natural, nonconstant or otherwise selector-bearing, restriction compatible,
+overlap compatible, and gluable.  Target geometry, desired causal output, and
+empirical response labels are excluded.
+
+\section{Compact/open restriction nonexhaustion}
+
+\begin{theorem}[Compact/open witness]
+Let $M$ be a compact smooth connected four-manifold and let $U\Subset M$ be
+a coordinate ball.  Then the restrictions of arrows in $\Kstar(M)$ do not
+exhaust $\Kstar(U)$.  In particular the printed objectwise assignment is not
+a restriction-exhaustive presheaf on this pair.
+\end{theorem}
+
+\begin{proof}
+Every diffeomorphism of compact $M$ has compact support, because its support
+is closed in a compact space.  Hence $\Diffc(M)=\Diff(M)$ and
+$\Kstar(M)=\{\operatorname{id}_{M}\}$.
+
+The open ball $U$ is diffeomorphic to $\mathbb{R}^{4}$.  Transporting a
+translation of $\mathbb{R}^{4}$ to $U$ gives a diffeomorphism whose support is
+not compact in $U$, while a nonzero compactly supported smooth vector field
+on $U$ has a nonidentity small-time flow.  Therefore
+$\Diffc(U)\subsetneq\Diff(U)$ and $\Kstar(U)=\Diffc(U)$ is nontrivial.
+
+Choose nonidentity $h\in\Diffc(U)$.  Since its support is compactly contained
+in $U$, extension by the identity gives a smooth nonidentity
+$\widetilde h\in\Diff(M)$.  But $\widetilde h\notin\Kstar(M)$, and the only
+restriction coming from $\Kstar(M)$ is $\operatorname{id}_{U}$.  Thus the
+restriction image is a proper subgroup of $\Kstar(U)$.
+\end{proof}
+
+The result concerns Equation~\eqref{eq:kstar} as printed.  An enriched source
+theory could add restriction data or choose another local object; this theorem
+does not rule out such an extension.
+
+\section{Local first-jet isotropy}
+
+\begin{lemma}[$GL^{+}(4)$ jet realization]
+Let $U$ be a coordinate ball, $x\in U$, and
+$\operatorname{Stab}_{c}(x)\subset\Diffc(U)$ the stabilizer of $x$.  Its
+derivative image at $x$ contains all of $GL^{+}(T_{x}U)$.
+\end{lemma}
+
+\begin{proof}
+Work in coordinates with $x=0$.  For $A\in GL^{+}(4)$, choose a smooth path
+$A_t$ in $GL^{+}(4)$ from $I$ to $A$.  Let
+$B_t=\dot A_tA_t^{-1}$ and choose a compactly supported bump $\chi$ that is
+one near zero.  The time-dependent field
+\[
+X_t(y)=\chi(y)B_ty
+\]
+is compactly supported, fixes zero, and has a globally defined time-one flow.
+Near zero its derivative solves
+$\dot D\varphi_t(0)=B_tD\varphi_t(0)$ with initial value $I$, hence
+$D\varphi_t(0)=A_t$.  The time-one map lies in
+$\operatorname{Stab}_{c}(0)$ and realizes $A$.
+\end{proof}
+
+\begin{theorem}[No canonical vector, covector, or proper cone]
+No nonzero tangent vector or cotangent covector at $x$ is fixed by the local
+$\Kstar(U)$ stabilizer.  No proper nonempty subset of
+$T_xU\setminus\{0\}$, and hence no Lorentzian conformal null or causal cone,
+is invariant under the full realized first-jet group.
+\end{theorem}
+
+\begin{proof}
+The positive scalar $2I\in GL^{+}(4)$ sends $v$ to $2v$ and pulls a covector
+$\alpha$ back to $2\alpha$.  Fixedness forces $v=0$ and $\alpha=0$.
+Moreover $GL^{+}(4)$ acts transitively on the nonzero vectors: extend any
+nonzero source and target vectors to bases and adjust one complementary basis
+vector so that the resulting linear map has positive determinant.  An
+invariant subset of the punctured space is therefore empty or the entire
+punctured space, not a proper cone.  A Lorentzian conformal cone is proper, so
+it cannot be invariant under this group.
+\end{proof}
+
+Compactly supported diffeomorphisms preserve each of the two mathematical
+orientation sheets, so their common stabilizer does not choose between the
+sheets.  Mathematical orientation is not physical time orientation.  Also,
+$\Diffc(U)$ acts transitively on connected $U$ by compactly supported flows
+along embedded paths.  An invariant scalar function is therefore constant,
+and Equation~\eqref{eq:kstar} selects neither its value nor an empirical
+interpretation.  Thus the remaining two grammar candidates also have no
+selector force from $\Kstar$ alone.
+
+\section{The large quotient is not a local repair}
+
+\begin{proposition}[Local information/end-data separation]
+On a noncompact smooth manifold, $\Diffc(M)$ is normal in $\Diff(M)$.  On
+$M=\mathbb{R}^{4}$, the quotient $\Diff(M)/\Diffc(M)$ kills compactly
+supported local first-jet changes while distinguishing representatives that
+have the same germ near the origin and different behavior at infinity.
+\end{proposition}
+
+\begin{proof}
+For $f\in\Diff(M)$ and $h\in\Diffc(M)$,
+\[
+\operatorname{supp}(fhf^{-1})=f(\operatorname{supp}h),
+\]
+which is compact, proving normality.  Every compactly supported local bump is
+therefore in the neutral quotient class, so the quotient erases its local
+germ and first-jet information.
+
+For the converse separation, choose a smooth strictly increasing radial
+function $R:[0,\infty)\to[0,\infty)$ equal to $r$ near zero and $2r$ for all
+sufficiently large $r$.  The radial diffeomorphism
+$g(x)=R(|x|)x/|x|$, with $g(0)=0$, equals the identity near zero but is not
+compactly supported.  Hence $g$ and the identity have the same declared local
+germ and distinct quotient classes.  The quotient retains end data, not a
+local response selector.
+\end{proof}
+
+\section{Scoped standalone-bridge irrelevance}
+
+\begin{theorem}[$\Kstar$ standalone local-bridge irrelevance]
+Within the six-candidate grammar and under the stated compact/open and chart
+hypotheses, the unchanged assignment $\Kstar$ supplies no nontrivial
+restriction-compatible local bridge by itself.
+\end{theorem}
+
+\begin{proof}
+The compact/open theorem shows that objectwise conjugation naturality does not
+supply the restriction-exhaustive local family required for gluing.  On an
+open chart, the realized $GL^{+}(4)$ isotropy fixes no nonzero vector or
+covector and no proper nonempty cone, including a Lorentzian conformal cone.
+The common orientation-preserving stabilizer preserves both orientation
+sheets and chooses neither.  Invariant scalar readouts are arbitrary
+constants, and $\Kstar$ chooses no value.  Finally the large quotient erases
+compact local changes and distinguishes end changes, so it does not restore
+the missing local selector.  Every predeclared candidate therefore fails at
+least one necessary condition before physical interpretation is considered.
+\end{proof}
+
+This theorem is intentionally narrow.  It does not prove that no enriched
+source structure can yield a local bridge, that $\Kstar$ has no diagnostic
+use, or that the wider project is impossible.  It proves only that the
+unchanged assignment, without an independently sourced codomain, local map,
+restriction law, and gluing law, has no standalone bridge force in the fixed
+grammar.
+
+\section{Freeze and continuation decision}
+
+The six inherited freezes remain active.  The theorem also creates the
+candidate-local freeze
+\begin{center}
+\small\ttfamily
+NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE.
+\end{center}
+Its scope is only a replay of the unchanged $\Kstar$ assignment as a
+standalone local P4--T02 bridge.  Diagnostic use, a materially distinct local
+source law, and a separately sourced bridge construction remain open.
+
+Both independent child analyses identify the same first missing datum: a
+source-local proper structure-group reduction, with restriction and gluing
+data, from which a nonconstant bridge map could be constructed.  The one
+selected future packet is
+\begin{center}
+\small\ttfamily
+PKT-V22-P4T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-\
+BRIDGE-WITNESS-CONSTRUCTION-V1.
+\end{center}
+Its routing tuple is:
+\begin{itemize}[leftmargin=2em]
+  \item packet type \url{source_extension_candidate};
+  \item route label \url{ontology-law-research-packet};
+  \item next role \url{candidate-constructor@0.2.0}; and
+  \item status \url{selected_not_executed}.
+\end{itemize}
+It must construct one proposal-only reduction-and-bridge witness with
+independent source provenance, restriction, overlap, gluing, and
+nonfactorization certificates, or return the first precise obstruction.  It
+may not reopen a frozen family by renaming it or import a target Lorentz group,
+metric, cone, empirical label, or desired result.
+
+\section{Distance-to-GR matrix}
+
+\begin{center}
+\small
+\begin{tabular}{>{\raggedright\arraybackslash}p{0.42\linewidth}
+                >{\raggedright\arraybackslash}p{0.18\linewidth}
+                >{\raggedright\arraybackslash}p{0.28\linewidth}}
+\toprule
+Burden & Status & Reason \\
+\midrule
+Source ontology primitives & \NoDelta{} & No primitive is added. \\
+Source equivalence \texttt{EqSrc} & \NoDelta{} & $\Kstar$ is not adopted. \\
+\texttt{RetainH} & \NoDelta{} & No retention law. \\
+\texttt{GenH} & \NoDelta{} & No generator. \\
+\texttt{ObsLoc\_lc} & \NoDelta{} & No observer localization. \\
+\texttt{Resp\_lc} & \NoDelta{} & No response semantics. \\
+$M_{\rm src}$ & \NoDelta{} & No source-manifold adoption. \\
+$g_{\rm eff}$ & \NoDelta{} & No cone or metric constructed. \\
+Matter coupling & \NoDelta{} & No coupling law. \\
+Einstein equations & \NoDelta{} & No field equation. \\
+Finite-variation robustness & \NoDelta{} & No physical robustness theorem. \\
+Benchmark promotion & \NoDelta{} & No benchmark action. \\
+Gate Chair status & \NoDelta{} & No protected verdict. \\
+Current route freeze or hard-fail status & \NoDelta{} & One local freeze; no GR burden advance. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+D7 is not reevaluated, B2 remains inactive, and P4--T03 remains locked.  The
+new local freeze changes route-control memory, not Distance-to-GR status.
+
+\section{Authority and non-conclusions}
+
+The theorem is a draft/control mathematical result.  It does not adopt or
+reject a source law, modify canonical ontology, assign \texttt{EqSrc}, define
+physical allowedness or gauge, produce empirical response semantics, select a
+physical time orientation, construct a causal cone or effective metric,
+derive matter coupling or Einstein equations, authorize a Gate verdict,
+promote a benchmark, or claim completed derivation.  Validation, rendering,
+registries, and checkpointing are process evidence only.  No publication,
+push, or external action follows.
+
+\end{document}

@@ -7,50 +7,50 @@ generated_from:
   - "research_control/current_frontier.md"
   - "research_control/design/accepted_status_calibration_v2.yaml"
   - "research_control/design/active_state_bifurcation_policy_v1.md"
-  - "research_control/handoffs/handoff-1033.yaml"
+  - "research_control/handoffs/handoff-1034.yaml"
   - "research_control/program_state.yaml"
 report_provenance:
   schema_id: "generated_report_provenance_v1"
   policy_id: "p13_t07_live_generated_report_freshness_v1"
   report_class: "compact_current_frontier"
-  source_commit: "4080512fcec14b072f59eecf1d29b690dbfc87af"
+  source_commit: "48c1b5004abd8c29a0068d3583a2cee4f02eb952"
   source_hashes:
     - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
       sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
     - path: "registries/RESEARCH_TASK_REGISTRY.csv"
-      sha256: "f372b61b673da76240303c3793c1d92cc4e94bfbaad4b1892b190fb661bbf828"
+      sha256: "005aa8d044f58d7635947597477f0d5ce14587b374eb7e606b1bfe4b04a3c3ee"
     - path: "research_control/current_frontier.md"
-      sha256: "38a8a33904edb7a85c682bfd92f56c40302ce8f0f1b95807e78260745154c264"
-    - path: "research_control/handoffs/handoff-1033.yaml"
-      sha256: "962ce5ef0e3691f76581f844e4eddd0670f59191dbf8a14466a6e232b55dbcf8"
+      sha256: "79b4a800222f6b5b5e7ad69d8f99e6b2f35295b1cc376d714fc92b96f952e62a"
+    - path: "research_control/handoffs/handoff-1034.yaml"
+      sha256: "c838d0151f82f580e179a97f128da34ee5d52bb0f03a1972b332a2f6526011a2"
     - path: "research_control/program_state.yaml"
-      sha256: "932429139a66eba18988881bc06d5f41f1b872ec2fc5e0a3fea55a7860978200"
+      sha256: "265834469fbf17dca06c8283360be347dfb22ec1d9f5aefd2eaf7fc8a73aff36"
     - path: "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml"
       sha256: "dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"
     - path: "scripts/research_control/generated_report_provenance.py"
       sha256: "af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"
     - path: "scripts/research_control/render_compact_current_frontier_v16.py"
       sha256: "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
-  source_manifest_sha256: "3790ad31c0fdfb58cf39e13c7a4cb31c702ec5ef440e212d35f5954c7cf80ed5"
+  source_manifest_sha256: "f3018cc90fdfcc4edae9405f131e9fc8d1d41440b05edd599b387097a41d98c3"
   source_path_count: "12"
-  generation_time: "2026-08-14T22:20:00Z"
-  task_count: "1288"
+  generation_time: "2026-08-14T23:54:06Z"
+  task_count: "1289"
   maximum_commit_lag: "1"
   freshness_status: "fresh_at_generation"
   generated_view_is_authority: false
   physics_promotion_authorized: false
   proof_authority: false
 active_state:
-  active_task_id: "RT-20260814-003"
-  latest_handoff_id: "handoff-1033"
-  current_status: "v22_p4_t02_kstar_localization_bridge_irrelevance_theorem_selected_checkpoint_pending"
+  active_task_id: "RT-20260814-004"
+  latest_handoff_id: "handoff-1034"
+  current_status: "v22_p4_t02_kstar_standalone_local_bridge_irrelevance_theorem_checkpoint_pending"
   v15_completed: false
   v16_completed: false
   v16_plan_registered: true
 active_state_bifurcation:
-  latest_research_task_id: "RT-20260814-003"
-  latest_research_handoff_id: "handoff-1033"
-  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260814-003-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-KSTAR-LOCALIZATION-AND-BRIDGE-IRRELEVANCE-THEOREM-V1. Return a scoped K_star bridge-irrelevance theorem, a nontrivial localization-compatible source-provenanced bridge witness, or the first precise localization/factorization typing obstruction. Do not execute the packet before checkpoint, adopt K_star, add EqSrc or physical allowedness, overread orientation, claim a global no-go, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action."
+  latest_research_task_id: "RT-20260814-004"
+  latest_research_handoff_id: "handoff-1034"
+  latest_research_next_action: "Run the single governed checkpoint for AJ-RT-20260814-004-001. After it commits, execute exactly one separately admitted candidate-constructor@0.2.0 packet PKT-V22-P4T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-CONSTRUCTION-V1. Construct one proposal-only target-free source-local proper structure-group reduction with independent source provenance restrictions overlaps gluing and a nonconstant nonfactorizing bridge map, or return the first precise missing-primitive or target-import obstruction. Do not execute the packet before checkpoint, replay unchanged K_star as a bridge, adopt any source law or EqSrc, select physical time orientation, claim a global no-go, reevaluate D7, act on B2, unlock P4-T03, promote, publish, push, or take external action."
   latest_project_system_task_id: "none"
   latest_project_system_status: "none"
   latest_project_system_sidecar_task_id: "none"
@@ -58,10 +58,10 @@ active_state_bifurcation:
   sidecar_supersedes_research_handoff: false
   next_research_route_source: "latest_research_handoff"
 next_route:
-  route_id: "execute_v22_p4_t02_b2_kstar_localization_bridge_irrelevance_theorem_v1"
-  role_family: "refuter@0.2.0"
+  route_id: "execute_v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_construction_v1"
+  role_family: "candidate-constructor@0.2.0"
   target_derivation_milestone: "effective_metric_g_eff"
-  milestone_burden: "Establish or refute restriction-compatible local P4-T02 bridge relevance of K_star without adding EqSrc physical allowedness target geometry or response semantics."
+  milestone_burden: "Construct independently source-derived local reduction and nonfactorizing bridge data after excluding unchanged K_star standalone replay."
   requires_human_gate: false
 claim_boundary:
   physics_claim_authority: false
@@ -373,8 +373,8 @@ distance_to_gr:
   delta:
     effect: "no_distance_delta"
     changed: false
-    milestone: "effective_metric_g_eff"
-    burden_id: "g_eff"
+    milestone: "matter_coupling"
+    burden_id: "none"
   high_risk_rows:
     - burden_id: "m_src"
       reader_facing_status: "adopted only as scoped source-only M_src object"

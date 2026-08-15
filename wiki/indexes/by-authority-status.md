@@ -151,6 +151,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-CONSTRUCTION-V1` `research_control/tasks/RT-20260809-023/artifacts/parent_fusion_notes_p4_t02_b2_descriptor_construction.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-V1` `research_control/tasks/RT-20260812-002/artifacts/parent_fusion_notes_p4_t02_b2_finite_typed_presentation_admission_bridge_witness.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-V1` `research_control/tasks/RT-20260814-004/artifacts/parent_fusion_notes_p4_t02_b2_kstar_localization_bridge_irrelevance.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-017/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge_general_rank_post_repair_smuggling_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REFUTER-STRESS-V1` `research_control/tasks/RT-20260811-001/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge_general_rank_refuter_stress.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REPAIR-V1` `research_control/tasks/RT-20260810-016/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge_general_rank_repair.md`
@@ -634,6 +635,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1` `research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex`
 - `TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_fallback_descriptor_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-OR-PROVENANCE-OBSTRUCTION-V1` `research_control/tasks/RT-20260812-002/artifacts/v22_p4_t02_b2_finite_typed_presentation_admission_bridge_witness_or_provenance_obstruction_v1.tex`
+- `TEX-V22-P4-T02-B2-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-THEOREM-V1` `research_control/tasks/RT-20260814-004/artifacts/v22_p4_t02_b2_kstar_localization_bridge_irrelevance_theorem_v1.tex`
 - `TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-017/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_post_repair_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REFUTER-STRESS-V1` `research_control/tasks/RT-20260811-001/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_refuter_stress_v1.tex`
 - `TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REPAIR-V1` `research_control/tasks/RT-20260810-016/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_repair_v1.tex`
@@ -1436,6 +1438,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-CONSTRUCTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-construction-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-finite-typed-presentation-admission-bridge-witness-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-kstar-localization-bridge-irrelevance-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-oriented-matroid-bridge-general-rank-post-repair-smuggling-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REFUTER-STRESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-oriented-matroid-bridge-general-rank-refuter-stress-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REPAIR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-oriented-matroid-bridge-general-rank-repair-v1.md`
@@ -1952,6 +1955,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1` `wiki/tex/tex-v22-p4-t02-b2-equipped-chain-descriptor-attempt-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-fallback-descriptor-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-OR-PROVENANCE-OBSTRUCTION-V1` `wiki/tex/tex-v22-p4-t02-b2-finite-typed-presentation-admission-bridge-witness-or-provenance-obstruction-v1.md`
+- `WIKI-TEX-V22-P4-T02-B2-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-THEOREM-V1` `wiki/tex/tex-v22-p4-t02-b2-kstar-localization-bridge-irrelevance-theorem-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-oriented-matroid-bridge-general-rank-post-repair-smuggling-audit-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REFUTER-STRESS-V1` `wiki/tex/tex-v22-p4-t02-b2-oriented-matroid-bridge-general-rank-refuter-stress-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-REPAIR-V1` `wiki/tex/tex-v22-p4-t02-b2-oriented-matroid-bridge-general-rank-repair-v1.md`
