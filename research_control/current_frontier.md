@@ -10,7 +10,7 @@ If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-15T19:18:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"a5f6d6b95e42ca7355693220dab2b4146e2e8036","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"296c034ab98bba0b98f06cdaebc7e0fe6963f9fd8ed87e29763c33b183f42045"},{"path":"research_control/handoffs/handoff-1039.yaml","sha256":"d839ed55c99054af7839c20d8394091bcb5ce9d79c88ca7562e73ea66ffb84e6"},{"path":"research_control/program_state.yaml","sha256":"c552fe925e02a8e422966754e28767f133ccd578d735df46cc2afed3ac84c545"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"f53f82b1453ea624e3a4c29dcfb54882990283e67eda0633357abc0301e741bd","source_path_count":"12","task_count":"1294"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-15T19:18:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"91080571034e5a8bb28ff6b34d4a582ea05eccc6","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"2912cf51809cfc1b5992072af7ca73388d4b511c035d866b537e18a959f3ec8f"},{"path":"research_control/handoffs/handoff-1039.yaml","sha256":"d839ed55c99054af7839c20d8394091bcb5ce9d79c88ca7562e73ea66ffb84e6"},{"path":"research_control/program_state.yaml","sha256":"c552fe925e02a8e422966754e28767f133ccd578d735df46cc2afed3ac84c545"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"b8c225d398fdd9beb4346d3c17481189104bbc400d9d18ed7ca146bb442f3749","source_path_count":"12","task_count":"1296"} -->
 
 ## Generated-Report Provenance
 
@@ -19,11 +19,11 @@ tracked authority files govern.
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `current_frontier` |
-| Source commit | `a5f6d6b95e42ca7355693220dab2b4146e2e8036` |
+| Source commit | `91080571034e5a8bb28ff6b34d4a582ea05eccc6` |
 | Source-derived generation time | `2026-08-15T19:18:00Z` |
-| Tracked task count | 1294 |
+| Tracked task count | 1296 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `f53f82b1453ea624e3a4c29dcfb54882990283e67eda0633357abc0301e741bd` |
+| Source manifest SHA-256 | `b8c225d398fdd9beb4346d3c17481189104bbc400d9d18ed7ca146bb442f3749` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -31,7 +31,7 @@ tracked authority files govern.
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `296c034ab98bba0b98f06cdaebc7e0fe6963f9fd8ed87e29763c33b183f42045`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `2912cf51809cfc1b5992072af7ca73388d4b511c035d866b537e18a959f3ec8f`
 - `research_control/handoffs/handoff-1039.yaml`: `d839ed55c99054af7839c20d8394091bcb5ce9d79c88ca7562e73ea66ffb84e6`
 - `research_control/program_state.yaml`: `c552fe925e02a8e422966754e28767f133ccd578d735df46cc2afed3ac84c545`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`

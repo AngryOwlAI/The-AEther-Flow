@@ -1,6 +1,6 @@
 <!-- authority: control -->
 
-# Handoff 1039: occurrence/admissibility typing and provenance obstruction
+# Handoff `handoff-1039`: occurrence/admissibility typing and provenance obstruction
 
 RT-20260815-003 completed the selected Ontology Formalizer packet with exactly one result: `current_source_provenance_or_typing_obstruction`.
 

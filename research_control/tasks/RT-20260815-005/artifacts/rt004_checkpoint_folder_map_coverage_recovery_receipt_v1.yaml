@@ -1,0 +1,42 @@
+schema_id: "rt004_checkpoint_folder_map_coverage_recovery_receipt_v1"
+status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+task_id: "RT-20260815-005"
+job_id: "AJ-RT-20260815-005-001"
+created_at: "2026-08-15T21:00:41Z"
+source_head: "91080571034e5a8bb28ff6b34d4a582ea05eccc6"
+source_tree: "7339a94783941dfd05f75eb113fc9eff580742bf"
+consumed_checkpoint:
+  task_id: "RT-20260815-004"
+  job_id: "AJ-RT-20260815-004-001"
+  blocker_path: "research_control/tasks/RT-20260815-004/artifacts/checkpoint_blocker_rt004_folder_map_coverage_v1.yaml"
+  blocker_sha256: "04af6487d8f62bacdf1f1f9e0ddde49a13336122af9a3b95cbd7b606a0af6047"
+  checkpoint_invocation_count: 1
+  checkpoint_committed: false
+  replay_authorized: false
+receipt_repair:
+  path: "research_control/tasks/RT-20260815-004/documentation_impact.yaml"
+  preimage_sha256: "84e4984d4df1d87d9ea3f854d5b7a4b22962457ec955df2d2807c0deed6e277b"
+  required_changed_path: "research_control/tasks/RT-20260815-004/artifacts/checkpoint_blocker_rt004_folder_map_coverage_v1.yaml"
+  required_generated_derivative: "FOLDER_MAP.md"
+  blocker_occurrences_in_changed_paths: 1
+  folder_map_occurrences_in_generated_derivatives: 1
+  recovery_paths_covered: true
+preservation:
+  handoff_yaml_path: "research_control/handoffs/handoff-1039.yaml"
+  handoff_yaml_sha256: "d839ed55c99054af7839c20d8394091bcb5ce9d79c88ca7562e73ea66ffb84e6"
+  rt003_science_changed: false
+  selected_successor_changed: false
+  selected_successor_executed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+checkpoint_recovery:
+  fresh_job_id: "AJ-RT-20260815-005-001"
+  checkpoint_invocation_limit: 1
+  status: "PENDING_FRESH_CHECKPOINT"
+  prior_job_retried: false
+validation:
+  memory_preflight: "PASS_AFTER_REFRESH"
+  exact_receipt_coverage: "PASS"
+  cumulative_manifest_coverage: "PASS"
+  validators_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+authority_note: "This is project-system checkpoint-recovery evidence only and creates no scientific, ontology, source-law, Distance-to-GR, Gate, benchmark, proof, publication, push, external-action, or completed-derivation authority."

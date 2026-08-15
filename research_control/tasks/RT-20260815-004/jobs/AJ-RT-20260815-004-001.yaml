@@ -1,0 +1,231 @@
+job_id: "AJ-RT-20260815-004-001"
+task_id: "RT-20260815-004"
+decision_id: "DDR-20260815-004"
+role_id: "project-control-maintainer"
+role_version: "0.2.0"
+execution_role_ref: "project-control-maintainer@0.2.0--RT-20260815-004"
+status: "blocked"
+validation_status: "FAIL"
+created_at: "2026-08-15T20:20:00Z"
+started_at: "2026-08-15T20:20:00Z"
+completed_at: "2026-08-15T20:47:48Z"
+completion_path: "research_control/tasks/RT-20260815-004/jobs/completions/AJC-AJ-RT-20260815-004-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active full-V22 goal and exact resolver failure authorize this one bounded non-scientific repair."
+objective: "Make the Markdown companion of handoff-1039 contain the exact tracked handoff ID, preserve all scientific and routing semantics, prove the ordinary continuation resolver recovers, synchronize approved derivatives, and checkpoint once."
+target_derivation_milestone: "none"
+milestone_burden: "Project-control mirror identity only; no physics burden advances."
+route_label: "project-system-control-mirror-repair"
+route_reason: "continue_research_summary_blocked_only_because_handoff_1039_markdown_lacked_literal_id"
+route_strategy_id: "repair_handoff_1039_literal_markdown_identity_v1"
+source_head: "91080571034e5a8bb28ff6b34d4a582ea05eccc6"
+source_tree: "7339a94783941dfd05f75eb113fc9eff580742bf"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+recovery_plan_id: "project_system_recovery_for_recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+next_plan_task_id: "P4-T02"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+is_physics_task: false
+semantic_payload_changed: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+resolves_signal_routing: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1039"
+  source_handoff_path: "research_control/handoffs/handoff-1039.yaml"
+  source_handoff_sha256: "d839ed55c99054af7839c20d8394091bcb5ce9d79c88ca7562e73ea66ffb84e6"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_needed: false
+  refresh_performed: false
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1248
+    relationship_row_count: 6415
+    semantic_row_count: 1248
+    vault_row_count: 1248
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'POST-OCCURRENCE-ADMISSIBILITY-TYPING-PROVENANCE-OBSTRUCTION' --limit 10 --json"
+      query_type: "search"
+      query_text: "POST-OCCURRENCE-ADMISSIBILITY-TYPING-PROVENANCE-OBSTRUCTION"
+      returned_object_ids:
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1"
+        - "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+  canonical_inspections:
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260815-003/artifacts/parent_fusion_notes_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel.md"
+      source_hash: "54f91f607269d6bdf9f69cc30d7fbf2dcfb77bb1efe4d7c81fd335e92dddaa09"
+    - object_id: "MD-RESEARCH-CONTROL-CURRENT-FRONTIER"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/current_frontier.md"
+      source_hash: "f40ec2e8315cd2e70ba42f11db063b0ca808ef463a8b793405ecb6619e79f438"
+  authority_note: "Tracked control sources govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption, mathematical payload, source law, or status changes."
+    - "Only the Markdown title gains the exact already-authoritative handoff ID."
+  materiality_basis: "Restores deterministic continuation routing without changing the selected route."
+  source_basis:
+    - "research_control/handoffs/handoff-1039.yaml"
+    - "research_control/program_state.yaml"
+    - "scripts/research_control/validate_routing_snapshot.py"
+  expected_artifact_paths:
+    - "research_control/handoffs/handoff-1039.md"
+    - "research_control/tasks/RT-20260815-004/artifacts/v22_handoff_1039_literal_identity_repair_receipt.yaml"
+  project_system_justification: "The existing resolver supplies an exact one-line failure and the YAML ID supplies the unique postcondition."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact literal handoff mirror repair"
+      - "one evidence receipt proving route recovery and unchanged YAML authority"
+      - "one governed checkpoint"
+      - "one checkpoint blocker record"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "handoff-1039.md contains the exact literal handoff-1039"
+      - "handoff-1039.yaml remains byte-identical"
+      - "continue_research.py --summary no longer fails the latest_handoff identity gate"
+      - "the selected theoretical successor remains unexecuted"
+      - "the sole checkpoint failure is sealed with restored-index evidence and no retry"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+allowed_source_classes:
+  - "project_control"
+  - "registry"
+  - "control_markdown"
+  - "task_local_operational_evidence"
+forbidden_source_classes:
+  - "canonical_ontology"
+  - "benchmark_source"
+  - "science_draft"
+  - "generated_derivative_hand_edit"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-1039.md"
+  - "research_control/tasks/RT-20260815-004/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+expected_output_paths:
+  - "research_control/handoffs/handoff-1039.md"
+  - "research_control/tasks/RT-20260815-004/artifacts/v22_handoff_1039_literal_identity_repair_receipt.yaml"
+  - "research_control/tasks/RT-20260815-004/artifacts/checkpoint_blocker_rt004_folder_map_coverage_v1.yaml"
+  - "research_control/tasks/RT-20260815-004/jobs/completions/AJC-AJ-RT-20260815-004-001.yaml"
+  - "research_control/tasks/RT-20260815-004/documentation_impact.yaml"
+validation_commands:
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected"
+  - "git diff --check"
+stop_conditions:
+  - "handoff-1039.yaml or any RT003 scientific file would need editing"
+  - "the existing resolver still fails after the literal identity repair"
+  - "a required path is outside this allowlist"
+  - "validation fails"
+checkpoint_required: true
+checkpoint_invocation_limit: 1
+checkpoint_result:
+  status: "BLOCKED_CHECKPOINT_STAGED_DOCUMENTATION_IMPACT_FOLDER_MAP_COVERAGE"
+  invocation_count: 1
+  staged: false
+  committed: false
+  blocker_path: "research_control/tasks/RT-20260815-004/artifacts/checkpoint_blocker_rt004_folder_map_coverage_v1.yaml"
+  blocker_sha256: "04af6487d8f62bacdf1f1f9e0ddde49a13336122af9a3b95cbd7b606a0af6047"
+  retry_in_this_job_authorized: false
+notes: "The ordinary research handoff remains authoritative. The sole checkpoint failed safely on FOLDER_MAP.md documentation coverage, the index restored, no commit occurred, and this job must not be retried or used to execute the physics successor."

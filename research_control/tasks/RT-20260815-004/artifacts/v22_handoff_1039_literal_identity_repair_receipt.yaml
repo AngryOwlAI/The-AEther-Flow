@@ -1,0 +1,44 @@
+schema_id: "v22_handoff_1039_literal_identity_repair_receipt_v1"
+task_id: "RT-20260815-004"
+job_id: "AJ-RT-20260815-004-001"
+status: "PASS_REPAIR_CHECKPOINT_BLOCKED_FOLDER_MAP_COVERAGE"
+source_head: "91080571034e5a8bb28ff6b34d4a582ea05eccc6"
+source_tree: "7339a94783941dfd05f75eb113fc9eff580742bf"
+source_handoff_yaml:
+  path: "research_control/handoffs/handoff-1039.yaml"
+  handoff_id: "handoff-1039"
+  sha256_before: "d839ed55c99054af7839c20d8394091bcb5ce9d79c88ca7562e73ea66ffb84e6"
+  expected_unchanged: true
+source_handoff_markdown:
+  path: "research_control/handoffs/handoff-1039.md"
+  sha256_before: "b4952a2f34c64e96f64fc5a81c1f8c7b5151de50e3cccbcf7044a643384b0d0a"
+  sha256_after: "34d5f2a87f4e6c10ed5dfd8989773da97e8057e1368bbc81054ff7f08468d3e9"
+  preimage_heading: "# Handoff 1039: occurrence/admissibility typing and provenance obstruction"
+  postimage_heading: "# Handoff `handoff-1039`: occurrence/admissibility typing and provenance obstruction"
+resolver_finding_before:
+  status: "blocked"
+  gate_id: "latest_handoff"
+  detail: "research_control/handoffs/handoff-1039.md does not identify handoff-1039"
+resolver_result_after:
+  status: "ready"
+  boundary: "director_decision_required"
+  active_task_id: "RT-20260815-003"
+  latest_handoff_path: "research_control/handoffs/handoff-1039.yaml"
+  selected_successor_executed: false
+science_boundary:
+  rt003_science_changed: false
+  handoff_yaml_changed: false
+  program_state_changed: false
+  selected_successor_changed: false
+  selected_successor_executed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+checkpoint_result:
+  status: "BLOCKED_CHECKPOINT_STAGED_DOCUMENTATION_IMPACT_FOLDER_MAP_COVERAGE"
+  invocation_count: 1
+  staged: false
+  committed: false
+  blocker_path: "research_control/tasks/RT-20260815-004/artifacts/checkpoint_blocker_rt004_folder_map_coverage_v1.yaml"
+  blocker_sha256: "04af6487d8f62bacdf1f1f9e0ddde49a13336122af9a3b95cbd7b606a0af6047"
+  retry_in_this_job_authorized: false
+validation_status: "FAIL"
