@@ -1,0 +1,998 @@
+schema_id: "child_phys_phil_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_v1"
+artifact_id: "CHILD-PHYS-PHIL-V22-P4T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-001"
+artifact_type: "parent_child_synthesis_child_output"
+authority: "science_draft"
+status: "complete_for_parent_synthesis"
+status_label: "draft/control"
+task_id: "RT-20260814-005"
+job_id: "AJ-RT-20260814-005-001"
+decision_id: "DDR-20260814-005"
+execution_unit_id: "child_phys_phil"
+perspective: "physicist_philosopher"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260814-005"
+claim_boundary_id: "CB-V22-P4-T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-001"
+created_at: "2026-08-15T01:04:38Z"
+source_head: "3a286431624c06bc1a2404fda5c0b067b1ce12c9"
+source_tree: "87b95af8ab918339030fc04a7fee61eddf7ea5c6"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-CONSTRUCTION-V1"
+candidate_id: "CAND-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-V1"
+candidate_name: "SourceLocalProjectiveConormalReduction_v1"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Construct independently source-derived local reduction and nonfactorizing bridge data after excluding unchanged K_star standalone replay."
+
+ownership_boundary:
+  owned_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_phil_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+  files_written_count: 1
+  other_files_modified: false
+  peer_child_file_inspected: false
+  parent_artifact_modified: false
+  task_or_job_modified: false
+  registry_modified: false
+  canonical_ontology_modified: false
+  completion_created: false
+  handoff_created: false
+  checkpoint_executed: false
+  successor_created: false
+  successor_executed: false
+  child_agentjob_created: false
+  subagent_created: false
+
+decisive_result:
+  result_count: 1
+  result_type: "constructed_candidate"
+  construction_identity: "SourceLocalProjectiveConormalReduction_v1"
+  result_scope: "One proposal-only codimension-one source-foliation atlas, its unoriented projective conormal descent, proper line-stabilizer frame reduction, proposal-category naturality, and same-manifold nonfactorization against frozen unchanged K_star."
+  decisive_finding: "The predeclared submersion atlas is transparently classified as a proposal-only new source primitive before any P4 diagnostic. That explicit target-free assumption is sufficient to construct a bounded mathematical source-extension candidate: overlap reparametrizations make the unoriented projective conormal line descend, the line defines a proper frame-bundle reduction, and the bridge varies between two foliation structures on the same manifold while K_star is unchanged. The candidate is not derived from the current ontology and lacks an independent epistemic reason for selecting this foliation primitive. Those facts block adoption and require a separate Smuggling Audit, but they do not invalidate construction under the AgentJob boundary that expressly admits proposal-only new source data."
+  no_fog_check: true
+  no_fog_explanation: "The artifact constructs an exact proposal object, conormal line, stabilizer reduction, natural bridge, gluing law, and nonfactorization fixture. It identifies the remaining source-justification burden as an adoption and smuggling-audit issue rather than substituting generic future work for a result."
+  claim_boundary_preserved: true
+  current_ontology_derivation_claimed: false
+  physical_or_empirical_meaning_claimed: false
+  adoption_claimed: false
+  distance_to_gr_delta_claimed: false
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Construct independently source-derived local reduction and nonfactorizing bridge data after excluding unchanged K_star standalone replay."
+  explanation: "A proposal-only projective-conormal reduction bridge is mathematically constructed from newly assumed source-foliation data. Source purity, goal neutrality, morphism circularity, and adoption provenance remain unaudited, so no GR burden or physical claim advances."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+source_binding:
+  hash_algorithm: "sha256"
+  governing_source_count: 21
+  live_head_matches_job: true
+  live_tree_matches_job: true
+  sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      source_class: "control_guidance"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      source_class: "control_guidance"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      source_class: "control_guidance"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      source_class: "workflow_contract"
+    - path: ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+      sha256: "f6534fd2950c2a6eefb8f2a4b255cd0794ceeb1462556be60af288bceb9d51d5"
+      source_class: "role_contract"
+    - path: ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+      sha256: "2ec5a542caffa90a54d11f0c03630fde839e92f4917d5dbd55b80b724a46c882"
+      source_class: "candidate_successor_role_contract"
+    - path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+      sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789"
+      source_class: "completion_contract"
+    - path: "research_control/tasks/RT-20260814-005/00_TASK.yaml"
+      sha256: "7d6543b53435491ff7d1ebaf2a4fb4058e6799248da983669b4d2d96f88cdfd2"
+      source_class: "tracked_control_state"
+    - path: "research_control/tasks/RT-20260814-005/DDR-20260814-005.md"
+      sha256: "02a3421216707e973756ebab1f11b7a94cfd05fb3da1f87d73398975850e0172"
+      source_class: "tracked_control_state"
+    - path: "research_control/tasks/RT-20260814-005/roles/candidate-constructor@0.2.0--RT-20260814-005.yaml"
+      sha256: "8281f289a50c01f10e97767ad6250527f52b8575e25db5ecbea7ef009f79e092"
+      source_class: "execution_role"
+    - path: "research_control/tasks/RT-20260814-005/jobs/AJ-RT-20260814-005-001.yaml"
+      sha256: "cdeaa47805dbe668abbf2c6b24a0a33ab4698317c8fb26e63e413acc2ffb515f"
+      source_class: "tracked_control_state"
+    - path: "research_control/handoffs/handoff-1034.yaml"
+      sha256: "c838d0151f82f580e179a97f128da34ee5d52bb0f03a1972b332a2f6526011a2"
+      source_class: "tracked_control_state"
+    - path: "research_control/handoffs/handoff-1034.md"
+      sha256: "97876ba907910d855021438e197b54fa455a0a50f0d9b0508d1a51871e8625bd"
+      source_class: "registered_control_markdown"
+    - path: "research_control/tasks/RT-20260814-004/artifacts/v22_p4_t02_b2_kstar_localization_bridge_irrelevance_theorem_v1.tex"
+      sha256: "aee6a25a0b21b8864033e46a235f82033e61670c00d7dce7d8133b3e34132fbe"
+      source_class: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260814-004/artifacts/v22_p4_t02_b2_kstar_localization_bridge_irrelevance_record_v1.yaml"
+      sha256: "d0ceb76faaacea70107b64d6a8dddf9a15d9e5eef44eb68fa473e4e0a474ffa8"
+      source_class: "task_local_science_draft"
+    - path: "research_control/tasks/RT-20260814-004/artifacts/parent_fusion_notes_p4_t02_b2_kstar_localization_bridge_irrelevance.md"
+      sha256: "ec99f7f7cee62d4a06166ecb578a79632d08ac8ac10ba45624f1fcccecc1b665"
+      source_class: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260814-004/artifacts/parent_conflict_review_p4_t02_b2_kstar_localization_bridge_irrelevance.yaml"
+      sha256: "03569123f56d589a2dc03258d0485c14b34a711e1c81a78c66c59e7e4e0de742"
+      source_class: "task_local_parent_synthesis"
+    - path: "research_control/tasks/RT-20260814-002/artifacts/v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_v1.tex"
+      sha256: "66953e112dee3ca9c5a7c6de9f255979c4fedbccd32be924c24563de8c5d372f"
+      source_class: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260814-002/artifacts/v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_record_v1.yaml"
+      sha256: "4dc2f288b45abf16a36384842cd757d6707c549c9968495581ee313086cf71c8"
+      source_class: "task_local_science_draft"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      source_class: "registered_project_control"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      source_class: "tracked_control_state"
+  authority_note: "Tracked sources and control records govern. The proposal primitive was admitted by the completed AgentJob with validation status PASS_PRECHECKPOINT_STAGING_REQUIRED as source-extension syntax, not discovered in generated memory or inferred from workflow metadata."
+
+fixed_authority_inputs:
+  predecessor_theorem_id: "THM-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE-001"
+  predecessor_result: "scoped_k_star_bridge_irrelevance_theorem"
+  predecessor_freeze_id: "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+  predecessor_held_fixed: true
+  frozen_kstar_replayed_or_repaired: false
+  current_source_signature: "A smooth four-dimensional source arena carried as primitive debt, with Phi_src still unresolved."
+  current_source_foliation_present_before_packet: false
+  proposal_foliation_admitted_by_job: true
+  proposal_foliation_status: "proposal-only new source primitive not adopted"
+  target_or_empirical_premise_admitted: false
+
+layer_separation:
+  layer_count: 9
+  layers:
+    - layer_id: "LAYER-01"
+      dimension: "current_ontology"
+      status: "unchanged_and_insufficient_for_candidate"
+      finding: "The current smooth-source ontology does not contain q_i, a foliation atlas, a projective conormal line, a reduction law, or a bridge map. The constructed candidate is therefore not a derivation from current ontology."
+    - layer_id: "LAYER-02"
+      dimension: "proposal_syntax"
+      status: "well_formed"
+      finding: "The completed AgentJob, with validation status PASS_PRECHECKPOINT_STAGING_REQUIRED, predeclared a codimension-one submersion atlas and overlap reparametrizations as proposal-only source data. From those data, projective conormal descent and the line-stabilizer reduction are definitionally constructible."
+    - layer_id: "LAYER-03"
+      dimension: "syntactic_source_provenance"
+      status: "transparent_target_free_assumption"
+      finding: "The q_i atlas is declared before P4 diagnostics, uses only the source manifold, scalar labels, covers, and one-dimensional reparametrizations, and names no target metric, Lorentz group, cone, detector, benchmark, or desired output."
+    - layer_id: "LAYER-04"
+      dimension: "epistemic_source_justification"
+      status: "absent_and_adoption_blocking"
+      finding: "The packet does not explain why the source world should carry this particular codimension-one foliation rather than another foliation or none. Transparent assumption provenance is enough for proposal construction but not for adoption, truth, uniqueness, or explanatory selection."
+    - layer_id: "LAYER-05"
+      dimension: "mathematical_bridge"
+      status: "constructed_in_proposal_category"
+      finding: "Bridge_PCR sends a proposal object to a smooth projective conormal line and its proper frame reduction, respects presentation reparametrization and typed proposal morphisms, and is nonconstant across same-manifold proposal structures."
+    - layer_id: "LAYER-06"
+      dimension: "physical_time_and_causality"
+      status: "not_assigned"
+      finding: "The conormal line is unoriented and unnormalized. It supplies neither a time direction, coorientation, norm, Lorentzian cone, hyperbolicity cone, causal order, nor propagation law."
+    - layer_id: "LAYER-07"
+      dimension: "empirical_semantics"
+      status: "not_assigned"
+      finding: "No preparation, measurement, detector, response token, likelihood, frequency, calibration, or operational readout relation is defined."
+    - layer_id: "LAYER-08"
+      dimension: "adoption"
+      status: "blocked_adoption_open_continuation"
+      finding: "The primitive and candidate remain proposal-only source-extension data. Construction neither adopts nor rejects them; any adoption would require protected human-gated authority after audit and stress."
+    - layer_id: "LAYER-09"
+      dimension: "workflow_authority"
+      status: "construction_routing_only"
+      finding: "The AgentJob permits bounded construction and later audit routing. Validation, parent consensus, registration, or checkpoint cannot supply source truth, epistemic justification, physical meaning, or ontology adoption."
+
+formal_domains:
+  domain_count: 12
+  domains:
+    - domain_id: "DOM-01"
+      symbol: "PropFol4"
+      definition: "Proposal objects consisting of a nonempty smooth four-manifold M and a predeclared codimension-one source-foliation presentation."
+    - domain_id: "DOM-02"
+      symbol: "Cover(M)"
+      definition: "Locally finite open covers {U_i} of M, with all overlap components and refinements explicitly indexed."
+    - domain_id: "DOM-03"
+      symbol: "Subm(U_i,I_i)"
+      definition: "Smooth submersions q_i:U_i->I_i to open one-dimensional intervals, with dq_i nowhere zero."
+    - domain_id: "DOM-04"
+      symbol: "Repar(I_i,I_j)"
+      definition: "One-dimensional local diffeomorphisms phi_ji with nonzero derivative on every relevant overlap component."
+    - domain_id: "DOM-05"
+      symbol: "FolCocycle"
+      definition: "Relations q_j=phi_ji composed q_i and phi_ki=phi_kj composed phi_ji on declared triple-overlap components."
+    - domain_id: "DOM-06"
+      symbol: "PCon(T_star_M)"
+      definition: "The projectivized nonzero cotangent bundle whose fibre consists of unoriented one-dimensional covector subspaces."
+    - domain_id: "DOM-07"
+      symbol: "Line(T_star_M)"
+      definition: "Smooth rank-one cotangent subbundles L of T_star_M, represented equivalently by sections ell:M->PCon(T_star_M)."
+    - domain_id: "DOM-08"
+      symbol: "Fr(M)"
+      definition: "The full source frame bundle with structure group GL(4,R); no source orientation is assumed."
+    - domain_id: "DOM-09"
+      symbol: "H_line"
+      definition: "The proper subgroup of GL(4,R) whose cotangent action stabilizes the reference line span(e^0)."
+    - domain_id: "DOM-10"
+      symbol: "Red_H(M)"
+      definition: "Principal H_line reductions of Fr(M) induced by a smooth cotangent line subbundle."
+    - domain_id: "DOM-11"
+      symbol: "PCRed(M)"
+      definition: "Pairs (ell,P_H) consisting of a projective conormal section and its associated proper frame reduction."
+    - domain_id: "DOM-12"
+      symbol: "Evidence"
+      definition: "Fixtures, descent checks, nonfactorization pairs, provenance classifications, failure branches, and falsifiers."
+
+formal_objects:
+  object_count: 13
+  objects:
+    - object_id: "OBJ-01"
+      name: "SourceArena"
+      type: "nonempty smooth four-manifold M"
+      status: "current primitive debt held fixed"
+    - object_id: "OBJ-02"
+      name: "SourceFoliationCover"
+      type: "open cover {U_i}"
+      status: "proposal-only"
+    - object_id: "OBJ-03"
+      name: "LocalSourceLabels"
+      type: "submersions q_i:U_i->I_i"
+      status: "proposal-only new primitive"
+    - object_id: "OBJ-04"
+      name: "OverlapReparametrizations"
+      type: "local one-dimensional diffeomorphisms phi_ji"
+      status: "proposal-only transition data"
+    - object_id: "OBJ-05"
+      name: "FoliationCocycle"
+      type: "componentwise overlap and triple-overlap equations"
+      status: "formed"
+    - object_id: "OBJ-06"
+      name: "LocalProjectiveConormals"
+      type: "ell_i(x)=[dq_i(x)]"
+      status: "constructed"
+    - object_id: "OBJ-07"
+      name: "DescendedProjectiveConormal"
+      type: "global section ell:M->PCon(T_star_M)"
+      status: "constructed"
+    - object_id: "OBJ-08"
+      name: "ConormalLineSubbundle"
+      type: "L_x=span(dq_i(x)) subset T_star_xM"
+      status: "constructed"
+    - object_id: "OBJ-09"
+      name: "LineStabilizer"
+      type: "H_line={A in GL(4,R):A_star span(e^0)=span(e^0)}"
+      status: "constructed_and_proper"
+    - object_id: "OBJ-10"
+      name: "ReducedFrameBundle"
+      type: "P_H={u in Fr(M):u_star L_x=span(e^0)}"
+      status: "constructed_as_principal_H_line_bundle"
+    - object_id: "OBJ-11"
+      name: "BridgePCR"
+      type: "proposal source-foliation objects to PCRed objects"
+      status: "constructed"
+    - object_id: "OBJ-12"
+      name: "SameManifoldNonfactorizationFixture"
+      type: "two foliation proposals on R4 with q_A=x^0 and q_B=x^1"
+      status: "constructed"
+    - object_id: "OBJ-13"
+      name: "AuthorityAndSemanticsLedger"
+      type: "proposal ontology physical empirical adoption and workflow separation"
+      status: "complete"
+
+formal_maps:
+  map_count: 13
+  maps:
+    - map_id: "MAP-01"
+      signature: "q_i:U_i->I_i"
+      purpose: "Supply the proposal-only local codimension-one source labels."
+    - map_id: "MAP-02"
+      signature: "phi_ji:I_i|U_ij->I_j|U_ij"
+      purpose: "Relate local source labels by one-dimensional local diffeomorphisms."
+    - map_id: "MAP-03"
+      signature: "d:q_i->dq_i"
+      purpose: "Form nowhere-zero local conormal covectors."
+    - map_id: "MAP-04"
+      signature: "Projectivize:dq_i->[dq_i]"
+      purpose: "Remove scale and sign while retaining the conormal line."
+    - map_id: "MAP-05"
+      signature: "Descend:{[dq_i]}->ell"
+      purpose: "Glue equal projective conormal sections on overlaps."
+    - map_id: "MAP-06"
+      signature: "Line:ell->L subset T_star_M"
+      purpose: "Recover the smooth rank-one conormal line subbundle."
+    - map_id: "MAP-07"
+      signature: "Reduce:L->P_H subset Fr(M)"
+      purpose: "Construct the principal proper line-stabilizer reduction."
+    - map_id: "MAP-08"
+      signature: "Restrict_V:(M,F,ell,P_H)->(V,F|V,ell|V,P_H|V)"
+      purpose: "Preserve the candidate under declared open restriction."
+    - map_id: "MAP-09"
+      signature: "Refine:{U_i,q_i,phi_ji}->{V_a,q_a,psi_ab}"
+      purpose: "Change presentation without changing the descended projective conormal when the refinement is compatible."
+    - map_id: "MAP-10"
+      signature: "PropMor:f:(M,F)->(N,F_prime)"
+      purpose: "A typed proposal morphism satisfies local q_prime_a composed f=psi_ai composed q_i and transports conormal lines."
+    - map_id: "MAP-11"
+      signature: "Bridge_PCR:PropFol4->PCRed"
+      purpose: "Send the source-extension proposal to its descended projective conormal and proper frame reduction."
+    - map_id: "MAP-12"
+      signature: "Forget:PropFol4->Smooth4"
+      purpose: "Forget q, overlap, and foliation data while retaining the underlying manifold."
+    - map_id: "MAP-13"
+      signature: "FactorTest:(Bridge_PCR,K_star composed Forget)->Bool"
+      purpose: "Use the same-manifold fixture to disprove factorization through frozen unchanged K_star."
+
+construction_theorems:
+  theorem_count: 5
+  theorems:
+    - theorem_id: "THM-RT005-PHIL-001"
+      name: "Unoriented projective conormal descent"
+      statement: "If q_j=phi_ji composed q_i with phi_ji a one-dimensional local diffeomorphism, then [dq_j]=[dq_i] on overlaps, so the local projective conormals glue to a unique smooth global section ell."
+      proof: "The chain rule gives dq_j=phi_prime_ji(q_i)dq_i. The derivative is nowhere zero, so both covectors span the same line even when the derivative is negative. Equality on overlaps and the transition cocycle give unique sheaf gluing of the smooth projective sections."
+      falsifier: "An overlap component where q_j is not a reparametrization of q_i, where phi_prime_ji vanishes, or where the triple cocycle fails."
+    - theorem_id: "THM-RT005-PHIL-002"
+      name: "Proper line-stabilizer frame reduction"
+      statement: "A smooth cotangent line subbundle L defines a nonempty smooth principal H_line subbundle P_H of Fr(M), and H_line is a proper subgroup of GL(4,R)."
+      proof: "At every x choose a frame u carrying the reference covector line to L_x. Frames satisfying this condition form one right H_line torsor and vary smoothly in local trivializations of L. A linear map whose cotangent action sends span(e^0) to span(e^0+e^1) lies outside H_line, proving properness."
+      falsifier: "A point where L_x vanishes or is nonsmooth, an empty adapted-frame fibre, failure of the right H_line torsor law, or equality H_line=GL(4,R)."
+    - theorem_id: "THM-RT005-PHIL-003"
+      name: "Restriction refinement gluing and proposal naturality"
+      statement: "The descended line and reduction restrict to opens, are unchanged by compatible cover refinement and local label reparametrization, glue from compatible local proposal data, and transform naturally under typed foliation-preserving proposal morphisms."
+      proof: "Restriction commutes with differentiation and projectivization. Reparametrization multiplies dq by a nowhere-zero scalar, leaving its line fixed. Compatible local sections equal on overlaps and glue uniquely. For q_prime_a composed f=psi_ai composed q_i, the chain rule gives f_star L_prime=L, and the induced frame map transports P_H."
+      falsifier: "A restriction that destroys submersion status, a refinement without compatible reparametrizations, unequal projective lines on an overlap, or a claimed morphism lacking the displayed compatibility equation."
+    - theorem_id: "THM-RT005-PHIL-004"
+      name: "Same-manifold K_star nonfactorization witness"
+      statement: "Bridge_PCR does not factor through frozen unchanged K_star as an objectwise classifier."
+      proof: "On M=R4 let F_A have the single global label q_A(x)=x^0 and F_B have q_B(x)=x^1. Both forget to the same M and therefore have the same K_star(M). Their bridge images are the distinct constant projective lines [dx^0] and [dx^1]. A map factoring only through K_star(M) would assign equal outputs, contradiction."
+      falsifier: "Equality of [dx^0] and [dx^1], a difference in the underlying K_star assignment, or a factorization domain that legitimately retains the q-atlas rather than only frozen K_star."
+    - theorem_id: "THM-RT005-PHIL-005"
+      name: "Bounded proposal-only bridge construction"
+      statement: "The tuple consisting of the declared foliation atlas, descended projective conormal, proper line-stabilizer reduction, and Bridge_PCR is a nonconstant target-free source-extension candidate in the proposal category."
+      proof: "The first three theorems construct and naturalize the object; the fourth proves nonconstancy and nonfactorization against unchanged K_star. Every primitive is declared source-side before outcomes and no metric, Lorentz group, cone, time direction, empirical label, or desired P4 answer appears in the definitions."
+      falsifier: "Any failed formation, descent, properness, naturality, nonfactorization, or source-purity premise named above changes the result to a precise obstruction or invalid-under-boundary result."
+
+exact_fixtures_and_falsifiers:
+  fixture_count: 7
+  fixtures:
+    - fixture_id: "FIX-01"
+      name: "Sign-reversal presentation invariance"
+      data: "M=R4, q=x^0, and q_prime=-x^0."
+      expected: "The projective conormal line is [dx^0] in both presentations, so no coorientation or time direction is selected."
+      falsifier: "If [dx^0] differs from [-dx^0], projective descent is malformed."
+    - fixture_id: "FIX-02"
+      name: "Nonlinear local reparametrization invariance"
+      data: "q_prime=phi(q) with phi(s)=s+s^3 and phi_prime(s)=1+3s^2 greater than zero."
+      expected: "dq_prime is a nowhere-zero scalar multiple of dq and defines the same projective line."
+      falsifier: "A point where phi_prime vanishes or the projective lines differ."
+    - fixture_id: "FIX-03"
+      name: "Triple-overlap cocycle"
+      data: "q_1=q_0, q_2=2q_1, and q_3=-q_2 on one declared overlap component."
+      expected: "The composed one-dimensional reparametrizations agree and all projective conormal lines coincide."
+      falsifier: "Mismatch between the direct and composed reparametrization on a triple overlap."
+    - fixture_id: "FIX-04"
+      name: "Same-manifold nonfactorization pair"
+      data: "M=R4 with F_A:q_A=x^0 and F_B:q_B=x^1."
+      expected: "K_star(M) is identical while Bridge_PCR(F_A)=[dx^0] and Bridge_PCR(F_B)=[dx^1] are distinct."
+      falsifier: "Different K_star inputs or equal bridge lines."
+    - fixture_id: "FIX-05"
+      name: "Submersion failure control"
+      data: "q(x)=(x^0)^2 near x^0=0."
+      expected: "dq vanishes on the declared hypersurface, so the proposal is excluded and no conormal line candidate is constructed there."
+      falsifier: "A proof that dq is nowhere zero on the admitted domain."
+    - fixture_id: "FIX-06"
+      name: "Overlap-descent failure control"
+      data: "On one overlap q_i=x^0 and q_j=x^0+x^1."
+      expected: "q_j is not a one-dimensional reparametrization of q_i and the covector lines differ, so descent fails closed."
+      falsifier: "A local diffeomorphism phi with x^0+x^1=phi(x^0) on a nonempty four-dimensional open set."
+    - fixture_id: "FIX-07"
+      name: "Typed naturality versus full-diffeomorphism overread"
+      data: "A diffeomorphism f is admitted as a proposal morphism only with local q_prime composed f=psi composed q compatibility."
+      expected: "Bridge_PCR is natural in the proposal category, not claimed natural under arbitrary current-source diffeomorphisms that ignore the new primitive."
+      falsifier: "A proof that every arbitrary diffeomorphism automatically preserves the proposal foliation or that typed compatibility is unnecessary."
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_phil_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  formal_objects:
+    - "proposal-only source foliation atlas {U_i,q_i,phi_ji}"
+    - "unoriented projective conormal section ell"
+    - "cotangent line subbundle L"
+    - "proper line-stabilizer group H_line"
+    - "principal reduced frame bundle P_H"
+    - "same-manifold q_A=x^0 and q_B=x^1 fixture"
+  maps:
+    - "local submersions q_i and overlap reparametrizations phi_ji"
+    - "differentiation and projectivization"
+    - "projective descent and line-to-frame reduction"
+    - "restriction refinement gluing and proposal morphism transport"
+    - "Bridge_PCR from proposal foliation data to projective conormal reduction"
+    - "FactorTest against K_star composed with the forgetful map"
+  proof_obligations:
+    - "nowhere-zero local differentials"
+    - "overlap and triple-overlap cocycles"
+    - "projective conormal descent and smoothness"
+    - "proper principal line-stabilizer reduction"
+    - "restriction refinement gluing and typed naturality"
+    - "same-manifold nonconstancy and K_star nonfactorization"
+    - "target-free source-extension classification"
+    - "physical empirical adoption and workflow boundary preservation"
+  failed_components:
+    - "none_within_the_bounded_proposal_syntax_construction_scope"
+  next_required_role: "smuggling-auditor@0.2.0"
+  no_fog_check: true
+  no_fog_explanation: "SourceLocalProjectiveConormalReduction_v1 is explicitly constructed as a proposal-only new-primitive candidate. Its missing epistemic selection rationale blocks adoption and is a concrete Smuggling Auditor target, not an unreported construction failure."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "research_control/tasks/RT-20260814-005/00_TASK.yaml#claim_boundary"
+
+bridge_attempt_status:
+  attempted: true
+  candidate_map: "Bridge_PCR:PropFol4->PCRed"
+  status: "constructed_candidate_pending_smuggling_audit"
+  bridge_output: "unoriented projective conormal line and proper H_line frame reduction"
+  nonconstant: true
+  restriction_compatible: true
+  overlap_compatible: true
+  gluing_compatible: true
+  source_presentation_natural: true
+  frozen_kstar_nonfactorization: true
+  independent_source_provenance_status: "syntactically transparent proposal-only new primitive with no target import; epistemic selection justification absent"
+  missing_primitive_within_packet: "none because the source-foliation atlas is the explicitly admitted proposal primitive"
+  current_ontology_missing_primitive: "codimension-one source-foliation atlas and its law"
+  adoption_status: "blocked_adoption_open_continuation"
+  physical_bridge_status: "not_established"
+  empirical_bridge_status: "not_established"
+  effective_metric_status: "not_constructed"
+
+proof_obligations:
+  obligation_count: 18
+  obligations:
+    - obligation_id: "PO-01"
+      status: "discharged"
+      evidence: "The RT005 task, DDR, AgentJob, overlay, handoff, RT004 theorem, RT002 source theorem, plan, role, and schema are live-hash bound."
+    - obligation_id: "PO-02"
+      status: "discharged"
+      evidence: "The source-foliation atlas is declared proposal-only before any P4 diagnostic and is not represented as current-ontology derived."
+    - obligation_id: "PO-03"
+      status: "discharged"
+      evidence: "Every q_i is typed as a smooth submersion with dq_i nowhere zero."
+    - obligation_id: "PO-04"
+      status: "discharged"
+      evidence: "Every overlap reparametrization is a one-dimensional local diffeomorphism with nonzero derivative."
+    - obligation_id: "PO-05"
+      status: "discharged"
+      evidence: "Pairwise and triple-overlap cocycle equations are explicit and the failure control is predeclared."
+    - obligation_id: "PO-06"
+      status: "discharged"
+      evidence: "The chain rule proves that local differentials span equal unoriented projective lines on overlaps."
+    - obligation_id: "PO-07"
+      status: "discharged"
+      evidence: "Equal smooth projective sections glue to a unique global section and rank-one cotangent subbundle."
+    - obligation_id: "PO-08"
+      status: "discharged"
+      evidence: "H_line is defined as the reference-line stabilizer and an explicit linear map outside it proves properness."
+    - obligation_id: "PO-09"
+      status: "discharged"
+      evidence: "Adapted frames form a nonempty smooth principal H_line subbundle of the full frame bundle."
+    - obligation_id: "PO-10"
+      status: "discharged"
+      evidence: "Restriction commutes with q, d, projectivization, line formation, and the reduced frame construction."
+    - obligation_id: "PO-11"
+      status: "discharged"
+      evidence: "Compatible presentation refinements and cover gluing preserve the descended line and reduction."
+    - obligation_id: "PO-12"
+      status: "discharged"
+      evidence: "Typed proposal morphisms carry explicit local reparametrization equations and induce natural conormal and frame maps."
+    - obligation_id: "PO-13"
+      status: "discharged"
+      evidence: "The q_A=x^0 and q_B=x^1 fixture proves Bridge_PCR is nonconstant."
+    - obligation_id: "PO-14"
+      status: "discharged"
+      evidence: "The same underlying R4 gives identical frozen K_star and distinct bridge images, proving objectwise nonfactorization."
+    - obligation_id: "PO-15"
+      status: "discharged_for_proposal_construction_pending_adversarial_audit"
+      evidence: "Definitions contain no target atlas, metric, Lorentz group, cone, physical time, empirical response, benchmark result, or desired P4 answer; goal-shaping risk remains explicitly routed to Smuggling Auditor."
+    - obligation_id: "PO-16"
+      status: "discharged_with_scope_limit"
+      evidence: "C1-small perturbations preserving nonvanishing differentials and exact overlap cocycles preserve the candidate; arbitrary or physical finite-variation robustness is not claimed."
+    - obligation_id: "PO-17"
+      status: "discharged_with_adoption_block"
+      evidence: "Transparent proposal provenance is distinguished from absent epistemic justification, physical meaning, empirical semantics, and adoption authority."
+    - obligation_id: "PO-18"
+      status: "discharged"
+      evidence: "Exactly one Smuggling Auditor successor is selected but not created or executed, and all seven freezes and fourteen no-delta rows are preserved."
+
+failure_branches:
+  branch_count: 19
+  branches:
+    - branch_id: "FB-01"
+      trigger: "The foliation primitive is selected after inspecting the desired P4 result."
+      status: "not_triggered_by_packet_order"
+      result_if_triggered: "invalid_under_claim_boundary"
+    - branch_id: "FB-02"
+      trigger: "Some q_i is not smooth or dq_i vanishes."
+      status: "not_triggered_under_admitted_hypotheses"
+      result_if_triggered: "precise_obstruction_submersion_failure"
+    - branch_id: "FB-03"
+      trigger: "An overlap label is not a one-dimensional reparametrization of the other."
+      status: "not_triggered_under_admitted_hypotheses"
+      result_if_triggered: "precise_obstruction_projective_line_descent_failure"
+    - branch_id: "FB-04"
+      trigger: "An overlap reparametrization has zero derivative."
+      status: "not_triggered_under_admitted_hypotheses"
+      result_if_triggered: "precise_obstruction_noninvertible_transition"
+    - branch_id: "FB-05"
+      trigger: "The triple-overlap transition cocycle fails."
+      status: "not_triggered_under_admitted_hypotheses"
+      result_if_triggered: "precise_obstruction_cocycle_failure"
+    - branch_id: "FB-06"
+      trigger: "The local projective lines do not form a smooth global section or line subbundle."
+      status: "not_triggered"
+      result_if_triggered: "precise_obstruction_gluing_failure"
+    - branch_id: "FB-07"
+      trigger: "The declared line stabilizer equals the full frame group."
+      status: "not_triggered_by_explicit_outside_element"
+      result_if_triggered: "precise_obstruction_reduction_not_proper"
+    - branch_id: "FB-08"
+      trigger: "Adapted frames are empty or fail the principal H_line torsor law."
+      status: "not_triggered"
+      result_if_triggered: "precise_obstruction_frame_reduction_failure"
+    - branch_id: "FB-09"
+      trigger: "Restriction, refinement, overlap, or gluing is asserted without the displayed compatibility data."
+      status: "not_triggered"
+      result_if_triggered: "precise_obstruction_locality_failure"
+    - branch_id: "FB-10"
+      trigger: "Naturality is asserted under arbitrary diffeomorphisms rather than typed proposal morphisms."
+      status: "not_triggered_scope_explicit"
+      result_if_triggered: "precise_obstruction_naturality_category_error"
+    - branch_id: "FB-11"
+      trigger: "Bridge_PCR is constant across the same-manifold fixture."
+      status: "not_triggered"
+      result_if_triggered: "precise_obstruction_nonconstant_bridge_failure"
+    - branch_id: "FB-12"
+      trigger: "Bridge_PCR factors through frozen unchanged K_star."
+      status: "not_triggered_by_same_manifold_counterpair"
+      result_if_triggered: "precise_obstruction_frozen_kstar_replay"
+    - branch_id: "FB-13"
+      trigger: "A target atlas, Lorentz group, metric, desired cone, physical time, empirical response, or benchmark answer defines the primitive or reduction."
+      status: "not_triggered_in_declared_definitions"
+      result_if_triggered: "invalid_under_claim_boundary_forbidden_target_import"
+    - branch_id: "FB-14"
+      trigger: "The proposal primitive or bridge is represented as current-ontology derived, adopted, or physically true."
+      status: "not_triggered"
+      result_if_triggered: "invalid_under_claim_boundary_adoption_overread"
+    - branch_id: "FB-15"
+      trigger: "The unoriented conormal line is labeled physical time orientation, causal cone, conformal class, or g_eff."
+      status: "not_triggered"
+      result_if_triggered: "invalid_under_claim_boundary_physical_semantics_overread"
+    - branch_id: "FB-16"
+      trigger: "The construction reopens or renames a frozen route or repairs unchanged K_star."
+      status: "not_triggered_materially_distinct_new_primitive"
+      result_if_triggered: "invalid_under_claim_boundary_freeze_violation"
+    - branch_id: "FB-17"
+      trigger: "Conditional C1 stability inside the proposal class is called physical finite-variation robustness."
+      status: "not_triggered"
+      result_if_triggered: "invalid_under_claim_boundary_robustness_overread"
+    - branch_id: "FB-18"
+      trigger: "The missing epistemic reason for choosing this foliation is treated as irrelevant to adoption."
+      status: "present_as_adoption_block_not_constructor_failure"
+      result_if_triggered: "smuggling_audit_and_human_gate_required_before_adoption"
+    - branch_id: "FB-19"
+      trigger: "The selected successor is created or executed in this packet."
+      status: "not_triggered"
+      result_if_triggered: "authority_boundary_violation"
+
+source_provenance_decision:
+  transparent_proposal_declaration_present: true
+  declaration_precedes_diagnostic: true
+  target_free_definition_present: true
+  independent_of_frozen_kstar: true
+  current_ontology_derivation_present: false
+  epistemic_selection_justification_present: false
+  construction_sufficiency: "sufficient_for_bounded_proposal_only_candidate"
+  adoption_sufficiency: "insufficient"
+  decision_reason: "The ontology-law research route exists to construct and test explicit source-extension candidates without pretending they are current-ontology consequences. Requiring current-ontology derivation as a precondition would contradict the packet's declared proposal-only new-primitive boundary. The honest separation is to construct the mathematical conditional, preserve the primitive debt, and route the goal-shaping and circularity questions to Smuggling Auditor."
+  precise_obstruction_selected: false
+  invalid_under_claim_boundary_selected: false
+
+source_extension_classification:
+  packet_category: "source_extension_candidate"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  primitive_category: "proposal-only new ontology primitive"
+  primitive_name: "codimension-one source-foliation atlas with submersion labels and overlap reparametrizations"
+  derived_consequence_category: "conservative definitional construction relative to the new primitive"
+  derived_consequences:
+    - "unoriented projective conormal line"
+    - "proper line-stabilizer frame reduction"
+    - "Bridge_PCR natural in the typed proposal category"
+  current_ontology_mathematical_derivation_achieved: false
+  current_ontology_modified: false
+  source_extension_data_constructed: true
+  source_extension_adopted_or_rejected: false
+  canonical_ontology_candidate_status_claimed: false
+  target_gr_import_detected_in_construction: false
+  source_purity_audit_completed: false
+  adoption_status: "blocked_adoption_open_continuation"
+  human_gate_required_for_current_construction: false
+  human_gate_required_for_adoption: true
+  exact_gr_recovery_claimed: false
+
+robustness_boundary:
+  mathematical_robustness_scope: "C1 perturbations on compact subsets that preserve nowhere-zero differentials, exact overlap reparametrizations, and the cocycle remain within the proposal class and vary the projective line continuously."
+  auxiliary_structure_note: "Any norm used to state a positive lower bound for dq is an arbitrary mathematical control, not an adopted source metric or physical norm."
+  nonrobust_branches:
+    - "dq reaches zero"
+    - "overlap labels cease to be one-dimensional reparametrizations"
+    - "the cocycle fails"
+    - "the foliation changes topology or singular leaves appear"
+  physical_finite_variation_robustness_established: false
+  universality_across_matter_sectors_established: false
+  hyperbolicity_established: false
+  p4_t02_acceptance_established: false
+
+mathematical_payload_manifest:
+  payload_count: 6
+  payloads:
+    - payload_id: "PAYLOAD-RT005-PHIL-001"
+      payload_type: "definition"
+      object_name: "proposal-only codimension-one source-foliation atlas"
+      claim_status: "draft/control proposal-only"
+      source_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_phil_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+      burden_effect: "narrows"
+      summary: "Names the exact new primitive and separates it from current ontology and adoption."
+    - payload_id: "PAYLOAD-RT005-PHIL-002"
+      payload_type: "theorem"
+      object_name: "unoriented projective conormal descent theorem"
+      claim_status: "science_draft"
+      source_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_phil_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+      burden_effect: "narrows"
+      summary: "Proves that one-dimensional overlap reparametrizations make [dq_i] descend and glue."
+    - payload_id: "PAYLOAD-RT005-PHIL-003"
+      payload_type: "construction"
+      object_name: "proper line-stabilizer frame reduction"
+      claim_status: "science_draft"
+      source_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_phil_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+      burden_effect: "narrows"
+      summary: "Constructs P_H as a principal proper H_line reduction from the descended cotangent line."
+    - payload_id: "PAYLOAD-RT005-PHIL-004"
+      payload_type: "explicit_witness"
+      object_name: "same-manifold frozen-K_star nonfactorization fixture"
+      claim_status: "science_draft"
+      source_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_phil_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+      burden_effect: "narrows"
+      summary: "Uses q_A=x^0 and q_B=x^1 on R4 to show different bridge lines with identical K_star."
+    - payload_id: "PAYLOAD-RT005-PHIL-005"
+      payload_type: "source_extension_classification"
+      object_name: "primitive versus definitional consequence provenance split"
+      claim_status: "draft/control"
+      source_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_phil_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+      burden_effect: "audits"
+      summary: "Classifies the foliation atlas as a new proposal primitive and the line and reduction as definitions conditional on it."
+    - payload_id: "PAYLOAD-RT005-PHIL-006"
+      payload_type: "packet_selection"
+      object_name: "projective-conormal reduction smuggling audit packet"
+      claim_status: "selected_not_executed"
+      source_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_phil_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+      burden_effect: "selects_next"
+      summary: "Selects one separate audit of goal shaping, morphism circularity, target import, and adoption overread."
+
+freeze_preservation:
+  active_freeze_count: 7
+  all_freezes_preserved: true
+  new_freeze_created: false
+  freezes:
+    - freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+      status: "preserved_not_reopened_candidate_is_materially_new_source_data"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "none_new"
+  prior_attempts_considered:
+    - "RT-20260814-002"
+    - "RT-20260814-003"
+    - "RT-20260814-004"
+  freeze_if:
+    - "The candidate returns to unchanged K_star or a frozen family instead of using materially new proposal data."
+    - "A later packet repeats the same source-purity questions without a Smuggling Audit result, new witness, or precise obstruction."
+    - "The construction is treated as adopted or P4-successful without audit and protected authority."
+  do_not_freeze_if:
+    - "A separate Smuggling Auditor packet decides goal shaping, target import, morphism circularity, and source-provenance classification for this exact candidate."
+    - "A later Refuter stress test attacks a Smuggling-Audit-surviving exact candidate."
+  freeze_decision: "not_frozen"
+  decision_reason: "The route is non-orbital because RT005 adds a new primitive, descent theorem, proper reduction, and nonfactorization witness, and the next role must perform a distinct adversarial source-purity audit."
+  next_allowed_route: "smuggling_auditor"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_source_local_projective_conormal_reduction"
+  current_cycle_step: "candidate_constructor"
+  prior_related_tasks:
+    - "RT-20260814-004 scoped K_star standalone bridge irrelevance theorem"
+  cycle_risk: "medium_goal_shaped_primitive_and_typed_morphism_circularity"
+  orbit_avoidance_reason: "The construction is materially new and the one next packet must audit the exact primitive and morphism category rather than formalize another obligation list or replay K_star."
+  next_role_consequence: "smuggling-auditor@0.2.0"
+
+distance_to_gr_delta:
+  changed: false
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "effective_metric_g_eff"
+    - "matter_coupling"
+    - "einstein_equations"
+    - "benchmark_promotion"
+  explanation: "An unaudited and unadopted source-extension candidate is durable mathematical payload but does not change the persistent Distance-to-GR ledger."
+
+distance_to_gr_status:
+  row_count: 14
+  literal_no_delta_count: 14
+  changed: false
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      finding: "A new foliation primitive is proposed but not adopted into current ontology."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      finding: "No EqSrc or allowed-arrow law is assigned."
+    - burden: "RetainH"
+      status: "no_delta"
+      finding: "No history-retention object or law is constructed."
+    - burden: "GenH"
+      status: "no_delta"
+      finding: "No source generator or evolution law is constructed."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      finding: "A foliation presentation and conormal line are not an observer-localization object or map."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      finding: "No orientation, normalization, token, detector, or response semantics is supplied."
+    - burden: "M_src"
+      status: "no_delta"
+      finding: "The smooth source arena remains primitive debt and is not adopted as physical spacetime."
+    - burden: "g_eff"
+      status: "no_delta"
+      finding: "A projective covector line and line stabilizer do not construct a cone, conformal class, scale, or effective metric."
+    - burden: "matter coupling"
+      status: "no_delta"
+      finding: "No matter sector, response law, propagation universality, or coupling is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      finding: "No action, variation, dynamics, closure, or field equation is supplied."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      finding: "Conditional C1 continuity in the proposal class is not physical finite-variation robustness."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      finding: "No benchmark comparison or promotion occurs."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      finding: "No protected adoption, rejection, closure, or suspension verdict occurs."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      finding: "All seven freezes remain fixed and no new freeze or hard-fail result is created."
+
+selected_successor:
+  selection_count: 1
+  packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1"
+  packet_type: "source_extension_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  next_role_family: "smuggling-auditor@0.2.0"
+  status: "selected_not_executed"
+  requires_separate_agentjob: true
+  objective: "Audit SourceLocalProjectiveConormalReduction_v1 for hidden target import, goal-shaped codimension choice, circular restriction of proposal morphisms, insufficiency of same-manifold K_star nonfactorization, illicit orientation or causality overread, and confusion between transparent proposal provenance and epistemic source justification; return one bounded source-purity classification without adoption or promotion."
+  exact_candidate_under_audit: "CAND-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-V1"
+  required_audit_questions:
+    - "Was codimension one chosen from a source reason independent of the desired covector-like output?"
+    - "Does naturality merely follow because morphisms were defined to preserve the candidate structure?"
+    - "Does the same-manifold fixture show more than dependence on newly supplied q data?"
+    - "Are any target atlas metric Lorentz cone time or empirical structures imported?"
+    - "Is the primitive classification kept proposal-only and adoption-blocked?"
+  successor_created: false
+  successor_executed: false
+  human_gate_required: false
+  adoption_status: "blocked_adoption_open_continuation"
+
+p4_relevance_assessment:
+  mathematical_relevance: "The candidate replaces full local GL(4) frame freedom with a proper line stabilizer and supplies one nonconstant projective-covector bridge from explicitly new source data."
+  source_relevance: "Conditional on the proposal foliation primitive only; no current-source derivation or uniqueness theorem exists."
+  physical_relevance: "Not established because an unoriented line is not a time direction, causal cone, hyperbolicity certificate, signal structure, or physical response."
+  empirical_relevance: "Not established because no observable, detector, readout, or calibration map exists."
+  p4_t02_acceptance_status: "not_satisfied"
+  p4_t03_status: "locked"
+  exact_limit: "The construction supplies a candidate asymmetry datum for audit, not the stable common physical causal geometry required by P4-T02."
+
+downstream_locks:
+  d7_reevaluated: false
+  d7_coverage_claimed: false
+  descriptor_instance_complete: false
+  b2_active: false
+  b2_activated: false
+  b2_adopted: false
+  b2_rejected: false
+  b2_disposed: false
+  b2_viability_claimed: false
+  b2_adequacy_claimed: false
+  b2_sufficiency_claimed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+  p4_t03_unlocked_or_executed: false
+  physical_time_orientation_assigned: false
+  physical_causality_assigned: false
+  empirical_response_semantics_assigned: false
+  hyperbolicity_cone_constructed: false
+  conformal_class_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+
+conflict_and_risk_review:
+  peer_child_inspected: false
+  independent_result: "constructed_candidate"
+  blocking_conflict_known: false
+  blocking_conflict_count: 0
+  parent_resolution_required: false
+  risks:
+    - risk_id: "RISK-PHIL-01"
+      risk: "Treating explicit declaration as an epistemic explanation for why the source has this foliation."
+      control: "Construction passes only at proposal syntax; adoption stays blocked and the successor audits goal shaping and source justification."
+    - risk_id: "RISK-PHIL-02"
+      risk: "Choosing codimension one because it yields the desired covector-like output."
+      control: "No physical or target output is used in the definition, but the selection motive remains an explicit Smuggling Auditor question."
+    - risk_id: "RISK-PHIL-03"
+      risk: "Calling naturality substantive when the proposal morphisms are defined to preserve q."
+      control: "Label naturality as proposal-category covariance and audit whether the arrow restriction is circular or explanatory."
+    - risk_id: "RISK-PHIL-04"
+      risk: "Overreading same-manifold nonfactorization as physical inequivalence or nonisomorphism."
+      control: "The fixture proves dependence beyond K_star only. A coordinate swap can relate the two proposal structures, so no physical distinction follows."
+    - risk_id: "RISK-PHIL-05"
+      risk: "Promoting an unoriented projective conormal to a time orientation or causal covector."
+      control: "Record absence of sign, scale, normalization, cone, metric, hyperbolicity, and operational semantics."
+    - risk_id: "RISK-PHIL-06"
+      risk: "Using full frame reduction language as if it supplied a target Lorentz reduction."
+      control: "H_line is only a line stabilizer in GL(4,R), not a Lorentz group or conformal structure."
+    - risk_id: "RISK-PHIL-07"
+      risk: "Calling conditional proposal-class stability physical robustness."
+      control: "Keep exact cocycle-preserving C1 stability separate from source variations, matter universality, and P4 robustness."
+    - risk_id: "RISK-PHIL-08"
+      risk: "Treating constructed candidate status, validation, or checkpoint as ontology adoption or physics truth."
+      control: "Preserve proposal-only status and route a separate audit before stress or any human-gated adoption discussion."
+    - risk_id: "RISK-PHIL-09"
+      risk: "Reopening the K_star local-bridge freeze by claiming the new map comes from K_star."
+      control: "The map depends explicitly on new q data and the same-manifold fixture proves it cannot factor through K_star alone."
+
+authority_blocks:
+  parent_completion_created_by_child: false
+  parent_handoff_created_by_child: false
+  checkpoint_executed_by_child: false
+  successor_created: false
+  successor_executed: false
+  source_foliation_derived_from_current_ontology: false
+  source_foliation_adopted: false
+  projective_conormal_adopted_as_physical: false
+  source_extension_adopted_or_rejected: false
+  canonical_ontology_modified: false
+  k_star_repaired_or_replayed_as_bridge: false
+  eqsrc_assigned: false
+  phi_src_typed: false
+  target_atlas_imported: false
+  target_metric_imported: false
+  target_lorentz_group_imported: false
+  target_cone_imported: false
+  physical_time_orientation_assigned: false
+  physical_causality_assigned: false
+  empirical_response_assigned: false
+  source_purity_audit_claimed_complete: false
+  candidate_stress_claimed_complete: false
+  scientific_claim_status_promoted: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  d7_authority_exercised: false
+  b2_authority_exercised: false
+  p4_t03_authority_exercised: false
+  gate_chair_verdict_issued: false
+  proof_authority: false
+  benchmark_promotion_authorized: false
+  publication_authorized: false
+  public_release_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  global_no_go_claimed: false
+  global_theory_rejection_claimed: false
+  future_source_extension_impossibility_claimed: false
+  completed_derivation_claimed: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "current-ontology derivation of the foliation primitive"
+    - "canonical ontology edit or source-law adoption"
+    - "EqSrc or physical allowed-arrow assignment"
+    - "physical time orientation or causal cone"
+    - "response or empirical semantics"
+    - "g_eff construction or adoption"
+    - "matter coupling or Einstein-equation derivation"
+    - "P4-T02 completion or P4-T03 unlock"
+    - "benchmark promotion or Gate Chair verdict"
+    - "completed derivation or global theory rejection"
+    - "future source-extension impossibility"
+    - "publication push or external action"
+  summary: "A mathematically constructed proposal candidate and validator PASS are not evidence that the primitive is true, independently motivated, physical, empirical, adopted, or closer to GR."
+
+explicit_non_conclusions:
+  - "The current ontology does not derive the source-foliation atlas, q_i labels, or overlap law."
+  - "The proposal primitive is not adopted, rejected, or promoted by construction."
+  - "The projective conormal line has no sign, normalization, scale, physical time direction, causal cone, or response semantics."
+  - "The proper H_line reduction is not a Lorentz, conformal, metric, tetrad, or coframe reduction."
+  - "Proposal-category naturality does not prove natural selection under all current-source diffeomorphisms or explain why the allowed proposal morphisms are physically correct."
+  - "Same-manifold nonfactorization proves only that Bridge_PCR depends on new q data rather than frozen K_star; it does not establish physical inequivalence."
+  - "Conditional C1 persistence inside the exact proposal class is not finite-variation physical robustness."
+  - "The selected Smuggling Auditor packet is not created or executed."
+  - "D7 is not reevaluated, B2 is not activated or disposed, and P4-T03 remains locked."
+  - "No Distance-to-GR burden, benchmark status, Gate status, proof authority, publication authority, push authority, or external-action authority changes."
+
+validation_contract:
+  strict_yaml_required: true
+  unique_mapping_keys_required: true
+  result_count_required: 1
+  required_result_type: "constructed_candidate"
+  source_hash_count_required: 21
+  formal_domain_count_required: 12
+  formal_object_count_required: 13
+  formal_map_count_required: 13
+  construction_theorem_count_required: 5
+  exact_fixture_count_required: 7
+  proof_obligation_minimum_required: 14
+  actual_proof_obligation_count: 18
+  failure_branch_minimum_required: 11
+  actual_failure_branch_count: 19
+  mathematical_payload_minimum_required: 1
+  actual_mathematical_payload_count: 6
+  active_freeze_count_required: 7
+  distance_to_gr_row_count_required: 14
+  literal_no_delta_count_required: 14
+  successor_selection_count_required: 1
+  successor_status_required: "selected_not_executed"
+  successor_created_required: false
+  successor_executed_required: false
+  bridge_attempt_status_required: true
+  source_extension_classification_required: true
+  no_fog_check_required: true
+  downstream_locks_required: true
+  authority_blocks_required: true
+  whitespace_clean_required: true
+  owned_path_only_required: true
+  artifact_sha256_reported_out_of_band: true
+
+child_conclusion:
+  decisive_result: "constructed_candidate"
+  candidate: "SourceLocalProjectiveConormalReduction_v1"
+  construction_scope: "proposal-only new source primitive with definitional projective conormal line and proper line-stabilizer reduction"
+  epistemic_limit: "No independent reason for selecting the codimension-one foliation has been established; this blocks adoption and requires Smuggling Audit."
+  successor: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1 for smuggling-auditor@0.2.0, selected_not_executed"
+  blocking_conflict: false
+  nonconclusion: "The child constructs a bounded proposal candidate only and does not modify ontology, assign physical or empirical meaning, act on D7 or B2, unlock P4-T03, execute a successor, or promote any claim."

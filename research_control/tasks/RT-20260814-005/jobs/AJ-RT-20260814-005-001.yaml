@@ -1,0 +1,436 @@
+job_id: "AJ-RT-20260814-005-001"
+task_id: "RT-20260814-005"
+decision_id: "DDR-20260814-005"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260814-005"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-15T00:54:27Z"
+started_at: "2026-08-15T00:54:27Z"
+completed_at: "2026-08-15T01:20:23Z"
+completion_path: "research_control/tasks/RT-20260814-005/jobs/completions/AJC-AJ-RT-20260814-005-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active full-V22 goal, committed RT004 checkpoint 3a286431624c06bc1a2404fda5c0b067b1ce12c9, and handoff-1034 authorize one bounded P4-T02 Candidate Constructor source-local structure-group reduction bridge construction-or-obstruction packet and one checkpoint."
+objective: "Construct or precisely obstruct one proposal-only target-free source-local projective-conormal structure-group reduction with predeclared source provenance, exact restrictions, overlap descent, gluing, naturality, robustness, and a nonconstant bridge map that cannot factor through frozen unchanged K_star."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Construct independently source-derived local reduction and nonfactorizing bridge data after excluding unchanged K_star standalone replay."
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+adoption_status: "blocked_adoption_open_continuation"
+route_reason: "handoff_1034_selects_one_fresh_source_local_structure_group_reduction_bridge_witness_packet_after_committed_rt004_checkpoint"
+route_strategy_id: "construct_v22_p4_t02_b2_source_local_projective_conormal_reduction_bridge_witness_v1"
+immutable_route_sha256: "c838d0151f82f580e179a97f128da34ee5d52bb0f03a1972b332a2f6526011a2"
+source_head: "3a286431624c06bc1a2404fda5c0b067b1ce12c9"
+source_tree: "87b95af8ab918339030fc04a7fee61eddf7ea5c6"
+assembly_parent_head: "3a286431624c06bc1a2404fda5c0b067b1ce12c9"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+work_item_id: "P4-T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-CONSTRUCTION"
+packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-CONSTRUCTION-V1"
+recommendation_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R10"
+  - "V22-R13"
+declared_coverage_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R13"
+  - "S5"
+sequence_step_ids:
+  - "S5"
+cross_cutting_directive_ids:
+  - "V22-X02"
+  - "V22-X04"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P4-T02"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1034"
+  source_handoff_path: "research_control/handoffs/handoff-1034.yaml"
+  source_handoff_sha256: "c838d0151f82f580e179a97f128da34ee5d52bb0f03a1972b332a2f6526011a2"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite:
+    task_id: "RT-20260814-004"
+    commit: "3a286431624c06bc1a2404fda5c0b067b1ce12c9"
+    committed: true
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1238
+    relationship_row_count: 6375
+    semantic_row_count: 1238
+    vault_row_count: 1238
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup TEX-V22-P4-T02-B2-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-THEOREM-V1 --json"
+      query_type: "lookup"
+      query_text: "TEX-V22-P4-T02-B2-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-THEOREM-V1"
+      returned_object_ids:
+        - "TEX-V22-P4-T02-B2-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-THEOREM-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "TEX-V22-P4-T02-B2-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-THEOREM-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260814-004/artifacts/v22_p4_t02_b2_kstar_localization_bridge_irrelevance_theorem_v1.tex"
+      source_hash: "aee6a25a0b21b8864033e46a235f82033e61670c00d7dce7d8133b3e34132fbe"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260814-004/artifacts/parent_fusion_notes_p4_t02_b2_kstar_localization_bridge_irrelevance.md"
+      source_hash: "ec99f7f7cee62d4a06166ecb578a79632d08ac8ac10ba45624f1fcccecc1b665"
+    - object_id: "TEX-V22-P4-T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260814-002/artifacts/v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_v1.tex"
+      source_hash: "66953e112dee3ca9c5a7c6de9f255979c4fedbccd32be924c24563de8c5d372f"
+  additional_control_inspections:
+    - object_id: "HANDOFF-1034"
+      control_path: "research_control/handoffs/handoff-1034.yaml"
+      source_hash: "c838d0151f82f580e179a97f128da34ee5d52bb0f03a1972b332a2f6526011a2"
+    - object_id: "RT-20260814-004-COMPLETION"
+      control_path: "research_control/tasks/RT-20260814-004/jobs/completions/AJC-AJ-RT-20260814-004-001.yaml"
+      source_hash: "55fa08dee537001cbad8153581b0c389567c6bbd0e9b734fb6dd9585a8d30e17"
+  authority_note: "Tracked registered sources and control records govern. Generated wiki semantic Obsidian SQLite and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "candidate_construction"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  assumption_delta:
+    - "Hold the RT004 K_star irrelevance theorem and all seven freezes fixed."
+    - "Admit a nonempty smooth four-dimensional source arena only as current primitive debt."
+    - "Add one proposal-only pre-outcome codimension-one source foliation atlas with submersion labels and one-dimensional overlap reparametrizations."
+    - "Treat the foliation atlas as a new source primitive rather than a current-ontology derivation or adopted law."
+    - "Descend only the unoriented projective conormal line and its proper frame-bundle stabilizer reduction."
+    - "Require exact restrictions, overlap cocycle, cover refinement, gluing, and source-presentation naturality."
+    - "Require a two-candidate same-manifold fixture whose bridge images differ while frozen K_star is identical."
+    - "Import no target atlas, metric, Lorentz group, desired cone, physical time, response answer, or P4 success criterion."
+  materiality_basis: "RT004 proved only that unchanged K_star has no standalone local bridge force. This packet adds a materially distinct proposal-only local source datum, its exact descent and proper reduction, and a nonfactorization witness rather than repairing or replaying K_star or any frozen family."
+  payload_details:
+    construction_identity: "CAND-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-V1"
+    source_extension_classification: "proposal_only_new_source_primitive_not_adopted"
+    candidate_map: "Bridge_PCR sends a source-foliation presentation to its descended projective conormal line and associated proper frame reduction"
+    global_no_go_claimed: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P4-T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1"
+    - "TEX-V22-P4-T02-B2-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-THEOREM-V1"
+    - "MD-V22-P4-T02-B2-PARENT-FUSION-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-V1"
+    - "research_control/handoffs/handoff-1034.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_v1.tex"
+    - "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_record_v1.yaml"
+    - "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_projective_conormal_atlas_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+    - "latex_compile_pass"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "construct_v22_p4_t02_b2_source_local_projective_conormal_reduction_bridge_witness_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  family_identity_sha256: "16817d3d1fb608b1fc8e9cf53064e06c5cb0c3b796ad82a22cd3b6d63a381778"
+  assumption_sha256es:
+    - "c838d0151f82f580e179a97f128da34ee5d52bb0f03a1972b332a2f6526011a2"
+    - "aee6a25a0b21b8864033e46a235f82033e61670c00d7dce7d8133b3e34132fbe"
+    - "66953e112dee3ca9c5a7c6de9f255979c4fedbccd32be924c24563de8c5d372f"
+    - "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  route_kind: "candidate_construction"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V22-P4-T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION"
+    material_difference_basis: "The branch adds predeclared codimension-one source foliation data and constructs its projective-conormal reduction and bridge; it does not repair K_star or reconstruct any of the six earlier source-extension candidates."
+    reconstructs_frozen_candidate: false
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered draft/control source-local projective-conormal reduction bridge construction-or-obstruction manuscript"
+      - "one exact candidate record atlas presentation and successor decision"
+    project_system:
+      - "task-local model focused validator compact receipt LaTeX receipt provenance parent-child synthesis and standard synchronization"
+  acceptance_criteria:
+    physics:
+      - "the source foliation atlas projective line proper reduction restrictions overlaps gluing naturality and nonfactorization are formal and reproducible"
+      - "one constructed candidate or precise obstruction is returned with explicit source-extension classification and no physical overread"
+      - "all seven freezes and fourteen Distance-to-GR no-delta rows remain fixed"
+    project_system:
+      - "source hashes artifacts registries backlog program state and handoff pass deterministic validation"
+      - "the registered TeX source compiles and every rendered page passes visual inspection"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the exact RT004 theorem selected packet plan source hashes and seven freezes fixed"
+      - "require one no-fog constructed candidate precise obstruction or boundary-invalid result"
+      - "separate proposal mathematics current ontology physical meaning empirical semantics adoption and workflow authority"
+      - "review child outputs for conflicts and fuse one exact final artifact"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_math_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_phil_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260814-005/artifacts/parent_conflict_review_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260814-005/artifacts/parent_fusion_notes_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.md"
+    fused_output_path: "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+  rationale: "Two internal child execution units work in parallel under one outer Candidate Constructor AgentJob one overlay one claim boundary and one completion record."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-1034.yaml"
+  - "research_control/handoffs/handoff-1034.md"
+  - "research_control/tasks/RT-20260814-002/**"
+  - "research_control/tasks/RT-20260814-003/**"
+  - "research_control/tasks/RT-20260814-004/**"
+  - "registries/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-1035.yaml"
+  - "research_control/handoffs/handoff-1035.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260814-005/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - ".local/**"
+forbidden_paths:
+  - "ontology/**"
+  - "papers/**"
+  - "manuscripts/**"
+  - "experiments/**"
+  - ".git/**"
+allowed_source_classes:
+  - "registered_tex"
+  - "registered_markdown"
+  - "tracked_control_state"
+  - "task_local_draft_control"
+  - "proposal_only_source_extension_data"
+forbidden_source_classes:
+  - "benchmark_promotion"
+  - "candidate_reconstruction"
+  - "canonical_ontology_write"
+  - "generated_derivative_authority"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "K_star_repair_or_replay"
+  - "EqSrc_adoption"
+  - "Phi_src_semantics"
+  - "target_atlas"
+  - "target_metric"
+  - "target_lorentz_group"
+  - "target_tetrad_or_coframe"
+  - "desired_gr_cone"
+  - "physical_time_orientation"
+  - "empirical_response_label"
+  - "benchmark_success"
+  - "gate_chair_verdict"
+  - "physics_claim_promotion"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+  - "P4_T03_execution"
+expected_outputs:
+  - "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_v1.tex"
+  - "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_record_v1.yaml"
+  - "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_projective_conormal_atlas_v1.yaml"
+  - "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_model.py"
+  - "research_control/tasks/RT-20260814-005/artifacts/child_phys_math_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+  - "research_control/tasks/RT-20260814-005/artifacts/child_phys_phil_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+  - "research_control/tasks/RT-20260814-005/artifacts/parent_conflict_review_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+  - "research_control/tasks/RT-20260814-005/artifacts/parent_fusion_notes_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.md"
+  - "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260814-005/artifacts/validate_v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.py"
+  - "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_validation.json"
+  - "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_compact_receipt.json"
+  - "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_provenance_manifest_v1.yaml"
+  - "research_control/tasks/RT-20260814-005/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260814-005/jobs/completions/AJC-AJ-RT-20260814-005-001.yaml"
+  - "research_control/handoffs/handoff-1035.yaml"
+  - "research_control/handoffs/handoff-1035.md"
+validation_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_model.py --json"
+  - ".venv/bin/python research_control/tasks/RT-20260814-005/artifacts/validate_v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.py --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths research_control/tasks/RT-20260814-005"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260814-005-001"
+approved_commands:
+  - ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  - ".venv/bin/python research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_model.py --json"
+  - ".venv/bin/python research_control/tasks/RT-20260814-005/artifacts/validate_v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.py --write-report --json"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260814-005-001 --json-summary"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260814-005-001"
+  - "bundled LaTeX compile and Poppler render for visual inspection"
+stop_conditions:
+  - "live HEAD or tree differs from the bound source before activation"
+  - "handoff-1034 selected packet or source hashes do not match"
+  - "the RT004 theorem or any of seven freezes is altered or reopened"
+  - "the source foliation primitive is represented as current-ontology derived or adopted"
+  - "the reduction or bridge depends on target geometry physical time empirical response or desired P4 output"
+  - "restriction overlap cocycle gluing naturality properness or K_star nonfactorization lacks proof or falsifier"
+  - "children have an unresolved blocking conflict after two rounds"
+  - "successor execution is attempted"
+  - "validation or checkpoint fails"

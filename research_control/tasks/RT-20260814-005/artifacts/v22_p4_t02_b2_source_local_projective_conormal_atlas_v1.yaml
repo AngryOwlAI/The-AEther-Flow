@@ -1,0 +1,208 @@
+schema_id: "v22_p4_t02_b2_source_local_projective_conormal_atlas_v1"
+task_id: "RT-20260814-005"
+job_id: "AJ-RT-20260814-005-001"
+candidate_id: "CAND-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-V1"
+status: "proposal_only_source_extension_data"
+authority: "science_draft"
+
+source_extension_classification:
+  category: "new_ontology_primitive"
+  controlled_status: "proposal-only"
+  current_ontology_derivation: false
+  canonical_ontology_candidate: false
+  adopted: false
+  target_import_detected_in_written_syntax: false
+  pre_outcome_declaration: true
+  target_and_p4_output_independence_required: true
+  epistemic_source_derivation_claimed: false
+  audit_required: "smuggling-auditor@0.2.0"
+
+formal_domains:
+  source_arena:
+    symbol: "M"
+    type: "nonempty smooth four-manifold"
+    status: "current primitive debt only"
+  source_cover:
+    symbol: "U"
+    type: "locally finite open cover of M"
+  label_target:
+    symbol: "A_src"
+    type: "one-dimensional smooth source-label manifold locally represented by R"
+    physical_time_semantics: false
+  local_labels:
+    symbol: "q_i"
+    type: "smooth submersions U_i to A_src"
+    rank_condition: "dq_i is nonzero at every point"
+  overlap_reparametrizations:
+    symbol: "gamma_ij"
+    type: "local one-dimensional diffeomorphisms with q_i = gamma_ij composed with q_j"
+    cocycle: "gamma_ik = gamma_ij composed with gamma_jk wherever defined"
+  proposal_category:
+    symbol: "SrcFol_1"
+    objects: "source arenas equipped with the declared foliation atlas"
+    arrows: "source diffeomorphisms carrying the descended projective conormal line to the target line with declared cover refinements"
+    eqsrc_status: "not EqSrc and not adopted physical gauge"
+
+formal_objects:
+  projective_conormal_line:
+    symbol: "L_q"
+    local_definition: "L_q restricted to U_i equals span_R(dq_i)"
+    orientation: "unoriented because every nonzero overlap derivative is quotiented"
+  hyperplane_distribution:
+    symbol: "D_q"
+    definition: "kernel of L_q"
+    physical_causality_status: false
+  reference_line:
+    symbol: "ell_0"
+    definition: "span_R(e^0) inside (R^4)^*"
+  proper_stabilizer:
+    symbol: "H"
+    definition: "A in GL(4,R) such that A^* ell_0 equals ell_0"
+    dimension: 13
+    codimension_in_GL4: 3
+  reduction_bundle:
+    symbol: "P_H(q)"
+    definition: "frames u with u^* L_q = ell_0"
+    status: "proper H-reduction of the frame bundle on the admitted candidate domain"
+
+formal_maps:
+  differential_line_map: "q_i maps to span_R(dq_i)"
+  descent_map: "the overlap-compatible local lines map to L_q"
+  reduction_map: "L_q maps to P_H(q)"
+  bridge_map: "Bridge_PCR sends (M,U,q,gamma) to (L_q,P_H(q))"
+  restriction_map: "candidate data on M restrict to any admitted open subset"
+  refinement_map: "a cover refinement pulls back the same descended line"
+  presentation_transport: "a SrcFol_1 arrow f transports L_target by f^* to L_source"
+  forgetful_map: "Forget sends the proposal object to the underlying smooth source arena M"
+  frozen_classifier_map: "K_star depends only on Forget and remains unchanged"
+
+descent_theorem:
+  identity: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-DESCENT-001"
+  statement: "Because dq_i equals gamma_ij prime of q_j times dq_j and the derivative is nowhere zero, the local differential lines agree on every overlap and satisfy the declared cocycle; therefore they glue uniquely to L_q."
+  proof_status: "exact_conditional_proof"
+
+proper_reduction_theorem:
+  identity: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-PROPER-REDUCTION-001"
+  statement: "The stabilizer H of a covector line has dimension thirteen and codimension three in GL(4,R); the frames mapping L_q to ell_0 form a principal H-subbundle."
+  proof_status: "exact_conditional_proof"
+
+nonfactorization_theorem:
+  identity: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-KSTAR-NONFACTORIZATION-001"
+  statement: "On the same M=R4 the q=x0 and r=x0+x1 presentations have the same underlying smooth source and hence the same frozen K_star but distinct projective conormal lines; therefore Bridge_PCR cannot factor through K_star."
+  proof_status: "exact_fixture_proof"
+
+exact_fixtures:
+  source_arena: "R4 with rational linear coordinates"
+  cover:
+    - "U1 = {x0 < 1}"
+    - "U2 = {-1 < x0 < 2}"
+    - "U3 = {x0 > -2}"
+  candidate_A:
+    local_covectors:
+      - [1, 0, 0, 0]
+      - [-2, 0, 0, 0]
+      - [6, 0, 0, 0]
+    overlap_multipliers: [-2, -3, 6]
+    bridge_line: "span(dx0)"
+  candidate_B:
+    local_covectors:
+      - [1, 1, 0, 0]
+      - [3, 3, 0, 0]
+      - [-6, -6, 0, 0]
+    overlap_multipliers: [3, -2, -6]
+    bridge_line: "span(dx0+dx1)"
+  source_diffeomorphism_control: "F(x0,x1,x2,x3)=(x0+x1,x1,x2,x3) pulls span(dx0) back to span(dx0+dx1)"
+  stabilizer_member_control: "a block lower-triangular invertible matrix with first row (2,0,0,0)"
+  stabilizer_outsider_control: "the matrix swapping x0 and x1"
+  exact_model_path: "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_model.py"
+  expected_model_checks: 24
+
+robustness_boundary:
+  intrinsic_claim: "submersion and line-descent conditions are open under sufficiently small C1 perturbations on a fixed compact chart domain when overlap compatibility is perturbed coherently"
+  conformance_fixture: "(1,0,0,0) perturbed to (1,1/3,0,0) remains nonzero"
+  auxiliary_norm_status: "fixture-only and not source geometry"
+  not_claimed: "global topology-independent existence or a source-selected perturbation norm"
+
+proof_obligations:
+  - id: "PO-01"
+    obligation: "type the current smooth source arena without assigning Phi_src semantics"
+  - id: "PO-02"
+    obligation: "declare the source foliation atlas before all P4 outcome tests"
+  - id: "PO-03"
+    obligation: "prove every q_i is a submersion on its admitted domain"
+  - id: "PO-04"
+    obligation: "type each overlap reparametrization and its nonzero derivative"
+  - id: "PO-05"
+    obligation: "prove the overlap cocycle on triple intersections"
+  - id: "PO-06"
+    obligation: "prove unique projective conormal descent and gluing"
+  - id: "PO-07"
+    obligation: "prove restriction and cover-refinement compatibility"
+  - id: "PO-08"
+    obligation: "prove H is a proper closed subgroup of GL(4,R)"
+  - id: "PO-09"
+    obligation: "prove P_H(q) is a principal H-subbundle"
+  - id: "PO-10"
+    obligation: "prove Bridge_PCR naturality for every admitted proposal arrow"
+  - id: "PO-11"
+    obligation: "prove Bridge_PCR is nonconstant on the exact same-manifold fixture"
+  - id: "PO-12"
+    obligation: "prove Bridge_PCR cannot factor through frozen unchanged K_star"
+  - id: "PO-13"
+    obligation: "state the exact local C1 robustness hypotheses and falsifier"
+  - id: "PO-14"
+    obligation: "preserve proposal-only status and every physical empirical adoption and workflow block"
+
+failure_branches:
+  - id: "FB-01"
+    trigger: "some dq_i vanishes"
+    result: "projective line undefined and candidate fails on that domain"
+  - id: "FB-02"
+    trigger: "an overlap derivative vanishes or q_i is not a reparametrization of q_j"
+    result: "descent fails"
+  - id: "FB-03"
+    trigger: "the overlap cocycle fails"
+    result: "presentation is not an admitted source foliation atlas"
+  - id: "FB-04"
+    trigger: "the line stabilizer is replaced by a target Lorentz group or metric stabilizer"
+    result: "target-import failure"
+  - id: "FB-05"
+    trigger: "the foliation labels are selected by a desired cone physical time empirical answer or P4 success"
+    result: "goal-smuggling failure"
+  - id: "FB-06"
+    trigger: "proposal-only declaration is presented as current-ontology derivation or adoption"
+    result: "authority failure"
+  - id: "FB-07"
+    trigger: "admitted arrows are restricted after outcome inspection merely to preserve the bridge"
+    result: "circular-naturality failure"
+  - id: "FB-08"
+    trigger: "Bridge_PCR is constant or factors through frozen K_star"
+    result: "bridge-force failure"
+  - id: "FB-09"
+    trigger: "a local fixture is promoted to universal global existence"
+    result: "scope failure"
+  - id: "FB-10"
+    trigger: "robustness is claimed without a nonvanishing C1 margin and coherent overlap perturbation"
+    result: "robustness failure"
+  - id: "FB-11"
+    trigger: "the projective conormal line is interpreted as physical time orientation causal covector or g_eff"
+    result: "physical-overread failure"
+
+authority_limits:
+  current_ontology_extended: false
+  source_law_adopted: false
+  eqsrc_adopted: false
+  physical_time_selected: false
+  causal_cone_constructed: false
+  conformal_geometry_constructed: false
+  g_eff_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

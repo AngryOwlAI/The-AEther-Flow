@@ -1,0 +1,304 @@
+% object_id: TEX-V22-P4-T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-V1
+% authority: science_draft
+% task_id: RT-20260814-005
+\documentclass[11pt]{article}
+\usepackage[margin=0.84in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,booktabs,array,enumitem,microtype,url}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.40em}
+\setlength{\emergencystretch}{3em}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{definition}{Definition}
+\newcommand{\Diff}{\operatorname{Diff}}
+\newcommand{\Kstar}{K_{\star}}
+\newcommand{\Bridge}{\operatorname{Bridge}_{\mathrm{PCR}}}
+\newcommand{\Span}{\operatorname{span}_{\mathbb R}}
+\newcommand{\NoDelta}{\texttt{no\_delta}}
+\title{P4--T02/B2 Source-Local Projective-Conormal\\Reduction Bridge Witness}
+\author{RT-20260814-005 parent synthesis}
+\date{14 August 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This note constructs one bounded, target-free, proposal-only source-extension
+candidate.  A codimension-one source foliation atlas consists of local
+submersions $q_i$ related on overlaps by one-dimensional local
+diffeomorphisms.  Their differential lines descend to an unoriented
+projective conormal line $L_q\subset T^*M$.  The line defines a proper
+reduction of the frame bundle to the stabilizer of a covector line.  The
+resulting bridge is restriction-compatible, glues across overlaps, and is
+natural in the declared proposal category.  Two exact structures on the same
+underlying $\mathbb R^4$ have distinct bridge images but identical unchanged
+$\Kstar$, so this bridge cannot factor through the frozen standalone
+$\Kstar$ classifier.  The construction is a new proposal-only source
+primitive, not a derivation from the current ontology, a physical time
+orientation, a causal cone, a conformal geometry, or an effective metric.
+\end{abstract}
+
+\section{Claim boundary and fixed inputs}
+
+The current typed source core used here is only a nonempty smooth
+four-manifold $M$.  The unresolved token $\Phi_{\rm src}$ receives no domain,
+action, generator, order, gauge, or physical-time semantics.  The RT004
+theorem and the seven active candidate-local freezes remain fixed.
+
+This packet may add explicit \emph{proposal-only source-extension data}.  It
+may not claim that those data are derived from the current ontology or are
+adopted.  No target atlas, metric, tetrad, coframe, Lorentz group, desired
+cone, empirical label, benchmark answer, or P4 success condition may select
+the data.  In particular, the word ``conormal'' below is a cotangent-bundle
+type statement and not a claim of physical normality or causal time.
+
+\section{The proposal category}
+
+\begin{definition}[Source foliation presentation]
+An object of $\mathsf{SrcFol}_1$ is a tuple
+\[
+ \mathcal F=(M,\{U_i\},\{q_i\},\{\gamma_{ij}\}),
+\]
+where $M$ is a nonempty smooth four-manifold, $\{U_i\}$ is a locally finite
+open cover, each $q_i:U_i\to\mathbb R$ is a smooth submersion, and on every
+nonempty overlap
+\[
+ q_i=\gamma_{ij}\circ q_j
+\]
+for a one-dimensional local diffeomorphism $\gamma_{ij}$.  The transition
+maps obey identity, inverse, and triple-overlap cocycle laws wherever their
+compositions are defined.  The real line is an abstract local source-label
+chart; it has no physical-time semantics.
+\end{definition}
+
+An arrow $f:\mathcal F\to\mathcal F'$ is a source diffeomorphism together
+with a declared cover refinement that transports the descended line of
+$\mathcal F'$ to that of $\mathcal F$.  This is a task-local proposal
+category.  It is not adopted $\mathrm{EqSrc}$ and it is not a physical gauge
+group.
+
+\begin{definition}[Projective conormal line]
+On $U_i$, define
+\[
+ L_i=\Span(dq_i)\subset T^*U_i.
+\]
+The intended global object is the rank-one line subbundle $L_q\subset T^*M$
+obtained by descent.  The sign and normalization of $dq_i$ are quotiented, so
+$L_q$ is unoriented.
+\end{definition}
+
+\begin{theorem}[Exact overlap descent]
+The local lines $L_i$ agree on overlaps and glue uniquely to a smooth line
+subbundle $L_q\subset T^*M$.  The result commutes with open restriction and
+cover refinement.
+\end{theorem}
+
+\begin{proof}
+The chain rule gives
+\[
+ dq_i=\gamma'_{ij}(q_j)\,dq_j.
+\]
+Because $\gamma_{ij}$ is a local diffeomorphism, its derivative is nowhere
+zero.  Hence $\Span(dq_i)=\Span(dq_j)$ on every overlap.  The transition
+cocycle makes the equality coherent on triple intersections, and ordinary
+line-bundle descent gives a unique $L_q$.  Restriction preserves the same
+equalities.  A refinement merely repeats them on smaller open sets, so the
+descended line is unchanged.
+\end{proof}
+
+\section{Proper structure-group reduction}
+
+Let $V=\mathbb R^4$ and $\ell_0=\Span(e^0)\subset V^*$.  Define
+\[
+ H=\{A\in GL(V):A^*\ell_0=\ell_0\}.
+\]
+For a frame $u:V\to T_xM$, let $u^*L_{q,x}$ denote the pulled-back covector
+line.  Set
+\[
+ P_H(q)=\{u\in F(M):u^*L_{q,x}=\ell_0\}.
+\]
+
+\begin{proposition}[Proper reduction]
+$H$ is a closed proper subgroup of $GL(4,\mathbb R)$ of dimension $13$, and
+$P_H(q)$ is a principal $H$-subbundle of the frame bundle.
+\end{proposition}
+
+\begin{proof}
+In a basis adapted to $e^0$, line preservation requires the first row to be
+$(a,0,0,0)$ with $a\ne0$.  The lower-left column has three free entries and
+the lower-right $3\times3$ block is arbitrary invertible.  Thus
+$\dim H=1+3+9=13<16=\dim GL(4)$.  The matrix interchanging the first two basis
+vectors lies outside $H$, so $H$ is proper.  The set of frames adapted to a
+smooth line subbundle is locally nonempty and is acted on freely and
+transitively on the right by $H$, which is the standard reduction
+construction.
+\end{proof}
+
+\section{The bridge and its exact force}
+
+\begin{definition}[Projective-conormal reduction bridge]
+Define
+\[
+ \Bridge(\mathcal F)=(L_q,P_H(q)).
+\]
+For an admitted arrow $f:\mathcal F\to\mathcal F'$, define bridge transport by
+the declared identity $f^*L_{q'}=L_q$ and the induced frame-bundle map.
+\end{definition}
+
+\begin{theorem}[Naturality and gluing]
+$\Bridge$ is a natural, restriction-compatible construction on
+$\mathsf{SrcFol}_1$.  It depends only on the descended line and not on the
+chosen label normalization, sign, or cover presentation.
+\end{theorem}
+
+\begin{proof}
+Overlap descent proves object formation.  Pullback commutes with exterior
+differentiation and with line span.  Therefore a declared proposal arrow
+transports $L_{q'}$ to $L_q$, and the adapted-frame construction transports
+$P_H(q')$ to $P_H(q)$.  Identity and composition follow from pullback
+functoriality.  Nonzero reparametrization derivatives change only the local
+representative, never its line.  The restriction and refinement statements
+were proved in the descent theorem.
+\end{proof}
+
+\subsection{Exact nonfactorization fixture}
+
+Take $M=\mathbb R^4$ with a three-open-set cover.  Candidate $A$ uses local
+covectors
+\[
+ (1,0,0,0),\quad(-2,0,0,0),\quad(6,0,0,0),
+\]
+with overlap multipliers $-2,-3,6$.  Candidate $B$ uses
+\[
+ (1,1,0,0),\quad(3,3,0,0),\quad(-6,-6,0,0),
+\]
+with multipliers $3,-2,-6$.  Both multiplier families satisfy their cocycle,
+and each family descends.  Their bridge lines are respectively
+\[
+ \Span(dx^0)\quad\hbox{and}\quad\Span(dx^0+dx^1),
+\]
+which are distinct.  The linear source diffeomorphism
+\[
+ F(x^0,x^1,x^2,x^3)=(x^0+x^1,x^1,x^2,x^3)
+\]
+pulls the first line back to the second, giving an exact naturality control.
+
+\begin{theorem}[Nonconstancy and frozen-$\Kstar$ nonfactorization]
+The bridge is nonconstant.  It cannot factor through the unchanged
+$\Kstar$ assignment on the underlying smooth source arena.
+\end{theorem}
+
+\begin{proof}
+Candidates $A$ and $B$ have the same underlying smooth manifold, so the
+unchanged objectwise classifier assigns the same $\Kstar(M)$ to both.  Their
+projective conormal lines are distinct.  If
+$\Bridge=G\circ\Kstar$ for any map $G$, equal $\Kstar$ inputs would have equal
+bridge outputs, a contradiction.
+\end{proof}
+
+This theorem is the exact bridge force obtained here.  It does not say the
+line is a response covector, causal normal, time orientation, conformal cone,
+or metric datum.
+
+\section{Robustness and exact failure boundary}
+
+On a fixed compact chart domain, a submersion remains a submersion under a
+sufficiently small $C^1$ perturbation whenever its differential has a positive
+auxiliary chart-norm margin.  For example, $(1,0,0,0)$ perturbed to
+$(1,1/3,0,0)$ remains nonzero.  This is a conformance fixture only: the chart
+norm is not source geometry, and the packet supplies no canonical global norm.
+Overlap perturbations must remain coherent; independent perturbations that
+break reparametrization or cocycle identities leave the admitted domain.
+
+\begin{center}
+\small
+\begin{tabular}{p{0.13\linewidth}p{0.37\linewidth}p{0.40\linewidth}}
+\toprule
+Branch & Trigger & Exact disposition \\
+\midrule
+FB--01 & Some $dq_i=0$ & The line and reduction are undefined there. \\
+FB--02 & An overlap derivative vanishes & Line descent fails. \\
+FB--03 & The overlap cocycle fails & The presentation is inadmissible. \\
+FB--04 & $H$ is replaced by a target Lorentz or metric stabilizer & Target-import failure. \\
+FB--05 & Labels are chosen by physical time, desired cone, empirical answer, or P4 success & Goal-smuggling failure. \\
+FB--06 & Proposal data are called current-ontology derived or adopted & Authority failure. \\
+FB--07 & Arrows are narrowed after outcome inspection & Circular-naturality failure. \\
+FB--08 & The bridge is constant or factors through $\Kstar$ & Bridge-force failure. \\
+FB--09 & The local fixture is promoted to universal global existence & Scope failure. \\
+FB--10 & Robustness lacks a nonvanishing margin or coherent overlaps & Robustness failure. \\
+FB--11 & $L_q$ is read as physical time, causality, or $g_{\rm eff}$ & Physical-overread failure. \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\section{Source-extension classification and no-fog result}
+
+The source foliation atlas has the following extension class and controlled
+status:
+\begin{center}
+\texttt{new ontology primitive}\qquad\texttt{proposal-only}.
+\end{center}
+It is predeclared and written without target or P4-output vocabulary, which
+establishes within-packet nonadaptivity.  That does not establish derivation
+from the current ontology, epistemic uniqueness, physical meaning, or
+adoption.  Those questions are reserved for a separate Smuggling Auditor.
+
+The Candidate Constructor result is
+\begin{center}
+\texttt{constructed\_candidate}.
+\end{center}
+The constructed map is $\Bridge$, and its exact candidate domain, descent,
+proper reduction, naturality, two-object nonconstancy, and frozen-$\Kstar$
+nonfactorization have proofs and rational controls.  This is not ``more work
+required'' in place of a result.  The candidate is complete at proposal-only
+construction scope, while audit, stress, adoption, and P4 acceptance remain
+separate.
+
+\section{Distance to GR and locks}
+
+\begin{center}
+\small
+\begin{tabular}{ll@{\qquad}ll}
+\toprule
+Burden & Status & Burden & Status \\
+\midrule
+Source ontology primitives & \NoDelta & Source equivalence EqSrc & \NoDelta \\
+RetainH & \NoDelta & GenH & \NoDelta \\
+ObsLoc\_lc & \NoDelta & Resp\_lc & \NoDelta \\
+M\_src & \NoDelta & g\_eff & \NoDelta \\
+matter coupling & \NoDelta & Einstein equations & \NoDelta \\
+finite-variation robustness & \NoDelta & benchmark promotion & \NoDelta \\
+Gate Chair status & \NoDelta & route freeze or hard-fail & \NoDelta \\
+\bottomrule
+\end{tabular}
+\end{center}
+
+All seven freezes remain active, including
+\begin{center}
+\small\ttfamily
+NDCL-V22-P4T02-B2-KSTAR-STANDALONE-\\
+LOCAL-BRIDGE-IRRELEVANCE.
+\end{center}
+D7 is not reevaluated, B2 is inactive, and P4--T03 remains locked.  No source
+law, $\mathrm{EqSrc}$, physical geometry, $g_{\rm eff}$, matter coupling,
+Einstein equation, benchmark, Gate verdict, proof promotion, publication,
+push, or external action is authorized.
+
+\section{One unexecuted successor}
+
+The separately admitted next packet is
+\begin{center}
+\small\ttfamily
+PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-\\
+REDUCTION-SMUGGLING-AUDIT-V1.
+\end{center}
+It is a \texttt{source\_extension\_smuggling\_audit} for
+\texttt{smuggling-auditor@0.2.0}, selected but not executed.  It must decide
+whether the abstract label atlas, preservation arrows, submersion hypothesis,
+and proposal provenance are genuinely target-independent or merely encode the
+desired bridge outcome.  No adoption or downstream action occurs here.
+
+\end{document}

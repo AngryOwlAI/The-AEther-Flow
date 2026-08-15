@@ -1,0 +1,913 @@
+schema_id: "child_phys_math_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-001"
+artifact_type: "parent_child_synthesis_child_output"
+authority: "science_draft"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+status_label: "draft/control"
+task_id: "RT-20260814-005"
+job_id: "AJ-RT-20260814-005-001"
+decision_id: "DDR-20260814-005"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+role_id: "candidate-constructor"
+role_version: "0.2.0"
+execution_role_ref: "candidate-constructor@0.2.0--RT-20260814-005"
+claim_boundary_id: "CB-V22-P4-T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-001"
+created_at: "2026-08-15T01:06:48Z"
+source_head: "3a286431624c06bc1a2404fda5c0b067b1ce12c9"
+source_tree: "87b95af8ab918339030fc04a7fee61eddf7ea5c6"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+work_item_id: "P4-T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-CONSTRUCTION"
+packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-CONSTRUCTION-V1"
+candidate_id: "CAND-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-V1"
+proposal_name: "SourceLocalProjectiveConormalReduction_v1"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Construct independently source-derived local reduction and nonfactorizing bridge data after excluding unchanged K_star standalone replay."
+
+ownership_boundary:
+  owned_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_math_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+  files_written_count: 1
+  other_files_modified_by_this_child: false
+  peer_child_file_inspected: false
+  concurrent_parent_or_peer_files_reverted: false
+  parent_artifact_modified: false
+  task_control_modified: false
+  registry_modified: false
+  canonical_source_modified: false
+  model_or_validator_modified: false
+  completion_created: false
+  handoff_created: false
+  successor_created: false
+  checkpoint_executed: false
+  subagent_created: false
+
+source_binding:
+  hash_algorithm: "sha256"
+  live_head_matches_agentjob_source_head: true
+  live_tree_matches_agentjob_source_tree: true
+  source_count: 21
+  sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      authority: "control"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      authority: "control"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      authority: "control"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      authority: "workflow_contract"
+    - path: ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+      sha256: "f6534fd2950c2a6eefb8f2a4b255cd0794ceeb1462556be60af288bceb9d51d5"
+      authority: "role_contract"
+    - path: ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+      sha256: "2ec5a542caffa90a54d11f0c03630fde839e92f4917d5dbd55b80b724a46c882"
+      authority: "successor_role_contract"
+    - path: "research_control/tasks/RT-20260814-005/00_TASK.yaml"
+      sha256: "7d6543b53435491ff7d1ebaf2a4fb4058e6799248da983669b4d2d96f88cdfd2"
+      authority: "tracked_control_state"
+    - path: "research_control/tasks/RT-20260814-005/DDR-20260814-005.md"
+      sha256: "02a3421216707e973756ebab1f11b7a94cfd05fb3da1f87d73398975850e0172"
+      authority: "tracked_control_state"
+    - path: "research_control/tasks/RT-20260814-005/roles/candidate-constructor@0.2.0--RT-20260814-005.yaml"
+      sha256: "8281f289a50c01f10e97767ad6250527f52b8575e25db5ecbea7ef009f79e092"
+      authority: "execution_role"
+    - path: "research_control/tasks/RT-20260814-005/jobs/AJ-RT-20260814-005-001.yaml"
+      sha256: "cdeaa47805dbe668abbf2c6b24a0a33ab4698317c8fb26e63e413acc2ffb515f"
+      authority: "tracked_control_state"
+    - path: "research_control/handoffs/handoff-1034.yaml"
+      sha256: "c838d0151f82f580e179a97f128da34ee5d52bb0f03a1972b332a2f6526011a2"
+      authority: "tracked_control_state"
+    - path: "research_control/tasks/RT-20260814-004/artifacts/v22_p4_t02_b2_kstar_localization_bridge_irrelevance_theorem_v1.tex"
+      sha256: "aee6a25a0b21b8864033e46a235f82033e61670c00d7dce7d8133b3e34132fbe"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260814-004/artifacts/v22_p4_t02_b2_kstar_localization_bridge_irrelevance_record_v1.yaml"
+      sha256: "d0ceb76faaacea70107b64d6a8dddf9a15d9e5eef44eb68fa473e4e0a474ffa8"
+      authority: "science_draft"
+    - path: "research_control/tasks/RT-20260814-004/artifacts/parent_conflict_review_p4_t02_b2_kstar_localization_bridge_irrelevance.yaml"
+      sha256: "03569123f56d589a2dc03258d0485c14b34a711e1c81a78c66c59e7e4e0de742"
+      authority: "science_draft"
+    - path: "research_control/tasks/RT-20260814-004/artifacts/parent_fusion_notes_p4_t02_b2_kstar_localization_bridge_irrelevance.md"
+      sha256: "ec99f7f7cee62d4a06166ecb578a79632d08ac8ac10ba45624f1fcccecc1b665"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260814-002/artifacts/v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_v1.tex"
+      sha256: "66953e112dee3ca9c5a7c6de9f255979c4fedbccd32be924c24563de8c5d372f"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260814-002/artifacts/v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_record_v1.yaml"
+      sha256: "4dc2f288b45abf16a36384842cd757d6707c549c9968495581ee313086cf71c8"
+      authority: "science_draft"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      authority: "project_control"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      authority: "control"
+    - path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+      sha256: "562405dd78a03efde831806323081285c7850ee18dbeb2a6b6ecf900417c814c"
+      authority: "control"
+    - path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+      sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789"
+      authority: "schema"
+  source_binding_note: "All source hashes were recomputed from live bytes. The current-task peer artifacts and concurrent parent implementation files were not inspected and are not premises of this independent result."
+
+packet_binding:
+  selected_packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-CONSTRUCTION-V1"
+  packet_type: "source_extension_candidate"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  immutable_route_sha256: "c838d0151f82f580e179a97f128da34ee5d52bb0f03a1972b332a2f6526011a2"
+  assignment_held_fixed: "K_star(M)=Diff_c(M) when Diff_c(M) is proper in Diff(M), and K_star(M)={id_M} otherwise."
+  k_star_repair_or_replay: false
+  rt004_theorem_held_fixed: true
+  seven_freezes_held_fixed: true
+
+claim_boundary:
+  allowed_scope: "One task-local proposal-only construction of a codimension-one source foliation presentation, its descended unoriented projective conormal line, its proper GL(4,R) line-stabilizer frame reduction, exact locality and functoriality proofs, one exact strict nonfactorization witness over unchanged K_star, robustness boundaries, failure branches, and one unexecuted successor recommendation."
+  forbidden_scope: "Current-ontology derivation or adoption, canonical-ontology candidate status, EqSrc, K_star physical allowedness, target atlas, target metric, Lorentz group, target tetrad, desired cone, physical time, response semantics, M_src adoption, g_eff, matter coupling, Einstein equations, D7 reevaluation, B2 action, P4-T03 execution, benchmark promotion, Gate Chair action, publication, push, external action, global no-go, future-extension impossibility, or completed derivation."
+  boundary_status: "preserved"
+  authority_source: "research_control/tasks/RT-20260814-005/00_TASK.yaml and research_control/handoffs/handoff-1034.yaml"
+
+declared_source_domain:
+  base_object: "A nonempty smooth four-manifold M, admitted only as the task's explicit primitive source-arena debt and not as physical spacetime or adopted M_src."
+  index_set: "A nonempty set I of source-presentation chart labels fixed before any bridge output is inspected."
+  cover: "Connected open sets U_i in M with union equal to M."
+  submersions: "For every i, a smooth map q_i:U_i->J_i to an open interval J_i in R with dq_i(x) nonzero for every x in U_i."
+  overlap_components: "For each connected component C of U_i intersect U_j, a predeclared smooth one-dimensional diffeomorphism phi_ji_C:q_i(C)->q_j(C) satisfying q_j|C=phi_ji_C composed with q_i|C."
+  cocycle: "On every connected triple-overlap component, phi_ki equals phi_kj composed with phi_ji wherever both sides are defined; phi_ii is the identity and phi_ij is the inverse of phi_ji."
+  presentation_name: "A=(I,{U_i},{q_i},{phi_ji_C})"
+  source_predeclaration_time: "before bridge evaluation or P4 target diagnostics"
+  source_inputs_added:
+    - "codimension-one foliation presentation A"
+    - "one-dimensional overlap reparametrizations phi_ji_C"
+  excluded_inputs:
+    - "target atlas or target coordinate chart"
+    - "metric conformal class Lorentz group tetrad coframe or desired cone"
+    - "orientation time orientation response label or empirical answer"
+    - "K_star orbit representative or Diff/Diff_c coset selector"
+    - "validator registry role handoff or checkpoint success as mathematics"
+
+formal_objects:
+  object_count: 11
+  objects:
+    - object_id: "OBJ-PM5-01"
+      name: "SourceFoliationPresentation"
+      definition: "The declared tuple (M,A) satisfying the cover, submersion, overlap-diffeomorphism, inverse, and cocycle conditions."
+    - object_id: "OBJ-PM5-02"
+      name: "ProjectiveConormalSection"
+      definition: "The section ell_A:M->P(T^*M) defined by ell_A(x)=[dq_i(x)] for any i with x in U_i."
+    - object_id: "OBJ-PM5-03"
+      name: "ConormalLineBundle"
+      definition: "The smooth rank-one subbundle L_A^* of T^*M whose fibre at x is span_R(dq_i(x))."
+    - object_id: "OBJ-PM5-04"
+      name: "AnnihilatorDistribution"
+      definition: "The smooth rank-three distribution H_A=Ann(L_A^*) with H_A|U_i=ker(dq_i)."
+    - object_id: "OBJ-PM5-05"
+      name: "ModelCovectorLine"
+      definition: "The fixed unoriented line ell_0^*=span_R(e^0) in (R^4)^*."
+    - object_id: "OBJ-PM5-06"
+      name: "LineStabilizer"
+      definition: "P={A in GL(4,R):A^*(ell_0^*)=ell_0^*}; equivalently A has block form ((a,0),(c,B)) with a nonzero and B in GL(3,R)."
+    - object_id: "OBJ-PM5-07"
+      name: "AdaptedFrameReduction"
+      definition: "R_A={u:R^4->T_xM linear isomorphism for some x with u^*(L_A,x^*)=ell_0^*}, a principal P-subbundle of Fr(M)."
+    - object_id: "OBJ-PM5-08"
+      name: "SourcePresentationCategory"
+      definition: "SrcFolPCR_4 has declared presentations as objects and presentation-preserving diffeomorphisms as arrows. Locally an arrow f obeys q_a^N composed with f=psi_ai composed with q_i^M for a one-dimensional local diffeomorphism psi_ai."
+    - object_id: "OBJ-PM5-09"
+      name: "ReductionCategory"
+      definition: "ProjConRed_4 has triples (M,L^*,R) as objects and diffeomorphisms carrying L^* and R by pullback and frame pushforward as arrows."
+    - object_id: "OBJ-PM5-10"
+      name: "FrozenKStarReduct"
+      definition: "U_K(M,A)=(M,K_star(M)); U_K forgets A and does not alter the RT002 assignment."
+    - object_id: "OBJ-PM5-11"
+      name: "StrictEmbeddedBridgeEquality"
+      definition: "Equality of bridge outputs means equality of embedded line subbundles and adapted reductions over the identity map of the same M, not merely isomorphism after a diffeomorphism."
+
+formal_maps:
+  map_count: 11
+  maps:
+    - map_id: "MAP-PM5-01"
+      signature: "q_i:U_i->J_i"
+      definition: "The predeclared local source submersion."
+    - map_id: "MAP-PM5-02"
+      signature: "phi_ji_C:q_i(C)->q_j(C)"
+      definition: "The predeclared overlap reparametrization with nonzero derivative."
+    - map_id: "MAP-PM5-03"
+      signature: "ell_A:M->P(T^*M)"
+      definition: "Send x to the projective class [dq_i(x)]."
+    - map_id: "MAP-PM5-04"
+      signature: "Ann:L_A^*->H_A"
+      definition: "Send the conormal line to its rank-three annihilator distribution."
+    - map_id: "MAP-PM5-05"
+      signature: "Red_P:L_A^*->R_A"
+      definition: "Form the P-reduction of frames adapted to the embedded conormal line."
+    - map_id: "MAP-PM5-06"
+      signature: "Bridge_PCR:SrcFolPCR_4->ProjConRed_4"
+      definition: "On objects send (M,A) to (M,L_A^*,R_A); on arrows send f to the restriction of frame pushforward u->df composed with u."
+    - map_id: "MAP-PM5-07"
+      signature: "Res_V:(M,A)->(V,A|V)"
+      definition: "Restrict cover members, submersions, and overlap maps to an open V in M."
+    - map_id: "MAP-PM5-08"
+      signature: "Ref_r:A'->A"
+      definition: "A refinement chart V_alpha lies in U_r(alpha) and has q'_alpha=rho_alpha composed with q_r(alpha), with rho_alpha a local one-dimensional diffeomorphism."
+    - map_id: "MAP-PM5-09"
+      signature: "Fr(f):Fr(M)->Fr(N)"
+      definition: "Send u:R^4->T_xM to df_x composed with u:R^4->T_f(x)N."
+    - map_id: "MAP-PM5-10"
+      signature: "U_K:SrcFolPCR_4->FrozenKStarReduct_4"
+      definition: "Forget A and retain exactly (M,K_star(M))."
+    - map_id: "MAP-PM5-11"
+      signature: "F_K:(M,K_star(M))->(M,L^*,R)"
+      definition: "The hypothetical single-valued factor map forbidden by the exact same-M witness under the predeclared strict criterion."
+
+construction_definition:
+  construction_id: "SourceLocalProjectiveConormalReduction_v1"
+  source_extension_status: "proposal-only"
+  projective_descent_formula: "On C in U_i intersect U_j, dq_j=phi_ji_C'(q_i) dq_i; the multiplier is nonzero, so [dq_j]=[dq_i]."
+  line_bundle_formula: "L_A,x^*=span_R(dq_i(x)) for any chart i containing x."
+  annihilator_formula: "H_A,x=ker(dq_i(x)); its rank is three by the submersion theorem."
+  stabilizer_formula: "P=Stab_GL(4,R)(ell_0^*) under dual pullback A^*."
+  frame_reduction_formula: "R_A,x={u in Fr_x(M):u^*L_A,x^*=ell_0^*}."
+  bridge_formula: "Bridge_PCR(M,A)=(M,L_A^*,R_A)."
+  orientation_status: "unoriented_projective_line_only"
+  metric_status: "no_metric_or_conformal_structure_constructed"
+  local_first_jet_effect: "For a presentation-preserving local automorphism fixing x, the derivative lies in a conjugate of P; in the flat q=x^0 fixture every element of P intersect GL_plus(4,R) is realized by its linear map."
+  current_ontology_derivation_claimed: false
+  source_law_adopted: false
+  target_geometry_imported: false
+
+source_presentation_category:
+  object_condition: "Objects are exactly the declared proposal presentations; bare smooth manifolds without A are not silently upgraded."
+  arrow_condition: "An arrow f:(M,A)->(N,B) is a diffeomorphism with a chartwise source-presentation certificate q_a^N composed with f=psi_ai composed with q_i^M, where psi_ai is a local one-dimensional diffeomorphism fixed as part of the arrow data."
+  identity_proof: "For id_M use the same chart and psi(t)=t; all conditions hold."
+  composition_proof: "If q_b^P composed with g=chi_ab composed with q_a^N and q_a^N composed with f=psi_ai composed with q_i^M, then q_b^P composed with g composed with f=(chi_ab composed with psi_ai) composed with q_i^M; the composite one-dimensional map is again a local diffeomorphism."
+  inverse_proof: "For an isomorphism certificate, invert f and each local one-dimensional diffeomorphism after restricting domains; this gives the reverse certificate."
+  line_naturality_proof: "Differentiate q_a^N composed with f=psi_ai composed with q_i^M to obtain f^*dq_a^N=psi_ai'(q_i^M)dq_i^M, so f^*L_B^*=L_A^*."
+  reduction_naturality_proof: "If u is adapted to L_A^*, then (df composed with u)^*L_B^*=u^*f^*L_B^*=u^*L_A^*=ell_0^*, so frame pushforward maps R_A to R_B."
+  all_bare_diffeomorphisms_included: false
+  limitation: "Naturality is established only in the explicitly declared source-presentation category. It is not invariance under every bare diffeomorphism of M."
+
+restriction_refinement_overlap_gluing:
+  restriction_proof: "For open V in M, dq_i restricted to U_i intersect V remains nonzero, the restricted sets cover V, and every overlap identity restricts. Therefore L_A^*|V and R_A|V equal the bridge output of the restricted presentation."
+  refinement_proof: "For q'_alpha=rho_alpha composed with q_r(alpha), dq'_alpha=rho_alpha'(q_r(alpha))dq_r(alpha) with nonzero multiplier. Hence the refined and original projective lines and P-reductions agree on every refinement chart."
+  overlap_proof: "The chain rule gives a nonzero scalar multiplier on every connected overlap component, so both the projective class and its annihilator are chart-independent."
+  cocycle_proof: "On a triple overlap, differentiating phi_ki=phi_kj composed with phi_ji yields phi_ki'=(phi_kj' composed with phi_ji)phi_ji'; thus transition multipliers multiply exactly."
+  gluing_proof: "The local rank-one subbundles span(dq_i) agree on overlaps and therefore glue uniquely to L_A^*. Adapted local frame bundles agree because they are defined solely by that line and consequently glue uniquely to R_A."
+  uniqueness_scope: "Uniqueness is equality as embedded subbundles over M for the fixed proposal presentation, not uniqueness of a foliation on a bare manifold."
+
+proper_structure_group_reduction:
+  frame_convention: "A frame u is a linear isomorphism R^4->T_xM and the right GL(4,R) action is u.A=u composed with A."
+  stabilizer_condition: "The adapted-frame condition survives u->u.A exactly when A^*(ell_0^*)=ell_0^*."
+  coordinate_form: "Relative to R e^0 plus ker(e^0), every A in P has matrix block form ((a,0),(c,B)) with a nonzero and B invertible."
+  subgroup_proof: "The stabilizer of any group action is a subgroup. The displayed block form is closed under multiplication and inversion."
+  principal_bundle_proof: "The submersion theorem gives local coordinates with q_i=x^0 and hence a smooth adapted frame. Any two adapted frames in one fibre differ by a unique A in P, so every fibre is a free transitive P-torsor and local adapted frames trivialize R_A."
+  properness_proof: "The determinant-one shear S with first row (1,1,0,0) lies in GL(4,R), while S^*e^0=e^0+e^1 is not in ell_0^*. Hence S is not in P and P is a proper subgroup of GL(4,R)."
+  gl_plus_relation: "P intersect GL_plus(4,R) is likewise proper in GL_plus(4,R), because the same shear has determinant one and lies outside P."
+  orientation_imported: false
+  lorentz_group_imported: false
+
+predeclared_bridge_factor_criterion:
+  criterion_id: "BF-V22-P4T02-B2-KSTAR-STRICT-OVER-IDENTITY-M-001"
+  fixed_before_fixture_evaluation: true
+  reduct_map: "U_K(M,A)=(M,K_star(M))"
+  factorization_definition: "Bridge_PCR factors through frozen K_star only if there exists one single-valued F_K such that Bridge_PCR(M,A)=F_K(M,K_star(M)) as embedded line subbundle and adapted P-reduction over id_M for every proposal A."
+  fibre_constancy_test: "For each fixed M, Bridge_PCR must be constant on the entire fibre of U_K over the exact object (M,K_star(M))."
+  admissible_falsifier: "Two valid proposal presentations A_0 and A_1 on the same literal M with equal frozen K_star reducts and unequal embedded conormal lines."
+  equality_notion: "literal embedded equality over id_M"
+  excluded_stronger_notions:
+    - "nonisomorphism after quotienting presentations by all diffeomorphisms"
+    - "physical inequivalence"
+    - "K_star invariance or allowedness"
+    - "canonical selection from a bare manifold"
+  criterion_scope_note: "The criterion is intentionally strict and bridge-facing. A separately admitted Smuggling Auditor must decide whether this presentation-sensitive notion is source-legitimate for later use."
+
+exact_rational_fixtures:
+  fixture_count: 5
+  fixtures:
+    - fixture_id: "FIX-PM5-OVERLAP-COCYCLE-001"
+      purpose: "Verify exact overlap transport, inverse relations, and triple cocycle with rational affine data."
+      manifold: "M=R^4 with coordinates (x^0,x^1,x^2,x^3)"
+      chart_domains:
+        - "U_0=R^4"
+        - "U_1=R^4"
+        - "U_2=R^4"
+      submersions:
+        - "q_0=x^0"
+        - "q_1=2x^0+1"
+        - "q_2=-3x^0+4"
+      overlap_maps:
+        - "phi_10(t)=2t+1"
+        - "phi_21(s)=(-3/2)s+11/2"
+        - "phi_20(t)=-3t+4"
+      derivative_values:
+        - "phi_10'=2"
+        - "phi_21'=-3/2"
+        - "phi_20'=-3"
+      exact_cocycle_check: "phi_21(phi_10(t))=(-3/2)(2t+1)+11/2=-3t+4=phi_20(t)."
+      conormal_result: "All three differentials span the same line R dx^0; the negative derivative confirms that only the unoriented projective line descends without extra orientation data."
+      falsifier: "Replacing phi_21 by (-3/2)s+9/2 gives phi_21(phi_10(t))=-3t+3, which disagrees with phi_20 and fails the declared atlas cocycle."
+    - fixture_id: "FIX-PM5-PROPER-STABILIZER-001"
+      purpose: "Verify membership and nonmembership in the exact proper line stabilizer."
+      model_line: "ell_0^*=R e^0"
+      member_matrix: "D=diag(2,3,5,7)"
+      member_check: "D^*e^0=2e^0 and det(D)=210, so D is in P."
+      nonmember_matrix: "S=((1,1,0,0),(0,1,0,0),(0,0,1,0),(0,0,0,1))"
+      nonmember_check: "S^*e^0=e^0+e^1 and det(S)=1, so S is in GL_plus(4,R) but not in P."
+      result: "P is a proper subgroup of GL(4,R), and P intersect GL_plus(4,R) is proper in GL_plus(4,R)."
+      falsifier: "If S^*e^0 were a nonzero scalar multiple of e^0, this properness witness would fail; direct coefficient comparison gives the contradiction 1=0 for the e^1 coefficient."
+    - fixture_id: "FIX-PM5-SAME-M-NONFACTORIZATION-001"
+      purpose: "Prove bridge nonconstancy and strict failure to factor through the unchanged K_star reduct."
+      manifold: "The same literal M=R^4 in both candidates."
+      candidate_zero: "A_0 has one global chart and q_0=x^0, so L_0^*=R dx^0 with projective coordinate [1:0:0:0]."
+      candidate_one: "A_1 has one global chart and q_1=x^0+x^1, so L_1^*=R(dx^0+dx^1) with projective coordinate [1:1:0:0]."
+      submersion_check: "dq_0=(1,0,0,0) and dq_1=(1,1,0,0) are everywhere nonzero rational covectors."
+      line_inequality_proof: "If (1,1,0,0)=lambda(1,0,0,0) for nonzero lambda, the first component forces lambda=1 while the second forces 1=0; hence L_0^* is not equal to L_1^*."
+      k_star_check: "Diff_c(R^4) is proper in Diff(R^4), witnessed by any nonzero translation, so both frozen reducts are exactly (R^4,Diff_c(R^4))."
+      factor_contradiction: "If Bridge_PCR=F_K composed with U_K under BF-V22-P4T02-B2-KSTAR-STRICT-OVER-IDENTITY-M-001, equal U_K inputs force L_0^*=L_1^* and R_0=R_1, contradicting the exact line inequality."
+      result: "Bridge_PCR is nonconstant on one U_K fibre and does not factor through frozen K_star under the predeclared strict embedded criterion."
+      falsifier: "A valid falsifier would exhibit a nonzero rational lambda with (1,1,0,0)=lambda(1,0,0,0), or show that the two U_K reduct objects differ; neither condition holds."
+    - fixture_id: "FIX-PM5-NATURALITY-001"
+      purpose: "Verify a nontrivial structure-preserving arrow and distinguish naturality from bare-diffeomorphism invariance."
+      source_presentation: "On M=R^4 use q_M=x^0+x^1."
+      target_presentation: "On N=R^4 use q_N=y^0."
+      diffeomorphism: "f(x^0,x^1,x^2,x^3)=(x^0+x^1,x^1,x^2,x^3), with determinant one."
+      presentation_check: "q_N composed with f=q_M, so psi(t)=t is a source-presentation certificate."
+      line_check: "f^*dy^0=dx^0+dx^1, hence f^*L_N^*=L_M^*."
+      reduction_check: "For every adapted u, df composed with u is adapted by pullback associativity."
+      result: "Bridge_PCR is natural on this nontrivial arrow."
+      falsifier: "The coordinate swap g(x^0,x^1,x^2,x^3)=(x^1,x^0,x^2,x^3) does not preserve the q=x^0 presentation over id_M because g^*dx^0=dx^1; it is therefore a bare diffeomorphism outside the declared automorphism class, not a counterexample to stated naturality."
+    - fixture_id: "FIX-PM5-ROBUSTNESS-001"
+      purpose: "Provide an exact rational deformation family and state the maximal proved robustness boundary."
+      family: "For t in Q, q_t=x^0+t x^1 on R^4."
+      differential: "dq_t=(1,t,0,0), which is nonzero for every rational t because its first component is one."
+      projective_variation: "ell_t=[1:t:0:0]; ell_s=ell_t if and only if s=t."
+      coordinate_perturbation_class: "If q=x^0+r on a coordinate domain and partial_0 r>-1/2 everywhere, then dq(partial_0)=1+partial_0 r>1/2, so q remains a submersion without a metric."
+      result: "Submersion and line formation are stable within the stated coordinate-controlled class, and the bridge varies nontrivially through exact rational presentations."
+      falsifier: "The perturbation r=-x^0 gives partial_0 r=-1 and q=0 with dq=0, showing why a derivative bound is required."
+
+bridge_attempt_status:
+  bridge_id: "BRIDGE-PCR-V22-P4T02-B2-001"
+  candidate_map: "Bridge_PCR:(M,A)->(M,L_A^*,R_A)"
+  source_domain_formed: true
+  codomain_formed: true
+  map_formed: true
+  restriction_compatible: true
+  refinement_compatible: true
+  overlap_descent_proved: true
+  triple_cocycle_proved: true
+  gluing_proved: true
+  source_presentation_naturality_proved: true
+  proper_reduction_proved: true
+  exact_rational_fixture_passed: true
+  bridge_nonconstant: true
+  frozen_k_star_strict_factorization: false
+  factorization_criterion_id: "BF-V22-P4T02-B2-KSTAR-STRICT-OVER-IDENTITY-M-001"
+  quotient_by_all_diffeomorphisms_nonfactorization_claimed: false
+  k_star_invariance_claimed: false
+  physical_relevance_established: false
+  current_status: "candidate_map_constructed_with_strict_same_M_nonfactorization_pending_separate_smuggling_audit"
+  first_unresolved_audit_question: "Whether declaring only foliation-preserving arrows and using embedded equality over id_M is independently source-motivated rather than target-shaped or presentation-circular."
+
+proof_obligations:
+  obligation_count: 18
+  all_required_obligations_discharged_in_declared_mathematical_scope: true
+  obligations:
+    - obligation_id: "PO-PM5-01-SOURCE-PREDECLARATION"
+      statement: "Every q_i, overlap map, chart domain, and arrow certificate is declared before bridge evaluation."
+      status: "proved"
+      proof: "These data are the domain object itself; Bridge_PCR only differentiates and glues them and introduces no output-dependent selector."
+      falsifier: "An atlas or overlap map chosen after inspecting a desired cone, metric, response, or P4 answer would violate the domain definition."
+    - obligation_id: "PO-PM5-02-SUBMERSION-FORMATION"
+      statement: "Each local covector dq_i is nowhere zero."
+      status: "proved"
+      proof: "This is an explicit object axiom, and every exact fixture displays a nonzero rational differential."
+      falsifier: "q=(x^0)^2 at x^0=0 has dq=0 and is rejected by the object predicate."
+    - obligation_id: "PO-PM5-03-OVERLAP-CHAIN-RULE"
+      statement: "Differentials on overlaps differ by a nonzero scalar."
+      status: "proved"
+      proof: "Differentiate q_j=phi_ji composed with q_i; the chain rule gives dq_j=phi_ji'(q_i)dq_i, and a one-dimensional local diffeomorphism has nonzero derivative."
+      falsifier: "phi(t)=t^3 at t=0 has zero derivative and is not an allowed local diffeomorphism there."
+    - obligation_id: "PO-PM5-04-PROJECTIVE-DESCENT"
+      statement: "The projective covector class is chart-independent."
+      status: "proved"
+      proof: "Projectivization identifies all nonzero scalar multiples, and PO-PM5-03 supplies exactly such a multiplier."
+      falsifier: "Overlap covectors dx^0 and dx^0+dx^1 are not proportional and therefore cannot define one descended projective class."
+    - obligation_id: "PO-PM5-05-SMOOTH-LINE-BUNDLE"
+      statement: "The descended fibres form a smooth rank-one subbundle L_A^* of T^*M."
+      status: "proved"
+      proof: "On each U_i, the nowhere-zero smooth section dq_i spans a smooth line; transition functions are the smooth nonzero multipliers phi_ji'(q_i), so the local lines glue as a smooth rank-one subbundle."
+      falsifier: "A transition multiplier that vanishes would destroy the rank-one bundle chart and is excluded by PO-PM5-03."
+    - obligation_id: "PO-PM5-06-ANNIHILATOR-RANK"
+      statement: "H_A=Ann(L_A^*) is a smooth rank-three distribution."
+      status: "proved"
+      proof: "A nonzero covector on a four-dimensional vector space has a three-dimensional kernel; smooth local spanning sections make the kernels a smooth subbundle."
+      falsifier: "If dq_i=0 at a point, its kernel has dimension four, which is exactly the rejected PO-PM5-02 branch."
+    - obligation_id: "PO-PM5-07-TRIPLE-COCYCLE"
+      statement: "Overlap transport is consistent on triple overlaps."
+      status: "proved"
+      proof: "The object axiom requires phi_ki=phi_kj composed with phi_ji, and differentiating gives the multiplicative transition-function cocycle. FIX-PM5-OVERLAP-COCYCLE-001 verifies it exactly with rational affine maps."
+      falsifier: "The modified rational phi_21 in the fixture yields -3t+3 rather than -3t+4 and is rejected."
+    - obligation_id: "PO-PM5-08-RESTRICTION"
+      statement: "Bridge_PCR commutes with restriction to open subsets."
+      status: "proved"
+      proof: "Nonvanishing, overlap equalities, and transition maps all restrict; local spans and adapted-frame conditions are pointwise, hence Bridge_PCR(A|V)=Bridge_PCR(A)|V."
+      falsifier: "A proposed bridge depending on a global Diff/Diff_c coset would not be determined by arbitrary local restrictions and would fail this proof."
+    - obligation_id: "PO-PM5-09-REFINEMENT"
+      statement: "Equivalent chart refinements do not change the embedded line or reduction."
+      status: "proved"
+      proof: "Every refined q'_alpha is a local reparametrization of a restricted q_i, so its differential is a nonzero scalar multiple and spans the same line."
+      falsifier: "A refined chart q'=x^0+x^1 over q=x^0 without a one-dimensional reparametrization changes the line and is not a refinement under the declared definition."
+    - obligation_id: "PO-PM5-10-GLUING-UNIQUENESS"
+      statement: "Local projective lines and reductions glue uniquely."
+      status: "proved"
+      proof: "They agree on every overlap; the sheaf gluing property for smooth bundle sections gives one line subbundle, and the adapted-frame predicate then determines one P-subbundle."
+      falsifier: "Two global embedded lines agreeing on every member of a cover cannot differ at any point; a claimed difference would require an uncovered point."
+    - obligation_id: "PO-PM5-11-PROPER-STABILIZER"
+      statement: "P is a proper subgroup of GL(4,R)."
+      status: "proved"
+      proof: "P is a stabilizer subgroup and the exact determinant-one shear S in FIX-PM5-PROPER-STABILIZER-001 lies in GL(4,R) but moves ell_0^*."
+      falsifier: "If S^*e^0 were proportional to e^0, the witness would fail; its nonzero e^1 coefficient rules this out."
+    - obligation_id: "PO-PM5-12-PRINCIPAL-REDUCTION"
+      statement: "R_A is a smooth principal P-reduction of Fr(M)."
+      status: "proved"
+      proof: "Submersion coordinates provide local adapted frames, and any two adapted frames differ uniquely by the line stabilizer P; these frames give local P-trivializations."
+      falsifier: "Failure of a local adapted frame would contradict the submersion theorem for q_i."
+    - obligation_id: "PO-PM5-13-SOURCE-PRESENTATION-NATURALITY"
+      statement: "Bridge_PCR is functorial on SrcFolPCR_4."
+      status: "proved"
+      proof: "The differentiated arrow certificate gives f^*L_B^*=L_A^*, frame pushforward preserves adapted frames, and derivatives preserve identities and composition."
+      falsifier: "A bare diffeomorphism moving L_A^* is outside the declared arrow class; admitting it without a certificate would falsify the stated functor domain rather than the proved functor."
+    - obligation_id: "PO-PM5-14-LOCAL-FIRST-JET-REDUCTION"
+      statement: "The added source datum breaks the flat local GL_plus(4,R) first-jet symmetry to a proper line stabilizer."
+      status: "proved"
+      proof: "A presentation-preserving derivative must stabilize the conormal line. In the q=x^0 flat fixture, every A in P intersect GL_plus acts linearly and preserves q up to the nonzero scalar a, while the determinant-one shear outside P does not."
+      falsifier: "An allowed derivative with A^*ell_0^* unequal to ell_0^* would violate the differentiated presentation certificate."
+    - obligation_id: "PO-PM5-15-BRIDGE-NONCONSTANCY"
+      statement: "Bridge_PCR is nonconstant on valid proposal objects with one fixed M."
+      status: "proved"
+      proof: "FIX-PM5-SAME-M-NONFACTORIZATION-001 gives the distinct exact projective lines [1:0:0:0] and [1:1:0:0]."
+      falsifier: "A nonzero scalar identifying those covectors would falsify nonconstancy, but exact component comparison gives 1=0."
+    - obligation_id: "PO-PM5-16-KSTAR-NONFACTORIZATION"
+      statement: "Bridge_PCR cannot factor through frozen K_star under the predeclared strict embedded criterion."
+      status: "proved"
+      proof: "The two same-M presentations have the same literal U_K reduct and different Bridge_PCR outputs; any single-valued factor through U_K would have to assign one output to both."
+      falsifier: "The proof would fail if the two reducts differed or the embedded lines were equal; both alternatives are excluded exactly in the fixture."
+    - obligation_id: "PO-PM5-17-ROBUSTNESS-BOUNDARY"
+      statement: "Formation persists in one explicit derivative-controlled class without being overread as physical robustness."
+      status: "proved"
+      proof: "For q=x^0+r with partial_0 r>-1/2, evaluation on partial_0 is positive; the rational q_t family gives an exact nonconstant subfamily. Overlap compatibility remains a separate required constraint."
+      falsifier: "r=-x^0 gives q=0 and dq=0, proving the derivative bound cannot be dropped."
+    - obligation_id: "PO-PM5-18-NO-TARGET-IMPORT"
+      statement: "The mathematical formation proofs use only proposal source data and standard smooth-manifold operations."
+      status: "proved_with_audit_pending"
+      proof: "The construction uses q_i, one-dimensional reparametrizations, differentiation, projectivization, kernels, frames, and pullback. It uses no target atlas, metric, Lorentz group, desired cone, physical time, response answer, or P4 success label."
+      falsifier: "Any later selection of A because its line matches a target cone, time coordinate, tetrad, response label, or benchmark answer would invalidate this source-purity claim and must be caught by the separately admitted audit."
+
+failure_branch_analysis:
+  failure_branch_count: 14
+  branches:
+    - branch_id: "FB-PM5-01-VANISHING-DIFFERENTIAL"
+      trigger: "dq_i(x)=0 for some declared chart and point."
+      exact_effect: "No projective covector or rank-one line exists at x."
+      example_or_falsifier: "q=(x^0)^2 at x^0=0."
+      disposition: "object_rejected"
+    - branch_id: "FB-PM5-02-NONFUNCTIONAL-OVERLAP"
+      trigger: "q_j is not a one-variable function of q_i on an overlap component."
+      exact_effect: "The chain-rule proportionality required for line descent is unavailable."
+      example_or_falsifier: "q_i=x^0 and q_j=x^0+x^1 on the same open overlap."
+      disposition: "presentation_rejected"
+    - branch_id: "FB-PM5-03-ZERO-OVERLAP-DERIVATIVE"
+      trigger: "phi_ji'=0 at an overlap value."
+      exact_effect: "phi_ji is not a local diffeomorphism there and the transition multiplier is not invertible."
+      example_or_falsifier: "phi(t)=t^3 at t=0."
+      disposition: "presentation_rejected"
+    - branch_id: "FB-PM5-04-TRIPLE-COCYCLE-FAILURE"
+      trigger: "phi_ki differs from phi_kj composed with phi_ji on a triple overlap."
+      exact_effect: "The declared foliation presentation is inconsistent even if pairwise lines accidentally agree."
+      example_or_falsifier: "Use phi_21(s)=(-3/2)s+9/2 in FIX-PM5-OVERLAP-COCYCLE-001."
+      disposition: "presentation_rejected"
+    - branch_id: "FB-PM5-05-ORIENTATION-SMUGGLING"
+      trigger: "The sign of dq_i is retained as an oriented conormal rather than projectivized."
+      exact_effect: "A negative overlap derivative reverses the chosen orientation, so the oriented line does not descend from the declared data."
+      example_or_falsifier: "phi_21'=-3/2 in the exact overlap fixture."
+      disposition: "oriented_claim_rejected_unoriented_candidate_survives"
+    - branch_id: "FB-PM5-06-FULL-DIFF-NATURALITY-OVERCLAIM"
+      trigger: "Naturality is asserted under every bare diffeomorphism of M."
+      exact_effect: "A diffeomorphism may move L_A^* and fail the arrow certificate."
+      example_or_falsifier: "The coordinate swap moves R dx^0 to R dx^1."
+      disposition: "claim_narrowed_to_source_presentation_arrows"
+    - branch_id: "FB-PM5-07-NONPROPER-GROUP-CLAIM"
+      trigger: "P is asserted equal to GL(4,R)."
+      exact_effect: "The claimed structure-group reduction becomes trivial and contradicts the exact shear witness."
+      example_or_falsifier: "S^*e^0=e^0+e^1."
+      disposition: "equality_claim_refuted"
+    - branch_id: "FB-PM5-08-REFINEMENT-CHANGES-LINE"
+      trigger: "A purported refinement uses a q'_alpha not locally reparametrized from the parent q_i."
+      exact_effect: "The embedded line can change, so the purported refinement is a new candidate rather than the same presentation."
+      example_or_falsifier: "q=x^0 versus q'=x^0+x^1."
+      disposition: "reclassified_as_distinct_proposal"
+    - branch_id: "FB-PM5-09-INDEPENDENT-PERTURBATION-BREAKS-OVERLAP"
+      trigger: "Local q_i are perturbed independently without updating compatible phi_ji."
+      exact_effect: "Submersion may survive chartwise while overlap descent fails."
+      example_or_falsifier: "Perturb q_1=2x^0+1 to q_1+x^1 while keeping q_0 and phi_10 fixed."
+      disposition: "robustness_claim_limited"
+    - branch_id: "FB-PM5-10-KSTAR-SELECTS-FOLIATION"
+      trigger: "The proposal claims the frozen K_star assignment canonically selects A or L_A^*."
+      exact_effect: "This contradicts RT004 local bridge irrelevance and replays the frozen route."
+      example_or_falsifier: "A_0 and A_1 have identical K_star reducts but distinct lines."
+      disposition: "selection_claim_rejected_candidate_remains_extra_source_data"
+    - branch_id: "FB-PM5-11-ISOMORPHISM-QUOTIENT-OVERCLAIM"
+      trigger: "The strict same-M witness is promoted to nonfactorization on diffeomorphism-isomorphism classes."
+      exact_effect: "The exact linear shear gives an isomorphism between the two displayed presentations, so the stronger conclusion is not proved."
+      example_or_falsifier: "f(x^0,x^1,x^2,x^3)=(x^0+x^1,x^1,x^2,x^3)."
+      disposition: "stronger_claim_withheld_and_smuggling_audit_required"
+    - branch_id: "FB-PM5-12-TARGET-GEOMETRY-IMPORT"
+      trigger: "A is chosen to match a target atlas, Lorentzian time covector, desired cone, tetrad, or metric."
+      exact_effect: "The candidate becomes invalid under the active claim boundary."
+      example_or_falsifier: "Defining q_i as a target time coordinate is forbidden even though its differential forms a line."
+      disposition: "boundary_invalid"
+    - branch_id: "FB-PM5-13-PHYSICAL-SEMANTICS-OVERREAD"
+      trigger: "The conormal line is called physical time orientation, causality, response, or g_eff."
+      exact_effect: "An unoriented rank-one source covector line lacks every such semantic and geometric structure."
+      example_or_falsifier: "Both dq and -dq represent the same output, so no time direction is selected."
+      disposition: "physical_claim_blocked"
+    - branch_id: "FB-PM5-14-CURRENT-ONTOLOGY-DERIVATION-OVERREAD"
+      trigger: "The existence or uniqueness of A is attributed to the current ontology."
+      exact_effect: "The proposal-only primitive is misclassified as a derivation or adoption."
+      example_or_falsifier: "The same bare R^4 and frozen K_star support A_0 and A_1, so neither is uniquely derived from the current reduct."
+      disposition: "classification_corrected_to_proposal_only_new_source_primitive_not_adopted"
+
+robustness_boundary:
+  proved_scope: "Exact restriction, refinement, overlap, gluing, presentation-arrow naturality, rational one-parameter variation, and coordinate derivative-controlled submersion persistence."
+  not_proved_scope:
+    - "physical finite-variation robustness"
+    - "generic stability under independent chart perturbations"
+    - "canonical persistence under every bare diffeomorphism"
+    - "dynamical stability or empirical response stability"
+    - "exact-GR recovery"
+  auxiliary_metric_used: false
+  coordinate_bound_used: "partial_0 r>-1/2"
+  overlap_compatibility_remains_required: true
+  robustness_overread_blocked: true
+
+candidate_constructor_result:
+  result_type: "constructed_candidate"
+  result_count: 1
+  scientific_result_id: "RESULT-V22-P4T02-B2-SOURCE-LOCAL-PCR-CONSTRUCTED-001"
+  constructed_candidate_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_math_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  formal_objects:
+    - "SourceFoliationPresentation"
+    - "ProjectiveConormalSection"
+    - "ConormalLineBundle"
+    - "AnnihilatorDistribution"
+    - "LineStabilizer"
+    - "AdaptedFrameReduction"
+    - "SourcePresentationCategory"
+    - "FrozenKStarReduct"
+  maps:
+    - "ell_A:M->P(T^*M)"
+    - "Red_P:L_A^*->R_A"
+    - "Bridge_PCR:SrcFolPCR_4->ProjConRed_4"
+    - "Res_V:(M,A)->(V,A|V)"
+    - "U_K:SrcFolPCR_4->FrozenKStarReduct_4"
+  proof_obligations:
+    - "PO-PM5-01-SOURCE-PREDECLARATION through PO-PM5-18-NO-TARGET-IMPORT"
+  failed_components:
+    - "none_within_the_declared_proposal_mathematics"
+  next_required_role: "smuggling-auditor@0.2.0"
+  no_fog_check: true
+  no_fog_explanation: "The predeclared codimension-one foliation atlas constructs a unique smooth unoriented conormal line and proper GL(4,R) stabilizer reduction, with exact restriction, refinement, overlap, gluing, and source-presentation naturality. The rational same-M pair makes the bridge nonconstant and rules out strict factorization through unchanged K_star. This is a proposal-only new source primitive, not a current-ontology derivation, adopted law, physical time structure, target geometry, or g_eff result."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "research_control/tasks/RT-20260814-005/00_TASK.yaml#claim_boundary"
+
+physics_progress_status:
+  status: "candidate_constructed_pending_audit"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Construct independently source-derived local reduction and nonfactorizing bridge data after excluding unchanged K_star standalone replay."
+  explanation: "One mathematically complete proposal-only source-extension candidate and strict bridge witness is constructed. Its source legitimacy and noncircularity have not yet passed the separately admitted Smuggling Auditor, and no downstream physical burden changes."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+new_mathematical_payload:
+  payload_count: 1
+  items:
+    - payload_id: "PAYLOAD-RT005-PM-001"
+      payload_type: "construction"
+      name: "SourceLocalProjectiveConormalReduction_v1"
+      statement: "A predeclared codimension-one source foliation presentation descends to a smooth unoriented projective conormal line and a proper GL(4,R) adapted-frame reduction; the bridge commutes with restrictions, refinements, overlaps, gluing, and source-presentation arrows, and one exact rational same-M pair proves nonconstancy and strict nonfactorization through frozen K_star."
+      falsifier: "Exhibit a valid declared presentation for which descent, proper reduction, locality, or presentation naturality fails, or defeat the exact same-M line inequality or equality of frozen K_star reducts."
+      burden_effect: "constructs_one_proposal_candidate_pending_smuggling_audit_without_distance_delta"
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT005-PM-001"
+    payload_type: "construction"
+    object_name: "SourceLocalProjectiveConormalReduction_v1"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_math_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+    burden_effect: "constructs_proposal_candidate_pending_smuggling_audit_without_distance_delta"
+    summary: "A codimension-one source foliation presentation descends to an unoriented projective conormal line and proper adapted-frame reduction; exact rational fixtures prove locality, naturality, nonconstancy, and strict nonfactorization through frozen K_star."
+
+source_extension_classification:
+  classification: "proposal_only_new_source_primitive_not_adopted"
+  role_taxonomy_category: "new_ontology_primitive"
+  current_ontology_derivation: false
+  conservative_definitional_extension: false
+  forbidden_target_gr_import_detected: false
+  new_source_primitive_constructed_as_proposal: true
+  source_primitive_name: "codimension-one source foliation presentation A"
+  descended_data_name: "unoriented projective conormal line L_A^* and proper adapted-frame P-reduction R_A"
+  canonical_ontology_candidate_status_claimed: false
+  canonical_ontology_modified: false
+  source_law_adopted: false
+  source_law_rejected: false
+  human_gate_exercised: false
+  adoption_status: "blocked_adoption_open_continuation"
+  target_atlas_free: true
+  target_metric_free: true
+  physical_time_free: true
+  response_semantics_free: true
+  exact_gr_recovery_status: "not_attempted_and_not_satisfied"
+  current_ontology_implication: "The current ontology still does not derive or uniquely select A; the constructed object exists only after A is added as explicit proposal source data."
+  future_use_boundary: "No later task may treat the candidate as canonical, physical, or bridge-relevant beyond the strict criterion without separate audit, stress, and protected adoption authority."
+
+freeze_control:
+  preserved_freeze_count: 7
+  all_preserved: true
+  any_reopened: false
+  any_new_freeze_added: false
+  freezes:
+    - freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+      status: "preserved_not_reopened"
+  distinct_branch_basis: "The candidate adds explicit foliation-presentation data and constructs its descended reduction. It neither derives the datum from K_star nor repairs, replays, or renames any frozen candidate."
+
+freeze_criteria_status:
+  repeated_burden: false
+  freeze_evaluation_required: true
+  active_candidate_freeze_label: ""
+  freeze_decision: "not_frozen"
+  decision_reason: "This task delivers materially new formal objects, a complete local construction, exact rational witnesses, and a concrete audit target. It is not another K_star-only or selector-only replay."
+  next_allowed_route: "smuggling-auditor"
+  no_status_update_rationale: "This child has no authority to update a ledger or freeze registry, and no new local freeze is mathematically justified before the independent audit."
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_source_local_bridge"
+  current_cycle_step: "candidate_constructor"
+  prior_related_tasks:
+    - "RT-20260814-002"
+    - "RT-20260814-003"
+    - "RT-20260814-004"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "RT005 adds a named source object, exact descent, proper reduction, nonconstant bridge, and a strict no-factor witness. The next role is restricted to auditing this exact object rather than selecting another candidate or replaying K_star."
+  next_role_consequence: "smuggling-auditor@0.2.0"
+
+distance_to_gr_delta:
+  changed: false
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "blocked by missing primitive"
+  new_status: "blocked by missing primitive"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "source legitimacy of the proposal primitive"
+    - "P4-T02 qualifying continuation verdict"
+    - "P4-T03 conformal reconstruction and physical time orientation"
+    - "g_eff"
+    - "matter coupling"
+    - "Einstein equations"
+    - "benchmark promotion"
+  explanation: "Constructing proposal source-extension data is mathematical progress but neither adopts a source primitive nor supplies a cone, conformal class, scale, metric, response law, or physical interpretation."
+
+distance_to_gr_status:
+  row_count: 14
+  changed: false
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      finding: "A proposal-only primitive is constructed but not derived, adopted, or entered into canonical source ontology."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      finding: "Neither A nor K_star is adopted as EqSrc or as physical allowedness."
+    - burden: "RetainH"
+      status: "no_delta"
+      finding: "No history-retention object or law is constructed."
+    - burden: "GenH"
+      status: "no_delta"
+      finding: "No source generator, evolution law, or transition dynamics is constructed."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      finding: "A conormal line is not an observer-localization map."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      finding: "No response carrier, sign, normalization, answer, or empirical semantics is assigned."
+    - burden: "M_src"
+      status: "no_delta"
+      finding: "The smooth arena remains primitive debt and is not promoted to derived or adopted M_src."
+    - burden: "g_eff"
+      status: "no_delta"
+      finding: "A rank-one unoriented covector line and proper GL(4) reduction do not determine a cone, conformal Lorentzian class, scale, or metric."
+    - burden: "matter coupling"
+      status: "no_delta"
+      finding: "No propagation sector, principal polynomial, matter response, or universal coupling law is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      finding: "No action, variation, closure law, stress-energy relation, or field equation is supplied."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      finding: "The exact derivative-controlled source-presentation family is not physical finite-variation or dynamical robustness evidence."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      finding: "No benchmark comparison, recovery result, or promotion occurs."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      finding: "No protected adoption, review verdict, or Gate Chair action occurs."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      finding: "All seven existing freezes remain fixed and this child adds no route-wide hard fail or new freeze."
+
+downstream_locks:
+  d7_reevaluated: false
+  d7_coverage_claimed: false
+  descriptor_instance_complete: false
+  b2_active: false
+  b2_activated: false
+  b2_adopted: false
+  b2_rejected: false
+  b2_disposed: false
+  b2_viability_claimed: false
+  b2_adequacy_claimed: false
+  b2_sufficiency_claimed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+  p4_t03_unlocked_or_executed: false
+  source_ontology_adopted: false
+  m_src_adopted: false
+  eqsrc_constructed_or_adopted: false
+  physical_time_orientation_assigned: false
+  physical_causality_assigned: false
+  empirical_response_semantics_assigned: false
+  target_geometry_constructed: false
+  conformal_structure_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+
+successor_advice:
+  advice_count: 1
+  packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1"
+  packet_type: "source_extension_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  next_role_family: "smuggling-auditor@0.2.0"
+  status: "selected_not_executed"
+  objective: "Audit exactly SourceLocalProjectiveConormalReduction_v1 for target import, goal shaping, hidden orientation, K_star allowedness, circular restriction to foliation-preserving arrows, presentation-sensitive identity-over-M factorization, and unauthorized physical or ontology semantics; return one bounded audit verdict without adopting the primitive or executing Refuter stress."
+  admission_reason: "The construction is mathematically complete, but its source legitimacy depends on whether the new foliation datum and strict bridge criterion are independently motivated rather than selected to defeat RT004."
+  trigger_classification: "constructed_proposal_candidate_requires_hidden_target_import_audit"
+  source_extension_classification: "proposal_only_new_source_primitive_not_adopted"
+  adoption_status: "blocked_adoption_open_continuation"
+  execution_authorized_here: false
+  successor_created: false
+  successor_executed: false
+  refuter_stress_executed: false
+  human_gate_required_for_audit: false
+  human_gate_required_for_adoption: true
+  authority_limits:
+    - "Audit only the exact proposal, category, bridge map, criterion, and fixtures recorded here."
+    - "Do not adopt A, L_A^*, R_A, M_src, EqSrc, physical allowedness, time, response, cone, metric, or g_eff."
+    - "Do not execute Refuter stress, D7, B2, P4-T03, Gate, benchmark, publication, push, or external action."
+
+conflict_and_risk_notes:
+  blocking_conflict_present: false
+  peer_child_inspected: false
+  parent_conflict_review_required_by_job: true
+  unresolved_child_internal_conflict_count: 0
+  child_result_ready_for_parent_fusion: true
+  exact_scope_conflict: "No mathematical contradiction was found inside the declared proposal category. The only material risk is semantic and categorical: the same-M strict factorization criterion distinguishes embedded presentations that can be isomorphic under a nonidentity diffeomorphism."
+  risks:
+    - risk_id: "RISK-PM5-01-PRESENTATION-CIRCULARITY"
+      risk: "Restricting arrows to foliation-preserving diffeomorphisms may build the desired reduction into the source category."
+      mitigation: "Require the separately admitted Smuggling Auditor to test independent source provenance and reject any target-shaped arrow restriction."
+    - risk_id: "RISK-PM5-02-STRICT-VERSUS-QUOTIENT-FACTOR"
+      risk: "The exact witness proves nonfactorization only for embedded equality over id_M, while the displayed candidates are related by a linear diffeomorphism."
+      mitigation: "Withhold all quotient-isomorphism and physical-inequivalence claims; audit the relevance of the strict criterion before later use."
+    - risk_id: "RISK-PM5-03-LINE-TO-TIME-OVERREAD"
+      risk: "An unoriented conormal line may be mislabeled as a time orientation or causal covector."
+      mitigation: "Record that dq and -dq are identified and that no cone, sign, temporal direction, metric, or response semantics is present."
+    - risk_id: "RISK-PM5-04-KSTAR-ALLOWEDNESS"
+      risk: "A later task may demand invariance under all K_star elements as if K_star were adopted physical allowedness."
+      mitigation: "Keep K_star as the frozen mathematical reduct only; do not use it to select or reject A without separate authority."
+    - risk_id: "RISK-PM5-05-WORKFLOW-PROMOTION"
+      risk: "Validation, checkpoint, or parent fusion may be mistaken for scientific adoption."
+      mitigation: "Keep proof authority, adoption, physical status, and every downstream promotion flag false."
+
+authority_blocks:
+  k_star_redefined_or_repaired: false
+  k_star_replayed_as_bridge: false
+  k_star_adopted_as_eqsrc: false
+  k_star_adopted_as_gauge: false
+  k_star_adopted_as_physical_allowedness: false
+  phi_src_semantics_assigned: false
+  current_ontology_derivation_claimed: false
+  canonical_ontology_candidate_status_claimed: false
+  source_law_adopted: false
+  source_law_rejected: false
+  canonical_ontology_modified: false
+  m_src_adopted: false
+  eqsrc_constructed_or_adopted: false
+  target_atlas_imported: false
+  target_metric_imported: false
+  target_lorentz_group_imported: false
+  target_tetrad_or_coframe_imported: false
+  desired_cone_imported: false
+  physical_time_orientation_assigned: false
+  physical_causality_assigned: false
+  empirical_response_label_imported: false
+  d7_authority_exercised: false
+  b2_authority_exercised: false
+  p4_t03_authority_exercised: false
+  effective_metric_claimed: false
+  matter_coupling_claimed: false
+  einstein_equations_claimed: false
+  gate_chair_verdict_issued: false
+  benchmark_promotion_authorized: false
+  proof_authority: false
+  scientific_claim_status_promoted: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  publication_authorized: false
+  public_release_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  global_no_go_claimed: false
+  global_theory_rejection_claimed: false
+  future_source_extension_impossibility_claimed: false
+  completed_derivation_claimed: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "current-ontology derivation, canonical-ontology candidate status, adoption, or rejection"
+    - "M_src, EqSrc, K_star gauge, or K_star physical allowedness"
+    - "target atlas, target metric, target Lorentz group, tetrad, coframe, or desired cone"
+    - "physical time orientation, causality, response semantics, or empirical answer"
+    - "D7 reevaluation, B2 action, P4-T03 unlock or execution"
+    - "g_eff, matter coupling, Einstein equations, or exact-GR recovery"
+    - "benchmark promotion, Gate Chair verdict, proof promotion, publication, push, or external action"
+    - "global no-go, global theory rejection, future source-extension impossibility, or completed derivation"
+  summary: "The child result is one draft/control proposal construction and strict mathematical bridge witness. Neither its existence nor any workflow receipt grants source-law adoption, physical meaning, target geometry, or downstream GR authority."
+
+validation_contract:
+  strict_yaml_required: true
+  repository_subset_yaml_required: true
+  unique_mapping_keys_required: true
+  source_hash_recomputation_required: true
+  live_head_and_tree_recheck_required: true
+  exact_candidate_constructor_result_count_required: 1
+  decisive_result_type_required: "constructed_candidate"
+  proof_obligation_count_minimum: 14
+  proof_obligation_count_declared: 18
+  failure_branch_count_minimum: 11
+  failure_branch_count_declared: 14
+  exact_fixture_count_declared: 5
+  preserved_freeze_count_required: 7
+  distance_to_gr_row_count_required: 14
+  literal_no_delta_count_required: 14
+  successor_advice_count_required: 1
+  successor_status_required: "selected_not_executed"
+  successor_execution_required: false
+  no_fog_check_required: true
+  authority_boundary_required: true
+  whitespace_clean_required: true
+  owned_path_only_required: true
+  parent_validator_or_checkpoint_forbidden_for_child: true
+
+child_conclusion:
+  decisive_result: "constructed_candidate"
+  constructed_object: "SourceLocalProjectiveConormalReduction_v1"
+  bridge_result: "nonconstant_and_strictly_nonfactorizing_through_frozen_k_star_over_identity_M"
+  source_extension_classification: "proposal_only_new_source_primitive_not_adopted"
+  next_role_family: "smuggling-auditor@0.2.0"
+  successor_packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1"
+  successor_status: "selected_not_executed"
+  blocking_conflict_present: false
+  substantive_summary: "A predeclared codimension-one source foliation atlas exactly descends to an unoriented projective conormal line and proper GL(4,R) line-stabilizer frame reduction, with restrictions, refinements, overlaps, cocycle, gluing, and presentation-arrow naturality proved. Exact rational same-M candidates give different embedded bridge outputs with identical unchanged K_star, defeating strict factorization through the frozen reduct. The result is proposal-only and carries no current-ontology, physical, target-geometric, adoption, or downstream authority."

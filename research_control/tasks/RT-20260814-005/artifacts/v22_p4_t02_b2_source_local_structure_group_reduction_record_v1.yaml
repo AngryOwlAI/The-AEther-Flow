@@ -1,0 +1,364 @@
+schema_id: "v22_p4_t02_b2_source_local_structure_group_reduction_record_v1"
+status: "draft_control"
+authority: "science_draft"
+task_id: "RT-20260814-005"
+job_id: "AJ-RT-20260814-005-001"
+decision_id: "DDR-20260814-005"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-CONSTRUCTION-V1"
+candidate_id: "CAND-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-V1"
+candidate_name: "SourceLocalProjectiveConormalReduction_v1"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Construct independently source-derived local reduction and nonfactorizing bridge data after excluding unchanged K_star standalone replay."
+
+candidate_constructor_result:
+  result_count: 1
+  result_type: "constructed_candidate"
+  constructed_candidate_path: "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_v1.tex"
+  minimal_countermodel_path: ""
+  obstruction_id: ""
+  result_scope: "proposal-only source-foliation presentations, their projective conormal descent, proper line-stabilizer reduction, typed proposal arrows, and the exact same-manifold K_star nonfactorization fixture"
+  formal_objects:
+    - "codimension-one source-foliation presentation"
+    - "unoriented projective conormal line L_q"
+    - "proper covector-line stabilizer H"
+    - "principal H-reduction P_H(q)"
+    - "proposal-category bridge Bridge_PCR"
+  maps:
+    - "local differential line and descent maps"
+    - "line-to-frame-reduction map"
+    - "restriction and cover-refinement maps"
+    - "typed presentation transport"
+    - "Bridge_PCR and the forgetful comparison to frozen K_star"
+  proof_obligations:
+    - "separate Smuggling Auditor review of source purity, goal neutrality, arrow circularity, and independent source justification"
+    - "retain proposal-only status and every downstream block"
+  failed_components: []
+  next_required_role: "smuggling-auditor"
+  no_fog_check: true
+  no_fog_explanation: "The packet supplies exact objects, maps, descent and reduction proofs, rational fixtures, nonfactorization, falsifiers, and an exclusive result rather than substituting a request for future work."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "research_control/tasks/RT-20260814-005/00_TASK.yaml"
+
+bridge_attempt_status:
+  status: "constructed_proposal_only_candidate_pending_smuggling_audit"
+  candidate_map: "Bridge_PCR"
+  signature: "Bridge_PCR:(M,U,q,gamma)->(L_q,P_H(q))"
+  constructed_object_path: "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_v1.tex"
+  exact_atlas_path: "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_projective_conormal_atlas_v1.yaml"
+  nonconstant: true
+  factors_through_frozen_kstar: false
+  restriction_compatible: true
+  refinement_compatible: true
+  overlap_cocycle_discharged: true
+  gluing_discharged: true
+  proposal_naturality_discharged: true
+  missing_primitive: "independently current-source-derived reason selecting the foliation atlas and its full admissible arrow class"
+  preserves_blocks: "Preserves all seven freezes, D7 non-evaluation, B2 inactivity, P4-T03 lock, and every physical, empirical, adoption, Gate, promotion, publication, push, and external-action block."
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  category: "new_ontology_primitive"
+  controlled_status: "proposal-only"
+  status_label: "proposal-only"
+  material_class: "source-extension data"
+  relation_to_current_ontology: "missing_primitive"
+  current_ontology_derivation: false
+  current_ontology_modified: false
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  target_import_detected_in_written_syntax: false
+  epistemic_source_derivation_established: false
+  adoption_status: "blocked_adoption_open_continuation"
+  protected_authority_required_before_adoption: true
+  downstream_promotion_authorized: false
+
+formal_domains:
+  - domain_id: "DOM-01"
+    name: "PropFol4"
+    status: "formed_proposal_only"
+  - domain_id: "DOM-02"
+    name: "ProjectiveConormalLines"
+    status: "formed"
+  - domain_id: "DOM-03"
+    name: "ProperLineStabilizerReductions"
+    status: "formed"
+  - domain_id: "DOM-04"
+    name: "TypedProposalArrows"
+    status: "formed_conditionally"
+  - domain_id: "DOM-05"
+    name: "ExactRationalControls"
+    status: "complete"
+
+formal_maps:
+  - map_id: "MAP-01"
+    signature: "q_i->span(dq_i)"
+    status: "constructed"
+  - map_id: "MAP-02"
+    signature: "Descent:{span(dq_i)}->L_q"
+    status: "proved"
+  - map_id: "MAP-03"
+    signature: "Reduction:L_q->P_H(q)"
+    status: "proved"
+  - map_id: "MAP-04"
+    signature: "Bridge_PCR:PropFol4->ReductionData"
+    status: "constructed"
+  - map_id: "MAP-05"
+    signature: "Restrict:PropFol4(M)->PropFol4(V)"
+    status: "proved"
+  - map_id: "MAP-06"
+    signature: "Refine:Cover'->Cover"
+    status: "proved"
+  - map_id: "MAP-07"
+    signature: "Transport:f^*L_target=L_source"
+    status: "proved_on_declared_arrows"
+  - map_id: "MAP-08"
+    signature: "Forget:PropFol4->Smooth4"
+    status: "formed"
+  - map_id: "MAP-09"
+    signature: "K_star_after_Forget"
+    status: "fixed_and_nonseparating"
+
+theorem_results:
+  - theorem_id: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-DESCENT-001"
+    status: "exact_conditional_proof"
+    statement: "Nonzero overlap derivatives identify local differential lines and the cocycle glues them uniquely to L_q."
+  - theorem_id: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-PROPER-REDUCTION-001"
+    status: "exact_conditional_proof"
+    statement: "The covector-line stabilizer has dimension thirteen and defines a proper principal reduction."
+  - theorem_id: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-KSTAR-NONFACTORIZATION-001"
+    status: "exact_fixture_proof"
+    statement: "Two proposal structures on one R4 have identical frozen K_star and distinct Bridge_PCR images."
+  - theorem_id: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-PROPOSAL-NATURALITY-001"
+    status: "exact_conditional_proof"
+    statement: "Bridge_PCR is natural for every declared proposal arrow and restriction."
+  - theorem_id: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-LOCAL-ROBUSTNESS-001"
+    status: "hypothesis_scoped"
+    statement: "Submersion and line descent persist under coherent small C1 perturbations on fixed compact chart domains."
+
+proof_obligations:
+  - obligation_id: "PO-01"
+    status: "discharged"
+    evidence: "The current smooth source arena is typed without assigning Phi_src semantics."
+  - obligation_id: "PO-02"
+    status: "discharged_at_proposal_scope"
+    evidence: "The foliation atlas is declared before P4 outputs and is not called current-ontology derived."
+  - obligation_id: "PO-03"
+    status: "discharged"
+    evidence: "Each admitted q_i is a submersion."
+  - obligation_id: "PO-04"
+    status: "discharged"
+    evidence: "Each overlap reparametrization has nonzero derivative."
+  - obligation_id: "PO-05"
+    status: "discharged"
+    evidence: "Identity, inverse, and triple-overlap cocycles are explicit."
+  - obligation_id: "PO-06"
+    status: "discharged"
+    evidence: "Projective conormal descent and unique gluing are proved."
+  - obligation_id: "PO-07"
+    status: "discharged"
+    evidence: "Restrictions and cover refinements preserve the descended object."
+  - obligation_id: "PO-08"
+    status: "discharged"
+    evidence: "H is a closed dimension-thirteen proper subgroup of GL(4,R)."
+  - obligation_id: "PO-09"
+    status: "discharged"
+    evidence: "Adapted frames form a principal H-subbundle."
+  - obligation_id: "PO-10"
+    status: "discharged_conditionally"
+    evidence: "Naturality is proved for every predeclared proposal arrow; adopted EqSrc is not claimed."
+  - obligation_id: "PO-11"
+    status: "discharged"
+    evidence: "The exact A/B R4 fixture has distinct bridge images."
+  - obligation_id: "PO-12"
+    status: "discharged"
+    evidence: "Same base and identical frozen K_star prove nonfactorization."
+  - obligation_id: "PO-13"
+    status: "discharged_with_scope"
+    evidence: "Local coherent C1 robustness and exact failure conditions are stated."
+  - obligation_id: "PO-14"
+    status: "discharged"
+    evidence: "Proposal, ontology, physical, empirical, adoption, and workflow layers remain separated."
+
+failure_branches:
+  - branch_id: "FB-01"
+    status: "not_triggered"
+    result: "vanishing_differential_obstruction"
+  - branch_id: "FB-02"
+    status: "not_triggered"
+    result: "overlap_reparametrization_obstruction"
+  - branch_id: "FB-03"
+    status: "not_triggered"
+    result: "cocycle_and_descent_obstruction"
+  - branch_id: "FB-04"
+    status: "not_triggered"
+    result: "target_group_import"
+  - branch_id: "FB-05"
+    status: "reserved_for_smuggling_audit"
+    result: "goal_selected_foliation_obstruction"
+  - branch_id: "FB-06"
+    status: "not_triggered"
+    result: "authority_overread"
+  - branch_id: "FB-07"
+    status: "reserved_for_smuggling_audit"
+    result: "circular_arrow_class_obstruction"
+  - branch_id: "FB-08"
+    status: "not_triggered"
+    result: "constant_or_kstar_factorized_bridge"
+  - branch_id: "FB-09"
+    status: "not_triggered"
+    result: "local_to_global_scope_failure"
+  - branch_id: "FB-10"
+    status: "not_triggered"
+    result: "robustness_margin_failure"
+  - branch_id: "FB-11"
+    status: "not_triggered"
+    result: "physical_semantics_overread"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT014-005-001"
+    payload_type: "theorem"
+    name: "Projective conormal descent theorem"
+    summary: "One-dimensional overlap reparametrizations glue local differential lines."
+  - payload_id: "NMP-RT014-005-002"
+    payload_type: "theorem"
+    name: "Proper line-stabilizer reduction theorem"
+    summary: "The descended line defines a principal reduction to a dimension-thirteen subgroup."
+  - payload_id: "NMP-RT014-005-003"
+    payload_type: "theorem"
+    name: "Typed proposal naturality theorem"
+    summary: "The bridge respects every declared restriction, refinement, and proposal arrow."
+  - payload_id: "NMP-RT014-005-004"
+    payload_type: "theorem"
+    name: "Frozen K_star nonfactorization theorem"
+    summary: "Same-base proposal structures have equal K_star and unequal conormal lines."
+  - payload_id: "NMP-RT014-005-005"
+    payload_type: "exact_control"
+    name: "Rational three-chart atlas and diffeomorphism control"
+    summary: "Exact multipliers, line ranks, stabilizer membership, and the x0+x1 pullback are machine checked."
+  - payload_id: "NMP-RT014-005-006"
+    payload_type: "source_extension_classification"
+    name: "Proposal construction and epistemic-debt separation"
+    summary: "Target-free proposal syntax permits construction but supplies no current-ontology derivation, adoption, or physical meaning."
+
+exact_model:
+  path: "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_model.py"
+  check_count: 24
+  pass_count: 24
+  payload_sha256: "4ce53617b4c6d8d1fc6fb5279399c3c9ce444824abf9417bd71c9db6a6d76295"
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+
+freeze_criteria_status:
+  evaluated: true
+  inherited_freeze_count: 7
+  new_freeze_created: false
+  active_freeze_count: 7
+  freeze_decision: "not_frozen_pending_first_smuggling_audit"
+  reason: "The candidate is materially distinct and has not yet received its first focused source-extension audit."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_delta"
+  - burden: "Source equivalence EqSrc"
+    status: "no_delta"
+  - burden: "RetainH"
+    status: "no_delta"
+  - burden: "GenH"
+    status: "no_delta"
+  - burden: "ObsLoc_lc"
+    status: "no_delta"
+  - burden: "Resp_lc"
+    status: "no_delta"
+  - burden: "M_src"
+    status: "no_delta"
+  - burden: "g_eff"
+    status: "no_delta"
+  - burden: "matter coupling"
+    status: "no_delta"
+  - burden: "Einstein equations"
+    status: "no_delta"
+  - burden: "finite-variation robustness"
+    status: "no_delta"
+  - burden: "benchmark promotion"
+    status: "no_delta"
+  - burden: "Gate Chair status"
+    status: "no_delta"
+  - burden: "current route freeze or hard-fail status"
+    status: "no_delta"
+
+selected_successor:
+  packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1"
+  packet_type: "source_extension_smuggling_audit"
+  route_label: "ontology-law-research-packet"
+  role_family: "smuggling-auditor@0.2.0"
+  status: "selected_not_executed"
+  created: false
+  executed: false
+  audit_scope:
+    - "independent source provenance of the foliation primitive"
+    - "goal-property and target-atlas smuggling"
+    - "noncircular admissible arrow selection"
+    - "epistemic selection versus transparent stipulation"
+    - "physical and empirical overread boundaries"
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_math_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+      output_sha256: "bf66d8810b2fef2a17e87af028c9097bbe0b639c8393dfce155b5874885d5f78"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260814-005/artifacts/child_phys_phil_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+      output_sha256: "8fcb56ee4a165a6de896f34a0779511476a2e4722de56396628d323d6722379a"
+      status: "completed"
+  conflict_review:
+    status: "resolved_no_blocking_conflict"
+    review_path: "research_control/tasks/RT-20260814-005/artifacts/parent_conflict_review_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+    review_sha256: "9e023f14f39918c70f1d6a959a5df28f8044e4a88159696e805d393590e60d4a"
+    child_resolution_rounds: 0
+    parent_draft_reconciliations: 1
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_v1.tex"
+    fused_output_sha256: "d4950711f69ffd7787b52df343c191f9e299b726579c1df3d6226ece7973b9c8"
+    fusion_notes_path: "research_control/tasks/RT-20260814-005/artifacts/parent_fusion_notes_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.md"
+    fusion_notes_sha256: "36dac602c02f3a4c6cae06f2c62fc6b75fe2c2823cd8b2669c146aa1503788ee"
+    shared_consensus_summary: "Both children construct the same proposal-only projective-conormal reduction and nonfactorizing bridge, preserve all seven freezes and fourteen no-delta rows, and select the same unexecuted Smuggling Auditor."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+authority_limits:
+  source_law_adopted: false
+  eqsrc_adopted: false
+  physical_time_selected: false
+  causal_cone_constructed: false
+  g_eff_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
