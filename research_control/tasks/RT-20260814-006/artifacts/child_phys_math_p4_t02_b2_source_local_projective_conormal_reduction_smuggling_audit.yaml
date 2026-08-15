@@ -1,0 +1,830 @@
+schema_version: "1.0.0"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1"
+artifact_kind: "physicist_mathematician_child_smuggling_audit"
+authority: "science_draft"
+status: "complete_for_parent_synthesis"
+status_label: "draft/control"
+task_id: "RT-20260814-006"
+agent_job_id: "AJ-RT-20260814-006-001"
+decision_id: "DDR-20260814-006"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+work_item_id: "P4-T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT"
+candidate_id: "CAND-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-V1"
+candidate_name: "SourceLocalProjectiveConormalReduction_v1"
+packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1"
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+role_id: "smuggling-auditor"
+role_version: "0.2.0"
+execution_role_ref: "smuggling-auditor@0.2.0--RT-20260814-006"
+claim_boundary_id: "CB-V22-P4-T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-001"
+created_at: "2026-08-15T02:28:43Z"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Audit whether the proposal-only foliation primitive and its arrow class are independently source-provenanced and target-neutral before any adoption or P4 credit."
+
+ownership:
+  owned_path: "research_control/tasks/RT-20260814-006/artifacts/child_phys_math_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_audit.yaml"
+  sole_file_written: true
+  other_files_edited: false
+  predecessor_files_edited: false
+  parent_or_control_files_edited: false
+  peer_child_file_inspected: false
+  current_task_parent_artifacts_inspected: false
+  registry_files_edited: false
+  generated_derivatives_edited: false
+  model_or_validator_edited: false
+  completion_created: false
+  handoff_created: false
+  successor_created: false
+  checkpoint_executed: false
+  memory_bootstrap_executed: false
+  subagents_created: false
+
+source_binding:
+  hash_algorithm: "sha256"
+  source_head: "91a27b2135a190b59d8a3ce8458ee6c6592b57fa"
+  source_tree: "46c42a008b4331e3018ff9448ea2a9d80fbd2112"
+  live_head_matches_agentjob_source_head: true
+  live_tree_matches_agentjob_source_tree: true
+  exact_source_count: 19
+  sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      use: "project epistemic and conduct boundary"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      use: "root authority and ontology-law route boundary"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      use: "research-control scoped instructions"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      use: "one bounded AgentJob continuation contract"
+    - path: ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+      sha256: "2ec5a542caffa90a54d11f0c03630fde839e92f4917d5dbd55b80b724a46c882"
+      use: "base audit authority and nonpromotion boundary"
+    - path: "research_control/tasks/RT-20260814-006/00_TASK.yaml"
+      sha256: "ed325b69304a95f4739c37e0ee4a7dbba4731bd5f8546494da53b8ecf499023e"
+      use: "active task boundary and twelve required audit dimensions"
+    - path: "research_control/tasks/RT-20260814-006/DDR-20260814-006.md"
+      sha256: "0e21f6f085adbe01a2f714e3252a662540a82569437e69eeb1f31eb4a7f29c21"
+      use: "Director decision and role-fit boundary"
+    - path: "research_control/tasks/RT-20260814-006/jobs/AJ-RT-20260814-006-001.yaml"
+      sha256: "d436fefcdac5f30fdbcc63fb6acf54c8c96ce5ccb44a4974d9c6c6f02bc65b26"
+      use: "active outer AgentJob contract"
+    - path: "research_control/tasks/RT-20260814-006/roles/smuggling-auditor@0.2.0--RT-20260814-006.yaml"
+      sha256: "c89aabbaeb161b4e507b9985a7bbd919d6e4f9e4d9465b632a4a1a8f66a60f50"
+      use: "task-specific audit overlay"
+    - path: "research_control/handoffs/handoff-1035.yaml"
+      sha256: "394ee6ed4305d99234b8c831ba5a192114eae794539fbeaa52b2b6e7bcc2ec5b"
+      use: "committed predecessor handoff and selected packet"
+    - path: "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_v1.tex"
+      sha256: "d4950711f69ffd7787b52df343c191f9e299b726579c1df3d6226ece7973b9c8"
+      use: "fixed registered candidate theorem manuscript"
+    - path: "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_record_v1.yaml"
+      sha256: "3664fa664bbef5f334aa556d93bfd2d1ed2898f938ee31518809a6330986b5df"
+      use: "fixed candidate result and proof-obligation record"
+    - path: "research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_projective_conormal_atlas_v1.yaml"
+      sha256: "543e9b10b87fde96e2481d532e100d478edb9f380b99cd05b4db435cf10fec0a"
+      use: "fixed exact proposal atlas, maps, fixtures, and failure branches"
+    - path: "research_control/tasks/RT-20260814-005/artifacts/parent_fusion_notes_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.md"
+      sha256: "36dac602c02f3a4c6cae06f2c62fc6b75fe2c2823cd8b2669c146aa1503788ee"
+      use: "fixed parent synthesis and interpretation boundary"
+    - path: "research_control/tasks/RT-20260814-005/artifacts/parent_conflict_review_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.yaml"
+      sha256: "9e023f14f39918c70f1d6a959a5df28f8044e4a88159696e805d393590e60d4a"
+      use: "fixed RT005 precision reconciliation"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      use: "V22 P4-T02 hidden-import and hard-fail boundary"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      use: "active milestone and fourteen burden rows"
+    - path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+      sha256: "562405dd78a03efde831806323081285c7850ee18dbeb2a6b6ecf900417c814c"
+      use: "decisive physics payload and no-fog contract"
+    - path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+      sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789"
+      use: "physics progress and burden-matrix schema"
+  source_binding_note: "All hashes were recomputed from live bytes. Current-task parent and peer artifacts were excluded to preserve independent child judgment."
+
+memory_navigation:
+  activated_job_preflight_status: "PASS"
+  activated_job_preflight_source: "research_control/tasks/RT-20260814-006/jobs/AJ-RT-20260814-006-001.yaml"
+  refresh_needed: false
+  refresh_performed_by_this_child: false
+  memory_bootstrap_performed_by_this_child: false
+  canonical_candidate_sources_inspected: true
+  generated_memory_used_as_authority: false
+
+fixed_rt005_candidate:
+  candidate_name: "SourceLocalProjectiveConormalReduction_v1"
+  candidate_status: "proposal-only"
+  material_status: "source-extension data"
+  source_extension_category: "new_ontology_primitive"
+  adoption_status: "blocked_adoption_open_continuation"
+  constructor_result: "constructed_candidate"
+  theorem_sha256: "d4950711f69ffd7787b52df343c191f9e299b726579c1df3d6226ece7973b9c8"
+  record_sha256: "3664fa664bbef5f334aa556d93bfd2d1ed2898f938ee31518809a6330986b5df"
+  atlas_sha256: "543e9b10b87fde96e2481d532e100d478edb9f380b99cd05b4db435cf10fec0a"
+  parent_fusion_sha256: "36dac602c02f3a4c6cae06f2c62fc6b75fe2c2823cd8b2669c146aa1503788ee"
+  parent_conflict_review_sha256: "9e023f14f39918c70f1d6a959a5df28f8044e4a88159696e805d393590e60d4a"
+  bytes_held_fixed: true
+  predecessor_modified: false
+  conditional_descent_preserved: true
+  proper_reduction_preserved: true
+  typed_proposal_naturality_preserved: true
+  strict_same_reduct_nonfactorization_preserved: true
+  local_robustness_scope_preserved: true
+  seven_freezes_preserved: true
+
+audit_contract:
+  permitted_verdicts:
+    - "source_pure_as_written"
+    - "repair_required"
+    - "forbidden_target_import"
+    - "precise_obstruction"
+  exact_verdict_count_required: 1
+  exact_verdict_count_returned: 1
+  exact_audit_dimension_count_required: 12
+  exact_audit_dimension_count_returned: 12
+  conditional_mathematics_preserved_required: true
+  new_mathematical_payload_required: true
+  natural_projective_covector_selection_test_required: true
+  stabilizer_equivariant_lorentz_conformal_test_required: true
+  quotient_information_loss_test_required: true
+  admitted_arrow_circularity_test_required: true
+  same_reduct_nonselection_test_required: true
+  successor_limit: 1
+  successor_execution_authorized: false
+  no_fog_required: true
+
+decisive_audit_result:
+  verdict: "source_pure_as_written"
+  verdict_count: 1
+  audit_id: "AUDIT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-V1"
+  no_fog_check: true
+  scope: "local written syntax, disclosed primitive debt, conditional mathematics, category typing, quotient loss, target and authority imports, and bridge-relevance limits"
+  exact_decision: "The fixed RT005 candidate contains no operative target-atlas, target-metric, Lorentz-group, desired-cone, empirical-answer, physical-time, benchmark, generated-derivative, registry, role, validator, checkpoint, or workflow-success premise. Its codimension-one foliation data and line-preserving arrow class are transparent proposal-only constructive preload. They support the written conditional descent, proper reduction, typed naturality, and strict same-reduct nonfactorization theorems, but they are not derived or selected by the current ontology and do not establish physical meaning, Lorentz-conformal geometry, P4 relevance, or adoption."
+  local_written_syntax_pure: true
+  forbidden_target_import_detected: false
+  workflow_authority_import_detected: false
+  hidden_empirical_answer_import_detected: false
+  transparent_constructive_goal_preload_detected: true
+  independent_source_provenance_established: false
+  current_ontology_derivation_established: false
+  epistemic_selection_established: false
+  physical_meaning_established: false
+  p4_t02_relevance_established: false
+  source_law_adopted: false
+  candidate_repair_required: false
+  exact_defect_in_conditional_mathematics_found: false
+  conditional_mathematics_preserved: true
+  rationale_for_no_repair: "The candidate expressly labels the atlas and arrows proposal-only, denies current-ontology derivation and adoption, calls its category task-local rather than EqSrc, quarantines the auxiliary norm, and blocks physical overread. Circular admissibility and absent selection are therefore correctly disclosed epistemic limitations rather than false mathematical claims requiring repair."
+
+verdict_semantics:
+  source_pure_as_written_means:
+    - "Every positive theorem premise is ordinary smooth source-side syntax or explicitly disclosed proposal-only source-extension data."
+    - "Forbidden target, empirical, physical, and workflow objects occur only in exclusions, audit questions, or non-conclusions."
+    - "The fixed packet accurately states that it has not derived, selected, interpreted, or adopted the primitive."
+  source_pure_as_written_does_not_mean:
+    - "derivation of a projective covector line from bare SmoothMan_4"
+    - "independent source provenance or epistemic selection of the foliation atlas"
+    - "an independently justified EqSrc or physical allowed-arrow class"
+    - "orientation, normalization, physical time, causality, response, or empirical semantics"
+    - "a Lorentz-conformal structure, scale, g_eff, or matter coupling"
+    - "P4-T02 credit, D7 evaluation, B2 action, P4-T03 unlock, or adoption"
+
+formal_audit_objects:
+  object_count: 9
+  objects:
+    - object_id: "OBJ-RT006-PM-01"
+      name: "BareSmoothCategory"
+      definition: "SmoothMan_4^iso, the category of smooth four-manifolds and all diffeomorphisms, with no foliation, covector line, orientation, or metric supplied."
+    - object_id: "OBJ-RT006-PM-02"
+      name: "ProjectiveCovectorFunctor"
+      definition: "PLine(M)=P(T^*M), transported by covector pullback."
+    - object_id: "OBJ-RT006-PM-03"
+      name: "ProposalFoliationCategory"
+      definition: "The fixed RT005 category whose objects include the foliation atlas and whose arrows carry the descended line."
+    - object_id: "OBJ-RT006-PM-04"
+      name: "LineStabilizer"
+      definition: "H=Stab_GL(4,R)(ell_0) for ell_0=R e^0."
+    - object_id: "OBJ-RT006-PM-05"
+      name: "LorentzConformalSpace"
+      definition: "LC(V), the set of nondegenerate symmetric bilinear forms of Lorentz signature on V modulo positive scalar multiplication."
+    - object_id: "OBJ-RT006-PM-06"
+      name: "ProjectiveQuotientFibre"
+      definition: "All label presentations q whose nonzero differentials span the same embedded covector line."
+    - object_id: "OBJ-RT006-PM-07"
+      name: "FrozenKStarReductFibre"
+      definition: "All proposal structures on one literal M mapped by U_K to the same pair (M,K_star(M))."
+    - object_id: "OBJ-RT006-PM-08"
+      name: "AdmissibleArrowPredicate"
+      definition: "The fixed predicate f^*L_target=L_source together with declared cover transport."
+    - object_id: "OBJ-RT006-PM-09"
+      name: "SixLayerStatusSeparation"
+      definition: "The ordered distinctions written syntax, current-ontology derivation, epistemic selection, physical meaning, P4 relevance, and protected adoption."
+
+formal_audit_maps:
+  map_count: 8
+  maps:
+    - map_id: "MAP-RT006-PM-01"
+      signature: "NatLine:SmoothMan_4^iso->PLine"
+      role: "hypothetical natural projective-covector selection tested and refuted"
+    - map_id: "MAP-RT006-PM-02"
+      signature: "EquivLift:P(V^*)->LC(V)"
+      role: "hypothetical GL_plus(V)-equivariant Lorentz-conformal lift tested and refuted"
+    - map_id: "MAP-RT006-PM-03"
+      signature: "Proj:q->span_R(dq)"
+      role: "fixed projective quotient whose information loss is audited"
+    - map_id: "MAP-RT006-PM-04"
+      signature: "Bridge_PCR:(M,A)->(L_A,P_H(A))"
+      role: "fixed conditional proposal bridge"
+    - map_id: "MAP-RT006-PM-05"
+      signature: "U_K:(M,A)->(M,K_star(M))"
+      role: "fixed forgetful reduct used in same-reduct nonselection"
+    - map_id: "MAP-RT006-PM-06"
+      signature: "Select_K:(M,K_star(M))->L"
+      role: "hypothetical reduct-only selector tested and refuted on the exact A/B fibre"
+    - map_id: "MAP-RT006-PM-07"
+      signature: "ArrowPres:f->boolean"
+      role: "declared line-preservation arrow predicate"
+    - map_id: "MAP-RT006-PM-08"
+      signature: "Adopt:proposal-only source-extension data->adopted source law"
+      role: "protected partial action absent from this task"
+
+new_mathematical_payload:
+  payload_count: 5
+  items:
+    - payload_id: "NMP-RT006-PM-001"
+      payload_type: "theorem"
+      name: "Bare SmoothMan_4 natural projective-covector nonselection theorem"
+      genuinely_new_in_rt006: true
+      statement: "There is no assignment (M,x)->ell(M,x) in P(T_x^*M) natural under all smooth four-manifold diffeomorphisms."
+      proof:
+        - "Assume such an assignment and evaluate it at the origin of R^4. Every orientation-preserving linear A in GL_plus(4,R) is a diffeomorphism fixing the origin, so naturality makes ell(R^4,0) fixed by the full dual GL_plus action."
+        - "Choose a positive-determinant basis change carrying the alleged fixed line to R e^0. The determinant-one shear S with S^*e^0=e^0+e^1 moves that line. Conjugating S back moves the original line, contradicting fixedness."
+      falsifier: "Exhibit one projective covector line fixed by every determinant-positive shear and basis change in GL_plus(4,R)."
+      exact_scope: "bare smooth four-manifolds only; extra independently sourced structure may reduce isotropy"
+      burden_effect: "proves_current_bare_source_nonselection_without_global_extension_no_go"
+    - payload_id: "NMP-RT006-PM-002"
+      payload_type: "theorem"
+      name: "No H-equivariant Lorentz-conformal lift from a projective covector line"
+      genuinely_new_in_rt006: true
+      statement: "For V=R^4 and H=Stab_GL_plus(V)(R e^0), no GL_plus(V)-equivariant map P(V^*)->LC(V) exists."
+      proof:
+        - "Because P(V^*) is the homogeneous space GL_plus(V)/H, an equivariant map exists only if the proposed image of R e^0 is an H-fixed Lorentz-conformal class."
+        - "For every t>0, D_t=diag(1,t,1,1) lies in H. If a nondegenerate symmetric matrix G represented an H-fixed conformal class, D_t^T G D_t=c_t G for some positive c_t."
+        - "Taking determinants gives t^2 det(G)=c_t^4 det(G), hence c_t=t^(1/2). Each entry of D_t^T G D_t is multiplied by t^k with k equal to zero, one, or two, and none of those characters equals t^(1/2) for all t>0. Every entry of G must therefore vanish, contradicting nondegeneracy."
+      falsifier: "Supply a nondegenerate Lorentz-signature G and positive function c_t satisfying D_t^T G D_t=c_t G for all rational t>0; the determinant and entry-weight equations are exact and jointly inconsistent."
+      exact_scope: "the line and its full stabilizer alone; no claim about richer independently sourced structures"
+      burden_effect: "blocks_line_alone_from_naturally_producing_Lorentz_conformal_geometry"
+    - payload_id: "NMP-RT006-PM-003"
+      payload_type: "lemma"
+      name: "Projective-label quotient information-loss lemma"
+      genuinely_new_in_rt006: true
+      statement: "The map q->span(dq) forgets label origin, nonzero normalization, transverse orientation, and nonlinear one-dimensional reparametrization."
+      proof:
+        - "On R^4, every q_ab=a x^0+b with rational a nonzero and rational b has dq_ab=a dx^0 and therefore the same projective line R dx^0."
+        - "The global diffeomorphism h(t)=t+t^3 also gives d(h composed with x^0)=(1+3(x^0)^2)dx^0, the same line with a nonconstant positive multiplier."
+        - "Taking a<0 shows that the quotient identifies both transverse orientations. Thus no inverse can recover sign, scale, origin, or full label presentation from L_q."
+      falsifier: "Construct a single-valued inverse that distinguishes q=x^0, q=-2x^0+1, and q=x^0+(x^0)^3 from their identical embedded projective line."
+      exact_scope: "label data only; the underlying codimension-one hyperplane distribution is retained"
+      burden_effect: "quarantines_orientation_normalization_time_and_response_overread"
+    - payload_id: "NMP-RT006-PM-004"
+      payload_type: "proposition"
+      name: "Declared-arrow naturality has no independent admissibility force"
+      genuinely_new_in_rt006: true
+      statement: "When proposal arrows are defined by f^*L_target=L_source, Bridge_PCR naturality on those arrows is mathematically correct but follows from the arrow predicate and cannot independently justify that predicate."
+      proof:
+        - "The object part of Bridge_PCR contains L. The defining arrow equation is exactly the line-transport equation required for naturality of that object part."
+        - "The adapted-frame transport then follows functorially from pullback, so no separate current-source law selecting the arrows enters the proof."
+        - "Using this theorem to infer that line-preserving arrows are the independently admissible arrows would repeat the premise as the conclusion. The fixed packet avoids that inference by calling the category task-local and not EqSrc."
+      falsifier: "Provide a current-ontology-derived arrow predicate that does not mention A, L_q, Bridge_PCR, target geometry, or desired P4 output, then prove independently that it implies line preservation. No such predicate appears in the fixed sources."
+      exact_scope: "epistemic force of the naturality theorem, not its conditional mathematical correctness"
+      burden_effect: "identifies_disclosed_arrow_circularity_without_repairing_the_candidate"
+    - payload_id: "NMP-RT006-PM-005"
+      payload_type: "proposition"
+      name: "Frozen-K_star same-reduct nonselection corollary"
+      genuinely_new_in_rt006: true
+      statement: "The exact RT005 A/B fixture not only proves strict nonfactorization; it also proves that frozen K_star cannot select one of the two embedded projective lines."
+      proof:
+        - "Both proposal objects have the same literal M=R^4 and the same unchanged K_star(M)=Diff_c(R^4)."
+        - "Their bridge lines R dx^0 and R(dx^0+dx^1) are unequal by exact coefficient comparison."
+        - "Any selector depending only on the common reduct has one value on that reduct and therefore cannot agree with both proposal outputs."
+      falsifier: "Show that the reduct objects differ or produce a nonzero lambda with dx^0+dx^1=lambda dx^0."
+      exact_scope: "the unchanged K_star reduct only; no global no-go for materially enriched source data"
+      burden_effect: "proves_K_star_information_loss_and_absence_of_epistemic_selection"
+
+mathematical_payload_manifest:
+  - payload_id: "NMP-RT006-PM-001"
+    payload_type: "theorem"
+    object_name: "Bare SmoothMan_4 natural projective-covector nonselection theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260814-006/artifacts/child_phys_math_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_audit.yaml"
+    burden_effect: "narrows_current_source_derivation"
+    summary: "Full local GL_plus isotropy prevents a natural projective covector selection from bare smooth data."
+  - payload_id: "NMP-RT006-PM-002"
+    payload_type: "theorem"
+    object_name: "No H-equivariant Lorentz-conformal lift theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260814-006/artifacts/child_phys_math_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_audit.yaml"
+    burden_effect: "blocks_line_only_P4_geometry"
+    summary: "The line stabilizer fixes no Lorentz-conformal class, so the line alone has no natural Lorentz-conformal lift."
+  - payload_id: "NMP-RT006-PM-003"
+    payload_type: "theorem"
+    object_name: "Projective-label quotient information-loss lemma"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260814-006/artifacts/child_phys_math_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_audit.yaml"
+    burden_effect: "quarantines_overread"
+    summary: "Projectivization forgets label origin, scale, sign, and nonlinear reparametrization."
+  - payload_id: "NMP-RT006-PM-004"
+    payload_type: "theorem"
+    object_name: "Declared-arrow conditional-naturality proposition"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260814-006/artifacts/child_phys_math_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_audit.yaml"
+    burden_effect: "separates_formal_naturality_from_admissibility"
+    summary: "Line-preserving arrows make naturality correct by construction but do not independently select admissible source arrows."
+  - payload_id: "NMP-RT006-PM-005"
+    payload_type: "theorem"
+    object_name: "Frozen-K_star same-reduct nonselection corollary"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260814-006/artifacts/child_phys_math_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_audit.yaml"
+    burden_effect: "narrows_reduct_relevance"
+    summary: "The exact A/B fibre shows K_star carries no choice of projective conormal line."
+
+twelve_dimension_audit:
+  exact_required_count: 12
+  actual_count: 12
+  dimensions:
+    - dimension_id: "current_source_arena_and_phi_src_boundary"
+      question: "Does the proposal assign hidden geometry, evolution, or physical-time meaning to the current smooth source arena or Phi_src?"
+      evidence:
+        - "The fixed theorem admits only a nonempty smooth four-manifold as primitive debt."
+        - "Phi_src receives no domain, action, generator, order, gauge, or physical-time semantics."
+      finding: "The written source boundary is clean. The arena is not adopted M_src or physical spacetime."
+      local_disposition: "WRITTEN_SOURCE_BOUNDARY_CLEAN"
+      literal_forbidden_import_detected: false
+      current_ontology_delta: false
+      falsifier: "An operative use of Phi_src as time, evolution, ordering, or a target atlas would fail this dimension."
+    - dimension_id: "foliation_label_atlas_provenance"
+      question: "Is the foliation atlas independently source-provenanced rather than merely stipulated to obtain a bridge?"
+      evidence:
+        - "The atlas is predeclared and explicitly proposal-only, with no target or empirical selector in the written formation rule."
+        - "NMP-RT006-PM-001 proves that bare SmoothMan_4 cannot naturally select the projective covector line."
+      finding: "Proposal traceability and nonadaptivity pass; independent current-source provenance and epistemic selection remain absent."
+      local_disposition: "SYNTAX_CLEAN_EPISTEMICALLY_UNSELECTED_NEW_ROOT"
+      literal_forbidden_import_detected: false
+      current_ontology_delta: false
+      falsifier: "A current-ontology theorem selecting A without mentioning desired bridge output would change the epistemic finding."
+    - dimension_id: "codimension_one_submersion_and_rank_preload"
+      question: "Does the codimension-one submersion axiom hide the desired rank-one bridge result?"
+      evidence:
+        - "dq_i nonzero on a four-manifold directly yields one conormal dimension and a rank-three kernel."
+        - "The fixed packet states this as an added proposal premise rather than a derived conclusion."
+      finding: "The assumption transparently preloads the mathematical goal of a covector line, but it imports no target metric, cone, time, or empirical answer."
+      local_disposition: "TRANSPARENT_CONSTRUCTIVE_PRELOAD_NO_HIDDEN_TARGET_IMPORT"
+      literal_forbidden_import_detected: false
+      current_ontology_delta: false
+      falsifier: "Calling codimension one current-source-derived or selecting it because it matches a target cone would fail this dimension."
+    - dimension_id: "overlap_reparametrization_and_label_target"
+      question: "Does the one-dimensional label target or its overlap maps import time, orientation, normalization, or a target atlas?"
+      evidence:
+        - "The label manifold is abstract and locally represented by R."
+        - "All one-dimensional local diffeomorphisms are admitted, including negative derivative, and projectivization removes sign and normalization."
+      finding: "The label and overlap syntax is source-mathematical as written. It supplies neither ordered physical time nor canonical transverse orientation."
+      local_disposition: "ABSTRACT_LABEL_CLEAN_SEMANTICS_QUARANTINED"
+      literal_forbidden_import_detected: false
+      current_ontology_delta: false
+      falsifier: "Restricting labels by a physical clock, target time coordinate, or desired orientation would fail this dimension."
+    - dimension_id: "proposal_arrow_class_and_circularity"
+      question: "Does the admitted arrow class independently justify the bridge naturality claim?"
+      evidence:
+        - "An admitted arrow is required to transport the descended line, exactly the object equation used in the naturality proof."
+        - "The fixed manuscript calls this a task-local proposal category and expressly denies EqSrc or physical gauge status."
+      finding: "Naturality is conditionally correct but epistemically circular as an admissibility argument. Because the circularity is disclosed and not used for adoption, it is not hidden smuggling as written."
+      local_disposition: "CONDITIONAL_NATURALITY_PASS_NO_INDEPENDENT_ADMISSIBILITY_CREDIT"
+      literal_forbidden_import_detected: false
+      current_ontology_delta: false
+      falsifier: "An independently derived arrow predicate satisfying the NMP-RT006-PM-004 falsifier would supply new admissibility evidence."
+    - dimension_id: "projective_quotient_orientation_and_normalization"
+      question: "What information is lost when dq_i is replaced by its projective line?"
+      evidence:
+        - "NMP-RT006-PM-003 gives infinitely many affine and nonlinear labels with one identical projective line."
+        - "Negative multipliers are identified."
+      finding: "Projectivization is target-neutral but irreversibly loses label origin, scale, sign, transverse orientation, and full reparametrization data."
+      local_disposition: "QUOTIENT_CLEAN_INFORMATION_LOSS_EXPLICIT"
+      literal_forbidden_import_detected: false
+      current_ontology_delta: false
+      falsifier: "A natural inverse recovering the three exact labels from one line would defeat the information-loss proof."
+    - dimension_id: "line_stabilizer_and_reduction_target_neutrality"
+      question: "Does the proper H-reduction secretly import Lorentz-conformal or target geometry?"
+      evidence:
+        - "H is the generic GL(4,R) stabilizer of a covector line, of dimension thirteen, not a target Lorentz or metric stabilizer."
+        - "NMP-RT006-PM-002 proves H fixes no Lorentz-conformal class and admits no equivariant line-only lift to LC(V)."
+      finding: "The reduction is target-neutral and mathematically correct, but it cannot by itself produce Lorentz-conformal geometry or g_eff."
+      local_disposition: "PROPER_REDUCTION_CLEAN_NO_LINE_ONLY_LORENTZ_LIFT"
+      literal_forbidden_import_detected: false
+      current_ontology_delta: false
+      falsifier: "An exact H-fixed Lorentz-conformal class would defeat the new theorem."
+    - dimension_id: "frozen_kstar_nonfactorization_scope"
+      question: "What exactly follows from the A/B same-manifold nonfactorization fixture?"
+      evidence:
+        - "The two embedded lines are unequal while the literal frozen K_star reduct is identical."
+        - "The determinant-one shear identifies the presentations up to a nonidentity source diffeomorphism."
+      finding: "Strict fibrewise nonfactorization over identity_M is correct and preserved. It proves that the proposal contains data absent from K_star, not that the two objects are inequivalent after quotienting by proposal isomorphism or physically distinct."
+      local_disposition: "STRICT_NONFACTORIZATION_VALID_SCOPE_LIMITED"
+      literal_forbidden_import_detected: false
+      current_ontology_delta: false
+      falsifier: "Equality of the two lines or unequal reducts would defeat the strict theorem; neither occurs."
+    - dimension_id: "local_robustness_and_auxiliary_norm_quarantine"
+      question: "Does the local C1 robustness claim import a physical or canonical norm?"
+      evidence:
+        - "The fixed text confines the norm to a compact chart conformance fixture and denies canonical global source geometry."
+        - "It requires coherent overlap perturbations and does not promote chartwise nonvanishing to physical stability."
+      finding: "The scoped analytic openness claim is clean. No physical norm, dynamics, or global topology-independent robustness is supplied."
+      local_disposition: "LOCAL_ANALYTIC_ROBUSTNESS_CLEAN_AUXILIARY_NORM_QUARANTINED"
+      literal_forbidden_import_detected: false
+      current_ontology_delta: false
+      falsifier: "Using the auxiliary chart norm as adopted source geometry or physical perturbation magnitude would fail this dimension."
+    - dimension_id: "natural_selection_and_same_reduct_nonselection"
+      question: "Can bare smooth data or frozen K_star naturally select the projective conormal candidate?"
+      evidence:
+        - "NMP-RT006-PM-001 excludes a natural projective-covector section on bare SmoothMan_4."
+        - "NMP-RT006-PM-005 excludes selection from the frozen K_star reduct on the exact A/B fibre."
+      finding: "Neither current bare smooth data nor unchanged K_star selects A, B, or any unique projective conormal line. This is a scoped nonselection theorem, not a global no-go for enriched source data."
+      local_disposition: "CURRENT_BARE_SOURCE_AND_KSTAR_NONSELECTION_PROVED"
+      literal_forbidden_import_detected: false
+      current_ontology_delta: false
+      falsifier: "A natural bare-source section or a K_star-only selector satisfying both exact A/B outputs would defeat this result."
+    - dimension_id: "target_empirical_physical_and_workflow_authority_scan"
+      question: "Does any positive premise use target geometry, empirical response, physical semantics, or workflow success?"
+      evidence:
+        - "Target atlas, metric, Lorentz group, desired cone, time, response, and benchmark terms appear only in exclusions or non-conclusions."
+        - "Hashes, roles, registries, validation, checkpoint, and parent synthesis bind process state but are never mathematical premises."
+      finding: "The forbidden import scan is clear at written-syntax scope."
+      local_disposition: "TARGET_EMPIRICAL_PHYSICAL_WORKFLOW_SCAN_CLEAR"
+      literal_forbidden_import_detected: false
+      current_ontology_delta: false
+      falsifier: "Any proof step whose truth depends on a target answer, validator PASS, registry status, role authority, or checkpoint would fail this dimension."
+    - dimension_id: "current_ontology_adoption_and_p4_t02_relevance"
+      question: "Does the audit establish current-ontology derivation, P4 relevance, or adoption?"
+      evidence:
+        - "The fixed record classifies A as a proposal-only new ontology primitive and leaves its selection law missing."
+        - "NMP-RT006-PM-002 proves the line alone has no natural Lorentz-conformal lift."
+      finding: "The candidate passes local syntax purity only. Current-ontology derivation, epistemic selection, physical meaning, P4-T02 geometry relevance, and adoption all remain false."
+      local_disposition: "LOCAL_AUDIT_PASS_WITH_NO_ONTOLOGY_P4_OR_ADOPTION_CREDIT"
+      literal_forbidden_import_detected: false
+      current_ontology_delta: false
+      falsifier: "A separately authorized current-source selection theorem plus a target-free P4 bridge and protected adoption decision would be needed to alter these statuses."
+
+conditional_mathematics_preservation:
+  exact_defect_found: false
+  descent_theorem:
+    preserved: true
+    reason: "Nonzero one-dimensional overlap derivatives make local differential lines proportional and the cocycle glues them."
+  proper_reduction_theorem:
+    preserved: true
+    reason: "The covector-line stabilizer is a closed proper dimension-thirteen subgroup and adapted frames form its principal reduction."
+  proposal_naturality_theorem:
+    preserved: true
+    reason: "Naturality holds exactly on the declared line-preserving proposal arrows; its epistemic force is separately limited."
+  strict_nonfactorization_theorem:
+    preserved: true
+    reason: "The same literal reduct has two unequal embedded outputs, so no single-valued strict reduct factor agrees with both."
+  local_robustness_theorem:
+    preserved: true
+    reason: "The fixed claim is only chart-local C1 openness with coherent overlaps and explicit auxiliary-norm quarantine."
+  scope_precision:
+    - "Typed proposal naturality is not natural selection from bare SmoothMan_4."
+    - "Strict identity-over-M nonfactorization is not nonisomorphism after quotienting by all diffeomorphisms."
+    - "A proper GL reduction is not a Lorentz reduction, conformal structure, or metric."
+    - "Local submersion openness is not physical finite-variation robustness."
+
+goal_property_preload_analysis:
+  pre_outcome_declaration_verified: true
+  logical_target_independence_of_written_definitions: true
+  empirical_answer_independence_of_written_definitions: true
+  constructive_goal_property_preloaded: "codimension-one submersion data are chosen precisely so a rank-one projective conormal and proper line-stabilizer reduction exist"
+  preload_disclosed: true
+  preload_is_literal_target_geometry: false
+  preload_is_current_ontology_derivation: false
+  nonadaptivity_established: true
+  epistemic_independence_established: false
+  p4_relevance_established: false
+  exact_consequence: "The proposal is a legitimate conditional construction target, but success of the construction cannot be counted as evidence that the current source selects or needs this primitive."
+
+six_layer_status_separation:
+  written_syntax:
+    result: "pass"
+    explanation: "No forbidden target, empirical, physical, or workflow premise is present."
+  current_ontology_derivation:
+    result: "not_established"
+    explanation: "Bare SmoothMan_4 has no natural projective covector selection."
+  epistemic_selection:
+    result: "not_established"
+    explanation: "Predeclaration proves nonadaptivity, not a reason to select this atlas or arrow class."
+  physical_meaning:
+    result: "not_established"
+    explanation: "Projectivization removes orientation and normalization, and H supplies no Lorentz-conformal class."
+  p4_relevance:
+    result: "not_established"
+    explanation: "The line alone does not yield a target-free common Lorentz-conformal geometry, scale, or response bridge."
+  adoption:
+    result: "blocked_adoption_open_continuation"
+    explanation: "No protected source-law or ontology adoption authority is exercised."
+
+source_extension_classification:
+  exact_category: "new_ontology_primitive"
+  controlled_status: "proposal-only"
+  material_status: "source-extension data"
+  derivation_from_current_ontology: false
+  conservative_definitional_extension_of_current_ontology: false
+  forbidden_target_gr_import: false
+  source_pure_under_stated_proposal_assumptions: true
+  independent_source_provenance: false
+  epistemic_selection: false
+  current_ontology_modified: false
+  canonical_ontology_candidate_status_claimed: false
+  adopted_status_claimed: false
+  rejected_status_claimed: false
+  human_gated_adoption_preserved: true
+  adoption_status: "blocked_adoption_open_continuation"
+  exact_gr_recovery_status: "open_and_unchanged"
+  classification_reason: "The foliation atlas and line-preserving arrows add structure not present in the current bare source, but the fixed writing discloses that fact and uses no target-GR object to define the structure."
+
+freeze_control:
+  exact_freeze_count: 7
+  all_preserved: true
+  any_reopened: false
+  any_reconstructed: false
+  new_freeze_added: false
+  freezes:
+    - freeze_id: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      preserved: true
+      reopened: false
+    - freeze_id: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      preserved: true
+      reopened: false
+    - freeze_id: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      preserved: true
+      reopened: false
+    - freeze_id: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      preserved: true
+      reopened: false
+    - freeze_id: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      preserved: true
+      reopened: false
+    - freeze_id: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+      preserved: true
+      reopened: false
+    - freeze_id: "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+      preserved: true
+      reopened: false
+  freeze_decision: "not_frozen_after_first_local_smuggling_audit_pass"
+  freeze_reason: "The task adds five exact audit theorems and finds no hidden written import or defect in the conditional candidate. One separately admitted Refuter stress is materially distinct."
+
+distance_to_gr_status:
+  exact_row_count: 14
+  literal_no_delta_row_count: 14
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      reason: "The atlas is locally source-pure as written but remains an underived and unadopted new proposal primitive."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      reason: "The line-preserving proposal arrows are not derived or adopted EqSrc."
+    - burden: "RetainH"
+      status: "no_delta"
+      reason: "No history-retention object or law is supplied."
+    - burden: "GenH"
+      status: "no_delta"
+      reason: "No source generator, evolution, or transition law is supplied."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      reason: "A projective conormal line is not an observer-localization map."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      reason: "No response sign, normalization, detector semantics, or empirical answer is supplied."
+    - burden: "M_src"
+      status: "no_delta"
+      reason: "The smooth arena remains primitive debt and is not adopted or derived M_src."
+    - burden: "g_eff"
+      status: "no_delta"
+      reason: "The H-equivariant obstruction shows the line alone does not produce Lorentz-conformal geometry, scale, or a metric."
+    - burden: "matter coupling"
+      status: "no_delta"
+      reason: "No principal polynomial, propagation sector, response law, or universal coupling is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      reason: "No action, stress-energy relation, variation principle, closure law, or field equation is supplied."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      reason: "The local written-syntax audit and chartwise C1 openness are not physical finite-variation stress evidence."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      reason: "No benchmark comparison, exact-GR recovery, or promotion occurs."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      reason: "No protected review, adoption, or Gate Chair verdict occurs."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      reason: "All seven freezes remain unchanged; no new route-wide freeze or hard fail is added."
+
+physics_progress_status:
+  status: "candidate_audited_pending_stress"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Audit whether the proposal-only foliation primitive and its arrow class are independently source-provenanced and target-neutral before any adoption or P4 credit."
+  explanation: "The candidate passes the local hidden-import audit as written. Five exact audit results preserve its conditional mathematics while proving that bare smooth data and K_star do not select the line, projectivization loses orientation and normalization, declared-arrow naturality has no independent admissibility force, and the line stabilizer has no natural Lorentz-conformal lift."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "one separately admitted source-extension Refuter stress packet after parent checkpoint"
+  downstream_still_blocked:
+    - "independent source provenance and selection law"
+    - "adopted source admissibility or EqSrc arrow class"
+    - "P4-T02 target-free Lorentz-conformal and response relevance"
+    - "D7 evaluation and B2 action"
+    - "P4-T03 and all later GR burdens"
+  explanation: "A local as-written purity pass and scoped nonselection theorems do not change any Distance-to-GR ledger status."
+
+downstream_locks:
+  d7_status: "not_reevaluated"
+  d7_reevaluated: false
+  d7_coverage_claimed: false
+  b2_status: "inactive_undisposed"
+  b2_active: false
+  b2_activated: false
+  b2_adopted: false
+  b2_rejected: false
+  b2_disposed: false
+  b2_viability_claimed: false
+  b2_adequacy_claimed: false
+  b2_sufficiency_claimed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_status: "locked"
+  p4_t03_unlocked_or_executed: false
+  source_law_adopted: false
+  eqsrc_adopted: false
+  physical_time_orientation_assigned: false
+  physical_causality_assigned: false
+  empirical_response_semantics_assigned: false
+  Lorentz_conformal_structure_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+
+selected_successor:
+  exact_selected_count: 1
+  packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-ROBUSTNESS-NATURAL-SELECTION-REFUTER-STRESS-V1"
+  packet_type: "source_extension_refuter_stress"
+  route_label: "ontology-law-research-packet"
+  role_family: "refuter@0.2.0"
+  status: "selected_not_executed"
+  selected_packet_created: false
+  selected_packet_executed: false
+  execution_authorized_by_this_child: false
+  objective: "Stress the fixed locally source-pure-as-written projective-conormal proposal against arbitrary admissible cover refinements, coherent and incoherent finite C1 variations, proposal-isomorphism quotienting, automorphism stabilizers, inverse and overlap defects, and any asserted source selection or P4 bridge relevance; return one scoped witness, obstruction, or freeze disposition without repair, adoption, or physical interpretation."
+  selection_reason: "A local syntax-purity pass admits one independent stress step. The new nonselection and no-Lorentz-lift theorems identify the precise claims that stress must not overread, while the correct conditional descent and reduction remain available for attack."
+  human_gate_required_for_stress: false
+  human_gate_required_for_adoption: true
+
+conflict_resolution_revision:
+  revision_round: 1
+  revision_scope: "identity_only"
+  canonical_successor_packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-ROBUSTNESS-NATURAL-SELECTION-REFUTER-STRESS-V1"
+  philosopher_descriptive_alias: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-NATURAL-SELECTION-REFUTER-STRESS-V1"
+  parent_initial_descriptive_alias: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-REFUTER-STRESS-V1"
+  aliases_registered_or_executed: false
+  canonical_packet_type: "source_extension_refuter_stress"
+  canonical_role_family: "refuter@0.2.0"
+  canonical_status: "selected_not_executed"
+  verdict_unchanged: true
+  science_unchanged: true
+  packet_type_unchanged: true
+  role_unchanged: true
+  status_unchanged: true
+  claim_boundary_unchanged: true
+  authority_boundary_unchanged: true
+  freeze_disposition_unchanged: true
+  distance_to_gr_unchanged: true
+  literal_no_delta_rows_unchanged: true
+  successor_executed: false
+  unresolved_conflict_count: 0
+  resolution_note: "The philosopher's shorter NATURAL-SELECTION packet ID and the parent's initial shorter REFUTER-STRESS packet ID are descriptive aliases only. The longer robustness-natural-selection-refuter-stress identity is canonical everywhere; no alias is registered, selected, created, or executed."
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_source_local_projective_conormal_reduction"
+  current_cycle_step: "source_extension_smuggling_audit"
+  prior_related_tasks:
+    - "RT-20260814-004"
+    - "RT-20260814-005"
+  cycle_risk: "controlled"
+  orbit_avoidance_reason: "RT006 adds the first twelve-dimension hidden-import audit plus five exact nonselection, equivariance, quotient, and arrow-logic payloads. It neither reconstructs the candidate nor executes stress."
+  next_role_consequence: "refuter@0.2.0 selected_not_executed"
+
+parent_precision_caveat:
+  caveat_count: 3
+  caveats:
+    - caveat_id: "PC-01-AS-WRITTEN-QUALIFIER"
+      text: "The qualifier as written is load-bearing. Do not shorten the verdict to independently source-pure, current-source-derived, or source-selected."
+    - caveat_id: "PC-02-STRICT-NONFACTORIZATION"
+      text: "Preserve nonfactorization only as strict fibrewise embedded equality over identity_M. The exact A/B objects are related by a nonidentity determinant-one diffeomorphism, so quotient-isomorphism or physical inequivalence is not proved."
+    - caveat_id: "PC-03-CONDITIONAL-NATURALITY"
+      text: "Preserve proposal naturality as correct but definition-conditioned. It supplies no independent reason that line-preserving arrows are EqSrc, gauge, or physically admissible."
+
+conflicts_and_uncertainties:
+  unresolved_blocking_conflict: false
+  blocking_conflict_count: 0
+  parent_conflict_review_required_by_job: true
+  child_ready_for_parent_fusion: true
+  scientific_uncertainties:
+    - "No current-ontology selection or admissibility law for the foliation primitive exists in the fixed sources."
+    - "No physical or empirical interpretation of the projective line exists."
+    - "No target-free route from the line alone to Lorentz-conformal geometry exists under the full H stabilizer."
+  resolution_boundary: "These are preserved scientific limits and stress targets, not blocking conflicts in the local as-written audit."
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "candidate repair, reconstruction, or predecessor rewrite"
+    - "independent source provenance, current-ontology derivation, epistemic selection, or source-law adoption"
+    - "EqSrc, physical gauge, M_src, physical time, causality, response, or empirical semantics"
+    - "Lorentz-conformal geometry, scale, g_eff, matter coupling, or Einstein equations"
+    - "D7 evaluation, B2 action, P4-T02 completion, or P4-T03 unlock"
+    - "benchmark promotion, Gate Chair verdict, proof promotion, publication, push, or external action"
+    - "global no-go, global theory rejection, future source-extension impossibility, or completed derivation"
+  summary: "The verdict is a local audit classification only. Hashes, roles, registries, validation, checkpoint, and parent synthesis create no scientific truth, physical meaning, or adoption authority."
+
+authority_blocks:
+  candidate_reconstruction_authorized: false
+  candidate_repair_authorized: false
+  predecessor_rewrite_authorized: false
+  current_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_candidate_promotion_authorized: false
+  m_src_adoption_authorized: false
+  eqsrc_adoption_authorized: false
+  physical_time_claim_authorized: false
+  physical_causality_claim_authorized: false
+  empirical_response_claim_authorized: false
+  Lorentz_conformal_geometry_claim_authorized: false
+  g_eff_claim_authorized: false
+  matter_coupling_claim_authorized: false
+  einstein_equation_claim_authorized: false
+  d7_reevaluation_authorized: false
+  b2_action_authorized: false
+  p4_t03_execution_authorized: false
+  gate_chair_claim_authorized: false
+  benchmark_promotion_authorized: false
+  proof_declaration_authorized: false
+  publication_authorized: false
+  git_commit_authorized: false
+  git_push_authorized: false
+  successor_execution_authorized: false
+  external_action_authorized: false
+  external_search_performed: false
+  global_no_go_authorized: false
+  completed_derivation_claim_authorized: false
+
+validation_contract:
+  strict_yaml_required: true
+  repository_subset_yaml_required: true
+  unique_mapping_keys_required: true
+  block_style_only_required: true
+  source_hash_recomputation_required: true
+  exact_source_count_required: 19
+  exact_verdict_count_required: 1
+  exact_audit_dimension_count_required: 12
+  new_mathematical_payload_count_required_at_least: 1
+  new_mathematical_payload_count_declared: 5
+  preserved_freeze_count_required: 7
+  distance_to_gr_row_count_required: 14
+  literal_no_delta_count_required: 14
+  successor_count_maximum: 1
+  successor_count_declared: 1
+  successor_status_required: "selected_not_executed"
+  successor_execution_required: false
+  science_and_authority_guard_required: true
+  whitespace_clean_required: true
+  owned_path_only_required: true
+  parent_validator_forbidden_for_child: true
+  checkpoint_forbidden_for_child: true
+
+child_conclusion:
+  decisive_audit_result_ref: "AUDIT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-V1"
+  conditional_candidate_preserved: true
+  current_ontology_selection_established: false
+  p4_relevance_established: false
+  successor_packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-ROBUSTNESS-NATURAL-SELECTION-REFUTER-STRESS-V1"
+  successor_status: "selected_not_executed"
+  blocking_conflict_present: false
+  substantive_summary: "The fixed proposal is free of hidden target, empirical, physical, and workflow premises as written, while its codimension-one data and line-preserving arrows remain transparent underived constructive preload. Exact new theorems exclude natural line selection from bare SmoothMan_4, an H-equivariant Lorentz-conformal lift, recovery of quotient-lost label data, independent admissibility force from definition-conditioned arrows, and selection from frozen K_star. Conditional descent, reduction, proposal naturality, strict nonfactorization, seven freezes, fourteen no-delta rows, and all downstream locks remain intact."

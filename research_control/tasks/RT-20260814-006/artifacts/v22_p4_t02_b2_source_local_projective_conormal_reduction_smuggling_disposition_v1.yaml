@@ -1,0 +1,182 @@
+schema_id: "v22_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_disposition_v1"
+task_id: "RT-20260814-006"
+job_id: "AJ-RT-20260814-006-001"
+decision_id: "DDR-20260814-006"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1"
+candidate_id: "CAND-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-V1"
+candidate_name: "SourceLocalProjectiveConormalReduction_v1"
+status: "draft_control"
+authority: "science_draft"
+
+smuggling_audit_result:
+  result_count: 1
+  result_type: "source_pure_as_written"
+  result_scope: "The fixed RT005 written proposal is target-free and authority-clean at local syntax scope under its explicit proposal-only existence-witness reading."
+  target_import_detected: false
+  workflow_authority_import_detected: false
+  exact_mathematical_defect_detected: false
+  conditional_mathematics_preserved: true
+  disclosed_goal_property_preload: true
+  output_relative_arrow_circularity_detected: true
+  independent_source_provenance_passed: false
+  current_ontology_derivation_passed: false
+  epistemic_root_selection_passed: false
+  physical_semantics_passed: false
+  empirical_semantics_passed: false
+  p4_t02_acceptance_passed: false
+  adoption_passed: false
+  no_fog_check: true
+  claim_boundary_preserved: true
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  category: "new_ontology_primitive"
+  controlled_status: "proposal-only"
+  status_label: "proposal-only"
+  material_class: "source-extension data"
+  relation_to_current_ontology: "missing_primitive"
+  current_ontology_derivation: false
+  current_ontology_modified: false
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  target_import_detected_in_written_syntax: false
+  epistemic_source_derivation_established: false
+  adoption_status: "blocked_adoption_open_continuation"
+  protected_authority_required_before_adoption: true
+  downstream_promotion_authorized: false
+
+preserved_rt005_theorems:
+  - theorem_id: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-DESCENT-001"
+    status: "preserved_exact_conditional_proof"
+  - theorem_id: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-PROPER-REDUCTION-001"
+    status: "preserved_exact_conditional_proof"
+  - theorem_id: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-KSTAR-NONFACTORIZATION-001"
+    status: "preserved_as_strict_embedded_over_identity_M_fixture_proof"
+  - theorem_id: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-PROPOSAL-NATURALITY-001"
+    status: "preserved_on_declared_proposal_arrows_only"
+  - theorem_id: "THM-V22-P4T02-B2-PROJECTIVE-CONORMAL-LOCAL-ROBUSTNESS-001"
+    status: "preserved_on_coherent_label_domain_only"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT014-006-001"
+    payload_type: "theorem"
+    name: "Bare-source natural projective-covector nonselection theorem"
+    summary: "No Diff-natural section of P(T*M) can be constructed from a bare smooth four-manifold because GL+(4) isotropy has no fixed projective covector line."
+    falsifier: "An independently source-defined equivariant selector outside the bare reduct would evade but not contradict the scoped theorem."
+  - payload_id: "NMP-RT014-006-002"
+    payload_type: "theorem"
+    name: "No GL4-equivariant conformal lift from one covector line"
+    summary: "A G-equivariant map G/H to G/CO(1,3) would require H to embed in a conjugate conformal-Lorentz stabilizer, impossible because dimensions are thirteen and seven."
+    falsifier: "Adding further source structure that reduces H could create a different domain and is not ruled out."
+  - payload_id: "NMP-RT014-006-003"
+    payload_type: "countermodel"
+    name: "Arbitrarily small nonintegrable line-field perturbation"
+    summary: "alpha_epsilon=dx0+epsilon*x1*dx2 satisfies alpha wedge d alpha=epsilon*dx0 wedge dx1 wedge dx2, while coherent exact dq perturbations remain integrable."
+    falsifier: "The RT005 robustness claim survives because it was explicitly limited to coherent label perturbations."
+  - payload_id: "NMP-RT014-006-004"
+    payload_type: "nonuniqueness_theorem"
+    name: "Projective conormal conformal underdetermination"
+    summary: "diag(-1,1,1,1) and diag(-1,2,3,5) share the same distinguished covector line but are not conformally related."
+    falsifier: "A separate source-derived spatial quadratic form could remove this underdetermination but is absent here."
+  - payload_id: "NMP-RT014-006-005"
+    payload_type: "quotient_lemma"
+    name: "Coorientation and normalization erasure"
+    summary: "Negative overlap reparametrizations and determinant-positive stabilizers reverse representative rays while preserving L_q, so the quotient selects no time orientation or response sign."
+    falsifier: "A separately sourced positive-ray or coorientation primitive would define a distinct extension."
+  - payload_id: "NMP-RT014-006-006"
+    payload_type: "reduction_equivalence_theorem"
+    name: "Covector-line and line-stabilizer reduction equivalence"
+    summary: "For H equal to the GL(4,R) stabilizer of a reference covector line, projective cotangent-line sections and principal H-reductions of the frame bundle are equivalent data; P_H(q) supplies no selector beyond L_q."
+    falsifier: "Two fixed-definition H-reductions over one line or an H-reduction with no recoverable associated line would refute the equivalence."
+  - payload_id: "NMP-RT014-006-007"
+    payload_type: "conditional_naturality_lemma"
+    name: "Output-preserving proposal arrows make bridge naturality nonprobative"
+    summary: "The admitted-arrow premise f^*L_target=L_source is exactly the L-component of Bridge_PCR naturality, so the theorem is conditionally correct but supplies no independent source-admissibility or EqSrc evidence."
+    falsifier: "A pre-bridge current-source arrow law that does not mention the foliation, its line, or the desired bridge, together with a proof of line transport, would remove this circularity."
+
+exact_model:
+  path: "research_control/tasks/RT-20260814-006/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_model.py"
+  check_count: 24
+  pass_count: 24
+  payload_sha256: "4271eafd62652ba317ea7541d4702ea103e937e7414e795c677050dff678ecf7"
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+
+freeze_criteria_status:
+  evaluated: true
+  inherited_freeze_count: 7
+  new_freeze_created: false
+  active_freeze_count: 7
+  freeze_decision: "not_frozen_pending_separately_admitted_refuter_stress"
+  reason: "The first focused audit finds no literal target import or mathematical defect, while robustness and natural-selection burdens remain testable in a distinct Refuter packet."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_delta"
+  - burden: "Source equivalence EqSrc"
+    status: "no_delta"
+  - burden: "RetainH"
+    status: "no_delta"
+  - burden: "GenH"
+    status: "no_delta"
+  - burden: "ObsLoc_lc"
+    status: "no_delta"
+  - burden: "Resp_lc"
+    status: "no_delta"
+  - burden: "M_src"
+    status: "no_delta"
+  - burden: "g_eff"
+    status: "no_delta"
+  - burden: "matter coupling"
+    status: "no_delta"
+  - burden: "Einstein equations"
+    status: "no_delta"
+  - burden: "finite-variation robustness"
+    status: "no_delta"
+  - burden: "benchmark promotion"
+    status: "no_delta"
+  - burden: "Gate Chair status"
+    status: "no_delta"
+  - burden: "current route freeze or hard-fail status"
+    status: "no_delta"
+
+selected_successor:
+  packet_id: "PKT-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-ROBUSTNESS-NATURAL-SELECTION-REFUTER-STRESS-V1"
+  packet_type: "source_extension_refuter_stress"
+  route_label: "ontology-law-research-packet"
+  role_family: "refuter@0.2.0"
+  status: "selected_not_executed"
+  created: false
+  executed: false
+  objective: "Stress integrability-domain robustness, output-relative arrow closure, proposal-isomorphism quotienting, natural-selection nonuniqueness, coorientation loss, and conformal underdetermination without repairing or adopting the candidate."
+
+authority_limits:
+  source_law_adopted: false
+  eqsrc_adopted: false
+  physical_time_selected: false
+  causal_cone_constructed: false
+  conformal_geometry_constructed: false
+  g_eff_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

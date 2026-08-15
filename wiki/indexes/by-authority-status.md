@@ -177,6 +177,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-V1` `research_control/tasks/RT-20260811-009/artifacts/parent_fusion_notes_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-008/artifacts/parent_fusion_notes_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1` `research_control/tasks/RT-20260811-007/artifacts/parent_fusion_notes_p4_t02_b2_source_law_space_robust_invariance_protection.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260814-006/artifacts/parent_fusion_notes_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-V1` `research_control/tasks/RT-20260814-005/artifacts/parent_fusion_notes_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.md`
 - `MD-V22-P4-T02-PARENT-FUSION-HARD-FAIL-SCREEN-V1` `research_control/tasks/RT-20260809-019/artifacts/parent_fusion_notes_p4_t02_screen.md`
 - `TEX-EQSRC-CLOSURE-SOURCE-LAW-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260718-017/artifacts/eqsrc_closure_source_law_smuggling_audit_v1.tex`
@@ -661,6 +662,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-V1` `research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-008/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1` `research_control/tasks/RT-20260811-007/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_v1.tex`
+- `TEX-V22-P4-T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260814-006/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-V1` `research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_v1.tex`
 - `TEX-V22-P4-T02-HYPERBOLICITY-UNIVERSALITY-ROBUSTNESS-HARD-FAIL-SCREEN-V1` `research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex`
 
@@ -1466,6 +1468,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-law-space-robust-invariance-protection-refuter-stress-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-law-space-robust-invariance-protection-smuggling-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-law-space-robust-invariance-protection-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-local-projective-conormal-reduction-smuggling-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-source-local-structure-group-reduction-bridge-witness-v1.md`
 - `WIKI-MD-V22-P4-T02-PARENT-FUSION-HARD-FAIL-SCREEN-V1` `wiki/markdown/md-v22-p4-t02-parent-fusion-hard-fail-screen-v1.md`
 - `WIKI-MD-VALIDATOR-OPERATOR-WORKFLOW-PUBLICATION-BRIEF` `wiki/markdown/md-validator-operator-workflow-publication-brief.md`
@@ -1983,6 +1986,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-V1` `wiki/tex/tex-v22-p4-t02-b2-source-law-space-robust-invariance-protection-refuter-stress-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-source-law-space-robust-invariance-protection-smuggling-audit-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-source-law-space-robust-invariance-protection-v1.md`
+- `WIKI-TEX-V22-P4-T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-source-local-projective-conormal-reduction-smuggling-audit-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-V1` `wiki/tex/tex-v22-p4-t02-b2-source-local-structure-group-reduction-bridge-witness-v1.md`
 - `WIKI-TEX-V22-P4-T02-HYPERBOLICITY-UNIVERSALITY-ROBUSTNESS-HARD-FAIL-SCREEN-V1` `wiki/tex/tex-v22-p4-t02-hyperbolicity-universality-robustness-hard-fail-screen-v1.md`
 

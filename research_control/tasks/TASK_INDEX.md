@@ -2,7 +2,7 @@
 
 Generated navigation support only. This index is not task authority, physics proof authority, benchmark authority, Gate Chair authority, or completed-derivation evidence.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-15T00:54:27Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"3a286431624c06bc1a2404fda5c0b067b1ce12c9","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"99b6b1f9d6116b8caab653e0ce5fc2c9a77d37810b91ed6fd676b45907d4f8a5"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"386eff5b538247fbe93db2ce6206176e2322313aed755e9a9084dfa99d2c8025"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"58fc9fb049e9594355e55e7f7406cc59ac75c6949fbce2a45bc01e9b81a4bf22"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"2f35c28c3369c20d8333116c422772bcc8af2a92c174d6ef60ececfc65423b5c","source_path_count":"5170","task_count":"1294"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-15T02:15:50Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"91a27b2135a190b59d8a3ce8458ee6c6592b57fa","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"715d9ffbaafafb68e9d61cfb14ac4ac936a8d92e74cab6996ac12b8b4456330d"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"dee5b4c6e389a9357c182adf68d4e3024660a8719d9cae7d0318e9c6bcef8487"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"fa379d0c5fa0b68bdedbe1dadfb155fc371c4eb18d104f57ae968371c89e0c96"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"c243fa07dd88866e09baf2607e04dd04b3a8c00831d640cee12c59cc6f1da399","source_path_count":"5174","task_count":"1295"} -->
 
 ## Generated-Report Provenance
 
@@ -11,21 +11,21 @@ Generated navigation support only. This index is not task authority, physics pro
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_task_index` |
-| Source commit | `3a286431624c06bc1a2404fda5c0b067b1ce12c9` |
-| Source-derived generation time | `2026-08-15T00:54:27Z` |
-| Tracked task count | 1294 |
-| Exact source-path count | 5170 |
-| Source manifest SHA-256 | `2f35c28c3369c20d8333116c422772bcc8af2a92c174d6ef60ececfc65423b5c` |
+| Source commit | `91a27b2135a190b59d8a3ce8458ee6c6592b57fa` |
+| Source-derived generation time | `2026-08-15T02:15:50Z` |
+| Tracked task count | 1295 |
+| Exact source-path count | 5174 |
+| Source manifest SHA-256 | `c243fa07dd88866e09baf2607e04dd04b3a8c00831d640cee12c59cc6f1da399` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `99b6b1f9d6116b8caab653e0ce5fc2c9a77d37810b91ed6fd676b45907d4f8a5`
+- `registries/AGENT_JOB_REGISTRY.csv`: `715d9ffbaafafb68e9d61cfb14ac4ac936a8d92e74cab6996ac12b8b4456330d`
 - `registries/AGENT_ROLE_REGISTRY.csv`: `847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `386eff5b538247fbe93db2ce6206176e2322313aed755e9a9084dfa99d2c8025`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `58fc9fb049e9594355e55e7f7406cc59ac75c6949fbce2a45bc01e9b81a4bf22`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `dee5b4c6e389a9357c182adf68d4e3024660a8719d9cae7d0318e9c6bcef8487`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `fa379d0c5fa0b68bdedbe1dadfb155fc371c4eb18d104f57ae968371c89e0c96`
 - `research_control/design/task_index_schema_v2.md`: `4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f`
 - `research_control/design/v21_recommendation_backlog.yaml`: `849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f`
 - `research_control/design/v21_task_taxonomy_policy.md`: `7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b`
@@ -41,9 +41,9 @@ or claim-promotion authority.
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `61b9ef1542aa90cb439cc1b4722c0f4058d7d3394e962748e01330a353cd329d`
-- Generated-at source timestamp: `2026-08-15T00:54:27Z`
-- Row count: `1294`
+- Source fingerprint: `b40d4edcfca4aaa8e2449bdd86a4e811efafa43c994fdef0b615c9a1b10387b3`
+- Generated-at source timestamp: `2026-08-15T02:15:50Z`
+- Row count: `1295`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -51,6 +51,7 @@ or claim-promotion authority.
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260814-006|RT-20260814-005|2026-08-15T02:15:50Z|2026-08-15T02:53:00Z|Audit the source-local projective-conormal reduction for hidden target or authority imports|v22_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_audit|audit_or_review|effective_metric_g_eff|v22_b2_matter_principal_polynomial|audit_verdict_or_precise_repair|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Audit whether the proposal-only foliation primitive and its arrow class are independently source-provenanced and target-neutral before any adoption or P4 credit.|smuggling-auditor@0.2.0|false|false|13||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260814-006/jobs/completions/AJC-AJ-RT-20260814-006-001.yaml|
 |RT-20260814-005|RT-20260814-004|2026-08-15T00:54:27Z|2026-08-15T01:20:23Z|Construct or precisely obstruct a source-local projective-conormal reduction bridge witness|v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_construction|construction_or_implementation|effective_metric_g_eff|v22_b2_matter_principal_polynomial|candidate_or_precise_obstruction|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Construct independently source-derived local reduction and nonfactorizing bridge data after excluding unchanged K_star standalone replay.|candidate-constructor@0.2.0|false|false|13||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260814-005/jobs/completions/AJC-AJ-RT-20260814-005-001.yaml|
 |RT-20260814-004|RT-20260814-003|2026-08-14T23:18:43Z|2026-08-14T23:54:06Z|Decide the scoped localization and bridge relevance of the unchanged K_star assignment|v22_p4_t02_b2_kstar_localization_bridge_irrelevance_theorem|audit_or_review|effective_metric_g_eff|v22_b2_matter_principal_polynomial|theorem_or_precise_obstruction|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Establish or refute restriction-compatible local P4-T02 bridge relevance of K_star without adding EqSrc, physical allowedness, target geometry, or response semantics.|refuter@0.2.0|false|false|13||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260814-004/jobs/completions/AJC-AJ-RT-20260814-004-001.yaml|
 |RT-20260814-003|RT-20260814-002|2026-08-14T21:50:45Z|2026-08-14T22:20:00Z|Select one materially distinct P4-T02 continuation after the current-source K_star theorem|v22_p4_t02_b2_post_current_source_k_star_theorem_theoretical_continuation_selector|integration_or_selection|effective_metric_g_eff|v22_b2_matter_principal_polynomial|completed_or_precisely_blocked|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Decide whether K_star has any source-derived local bridge-facing P4-T02 role or only global mathematical classification value before proposing a new source law or bridge.|theoretical-continuation-selector@0.1.0|false|false|14||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260814-003/jobs/completions/AJC-AJ-RT-20260814-003-001.yaml|
