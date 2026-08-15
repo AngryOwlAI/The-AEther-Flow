@@ -497,6 +497,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-REFUTER-STRESS-V1` `research_control/tasks/RT-20260811-009/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_refuter_stress_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-008/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-V1` `research_control/tasks/RT-20260811-007/artifacts/v22_p4_t02_b2_source_law_space_robust_invariance_protection_v1.tex`
+- `TEX-V22-P4-T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-REFUTER-STRESS-V1` `research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260814-006/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-V1` `research_control/tasks/RT-20260814-005/artifacts/v22_p4_t02_b2_source_local_structure_group_reduction_bridge_witness_v1.tex`
 - `TEX-V22-P4-T02-HYPERBOLICITY-UNIVERSALITY-ROBUSTNESS-HARD-FAIL-SCREEN-V1` `research_control/tasks/RT-20260809-019/artifacts/v22_p4_t02_hyperbolicity_universality_robustness_hard_fail_screen_v1.tex`

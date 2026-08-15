@@ -1,0 +1,749 @@
+job_id: "AJ-RT-20260815-001-001"
+completion_id: "AJC-AJ-RT-20260815-001-001"
+task_id: "RT-20260815-001"
+task_type: "v22_p4_t02_b2_source_local_projective_conormal_reduction_robustness_natural_selection_refuter_stress"
+decision_id: "DDR-20260815-001"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260815-001"
+supporting_perspective: "smuggling-auditor@0.2.0"
+status: "completed"
+result: "completed"
+completion_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-15T14:42:23Z"
+started_at: "2026-08-15T14:42:23Z"
+completed_at: "2026-08-15T15:17:03Z"
+objective: "Hold SourceLocalProjectiveConormalReduction_v1 fixed and test its ambient robustness, proposal-arrow force, quotient-invariant separation, natural line and coorientation selection, same-reduct scope, and line-only Lorentz-conformal lift without repair, adoption, or promotion."
+completion_summary: "Both independent physics analyses return scoped_obstruction. The fixed candidate's conditional descent, line-stabilizer reduction, typed proposal naturality, and strict identity-over-M nonfactorization remain correct, and the RT006 narrow source_pure_as_written verdict is preserved. The stronger standalone bridge claim fails because arbitrarily small ambient C1 perturbations can leave the Frobenius domain; output-relative arrows provide no independently sourced admissibility law; all constant projective covector lines on R4 lie in one GL+(4) proposal-isomorphism orbit; bare smooth source data naturally selects neither a line nor a coorientation; and the line stabilizer fixes no Lorentzian conformal class. The exact candidate is locally frozen under NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT, all seven inherited freezes remain active, all fourteen Distance-to-GR burdens remain no_delta, and one theoretical-continuation-selector packet is selected but not executed."
+objective_result: "scoped_obstruction"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "candidate_scoped_obstruction_local_freeze_theoretical_selector_unexecuted_precheckpoint"
+milestone_disposition: "effective_metric_burden_narrowed_no_distance_delta"
+requires_human_gate: false
+human_gate_required: false
+source_head: "bd071f6a90f3f6a12bbb49c717f9f71ef1e5ac62"
+source_tree: "08df1e08ca2f47f4fc7356fca91df11c918005c2"
+source_handoff_id: "handoff-1036"
+source_handoff_sha256: "9254a6daccff052e8fa098429624178abc2a7bfe3216ab2c228527f58e699ee5"
+source_extension_classification_required: true
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P4"
+  plan_task_id: "P4-T02"
+  work_item_status: "projective_conormal_refuter_scoped_obstruction_theoretical_selector_pending_checkpoint"
+  completed_plan_subroute: "P4-T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-ROBUSTNESS-NATURAL-SELECTION-REFUTER-STRESS"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "P4-T02-B2-POST-PROJECTIVE-CONORMAL-REFUTER-THEORETICAL-CONTINUATION-SELECTION"
+  recommendation_ids:
+    - "V22-R07"
+    - "V22-R08"
+    - "V22-R10"
+    - "V22-R13"
+  declared_coverage_ids:
+    - "V22-R07"
+    - "V22-R08"
+    - "V22-R10"
+    - "V22-R13"
+    - "S5"
+  decisive_result: "scoped_obstruction"
+  candidate_id: "CAND-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-V1"
+  candidate_name: "SourceLocalProjectiveConormalReduction_v1"
+  obstruction_id: "OB-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT-001"
+  active_freeze_label: "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+  selected_successor_packet_id: "PKT-V22-P4T02-B2-POST-PROJECTIVE-CONORMAL-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  selected_successor_packet_type: "theoretical_continuation_selector"
+  selected_successor_role_family: "theoretical-continuation-selector@0.1.0"
+  selected_successor_executed: false
+  inherited_freeze_count: 7
+  active_freeze_count_after_completion: 8
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_fallback_activated: false
+  b2_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one registered draft/control projective-conormal Refuter stress manuscript"
+      - "one exact stress matrix, obstruction or disposition, freeze evaluation, and successor decision"
+    project_system:
+      - "task-local exact model, focused validator, compact receipt, LaTeX receipt, provenance, parent-child synthesis, and standard synchronization"
+  accepted_criteria:
+    physics:
+      - "all ten stress dimensions receive explicit evidence and a local result"
+      - "conditional descent, reduction, arrow closure, and strict identity-over-M mathematics is preserved or rejected only through an exact defect"
+      - "at least one exact countermodel or theorem with proof and falsifier is new"
+      - "one exclusive Refuter class and candidate-local freeze evaluation are recorded"
+    project_system:
+      - "source hashes, artifacts, registries, backlog, program state, and handoff pass deterministic validation"
+      - "the registered TeX source compiles and every rendered page passes visual inspection"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "precise_obstruction"
+  realized_payload_type: "scoped_obstruction"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  obstruction_id: "OB-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT-001"
+  result: "PASS_MATERIAL_PAYLOAD_PRESENT"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_result_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "stress_v22_p4_t02_b2_source_local_projective_conormal_reduction_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  result: "PASS_DISTINCT_STRESS_WITH_CANDIDATE_LOCAL_FREEZE"
+  reopening_requested: false
+  preserved_freeze_count: 7
+  new_candidate_local_freeze_created: true
+  active_freeze_count_after_completion: 8
+  fixed_candidate_conditional_mathematics_rejected: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1036"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite_commit: "bd071f6a90f3f6a12bbb49c717f9f71ef1e5ac62"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_needed: false
+  refresh_performed: false
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1242
+    relationship_row_count: 6391
+    semantic_row_count: 1242
+    vault_row_count: 1242
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search SourceLocalProjectiveConormalReduction_v1 --limit 1 --json"
+      query_type: "search"
+      query_text: "SourceLocalProjectiveConormalReduction_v1"
+      returned_object_ids:
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-V1"
+  canonical_inspections:
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LOCAL-STRUCTURE-GROUP-REDUCTION-BRIDGE-WITNESS-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260814-005/artifacts/parent_fusion_notes_p4_t02_b2_source_local_structure_group_reduction_bridge_witness.md"
+      source_hash: "36dac602c02f3a4c6cae06f2c62fc6b75fe2c2823cd8b2669c146aa1503788ee"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "TEX-V22-P4-T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-SMUGGLING-AUDIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260814-006/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_audit_v1.tex"
+      source_hash: "dbe558f900ee20ba7b08d88173679e5ad2ddbb0de04a6e308fb4f456241b3747"
+  additional_control_inspections:
+    - object_id: "HANDOFF-1036"
+      control_path: "research_control/handoffs/handoff-1036.yaml"
+      source_hash: "9254a6daccff052e8fa098429624178abc2a7bfe3216ab2c228527f58e699ee5"
+    - object_id: "V22-P4-T02-B2-PROJECTIVE-CONORMAL-SMUGGLING-DISPOSITION-V1"
+      control_path: "research_control/tasks/RT-20260814-006/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_disposition_v1.yaml"
+      source_hash: "a2619be128b47243286e6779f6ce7587975f9270799836dc4646e6954f6f9ff1"
+    - object_id: "V22-P4-T02-B2-PROJECTIVE-CONORMAL-SMUGGLING-MATRIX-V1"
+      control_path: "research_control/tasks/RT-20260814-006/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_smuggling_matrix_v1.yaml"
+      source_hash: "44098516c7b9e72d0d38c1d79ccaabf697d16be24fddeef1400d6b6400ef7f19"
+  authority_note: "Tracked registered source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval evidence only and not authority."
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  internal_child_count: 2
+  selected_successor_executed: false
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260815-001/artifacts/child_phys_math_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress.yaml"
+      output_sha256: "0012d0734362abcc0df9df5935304d536d0b40813ea761392e7718772712bafe"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260815-001/artifacts/child_phys_phil_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress.yaml"
+      output_sha256: "93ef4219792a6dc0e343f91fb97b86d1f9a359f3fea833ecce0ecd1be82dff18"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260815-001/artifacts/parent_conflict_review_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress.yaml"
+    resolution_rounds: 0
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_v1.tex"
+    fused_output_sha256: "bb501d25f7e81964e23e6aed009ad570742e0ec1a0e86cfaa11716605a9179ec"
+    fusion_notes_path: "research_control/tasks/RT-20260815-001/artifacts/parent_fusion_notes_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress.md"
+    shared_consensus_summary: "Both children return scoped_obstruction with the same obstruction, local-freeze, and successor identities while preserving the conditional candidate and RT006 narrow audit verdict."
+    unique_phys_math_contributions: "Exact ambient C1 variation, proposal-isomorphism orbit, stabilizer, ray-flip, determinant-one family, and conformal-lift calculations."
+    unique_phys_phil_contributions: "Precise separation of formal descent, source occurrence, arrow admissibility, coorientation, physical meaning, P4 force, adoption, and workflow authority."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+ontology_law_research_packet:
+  route: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  non_trigger_classifications_rejected:
+    - "ordinary_gap"
+    - "workflow_inconvenience"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Stress whether the source-local projective-conormal proposal supplies a robust, naturally selected, oriented, quotient-invariant source bridge or Lorentz-conformal lift."
+  missing_source_law: "source_local_projective_conormal_reduction_robust_selection_orientation_and_conformal_lift_law"
+  underdetermination_statement: "Current ontology does not derive a robust natural-selection, coorientation, occurrence, admissibility, or Lorentz-conformal lift law for the projective-conormal proposal; the scoped obstruction freezes only this unchanged standalone bridge and leaves materially distinct same-milestone continuation open."
+  no_go_theorem_status: "scoped_obstruction_not_global_no_go"
+  adoption_status:
+    current_adoption: "blocked"
+    continuation: "open"
+    status_pair: "blocked_adoption_open_continuation"
+  packet_payload_mode: "candidate_law_refutation"
+  candidate_law_refutation:
+    refuted_candidate: "SourceLocalProjectiveConormalReduction_v1 as a standalone robust and naturally selected P4-T02 bridge"
+    refutation_basis: "Exact non-Frobenius variations, proposal-isomorphism orbit collapse, line and ray nonselection, and line-stabilizer conformal-lift obstruction."
+    surviving_obligations:
+      - "derive an independently sourced occurrence and admissibility law"
+      - "derive robust local structure under source-defined variations"
+      - "derive orientation and physical response semantics without target import"
+      - "derive conformal structure, scale, g_eff, coupling, and equations separately"
+  exact_gr_recovery_obligations:
+    checklist:
+      - "Retain exact-GR recovery as a downstream obligation rather than a stress premise."
+      - "Preserve D7 non-evaluation, B2 inactivity, and the P4-T03 lock."
+      - "Require physical geometry, scale, coupling, field equations, and benchmark claims to pass their own protected gates."
+    distance_to_gr_links:
+      - "source ontology primitives"
+      - "source equivalence EqSrc"
+      - "finite-variation robustness"
+      - "effective metric g_eff"
+  no_target_import_audit_scope:
+    forbidden_source_classes:
+      - "target_atlas"
+      - "target_metric"
+      - "benchmark_success"
+      - "generated_derivative"
+      - "registry_metadata_authority"
+      - "role_authority"
+      - "validation_authority"
+  human_gate_request:
+    required_before_adoption: true
+    requested_decision: "No protected decision is requested now; any later ontology edit, source-law adoption, or canonical-candidate promotion requires a separate explicit human gate."
+    exact_requested_ontology_edit: ""
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Test the fixed projective-conormal proposal's robust selection, coorientation, quotient-invariant bridge force, and conformal lift."
+  explanation: "A candidate-scoped obstruction is proved and locally freezes the unchanged standalone bridge; it does not derive a physical source law, effective geometry, or downstream GR object."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  effect: "obstruction_recorded"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "proposal-only projective-conormal reduction source-pure-as-written pending robustness and natural-selection stress"
+  new_status: "unchanged standalone projective-conormal bridge locally frozen by robust-selection and conformal-lift obstruction"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The obstruction narrows one proposal family but constructs no physical cone, conformal class, scale, metric, coupling, or equation."
+  downstream_unlocked:
+    - "one separately admitted theoretical-continuation-selector packet after checkpoint"
+  downstream_still_blocked:
+    - "independent source occurrence, admissibility, selection, orientation, and robustness law"
+    - "physical time, causality, empirical response, and universal propagation"
+    - "D7 adequacy, B2 action, and P4-T03"
+    - "g_eff, matter coupling, Einstein equations, benchmark, and completed derivation"
+  explanation: "A proposal-level scoped obstruction and local freeze create no Distance-to-GR discharge."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "The foliation and projective-conormal proposal remains unadopted source-extension debt; its unchanged standalone bridge is locally frozen."
+    task_delta: "no_delta"
+  - burden: "Source equivalence EqSrc"
+    status: "Output-relative proposal arrows are not an independently derived EqSrc or admissibility law."
+    task_delta: "no_delta"
+  - burden: "RetainH"
+    status: "No history-retention law is supplied."
+    task_delta: "no_delta"
+  - burden: "GenH"
+    status: "No source generator selects a foliation, line, ray, occurrence, or admissible variation class."
+    task_delta: "no_delta"
+  - burden: "ObsLoc_lc"
+    status: "A projective conormal line is not an observer-localization map."
+    task_delta: "no_delta"
+  - burden: "Resp_lc"
+    status: "The quotient and reduction have no detector or response semantics."
+    task_delta: "no_delta"
+  - burden: "M_src"
+    status: "The smooth arena is not adopted physical source spacetime."
+    task_delta: "no_delta"
+  - burden: "g_eff"
+    status: "A projective covector line selects neither Lorentz-conformal geometry nor scale or effective metric."
+    task_delta: "no_delta"
+  - burden: "matter coupling"
+    status: "No universal propagation or matter-coupling law is derived."
+    task_delta: "no_delta"
+  - burden: "Einstein equations"
+    status: "No action, stress tensor, variation, correction control, or field equation is supplied."
+    task_delta: "no_delta"
+  - burden: "finite-variation robustness"
+    status: "Conditional coherent-label mathematics survives, but ambient C1 robustness fails without an independently sourced admissible-domain law."
+    task_delta: "no_delta"
+  - burden: "benchmark promotion"
+    status: "No benchmark comparison, recovery result, or promotion occurs."
+    task_delta: "no_delta"
+  - burden: "Gate Chair status"
+    status: "No protected review, verdict, or adoption is requested."
+    task_delta: "no_delta"
+  - burden: "current route freeze or hard-fail status"
+    status: "Seven inherited freezes remain active and the unchanged projective-conormal standalone bridge receives one candidate-local freeze."
+    task_delta: "no_delta"
+
+refuter_result:
+  decisive_classification: "scoped_obstruction"
+  target_candidate_id: "CAND-V22-P4T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-V1"
+  fixed_candidate_results_preserved: true
+  predecessor_source_purity_verdict_preserved: true
+  obstruction_id: "OB-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT-001"
+  minimal_countermodel_path: "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_model.py"
+  stress_branches:
+    ambient_robustness: "Arbitrarily small C1 projective-line perturbations can violate Frobenius integrability while coherent exact-label variations remain inside the fixed domain."
+    arrow_force: "Output-preserving arrows make conditional naturality correct but do not independently select admissible source transitions."
+    quotient_force: "Constant projective covector lines on R4 lie in one GL+(4) proposal-isomorphism orbit, erasing the strict identity-over-M discriminator."
+    natural_selection: "Full bare-source local isotropy admits no natural projective-line or coorientation selector."
+    conformal_lift: "The projective-line stabilizer fixes no Lorentzian conformal class and permits an infinite nonconformal completion family."
+  next_required_role: "theoretical-continuation-selector"
+  no_fog_check: true
+  no_fog_explanation: "The smallest failed premise is the absence of an independently source-derived law selecting a robust admissible foliation, its coorientation, and a conformal lift; the conditional mathematics itself is not defective."
+  claim_boundary_preserved: true
+  claim_boundary_citation: "research_control/tasks/RT-20260815-001/00_TASK.yaml#claim_boundary_id"
+
+obstruction_record:
+  present: true
+  obstruction_id: "OB-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT-001"
+  scope: "source_extension_candidate"
+  failed_object: "robust natural occurrence, coorientation, quotient-invariant separation, and Lorentz-conformal lift for the fixed projective-conormal bridge"
+  exact_failure: "Arbitrarily small off-domain perturbations, proposal-isomorphism orbit collapse, bare-source automorphism nonselection, ray-flipping line stabilizers, and the absence of a stabilizer-fixed Lorentzian conformal class defeat the standalone bridge claim."
+  minimal_counterexample_path: "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_model.py"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "selector_required"
+  forbidden_overread: "This candidate-scoped obstruction does not reverse RT006 source purity, reject the conditional mathematics, prove a global no-go, or establish future source-extension impossibility."
+
+refuter_obstruction_record:
+  obstruction_id: "OB-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT-001"
+  target_claim: "The fixed SourceLocalProjectiveConormalReduction_v1 proposal supplies a robust, naturally selected, cooriented, quotient-invariant source bridge with line-only Lorentz-conformal lift."
+  target_milestone: "effective_metric_g_eff"
+  failed_premise: "No source-derived law selects an ambiently robust integrable line field, a coorientation, an admissible arrow class with independent force, or a Lorentz-conformal completion."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_model.py"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "Missing source-derived occurrence, admissibility, robustness, coorientation, and conformal-lift law."
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  active_freeze_label: "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+  forbidden_conclusions:
+    - "No reversal of the RT006 source_pure_as_written verdict."
+    - "No rejection of the fixed conditional descent, reduction, or typed naturality mathematics."
+    - "No global no-go, theory rejection, or future source-extension impossibility."
+    - "No ontology or source-law adoption, D7 adequacy, B2 action, P4-T03, or downstream GR promotion."
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT015-001-001"
+    payload_type: "countermodel"
+    summary: "An arbitrarily small ambient C1 projective-line perturbation of an integrable conormal field can violate Frobenius integrability while the fixed conditional construction remains valid on its declared coherent-label domain."
+  - payload_id: "NMP-RT015-001-002"
+    payload_type: "theorem"
+    summary: "All constant projective covector lines on R4 lie in one orientation-preserving linear proposal-isomorphism orbit, so the strict identity-over-M fixture is not quotient-invariant separating evidence."
+  - payload_id: "NMP-RT015-001-003"
+    payload_type: "theorem"
+    summary: "Bare smooth source data admits no all-diffeomorphism-natural projective covector-line or coorientation selector."
+  - payload_id: "NMP-RT015-001-004"
+    payload_type: "theorem"
+    summary: "The positive-determinant projective-line stabilizer can exchange the two positive-ray sheets, so a line reduction does not select coorientation or physical time orientation."
+  - payload_id: "NMP-RT015-001-005"
+    payload_type: "obstruction"
+    summary: "The projective-line stabilizer fixes no Lorentzian conformal class, and a one-parameter determinant-normalized family gives explicit nonconformal completions sharing the same line."
+  - payload_id: "NMP-RT015-001-006"
+    payload_type: "lemma"
+    summary: "Naturality under arrows defined by preserving the candidate output is mathematically correct but supplies no independent source admissibility or occurrence evidence."
+
+mathematical_payload_manifest:
+  - payload_id: "NMP-RT015-001-001"
+    payload_type: "countermodel"
+    object_name: "Ambient non-Frobenius variation countermodel"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_v1.tex"
+    burden_effect: "localizes_ambient_robustness_failure"
+    summary: "Arbitrarily small general line-field variations can leave the fixed integrable domain."
+  - payload_id: "NMP-RT015-001-002"
+    payload_type: "theorem"
+    object_name: "Proposal-isomorphism orbit collapse theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_v1.tex"
+    burden_effect: "blocks_quotient_separation_overread"
+    summary: "The same-R4 identity-over-M discriminator collapses after the admitted proposal-isomorphism quotient."
+  - payload_id: "NMP-RT015-001-003"
+    payload_type: "theorem"
+    object_name: "Bare-source line and coorientation nonselection theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_v1.tex"
+    burden_effect: "blocks_natural_occurrence_overread"
+    summary: "Full local source isotropy prevents a natural line or ray selection from bare smooth data."
+  - payload_id: "NMP-RT015-001-004"
+    payload_type: "theorem"
+    object_name: "Positive-determinant ray-flip theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_v1.tex"
+    burden_effect: "blocks_coorientation_and_time_orientation_overread"
+    summary: "The line-stabilizer reduction preserves the unoriented line but not either positive-ray sheet."
+  - payload_id: "NMP-RT015-001-005"
+    payload_type: "obstruction"
+    object_name: "Line-only Lorentz-conformal lift obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_v1.tex"
+    burden_effect: "blocks_line_only_effective_geometry"
+    summary: "No Lorentzian conformal class is fixed by the full projective-line stabilizer."
+  - payload_id: "NMP-RT015-001-006"
+    payload_type: "lemma"
+    object_name: "Output-relative arrow nonprobative lemma"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_v1.tex"
+    burden_effect: "separates_formal_naturality_from_admissibility"
+    summary: "Candidate-preserving arrow naturality repeats an output-relative premise and does not derive EqSrc."
+
+freeze_criteria_status:
+  evaluated: true
+  freeze_evaluation_required: true
+  repeated_burden: true
+  scoped_obstruction: true
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+  prior_attempts_considered:
+    - "RT-20260814-004"
+    - "RT-20260814-005"
+    - "RT-20260814-006"
+    - "RT-20260815-001"
+  criteria_evaluated:
+    - "construction, independent audit, and first focused Refuter stress are complete"
+    - "ambient non-Frobenius, proposal-isomorphism, natural-selection, ray-flip, and conformal-lift falsifiers are exact"
+    - "the smallest failed premise is a missing independently source-derived robust selection and lift law"
+    - "all seven inherited freezes remain preserved"
+  freeze_decision: "not_frozen"
+  candidate_freeze_label: "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+  do_not_freeze_if:
+    - "A later selector chooses a materially distinct source-derived occurrence law, source-side irrelevance theorem, richer bridge class, or protected human-gated stop."
+  rationale: "The unchanged SourceLocalProjectiveConormalReduction_v1 is candidate-locally frozen as a standalone robust, naturally selected, cooriented, quotient-invariant P4 bridge or line-only Lorentz-conformal lift; the broader P4-T02 route remains open only to materially distinct source laws, theorem targets, or bridge classes."
+  next_allowed_route: "theoretical_selector"
+  next_allowed_role: "theoretical-continuation-selector@0.1.0"
+  frozen_scope: "the unchanged projective-conormal reduction as a standalone robust-selection and conformal-lift bridge"
+  nonfrozen_scope: "materially distinct source-derived occurrence or admissibility theorems, source-side irrelevance theorems, richer audited bridge classes, or protected human-gated stops"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_source_local_projective_conormal_reduction"
+  current_cycle_step: "refuter_scoped_obstruction"
+  prior_related_tasks:
+    - "RT-20260814-004"
+    - "RT-20260814-005"
+    - "RT-20260814-006"
+    - "RT-20260815-001"
+  cycle_risk: "high_if_unchanged_projective_conormal_bridge_is_replayed"
+  orbit_avoidance_reason: "The next selector must change the theorem target, source-law provenance, admissible object, or bridge class; another construction, audit, or stress of the unchanged projective-conormal standalone bridge is frozen."
+  next_role_consequence: "One theoretical-continuation-selector@0.1.0 selects exactly one materially distinct same-milestone packet after checkpoint."
+
+loop_risk_decision:
+  category: "scoped_obstruction"
+  repeated_object: "the unchanged projective-conormal line and line-stabilizer reduction promoted as robust, naturally selected, cooriented, quotient-invariant bridge or conformal lift"
+  obstruction_summary: "Exact ambient C1 perturbation, proposal-isomorphism orbit, bare-source automorphism, ray-flip, and stabilizer calculations obstruct the standalone robust-selection and conformal-lift claim while preserving all conditional mathematics."
+  next_route: "theoretical_decision_role_selection"
+  rationale: "A fresh theoretical-continuation-selector must choose one materially distinct source-derived occurrence or admissibility theorem, source-side irrelevance or scoped no-go theorem, richer audited bridge class, or protected human-gated ontology stop; replay of the unchanged projective-conormal bridge is locally frozen."
+  local_freeze_applied: true
+  next_route_changes_object_or_assumptions: true
+  global_freeze_applied: false
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "OB-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT-001"
+  item_source_path: "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_disposition_v1.yaml"
+  item_kind: "obstruction"
+  classification: "status_boundary_evidence_only"
+  claim_boundary_id: "CB-V22-P4-T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-ROBUSTNESS-NATURAL-SELECTION-REFUTER-STRESS-001"
+  evidence_paths:
+    - "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_v1.tex"
+    - "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_matrix_v1.yaml"
+    - "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_disposition_v1.yaml"
+    - "research_control/tasks/RT-20260815-001/artifacts/parent_fusion_notes_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress.md"
+  blocked_overreads:
+    - "conditional projective-conormal mathematics described as source occurrence, EqSrc, or an adopted law"
+    - "a projective line or ray described as physical causality, time orientation, empirical response, or universal propagation"
+    - "candidate-scoped obstruction described as a global no-go or future-extension impossibility"
+    - "D7 adequacy, B2 action, P4-T03, g_eff, coupling, equations, benchmark, or completed derivation"
+  relation_to_current_ontology: "blocked_open"
+  relation_to_target_side_structures: "none"
+  protected_authority_required: false
+  downstream_promotion_authorized: false
+  allowed_conclusion: "The unchanged proposal-only projective-conormal bridge fails the declared robust-selection, coorientation, quotient-separation, and conformal-lift scope; materially distinct same-milestone continuation remains open."
+  forbidden_overreads:
+    - "source-law adoption or rejection"
+    - "physical time, causality, or empirical response"
+    - "matter coupling or Einstein equations"
+    - "benchmark promotion or completed derivation"
+    - "global theory rejection or future source-extension impossibility"
+  next_route_if_blocked: "theoretical-continuation-selector@0.1.0"
+  category: "source_extension_candidate_refutation"
+  status_label: "draft/control"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  current_ontology_derivation_claimed: false
+  source_law_adopted: false
+  source_law_rejected: false
+  adoption_status: "blocked_adoption_open_continuation"
+  physics_promotion_authorized: false
+
+selected_next_route:
+  route_id: "select_v22_p4_t02_b2_post_projective_conormal_obstruction_continuation_v1"
+  route_label: "ordinary-research-packet"
+  packet_id: "PKT-V22-P4T02-B2-POST-PROJECTIVE-CONORMAL-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-POST-PROJECTIVE-CONORMAL-REFUTER-THEORETICAL-CONTINUATION-SELECTION"
+  work_kind: "theoretical_continuation_selector"
+  task_class: "science"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  worker_skill: "continue-research"
+  selected_next_packet_type: "theoretical_continuation_selector"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Choose one materially distinct same-milestone continuation after the projective-conormal robust-selection and conformal-lift obstruction and local freeze."
+  expected_result_kind: "one_theoretical_packet_selection"
+  selector_options:
+    - "source_derived_occurrence_or_admissibility_theorem"
+    - "source_side_irrelevance_or_scoped_no_go_theorem"
+    - "richer_audited_bridge_class"
+    - "human_gated_ontology_change_required"
+  requires_human_gate: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  selected_packet_executed: false
+  adequacy_reevaluation_authorized: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  physics_promotion_authorized: false
+  external_action_authorized: false
+
+next_recommendation: "After exactly one governed checkpoint, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-PROJECTIVE-CONORMAL-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1 to select one materially distinct source-derived occurrence or admissibility theorem, source-side irrelevance or scoped no-go theorem, richer audited bridge class, or protected human-gated ontology stop without replaying any active freeze."
+
+ordinary_route_guard:
+  schema_id: "ordinary_route_guard_evaluation_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  evaluation_id: "ORE-RT-20260815-001"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  threshold: 3
+  consecutive_project_system_tasks_before_selection: 0
+  selected_plan_task_id: "P4-T02"
+  selected_route_class: "physics_bearing"
+  selected_worker_skill: "continue-research"
+  outcome: "below_threshold"
+  selection_reason: "A candidate-scoped obstruction and local freeze require one materially distinct same-milestone theoretical decision before further construction."
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  exception_receipt:
+    active: false
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory preflight, committed RT006 checkpoint, immutable handoff, route guard, payload, family-freeze, dual-budget, and claim-boundary admissions passed."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact model, both child audits, parent fusion, compilation, and four-page visual inspection pass."
+  post_write:
+    status: "PENDING"
+    evidence:
+      - "Focused, affected-profile, research-control, documentation, memory, freshness, signal, and whitespace gates must converge before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed AJ-RT-20260815-001-001 checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Four letter-size pages compile with zero overfull boxes or LaTeX warnings and all rendered pages pass visual inspection."
+  memory_bootstrap:
+    status: "PENDING"
+    evidence:
+      - "Registered sources and generated memory derivatives will be synchronized before checkpoint."
+  claim_language_linter:
+    status: "PENDING"
+    evidence:
+      - "Changed-source claim-language validation remains in the final stack."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review is authorized for this P4-T02 source-extension stress."
+  protected_scoped_gate_review_authority_source_path: ""
+  downstream_physics_promotion_authorized: false
+  downstream_physics_promotion_authority_source_path: ""
+  benchmark_promotion_authorized: false
+  benchmark_promotion_authority_source_path: ""
+  completed_derivation_authorized: false
+  completed_derivation_authority_source_path: ""
+  source_law_audited_as_source_pure_as_written: true
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  adequacy_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  physical_causality_constructed: false
+  empirical_response_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_constructed: false
+  einstein_equations_derived: false
+  proof_authority: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  global_no_go_claimed: false
+  completed_derivation_claimed: false
+
+three_tier_claim_summary:
+  adopted_objects: []
+  accepted_evidence_preconditions:
+    - object: "SourceLocalProjectiveConormalReduction_v1 conditional mathematics"
+      status: "draft/control mathematics preserved on the declared coherent submersion-atlas domain"
+    - object: "projective-conormal robust-selection and conformal-lift obstruction"
+      status: "draft/control candidate-scoped evidence with one local freeze"
+  open_or_blocked_physical_targets:
+    - object: "independent source occurrence, admissibility, orientation, and robustness law"
+      status: "open and unadopted"
+    - object: "physical causality, response, conformal geometry, scale, and g_eff"
+      status: "not established"
+  forbidden_overread:
+    - "The scoped obstruction is not a global no-go, source-law rejection, physical derivation, P4 acceptance, or Distance-to-GR discharge."
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "candidate reconstruction, repair, or predecessor rewrite"
+    - "canonical ontology edit, source-law adoption, or M_src adoption"
+    - "EqSrc adoption, physical time, causality, empirical response, or universal propagation"
+    - "Lorentz-conformal geometry, scale, g_eff, matter coupling, or Einstein equations"
+    - "D7 evaluation, B2 action, P4-T02 completion, or P4-T03 unlock"
+    - "benchmark, Gate proof, publication, push, external action, or completed derivation"
+    - "global no-go, global theory rejection, or future source-extension impossibility"
+  summary: "The scoped obstruction, child consensus, exact mathematics, compilation, validation, registration, and checkpoint are bounded evidence only and create no scientific promotion authority."
+
+command_results:
+  - command: ".venv/bin/python research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_model.py --json"
+    status: "PASS"
+    detail: "Thirty-four of thirty-four exact fixed-candidate, ambient-variation, proposal-isomorphism, ray-flip, determinant-one, and stabilizer checks pass."
+  - command: "pdfTeX compile and Poppler-rendered all-page visual review"
+    status: "PASS"
+    detail: "Four letter-size pages compile with zero overfull boxes and all four pass visual inspection."
+  - command: "focused and governed repository validation"
+    status: "PENDING_PRECHECKPOINT"
+    detail: "The terminal control state must pass focused, affected-profile, research-control, documentation, claim-language, memory, signal, and diff validation before checkpoint."
+
+checkpoint:
+  invocation_count: 0
+  committed: false
+  commit: ""
+  push_performed: false
+  external_action_performed: false
+  note: "The single checkpoint is executed only after terminal artifacts and generated systems validate."
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
