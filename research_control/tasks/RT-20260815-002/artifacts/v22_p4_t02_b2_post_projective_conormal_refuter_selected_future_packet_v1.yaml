@@ -1,0 +1,313 @@
+schema_id: "v22_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel_theorem_packet_v1"
+status: "selected_not_executed"
+authority: "science_draft"
+task_id: "RT-20260815-002"
+job_id: "AJ-RT-20260815-002-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+
+packet:
+  packet_id: "PKT-V22-P4T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-THEOREM-V1"
+  packet_type: "bounded_theoretical_calculation"
+  route_id: "A_SOURCE_DERIVED_OCCURRENCE_ADMISSIBILITY_THEOREM"
+  route_label: "ontology-law-research-packet"
+  trigger_classification: "derivation_critical_missing_source_law"
+  next_role_family: "ontology-formalizer@0.2.0"
+  selected_packet_executed: false
+  requires_human_gate: false
+  objective: "Define and test, over a target-free current-source groupoid and typed proposal fibration, the exact existence and provenance conditions for deterministic occurrence sections, proper invariant admissible subfunctors, normalized equivariant occurrence kernels, and locality/descent; derive the law from current-source data or return the first precise obstruction without adopting it."
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Establish whether any bridge proposal can receive independently source-derived occurrence or admissibility force before another representation-valued bridge is constructed."
+  result_scope: "occurrence_admissibility_layer_only"
+  adoption_status: "blocked_adoption_open_continuation"
+
+fixed_inputs:
+  predecessor_result: "scoped_obstruction"
+  predecessor_obstruction_id: "OB-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT-001"
+  predecessor_freeze_id: "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+  fixed_conditional_mathematics:
+    - "projective-conormal descent, reduction, restriction, refinement, gluing, and proposal-groupoid closure remain valid on their declared proposal domain"
+    - "the narrow source_pure_as_written verdict remains fixed"
+    - "no predecessor representation is treated as occurring, adopted, physical, or P4-sufficient"
+  current_source_boundary: "Use only typed current-source objects and arrows already registered at execution time. Phi_src or any other unresolved debt marker remains excluded until independently typed."
+  selected_packet_executed: false
+
+formal_domains:
+  - domain_id: "DOM-01"
+    name: "Src"
+    definition: "The exact current-source object and isomorphism groupoid, with every nonlogical symbol and arrow type hash-bound before the calculation."
+  - domain_id: "DOM-02"
+    name: "Prop"
+    definition: "A disclosed target-free category or groupoid of proposal enrichments over Src."
+  - domain_id: "DOM-03"
+    name: "Fib_s"
+    definition: "The proposal fiber U^{-1}(s) over each source object s, with its Aut_Src(s) action."
+  - domain_id: "DOM-04"
+    name: "AdmSub"
+    definition: "Nonempty proper invariant admissibility subobjects or subfunctors when they exist."
+  - domain_id: "DOM-05"
+    name: "DetSec"
+    definition: "Deterministic natural sections sigma of the forgetful functor U:Prop->Src."
+  - domain_id: "DOM-06"
+    name: "OccKern"
+    definition: "Normalized countably additive or explicitly finite occurrence kernels on fibers, with declared measurable structures."
+  - domain_id: "DOM-07"
+    name: "CoverSrc"
+    definition: "Declared source-local covers, restrictions, overlaps, and gluing diagrams."
+  - domain_id: "DOM-08"
+    name: "LawSrc"
+    definition: "Typed current-source law data permitted to generate an admissibility subfunctor, section, or kernel without reading bridge or P4 outputs."
+  - domain_id: "DOM-09"
+    name: "Evidence"
+    definition: "Exact proofs, countermodels, factorization records, locality checks, falsifiers, and source hashes."
+  - domain_id: "DOM-10"
+    name: "Result"
+    definition: "One exclusive result: theorem with hypotheses, proposal-only law pending audit, current-source provenance obstruction, locality/descent obstruction, or invariant-kernel obstruction."
+
+formal_objects:
+  - object_id: "OBJ-01"
+    name: "ForgetfulFibration"
+    type: "U:Prop->Src with declared lift and transport laws"
+  - object_id: "OBJ-02"
+    name: "FiberAction"
+    type: "Aut_Src(s) action on Fib_s"
+  - object_id: "OBJ-03"
+    name: "AdmissibilitySubfunctor"
+    type: "Adm_src subset Prop, invariant, proper when discriminating, and nonempty"
+  - object_id: "OBJ-04"
+    name: "DeterministicSection"
+    type: "sigma:Src->Prop with U sigma=id and naturality"
+  - object_id: "OBJ-05"
+    name: "OccurrenceKernel"
+    type: "K_s probability measure on Fib_s"
+  - object_id: "OBJ-06"
+    name: "KernelTransport"
+    type: "pushforward equality K_t=(f_*)K_s for each source arrow f:s->t"
+  - object_id: "OBJ-07"
+    name: "RestrictionLedger"
+    type: "local proposal, admissibility, section, and kernel restrictions"
+  - object_id: "OBJ-08"
+    name: "DescentLedger"
+    type: "overlap equalities, cocycles, and glued result or first obstruction"
+  - object_id: "OBJ-09"
+    name: "ProvenanceDAG"
+    type: "acyclic dependency graph from current-source terms to occurrence outputs"
+  - object_id: "OBJ-10"
+    name: "TwoPointSwapControl"
+    type: "finite torsor with no fixed section and one uniform invariant kernel"
+  - object_id: "OBJ-11"
+    name: "TranslationTorsorControl"
+    type: "R acting on itself by translation with no invariant Borel probability"
+  - object_id: "OBJ-12"
+    name: "SameReductOppositeLabelControl"
+    type: "two desired occurrence labels over one identical typed source reduct"
+
+formal_maps:
+  - map_id: "MAP-01"
+    signature: "U:Prop->Src"
+    purpose: "forget proposal enrichment"
+  - map_id: "MAP-02"
+    signature: "Act_s:Aut_Src(s)xFib_s->Fib_s"
+    purpose: "test fixed points and invariant subsets or measures"
+  - map_id: "MAP-03"
+    signature: "Adm:Src->InvariantSubobjects(Fib)"
+    purpose: "encode proper source-derived admissibility"
+  - map_id: "MAP-04"
+    signature: "sigma:Src->Prop"
+    purpose: "encode deterministic occurrence when a natural section exists"
+  - map_id: "MAP-05"
+    signature: "K:Src->Prob(Fib)"
+    purpose: "encode normalized equivariant occurrence kernels"
+  - map_id: "MAP-06"
+    signature: "f_*:Prob(Fib_s)->Prob(Fib_t)"
+    purpose: "transport kernels along source arrows"
+  - map_id: "MAP-07"
+    signature: "res_UV:LocalData(U)->LocalData(U cap V)"
+    purpose: "test locality and overlap equality"
+  - map_id: "MAP-08"
+    signature: "glue:CompatibleLocalData->GlobalData"
+    purpose: "construct or obstruct descent"
+  - map_id: "MAP-09"
+    signature: "Gen_occ:LawSrc->(Adm,DetSec,OccKern)"
+    purpose: "require current-source provenance before outcome diagnostics"
+  - map_id: "MAP-10"
+    signature: "Diag_P4:(Adm,DetSec,OccKern,Bridge)->diagnostic_only"
+    purpose: "evaluate later relevance without feeding diagnostics back into generation"
+
+theorem_targets:
+  - theorem_id: "THM-01"
+    name: "GroupoidDeterministicSectionFixedPointCriterion"
+    statement: "A natural section exists exactly when one compatible fixed element can be chosen in each representative fiber, under the declared groupoid and fibration hypotheses."
+  - theorem_id: "THM-02"
+    name: "InvariantAdmissibleSubfunctorCriterion"
+    statement: "A discriminating admissibility layer is a nonempty proper invariant subobject compatible across source arrows; the full fiber is mathematically valid but nonselecting."
+  - theorem_id: "THM-03"
+    name: "EquivariantOccurrenceKernelCriterion"
+    statement: "An occurrence kernel exists only when normalized invariant fiber measures exist and transport coherently; existence does not imply deterministic selection."
+  - theorem_id: "THM-04"
+    name: "LocalOccurrenceDescentCriterion"
+    statement: "Local sections, subfunctors, or kernels descend only under exact overlap and cocycle compatibility."
+  - theorem_id: "THM-05"
+    name: "CurrentSourceProvenanceFactorCriterion"
+    statement: "A current-source-derived occurrence law factors through typed pre-outcome source data and is constant on identical reducts; output-relative or desired-label dependence fails the criterion."
+
+exact_controls:
+  two_point_swap:
+    deterministic_section_exists: false
+    proper_nonempty_invariant_subset_exists: false
+    invariant_kernel: "(1/2,1/2)"
+    token_selected: false
+  translation_torsor:
+    invariant_borel_probability_exists: false
+    proof_control: "Disjoint unit translates force positive unit mass to exceed normalization, while zero unit mass makes the countable union R have zero mass."
+  overlap_descent:
+    compatible_uniform_kernels_descend: true
+    opposite_dirac_kernels_descend: false
+  same_reduct_factorization:
+    opposite_desired_labels_factor_through_current_reduct: false
+  later_bridge_tractability:
+    symmetrizable_rational_pencil_control: true
+    jordan_symmetrizer_obstruction_control: true
+    authority: "route comparison only"
+
+proof_obligations:
+  - obligation_id: "PO-01"
+    statement: "Type Src, Prop, U, all fibers, automorphism actions, and measurable structures without target or desired-output imports."
+  - obligation_id: "PO-02"
+    statement: "Prove U has the exact lift, transport, identity, inverse, and composition properties used by the theorem."
+  - obligation_id: "PO-03"
+    statement: "Prove the deterministic-section fixed-point criterion with representative-independence."
+  - obligation_id: "PO-04"
+    statement: "Classify invariant admissible subobjects and distinguish full-fiber admissibility from discriminating proper admissibility."
+  - obligation_id: "PO-05"
+    statement: "Define probability or finite kernels with normalization, countable additivity when claimed, and exact source-arrow pushforward."
+  - obligation_id: "PO-06"
+    statement: "Prove kernel existence or nonexistence under declared finite, compact, or noncompact action hypotheses."
+  - obligation_id: "PO-07"
+    statement: "Prove that an invariant kernel does not by itself select an individual token or event."
+  - obligation_id: "PO-08"
+    statement: "State and prove restriction, overlap, cocycle, and gluing conditions for every retained occurrence notion."
+  - obligation_id: "PO-09"
+    statement: "Bind every generator of admissibility or occurrence to typed current-source data fixed before bridge and P4 diagnostics."
+  - obligation_id: "PO-10"
+    statement: "Prove the provenance dependency graph is acyclic and contains no output-relative admission edge."
+  - obligation_id: "PO-11"
+    statement: "Demonstrate material distinctness from all eight freezes and from finite-root and K_star point-selector replays."
+  - obligation_id: "PO-12"
+    statement: "Run the swap, translation, overlap, same-reduct, and exact later-bridge controls with falsifiers."
+  - obligation_id: "PO-13"
+    statement: "Return exactly one allowed result with source-extension classification and blocked-adoption boundary."
+  - obligation_id: "PO-14"
+    statement: "Preserve fourteen no-delta Distance-to-GR rows, D7/B2/P4-T03 locks, and every promotion or outward-action block."
+
+failure_branches:
+  - branch_id: "FB-01"
+    trigger: "Src, Prop, U, fibers, actions, or measurable structures are untyped."
+    result: "precise_typing_obstruction"
+  - branch_id: "FB-02"
+    trigger: "The proposal carrier, action, or law imports a target atlas, metric, desired cone, empirical label, or benchmark answer."
+    result: "forbidden_target_import"
+  - branch_id: "FB-03"
+    trigger: "The law is defined from a bridge output, P4 success label, or frozen diagnostic."
+    result: "circular_goal_preload_obstruction"
+  - branch_id: "FB-04"
+    trigger: "No compatible automorphism-fixed fiber element exists for a claimed deterministic section."
+    result: "deterministic_section_obstruction"
+  - branch_id: "FB-05"
+    trigger: "Only empty or full invariant admissible subsets exist when a discriminating proper subfunctor is claimed."
+    result: "admissibility_nonselection_obstruction"
+  - branch_id: "FB-06"
+    trigger: "No normalized invariant measure exists under the declared fiber action."
+    result: "occurrence_kernel_nonexistence_obstruction"
+  - branch_id: "FB-07"
+    trigger: "An invariant kernel exists but is overread as a realized token, point event, or physical probability."
+    result: "semantic_overread_failure"
+  - branch_id: "FB-08"
+    trigger: "Local sections, subfunctors, or kernels disagree on an overlap or violate a cocycle."
+    result: "locality_descent_obstruction"
+  - branch_id: "FB-09"
+    trigger: "Same typed source reducts receive different outputs without independently sourced distinguishing data."
+    result: "current_source_provenance_obstruction"
+  - branch_id: "FB-10"
+    trigger: "The construction replays a frozen selector, bridge, protection law, or standalone irrelevance theorem."
+    result: "family_freeze_replay_block"
+  - branch_id: "FB-11"
+    trigger: "The theorem silently assumes occurrence, physical response, time orientation, cone universality, or adoption."
+    result: "authority_boundary_failure"
+  - branch_id: "FB-12"
+    trigger: "An adoption, D7/B2/P4-T03, promotion, publication, push, external action, or selected-successor execution is attempted."
+    result: "hard_scope_stop"
+
+allowed_results:
+  - "source_derived_occurrence_admissibility_descent_kernel_theorem"
+  - "proposal_only_occurrence_law_formalized_pending_smuggling_audit"
+  - "current_source_provenance_or_typing_obstruction"
+  - "locality_or_descent_obstruction"
+  - "invariant_occurrence_kernel_obstruction"
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  classification: "proposal_only_new_occurrence_admissibility_grammar_pending_current_source_derivation"
+  relation_to_current_ontology: "underived_until_future_packet_proves_factorization"
+  relation_to_target_side_structures: "none_permitted"
+  status_vocabulary: "draft/control proposal-only source-extension data blocked_adoption_open_continuation"
+  protected_authority_required_for_adoption: true
+  downstream_promotion_authorized: false
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+  - "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_delta"
+  - burden: "Source equivalence EqSrc"
+    status: "no_delta"
+  - burden: "RetainH"
+    status: "no_delta"
+  - burden: "GenH"
+    status: "no_delta"
+  - burden: "ObsLoc_lc"
+    status: "no_delta"
+  - burden: "Resp_lc"
+    status: "no_delta"
+  - burden: "M_src"
+    status: "no_delta"
+  - burden: "g_eff"
+    status: "no_delta"
+  - burden: "matter coupling"
+    status: "no_delta"
+  - burden: "Einstein equations"
+    status: "no_delta"
+  - burden: "finite-variation robustness"
+    status: "no_delta"
+  - burden: "benchmark promotion"
+    status: "no_delta"
+  - burden: "Gate Chair status"
+    status: "no_delta"
+  - burden: "current route freeze or hard-fail status"
+    status: "no_delta"
+
+authority_limits:
+  selected_packet_executed: false
+  theorem_truth_inferred: false
+  law_constructed: false
+  source_extension_adopted: false
+  canonical_ontology_modified: false
+  physical_occurrence_assigned: false
+  empirical_probability_assigned: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

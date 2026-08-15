@@ -716,6 +716,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-LINE-LOCK-SELECTION-V1` `research_control/tasks/RT-20260810-002/artifacts/parent_fusion_notes_p4_t02_b2_post_line_lock_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-ORIENTED-MATROID-REFUTER-SELECTOR-V1` `research_control/tasks/RT-20260811-002/artifacts/parent_fusion_notes_p4_t02_b2_post_oriented_matroid_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-PRES-SRC-PROVENANCE-OBSTRUCTION-SELECTION-V1` `research_control/tasks/RT-20260811-012/artifacts/parent_fusion_notes_p4_t02_b2_post_pres_src_provenance_obstruction_selector.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-POST-PROJECTIVE-CONORMAL-REFUTER-SELECTOR-V1` `research_control/tasks/RT-20260815-002/artifacts/parent_fusion_notes_p4_t02_b2_post_projective_conormal_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-REFUTER-SELECTION-V1` `research_control/tasks/RT-20260810-009/artifacts/parent_fusion_notes_p4_t02_b2_post_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-SIGNED-CUBIC-VIABILITY-REFUTER-SELECTION-V1` `research_control/tasks/RT-20260811-006/artifacts/parent_fusion_notes_p4_t02_b2_post_signed_cubic_viability_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-SELECTION-V1` `research_control/tasks/RT-20260811-010/artifacts/parent_fusion_notes_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.md`
@@ -1242,6 +1243,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-002/artifacts/v22_p4_t02_b2_post_line_lock_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-ORIENTED-MATROID-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-002/artifacts/v22_p4_t02_b2_post_oriented_matroid_refuter_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-PRES-SRC-PROVENANCE-OBSTRUCTION-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-012/artifacts/v22_p4_t02_b2_post_pres_src_provenance_obstruction_route_selection_v1.tex`
+- `TEX-V22-P4-T02-B2-POST-PROJECTIVE-CONORMAL-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260815-002/artifacts/v22_p4_t02_b2_post_projective_conormal_refuter_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-009/artifacts/v22_p4_t02_b2_post_refuter_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-006/artifacts/v22_p4_t02_b2_post_signed_cubic_viability_refuter_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_selection_v1.tex`
@@ -1969,6 +1971,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-LINE-LOCK-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-line-lock-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-ORIENTED-MATROID-REFUTER-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-oriented-matroid-refuter-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-PRES-SRC-PROVENANCE-OBSTRUCTION-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-pres-src-provenance-obstruction-selection-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-PROJECTIVE-CONORMAL-REFUTER-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-projective-conormal-refuter-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-REFUTER-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-refuter-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-SIGNED-CUBIC-VIABILITY-REFUTER-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-signed-cubic-viability-refuter-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-source-law-space-robust-invariance-refuter-selection-v1.md`
@@ -2489,6 +2492,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P4-T02-B2-POST-LINE-LOCK-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-line-lock-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-ORIENTED-MATROID-REFUTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-oriented-matroid-refuter-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-PRES-SRC-PROVENANCE-OBSTRUCTION-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-pres-src-provenance-obstruction-route-selection-v1.md`
+- `WIKI-TEX-V22-P4-T02-B2-POST-PROJECTIVE-CONORMAL-REFUTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-projective-conormal-refuter-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-REFUTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-refuter-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-signed-cubic-viability-refuter-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-source-law-space-robust-invariance-refuter-route-selection-v1.md`

@@ -1,0 +1,774 @@
+schema_id: "child_phys_math_p4_t02_b2_post_projective_conormal_refuter_selector_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-POST-PROJECTIVE-CONORMAL-REFUTER-SELECTOR-001"
+artifact_type: "parent_child_synthesis_child_output"
+authority: "science_draft"
+status: "complete_for_parent_synthesis"
+status_label: "draft/control"
+task_id: "RT-20260815-002"
+job_id: "AJ-RT-20260815-002-001"
+decision_id: "DDR-20260815-002"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260815-002"
+claim_boundary_id: "CB-V22-P4-T02-B2-POST-PROJECTIVE-CONORMAL-REFUTER-THEORETICAL-SELECTION-001"
+created_at: "2026-08-15T16:39:49Z"
+source_head: "0d9f85c0aee881034c776fa4d4b08621e0b60e79"
+source_tree: "9797340397dab28923c9cad5252ac1e89bece33f"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Choose one materially distinct same-milestone continuation after the projective-conormal robust-selection and conformal-lift obstruction and local freeze."
+
+ownership_boundary:
+  owned_path: "research_control/tasks/RT-20260815-002/artifacts/child_phys_math_p4_t02_b2_post_projective_conormal_refuter_selector.yaml"
+  files_written_count: 1
+  other_files_modified: false
+  peer_child_file_inspected: false
+  parent_artifact_modified: false
+  control_file_modified: false
+  registry_modified: false
+  canonical_ontology_modified: false
+  completion_created: false
+  handoff_created: false
+  checkpoint_executed: false
+  child_agentjob_created: false
+
+execution_controls:
+  outer_agentjob_count: 1
+  internal_child_count: 2
+  child_agentjob_count: 0
+  exact_route_count: 4
+  selected_route_count: 1
+  selected_future_packet_count: 1
+  selected_future_packet_executed: false
+  successor_created: false
+  frozen_candidate_reconstructed_or_repaired: false
+  frozen_route_replayed: false
+  source_primitive_adopted: false
+  source_law_adopted: false
+  target_or_empirical_import_used: false
+  d7_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked_or_executed: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_extension_impossibility_claimed: false
+
+fixed_predecessor_result:
+  predecessor_task_id: "RT-20260815-001"
+  predecessor_job_id: "AJ-RT-20260815-001-001"
+  predecessor_result_class: "scoped_obstruction"
+  obstruction_id: "OB-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT-001"
+  local_freeze_id: "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+  fixed_candidate_id: "SourceLocalProjectiveConormalReduction_v1"
+  fixed_positive_scope: "On its declared coherent submersion-atlas domain, the projective conormal line descends, the proper line-stabilizer reduction is valid, and restriction, refinement, gluing, and output-relative groupoid closure remain correct."
+  fixed_obstruction_scope: "The unchanged candidate does not derive occurrence of an integrable projective conormal, protect its ambient admissible-variation class, choose a coorientation, or provide a Lorentz-conformal lift."
+  fixed_authority_scope: "The obstruction is candidate-local and does not reject the ontology, establish a global no-go, or preclude a materially enriched source law."
+  held_fixed_without_replay: true
+  candidate_reconstructed: false
+  candidate_repaired: false
+  stress_reexecuted: false
+
+source_binding:
+  binding_note: "Tracked sources and registries govern. Hashes were recomputed from live bytes before child completion; active current-task control hashes may require parent terminal rebinding after lifecycle edits."
+  hash_algorithm: "sha256"
+  governing_source_count: 24
+  governing_sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      authority: "control"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      authority: "control"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      authority: "control"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      authority: "workflow_contract"
+    - path: ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+      sha256: "85550a50a4be3fc2b1fbf6e22b22c160b25923944276d0b555e75fb10380ff79"
+      authority: "role_contract"
+    - path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+      sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+      authority: "role_contract"
+    - path: "research_control/tasks/RT-20260815-002/00_TASK.yaml"
+      sha256: "0108f905d9059245557e04f130a641e27c3ff0464de8c1566c2f1fe514fd6ce6"
+      authority: "tracked_control_state_active"
+    - path: "research_control/tasks/RT-20260815-002/DDR-20260815-002.md"
+      sha256: "fcd2d16aeabe50453a88023678579c2d458e2eedc10c1986205dcc6069d50433"
+      authority: "tracked_control_state_active"
+    - path: "research_control/tasks/RT-20260815-002/jobs/AJ-RT-20260815-002-001.yaml"
+      sha256: "af2eb8414057f3c8ce1c7029a9bbaa3a34241fdd775a2fbb27a4e902e9e4cfe7"
+      authority: "tracked_control_state_active"
+    - path: "research_control/tasks/RT-20260815-002/roles/theoretical-continuation-selector@0.1.0--RT-20260815-002.yaml"
+      sha256: "c9127d856768e41b0bf15fca6e711364bcabf7ee05cc470aaa975b8b36608bfa"
+      authority: "execution_role_active"
+    - path: "research_control/handoffs/handoff-1037.yaml"
+      sha256: "a09924340402b9ecefc75179a30b48c1f051b8ba7340c245031150630b4eebab"
+      authority: "tracked_control_state"
+    - path: "research_control/handoffs/handoff-1037.md"
+      sha256: "5103e58b180f3121bbf3a7850afbc5d36d060031f34e9f2d8fe4eb970f03ac52"
+      authority: "tracked_control_state"
+    - path: "research_control/tasks/RT-20260815-001/artifacts/v22_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress_v1.tex"
+      sha256: "bb501d25f7e81964e23e6aed009ad570742e0ec1a0e86cfaa11716605a9179ec"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260815-001/artifacts/parent_fusion_notes_p4_t02_b2_source_local_projective_conormal_reduction_refuter_stress.md"
+      sha256: "25099c5a320a43d5e0a9d50423f4873f2eecc441e03aa7c5746f3ea6c933ce41"
+      authority: "registered_science_draft"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      authority: "project_control"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      authority: "control"
+    - path: "registries/TEX_SOURCE_REGISTRY.csv"
+      sha256: "4d81e14f584e42cd2eff8898b09b2db5e91a5a1d01c4c7636e0f6f0789882c7a"
+      authority: "registry"
+    - path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      sha256: "87f331edf02fe35a5a172a0f345914e3510ebdc49b08444e7e1bd34e50d87da4"
+      authority: "registry"
+    - path: "registries/ROLE_EXECUTION_REGISTRY.csv"
+      sha256: "02f2565f42ec0ad6885c875e4c79008811490a3aad8f8753da5a091da6870872"
+      authority: "registry"
+    - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+      authority: "registry"
+    - path: "registries/AGENT_JOB_REGISTRY.csv"
+      sha256: "2d6532741aa574175c19934a700351a0e892ea2ae1cc76705dfc20073749ee70"
+      authority: "registry"
+    - path: "registries/RESEARCH_TASK_REGISTRY.csv"
+      sha256: "04b80fff568e301d6caabf2229ad9bbedcc798e85b19b5dc0ef92a2aa9b84dce"
+      authority: "registry"
+    - path: "registries/DIRECTOR_DECISION_REGISTRY.csv"
+      sha256: "77be286aa5bcc5febf917a576ef7d67d673a01439fb7b51dffbb657d03197c9a"
+      authority: "registry"
+    - path: "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+      sha256: "f8c4c52f7279fb6ed61520ca891d8bf5b119aefdfe9cd4b7ce1a08be499a68c7"
+      authority: "registry"
+  registry_row_checks:
+    plan_object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    plan_registered_hash_matches: true
+    tex_object_id: "TEX-V22-P4-T02-B2-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-REFUTER-STRESS-V1"
+    tex_registered_hash_matches: true
+    markdown_object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-LOCAL-PROJECTIVE-CONORMAL-REDUCTION-REFUTER-STRESS-V1"
+    markdown_registered_hash_matches: true
+    execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260815-002"
+    execution_role_registry_row_present: true
+
+formal_domains:
+  domain_count: 11
+  domains:
+    - domain_id: "DOM-01"
+      symbol: "C_cur"
+      definition: "The current task-local source-reduct category used for formal naturality tests; its arrows are not adopted as EqSrc and its objects carry no target geometry or physical meaning by this selector."
+    - domain_id: "DOM-02"
+      symbol: "Open(c)"
+      definition: "The poset of source-local opens U inside an object c of C_cur, with inclusions V subset U used for restriction and descent tests."
+    - domain_id: "DOM-03"
+      symbol: "E"
+      definition: "A category fibered over C_cur whose objects are proposal-only enriched source lifts e over current reducts and whose arrows cover source-presentation arrows."
+    - domain_id: "DOM-04"
+      symbol: "F_c"
+      definition: "The fiber U_forget^{-1}(c) of enriched lifts over one current reduct c, before any occurrence token is selected."
+    - domain_id: "DOM-05"
+      symbol: "G_c"
+      definition: "Aut_C_cur(c), acting on F_c by the declared pullback or transport law; this mathematical automorphism action is not an adopted source-equivalence law."
+    - domain_id: "DOM-06"
+      symbol: "Adm_c"
+      definition: "A proposed nonempty proper G_c-invariant admissible subset of F_c, local in U and stable under declared restrictions; membership is not occurrence."
+    - domain_id: "DOM-07"
+      symbol: "Sec(U_forget)"
+      definition: "Deterministic natural sections s:C_cur->E with U_forget composed with s equal to the identity and with local restriction and gluing descent."
+    - domain_id: "DOM-08"
+      symbol: "Ker_eq(F)"
+      definition: "Normalized equivariant occurrence kernels kappa_c assigning probability measures on F_c, with automorphism equivariance and source-local restriction compatibility; a distribution is not a realized token."
+    - domain_id: "DOM-09"
+      symbol: "X_cur"
+      definition: "The explicitly declared current-source data functor through which every claimed derived admissibility predicate, section, or kernel must factor for current-ontology provenance."
+    - domain_id: "DOM-10"
+      symbol: "Y_rep"
+      definition: "A representation-valued bridge codomain, kept mathematically typed but carrying no occurrence, response, conformal, metric, or physical semantics by itself."
+    - domain_id: "DOM-11"
+      symbol: "Cert_A"
+      definition: "The future packet's exact certificate returning a proved current-source occurrence or admissibility tier, or a precise scoped obstruction at the first failed tier, without adoption."
+
+formal_maps:
+  map_count: 12
+  maps:
+    - map_id: "MAP-01"
+      signature: "U_forget:E->C_cur"
+      definition: "Forget all proposal-only lift data and retain the unchanged current source reduct."
+    - map_id: "MAP-02"
+      signature: "act_c:G_c x F_c->F_c"
+      definition: "Transport a lift over c by a source automorphism, with composition and identity laws proved in the future packet."
+    - map_id: "MAP-03"
+      signature: "s:C_cur->E"
+      definition: "A candidate deterministic occurrence section satisfying U_forget composed with s equals id_C_cur and full naturality, restriction, and gluing obligations."
+    - map_id: "MAP-04"
+      signature: "i_Adm:Adm->F"
+      definition: "A candidate proper nonempty invariant admissible subfunctor inclusion; it filters lifts but does not select an element."
+    - map_id: "MAP-05"
+      signature: "kappa_c:X_cur(c)->Prob(F_c)"
+      definition: "A candidate normalized source-equivariant occurrence kernel whose provenance and normalization must be proved before any probabilistic reading."
+    - map_id: "MAP-06"
+      signature: "rho^F_UV:F(U)->F(V)"
+      definition: "Restriction of lift data from U to V for V subset U."
+    - map_id: "MAP-07"
+      signature: "rho^Adm_UV:Adm(U)->Adm(V)"
+      definition: "Restriction of admissible lift data, required to commute with i_Adm and preserve properness where claimed."
+    - map_id: "MAP-08"
+      signature: "Prob(rho^F_UV):Prob(F(U))->Prob(F(V))"
+      definition: "Pushforward of kernels under restriction; equality with the local kernel is required for descent compatibility."
+    - map_id: "MAP-09"
+      signature: "Bridge:E->Y_rep"
+      definition: "A representation-valued bridge whose syntax cannot be inverted into occurrence unless an independent section, admissible subfunctor, or normalized kernel law is proved."
+    - map_id: "MAP-10"
+      signature: "prov:X_cur->LawPar"
+      definition: "A required current-source provenance map into law parameters, formed without Bridge, target geometry, desired P4 output, or workflow status."
+    - map_id: "MAP-11"
+      signature: "Eval:LawPar x F->Truth_or_Prob"
+      definition: "Evaluation map through which a derived predicate or kernel must factor as Eval composed with prov; failure of this factorization classifies extra source-extension data."
+    - map_id: "MAP-12"
+      signature: "Outcome_A:Audit(U_forget,act,Adm,s,kappa,rho,prov)->Cert_A"
+      definition: "Return one exact tiered theorem or the first precise obstruction, with no ontology adoption or downstream execution."
+
+new_mathematical_payload:
+  payload_count: 3
+  items:
+    - payload_id: "PAYLOAD-RT002-PM-001"
+      payload_type: "theorem_with_hypotheses_and_proof"
+      name: "section-admissibility-kernel separation lemma"
+      statement: "For a group G acting on a lift fiber F, a natural deterministic section at the reduct requires a G-fixed point; a proper nonempty invariant admissible subset only filters F and need not select a point; and a normalized equivariant kernel requires a G-invariant probability measure. A fixed point yields a Dirac invariant kernel, but the converse fails, and neither an admissible subset nor a probability distribution is an occurring token."
+      proof: "Naturality of a section under every automorphism g gives g.s=s, so s lies in F^G. If s is fixed, delta_s is an invariant normalized measure. For F={a,b} with G=Z2 swapping a and b, F^G is empty, while invariance forces and is satisfied uniquely by kappa(a)=kappa(b)=1/2. Thus an invariant kernel need not yield a section and supplies no realized token. For F={a,b,c,d} with G generated by (a b)(c d), A={a,b} is proper, nonempty, and invariant but contains no fixed point, so admissibility need not select occurrence. Conversely, a singleton fiber has a section but no proper nonempty admissible subset."
+      falsifier: "Exhibit a fixed point for the two-point swap, show that its unique invariant probability is not uniform, show that A={a,b} is not invariant under (a b)(c d), or identify an unstated implication stronger than those proved."
+      novelty: "Separates three occurrence-law tiers that prior projective-conormal nonselection work did not distinguish and prevents a probability kernel from being relabeled as deterministic source occurrence."
+      scope_limit: "This is a fiberwise selector lemma. It does not prove that the current ontology supplies any tier, that local tiers descend, or that every future source extension fails."
+    - payload_id: "PAYLOAD-RT002-PM-002"
+      payload_type: "countermodel_or_obstruction"
+      name: "translation-torsor normalized-kernel obstruction"
+      statement: "For the translation action of G=Z on the torsor F=Z, no countably additive normalized G-invariant probability measure exists."
+      proof: "Translation invariance forces every singleton {n} to have the same mass p. If p=0, countable additivity gives total mass zero. If p>0, the mass of the first N integers is Np and exceeds one for large N. Both contradict normalization."
+      falsifier: "Provide a countably additive probability on Z invariant under every integer translation, or show that the future packet explicitly uses a different finite-additive or nonnormalized object and does not call it a probability kernel."
+      novelty: "Shows that randomization is not a universal cure for natural nonselection: some homogeneous fibers admit neither deterministic sections nor normalized invariant kernels."
+      scope_limit: "The obstruction is exact for the displayed countable translation torsor and countably additive normalization; it is not a global no-kernel theorem."
+    - payload_id: "PAYLOAD-RT002-PM-003"
+      payload_type: "dependency_map_update"
+      name: "occurrence-before-representation route precedence theorem"
+      statement: "Under the active constructive-preference rule, Route A precedes Route C whenever a representation-valued bridge is formed but no independently source-provenanced occurrence or admissibility tier is established, because enriching the representation alone cannot supply the missing section, admissible subfunctor, or kernel factorization."
+      proof: "Bridge:E->Y_rep maps already supplied lift data to representations. Any attempt to infer an occurring lift from Bridge requires an inverse choice on each reduct fiber. Such a choice is exactly additional section, admissibility, or kernel data and must satisfy automorphism, restriction, gluing, and provenance constraints. Route A tests and formalizes those logically prior data. Route C may become eligible after Route A identifies an occurrence tier, but selecting C first would leave the predecessor obstruction unchanged. Route B is nonconstructive and cannot infer irrelevance from nonselection alone; Route D is unavailable because Route A is a lawful non-promotional packet."
+      falsifier: "Exhibit a current-source-provenanced Bridge with a proved inverse occurrence law already satisfying all automorphism, restriction, gluing, and provenance obligations, or show that Route A necessarily requires protected adoption merely to perform its draft/control calculation."
+      novelty: "Adds a formal route dependency rather than replaying the frozen candidate or another bare natural-nonselection argument."
+      scope_limit: "This theorem selects a research packet only; it proves neither the future occurrence theorem nor a source law."
+
+control_fixtures:
+  fixture_count: 4
+  fixtures:
+    - fixture_id: "FIX-01-TWO-POINT-SWAP"
+      fiber: "F={a,b}"
+      symmetry: "G=Z2 acts by a<->b"
+      deterministic_section: "absent"
+      proper_nonempty_invariant_subfiber: "absent"
+      normalized_invariant_kernel: "unique_uniform_measure"
+      lesson: "A probability law may exist when no token is naturally selected; probability is not occurrence."
+    - fixture_id: "FIX-02-TWO-ORBIT-FILTER"
+      fiber: "F={a,b,c,d}"
+      symmetry: "G=Z2 acts by (a b)(c d)"
+      deterministic_section: "absent"
+      proper_nonempty_invariant_subfiber: "A={a,b}"
+      normalized_invariant_kernel: "uniform_on_A_is_available"
+      lesson: "Invariant admissibility narrows the fiber without selecting an occurring element."
+    - fixture_id: "FIX-03-SINGLETON"
+      fiber: "F={a}"
+      symmetry: "arbitrary_trivial_action"
+      deterministic_section: "unique"
+      proper_nonempty_invariant_subfiber: "absent"
+      normalized_invariant_kernel: "delta_a"
+      lesson: "A section does not imply existence of a proper admissibility filter."
+    - fixture_id: "FIX-04-TRANSLATION-TORSOR"
+      fiber: "F=Z"
+      symmetry: "G=Z acts by translation"
+      deterministic_section: "absent"
+      proper_nonempty_invariant_subfiber: "absent"
+      normalized_invariant_kernel: "absent_for_countably_additive_probability"
+      lesson: "Equivariant randomization can itself be obstructed."
+
+route_comparison:
+  route_count: 4
+  selected_route_count: 1
+  routes:
+    - route_id: "A_SOURCE_DERIVED_OCCURRENCE_ADMISSIBILITY_THEOREM"
+      packet_type: "bounded_theoretical_calculation"
+      next_role_family: "ontology-formalizer@0.2.0"
+      constructive_preference: "satisfied"
+      material_distinctness: "satisfied_by_three_tier_occurrence_law_and_descent_kernel_problem"
+      source_only_provenance: "required_and_testable_by_explicit_factorization_through_X_cur"
+      tractability: "high_with_finite_group_controls_translation_torsor_and_local_descent_squares"
+      decision_consequence: "A positive tier supplies a precisely typed proposal-only occurrence or admissibility law for later audit; a first-tier obstruction identifies the exact missing primitive without globalizing the result."
+      eight_freeze_guard: "passes_without_reconstruction_repair_or_replay"
+      disposition: "selected"
+    - route_id: "B_SOURCE_SIDE_IRRELEVANCE_OR_SCOPED_NO_GO_THEOREM"
+      packet_type: "source_side_irrelevance_theorem"
+      next_role_family: "refuter@0.2.0"
+      constructive_preference: "not_preferred_while_route_A_is_available"
+      material_distinctness: "possible_only_with_a_new_source_derived_P4_relevant_codomain_or_universal_factorization_theorem"
+      source_only_provenance: "not_yet_formed_for_the_required_codomain"
+      tractability: "medium_but_high_overclaim_risk_without_route_A_tier_definition"
+      decision_consequence: "Could freeze one precisely declared bridge class, but bare nonselection alone would not establish irrelevance."
+      eight_freeze_guard: "conditional_pass_only_if_prior_nonselection_arguments_are_not_replayed"
+      disposition: "not_selected"
+    - route_id: "C_RICHER_AUDITED_BRIDGE_CLASS"
+      packet_type: "source_extension_candidate"
+      next_role_family: "candidate-constructor@0.2.0"
+      constructive_preference: "constructive_but_logically_downstream_of_occurrence_law"
+      material_distinctness: "possible_with_new_primitives_covariance_occurrence_and_import_classification"
+      source_only_provenance: "unresolved_until_route_A_defines_or_obstructs_occurrence_and_admissibility"
+      tractability: "medium_and_assumption_heavier_than_route_A"
+      decision_consequence: "Could form a later bridge family, but representation enrichment before occurrence would retain the RT001 obstruction."
+      eight_freeze_guard: "conditional_pass_only_if_no_projective_conormal_or_other_frozen_family_is_repackaged"
+      disposition: "deferred_not_selected"
+    - route_id: "D_PROTECTED_HUMAN_GATED_ONTOLOGY_STOP"
+      packet_type: "human_gated_ontology_change_required"
+      next_role_family: "human_gate"
+      constructive_preference: "fails_because_route_A_is_available"
+      material_distinctness: "not_applicable"
+      source_only_provenance: "not_a_scientific_construction"
+      tractability: "protected_authority_not_needed_for_draft_control_route_A"
+      decision_consequence: "Would stop continuation prematurely while a lawful non-promotional theoretical packet remains."
+      eight_freeze_guard: "not_reached"
+      disposition: "not_selected_human_gate_criterion_unsatisfied"
+
+theoretical_decision_output:
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  decision_basis: "Route A is the least-assumptive constructive packet that directly addresses the exact RT001 occurrence and admissibility debt while remaining materially distinct from all eight frozen candidates. It defines and tests deterministic sections, invariant admissible subfunctors, and normalized equivariant kernels before any richer representation is built."
+  theoretical_method: "Category-fibered forgetful-map analysis, automorphism fixed-point and invariant-measure controls, restriction and gluing descent, and explicit current-source provenance factorization."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "A draft/control ontology-law calculation and formalization can proceed without canonical adoption; protected authority would be needed only for a later adoption decision."
+  source_extension_category: "new_ontology_primitive"
+  source_extension_import_classification: "proposal_only_source_extension_data_pending_current_source_provenance_factorization_no_target_import"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Determine whether a source-provenanced occurrence or admissibility tier can be formalized before any new bridge representation is assigned P4-T02 relevance."
+  decision_consequence: "The next packet must either prove one exact source-provenanced tier with descent or return the first precise scoped obstruction; either result decides whether a richer bridge class is lawfully formable next."
+  new_payload_novelty: "Introduces the strict section-subfunctor-kernel separation, the two-point swap and translation-torsor controls, and a descent/provenance dependency ordering not present in RT001."
+
+selected_future_packet_contract:
+  packet_id: "PKT-V22-P4T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-THEOREM-V1"
+  packet_type: "bounded_theoretical_calculation"
+  route_id: "A_SOURCE_DERIVED_OCCURRENCE_ADMISSIBILITY_THEOREM"
+  route_label: "ontology-law-research-packet"
+  next_role_family: "ontology-formalizer@0.2.0"
+  status: "selected_not_executed"
+  objective: "Formalize and decide, under exact current-source provenance and locality hypotheses, whether any deterministic natural section, proper nonempty invariant admissible subfunctor, or normalized equivariant occurrence kernel exists with restriction and gluing descent; return the first precise obstruction if no declared tier is proved."
+  derivation_critical_missing_source_law: true
+  missing_law: "An independently source-defined occurrence or admissibility rule over proposal-only lift fibers, prior to representation-valued bridge output."
+  adoption_posture: "blocked_adoption_open_continuation"
+  status_vocabulary:
+    artifact_status: "draft/control"
+    proposal_status: "proposal-only"
+    data_status: "source-extension data"
+    canonical_candidate_status: "not_claimed"
+    adopted_status: "not_adopted"
+    rejected_status: "not_rejected"
+    human_gated_status: "later_adoption_only"
+  exact_current_source_inputs:
+    - "The current tracked source reduct and its explicitly typed mathematical presentation arrows, without adopting them as EqSrc."
+    - "The fixed RT001 obstruction and all correct conditional projective-conormal mathematics as negative-control context only."
+    - "Ordinary categories, group actions, presheaf restrictions, descent data, and countably additive probability kernels."
+    - "The V22 P4-T02 requirement that occurrence, admissibility, covariance, and robustness be source-defined before physical or geometric interpretation."
+  forbidden_inputs:
+    - "The frozen SourceLocalProjectiveConormalReduction_v1 candidate as a repaired or reconstructed selector."
+    - "Any of the other seven frozen bridge or selector families under a new name."
+    - "An adopted EqSrc, source law, occurrence token, physical time, causal cone, response semantics, target atlas, target metric, or desired GR answer."
+    - "A supplied symmetrizer, Lorentz conformal class, desired hyperbolicity cone, empirical fit, or workflow success used as a source premise."
+    - "D7 adequacy, B2 activation or disposition, P4-T03 execution, Gate authority, benchmark status, publication, push, or external action."
+  required_formal_objects:
+    - "C_cur, Open(c), and the exact mathematical arrow class used for naturality without EqSrc adoption."
+    - "A fibered category E and forgetful map U_forget:E->C_cur."
+    - "Lift fibers F_c and source automorphism actions G_c x F_c->F_c."
+    - "A deterministic natural section candidate s with local restriction and gluing data."
+    - "A proper nonempty invariant admissible subfunctor Adm subset F."
+    - "A normalized equivariant occurrence kernel kappa into Prob(F_c)."
+    - "Current-source data X_cur, law parameters LawPar, and explicit provenance factorization."
+    - "The two-point swap, two-orbit filter, singleton, and translation-torsor controls."
+    - "Cert_A with exact positive-tier and first-obstruction branches."
+  proof_obligation_count: 18
+  proof_obligations:
+    - obligation_id: "PO-A01"
+      requirement: "Bind all live task, handoff, RT001 theorem, plan, role, burden-map, and canonical registry sources by exact hash."
+    - obligation_id: "PO-A02"
+      requirement: "Hold the RT001 scoped obstruction, conditional descent and reduction results, and all eight freezes fixed without reconstruction or replay."
+    - obligation_id: "PO-A03"
+      requirement: "Define C_cur and every arrow used for mathematical naturality while stating explicitly that no EqSrc adoption follows."
+    - obligation_id: "PO-A04"
+      requirement: "Define E, U_forget, each fiber F_c, and the action of G_c=Aut_C_cur(c), with all variance conventions and domains explicit."
+    - obligation_id: "PO-A05"
+      requirement: "Distinguish exactly three tiers: deterministic natural section, proper nonempty invariant admissible subfunctor, and normalized equivariant occurrence kernel."
+    - obligation_id: "PO-A06"
+      requirement: "Prove that a deterministic section must be fixed by every source automorphism and test the two-point swap as a no-section control."
+    - obligation_id: "PO-A07"
+      requirement: "Prove that the two-point swap has a unique uniform invariant probability and state that this distribution is not a realized token."
+    - obligation_id: "PO-A08"
+      requirement: "Use the two-orbit fixture to show that a proper invariant admissible subset can filter without choosing an occurring element."
+    - obligation_id: "PO-A09"
+      requirement: "Use the singleton fixture to prevent an invalid implication from deterministic section to proper admissible filtering."
+    - obligation_id: "PO-A10"
+      requirement: "Prove the translation-torsor no-invariant-probability result under exact countable-additivity and normalization hypotheses."
+    - obligation_id: "PO-A11"
+      requirement: "Define restrictions rho^F and rho^Adm on every declared open inclusion and prove all naturality squares."
+    - obligation_id: "PO-A12"
+      requirement: "Define pushforward compatibility Prob(rho^F) kappa_U = kappa_V and distinguish local kernel consistency from existence of a global realized token."
+    - obligation_id: "PO-A13"
+      requirement: "State and prove the exact descent or gluing conditions for sections, admissible subfunctors, and kernels separately; do not transfer a proof between tiers without justification."
+    - obligation_id: "PO-A14"
+      requirement: "Give an explicit current-source provenance factorization through X_cur and LawPar, or classify the proposed law as extra source-extension data at the first failed factorization."
+    - obligation_id: "PO-A15"
+      requirement: "Prove that no selected predicate, section, or kernel is defined by inverting Bridge, matching target geometry, choosing a desired cone, or importing empirical response semantics."
+    - obligation_id: "PO-A16"
+      requirement: "Return exactly one highest proved tier or first precise scoped obstruction, with an explicit proof, smallest falsifier, and decision consequence."
+    - obligation_id: "PO-A17"
+      requirement: "Classify every new datum as derivation from current ontology, conservative definitional extension, new ontology primitive, or forbidden target-GR import disguised as ontology."
+    - obligation_id: "PO-A18"
+      requirement: "Preserve eight freezes, fourteen literal no_delta rows, D7 non-evaluation, B2 inactivity, P4-T03 lock, and every adoption, promotion, publication, push, and external-action block."
+  terminal_branch_count: 4
+  terminal_branches:
+    - branch_id: "TERM-A-DETERMINISTIC-SECTION"
+      result: "source_provenanced_natural_section_theorem"
+      consequence: "Route a separate source-extension Smuggling Auditor before any occurrence or ontology claim; do not adopt the section here."
+    - branch_id: "TERM-A-ADMISSIBLE-SUBFUNCTOR"
+      result: "source_provenanced_invariant_admissibility_theorem_without_token_selection"
+      consequence: "Record lawful filtering only and select a separate packet for token occurrence; do not call admissibility occurrence."
+    - branch_id: "TERM-A-EQUIVARIANT-KERNEL"
+      result: "source_provenanced_normalized_kernel_theorem_without_token_selection"
+      consequence: "Record a probabilistic source-extension law only and route separate audit and realization semantics; do not relabel probability as a token."
+    - branch_id: "TERM-A-FIRST-OBSTRUCTION"
+      result: "precise_scoped_occurrence_admissibility_descent_or_provenance_obstruction"
+      consequence: "Freeze only the exact failed hypotheses and route one separately admitted materially distinct continuation; do not infer global impossibility."
+  failure_branch_count: 14
+  failure_branches:
+    - failure_id: "FB-A01"
+      trigger: "The packet treats Bridge output as evidence that its input lift occurs."
+      result: "representation_occurrence_circularity"
+    - failure_id: "FB-A02"
+      trigger: "An invariant probability distribution is relabeled as a deterministic realized token."
+      result: "probability_token_conflation"
+    - failure_id: "FB-A03"
+      trigger: "A nonempty invariant admissible subset is treated as selecting one element."
+      result: "admissibility_occurrence_conflation"
+    - failure_id: "FB-A04"
+      trigger: "The two-point swap is claimed to have a natural section or a nonuniform invariant probability."
+      result: "finite_symmetry_control_failure"
+    - failure_id: "FB-A05"
+      trigger: "A normalized countably additive translation-invariant probability on Z is asserted without proof."
+      result: "translation_torsor_normalization_failure"
+    - failure_id: "FB-A06"
+      trigger: "Restriction or gluing compatibility is assumed from fiberwise equivariance alone."
+      result: "local_descent_gap"
+    - failure_id: "FB-A07"
+      trigger: "A proof for sections is silently reused for admissible subfunctors or kernels, or conversely."
+      result: "tier_type_error"
+    - failure_id: "FB-A08"
+      trigger: "The current-source provenance factorization passes through Bridge output, a desired P4 property, target geometry, empirical response, or workflow status."
+      result: "target_or_goal_smuggling_obstruction"
+    - failure_id: "FB-A09"
+      trigger: "A new law parameter lacks classification as current derivation, definitional extension, new primitive, or forbidden import."
+      result: "source_extension_classification_failure"
+    - failure_id: "FB-A10"
+      trigger: "The frozen projective-conormal candidate or any inherited frozen family is reconstructed, repaired, renamed, or replayed."
+      result: "freeze_and_material_distinctness_failure"
+    - failure_id: "FB-A11"
+      trigger: "The packet returns generic obligations without one exact theorem or first precise obstruction and falsifier."
+      result: "decisiveness_contract_failure"
+    - failure_id: "FB-A12"
+      trigger: "A local obstruction is generalized to all future source extensions or the whole ontology."
+      result: "global_no_go_overclaim"
+    - failure_id: "FB-A13"
+      trigger: "The packet adopts EqSrc, a source law, occurrence semantics, canonical ontology, or physical meaning."
+      result: "authority_boundary_failure"
+    - failure_id: "FB-A14"
+      trigger: "Any Distance-to-GR row, D7, B2, P4-T03, Gate, benchmark, proof, publication, push, or external-action status changes."
+      result: "downstream_lock_failure"
+  selected_packet_executed: false
+  separate_agentjob_required: true
+  successor_creation_authorized_here: false
+
+source_extension_classification:
+  classification_required: true
+  selected_route_category: "new_ontology_primitive"
+  selection_stage_precision: "The occurrence or admissibility law is not currently derived. It is conservatively classified as a proposal-only new ontology primitive until the future packet proves an explicit current-source provenance factorization; a successful factorization would permit reclassification as derivation_from_current_ontology."
+  selected_route_status: "draft/control proposal-only source-extension data selected_not_executed"
+  selected_route_import_classification: "no_target_import_detected_at_selector_stage"
+  current_ontology_modified: false
+  source_extension_constructed: false
+  source_law_proved: false
+  source_law_proposed_for_adoption: false
+  source_law_adopted: false
+  route_A_classification: "proposal-only ontology-law calculation with exact derivation-versus-new-primitive classification obligation"
+  route_B_classification: "source-side irrelevance theorem eligible only with a new P4-relevant codomain or universal factorization result"
+  route_C_classification: "source_extension_candidate deferred until occurrence or admissibility debt is typed"
+  route_D_classification: "human-gated ontology stop unavailable while Route A remains lawful"
+  adoption_status: "blocked_adoption_open_continuation"
+  target_atlas_free: true
+  exact_gr_recovery_claimed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+
+freeze_preservation:
+  freeze_count: 8
+  all_freezes_preserved: true
+  new_freeze_created: false
+  frozen_route_replay_performed: false
+  rows:
+    - freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+      status: "preserved_not_reopened"
+
+freeze_guard_evaluation:
+  guard_count: 8
+  all_guards_pass: true
+  rows:
+    - guard_id: "FG-01"
+      freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      evaluation: "No shared-tau selector, common covector, or repaired label family is reconstructed."
+    - guard_id: "FG-02"
+      freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      evaluation: "No quotient-descent candidate is repaired or replayed; descent is tested abstractly for a new occurrence-law tier."
+    - guard_id: "FG-03"
+      freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      evaluation: "No common-character or holonomy construction is used."
+    - guard_id: "FG-04"
+      freeze_label: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      evaluation: "No oriented-matroid bridge, sign pattern, or covector-circuit family is repackaged."
+    - guard_id: "FG-05"
+      freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      evaluation: "No signed-cubic viability selector is reconstructed."
+    - guard_id: "FG-06"
+      freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+      evaluation: "No frozen law-space candidate is reused; the future packet first classifies any law datum and tests provenance."
+    - guard_id: "FG-07"
+      freeze_label: "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+      evaluation: "K_star is neither repaired nor used as a bridge; the abstract automorphism test does not reopen its standalone-local-bridge claim."
+    - guard_id: "FG-08"
+      freeze_label: "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+      evaluation: "The projective-conormal candidate is held fixed as a negative control and is not reconstructed, repaired, adopted, or stressed again."
+
+distance_to_gr_status:
+  row_count: 14
+  changed: false
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      finding: "No primitive is adopted; the selected law packet is proposal-only and unexecuted."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      finding: "C_cur arrows support mathematical tests only and are not adopted as EqSrc."
+    - burden: "RetainH"
+      status: "no_delta"
+      finding: "No retention object, theorem, or law is constructed."
+    - burden: "GenH"
+      status: "no_delta"
+      finding: "No generator object, theorem, or law is constructed."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      finding: "No observer-localization object or map is constructed."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      finding: "A formal occurrence-kernel question supplies no response token or empirical semantics."
+    - burden: "M_src"
+      status: "no_delta"
+      finding: "Source-local opens are mathematical descent controls and do not change M_src status."
+    - burden: "g_eff"
+      status: "no_delta"
+      finding: "No cone, conformal class, scale, or effective metric is constructed."
+    - burden: "matter coupling"
+      status: "no_delta"
+      finding: "No matter sector, propagation law, or universal coupling is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      finding: "No action, variation, field equation, or closure law is supplied."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      finding: "Finite fiber fixtures and descent obligations are not robustness evidence."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      finding: "No benchmark is run, compared, or promoted."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      finding: "No protected verdict, adoption request, or Gate action occurs."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      finding: "All eight freezes remain exact; no new freeze or global hard fail is created by selection."
+
+downstream_locks:
+  d7_reevaluated: false
+  d7_coverage_claimed: false
+  descriptor_instance_complete: false
+  b2_active: false
+  b2_activated: false
+  b2_disposed: false
+  b2_adopted: false
+  b2_rejected: false
+  b2_viability_claimed: false
+  b2_adequacy_claimed: false
+  b2_sufficiency_claimed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+  p4_t03_unlocked_or_executed: false
+  physical_response_semantics_assigned: false
+  physical_causality_assigned: false
+  physical_time_orientation_assigned: false
+  physical_cone_or_conformal_class_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+
+falsifier_matrix:
+  falsifier_count: 10
+  rows:
+    - claim_id: "SECTION_REQUIRES_FIXED_POINT"
+      current_result: "Naturality under reduct automorphisms forces the selected lift to be fixed."
+      smallest_falsifier: "A well-typed natural section whose value is moved by an automorphism of the same reduct."
+    - claim_id: "SWAP_KERNEL_WITHOUT_SECTION"
+      current_result: "The two-point swap has no fixed token but has the unique uniform invariant probability."
+      smallest_falsifier: "A fixed point or a normalized invariant nonuniform probability for the swap action."
+    - claim_id: "PROBABILITY_NOT_TOKEN"
+      current_result: "A distribution on two possible lifts does not identify which lift occurs."
+      smallest_falsifier: "An independently source-defined realization map proving that the kernel almost surely returns one canonical token without extra random or selection data."
+    - claim_id: "INVARIANT_FILTER_NOT_TOKEN"
+      current_result: "A proper invariant subset can contain a nontrivial orbit and hence filter without selecting."
+      smallest_falsifier: "A proof that every allowed proper invariant subfunctor is objectwise singleton under the declared source action."
+    - claim_id: "TRANSLATION_TORSOR_NO_PROBABILITY"
+      current_result: "No countably additive normalized translation-invariant probability exists on Z."
+      smallest_falsifier: "An explicit such probability satisfying normalization and every translation equality."
+    - claim_id: "FIBERWISE_DOES_NOT_IMPLY_DESCENT"
+      current_result: "Equivariance at each fiber alone does not prove compatibility under restriction or gluing."
+      smallest_falsifier: "A theorem deriving every required restriction and gluing square solely from the stated fiberwise hypotheses."
+    - claim_id: "CURRENT_SOURCE_PROVENANCE_REQUIRED"
+      current_result: "A law not factoring through X_cur remains extra source-extension data."
+      smallest_falsifier: "An explicit target-free factorization prov and Eval using only current source data and arrows."
+    - claim_id: "ROUTE_A_PRECEDES_C"
+      current_result: "Representation enrichment cannot cure missing occurrence without adding one of the three law tiers."
+      smallest_falsifier: "A richer bridge already possessing an independently proved current-source occurrence law and all descent constraints."
+    - claim_id: "ROUTE_B_NOT_YET_DECISIVE"
+      current_result: "Mere nonselection does not establish P4 irrelevance."
+      smallest_falsifier: "A new source-derived P4-relevant codomain plus a theorem that every admissible bridge factors through a distinction-erasing quotient."
+    - claim_id: "HUMAN_GATE_NOT_REQUIRED"
+      current_result: "Draft/control formalization can proceed without canonical adoption."
+      smallest_falsifier: "A control rule showing that even stating or calculating the three proposal-only tiers requires protected canonical-ontology authority."
+
+risk_register:
+  risk_count: 9
+  rows:
+    - risk_id: "RISK-01"
+      risk: "Treating a uniform invariant kernel as a naturally selected occurrence token."
+      mitigation: "Keep kernels measure-valued and require a separately typed realization law for token semantics."
+    - risk_id: "RISK-02"
+      risk: "Treating invariant admissibility as sufficient occurrence."
+      mitigation: "Require properness, invariance, restriction, and gluing proofs while explicitly recording that membership does not choose an element."
+    - risk_id: "RISK-03"
+      risk: "Assuming local descent from objectwise group-action arguments."
+      mitigation: "List and prove separate restriction and gluing obligations for every tier."
+    - risk_id: "RISK-04"
+      risk: "Using current source presentation arrows as adopted EqSrc."
+      mitigation: "Label C_cur as a mathematical test category only and block all adoption language."
+    - risk_id: "RISK-05"
+      risk: "Smuggling target outcomes through the law-parameter map."
+      mitigation: "Require the explicit X_cur-to-LawPar provenance factorization and fail closed on Bridge, target, empirical, or status dependence."
+    - risk_id: "RISK-06"
+      risk: "Repackaging the frozen projective-conormal or another frozen family."
+      mitigation: "Use only abstract lift fibers and new finite symmetry controls; prohibit candidate repair, reconstruction, and replay."
+    - risk_id: "RISK-07"
+      risk: "Overstating a translation-torsor obstruction as a universal no-kernel theorem."
+      mitigation: "Retain exact countable, translation, countable-additivity, and normalization hypotheses."
+    - risk_id: "RISK-08"
+      risk: "Classifying an unproved source-derived law as already present in current ontology."
+      mitigation: "Use new_ontology_primitive conservatively until the future packet proves current-source provenance factorization."
+    - risk_id: "RISK-09"
+      risk: "Treating selector agreement or validation as theorem proof or physics progress."
+      mitigation: "Mark the packet selected_not_executed, every Distance-to-GR row no_delta, and all promotion blocks active."
+
+authority_blocks:
+  parent_completion_created_by_child: false
+  selected_future_packet_executed: false
+  selected_future_agentjob_created: false
+  frozen_candidate_reconstructed_or_repaired: false
+  frozen_route_replayed: false
+  eqsrc_adopted: false
+  source_primitive_adopted: false
+  source_law_proved_or_adopted: false
+  occurrence_token_selected: false
+  probability_given_physical_meaning: false
+  physical_allowedness_assigned: false
+  physical_response_semantics_assigned: false
+  physical_time_orientation_assigned: false
+  target_geometry_constructed: false
+  conformal_geometry_constructed: false
+  effective_metric_constructed_or_adopted: false
+  matter_coupling_derived_or_adopted: false
+  einstein_equations_derived_or_adopted: false
+  d7_adequacy_claimed: false
+  b2_action_taken: false
+  p4_t03_action_taken: false
+  gate_or_benchmark_claimed: false
+  proof_authority_claimed: false
+  global_no_go_or_future_impossibility_claimed: false
+  adoption_or_promotion_claimed: false
+  publication_or_push_executed: false
+  external_action_executed: false
+  completed_derivation_claimed: false
+
+conflict_and_scope_review:
+  scientific_conflict_count: 0
+  identity_conflict_count: 0
+  unresolved_conflict_count: 0
+  canonical_identity_received_from_parent: true
+  selected_identity_matches_parent: true
+  scope_conflict: false
+  authority_conflict: false
+  parent_precision_caveat: "The selected packet must not report the section-admissibility-kernel theorem or source law as already proved. This child proves only the finite separation controls and route-precedence result used to select that future calculation."
+  residual_risks:
+    - "The future packet may prove only an admissible subfunctor or kernel, which is weaker than deterministic occurrence and must be reported at its exact tier."
+    - "A law can be mathematically source-local yet still fail current-ontology provenance; classification must follow the explicit factorization result."
+    - "A positive source-formal result would remain proposal-only until separate audit, stress, and protected adoption authority."
+
+validation:
+  strict_unique_key_yaml: "PASS"
+  repository_subset_yaml: "PASS"
+  source_hashes_recomputed: "PASS"
+  source_hash_match_count: 24
+  source_hash_expected_count: 24
+  route_count_check: "PASS_4"
+  selected_route_count_check: "PASS_1"
+  selected_future_packet_count_check: "PASS_1"
+  selected_status_check: "PASS_selected_not_executed"
+  proof_obligation_count_check: "PASS_18"
+  failure_branch_count_check: "PASS_14"
+  freeze_count_check: "PASS_8"
+  freeze_guard_count_check: "PASS_8"
+  distance_to_gr_row_count_check: "PASS_14"
+  literal_no_delta_count_check: "PASS_14"
+  control_fixture_count_check: "PASS_4"
+  forbidden_claim_scan: "PASS_no_positive_adoption_promotion_global_no_go_or_progress_claim"
+  duplicate_key_scan: "PASS"
+  git_diff_check: "PASS_owned_untracked_file_only_no_whitespace_error"
+  whitespace_check: "PASS_no_trailing_tabs_or_carriage_returns_and_final_newline_present"
+  parent_validator_run: false
+  parent_checkpoint_run: false
+  validation_result: "PASS_CHILD_SCOPE"
