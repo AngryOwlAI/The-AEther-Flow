@@ -1,0 +1,209 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{booktabs}
+\usepackage{enumitem}
+\usepackage{microtype}
+\usepackage[hidelinks]{hyperref}
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{obstruction}{Obstruction}
+\newcommand{\im}{\operatorname{im}}
+
+\title{V22 P4--T02: Current-Source Occurrence and Admissibility\\
+P4-Relevance Factorization Audit}
+\author{The \AE ther-Flow Research Project}
+\date{2026-08-16}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This draft/control calculation audits whether disclosed occurrence and
+admissibility extensions have a current-source-typed dependence on the
+registered P4--T01 reduced source-principal data.  We prove the exact image
+factorization theorem, separate image factorization from extension and
+uniqueness on the full reduct domain, prove conditional principal constancy
+for a fully declared conservative product extension, and give exact
+coefficient-entry and lawful-reduction countercontrols.  The exclusive
+current-source result is a combined-extension typing and provenance
+obstruction: the tracked source package supplies the fixed P4--T01 law datum
+and its determinant-line principal codomain, but it supplies no independently
+current-source-derived combined occurrence-extension category with coherent
+transport.  The first failed primitive is therefore the carrier
+$X_{\mathrm{occ}}$; consequently the forgetful map $U$ and recomputation map
+$R_{\mathrm{PS}}$ have no current-source instance.  The conditional
+factorization mathematics survives, but it proves neither global P4
+irrelevance nor a physical cone, response law, probability, or effective
+metric.
+\end{abstract}
+
+\section{Fixed registered boundary}
+
+P4--T01 supplies a fixed proposal-only six-channel source-law datum $D$ and
+the lawful reduced symbol
+\begin{equation}
+ \sigma_D(x,k)=\operatorname{diag}\bigl(k(X_1),\ldots,k(X_6)\bigr),
+ \qquad
+ P_D(x,k)=\det\sigma_D(x,k)=\prod_{A=1}^{6}k(X_A).
+ \label{eq:p4t01}
+\end{equation}
+Let $Y_{\mathrm{PS}}$ denote the resulting determinant-line source-principal
+data: the reduced domain and equation fibers, the symbol, polynomial,
+multiplicity and branch data, and their declared source covariance.  This
+codomain is registered source-principal structure only.  It is not a physical
+characteristic cone, a Lorentzian conformal class, an operational response
+space, or $g_{\mathrm{eff}}$.
+
+The audited diagram would be
+\begin{equation}
+ X_{\mathrm{occ}}\xrightarrow{\ U\ }D_{\mathrm{src}},
+ \qquad
+ X_{\mathrm{occ}}\xrightarrow{\ R_{\mathrm{PS}}\ }Y_{\mathrm{PS}},
+ \label{eq:diagram}
+\end{equation}
+where $U$ forgets occurrence or admissibility decoration while retaining all
+source-law and lawful-reduction data, and $R_{\mathrm{PS}}$ recomputes the
+actual reduced principal object rather than stipulating its independence.
+
+\section{Exact factorization theorem}
+
+\begin{theorem}[Image factorization]
+Let $U:X\to D$ and $R:X\to Y$ be maps of sets.  There is a unique map
+$f_{\im}:\im(U)\to Y$ satisfying
+\begin{equation}
+ R=f_{\im}\circ U
+ \label{eq:factor}
+\end{equation}
+if and only if $R$ is constant on every fiber of $U$.
+\end{theorem}
+
+\begin{proof}
+If \eqref{eq:factor} holds and $U(x)=U(x')$, then
+$R(x)=f_{\im}(U(x))=f_{\im}(U(x'))=R(x')$.  Conversely, if $R$ is
+fiber-constant, define $f_{\im}(d)=R(x)$ for any $x$ with $U(x)=d$.
+Fiber constancy makes this well defined, and every $d\in\im(U)$ has a
+preimage.  The same formula proves uniqueness on $\im(U)$.
+\end{proof}
+
+An all-$D$ factor additionally requires an extension of $f_{\im}$ away from
+$\im(U)$.  If $U$ is surjective, the image factor is already the unique
+all-$D$ factor.  If $U$ is not surjective and $Y$ has at least two elements,
+different values on $D\setminus\im(U)$ give different extensions.  A
+singleton codomain is the degenerate exception, so surjectivity must not be
+advertised as a converse without hypotheses.
+
+The structured version also requires independently declared source-arrow
+actions on $X$, $D$, and $Y$ and commuting naturality squares.  Deleting
+arrows because they fail to preserve the desired output is not a proof of
+naturality.
+
+\section{Conditional conservative theorem and sharp falsifiers}
+
+Call an occurrence extension \emph{conservative at principal level} only when
+it changes none of the following:
+\begin{enumerate}[label=(\roman*)]
+ \item the background source-law datum and highest-derivative coefficients;
+ \item the algebraic or differential constraint spaces;
+ \item the internal gauge generators or equation redundancies; and
+ \item the lawful reduced field, equation, and quotient data.
+\end{enumerate}
+
+\begin{proposition}[Conditional source-principal constancy]
+For a typed product extension $X=D_{\mathrm{src}}\times E$ satisfying all
+four conservative conditions, with $U(D,e)=D$, the actual P4--T01
+recomputation satisfies
+\begin{equation}
+ R_{\mathrm{PS}}(D,e)=\operatorname{Prin}(D)
+ =\operatorname{Prin}\bigl(U(D,e)\bigr).
+\end{equation}
+Hence $R_{\mathrm{PS}}$ is constant on every $U$-fiber and factors on
+$\im(U)$.
+\end{proposition}
+
+\begin{proof}
+The hypotheses fix the reduced domain, reduced codomain, and every leading
+coefficient.  Principal-symbol formation and the determinant-line operation
+therefore receive identical inputs for all $e$ in one fiber.  Equation
+\eqref{eq:p4t01} is unchanged.
+\end{proof}
+
+This proposition is conditional and does not source-generate $E$, the product
+carrier, its arrows, or the conservative law.  The countercontrols are sharp.
+At $k=(1,2,3,5)$ the six registered factors give $P_D(k)=60480$.  Replacing
+$X_1=(1,1,0,0)$ by $X'_1=(1,2,0,0)$ gives $P_{D'}(k)=100800$.  This is a
+coefficient change and therefore a change of source-law reduct, not an
+occurrence-only conservative variation.  Likewise, adding a constraint,
+gauge, or redundancy direction that removes one reduced channel changes the
+determinant degree from six to five.  It is a lawful-reduction change, not an
+element of the same conservative fiber.
+
+Finally, extension multiplicity does not decide relevance.  Two unselected
+roots over one reduct can carry a constant $R$ and factor, or a separating
+$R$ and fail to factor.  Nonselection therefore implies neither
+source-principal relevance nor source-principal irrelevance.
+
+\section{Decisive current-source obstruction}
+
+\begin{obstruction}[Combined-extension typing and provenance]
+The tracked current source provides no independently current-source-derived
+carrier $X_{\mathrm{occ}}$ combining the fixed P4--T01 law presentations with
+occurrence or admissibility roots and coherent source-arrow transport.  The
+measurable-fiber occurrence law is explicitly a proposal-only new ontology
+primitive, remains unadopted, and is locally frozen against unchanged replay.
+Forming $D_{\mathrm{src}}\times E$ is therefore a disclosed meta-level control,
+not a derivation of the combined carrier from current source primitives.  The
+first failed primitive is $X_{\mathrm{occ}}$.  Without it, neither
+$U:X_{\mathrm{occ}}\to D_{\mathrm{src}}$ nor
+$R_{\mathrm{PS}}:X_{\mathrm{occ}}\to Y_{\mathrm{PS}}$ has a current-source
+instance, so no unconditional current-source factorization or
+nonfactorization verdict is well typed.
+\end{obstruction}
+
+The canonical obstruction identifier is
+\begin{quote}\small\ttfamily\raggedright
+OB-V22-\allowbreak P4T02-B2-\allowbreak CURRENT-SOURCE-\allowbreak
+COMBINED-OCCURRENCE-\allowbreak EXTENSION-TYPING-\allowbreak
+PROVENANCE-001.
+\end{quote}
+
+The obstruction is scoped.  It preserves the image-factorization theorem,
+the conservative proposition, and every exact control.  It is not a theorem
+that no conservative source extension can exist, and it does not bar a later
+independently provenanced combined carrier.  It records the first missing
+primitive rather than converting missing provenance into global irrelevance.
+
+\section{Distance-to-GR and authority}
+
+All nine inherited local freezes remain active and none is reopened:
+\begin{enumerate}
+ \item shared-$\tau$ selector;
+ \item repaired quotient descent robustness;
+ \item common-character holonomy protection;
+ \item oriented-matroid bridge selection robustness;
+ \item signed-cubic viability selector robustness;
+ \item source-law-space robust-invariance protection robustness;
+ \item standalone $K_\star$ local-bridge irrelevance;
+ \item projective-conormal robust selection and conformal lift; and
+ \item measurable-fiber occurrence-law robust selection and embeddability.
+\end{enumerate}
+
+All fourteen Distance-to-GR rows retain the status \texttt{no\_delta}.
+The source-principal codomain is not promoted to a physical cone or metric;
+no response bridge, occurrence law, matter coupling, Einstein equation, Gate
+status, proof authority, publication authority, or global no-go follows.
+P4--T02 remains incomplete and P4--T03 remains locked.
+
+Exactly one later theoretical-continuation selector is selected but not
+executed:
+\begin{quote}\small\ttfamily\raggedright
+PKT-V22-\allowbreak P4T02-B2-\allowbreak POST-OCCURRENCE-\allowbreak
+P4-RELEVANCE-\allowbreak FACTORIZATION-OBSTRUCTION-\allowbreak
+THEORETICAL-CONTINUATION-\allowbreak SELECTION-V1.
+\end{quote}
+It may compare materially distinct next steps after this scoped obstruction;
+it may not assume the missing carrier, reopen a frozen route, promote a claim,
+or execute itself in this transaction.
+
+\end{document}

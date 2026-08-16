@@ -148,6 +148,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-006/artifacts/parent_fusion_notes_p4_t02_b2_common_envelope_smuggling_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-HYPERBOLICITY-ENVELOPE-V1` `research_control/tasks/RT-20260810-005/artifacts/parent_fusion_notes_p4_t02_b2_common_hyperbolicity_envelope.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1` `research_control/tasks/RT-20260814-002/artifacts/parent_fusion_notes_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-CURRENT-SOURCE-OCCURRENCE-ADMISSIBILITY-P4-RELEVANCE-FACTORIZATION-AUDIT-V1` `research_control/tasks/RT-20260816-007/artifacts/parent_fusion_notes_p4_t02_b2_current_source_occurrence_admissibility_p4_relevance_factorization_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-AUDIT-V1` `research_control/tasks/RT-20260809-022/artifacts/parent_fusion_notes_p4_t02_b2_descriptor_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-CONSTRUCTION-V1` `research_control/tasks/RT-20260809-023/artifacts/parent_fusion_notes_p4_t02_b2_descriptor_construction.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md`
@@ -644,6 +645,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CANDIDATE-V1` `research_control/tasks/RT-20260810-005/artifacts/v22_p4_t02_b2_common_hyperbolicity_envelope_candidate_v1.tex`
 - `TEX-V22-P4-T02-B2-CONTINUUM-LIFT-DESCRIPTOR-FORMALIZATION-V1` `research_control/tasks/RT-20260809-021/artifacts/v22_p4_t02_b2_continuum_lift_descriptor_formalization_v1.tex`
 - `TEX-V22-P4-T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1` `research_control/tasks/RT-20260814-002/artifacts/v22_p4_t02_b2_current_source_equivariant_asymmetry_derivation_audit_v1.tex`
+- `TEX-V22-P4-T02-B2-CURRENT-SOURCE-OCCURRENCE-ADMISSIBILITY-P4-RELEVANCE-FACTORIZATION-AUDIT-V1` `research_control/tasks/RT-20260816-007/artifacts/v22_p4_t02_b2_current_source_occurrence_admissibility_p4_relevance_factorization_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-DESCRIPTOR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260809-022/artifacts/v22_p4_t02_b2_descriptor_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1` `research_control/tasks/RT-20260809-023/artifacts/v22_p4_t02_b2_equipped_chain_descriptor_attempt_v1.tex`
 - `TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_fallback_descriptor_selection_v1.tex`
@@ -1459,6 +1461,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-ENVELOPE-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-common-envelope-smuggling-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-HYPERBOLICITY-ENVELOPE-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-common-hyperbolicity-envelope-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-current-source-equivariant-asymmetry-derivation-audit-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-CURRENT-SOURCE-OCCURRENCE-ADMISSIBILITY-P4-RELEVANCE-FACTORIZATION-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-current-source-occurrence-admissibility-p4-relevance-factorization-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-CONSTRUCTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-construction-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-v1.md`
@@ -1988,6 +1991,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P4-T02-B2-COMMON-HYPERBOLICITY-ENVELOPE-CANDIDATE-V1` `wiki/tex/tex-v22-p4-t02-b2-common-hyperbolicity-envelope-candidate-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-CONTINUUM-LIFT-DESCRIPTOR-FORMALIZATION-V1` `wiki/tex/tex-v22-p4-t02-b2-continuum-lift-descriptor-formalization-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-CURRENT-SOURCE-EQUIVARIANT-ASYMMETRY-DERIVATION-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-current-source-equivariant-asymmetry-derivation-audit-v1.md`
+- `WIKI-TEX-V22-P4-T02-B2-CURRENT-SOURCE-OCCURRENCE-ADMISSIBILITY-P4-RELEVANCE-FACTORIZATION-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-current-source-occurrence-admissibility-p4-relevance-factorization-audit-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-DESCRIPTOR-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-descriptor-smuggling-audit-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-EQUIPPED-CHAIN-DESCRIPTOR-ATTEMPT-V1` `wiki/tex/tex-v22-p4-t02-b2-equipped-chain-descriptor-attempt-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-fallback-descriptor-selection-v1.md`

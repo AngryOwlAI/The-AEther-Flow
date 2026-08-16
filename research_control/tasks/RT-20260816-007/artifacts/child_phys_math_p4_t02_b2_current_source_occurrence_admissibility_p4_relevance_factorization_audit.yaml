@@ -1,0 +1,990 @@
+schema_id: "child_phys_math_p4_t02_b2_current_source_occurrence_admissibility_p4_relevance_factorization_audit_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-CURRENT-SOURCE-OCCURRENCE-ADMISSIBILITY-P4-RELEVANCE-FACTORIZATION-AUDIT-001"
+artifact_type: "parent_child_synthesis_child_output"
+authority: "science_draft"
+status: "complete_for_parent_synthesis"
+status_label: "draft/control"
+task_id: "RT-20260816-007"
+job_id: "AJ-RT-20260816-007-001"
+decision_id: "DDR-20260816-007"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260816-007"
+claim_boundary_id: "CB-V22-P4-T02-B2-CURRENT-SOURCE-OCCURRENCE-ADMISSIBILITY-P4-RELEVANCE-FACTORIZATION-AUDIT-001"
+selected_packet_id: "PKT-V22-P4T02-B2-CURRENT-SOURCE-OCCURRENCE-ADMISSIBILITY-P4-RELEVANCE-FACTORIZATION-AUDIT-V1"
+created_at: "2026-08-16T16:10:00Z"
+source_head: "bb80a3960236251b00b5659ed299d50a57ca3f7d"
+source_tree: "aa2f34facc15a19e12bf5a6840ad53c3961bc82d"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Determine whether disclosed occurrence and admissibility extension degrees have any current-source-typed dependence on the registered P4-T01 principal data."
+route_label: "ordinary-research-packet"
+
+ownership_boundary:
+  owned_path: "research_control/tasks/RT-20260816-007/artifacts/child_phys_math_p4_t02_b2_current_source_occurrence_admissibility_p4_relevance_factorization_audit.yaml"
+  files_written_count: 1
+  other_files_modified: false
+  peer_child_file_inspected: false
+  parent_artifact_modified: false
+  task_or_job_modified: false
+  role_overlay_modified: false
+  registry_modified: false
+  handoff_modified: false
+  completion_created: false
+  program_state_modified: false
+  generated_output_modified: false
+  parent_validator_or_checkpoint_run: false
+  successor_selected_or_executed: false
+  child_agentjob_created: false
+
+execution_controls:
+  outer_agentjob_count: 1
+  internal_child_count: 2
+  child_agentjob_count: 0
+  exclusive_result_count: 1
+  permitted_result_type_used: true
+  formal_domain_count: 10
+  formal_object_count: 11
+  formal_map_count: 10
+  theorem_target_count: 6
+  proof_obligation_count: 16
+  failure_branch_count: 15
+  inherited_freeze_count: 9
+  distance_to_gr_row_count: 14
+  literal_no_delta_row_count: 14
+  exact_control_count: 6
+  new_mathematical_payload_count: 8
+  registered_p4_t01_codomain_bound: true
+  image_factorization_separated_from_all_domain_extension: true
+  all_domain_extension_separated_from_uniqueness: true
+  conservative_same_reduct_control_included: true
+  same_reduct_relevance_countercontrol_included: true
+  coefficient_change_falsifier_included: true
+  reduction_change_falsifier_included: true
+  source_arrow_naturality_audited: true
+  current_source_combined_extension_constructed: false
+  p4_relevance_map_constructed: false
+  occurrence_p4_irrelevance_theorem_claimed: false
+  source_extension_constructed_or_adopted: false
+  frozen_route_reconstructed_repaired_audited_stressed_or_replayed: false
+  d7_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked_or_executed: false
+  physical_or_empirical_semantics_added: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  global_no_go_claimed: false
+  future_extension_impossibility_claimed: false
+
+source_binding:
+  binding_note: "Tracked control state and registered sources govern this child analysis. Generated retrieval layers are navigation only and are not authority."
+  hash_algorithm: "sha256"
+  active_control_hash_epoch: "captured_while_RT007_active_before_parent_terminalization"
+  mutable_registry_note: "Whole mutable registry hashes are omitted to avoid transaction cycles; exact registered rows and source hashes are checked separately."
+  governing_source_count: 18
+  governing_sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      authority: "control"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      authority: "control"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      authority: "control"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      authority: "workflow_contract"
+    - path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+      sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+      authority: "role_contract"
+    - path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+      sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789"
+      authority: "control_schema"
+    - path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+      sha256: "562405dd78a03efde831806323081285c7850ee18dbeb2a6b6ecf900417c814c"
+      authority: "control"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      authority: "control"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      authority: "registered_project_control"
+    - path: "research_control/tasks/RT-20260816-007/00_TASK.yaml"
+      sha256: "f9594c910b8602027078f65bdcaa4474699e64871e328b0bbaf85adf343f02d0"
+      authority: "tracked_control_state_active"
+    - path: "research_control/tasks/RT-20260816-007/DDR-20260816-007.md"
+      sha256: "8ba0a504495b597780eff9b47ae9d7768b5d0ee7c1688ec5081705f06bd2f047"
+      authority: "tracked_control_state_active"
+    - path: "research_control/tasks/RT-20260816-007/jobs/AJ-RT-20260816-007-001.yaml"
+      sha256: "965a5a768e23a919b3f10f7cc8dbac76191a2f624a3730da3f10c3d40b4eaa31"
+      authority: "tracked_control_state_active"
+    - path: "research_control/tasks/RT-20260816-007/roles/ontology-formalizer@0.2.0--RT-20260816-007.yaml"
+      sha256: "b66f1a8772e4691e651ed6752e1d0e434e0e53dbdc0f4bf2725b56f639c3b412"
+      authority: "execution_role_active"
+    - path: "research_control/handoffs/handoff-1049.yaml"
+      sha256: "ea9462199fce766749f43de16d3c111651d1be20c60a77297998a3f911280c9c"
+      authority: "tracked_control_state"
+    - path: "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selected_future_packet_v1.yaml"
+      sha256: "b4ad157b5e035ba649cffaa8e741550be5624c460653571220210e61a76c81fc"
+      authority: "selected_packet_contract"
+    - path: "research_control/tasks/RT-20260816-006/artifacts/parent_fusion_notes_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector.md"
+      sha256: "3e2db5e7e15df2a241e125b011a2016e80deb9d49c03614312bb2576d026c8f0"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_route_selection_v1.tex"
+      sha256: "133f7385fed94f11105284ec6249e82f2c7294dc7e307ad8c068c98dceda5934"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex"
+      sha256: "464743abcc055873b6da41fcab78b4808e86378fc9dd91cfbc9acd0cc22eb151"
+      authority: "registered_science_draft"
+  registry_row_checks:
+    evidence_class: "nonhash_navigation_checks"
+    whole_mutable_registry_hash_authority: false
+    p4_t01_tex_object_id: "TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1"
+    p4_t01_tex_registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+    p4_t01_tex_registry_line_observed: 460
+    p4_t01_tex_registered_hash_matches: true
+    rt006_tex_object_id: "TEX-V22-P4-T02-B2-POST-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-ROUTE-SELECTION-V1"
+    rt006_tex_registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+    rt006_tex_registry_line_observed: 489
+    rt006_tex_registered_hash_matches: true
+    rt006_markdown_object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-POST-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-SELECTOR-V1"
+    rt006_markdown_registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+    rt006_markdown_registry_line_observed: 692
+    rt006_markdown_registered_hash_matches: true
+
+registered_p4_t01_binding:
+  codomain_object_id: "TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1"
+  codomain_symbol: "Y_PS"
+  codomain_scope: "The determinant-line reduced source-principal symbol and polynomial data for the fixed proposal-only six-channel source law, including source-presentation covariance and lawful reduction data."
+  source_law_symbol: "D=(tau,X_1,...,X_6)"
+  source_equations: "E_A[D,q]=X_A(q^A)=0 for A=1,...,6 with no sum."
+  linearized_operator: "L_D u=(X_1 u^1,...,X_6 u^6)."
+  constraint_and_gauge_data: "C_alg=C_diff=G_int=R_alg={0}."
+  reduced_field_fiber: "V_red=R^6"
+  reduced_equation_fiber: "W_eq=R^6"
+  reduced_symbol: "sigma_L_D(x,k)=diag(k(X_1),...,k(X_6))."
+  principal_polynomial: "P_D(x,k)=product_{A=1}^6 k(X_A)."
+  determinant_line: "det(W_eq) tensor det(V_red)^*"
+  frame_transformation: "sigma maps to S sigma R^{-1}; P_D maps to (det S/det R) P_D."
+  passive_source_naturality: "((phi^{-1})^*k)(phi_*X_A)=k(X_A)."
+  fixed_candidate_only: true
+  lawful_source_principal_data: true
+  physical_characteristic_cone_claimed: false
+  lorentzian_signature_or_scale_claimed: false
+  effective_metric_claimed: false
+  empirical_response_codomain_claimed: false
+
+exclusive_result:
+  result_type: "current_source_combined_extension_typing_or_provenance_obstruction"
+  result_count: 1
+  obstruction_id: "OB-V22-P4T02-B2-CURRENT-SOURCE-COMBINED-OCCURRENCE-EXTENSION-TYPING-PROVENANCE-001"
+  no_fog_check: true
+  decisive_finding: "The registered P4-T01 source forms the narrow source-law presentation D_source, the principal extraction Prin, and Y_PS, but current tracked source authority does not form a combined occurrence/admissibility extension carrier X_OCC or its source-arrow morphisms. Therefore U has no current-source-typed domain, R has neither a typed domain nor an independently sourced dependence law, U-fibres and im(U) do not form, and no current-source instance of factorization or nonfactorization is available."
+  first_failed_primitive: "X_OCC, the current-source combined occurrence/admissibility extension carrier together with its source-arrow morphism class"
+  first_failed_primitive_order: 1
+  first_failed_map: "U:X_OCC->D_source"
+  first_failed_map_reason: "The codomain D_source is narrowly available from P4-T01, but no registered current-source object or arrow class supplies the domain X_OCC."
+  subsequent_unformed_map: "R:X_OCC->Y_PS"
+  subsequent_unformed_map_reason: "Even a proposal-only X_OCC would not determine R without an independently source-defined rule saying how occurrence data affect the reduced operator or its lawful reduction."
+  current_source_factorization_instance_available: false
+  current_source_nonfactorization_witness_available: false
+  conditional_factorization_theorems_preserved: true
+  conservative_product_control_constructed_as_task_local_math: true
+  operator_and_reduction_falsifiers_constructed_as_task_local_math: true
+  source_extension_required_for_current_instance: true
+  proposal_only_extension_remains_possible: true
+  global_no_go: false
+  future_source_extension_impossibility: false
+  exact_roadmap_consequence: "Route B cannot honestly state an occurrence-P4 irrelevance theorem and Route C cannot honestly add a response bridge from current-source data until a separately admitted packet types and provenance-audits X_OCC, U, extension transport, and R, or explicitly restricts itself to the declared conservative product control; this child selects or executes no successor."
+
+formation_order:
+  - order: 1
+    symbol: "D_source"
+    status: "formed_narrowly"
+    evidence: "P4-T01 fixes the source law, background-independent leading operator, zero constraint/gauge/redundancy spaces, and lawful source-presentation covariance."
+  - order: 2
+    symbol: "Y_PS"
+    status: "formed_and_registered"
+    evidence: "P4-T01 registers sigma_L_D, P_D, determinant-line transformation, branch data, and source covariance without physical interpretation."
+  - order: 3
+    symbol: "Prin:D_source->Y_PS"
+    status: "formed_on_the_narrow_fixed_law_presentation_class"
+    evidence: "Prin sends a lawful reduced source operator to its determinant-line symbol and polynomial."
+  - order: 4
+    symbol: "X_OCC"
+    status: "first_current_source_formation_obstruction"
+    evidence: "No combined occurrence/admissibility carrier or arrow class is registered as current-source authority."
+  - order: 5
+    symbol: "U:X_OCC->D_source"
+    status: "unformed_because_domain_is_unformed"
+    evidence: "A forgetful map cannot be typed before its extension domain and morphisms exist."
+  - order: 6
+    symbol: "R:X_OCC->Y_PS"
+    status: "unformed_because_domain_and_dependence_law_are_unformed"
+    evidence: "Occurrence nonselection does not supply a principal-data recomputation rule."
+  - order: 7
+    symbol: "U-fibres, im(U), f, and the extension naturality square"
+    status: "conditional_schema_only"
+    evidence: "Their exact theorems are proved below, but no current-source instance exists."
+
+formal_domains:
+  domain_count: 10
+  domains:
+    - domain_id: "DOM-01-SRC-LAW-CUR"
+      name: "CurrentSourceLawPresentations"
+      definition: "The narrow P4-T01 presentation class carrying the fixed source arena, D, L_D, zero constraint/gauge/redundancy spaces, lawful reduction, and admitted passive source-presentation arrows."
+      current_source_status: "formed_narrowly"
+    - domain_id: "DOM-02-OCC-EXT-CAND"
+      name: "CandidateOccurrenceAdmissibilityExtensions"
+      definition: "Combined occurrence/admissibility expansion objects and arrows over current source-law presentations."
+      current_source_status: "first_formation_obstruction"
+    - domain_id: "DOM-03-CONSERVATIVE-OCC-SUBCATEGORY"
+      name: "ConservativeOccurrenceSubcategory"
+      definition: "A hypothetical subcategory holding D, background, highest-derivative coefficients, constraints, gauge generators, redundancies, and lawful reduced quotient fixed while only occurrence decorations vary."
+      current_source_status: "task_local_conditional_product_control_only"
+    - domain_id: "DOM-04-OPERATOR-CHANGING-CONTROLS"
+      name: "OperatorChangingControls"
+      definition: "Task-local controls in which an occurrence-associated parameter changes a principal coefficient, constraint, gauge generator, redundancy, or lawful reduced quotient."
+      current_source_status: "formed_as_falsifier_class_not_as_current_source_occurrence_law"
+    - domain_id: "DOM-05-P4-PRINCIPAL-DATA"
+      name: "P4T01PrincipalData"
+      definition: "The registered determinant-line source-principal symbol and polynomial data Y_PS, with no physical-cone, response, or metric semantics."
+      current_source_status: "formed_and_registered"
+    - domain_id: "DOM-06-U-FIBRES"
+      name: "ForgetfulMapFibres"
+      definition: "Fibres U^{-1}(d) whose elements share one full source-law reduct d."
+      current_source_status: "unformed_because_X_OCC_and_U_are_unformed"
+    - domain_id: "DOM-07-IMAGE-U"
+      name: "EssentialImageOfU"
+      definition: "The image of U on which a fibre-constant relevance map has a canonical set-level factor."
+      current_source_status: "unformed_because_U_is_unformed"
+    - domain_id: "DOM-08-FULL-REDUCT-CODOMAIN"
+      name: "FullReductCodomain"
+      definition: "The proposed full source-law reduct codomain, including objects that a future U might not reach."
+      current_source_status: "narrow_P4_T01_slice_formed_but_future_full_domain_not_fixed"
+    - domain_id: "DOM-09-SOURCE-ARROW-GROUPOID"
+      name: "SourceArrowGroupoid"
+      definition: "Admitted passive source-presentation arrows for D_source plus the extension arrows needed for an occurrence naturality square."
+      current_source_status: "source_side_arrows_formed_extension_side_arrows_unformed"
+    - domain_id: "DOM-10-FAILURE-CERTIFICATES"
+      name: "FailureCertificates"
+      definition: "Task-local typed first-failure records and exact conditional theorem or countercontrol evidence."
+      current_source_status: "formed_with_one_exclusive_obstruction"
+
+formal_objects:
+  object_count: 11
+  objects:
+    - object_id: "OBJ-01-D"
+      name: "Current source-law presentation D"
+      type: "object of D_source"
+      status: "formed_narrowly_from_P4_T01"
+    - object_id: "OBJ-02-X"
+      name: "Combined occurrence/admissibility extension object X"
+      type: "object of X_OCC over D"
+      status: "first_current_source_typing_obstruction"
+    - object_id: "OBJ-03-U"
+      name: "Forgetful source-law reduct U"
+      type: "U:X_OCC->D_source"
+      status: "unformed_after_OBJ_02"
+    - object_id: "OBJ-04-Y-PS"
+      name: "Registered P4-T01 determinant-line principal-data codomain Y_PS"
+      type: "lawful reduced source-principal data"
+      status: "formed_and_hash_bound"
+    - object_id: "OBJ-05-R"
+      name: "P4 relevance map R"
+      type: "R:X_OCC->Y_PS"
+      status: "unformed_after_OBJ_02_and_no_dependence_law"
+    - object_id: "OBJ-06-F"
+      name: "Candidate factor f"
+      type: "f:im(U)->Y_PS"
+      status: "conditional_schema_only"
+    - object_id: "OBJ-07-FIBRE"
+      name: "One U-fibre"
+      type: "U^{-1}(d)"
+      status: "unformed_because_U_is_unformed"
+    - object_id: "OBJ-08-SIGMA"
+      name: "Reduced source principal symbol sigma_L_D"
+      type: "V_red->W_eq linear principal map parametrized by k"
+      status: "formed_and_registered"
+    - object_id: "OBJ-09-P"
+      name: "Reduced source principal polynomial P_D"
+      type: "section of det(W_eq) tensor det(V_red)^*"
+      status: "formed_and_registered"
+    - object_id: "OBJ-10-NAT"
+      name: "Source-arrow naturality square"
+      type: "T_g, E_g, Y_g, U, and R commutative squares"
+      status: "P4_T01_source_principal_square_formed_but_extension_square_unformed"
+    - object_id: "OBJ-11-AUDIT-RESULT"
+      name: "Exclusive audit result"
+      type: "one permitted theorem, witness, or precise obstruction"
+      status: "formed_as_current_source_combined_extension_typing_or_provenance_obstruction"
+
+formal_maps:
+  map_count: 10
+  maps:
+    - map_id: "MAP-01-U"
+      signature: "U:X_OCC->D_source"
+      purpose: "Forget occurrence/admissibility decoration while retaining the full source-law and lawful-reduction presentation."
+      current_source_status: "unformed_because_X_OCC_is_unformed"
+    - map_id: "MAP-02-PRIN"
+      signature: "Prin:D_source->Y_PS"
+      purpose: "Extract sigma_L_D, P_D, determinant-line and branch data from a lawful reduced source operator."
+      current_source_status: "formed_on_the_registered_narrow_P4_T01_slice"
+    - map_id: "MAP-03-R"
+      signature: "R:X_OCC->Y_PS"
+      purpose: "Recompute or report principal data from an occurrence/admissibility extension."
+      current_source_status: "unformed_no_domain_and_no_source_dependence_law"
+    - map_id: "MAP-04-FACTOR"
+      signature: "f:im(U)->Y_PS"
+      purpose: "Represent R as a function of the source reduct when fibre constancy is proved."
+      current_source_status: "conditional_unique_image_factor_only"
+    - map_id: "MAP-05-FIBRE-INCLUSION"
+      signature: "i_d:U^{-1}(d)->X_OCC"
+      purpose: "Expose same-reduct occurrence/admissibility variation."
+      current_source_status: "unformed_because_U_is_unformed"
+    - map_id: "MAP-06-SOURCE-TRANSPORT"
+      signature: "T_g:D->D'"
+      purpose: "Transport source-law presentations under every admitted passive source arrow."
+      current_source_status: "formed_for_the_P4_T01_source_presentation_class"
+    - map_id: "MAP-07-EXTENSION-TRANSPORT"
+      signature: "E_g:X_D->X_D'"
+      purpose: "Transport occurrence/admissibility extensions without output-relative arrow deletion."
+      current_source_status: "unformed_because_extension_objects_and_arrows_are_unformed"
+    - map_id: "MAP-08-PRINCIPAL-TRANSPORT"
+      signature: "Y_g:Y_PS(D)->Y_PS(D')"
+      purpose: "Carry determinant-line principal data covariantly under source and field/equation frame changes."
+      current_source_status: "formed_for_P4_T01"
+    - map_id: "MAP-09-OPERATOR-PERTURBATION"
+      signature: "delta_L:L_D->L_D'"
+      purpose: "Falsify a purported conservative classification by changing a leading coefficient or lawful reduction datum."
+      current_source_status: "task_local_countercontrol_outside_the_fixed_D_fibre"
+    - map_id: "MAP-10-RESULT"
+      signature: "Audit(X_OCC,U,R)->Result"
+      purpose: "Return one exact theorem, witness, or first precise obstruction."
+      current_source_status: "formed_with_the_exclusive_obstruction"
+
+theorem_target_audit:
+  theorem_target_count: 6
+  current_source_factorization_theorem_instance_count: 0
+  targets:
+    - theorem_id: "THM-01-FIBRE-FACTORIZATION"
+      name: "ImageFibreFactorizationCriterion"
+      hypotheses:
+        - "X, D, and Y are sets and U:X->D and R:X->Y are functions."
+      statement: "There exists a unique f_im:im(U)->Y satisfying R=f_im composed with U exactly when R is constant on every U-fibre."
+      proof: "If R=f_im composed with U and U(x)=U(x'), then R(x)=f_im(U(x))=f_im(U(x'))=R(x'). Conversely, if R is fibre-constant, define f_im(U(x))=R(x). Fibre constancy makes the definition independent of x, factorization follows, and every point of im(U) has a preimage, so any other factor agrees there."
+      falsifier: "Provide x and x' with U(x)=U(x') but R(x) different from R(x'); this blocks factorization. A factor on im(U) cannot be falsified by disagreement only at D points outside im(U)."
+      audit_status: "conditional_theorem_proved_no_current_X_OCC_or_R_instance"
+    - theorem_id: "THM-02-FACTOR-UNIQUENESS"
+      name: "ImageVersusAllDomainExtensionAndUniqueness"
+      hypotheses:
+        - "THM-01 gives f_im on im(U)."
+        - "For the elementary set-level clause, Y is a fixed set."
+      statement: "The factor is unique on im(U). At set level, extending it to all D is a separate off-image assignment problem; when Y is nonempty an extension exists, and it is unique exactly when D equals im(U) or Y has at most one element. In a fibrewise, functorial, or natural codomain, existence additionally requires independently typed off-image objects and compatibility data."
+      proof: "Uniqueness on im(U) is THM-01. If Y is nonempty, choose y_0 in Y and set f(d)=f_im(d) on im(U) and f(d)=y_0 outside. If D minus im(U) is nonempty and Y contains distinct y_0,y_1, changing the value at one off-image point gives two extensions, so uniqueness fails. If no off-image point exists or Y has at most one element, any two extensions agree. Structured naturality is not implied by this pointwise choice and must be proved separately."
+      falsifier: "Claim unique all-D factorization while exhibiting one off-image d_0 and two admissible distinct Y values, or claim a structured extension without the required fibre and arrow compatibility."
+      audit_status: "conditional_theorem_proved_global_claim_blocked"
+    - theorem_id: "THM-03-CONSERVATIVE-PRINCIPAL-CONSTANCY"
+      name: "ConservativeProductPrincipalConstancy"
+      hypotheses:
+        - "A proposal-only product X_prod=D_source x O exists."
+        - "U(d,o)=d."
+        - "D, background, all highest-derivative coefficients, C_alg, C_diff, G_int, R_alg, field and equation fibres, and the lawful reduced quotient are independent of o."
+        - "R_prod=Prin composed with U."
+      statement: "R_prod is constant on each U-fibre and factors uniquely on im(U) as Prin. For the fixed P4-T01 law, every o over d has sigma_L_D=diag(k(X_A)) and P_D=product_A k(X_A)."
+      proof: "Every element (d,o) in U^{-1}(d) has the same D and identical lawful reduction data by hypothesis. P4-T01 computes principal data only from that reduced highest-derivative operator, so R_prod(d,o)=Prin(d) independently of o. THM-01 supplies the image factor."
+      falsifier: "Exhibit an o-dependence in a leading coefficient, constraint, gauge generator, equation redundancy, reduced field/equation fibre, or quotient map while still calling the family conservative."
+      audit_status: "exact_task_local_control_not_a_current_source_derivation_of_X_prod"
+    - theorem_id: "THM-04-OPERATOR-DEPENDENCE-FALSIFIER"
+      name: "OperatorOrLawfulReductionChangeBoundary"
+      hypotheses:
+        - "U is required to retain the complete source law and lawful reduction data."
+      statement: "If an occurrence-associated parameter changes a highest-derivative coefficient, constraint space, constraint propagation, gauge generator, equation redundancy, reduced field/equation fibre, or lawful quotient, then it changes D_source or the type/value of Prin(D); it is not an occurrence-only conservative variation in one honest U-fibre."
+      proof: "The source-principal symbol is the leading operator after lawful restriction and quotient. Changing a leading coefficient changes sigma directly. Changing constraints, gauge, redundancies, or quotient changes the domain, codomain, or induced reduced map. Since an honest U retains those data, the changed objects have different U-images. If a purported U erases the change, it is not the declared source-law reduct."
+      falsifier: "Produce a nontrivial change to one listed datum while proving equality of the complete reduced principal map, its determinant-line type, and all quotient identifications under the same retained D."
+      audit_status: "theorem_with_exact_coefficient_and_reduction_controls"
+    - theorem_id: "THM-05-NONSELECTION-NONIMPLICATION"
+      name: "OccurrenceNonselectionDoesNotDecideP4Relevance"
+      hypotheses:
+        - "A two-root extension set {x_0,x_1} has no selected root and both roots share one proposed reduct d."
+        - "Y contains y_0 and a distinct control value y_1."
+      statement: "The same nonselection facts are compatible with a constant relevance assignment R_c(x_i)=y_0 that factors and a split assignment R_s(x_0)=y_0, R_s(x_1)=y_1 that does not. Therefore multiplicity or nonselection alone entails neither factorization nor nonfactorization."
+      proof: "R_c is fibre-constant, so THM-01 gives a factor. R_s takes two values on the same fibre, so THM-01 forbids a factor. The extension set and absence of a selected root are identical in both controls; only the independently unspecified relevance law changes."
+      falsifier: "Derive one unique relevance assignment from independently registered source data without using the desired factorization verdict or a target response."
+      audit_status: "independence_theorem_proved_controls_are_metatheoretic_not_current_source_R"
+    - theorem_id: "THM-06-NATURALITY"
+      name: "ConditionalImageFactorNaturality"
+      hypotheses:
+        - "D_source and X_OCC are categories or groupoids."
+        - "U and extension transport E_g are defined independently of output."
+        - "Y_PS has principal transport Y_g."
+        - "U(E_g x)=T_g(Ux) and R(E_g x)=Y_g(R(x)) for every admitted source arrow g."
+        - "R is constant on each U-fibre."
+      statement: "The image factor satisfies f_im(T_g d)=Y_g(f_im(d)) for every d in im(U) and every admitted arrow whose transported object remains in im(U)."
+      proof: "Choose x with U(x)=d. Then f_im(T_g d)=f_im(U(E_gx))=R(E_gx)=Y_g(R(x))=Y_g(f_im(d)). Fibre constancy makes the choice of x irrelevant. No arrow is removed because of the desired output."
+      falsifier: "An admitted g and x for which U(E_gx) differs from T_gU(x), R(E_gx) differs from Y_gR(x), or E_g is undefined; deleting that arrow by desired-output preservation is not a repair."
+      audit_status: "P4_T01_principal_transport_available_but_extension_naturality_uninstantiated_after_X_OCC_failure"
+
+exact_controls:
+  control_count: 6
+  controls:
+    - control_id: "CTRL-01-ABSTRACT-IMAGE-FACTORIZATION"
+      setup: "Arbitrary functions U:X->D and R:X->Y with the equivalence relation x~x' iff U(x)=U(x')."
+      result: "R descends uniquely to im(U) exactly when it is constant on equivalence classes; all-D extension and uniqueness remain separate."
+      proof_or_calculation: "THM-01 and THM-02."
+      relation_to_exclusive_result: "valid_conditional_mathematics_no_current_X_OCC_instance"
+    - control_id: "CTRL-02-CONSERVATIVE-THREE-ROOT-PRODUCT"
+      setup: "Let O={o_0,o_1,o_2}; X_prod={d}xO; U(d,o_i)=d; R_prod(d,o_i)=y_D where y_D=(sigma_L_D,P_D) is the registered P4-T01 datum."
+      result: "Three distinct occurrence/admissibility decorations have one full source reduct and identical source-principal data, so R_prod factors on im(U)."
+      proof_or_calculation: "All highest-derivative and reduction data are fixed, hence sigma_L_D and P_D are literally independent of i."
+      relation_to_exclusive_result: "positive_proposal_only_control_not_evidence_current_source_derives_X_prod"
+    - control_id: "CTRL-03-SAME-REDUCT-DIFFERENT-PROPOSED-RELEVANCE"
+      setup: "Let X_lab={x_+,x_-}; U(x_+)=U(x_-)=d; stipulate distinct proposed labels R_lab(x_+)=y_0 and R_lab(x_-)=y_1 in a control codomain with y_0 not equal to y_1."
+      result: "R_lab does not factor through U. Because no current source law supplies R_lab, this is a provenance countercontrol rather than a current-source nonfactorization witness."
+      proof_or_calculation: "A factor would give y_0=f(d)=y_1, contradiction."
+      relation_to_exclusive_result: "shows_why_R_provenance_is_indispensable_and_reinforces_the_typing_obstruction"
+    - control_id: "CTRL-04-LEADING-COEFFICIENT-ENTRY"
+      setup: "Replace only X_1 by X_1(p)=partial_0+(1+p)partial_1, keep X_2,...,X_6 fixed, and compare p=0 with p=1."
+      result: "P_p=[omega+(1+p)kappa_1] product_{A=2}^6 k(X_A); for generic k the polynomial and the first characteristic hyperplane change. The pair therefore changes D and lies outside a conservative U-fibre."
+      proof_or_calculation: "At k with omega=0, kappa_1=1, and generic remaining components avoiding other zeros, the first factor changes from 1 to 2; the zero set omega+(1+p)kappa_1=0 also changes with p."
+      relation_to_exclusive_result: "exact_operator_change_falsifier_not_an_occurrence_only_current_source_witness"
+    - control_id: "CTRL-05-LAWFUL-REDUCTION-ENTRY"
+      setup: "Baseline uses C_alg=C_diff=G_int=R_alg={0}, V_red=W_eq=R^6, and sigma_0=diag(ell_1,...,ell_6). The control declares channel 6 constrained and redundant so the lawful reduced fibres are span(e_1,...,e_5) and sigma_1=diag(ell_1,...,ell_5)."
+      result: "The determinant-line type changes and P changes from product_{A=1}^6 ell_A to product_{A=1}^5 ell_A. This is a constraint/redundancy and quotient change, not a conservative decoration."
+      proof_or_calculation: "Restriction and quotient remove one domain and equation direction, changing both reduced rank and determinant degree."
+      relation_to_exclusive_result: "exact_reduction_change_falsifier_outside_the_fixed_P4_T01_reduct"
+    - control_id: "CTRL-06-NONSELECTION-RELEVANCE-INDEPENDENCE"
+      setup: "Use the same unselected two-root set and same proposed U in CTRL-02 and CTRL-03, changing only whether the proposed relevance law is constant or split."
+      result: "Nonselection is compatible with factorization and nonfactorization, so it cannot generate an R law or prove P4 irrelevance."
+      proof_or_calculation: "THM-05 compares the constant and split assignments under identical root multiplicity and no-selection facts."
+      relation_to_exclusive_result: "blocks_FB_12_and_preserves_the_first_typing_provenance_failure"
+
+proof_obligation_audit:
+  obligation_count: 16
+  audit_complete_count: 16
+  obligations:
+    - obligation_id: "PO-01"
+      status: "discharged"
+      finding: "The selected packet, RT006 fusion and route TeX, and registered P4-T01 TeX are bound by exact SHA-256; the P4-T01 registry row matches."
+    - obligation_id: "PO-02"
+      status: "satisfied_by_precise_obstruction"
+      finding: "X_OCC fails first because current tracked source authority contains no combined extension carrier or arrow class."
+    - obligation_id: "PO-03"
+      status: "satisfied_by_independence_boundary"
+      finding: "U is specified only conditionally as retaining the complete D and lawful reduction; it is not reverse-defined from a desired factorization result."
+    - obligation_id: "PO-04"
+      status: "discharged"
+      finding: "Y_PS is exactly the registered determinant-line source-principal object; physical cone, metric, response, and g_eff overreads are prohibited."
+    - obligation_id: "PO-05"
+      status: "satisfied_by_precise_obstruction"
+      finding: "No current-source R exists. Constant and split controls demonstrate that desired irrelevance or nonfactorization cannot define it."
+    - obligation_id: "PO-06"
+      status: "discharged_conditionally"
+      finding: "The conservative hypothesis explicitly fixes D, background, leading coefficients, constraints, gauge generators, redundancies, reduced fibres, and lawful quotient."
+    - obligation_id: "PO-07"
+      status: "discharged_at_control_level"
+      finding: "The three-root product control is fibre-constant and the opposite-label same-reduct control is not; neither is misreported as a current-source instance."
+    - obligation_id: "PO-08"
+      status: "discharged_conditionally"
+      finding: "The factor is constructed only on im(U) after fibre constancy and is not constructed for the obstructed current-source case."
+    - obligation_id: "PO-09"
+      status: "discharged"
+      finding: "All-D extension existence and uniqueness are separated; surjectivity is sufficient, while singleton codomain is the explicit degenerate uniqueness exception."
+    - obligation_id: "PO-10"
+      status: "satisfied_by_partial_formation_and_precise_obstruction"
+      finding: "P4-T01 supplies T_g and Y_g covariance for source-principal data. X_OCC and E_g fail to form, so R and factor naturality cannot be instantiated; no arrow is deleted."
+    - obligation_id: "PO-11"
+      status: "discharged"
+      finding: "The coefficient-entry and lawful-reduction-entry controls change P4-T01 data and are classified outside the conservative U-fibre."
+    - obligation_id: "PO-12"
+      status: "discharged"
+      finding: "The constant/split relevance pair proves nonselection alone decides neither factorization nor nonfactorization."
+    - obligation_id: "PO-13"
+      status: "discharged"
+      finding: "No target atlas, desired cone, metric, response, empirical label, or target-shaped codomain is used."
+    - obligation_id: "PO-14"
+      status: "discharged"
+      finding: "The audit changes the object to a typed dependency diagram and reconstructs none of the nine frozen tau, quotient, character, oriented-matroid, signed-cubic, invariance, K-star, conormal, or measurable-fibre routes."
+    - obligation_id: "PO-15"
+      status: "discharged_decisively"
+      finding: "The exact first failed primitive is X_OCC; U and R fail only after it."
+    - obligation_id: "PO-16"
+      status: "discharged"
+      finding: "Route B and any response bridge remain deferred until a separately admitted X_OCC/U/R provenance packet or an explicitly limited conservative theorem; no successor is selected or executed by this child."
+
+failure_branch_audit:
+  branch_count: 15
+  decisive_branch_count: 1
+  branches:
+    - branch_id: "FB-01"
+      trigger: "No current-source type exists for the combined occurrence/admissibility extension category X."
+      status: "triggered_decisive"
+      finding: "X_OCC and its morphism class are absent from current tracked source authority."
+    - branch_id: "FB-02"
+      trigger: "The forgetful map U is stipulated but not typed or source-provenanced."
+      status: "consequential_unformed_after_FB_01"
+      finding: "U has no typed domain and is retained only as a conditional schema."
+    - branch_id: "FB-03"
+      trigger: "The P4 codomain is replaced by a target metric, desired cone, or physical response answer."
+      status: "not_triggered"
+      finding: "Y_PS is bound exactly to registered P4-T01 source-principal data."
+    - branch_id: "FB-04"
+      trigger: "The relevance map R is selected by the desired factorization or irrelevance verdict."
+      status: "not_triggered_R_withheld"
+      finding: "The analysis refuses both constant and split control assignments as current-source provenance."
+    - branch_id: "FB-05"
+      trigger: "Occurrence data enters a highest-derivative coefficient inside a purported conservative fibre."
+      status: "countercontrol_exhibits_boundary_not_current_source_trigger"
+      finding: "CTRL-04 changes the first characteristic factor and therefore changes D."
+    - branch_id: "FB-06"
+      trigger: "Occurrence data changes the constraint space or constraint propagation."
+      status: "countercontrol_exhibits_boundary_not_current_source_trigger"
+      finding: "CTRL-05 changes the reduced fibres and determinant degree."
+    - branch_id: "FB-07"
+      trigger: "Occurrence data changes gauge generators, redundancies, or the reduced quotient."
+      status: "countercontrol_exhibits_boundary_not_current_source_trigger"
+      finding: "CTRL-05 makes the redundancy/quotient dependence explicit."
+    - branch_id: "FB-08"
+      trigger: "R is not constant on a U-fibre."
+      status: "conditional_countercontrol_only"
+      finding: "CTRL-03 is nonconstant but lacks a current-source R provenance law, so it is not promoted to a current-source nonfactorization witness."
+    - branch_id: "FB-09"
+      trigger: "A factor on im(U) is promoted to a unique factor on all of D without surjectivity or off-image data."
+      status: "not_triggered"
+      finding: "THM-02 separates image uniqueness, off-image existence, and global uniqueness including the singleton exception."
+    - branch_id: "FB-10"
+      trigger: "Naturality is obtained by deleting arrows that do not preserve the desired output."
+      status: "not_triggered"
+      finding: "All P4-T01 source arrows are retained; missing E_g is recorded as part of the X_OCC obstruction."
+    - branch_id: "FB-11"
+      trigger: "The audit merely renames a frozen tau, quotient, character, oriented-matroid, signed-cubic, robust-invariance, K-star, conormal, or measurable-occurrence encoding."
+      status: "not_triggered"
+      finding: "No frozen candidate is reconstructed or used as the combined extension carrier."
+    - branch_id: "FB-12"
+      trigger: "Occurrence-root multiplicity is treated as proof of P4 irrelevance without a typed R."
+      status: "not_triggered"
+      finding: "THM-05 and CTRL-06 prove the exact nonimplication."
+    - branch_id: "FB-13"
+      trigger: "The theorem or witness lacks an exact proof/falsifier control."
+      status: "not_triggered"
+      finding: "Six exact controls include proofs, calculations, and falsifiers."
+    - branch_id: "FB-14"
+      trigger: "The result has no bounded roadmap consequence."
+      status: "not_triggered"
+      finding: "The exact consequence is to defer irrelevance and response claims pending separately admitted X_OCC/U/R typing or a deliberately conditional conservative theorem."
+    - branch_id: "FB-15"
+      trigger: "The packet adopts a source law, response bridge, ontology change, physical interpretation, or downstream Gate status."
+      status: "not_triggered"
+      finding: "All construction, adoption, response, physical, Gate, publication, push, and external-action permissions remain false."
+
+new_mathematical_payload:
+  payload_count: 8
+  items:
+    - payload_id: "NMP-RT007-PM-001"
+      payload_type: "countermodel_or_obstruction"
+      name: "combined-extension formation-before-factorization obstruction"
+      statement: "D_source, Prin, and Y_PS form narrowly, but X_OCC fails first; therefore U, R, fibres, image, and current-source factorization verdicts do not form."
+      proof: "The registered P4-T01 source defines only the fixed source law and its lawful principal extraction. The selected occurrence extension carrier and arrows are absent, so ordinary domain-before-map typing fails at X_OCC."
+      falsifier: "A pre-existing registered current-source definition of X_OCC objects and arrows over the fixed D, together with independently sourced U and R types."
+      burden_effect: "obstructs_current_source_instance_only"
+    - payload_id: "NMP-RT007-PM-002"
+      payload_type: "theorem_with_hypotheses_and_proof"
+      name: "image fibre-factorization theorem"
+      statement: "R factors uniquely on im(U) iff it is constant on U-fibres."
+      proof: "THM-01 gives the quotient well-definedness and uniqueness proof."
+      falsifier: "One same-U pair with distinct R values."
+      burden_effect: "narrows"
+    - payload_id: "NMP-RT007-PM-003"
+      payload_type: "theorem_with_hypotheses_and_proof"
+      name: "all-domain extension and uniqueness theorem"
+      statement: "Image uniqueness does not imply canonical or unique all-D extension; off-image data and structured naturality are independent."
+      proof: "THM-02 gives exact set-level existence and uniqueness conditions and the structured caveat."
+      falsifier: "One off-image point with two admissible codomain values."
+      burden_effect: "narrows"
+    - payload_id: "NMP-RT007-PM-004"
+      payload_type: "theorem_with_hypotheses_and_proof"
+      name: "conservative product principal-constancy theorem"
+      statement: "Holding the full reduced operator and reduction fixed makes P4-T01 principal data independent of occurrence decoration."
+      proof: "THM-03 and CTRL-02."
+      falsifier: "Any decoration dependence in the leading operator or reduction data."
+      burden_effect: "audits"
+    - payload_id: "NMP-RT007-PM-005"
+      payload_type: "countermodel_or_obstruction"
+      name: "leading-coefficient entry countermodel"
+      statement: "X_1(p)=partial_0+(1+p)partial_1 changes a characteristic factor and lies outside an honest conservative U-fibre."
+      proof: "CTRL-04 computes the changed factor and zero hyperplane."
+      falsifier: "An exact equivalence proving the complete reduced principal datum unchanged."
+      burden_effect: "narrows"
+    - payload_id: "NMP-RT007-PM-006"
+      payload_type: "countermodel_or_obstruction"
+      name: "lawful-reduction entry countermodel"
+      statement: "Removing one constrained/redundant channel changes reduced rank, determinant-line type, and polynomial degree."
+      proof: "CTRL-05 compares the six-channel and five-channel reduced symbols."
+      falsifier: "A lawful isomorphism retaining the same determinant-line type and polynomial."
+      burden_effect: "narrows"
+    - payload_id: "NMP-RT007-PM-007"
+      payload_type: "theorem_with_hypotheses_and_proof"
+      name: "nonselection relevance-independence theorem"
+      statement: "Identical multiplicity and nonselection data permit both constant and split relevance controls."
+      proof: "THM-05 and CTRL-06."
+      falsifier: "An independently registered source rule selecting one relevance assignment."
+      burden_effect: "narrows"
+    - payload_id: "NMP-RT007-PM-008"
+      payload_type: "theorem_with_hypotheses_and_proof"
+      name: "conditional natural image-factor theorem"
+      statement: "Natural U and R plus fibre constancy make the image factor natural without arrow deletion."
+      proof: "THM-06 chases an arbitrary extension x through E_g, U, R, T_g, and Y_g."
+      falsifier: "One admitted arrow breaking either naturality square."
+      burden_effect: "audits"
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT007-PM-001"
+    payload_type: "obstruction"
+    object_name: "current-source combined-extension typing and provenance obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-007/artifacts/child_phys_math_p4_t02_b2_current_source_occurrence_admissibility_p4_relevance_factorization_audit.yaml"
+    burden_effect: "obstructs"
+    summary: "Names X_OCC as the first failed primitive before U or R."
+  - payload_id: "PAYLOAD-RT007-PM-002"
+    payload_type: "theorem"
+    object_name: "image factorization and all-domain qualification theorem family"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-007/artifacts/child_phys_math_p4_t02_b2_current_source_occurrence_admissibility_p4_relevance_factorization_audit.yaml"
+    burden_effect: "narrows"
+    summary: "Proves fibre constancy iff image factorization and separates off-image extension and uniqueness."
+  - payload_id: "PAYLOAD-RT007-PM-003"
+    payload_type: "explicit_witness"
+    object_name: "conservative three-root same-reduct product control"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-007/artifacts/child_phys_math_p4_t02_b2_current_source_occurrence_admissibility_p4_relevance_factorization_audit.yaml"
+    burden_effect: "audits"
+    summary: "Shows conditional constancy when the complete reduced operator is fixed."
+  - payload_id: "PAYLOAD-RT007-PM-004"
+    payload_type: "countermodel"
+    object_name: "coefficient-entry and reduction-entry boundary controls"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-007/artifacts/child_phys_math_p4_t02_b2_current_source_occurrence_admissibility_p4_relevance_factorization_audit.yaml"
+    burden_effect: "narrows"
+    summary: "Changes exact principal factors or reduced rank and classifies both outside a conservative fibre."
+  - payload_id: "PAYLOAD-RT007-PM-005"
+    payload_type: "countermodel"
+    object_name: "nonselection relevance-independence pair"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-007/artifacts/child_phys_math_p4_t02_b2_current_source_occurrence_admissibility_p4_relevance_factorization_audit.yaml"
+    burden_effect: "narrows"
+    summary: "Blocks inference from occurrence multiplicity or nonselection to P4 relevance or irrelevance."
+  - payload_id: "PAYLOAD-RT007-PM-006"
+    payload_type: "theorem"
+    object_name: "conditional source-arrow naturality theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-007/artifacts/child_phys_math_p4_t02_b2_current_source_occurrence_admissibility_p4_relevance_factorization_audit.yaml"
+    burden_effect: "audits"
+    summary: "Shows how a well-typed image factor would inherit naturality while recording the missing extension transport."
+
+source_extension_classification:
+  classification_required: true
+  route_trigger_classification: "ordinary_gap"
+  selected_route_label: "ordinary-research-packet"
+  current_source_finding: "current_ontology_does_not_derive_the_combined_occurrence_extension_carrier_or_relevance_law"
+  conservative_product_control_classification: "proposal-only task-local mathematical control"
+  operator_and_reduction_controls_classification: "task-local falsifier data outside the fixed source-law fibre"
+  required_future_category_if_instantiated: "source-extension data unless separately proved definable from current registered source operations"
+  relation_to_target_side_structures: "none"
+  target_import_classification: "no_target_import_detected"
+  source_extension_constructed: false
+  canonical_ontology_candidate_claimed: false
+  source_extension_adopted: false
+  source_extension_rejected: false
+  current_ontology_modified: false
+  status_vocabulary:
+    draft_control: "draft/control"
+    proposal_only: "proposal-only"
+    source_extension_data: "source-extension data"
+    canonical_ontology_candidate: "not_claimed"
+    adopted: "not_adopted"
+    rejected: "not_rejected"
+    human_gated: "later_adoption_only"
+  adoption_status: "blocked_adoption_open_continuation"
+
+freeze_preservation:
+  freeze_count: 9
+  all_freezes_preserved: true
+  new_freeze_created: false
+  frozen_route_replay_performed: false
+  rows:
+    - freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY"
+      status: "preserved_not_reopened"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "none_new"
+  prior_attempts_considered:
+    - "RT-20260815-003"
+    - "RT-20260816-001"
+    - "RT-20260816-005"
+    - "RT-20260816-006"
+  freeze_if:
+    - "A later packet repeats the claim that current source derives X_OCC, U, or R without a newly registered carrier, arrow class, and dependence law."
+    - "A later packet promotes the conditional product control to global occurrence-P4 irrelevance without auditing every admitted extension."
+  do_not_freeze_if:
+    - "A separately admitted packet supplies a materially new target-free proposal-only X_OCC/U/R definition with exact source provenance for audit."
+    - "A separately admitted theorem proves a scoped irrelevance result over a fully declared conservative extension class without claiming global P4 irrelevance."
+  freeze_decision: "not_frozen"
+  decision_reason: "The current-source instance is precisely obstructed, but materially new same-milestone continuation remains possible without reopening any frozen family or requiring immediate adoption."
+  next_allowed_route: "parent_to_select_separately_if_authorized"
+
+distance_to_gr_status:
+  row_count: 14
+  changed: false
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      finding: "No occurrence/admissibility carrier, relevance law, or source primitive is added or adopted."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      finding: "P4-T01 passive source-presentation covariance is inherited; no broader EqSrc assignment follows."
+    - burden: "RetainH"
+      status: "no_delta"
+      finding: "No retention object or law is constructed."
+    - burden: "GenH"
+      status: "no_delta"
+      finding: "No occurrence generator or source dependence law is constructed."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      finding: "No observer-localization object or map is constructed."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      finding: "Y_PS remains source-principal and no response bridge or empirical semantics is supplied."
+    - burden: "M_src"
+      status: "no_delta"
+      finding: "The proposal-only source arena remains unadopted and is not identified with physical spacetime."
+    - burden: "g_eff"
+      status: "no_delta"
+      finding: "No physical cone, conformal class, scale, or effective metric is constructed."
+    - burden: "matter coupling"
+      status: "no_delta"
+      finding: "No matter-sector propagation law or universal coupling is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      finding: "No action, variation, gravitational closure, or field equation is supplied."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      finding: "Exact controls classify dependence boundaries but do not supply physical robustness evidence."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      finding: "No benchmark answer, execution, comparison, or promotion occurs."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      finding: "No protected verdict, adoption request, or Gate action occurs."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      finding: "All nine freezes remain exact; no new freeze, global hard fail, or global no-go is created."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Determine whether disclosed occurrence and admissibility extension degrees have any current-source-typed dependence on the registered P4-T01 principal data."
+  explanation: "The audit binds the P4-T01 codomain and proves the exact conditional factorization and falsifier mathematics, but the current-source instance fails first at X_OCC. No occurrence law, relevance map, physical response, cone, metric, or GR burden is discharged."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "P4-T01 source-principal data registered; occurrence relevance dependency selected for audit"
+  new_status: "unchanged Distance-to-GR burden; current-source combined extension and relevance map precisely obstructed"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "current-source occurrence/admissibility extension carrier and relevance law"
+    - "occurrence-P4 irrelevance theorem"
+    - "Resp_lc bridge and physical response"
+    - "D7 adequacy and B2 action"
+    - "P4-T03"
+    - "g_eff, matter coupling, Einstein equations, benchmark promotion, and Gate Chair status"
+  explanation: "A precise formation/provenance obstruction and conditional theorem controls narrow the dependency boundary but construct no current-source or physical object."
+
+obstruction_record:
+  present: true
+  obstruction_id: "OB-V22-P4T02-B2-CURRENT-SOURCE-COMBINED-OCCURRENCE-EXTENSION-TYPING-PROVENANCE-001"
+  scope: "current_ontology_only"
+  failed_object: "X_OCC combined occurrence/admissibility extension carrier and its source-arrow morphism class"
+  exact_failure: "The registered P4-T01 source authority forms D_source, Prin, and Y_PS for the fixed six-channel law, but it contains no combined occurrence/admissibility extension objects or arrows. Consequently U lacks a domain, R lacks both a domain and an independently sourced dependence law, and fibres, image factorization, and extension naturality have no current-source instance."
+  minimal_counterexample_path: ""
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "new_primitive_required"
+  consequence: "selector_required"
+  forbidden_overread: "This current-source formation result does not prove that no proposal-only conservative extension, relevance map, scoped irrelevance theorem, or future source extension can be constructed; it does not reject the P4-T01 source-principal theorem or the broader project."
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_occurrence_admissibility_relevance"
+  current_cycle_step: "current_source_occurrence_p4_relevance_factorization_audit"
+  prior_related_tasks:
+    - "RT-20260815-003"
+    - "RT-20260816-001"
+    - "RT-20260816-003"
+    - "RT-20260816-005"
+    - "RT-20260816-006"
+  cycle_risk: "high_if_the_conditional_product_control_or_any_frozen_occurrence_encoding_is_replayed_as_current_source_authority"
+  orbit_avoidance_reason: "This child returns the exact first formation failure and exact operator/reduction boundary, rather than another generic relevance obligation or repaired occurrence selector."
+  next_role_consequence: "parent_must_choose_any_later_packet_separately_and_may_not_execute_it_in_this_child"
+
+downstream_locks:
+  d7_adequacy_reevaluated: false
+  d7_adequacy_established: false
+  b2_activated: false
+  b2_rejected: false
+  b2_disposed: false
+  b2_viability_or_sufficiency_established: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+  p4_t03_unlocked: false
+  p4_t03_executed: false
+  source_principal_data_promoted_to_physical_cone: false
+  occurrence_p4_irrelevance_theorem_proved: false
+  resp_lc_constructed: false
+  m_src_adopted: false
+  g_eff_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  downstream_unlocked: []
+
+authority_limits:
+  theorem_truth_promoted: false
+  current_source_combined_extension_constructed: false
+  current_source_relevance_map_constructed: false
+  occurrence_law_reconstructed_or_repaired: false
+  occurrence_law_adopted: false
+  source_law_derived: false
+  source_extension_adopted: false
+  canonical_ontology_modified: false
+  eqsrc_assigned: false
+  phi_src_typed_or_interpreted: false
+  physical_occurrence_assigned: false
+  physical_probability_assigned: false
+  realized_occurrence_selected: false
+  empirical_response_semantics_assigned: false
+  physical_clock_constructed: false
+  full_p4_relevance_map_constructed: false
+  occurrence_p4_irrelevance_theorem_proved: false
+  resp_lc_bridge_constructed: false
+  target_geometry_imported: false
+  physical_cone_or_metric_interpreted: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  g_eff_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  benchmark_authority: false
+  gate_chair_authority: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_claimed: false
+  successor_selected_or_executed: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "Occurrence nonselection proves factorization, nonfactorization, or global P4 irrelevance."
+    - "The task-local conservative product control is a current-source-derived X_OCC or adopted source extension."
+    - "A factor on im(U) is automatically a canonical or unique factor on all D_source."
+    - "A same-reduct split-label control is a current-source nonfactorization witness without an independently sourced R."
+    - "A coefficient or lawful-reduction change remains inside an honest conservative U-fibre."
+    - "The P4-T01 source-principal polynomial is a physical causal cone, response, Lorentzian metric, or g_eff."
+    - "The current X_OCC obstruction proves no future proposal-only extension can exist."
+    - "Canonical ontology edit, source-law adoption, EqSrc assignment, M_src adoption, or response-bridge construction."
+    - "D7 reevaluation, B2 action, P4-T02 completion, or P4-T03 unlock."
+    - "Physical probability, occurrence, clock, causality, sector universality, conformal geometry, scale, or g_eff."
+    - "Matter coupling, Einstein equations, benchmark promotion, Gate Chair verdict, completed derivation, publication, push, or external action."
+    - "Global no-go, global theory rejection, or future source-extension impossibility."
+  summary: "This child establishes one current-source combined-extension typing/provenance obstruction and conditional source-principal mathematics only."
+
+conflict_risk_note:
+  blocking_conflict_count: 0
+  anticipated_parent_synthesis_conflict_count: 0
+  science_conflict: false
+  predecessor_result_conflict: false
+  authority_conflict: false
+  unresolved_conflict_count: 0
+  decisive_result_identity: "current_source_combined_extension_typing_or_provenance_obstruction"
+  likely_parent_convergence: "X_OCC fails before U and R; conditional image factorization and exact operator/reduction controls remain valid."
+  narrow_codomain_risk: "Y_PS is source-principal only and must not be broadened to empirical response or physical causal geometry."
+  factorization_scope_risk: "Parent fusion must not convert the proposal-only conservative product control into a theorem about all lawful or future occurrence extensions."
+  resolution_required_from_parent: "Compare the independent philosophy child; preserve any semantic or authority qualifications and resolve a conflict only if that child identifies an earlier current-source primitive than X_OCC."
+
+conflict_resolution_revision:
+  round: 1
+  revision_type: "identity_only"
+  canonical_obstruction_id: "OB-V22-P4T02-B2-CURRENT-SOURCE-COMBINED-OCCURRENCE-EXTENSION-TYPING-PROVENANCE-001"
+  peer_prior_alias: "OB-V22-P4T02-B2-CURRENT-SOURCE-X-OCC-TYPING-PROVENANCE-001"
+  convergence: "Both child analyses identify the same X_OCC-first current-source typing/provenance obstruction; the Physicist-Mathematician canonical ID is retained and the peer string is recorded only as a prior alias."
+  unresolved_conflict_count: 0
+  science_changed: false
+  result_type_changed: false
+  first_failed_primitive_changed: false
+  formal_counts_changed: false
+  preserved_freezes_changed: false
+  literal_no_delta_rows_changed: false
+  authority_changed: false
+
+local_validation:
+  strict_unique_key_yaml_parse: "PASS"
+  repository_subset_types_only: "PASS"
+  source_hash_verification: "PASS"
+  registered_source_row_hash_verification: "PASS"
+  exclusive_result_count_1: "PASS"
+  permitted_result_type_exact: "PASS"
+  formal_domain_count_10: "PASS"
+  formal_object_count_11: "PASS"
+  formal_map_count_10: "PASS"
+  theorem_target_count_6: "PASS"
+  proof_obligation_count_16: "PASS"
+  failure_branch_count_15: "PASS"
+  preserved_freeze_count_9: "PASS"
+  distance_to_gr_row_count_14: "PASS"
+  literal_no_delta_count_14: "PASS"
+  exact_control_count_6: "PASS"
+  new_mathematical_payload_count_8: "PASS"
+  peer_child_file_not_inspected: true
+  parent_validator_or_checkpoint_not_run: true
+  whitespace_and_single_final_newline: "PASS"
+
+child_result:
+  result_type: "current_source_combined_extension_typing_or_provenance_obstruction"
+  result: "first_failed_primitive_X_OCC_before_U_or_R"
+  result_count: 1
+  obstruction_id: "OB-V22-P4T02-B2-CURRENT-SOURCE-COMBINED-OCCURRENCE-EXTENSION-TYPING-PROVENANCE-001"
+  exact_scope: "Independent Physicist-Mathematician child analysis for AJ-RT-20260816-007-001 only."
+  blocking_conflict: false
+  successor_selected_or_executed: false

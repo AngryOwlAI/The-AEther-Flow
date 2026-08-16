@@ -1,0 +1,57 @@
+schema_id: "v22_p4_t02_b2_current_source_occurrence_admissibility_p4_relevance_factorization_controls_v1"
+status: "draft_control"
+authority: "science_draft"
+task_id: "RT-20260816-007"
+job_id: "AJ-RT-20260816-007-001"
+packet_id: "PKT-V22-P4T02-B2-CURRENT-SOURCE-OCCURRENCE-ADMISSIBILITY-P4-RELEVANCE-FACTORIZATION-AUDIT-V1"
+control_count: 6
+controls:
+  - control_id: "CTRL-01-IMAGE-FACTORIZATION"
+    control_type: "finite_factorization_control"
+    setup: "Let X={x0,x1,x2}, D={d0,d1,d2}, U(x0)=U(x1)=d0, U(x2)=d1, and Y={y0,y1}."
+    positive_branch: "R(x0)=R(x1)=y0 and R(x2)=y1 is constant on U-fibres, so the unique image factor is f(d0)=y0 and f(d1)=y1."
+    falsifier: "Changing only R(x1) to y1 makes R nonconstant on U^{-1}(d0), so no factor on im(U) exists."
+    status: "PASS"
+  - control_id: "CTRL-02-OFF-IMAGE-UNIQUENESS"
+    control_type: "scope_control"
+    setup: "The image of U is {d0,d1}, while d2 is not reached."
+    positive_branch: "The image factor is unique on {d0,d1}."
+    falsifier: "Assigning either y0 or y1 at d2 gives two distinct all-D extensions; surjectivity or independently fixed off-image data is required for all-D uniqueness, subject to the singleton-Y exception."
+    status: "PASS"
+  - control_id: "CTRL-03-CONSERVATIVE-PRODUCT"
+    control_type: "source_principal_constancy_control"
+    setup: "Use the fixed P4-T01 six-channel datum D and three disclosed occurrence decorations e0,e1,e2 that change no source equation, leading coefficient, constraint, gauge, redundancy, or reduced quotient."
+    positive_branch: "For every e, sigma_{D,e}=sigma_D and P_{D,e}=P_D; the recomputation factors as Prin after the projection U(D,e)=D."
+    falsifier: "This is a conditional product construction only. It does not prove that current source ontology derives the product carrier, the occurrence roots, or the conservative-extension law."
+    status: "PASS_CONDITIONAL"
+  - control_id: "CTRL-04-COEFFICIENT-ENTRY"
+    control_type: "operator_change_falsifier"
+    setup: "At k=(1,2,3,5), the fixed P4-T01 vectors give P_D(k)=60480. Replace X1=(1,1,0,0) by X1'=(1,2,0,0)."
+    positive_branch: "The changed product is P_{D'}(k)=100800, so principal data changes exactly when the source-law coefficient datum changes."
+    falsifier: "Calling D and D' one U-reduct would make U forget principal-law data and would not be a conservative occurrence fibre."
+    status: "PASS"
+  - control_id: "CTRL-05-REDUCTION-ENTRY"
+    control_type: "lawful_reduction_falsifier"
+    setup: "Hold unreduced labels fixed but let an extension introduce a nonzero constraint, gauge, or redundancy direction that removes one reduced channel."
+    positive_branch: "The reduced determinant changes from degree six to degree five, so the lawful reduced source-principal object changes."
+    falsifier: "Such an extension is outside the declared conservative subcategory even if its human-facing occurrence label is unchanged."
+    status: "PASS"
+  - control_id: "CTRL-06-NONSELECTION-INDEPENDENCE"
+    control_type: "logical_independence_control"
+    setup: "Use two unselected roots e0,e1 over the same reduct d."
+    positive_branch: "A constant relevance map yields nonselection plus factorization; a separating relevance map yields the same nonselection plus nonfactorization."
+    falsifier: "Root multiplicity, underdetermination, or nonselection by itself determines neither P4 source-principal relevance nor irrelevance."
+    status: "PASS"
+model:
+  path: "research_control/tasks/RT-20260816-007/artifacts/v22_p4_t02_b2_current_source_occurrence_admissibility_p4_relevance_factorization_model.py"
+  exact_check_count: 24
+  required_pass_count: 24
+authority_limits:
+  controls_construct_current_source_X_OCC: false
+  controls_construct_current_source_U: false
+  controls_construct_current_source_R: false
+  controls_prove_physical_p4_irrelevance: false
+  controls_create_response_bridge: false
+  controls_adopt_source_law: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
