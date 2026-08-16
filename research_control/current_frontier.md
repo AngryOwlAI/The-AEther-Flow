@@ -3,14 +3,14 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260816-011` and `handoff-1054`.
+`RT-20260816-012` and `handoff-1055`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-16T20:36:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"f867f8a8db4a584b23f01766356acf5ef0f301f7","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"8e3ce597497485c5bc3dde10da20ca9a713f850f0ee3e01aaac92435584f9734"},{"path":"research_control/handoffs/handoff-1054.yaml","sha256":"1b327041d575a4358d8cf0b7b31ba954a793b77da9905971b6fa38b3c85b9cfe"},{"path":"research_control/program_state.yaml","sha256":"54aad3f96b71903f2b4b168244e3b70bd09bb55cd8afacd1eefb3be1d0125840"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"ca312bc918efd267d90dceaae49b6b94d09b2055875df07ce8e5bc26c10e1365","source_path_count":"12","task_count":"1311"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-16T22:28:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"6dc67580d2b7692d01e23c5061fadc907d8fa97b","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"8eecb5655f888dd3e34580fb494e536d1cc3aea42fdae0ef284853116c26d5ef"},{"path":"research_control/handoffs/handoff-1055.yaml","sha256":"bcd07f8780b740ecafb92a8852d0b0098f3fe304b9343c1a9cfa776f9363fca2"},{"path":"research_control/program_state.yaml","sha256":"0ba0b5c5441050cd91b2cb7cf120e1bdb91eabe2d7fb6408c6ab28b1a9330bbd"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"d883ce0701e45c223afffd628a4bd776002bacb0f2a28362903ee7e6b77d9ff6","source_path_count":"12","task_count":"1312"} -->
 
 ## Generated-Report Provenance
 
@@ -19,11 +19,11 @@ tracked authority files govern.
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `current_frontier` |
-| Source commit | `f867f8a8db4a584b23f01766356acf5ef0f301f7` |
-| Source-derived generation time | `2026-08-16T20:36:00Z` |
-| Tracked task count | 1311 |
+| Source commit | `6dc67580d2b7692d01e23c5061fadc907d8fa97b` |
+| Source-derived generation time | `2026-08-16T22:28:00Z` |
+| Tracked task count | 1312 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `ca312bc918efd267d90dceaae49b6b94d09b2055875df07ce8e5bc26c10e1365` |
+| Source manifest SHA-256 | `d883ce0701e45c223afffd628a4bd776002bacb0f2a28362903ee7e6b77d9ff6` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -31,9 +31,9 @@ tracked authority files govern.
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `8e3ce597497485c5bc3dde10da20ca9a713f850f0ee3e01aaac92435584f9734`
-- `research_control/handoffs/handoff-1054.yaml`: `1b327041d575a4358d8cf0b7b31ba954a793b77da9905971b6fa38b3c85b9cfe`
-- `research_control/program_state.yaml`: `54aad3f96b71903f2b4b168244e3b70bd09bb55cd8afacd1eefb3be1d0125840`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `8eecb5655f888dd3e34580fb494e536d1cc3aea42fdae0ef284853116c26d5ef`
+- `research_control/handoffs/handoff-1055.yaml`: `bcd07f8780b740ecafb92a8852d0b0098f3fe304b9343c1a9cfa776f9363fca2`
+- `research_control/program_state.yaml`: `0ba0b5c5441050cd91b2cb7cf120e1bdb91eabe2d7fb6408c6ab28b1a9330bbd`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_current_frontier.py`: `62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6`
@@ -47,15 +47,15 @@ or claim-promotion authority.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260816-011` |
-| Latest handoff ID | `handoff-1054` |
-| Current status | `v22_p4_t02_idempotent_equation_decoration_smuggling_audit_source_pure_as_written_refuter_stress_checkpoint_pending` |
+| Active task ID | `RT-20260816-012` |
+| Latest handoff ID | `handoff-1055` |
+| Current status | `v22_p4_t02_idempotent_equation_decoration_scoped_obstruction_theoretical_selector_checkpoint_pending` |
 | V16 completed | false |
 | Current route family | audit or review (scientific audit) |
 | Target derivation milestone | `effective_metric_g_eff` |
 | Current burden | `g_eff` |
-| Required next authority | One governed checkpoint for AJ-RT-20260816-011-001, then one separately admitted Refuter stress of the unchanged proposal-only candidate. |
-| Next recommended action | Run the single governed checkpoint for AJ-RT-20260816-011-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-IDEMPOTENT-EQUATION-DECORATION-NULL-SEMANTICS-RANK-TOPOLOGY-REFUTER-STRESS-V1. The stress must test null-versus-identity natural selection, semantic relabeling, inert-expansion dependence, continuous-topology fragility, and any projector or quotient descendant use. Do not execute the stress before checkpoint or authorize repair, adoption, occurrence, probability, P4 relevance or irrelevance, D7, B2, P4-T03, physical, empirical, Gate, promotion, publication, push, external action, future impossibility, or global no-go. |
+| Required next authority | One governed checkpoint for AJ-RT-20260816-012-001, then one separately admitted theoretical-continuation selector in a fresh invocation. |
+| Next recommended action | Run the single governed checkpoint for AJ-RT-20260816-012-001. Only after it commits may a fresh invocation execute one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-IDEMPOTENT-EQUATION-DECORATION-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1. Do not execute that selector in this invocation or authorize candidate repair, source-law or ontology adoption, occurrence, probability, projector or quotient bridge adoption, D7, B2, P4-T03, physical or empirical claims, Gate action, promotion, publication, push, external action, future impossibility, or global no-go. |
 
 ## Active-State Bifurcation
 
@@ -66,9 +66,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260816-011` |
-| Latest research handoff ID | `handoff-1054` |
-| Latest research next action | Run the single governed checkpoint for AJ-RT-20260816-011-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-IDEMPOTENT-EQUATION-DECORATION-NULL-SEMANTICS-RANK-TOPOLOGY-REFUTER-STRESS-V1. The stress must test null-versus-identity natural selection, semantic relabeling, inert-expansion dependence, continuous-topology fragility, and any projector or quotient descendant use. Do not execute the stress before checkpoint or authorize repair, adoption, occurrence, probability, P4 relevance or irrelevance, D7, B2, P4-T03, physical, empirical, Gate, promotion, publication, push, external action, future impossibility, or global no-go. |
+| Latest research task ID | `RT-20260816-012` |
+| Latest research handoff ID | `handoff-1055` |
+| Latest research next action | Run the single governed checkpoint for AJ-RT-20260816-012-001. Only after it commits may a fresh invocation execute one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-IDEMPOTENT-EQUATION-DECORATION-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1. Do not execute that selector in this invocation or authorize candidate repair, source-law or ontology adoption, occurrence, probability, projector or quotient bridge adoption, D7, B2, P4-T03, physical or empirical claims, Gate action, promotion, publication, push, external action, future impossibility, or global no-go. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -101,12 +101,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260816-011/00_TASK.yaml`.
-- Active task objective: Execute PKT-V22-P4T02-B2-IDEMPOTENT-EQUATION-DECORATION-COMBINED-EXTENSION-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1 by holding the complete RT009 construction fixed and auditing its proposal roots, equation-frame arrow provenance, idempotency preload, null-attachment semantics, same-reduct qualification, rank-control scope, and projector or quotient firewall for hidden target, desired-output, empirical, physical, or workflow-authority imports; preserve correct conditional mathematics and all nine freezes, and return one decisive permitted audit verdict.
-- Latest handoff path: `research_control/handoffs/handoff-1054.yaml`.
-- Latest handoff summary: RT-20260816-011 returns exactly source_pure_as_written at narrow disclosed-syntax scope. The conditional algebraic sublayer is preserved, but occurrence, admissibility, and null-attachment meaning remain proposal-only new-ontology-primitive debt. Full-frame naturality leaves zero and identity, semantic relabeling leaves the algebra unchanged, and rank distance is not perturbative robustness. Nine freezes and fourteen Distance-to-GR rows remain unchanged.
+- Active task path: `research_control/tasks/RT-20260816-012/00_TASK.yaml`.
+- Active task objective: Execute PKT-V22-P4T02-B2-IDEMPOTENT-EQUATION-DECORATION-NULL-SEMANTICS-RANK-TOPOLOGY-REFUTER-STRESS-V1 by holding the RT009 construction and RT011 narrow source-purity audit fixed, then testing null-versus-identity natural selection, semantic relabeling, inert-expansion force, exact and approximate topology, full-GL(6) reduction, and projector or quotient descendant factorization; preserve correct conditional mathematics and all nine inherited freezes, and return one decisive Refuter class.
+- Latest handoff path: `research_control/handoffs/handoff-1055.yaml`.
+- Latest handoff summary: RT-20260816-012 returns exactly scoped_obstruction for the unchanged proposal-only idempotent equation-decoration candidate. Full-GL(6) naturality admits both zero and identity, complement symmetry exchanges them, semantic relabeling changes no algebra, inert descendants have no bridge force, and every endpoint-distinguishing descendant requires a new P-reading source law. Exact rank isolation is algebraic rather than a source perturbation law. RT009 and RT011 remain fixed; nine inherited freezes plus one candidate-local freeze are active; all fourteen Distance-to-GR rows remain no_delta.
 - Current route family: audit or review (scientific audit).
-- Next recommended action: Run the single governed checkpoint for AJ-RT-20260816-011-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-IDEMPOTENT-EQUATION-DECORATION-NULL-SEMANTICS-RANK-TOPOLOGY-REFUTER-STRESS-V1. The stress must test null-versus-identity natural selection, semantic relabeling, inert-expansion dependence, continuous-topology fragility, and any projector or quotient descendant use. Do not execute the stress before checkpoint or authorize repair, adoption, occurrence, probability, P4 relevance or irrelevance, D7, B2, P4-T03, physical, empirical, Gate, promotion, publication, push, external action, future impossibility, or global no-go.
+- Next recommended action: Run the single governed checkpoint for AJ-RT-20260816-012-001. Only after it commits may a fresh invocation execute one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-IDEMPOTENT-EQUATION-DECORATION-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1. Do not execute that selector in this invocation or authorize candidate repair, source-law or ontology adoption, occurrence, probability, projector or quotient bridge adoption, D7, B2, P4-T03, physical or empirical claims, Gate action, promotion, publication, push, external action, future impossibility, or global no-go.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -336,7 +336,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the single governed checkpoint for AJ-RT-20260816-011-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-IDEMPOTENT-EQUATION-DECORATION-NULL-SEMANTICS-RANK-TOPOLOGY-REFUTER-STRESS-V1. The stress must test null-versus-identity natural selection, semantic relabeling, inert-expansion dependence, continuous-topology fragility, and any projector or quotient descendant use. Do not execute the stress before checkpoint or authorize repair, adoption, occurrence, probability, P4 relevance or irrelevance, D7, B2, P4-T03, physical, empirical, Gate, promotion, publication, push, external action, future impossibility, or global no-go.
+Run the single governed checkpoint for AJ-RT-20260816-012-001. Only after it commits may a fresh invocation execute one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-IDEMPOTENT-EQUATION-DECORATION-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1. Do not execute that selector in this invocation or authorize candidate repair, source-law or ontology adoption, occurrence, probability, projector or quotient bridge adoption, D7, B2, P4-T03, physical or empirical claims, Gate action, promotion, publication, push, external action, future impossibility, or global no-go.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -364,9 +364,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260816-011`;
-- latest handoff: `handoff-1054`;
-- current status: `v22_p4_t02_idempotent_equation_decoration_smuggling_audit_source_pure_as_written_refuter_stress_checkpoint_pending`;
+- active task: `RT-20260816-012`;
+- latest handoff: `handoff-1055`;
+- current status: `v22_p4_t02_idempotent_equation_decoration_scoped_obstruction_theoretical_selector_checkpoint_pending`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -376,8 +376,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-1054.yaml`
-- `research_control/tasks/RT-20260816-011/00_TASK.yaml`
+- `research_control/handoffs/handoff-1055.yaml`
+- `research_control/tasks/RT-20260816-012/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -393,7 +393,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 1054*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 1055*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

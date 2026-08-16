@@ -154,6 +154,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-V1` `research_control/tasks/RT-20260812-002/artifacts/parent_fusion_notes_p4_t02_b2_finite_typed_presentation_admission_bridge_witness.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-IDEMPOTENT-EQUATION-DECORATION-COMBINED-EXTENSION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260816-011/artifacts/parent_fusion_notes_p4_t02_b2_idempotent_equation_decoration_combined_extension_smuggling_audit.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-IDEMPOTENT-EQUATION-DECORATION-NULL-SEMANTICS-RANK-TOPOLOGY-REFUTER-STRESS-V1` `research_control/tasks/RT-20260816-012/artifacts/parent_fusion_notes_p4_t02_b2_idempotent_equation_decoration_null_semantics_rank_topology_refuter_stress.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-V1` `research_control/tasks/RT-20260814-004/artifacts/parent_fusion_notes_p4_t02_b2_kstar_localization_bridge_irrelevance.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW-V1` `research_control/tasks/RT-20260816-009/artifacts/parent_fusion_notes_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-017/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge_general_rank_post_repair_smuggling_audit.md`
@@ -654,6 +655,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/v22_p4_t02_b2_fallback_descriptor_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-OR-PROVENANCE-OBSTRUCTION-V1` `research_control/tasks/RT-20260812-002/artifacts/v22_p4_t02_b2_finite_typed_presentation_admission_bridge_witness_or_provenance_obstruction_v1.tex`
 - `TEX-V22-P4-T02-B2-IDEMPOTENT-EQUATION-DECORATION-COMBINED-EXTENSION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260816-011/artifacts/v22_p4_t02_b2_idempotent_equation_decoration_combined_extension_smuggling_audit_v1.tex`
+- `TEX-V22-P4-T02-B2-IDEMPOTENT-EQUATION-DECORATION-NULL-SEMANTICS-RANK-TOPOLOGY-REFUTER-STRESS-V1` `research_control/tasks/RT-20260816-012/artifacts/v22_p4_t02_b2_idempotent_equation_decoration_null_semantics_rank_topology_refuter_stress_v1.tex`
 - `TEX-V22-P4-T02-B2-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-THEOREM-V1` `research_control/tasks/RT-20260814-004/artifacts/v22_p4_t02_b2_kstar_localization_bridge_irrelevance_theorem_v1.tex`
 - `TEX-V22-P4-T02-B2-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW-V1` `research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_v1.tex`
 - `TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-017/artifacts/v22_p4_t02_b2_oriented_matroid_bridge_general_rank_post_repair_smuggling_audit_v1.tex`
@@ -1473,6 +1475,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-finite-typed-presentation-admission-bridge-witness-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-IDEMPOTENT-EQUATION-DECORATION-COMBINED-EXTENSION-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-idempotent-equation-decoration-combined-extension-smuggling-audit-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-IDEMPOTENT-EQUATION-DECORATION-NULL-SEMANTICS-RANK-TOPOLOGY-REFUTER-STRESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-idempotent-equation-decoration-null-semantics-rank-topology-refuter-stress-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-kstar-localization-bridge-irrelevance-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-minimal-proposal-only-combined-occurrence-extension-law-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-oriented-matroid-bridge-general-rank-post-repair-smuggling-audit-v1.md`
@@ -2006,6 +2009,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P4-T02-B2-FALLBACK-DESCRIPTOR-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-fallback-descriptor-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-OR-PROVENANCE-OBSTRUCTION-V1` `wiki/tex/tex-v22-p4-t02-b2-finite-typed-presentation-admission-bridge-witness-or-provenance-obstruction-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-IDEMPOTENT-EQUATION-DECORATION-COMBINED-EXTENSION-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-idempotent-equation-decoration-combined-extension-smuggling-audit-v1.md`
+- `WIKI-TEX-V22-P4-T02-B2-IDEMPOTENT-EQUATION-DECORATION-NULL-SEMANTICS-RANK-TOPOLOGY-REFUTER-STRESS-V1` `wiki/tex/tex-v22-p4-t02-b2-idempotent-equation-decoration-null-semantics-rank-topology-refuter-stress-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-THEOREM-V1` `wiki/tex/tex-v22-p4-t02-b2-kstar-localization-bridge-irrelevance-theorem-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW-V1` `wiki/tex/tex-v22-p4-t02-b2-minimal-proposal-only-combined-occurrence-extension-law-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-oriented-matroid-bridge-general-rank-post-repair-smuggling-audit-v1.md`
