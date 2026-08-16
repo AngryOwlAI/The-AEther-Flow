@@ -1,0 +1,357 @@
+job_id: "AJ-RT-20260816-002-001"
+task_id: "RT-20260816-002"
+decision_id: "DDR-20260816-002"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260816-002"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+created_at: "2026-08-16T09:03:37Z"
+started_at: "2026-08-16T09:03:37Z"
+completed_at: "2026-08-16T09:03:37Z"
+completion_path: "research_control/tasks/RT-20260816-002/jobs/completions/AJC-AJ-RT-20260816-002-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal, explicit user permission, and exact tracked checkpoint blocker authorize this distinct project-system recovery only."
+objective: "Preserve the repaired handoff-1044 Markdown bytes and cumulative RT001 scientific transaction, bind the failed staged blob and checkpoint blocker, synchronize and revalidate the cumulative transaction, and invoke at most one fresh governed checkpoint without replaying the consumed RT001 checkpoint or executing the Smuggling Auditor."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system checkpoint recovery only; no derivation milestone advances."
+route_label: "recover_rt001_handoff_1044_blank_eof_checkpoint_v1"
+route_reason: "The single RT001 checkpoint failed the correct staged whitespace gate on one handoff-1044 blank EOF, restored the index, created no commit, and explicitly requires one distinct Process Integrity Auditor recovery."
+source_head: "50f4d83d130d402b9633ffc6232540aaefb0804e"
+source_tree: "0256dd3fd5fb8ab6668c8c8b7efdbb29cde16880"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+recovery_for_plan_task_id: "P4-T02"
+next_plan_task_id: "P4-T02"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet preserves an already repaired handoff and recovers checkpoint eligibility."
+    - "The RT001 proposal-only law, eight freezes, fourteen no-delta rows, selected Smuggling Auditor, and every downstream block remain unchanged."
+  materiality_basis: "Binds one exact failed staged blob and tracked checkpoint blocker, proves restored index and repaired-byte preservation, and supplies a distinct atomic checkpoint authority."
+  source_basis:
+    - "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+    - "research_control/handoffs/handoff-1044.yaml"
+    - "research_control/handoffs/handoff-1044.md"
+    - "research_control/tasks/RT-20260816-001/artifacts/checkpoint_blocker_rt001_handoff_1044_blank_eof_v1.yaml"
+    - "research_control/tasks/RT-20260816-001/jobs/completions/AJC-AJ-RT-20260816-001-001.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260816-002/artifacts/validate_rt001_handoff_1044_blank_eof_checkpoint_recovery.py"
+    - "research_control/tasks/RT-20260816-002/artifacts/rt001_handoff_1044_blank_eof_checkpoint_recovery_receipt.json"
+  project_system_justification: "This is exact nonsemantic checkpoint recovery and control synchronization; it creates no physics payload and executes no Smuggling Auditor."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact failed-blob and checkpoint-blocker recovery receipt"
+      - "one distinct recovery task and handoff"
+      - "one fresh governed cumulative checkpoint"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the failed staged blob retains exactly the recorded blank EOF and hashes"
+      - "the current handoff-1044 Markdown ends with exactly one newline and matches its sealed hash"
+      - "all seven governing RT001 sources match their sealed hashes"
+      - "the prior index is restored and same-AgentJob replay remains prohibited"
+      - "all required project-control gates pass"
+      - "one fresh checkpoint commits before Smuggling Auditor execution"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1044"
+  source_handoff_path: "research_control/handoffs/handoff-1044.yaml"
+  source_handoff_sha256: "3a73c8804ff6568c28296bfaa81ad256a02d79952675046a4c58cac505e13abc"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+checkpoint_recovery:
+  schema_id: "ordinary_route_checkpoint_recovery_v1"
+  status: "active"
+  atomic_checkpoint_required: true
+  source_handoff_id: "handoff-1044"
+  source_handoff_path: "research_control/handoffs/handoff-1044.yaml"
+  source_handoff_sha256: "3a73c8804ff6568c28296bfaa81ad256a02d79952675046a4c58cac505e13abc"
+  prior_job_id: "AJ-RT-20260816-001-001"
+  prior_task_id: "RT-20260816-001"
+  blocker_path: "research_control/tasks/RT-20260816-002/artifacts/active_rt001_checkpoint_recovery_blocker.yaml"
+  blocker_sha256: "c3355b455dd1475e2568dabc57b6312a588896b5f5752b7487719a6152c3e8e4"
+  prior_completion_checkpoint_status: "BLOCKED_CHECKPOINT_STAGED_GIT_DIFF_HANDOFF_1044_BLANK_EOF_REPAIRED_FRESH_CHECKPOINT_REQUIRED"
+  recovery_job_id: "AJ-RT-20260816-002-001"
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1256
+    relationship_row_count: 6452
+    semantic_row_count: 1256
+    vault_row_count: 1256
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  before_local_retrieval_status: "PASS"
+  after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-IMPROVE-PROJECT-SYSTEM --json"
+      query_type: "lookup"
+      query_text: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      returned_object_ids:
+        - "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+  canonical_inspections:
+    - object_id: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/improve-project-system/SKILL.md"
+      source_hash: "4009aafd81dedf8ecd74a346c6fb2ee52d5333bef27d482aa998511ab3ff25d2"
+  authority_note: "Tracked registered sources and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval evidence only and not authority."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-1044.yaml"
+  - "research_control/handoffs/handoff-1044.md"
+  - "research_control/tasks/RT-20260816-001/**"
+  - "research_control/tasks/RT-20260816-002/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-1044.yaml"
+  - "research_control/handoffs/handoff-1044.md"
+  - "research_control/handoffs/handoff-1045.yaml"
+  - "research_control/handoffs/handoff-1045.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260816-001/**"
+  - "research_control/tasks/RT-20260816-002/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "scripts/research_control/**"
+  - "scripts/project_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+
+allowed_source_classes:
+  - "exact_checkpoint_failure_evidence"
+  - "exact_repaired_handoff_preservation"
+  - "control_state"
+  - "registry"
+  - "execution_role_contract"
+  - "task_control_record"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+  - "scientific_payload_preservation_evidence"
+
+forbidden_source_classes:
+  - "predecessor_science_reexecution_or_rewrite"
+  - "consumed_checkpoint_replay"
+  - "validator_test_schema_skill_or_base_role_semantics_change"
+  - "selected_smuggling_auditor_execution_before_checkpoint"
+  - "canonical_ontology_write"
+  - "source_law_adoption"
+  - "physics_claim_or_interpretation_promotion"
+  - "physical_probability_or_realized_occurrence_claim"
+  - "D7_adequacy_or_B2_action"
+  - "P4_T03_unlock"
+  - "gate_chair_verdict"
+  - "benchmark_result_or_promotion"
+  - "proof_authority"
+  - "publication_push_or_external_action_authority"
+  - "global_no_go_claim"
+  - "completed_derivation_claim"
+  - "generated_derivative_authority"
+
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260816-002/artifacts/validate_rt001_handoff_1044_blank_eof_checkpoint_recovery.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260816-002/artifacts/validate_rt001_handoff_1044_blank_eof_checkpoint_recovery.py --check --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/project_control/validate_claim_language.py --changed --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --check"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --check"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --check"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --check"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260816-002-001 --json-summary"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --paths research_control/tasks/RT-20260816-002 research_control/handoffs/handoff-1045.yaml research_control/handoffs/handoff-1045.md research_control/program_state.yaml registries/AGENT_JOB_REGISTRY.csv registries/CLAIM_BOUNDARY_REGISTRY.csv registries/DIRECTOR_DECISION_REGISTRY.csv registries/RESEARCH_TASK_REGISTRY.csv registries/ROLE_EXECUTION_REGISTRY.csv"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260816-002-001 --planner-validation"
+
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "checkpoint_recovery"
+  - "task_local_rt001_handoff_1044_blank_eof_recovery"
+  - "memory_sync"
+  - "memory_core"
+  - "render_current_frontier_check"
+  - "task_index_check"
+  - "compact_current_frontier_check"
+  - "dependency_graph_freshness"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "continue_research_resolution"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260816-002/artifacts/validate_rt001_handoff_1044_blank_eof_checkpoint_recovery.py"
+  - "research_control/tasks/RT-20260816-002/artifacts/rt001_handoff_1044_blank_eof_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260816-002/artifacts/active_rt001_checkpoint_recovery_blocker.yaml"
+  - "research_control/tasks/RT-20260816-002/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260816-002/jobs/completions/AJC-AJ-RT-20260816-002-001.yaml"
+  - "research_control/handoffs/handoff-1045.yaml"
+  - "research_control/handoffs/handoff-1045.md"
+  - "research_control/program_state.yaml"
+
+claim_boundary: "CB-V22-P4-T02-RT001-HANDOFF-1044-BLANK-EOF-CHECKPOINT-RECOVERY-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260816-002-001"
+completion_id: "AJC-AJ-RT-20260816-002-001"

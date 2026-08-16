@@ -172,6 +172,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-REFUTER-SELECTION-V1` `research_control/tasks/RT-20260810-009/artifacts/parent_fusion_notes_p4_t02_b2_post_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-SIGNED-CUBIC-VIABILITY-REFUTER-SELECTION-V1` `research_control/tasks/RT-20260811-006/artifacts/parent_fusion_notes_p4_t02_b2_post_signed_cubic_viability_refuter_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-SELECTION-V1` `research_control/tasks/RT-20260811-010/artifacts/parent_fusion_notes_p4_t02_b2_post_source_law_space_robust_invariance_refuter_selector.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-V1` `research_control/tasks/RT-20260816-001/artifacts/parent_fusion_notes_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `research_control/tasks/RT-20260809-020/artifacts/parent_fusion_notes_p4_t02_b2_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-V1` `research_control/tasks/RT-20260811-005/artifacts/parent_fusion_notes_p4_t02_b2_signed_cubic_viability_selector_refuter_stress.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-004/artifacts/parent_fusion_notes_p4_t02_b2_signed_cubic_viability_selector_smuggling_audit.md`
@@ -664,6 +665,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-POST-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-009/artifacts/v22_p4_t02_b2_post_refuter_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-006/artifacts/v22_p4_t02_b2_post_signed_cubic_viability_refuter_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260811-010/artifacts/v22_p4_t02_b2_post_source_law_space_robust_invariance_refuter_route_selection_v1.tex`
+- `TEX-V22-P4-T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-EXTENSION-V1` `research_control/tasks/RT-20260816-001/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_extension_v1.tex`
 - `TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-V1` `research_control/tasks/RT-20260811-005/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_refuter_stress_v1.tex`
 - `TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260811-004/artifacts/v22_p4_t02_b2_signed_cubic_viability_selector_source_extension_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1` `research_control/tasks/RT-20260815-003/artifacts/v22_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel_v1.tex`
@@ -1475,6 +1477,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-REFUTER-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-refuter-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-SIGNED-CUBIC-VIABILITY-REFUTER-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-signed-cubic-viability-refuter-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-source-law-space-robust-invariance-refuter-selection-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-proposal-only-measurable-fiber-occurrence-law-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-selection-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-signed-cubic-viability-selector-refuter-stress-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-SIGNED-CUBIC-VIABILITY-SELECTOR-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-signed-cubic-viability-selector-smuggling-audit-v1.md`
@@ -2000,6 +2003,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P4-T02-B2-POST-REFUTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-refuter-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-SIGNED-CUBIC-VIABILITY-REFUTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-signed-cubic-viability-refuter-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-REFUTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-source-law-space-robust-invariance-refuter-route-selection-v1.md`
+- `WIKI-TEX-V22-P4-T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-EXTENSION-V1` `wiki/tex/tex-v22-p4-t02-b2-proposal-only-measurable-fiber-occurrence-law-extension-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-REFUTER-STRESS-V1` `wiki/tex/tex-v22-p4-t02-b2-signed-cubic-viability-selector-refuter-stress-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-signed-cubic-viability-selector-source-extension-smuggling-audit-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1` `wiki/tex/tex-v22-p4-t02-b2-source-derived-occurrence-admissibility-descent-kernel-v1.md`

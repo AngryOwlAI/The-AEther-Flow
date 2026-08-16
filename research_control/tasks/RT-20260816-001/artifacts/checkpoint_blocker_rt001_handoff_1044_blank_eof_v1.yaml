@@ -1,0 +1,66 @@
+schema_id: "research_checkpoint_blocker_v1"
+status: "BLOCKED_CHECKPOINT_STAGED_GIT_DIFF_HANDOFF_1044_BLANK_EOF_REPAIRED_FRESH_CHECKPOINT_REQUIRED"
+task_id: "RT-20260816-001"
+job_id: "AJ-RT-20260816-001-001"
+created_at: "2026-08-16T08:39:09Z"
+source_head: "50f4d83d130d402b9633ffc6232540aaefb0804e"
+source_tree: "0256dd3fd5fb8ab6668c8c8b7efdbb29cde16880"
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260816-001-001 --planner-validation"
+checkpoint_invocation_count: 1
+checkpoint_staged: false
+checkpoint_committed: false
+checkpoint_commit: ""
+failure_reason: "planner staged acceptance failed"
+failed_gate_id: "git_diff_check"
+failed_command: "git diff --cached --check"
+failed_command_returncode: 2
+failed_findings:
+  - finding_id: "RT001-HANDOFF-1044-BLANK-EOF"
+    path: "research_control/handoffs/handoff-1044.md"
+    issue: "new blank line at EOF"
+failed_staged_artifact:
+  path: "research_control/handoffs/handoff-1044.md"
+  git_blob_sha1: "4728b015bb142ffc4303e109390767a43763920d"
+  sha256: "b4a587695f806289ed4cf2b1d50a984123516bb7361878848a6466f71b310a4c"
+exact_repair:
+  status: "PASS"
+  action: "Remove only the extra terminal blank line while preserving one final newline."
+  repaired_path: "research_control/handoffs/handoff-1044.md"
+  repaired_sha256: "3630d96ee848f03d9c7ba5a6fbadf898a72fcaed09cd0e8dc9a2428ea427b0b7"
+  git_diff_check: "PASS"
+staged_acceptance:
+  status: "FAIL"
+  tree_sha1: "66c671b23b03f502bfcf72ca21466c403846b3cf"
+  gate_count: 7
+  failed_gate_count: 1
+  failed_gate: "git_diff_check"
+index_restoration:
+  status: "PASS"
+  entry_tree: "66c671b23b03f502bfcf72ca21466c403846b3cf"
+  final_staged_tree: "66c671b23b03f502bfcf72ca21466c403846b3cf"
+  post_execution_tree: "66c671b23b03f502bfcf72ca21466c403846b3cf"
+  restored_tree: "66c671b23b03f502bfcf72ca21466c403846b3cf"
+  restored: true
+operational_receipt:
+  path: ".local/validation-receipts/8afbc6d6c1cc892533a3e7f8e45a1e2fb8243d85d803a1dadc854fe5c9fbe844/RUN-CHECKPOINT-05eb814de8cf8411/receipt.json"
+  sha256: "7bc292e6e5927d8cf907e10897efb71a5d437de296541529a9d753d1deff8a42"
+  tracked_authority: false
+recovery:
+  required: true
+  suggested_role: "process-integrity-auditor@0.1.0"
+  worker_skill: "improve-project-system"
+  strategy_id: "recover_rt001_handoff_1044_blank_eof_checkpoint_v1"
+  objective: "In one distinct bounded recovery AgentJob, preserve the repaired handoff-1044 Markdown bytes and the cumulative RT001 scientific transaction, add this blocker to exact documentation-impact coverage, regenerate affected views, revalidate staged acceptance, and invoke at most one fresh governed checkpoint without executing the Smuggling Auditor successor."
+checkpoint_retry_in_this_job_authorized: false
+preserved_boundaries:
+  scientific_result_changed: false
+  selected_successor_changed: false
+  selected_successor_executed: false
+  distance_to_gr_changed: false
+  source_law_adopted: false
+  physical_probability_claimed: false
+  physics_promotion_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+authority_note: "This blocker is project-system checkpoint evidence only. It does not change the constructed proposal-only mathematics, current-ontology or adoption status, Distance-to-GR burden, Gate or benchmark authority, proof or publication authority, or completed-derivation status."

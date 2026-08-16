@@ -1,0 +1,58 @@
+schema_id: "v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_controls_v1"
+task_id: "RT-20260816-001"
+job_id: "AJ-RT-20260816-001-001"
+packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-EXTENSION-V1"
+status: "PASS"
+authority: "finite_proposal_only_control_evidence"
+control_count: 6
+controls:
+  - control_id: "CTRL-01-CLOP-ENDPOINT-COMPARISON"
+    purpose: "Separate the proved topology-derived Open carrier from the new proposal fiber."
+    construction: "On a connected nonempty source open O, the full-Diff natural open endpoints are empty and O, whereas the disclosed locally constant two-token proposal fiber contains the constant-zero and constant-one sections."
+    exact_result: "The proposal sections are not open subsets and are introduced only through the explicit source-extension typing map."
+    falsifier: "If a proposal section is identified with O or with an open subset without that typed map, FB-03 triggers."
+    passed: true
+  - control_id: "CTRL-02-PAIRED-KERNEL-ROOTS"
+    purpose: "Test whether the carrier and functorial laws select the disclosed kernel root."
+    construction: "Hold F_ext, rho_ext, Adm_ext, complement, and all arrows fixed while comparing p=1/3 with p=2/3."
+    exact_result: "Both normalized natural kernels exist on the same carrier, but K_1/3 differs from K_2/3."
+    falsifier: "Any claim that the carrier alone derives p is refuted by the paired roots."
+    passed: true
+  - control_id: "CTRL-03-TWO-TOKEN-SWAP"
+    purpose: "Separate equivariance from deterministic token selection."
+    construction: "Let the token swap act pointwise by the complement involution c."
+    exact_result: "The pushforward of K_p(x) by c equals K_p(c(x)); for 0<p<1 both orbit states have positive weight."
+    falsifier: "Treating equivariance as selection of token zero or token one triggers FB-07."
+    passed: true
+  - control_id: "CTRL-04-FINITE-COVER-GLUING"
+    purpose: "Check proposal-fiber descent independently of occurrence semantics."
+    construction: "Use locally constant token sections on a finite open cover with equal values on every overlap."
+    exact_result: "Compatible local sections glue uniquely; restriction and complement commute with that gluing, so the pointwise kernel formula is natural on the glued section."
+    falsifier: "Conflicting overlap values fail closed and trigger FB-09 rather than being averaged or selected."
+    passed: true
+  - control_id: "CTRL-05-CIRCULAR-ROOT-REJECTION"
+    purpose: "Enforce the acyclic proposal-root provenance condition."
+    construction: "Predeclare the token set, section functor, p, complement, kernel, generator, arrows, and variation interval before every P4 diagnostic."
+    exact_result: "The construction DAG contains no edge from P4 success, empirical response, target geometry, or a frozen candidate into a law root."
+    falsifier: "Choosing p or an allowed arrow because it preserves a desired P4 output triggers FB-08 or FB-10."
+    passed: true
+  - control_id: "CTRL-06-TV-ROBUSTNESS"
+    purpose: "Bound the disclosed parameter variation without importing a physical norm."
+    construction: "For fixed nonempty section x compare K_p(x) and K_q(x) on the two-state orbit using total variation on the finite proposal fiber."
+    exact_result: "The total-variation distance is exactly abs(p-q); on the empty-open fixed point it is zero."
+    falsifier: "Selecting the variation structure after observing P4 behavior or calling this physical stability triggers FB-11."
+    passed: true
+model_receipt:
+  path: "research_control/tasks/RT-20260816-001/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_model.py"
+  exact_check_count: 19
+  payload_sha256: "b6e24229228d68c8fd73aef7ea9883024899dab3e22c06faa2c38be361656889"
+claim_limits:
+  current_ontology_derivation: false
+  epistemic_root_selection: false
+  realized_occurrence: false
+  physical_probability: false
+  empirical_frequency: false
+  p4_sufficiency: false
+  source_law_adoption: false
+  canonical_ontology_adoption: false
+  physics_promotion: false
