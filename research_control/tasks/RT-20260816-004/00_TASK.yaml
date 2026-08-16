@@ -1,0 +1,77 @@
+validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+task_id: "RT-20260816-004"
+task_type: "project_system_v22_p4_t02_rt003_allowlist_parity_checkpoint_recovery"
+title: "Restore RT003 AgentJob, execution-role, and registry write-allowlist parity"
+task_taxonomy:
+  schema_id: "v21_task_taxonomy_v1"
+  work_kind: "benchmark_or_recovery"
+  milestone: "not_applicable"
+  candidate_family: "rt003_agentjob_execution_role_allowlist_parity"
+  result_kind: "completed_or_precisely_blocked"
+  authority: "project_control"
+  scope: "project_system"
+status: "completed"
+created_at: "2026-08-16T11:10:13Z"
+updated_at: "2026-08-16T11:10:13Z"
+closed_at: "2026-08-16T11:10:13Z"
+parent_task_id: "RT-20260816-003"
+parent_handoff_id: "handoff-1046"
+supersedes_active_routing_task_id: "RT-20260816-003"
+current_decision_id: "DDR-20260816-004"
+current_job_id: "AJ-RT-20260816-004-001"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260816-004"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal, explicit user permission, clean committed RT003 checkpoint, and exact continuation-validator allowlist findings authorize one evidence-unique Process Integrity recovery and one fresh checkpoint."
+implementation_plan:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  plan_phase_id: "P4"
+  plan_task_id: "P4-T02"
+  recovery_for_plan_task_id: "P4-T02"
+  next_plan_task_id: "P4-T02"
+objective: "Preserve the completed RT003 AgentJob, completion, handoff, audit mathematics, verdict, successor, and checkpoint commit; replace only the RT003 execution-role and two registry write-allowlist representations with the immutable AgentJob's exact ordered 18-path contract; prove four-way parity and protected-result preservation; then invoke one fresh governed checkpoint without executing the selected Refuter stress."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system ordered allowlist identity recovery only; no derivation milestone advances."
+route_label: "repair_rt003_agentjob_execution_role_registry_allowlist_parity_v1"
+project_system_change_only: true
+dual_budget_category: "system_bearing"
+primary_budget: "project_system"
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+claim_boundary_id: "CB-V22-P4-T02-RT003-ALLOWLIST-PARITY-CHECKPOINT-RECOVERY-001"
+claim_boundary:
+  allowed_scope: "Restore exact ordered write-allowlist identity among the immutable RT003 AgentJob, corrected RT003 execution-role source, AGENT_JOB registry row, and ROLE_EXECUTION registry row; create task-local recovery evidence and control closure; synchronize standard derivatives; invoke one fresh checkpoint."
+  immutable_predecessor_task: "RT-20260816-003"
+  immutable_predecessor_job: "AJ-RT-20260816-003-001"
+  immutable_predecessor_completion: "AJC-AJ-RT-20260816-003-001"
+  immutable_predecessor_handoff: "handoff-1046"
+  immutable_predecessor_checkpoint_commit: "1aea0cbe89bdc37cf9f9630e51057833360fb18e"
+  corrected_predecessor_role_path: "research_control/tasks/RT-20260816-003/roles/smuggling-auditor@0.2.0--RT-20260816-003.yaml"
+  corrected_registry_row_count: 2
+  expected_allowed_write_path_count: 18
+  predecessor_science_reexecuted: false
+  refuter_stress_executed: false
+  scientific_claims_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+documentation_impact_id: "DI-RT-20260816-004-001"
+completion_id: "AJC-AJ-RT-20260816-004-001"
+output_artifacts:
+  - "research_control/tasks/RT-20260816-004/artifacts/validate_rt003_allowlist_parity_checkpoint_recovery.py"
+  - "research_control/tasks/RT-20260816-004/artifacts/rt003_allowlist_parity_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260816-004/jobs/completions/AJC-AJ-RT-20260816-004-001.yaml"
+  - "research_control/handoffs/handoff-1047.yaml"
+  - "research_control/handoffs/handoff-1047.md"
+closure_status: "rt003_allowlist_parity_recovered_ready_for_fresh_checkpoint"
+summary: "The immutable RT003 AgentJob's exact 18-path contract now matches its corrected execution-role source and both registry rows. RT003 science and its unexecuted Refuter successor remain fixed; one fresh recovery checkpoint remains."
+next_recommended_action: "Invoke one fresh governed checkpoint for AJ-RT-20260816-004-001. Only after it commits may one separately admitted Refuter stress execute."
+project_improvement_signals: []
+notes: "No validator, schema, policy, scientific source, ontology, source law, Distance-to-GR status, promotion, proof, publication, push, external action, or protected authority changes."

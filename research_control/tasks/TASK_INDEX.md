@@ -2,7 +2,7 @@
 
 Generated navigation support only. This index is not task authority, physics proof authority, benchmark authority, Gate Chair authority, or completed-derivation evidence.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-16T10:04:52Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"c5a289a9c331f4a394fc6fbb17b8c6092d779bf4","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"db5dde907d993cd373887ad69ad686aaa3001233f08bc89b1fe6d3e86460c47c"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"8580f08ca80b0bc123e1024a56dcd858db80d8695386158bf4de4cd6e18e9020"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"dc80f6547a7952e3040424ecd6acde61816de1da2eb69e3571b29f74b8ea70ba"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"3a083e5456105ea827a063d5ab91d4bf9211fd9e8e640b1a55a5d47dccbe14dd","source_path_count":"5222","task_count":"1307"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-16T11:10:13Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"1aea0cbe89bdc37cf9f9630e51057833360fb18e","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"3e192d7b5f7e1b779206501e90f5a7fa7a4f08788b5c533b13a521c9d5e96bd4"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"3a2817e80a02ce0653f8a9e72bf039c2ca7beeac6d0776ef14f5efbdbb2c49d2"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"0ba403c5dcfefcb35cf12e814323e62a976b54afcc253349747262e208bb276e"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"c5100b55eb1388e32a0f03ec5b0e5ec804705f0e6099205fa40b734d9962d0b4","source_path_count":"5226","task_count":"1308"} -->
 
 ## Generated-Report Provenance
 
@@ -11,21 +11,21 @@ Generated navigation support only. This index is not task authority, physics pro
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_task_index` |
-| Source commit | `c5a289a9c331f4a394fc6fbb17b8c6092d779bf4` |
-| Source-derived generation time | `2026-08-16T10:04:52Z` |
-| Tracked task count | 1307 |
-| Exact source-path count | 5222 |
-| Source manifest SHA-256 | `3a083e5456105ea827a063d5ab91d4bf9211fd9e8e640b1a55a5d47dccbe14dd` |
+| Source commit | `1aea0cbe89bdc37cf9f9630e51057833360fb18e` |
+| Source-derived generation time | `2026-08-16T11:10:13Z` |
+| Tracked task count | 1308 |
+| Exact source-path count | 5226 |
+| Source manifest SHA-256 | `c5100b55eb1388e32a0f03ec5b0e5ec804705f0e6099205fa40b734d9962d0b4` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `db5dde907d993cd373887ad69ad686aaa3001233f08bc89b1fe6d3e86460c47c`
+- `registries/AGENT_JOB_REGISTRY.csv`: `3e192d7b5f7e1b779206501e90f5a7fa7a4f08788b5c533b13a521c9d5e96bd4`
 - `registries/AGENT_ROLE_REGISTRY.csv`: `847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `8580f08ca80b0bc123e1024a56dcd858db80d8695386158bf4de4cd6e18e9020`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `dc80f6547a7952e3040424ecd6acde61816de1da2eb69e3571b29f74b8ea70ba`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `3a2817e80a02ce0653f8a9e72bf039c2ca7beeac6d0776ef14f5efbdbb2c49d2`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `0ba403c5dcfefcb35cf12e814323e62a976b54afcc253349747262e208bb276e`
 - `research_control/design/task_index_schema_v2.md`: `4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f`
 - `research_control/design/v21_recommendation_backlog.yaml`: `849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f`
 - `research_control/design/v21_task_taxonomy_policy.md`: `7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b`
@@ -41,9 +41,9 @@ or claim-promotion authority.
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `dabf4d00000997699698210fef11787b5199a2e11469c4a7dbc294eab76e3caf`
-- Generated-at source timestamp: `2026-08-16T10:04:52Z`
-- Row count: `1307`
+- Source fingerprint: `56315eb6803d909de4658716410b1e8defc154799a1ed8086b3771feba271e7d`
+- Generated-at source timestamp: `2026-08-16T11:10:13Z`
+- Row count: `1308`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -51,6 +51,7 @@ or claim-promotion authority.
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260816-004|RT-20260816-003|2026-08-16T11:10:13Z|2026-08-16T11:10:13Z|Restore RT003 AgentJob, execution-role, and registry write-allowlist parity|project_system_v22_p4_t02_rt003_allowlist_parity_checkpoint_recovery|benchmark_or_recovery|not_applicable|rt003_agentjob_execution_role_allowlist_parity|completed_or_precisely_blocked|project_control|project_system|explicit|high|completed|none|Project-system ordered allowlist identity recovery only; no derivation milestone advances.|process-integrity-auditor@0.1.0|false|false|2|Invoke one fresh governed checkpoint for AJ-RT-20260816-004-001. Only after it commits may one separately admitted Refuter stress execute.|PASS_PRECHECKPOINT_RECOVERY_READY|research_control/tasks/RT-20260816-004/jobs/completions/AJC-AJ-RT-20260816-004-001.yaml|
 |RT-20260816-003|RT-20260816-002|2026-08-16T10:04:52Z|2026-08-16T10:30:00Z|Audit the proposal-only measurable-fiber occurrence law for hidden target or authority imports|v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_audit|audit_or_review|effective_metric_g_eff|v22_b2_matter_principal_polynomial|audit_verdict_or_precise_repair|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Audit whether the proposal-only measurable-fiber carrier, admissibility, complement, parameter, shared coupling, and occurrence language import or preload the missing source law before any adoption or P4 credit.|smuggling-auditor@0.2.0|false|false|13||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260816-003/jobs/completions/AJC-AJ-RT-20260816-003-001.yaml|
 |RT-20260816-002|RT-20260816-001|2026-08-16T09:03:37Z|2026-08-16T09:03:37Z|Recover the RT001 handoff-1044 blank-EOF checkpoint|project_system_v22_p4_t02_rt001_handoff_1044_blank_eof_checkpoint_recovery|benchmark_or_recovery|not_applicable|handoff_blank_eof_checkpoint_recovery|completed_or_precisely_blocked|project_control|project_system|explicit|high|completed|none|Project-system checkpoint recovery only; no derivation milestone advances.|process-integrity-auditor@0.1.0|false|false|3|Invoke one fresh governed cumulative checkpoint for AJ-RT-20260816-002-001. Only after it commits may one separately admitted Smuggling Auditor packet execute.|PASS_PRECHECKPOINT_RECOVERY_READY|research_control/tasks/RT-20260816-002/jobs/completions/AJC-AJ-RT-20260816-002-001.yaml|
 |RT-20260816-001|RT-20260815-009|2026-08-16T07:20:58Z|2026-08-16T08:39:09Z|Construct or precisely obstruct the proposal-only measurable-fiber occurrence law|v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_extension|formalization_or_theorem|effective_metric_g_eff|v22_b2_proposal_only_measurable_fiber_occurrence_law_extension_v1|theorem_or_precise_obstruction|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Supply or precisely obstruct the missing proposal-side admissibility and occurrence law after the canonical Open carrier has been proved insufficient to select it.|ontology-formalizer@0.2.0|false|false|14||FAIL|research_control/tasks/RT-20260816-001/jobs/completions/AJC-AJ-RT-20260816-001-001.yaml|

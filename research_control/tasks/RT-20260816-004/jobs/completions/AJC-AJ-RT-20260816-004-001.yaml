@@ -1,0 +1,363 @@
+validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+job_id: "AJ-RT-20260816-004-001"
+completion_id: "AJC-AJ-RT-20260816-004-001"
+task_id: "RT-20260816-004"
+task_type: "project_system_v22_p4_t02_rt003_allowlist_parity_checkpoint_recovery"
+decision_id: "DDR-20260816-004"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260816-004"
+status: "completed"
+final_repository_validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+created_at: "2026-08-16T11:10:13Z"
+started_at: "2026-08-16T11:10:13Z"
+completed_at: "2026-08-16T11:10:13Z"
+objective: "Preserve the completed RT003 AgentJob, completion, handoff, scientific artifacts, verdict, successor, and checkpoint commit; replace only the RT003 execution-role and two registry write-allowlist representations with the immutable AgentJob's exact ordered 18-path contract; prove parity; then invoke at most one fresh governed checkpoint without executing the Refuter stress."
+completion_summary: "The immutable RT003 AgentJob now agrees exactly and in order with the corrected RT003 execution-role source plus the AGENT_JOB and ROLE_EXECUTION registry rows. The correction narrows one wildcard to four exact burden-status files. Twenty-one task-local checks preserve the AgentJob, completion, task, decision, manuscript, disposition, fusion notes, and handoff hashes. The Refuter stress remains unexecuted and one fresh recovery checkpoint remains."
+objective_result: "rt003_allowlist_parity_recovered_checkpoint_pending"
+transaction_status: "completed_ready_for_fresh_governed_checkpoint"
+result_disposition: "checkpoint_recovery_completed_checkpoint_pending"
+work_item_status: "recovery_completed"
+checkpoint_commit: "pending_governed_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact four-way RT003 write-allowlist parity repair"
+      - "one task-local parity and preservation receipt"
+      - "one distinct recovery task and handoff"
+      - "one fresh governed checkpoint"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "the immutable RT003 AgentJob remains byte-identical"
+      - "the RT003 role and both registry rows equal the AgentJob's ordered 18-path list"
+      - "all non-allowlist role and registry fields remain exact"
+      - "protected RT003 science, completion, handoff, verdict, and successor remain exact"
+      - "live continuation reports no RT003 allowlist-parity error"
+      - "one fresh checkpoint commits before Refuter execution"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "PASS_PROJECT_SYSTEM"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  ontology_or_source_law_adopted: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS_CHECKPOINT_RECOVERY_BRANCH"
+  source_handoff_id: "handoff-1046"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  guard_outcome: "below_threshold"
+  prerequisite_checkpoint_commit: "1aea0cbe89bdc37cf9f9630e51057833360fb18e"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+allowlist_parity_recovery_result:
+  schema_id: "rt003_allowlist_parity_recovery_result_v1"
+  status: "PASS_RECOVERY_READY_FOR_ATOMIC_CHECKPOINT"
+  source_handoff_id: "handoff-1046"
+  source_handoff_sha256: "55ae7fa9e3ad39b6ab9a9ae630655834ace10c3026816fae357458859a9c8657"
+  prior_task_id: "RT-20260816-003"
+  prior_job_id: "AJ-RT-20260816-003-001"
+  prior_checkpoint_commit: "1aea0cbe89bdc37cf9f9630e51057833360fb18e"
+  immutable_agentjob_sha256: "683e16df5df6f21fcca978ba0cb524edd4c656328e3ee5cc16f72a0d6001d2b1"
+  original_role_sha256: "70f7c77e5d8ddd16df80feb874eadfa85fba752c935f561307fe6df43a5ddbbc"
+  corrected_role_sha256: "aafa43d2b5b26f08f88f13a0691a507e3c74596e81af38da12bb4d5eac5a9738"
+  expected_allowed_write_path_count: 18
+  corrected_representation_count: 3
+  check_count: 21
+  pass_count: 21
+  failure_count: 0
+  permission_broadened: false
+  predecessor_science_reexecuted: false
+  selected_refuter_executed: false
+  fresh_checkpoint_job_id: "AJ-RT-20260816-004-001"
+  fresh_checkpoint_invocation_count: 0
+  fresh_checkpoint_committed: false
+
+artifacts:
+  - path: "research_control/tasks/RT-20260816-004/artifacts/validate_rt003_allowlist_parity_checkpoint_recovery.py"
+    sha256: "05c782b7dc49fb97ff41364e1fdee9b5f3542fafc7ff3796e34358b228368c71"
+    status: "PASS"
+  - path: "research_control/tasks/RT-20260816-004/artifacts/rt003_allowlist_parity_checkpoint_recovery_receipt.json"
+    sha256: "43729ee26b847d13fdafd6fae8a7d1bc6bf5e8ce7c2ebe8b1bd9cd1ae7d55a02"
+    status: "PASS"
+
+output_paths:
+  - "research_control/tasks/RT-20260816-004/artifacts/validate_rt003_allowlist_parity_checkpoint_recovery.py"
+  - "research_control/tasks/RT-20260816-004/artifacts/rt003_allowlist_parity_checkpoint_recovery_receipt.json"
+  - "research_control/tasks/RT-20260816-004/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260816-004/jobs/completions/AJC-AJ-RT-20260816-004-001.yaml"
+  - "research_control/tasks/RT-20260816-003/roles/smuggling-auditor@0.2.0--RT-20260816-003.yaml"
+  - "research_control/handoffs/handoff-1047.yaml"
+  - "research_control/handoffs/handoff-1047.md"
+
+preserved_hashes:
+  rt003_job_sha256: "683e16df5df6f21fcca978ba0cb524edd4c656328e3ee5cc16f72a0d6001d2b1"
+  rt003_completion_sha256: "d57a38bc92da622a962caf97d773e267a2385a34a085acb235a2973bb40c9a92"
+  rt003_task_sha256: "5f9fba8ea445c118826f7cb896a054cf408320c13ede2ea1be8e3922d6c5b03c"
+  rt003_decision_sha256: "17db099c0c3023a0518c10557d28edaecd1ff0ea2720e90231d3f9a5c417296a"
+  rt003_manuscript_sha256: "97eb186301e5600dbda55fdc3663a604f7380c9beb38eebee2419f706d8b212c"
+  rt003_disposition_sha256: "8cd3ebddce439157273a8d35afb52101060f872dfa3d268b10d2a493e791fbd2"
+  rt003_fusion_sha256: "0d8adbd8f0954131e045224f4e56c32c242ea80d916987df6ca17925099798d6"
+  handoff_1046_yaml_sha256: "55ae7fa9e3ad39b6ab9a9ae630655834ace10c3026816fae357458859a9c8657"
+  handoff_1046_markdown_sha256: "d02928b5179c32930bf832c5f4cb13edc5330c0895b0fe65a78e4b91a23875ce"
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS --limit 10 --json"
+    status: "PASS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SMUGGLING-AUDIT-V1 --json"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS_CLEAN_BASELINE"
+  - command: ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+    status: "PASS_NO_REGISTERED_SIGNAL"
+  - command: ".venv/bin/python research_control/tasks/RT-20260816-004/artifacts/validate_rt003_allowlist_parity_checkpoint_recovery.py --write-report --json"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/validate_documentation_impact.py"
+    status: "PASS"
+  - command: ".venv/bin/python scripts/project_control/validate_claim_language.py"
+    status: "PASS_WITH_NONBLOCKING_HISTORICAL_WARNINGS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+    status: "PASS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+    status: "PASS"
+  - command: ".venv/bin/python -m scripts.validation.cli run --profile affected --paths research_control/tasks/RT-20260816-004 research_control/tasks/RT-20260816-003/roles/smuggling-auditor@0.2.0--RT-20260816-003.yaml research_control/handoffs/handoff-1047.yaml research_control/handoffs/handoff-1047.md research_control/program_state.yaml registries/AGENT_JOB_REGISTRY.csv registries/ROLE_EXECUTION_REGISTRY.csv"
+    status: "PASS_15_OF_15"
+  - command: ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260816-004-001 --json-summary"
+    status: "PASS"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+  passing_gates:
+    - "memory_preflight"
+    - "task_local_recovery"
+    - "continue_research_allowlist_resolution"
+    - "research_control_core"
+    - "documentation_impact"
+    - "project_improvement_signals"
+    - "memory_bootstrap"
+    - "memory_validate_only"
+    - "generated_view_freshness"
+    - "affected_profile_15_of_15"
+    - "research_control_diff"
+  failed_gates: []
+  pending_gates:
+    - "fresh_governed_checkpoint"
+  checkpoint: "PENDING_FRESH_RECOVERY_CHECKPOINT"
+  staging: "not_staged"
+  commit: "not_created"
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Clean source commit, exact validator findings, and immutable RT003 hashes were bound before recovery."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Task-local validator reports 21 of 21 checks PASS."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Research-control core, documentation impact, project-improvement signal, affected-profile, memory, and job-scoped diff gates pass."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one fresh recovery checkpoint remains."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Tracked current-frontier, task-index, dependency-graph, and compact views were regenerated and pass freshness checks."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory registries and generated retrieval derivatives were synchronized; validate-only passes."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "No current RT004 claim-language error blocks the transaction; repository-wide historical warnings remain nonblocking."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not authorized; ordinary project-system parity recovery validation only"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta_project_system_allowlist_parity_recovery"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "The recovery preserves the entire RT003 scientific transaction and changes no burden status."
+  downstream_unlocked: []
+  downstream_still_blocked:
+    - "Refuter stress execution until the fresh checkpoint commits"
+    - "independent source provenance and epistemic selection"
+    - "physical probability or realized occurrence"
+    - "D7 adequacy and B2 action"
+    - "P4-T03, g_eff, coupling, Einstein equations, Gate, benchmark, proof, promotion, and completed derivation"
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_delta"
+  - burden: "Source equivalence EqSrc"
+    status: "no_delta"
+  - burden: "RetainH"
+    status: "no_delta"
+  - burden: "GenH"
+    status: "no_delta"
+  - burden: "ObsLoc_lc"
+    status: "no_delta"
+  - burden: "Resp_lc"
+    status: "no_delta"
+  - burden: "M_src"
+    status: "no_delta"
+  - burden: "g_eff"
+    status: "no_delta"
+  - burden: "matter coupling"
+    status: "no_delta"
+  - burden: "Einstein equations"
+    status: "no_delta"
+  - burden: "finite-variation robustness"
+    status: "no_delta"
+  - burden: "benchmark promotion"
+    status: "no_delta"
+  - burden: "Gate Chair status"
+    status: "no_delta"
+  - burden: "current route freeze or hard-fail status"
+    status: "no_delta"
+
+required_next_packet:
+  task_type: "source_extension_refuter_stress"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS"
+  packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS-V1"
+  role_family: "refuter@0.2.0"
+  objective: "Stress the fixed proposal-only law for coupling and parameter nonuniqueness, stationarity nonselection, occurrence and clock nonidentifiability, finite-variation robustness, and any candidate-local obstruction."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  executed: false
+
+selected_next_route:
+  route_id: "stress_v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_v1"
+  route_label: "ontology-law-research-packet"
+  worker_skill: "continue-research"
+  role_family: "refuter@0.2.0"
+  selected_packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS-V1"
+  selected_packet_executed: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  external_action_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1258
+    relationship_row_count: 6466
+    semantic_row_count: 1258
+    vault_row_count: 1258
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SMUGGLING-AUDIT-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SMUGGLING-AUDIT-V1"
+      returned_object_ids:
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SMUGGLING-AUDIT-V1"
+  canonical_inspections:
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SMUGGLING-AUDIT-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260816-003/artifacts/parent_fusion_notes_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_audit.md"
+      source_hash: "0d8adbd8f0954131e045224f4e56c32c242ea80d916987df6ca17925099798d6"
+  authority_note: "Tracked registered sources and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval evidence only and not authority."
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "The bounded parity recovery emits no further project-improvement signal."
+
+forbidden_conclusion_summary: "This recovery supplies no scientific evidence or authority. It does not alter RT003 mathematics or audit status, execute its Refuter stress, adopt the law, infer physical probability or occurrence, reopen a freeze, reevaluate D7, act on B2, unlock P4-T03, construct g_eff, derive coupling or Einstein equations, promote a benchmark, prove or publish, push, take external action, claim completed derivation, or claim a global no-go."
+verdict: "rt003_allowlist_parity_recovery_pass_pending_fresh_checkpoint_no_physics_delta"
+next_recommendation: "Run the one authorized fresh checkpoint. Only after it commits may the selected Refuter stress execute in a separate continue-research invocation."

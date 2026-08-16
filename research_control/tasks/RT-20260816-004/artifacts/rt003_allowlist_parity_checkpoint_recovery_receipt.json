@@ -1,0 +1,140 @@
+{
+  "check_count": 21,
+  "checkpoint_status": "PENDING_FRESH_RECOVERY_CHECKPOINT",
+  "checks": [
+    {
+      "check": "job_ordered_allowlist",
+      "detail": {
+        "count": 18,
+        "expected_count": 18
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "role_ordered_allowlist",
+      "detail": {
+        "count": 18,
+        "expected_count": 18
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "agent_job_registry_ordered_allowlist",
+      "detail": {
+        "count": 18,
+        "expected_count": 18
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "role_execution_registry_ordered_allowlist",
+      "detail": {
+        "count": 18,
+        "expected_count": 18
+      },
+      "status": "PASS"
+    },
+    {
+      "check": "four_way_ordered_parity",
+      "detail": "all four representations equal",
+      "status": "PASS"
+    },
+    {
+      "check": "immutable_agentjob_hash",
+      "detail": "683e16df5df6f21fcca978ba0cb524edd4c656328e3ee5cc16f72a0d6001d2b1",
+      "status": "PASS"
+    },
+    {
+      "check": "corrected_role_hash",
+      "detail": "aafa43d2b5b26f08f88f13a0691a507e3c74596e81af38da12bb4d5eac5a9738",
+      "status": "PASS"
+    },
+    {
+      "check": "role_non_allowlist_bytes_preserved",
+      "detail": "70f7c77e5d8ddd16df80feb874eadfa85fba752c935f561307fe6df43a5ddbbc",
+      "status": "PASS"
+    },
+    {
+      "check": "agentjob_registry_non_allowlist_fields_preserved",
+      "detail": "86e2079023c3f0fcc0b488b4f92df54e2612a335980b289a78a64b1d44fd8f3b",
+      "status": "PASS"
+    },
+    {
+      "check": "role_registry_non_allowlist_fields_preserved",
+      "detail": "54729a7104c12fac326e644dda184ea6f385cd1d1ac6ca29422d6bddc95f36f5",
+      "status": "PASS"
+    },
+    {
+      "check": "wildcard_removed_from_repaired_representations",
+      "detail": "permission narrowing only",
+      "status": "PASS"
+    },
+    {
+      "check": "protected::research_control/tasks/RT-20260816-003/jobs/AJ-RT-20260816-003-001.yaml",
+      "detail": "683e16df5df6f21fcca978ba0cb524edd4c656328e3ee5cc16f72a0d6001d2b1",
+      "status": "PASS"
+    },
+    {
+      "check": "protected::research_control/tasks/RT-20260816-003/jobs/completions/AJC-AJ-RT-20260816-003-001.yaml",
+      "detail": "d57a38bc92da622a962caf97d773e267a2385a34a085acb235a2973bb40c9a92",
+      "status": "PASS"
+    },
+    {
+      "check": "protected::research_control/tasks/RT-20260816-003/00_TASK.yaml",
+      "detail": "5f9fba8ea445c118826f7cb896a054cf408320c13ede2ea1be8e3922d6c5b03c",
+      "status": "PASS"
+    },
+    {
+      "check": "protected::research_control/tasks/RT-20260816-003/DDR-20260816-003.md",
+      "detail": "17db099c0c3023a0518c10557d28edaecd1ff0ea2720e90231d3f9a5c417296a",
+      "status": "PASS"
+    },
+    {
+      "check": "protected::research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_audit_v1.tex",
+      "detail": "97eb186301e5600dbda55fdc3663a604f7380c9beb38eebee2419f706d8b212c",
+      "status": "PASS"
+    },
+    {
+      "check": "protected::research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_disposition_v1.yaml",
+      "detail": "8cd3ebddce439157273a8d35afb52101060f872dfa3d268b10d2a493e791fbd2",
+      "status": "PASS"
+    },
+    {
+      "check": "protected::research_control/tasks/RT-20260816-003/artifacts/parent_fusion_notes_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_audit.md",
+      "detail": "0d8adbd8f0954131e045224f4e56c32c242ea80d916987df6ca17925099798d6",
+      "status": "PASS"
+    },
+    {
+      "check": "protected::research_control/handoffs/handoff-1046.yaml",
+      "detail": "55ae7fa9e3ad39b6ab9a9ae630655834ace10c3026816fae357458859a9c8657",
+      "status": "PASS"
+    },
+    {
+      "check": "protected::research_control/handoffs/handoff-1046.md",
+      "detail": "d02928b5179c32930bf832c5f4cb13edc5330c0895b0fe65a78e4b91a23875ce",
+      "status": "PASS"
+    },
+    {
+      "check": "adjacent_current_v22_exact_path_controls",
+      "detail": {
+        "controls": 3,
+        "pass": 3
+      },
+      "status": "PASS"
+    }
+  ],
+  "corrected_representation_count": 3,
+  "expected_allowed_write_path_count": 18,
+  "failure_count": 0,
+  "job_id": "AJ-RT-20260816-004-001",
+  "pass_count": 21,
+  "permission_broadened": false,
+  "protected_source_count": 9,
+  "refuter_stress_executed": false,
+  "schema_id": "rt003_allowlist_parity_checkpoint_recovery_receipt_v1",
+  "science_changed": false,
+  "source_head": "1aea0cbe89bdc37cf9f9630e51057833360fb18e",
+  "source_tree": "445493a55d3593f6186d2233d4f6f50dc54a9de4",
+  "status": "PASS",
+  "task_id": "RT-20260816-004"
+}
