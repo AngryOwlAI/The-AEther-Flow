@@ -1,4 +1,4 @@
-# Handoff 1041 — post-canonical Open-carrier theorem selector
+# handoff-1041 — post-canonical Open-carrier theorem selector
 
 RT-20260815-007 completed exactly one bounded Ontology Formalizer packet. The
 result is `canonical_open_event_fibration_typing_descent_theorem`.

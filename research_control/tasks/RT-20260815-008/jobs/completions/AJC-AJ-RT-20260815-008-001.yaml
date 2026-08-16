@@ -1,0 +1,326 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260815-008-001"
+completion_id: "AJC-AJ-RT-20260815-008-001"
+task_id: "RT-20260815-008"
+task_type: "project_system_v22_p4_t02_handoff_1041_markdown_identity_checkpoint_recovery"
+decision_id: "DDR-20260815-008"
+role_id: "process-integrity-auditor"
+source_role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260815-008"
+status: "completed"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-16T04:50:31Z"
+started_at: "2026-08-16T04:50:31Z"
+completed_at: "2026-08-16T04:50:31Z"
+objective: "Replace exactly the uppercase H and space in the Handoff 1041 Markdown heading with lowercase h and a hyphen, prove every other Markdown byte and the paired YAML and completed RT-20260815-007 scientific transaction unchanged, synchronize control derivatives, and invoke one governed checkpoint before the selected theoretical-continuation packet."
+completion_summary: "The Handoff 1041 Markdown heading now contains the exact canonical handoff-1041 literal. Exactly two bytes changed at offsets 2 and 9, file length is unchanged, reversing those replacements reproduces the sealed pre-repair hash, and every other Markdown byte is unchanged. The paired YAML and completed RT-20260815-007 task, AgentJob, completion, and parent fusion remain byte-identical. No scientific result, freeze, Distance-to-GR row, authority, or next-packet execution changed."
+objective_result: "handoff_1041_markdown_identity_restored_protected_science_preserved_checkpoint_pending"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "handoff_identity_repair_completed_checkpoint_pending"
+work_item_status: "repair_completed"
+checkpoint_commit: "pending_governed_checkpoint"
+checkpoint_invocation_count: 0
+checkpoint_staged: false
+legacy_validation_used: false
+project_system_change_only: true
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  observed_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact two-byte handoff-1041 identity replacement"
+      - "one task-local preservation validator and receipt"
+      - "one governed checkpoint"
+      - "research_control/handoffs/handoff-1041.md"
+      - "research_control/tasks/RT-20260815-008/artifacts/validate_handoff_1041_markdown_identity_recovery.py"
+      - "research_control/tasks/RT-20260815-008/artifacts/handoff_1041_markdown_identity_recovery_receipt.json"
+  accepted_criteria:
+    physics: []
+    project_system:
+      - "reversing the two replacements reconstructs the sealed pre-repair Markdown hash"
+      - "handoff-1041 YAML and every completed RT-20260815-007 scientific source remain unchanged"
+      - "the live continuation boundary accepts the handoff identity"
+      - "all required project-control gates pass"
+      - "one governed checkpoint commits"
+      - "the selected theoretical packet remains unexecuted until checkpoint success"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  status: "admitted"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed: false
+  ontology_or_source_law_adopted: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  status: "PASS"
+  source_handoff_id: "handoff-1041"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  guard_outcome: "below_threshold"
+  prerequisite_checkpoint_commit: "20ae0306caed33b7f98bd62873606a8d7d8a2df9"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  system_success_counts_as_physics: false
+  system_success_counts_as_distance_to_gr: false
+
+artifacts:
+  - "research_control/tasks/RT-20260815-008/artifacts/validate_handoff_1041_markdown_identity_recovery.py"
+  - "research_control/tasks/RT-20260815-008/artifacts/handoff_1041_markdown_identity_recovery_receipt.json"
+
+output_paths:
+  - "research_control/handoffs/handoff-1041.md"
+  - "research_control/tasks/RT-20260815-008/**"
+  - "research_control/handoffs/handoff-1042.yaml"
+  - "research_control/handoffs/handoff-1042.md"
+  - "research_control/program_state.yaml"
+
+artifact_receipts:
+  - path: "research_control/tasks/RT-20260815-008/artifacts/validate_handoff_1041_markdown_identity_recovery.py"
+    sha256: "c4dcd4b8201d661412d2280182dc256a37ee7bcdedf469ce176ea8c964975126"
+  - path: "research_control/tasks/RT-20260815-008/artifacts/handoff_1041_markdown_identity_recovery_receipt.json"
+    sha256: "3c1798eb3e95bfc8c30c323554652673747cd07de224d75385a844a97b01fb59"
+
+identity_recovery_result:
+  markdown_path: "research_control/handoffs/handoff-1041.md"
+  canonical_handoff_id: "handoff-1041"
+  heading_before: "# Handoff 1041"
+  heading_after: "# handoff-1041"
+  markdown_sha256_before: "3edf4f4bcf80a765e70c1f62148c0535200c1fc2d49e70117b586b20ac316cf4"
+  markdown_sha256_after: "a2e2fead3a1858b8d76a694dd2224d1992eef90b8b28803ccff728d96668c5ac"
+  replacement_count: 2
+  replacement_offsets_zero_based:
+    - 2
+    - 9
+  length_unchanged: true
+  reconstructed_before_hash_matches: true
+  every_other_markdown_byte_unchanged: true
+  canonical_literal_present: true
+  handoff_yaml_changed: false
+  validator_behavior_changed: false
+  authority_semantics_changed: false
+  predecessor_science_reexecuted: false
+  theoretical_selector_executed: false
+
+preserved_hashes:
+  handoff_1041_yaml_sha256: "3ecf4ec8e17ba6e0b3ef590b78305a668a4cfc7ba21ca59dd03d8fcb3414c1ac"
+  rt007_task_sha256: "86071ed9137bda90dc6bd798cba542dd69eda90811707584fe7a2f3cfc09559f"
+  rt007_job_sha256: "85e8147a7f36a0cb3ccf75466cff35ed33fe2280ce461ce3b807053c793262cc"
+  rt007_completion_sha256: "b8d51235c26430b9db31be24357d73c8a40288be1b5018bb2d02c7938622c4e6"
+  rt007_parent_fusion_sha256: "9e45c407be92b8d4b66303b5ed8cd4043453f09b303227ac35de74f1feb62604"
+  implementation_plan_sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+
+command_results:
+  - command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+    status: "PASS_NO_REFRESH_REQUIRED"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+    status: "PASS"
+  - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-IMPROVE-PROJECT-SYSTEM --json"
+    status: "PASS_REGISTERED_CANONICAL_SOURCE"
+  - command: ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+    status: "PASS_CLEAN_BASELINE"
+  - command: ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+    status: "PASS_ADVISORY_NO_OPEN_SIGNAL"
+  - command: ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+  - command: ".venv/bin/python research_control/tasks/RT-20260815-008/artifacts/validate_handoff_1041_markdown_identity_recovery.py --write-report --json"
+    status: "PASS_EXACT_TWO_BYTE_REPLACEMENT_PROTECTED_SCIENCE_UNCHANGED"
+  - command: ".venv/bin/python -m scripts.validation.cli run --profile affected --paths <authorized transaction paths>"
+    status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  - command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260815-008-001"
+    status: "PENDING"
+
+validation_summary:
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  passing_gates:
+    - "exact canonical handoff-1041 Markdown identity"
+    - "exact two-byte replacement with every other Markdown byte unchanged"
+    - "unchanged paired YAML and completed RT-20260815-007 scientific sources"
+    - "live continuation identity acceptance"
+    - "affected validation profile and generated-system synchronization"
+  failed_gates: []
+  pending_gates:
+    - "governed checkpoint"
+  checkpoint:
+    invoked: false
+    invocation_count: 0
+    reason: "The governed checkpoint is the sole remaining gate and has not yet been invoked."
+  staging:
+    attempted: false
+    index_changed: false
+  commit:
+    created: false
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "The repository was clean at source HEAD 20ae0306caed33b7f98bd62873606a8d7d8a2df9."
+      - "Memory status and targeted canonical-source inspection passed."
+      - "The resolver reproduced one exact latest-handoff identity failure."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exactly two heading bytes changed and the sealed pre-repair Markdown hash is reconstructible."
+      - "The exact canonical handoff-1041 literal is present and every other Markdown byte is unchanged."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Final control records, registries, renderers, and the affected validation profile pass on the precheckpoint tree."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "One governed checkpoint remains required."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "Task index, dependency graph, current frontier, compact frontier, and memory derivatives are synchronized."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Tracked memory synchronization and validate-only both pass."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "Changed-source claim-language validation passes without a new blocking finding."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "not_applicable"
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  ontology_selection_authorized: false
+  physical_interpretation_establishment_authorized: false
+  Gate_Chair_verdict_authorized: false
+  global_no_go_claim_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  ledger_update_rationale: "This packet replaces two bytes in a project-control handoff Markdown identity only."
+  downstream_unlocked: []
+  downstream_still_blocked:
+    - "a general proposal sort or F_prop and typed open-to-proposal identification"
+    - "source-derived admissibility or occurrence generation"
+    - "complete P7 coverage and D7 adequacy"
+    - "B2 action and P4-T03"
+    - "g_eff matter coupling Einstein equations benchmark and completed derivation"
+
+required_next_packet:
+  task_type: "v22_p4_t02_b2_post_canonical_open_carrier_theorem_theoretical_continuation_selector"
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  plan_task_id: "P4-T02"
+  work_item_id: "P4-T02-B2-POST-CANONICAL-OPEN-CARRIER-THEORETICAL-CONTINUATION-SELECTION"
+  packet_id: "PKT-V22-P4T02-B2-POST-CANONICAL-OPEN-CARRIER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  objective: "Compare the Refuter, proposal-only extension, materially distinct irrelevance, and protected-stop routes after the canonical Open-carrier theorem; select one packet without executing it."
+  dependency_ready_after_checkpoint: true
+  dependency_ready_now: false
+  executed: false
+
+selected_next_route:
+  route_id: "select_v22_p4_t02_b2_post_canonical_open_carrier_theorem_continuation_v1"
+  route_label: "ordinary-research-packet"
+  worker_skill: "continue-research"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  selected_packet_id: "PKT-V22-P4T02-B2-POST-CANONICAL-OPEN-CARRIER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  selected_packet_executed: false
+  dependency_ready_after_checkpoint: true
+  execution_ready_now: false
+  physics_promotion_authorized: false
+  external_action_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1252
+    relationship_row_count: 6435
+    semantic_row_count: 1252
+    vault_row_count: 1252
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-SKILL-IMPROVE-PROJECT-SYSTEM --json"
+      query_type: "lookup"
+      query_text: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      returned_object_ids:
+        - "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+  canonical_inspections:
+    - object_id: "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: ".codex/skills/improve-project-system/SKILL.md"
+      source_hash: "4009aafd81dedf8ecd74a346c6fb2ee52d5333bef27d482aa998511ab3ff25d2"
+  authority_note: "Tracked registered sources and control records govern. Generated wiki semantic Obsidian SQLite and .local layers are retrieval evidence only and are not authority."
+
+project_improvement_signals: []
+resolved_project_improvement_signals: []
+project_improvement_sidecar_created: false
+project_improvement_bridge:
+  required: false
+  sidecar_path: ""
+  recursive_goal_recovery_required: false
+  reason: "The exact identity repair is complete; only the governed checkpoint remains before ordinary P4-T02 continuation."
+
+forbidden_conclusion_summary: "This repair supplies no scientific evidence or authority. It does not alter the RT-20260815-007 canonical Open-carrier theorem, reopen any freeze, reevaluate D7, act on B2, unlock P4-T03, adopt ontology or a source law, construct g_eff, derive coupling or Einstein equations, promote a benchmark, prove or publish, push, take external action, claim completed derivation, or claim a global no-go."
+verdict: "handoff_1041_markdown_identity_recovery_pass_pending_governed_checkpoint_no_physics_delta"
+next_recommendation: "Run the one authorized governed checkpoint. Only after it commits may the selected P4-T02 theoretical-continuation packet execute."
