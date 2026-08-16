@@ -1,0 +1,179 @@
+{
+  "authority": "operational_validation_only",
+  "check_count": 32,
+  "checks": {
+    "branches_14": true,
+    "candidate_and_law": true,
+    "child_hashes_bound": true,
+    "children_converge": true,
+    "conflict_resolved": true,
+    "controls_6": true,
+    "distance_14_no_delta": true,
+    "domains_10": true,
+    "downstream_locks": true,
+    "exclusive_result": true,
+    "freezes_9": true,
+    "fusion_claim_guards": true,
+    "latex_compile_visual_pass": true,
+    "maps_10": true,
+    "material_distinctness": true,
+    "model_pass_24": true,
+    "model_payload_bound": true,
+    "model_source_bound": true,
+    "objects_12": true,
+    "obligations_16": true,
+    "payloads_5": true,
+    "provenance_acyclic": true,
+    "provenance_dag": true,
+    "provenance_hashes": true,
+    "record_source_hashes": true,
+    "required_files": true,
+    "roots_4": true,
+    "selected_packet_exact_unexecuted": true,
+    "successor_exact_unexecuted": true,
+    "tex_claim_guards": true,
+    "theorems_6": true,
+    "whitespace": true
+  },
+  "model_payload": {
+    "all_passed": true,
+    "attachment_semantic_mode": "deterministic_natural_null_section",
+    "authority_limits": {
+      "distance_to_gr_changed": false,
+      "p4_relevance_claimed": false,
+      "physical_occurrence_assigned": false,
+      "physical_probability_assigned": false,
+      "source_extension_adopted": false
+    },
+    "candidate_id": "CAND-V22-P4T02-B2-IDEMPOTENT-EQUATION-DECORATION-COMBINED-EXTENSION-V1",
+    "check_count": 24,
+    "checks": [
+      {
+        "check_id": "C01_ZERO_IDEMPOTENT",
+        "detail": "zero decoration is admissible",
+        "passed": true
+      },
+      {
+        "check_id": "C02_IDENTITY_IDEMPOTENT",
+        "detail": "identity decoration is admissible",
+        "passed": true
+      },
+      {
+        "check_id": "C03_RANK_TWO_IDEMPOTENT",
+        "detail": "rank-two decoration is admissible",
+        "passed": true
+      },
+      {
+        "check_id": "C04_CONJUGATION_IDEMPOTENT",
+        "detail": "conjugation preserves idempotency",
+        "passed": true
+      },
+      {
+        "check_id": "C05_NULL_NATURAL",
+        "detail": "null attachment is fixed by transport",
+        "passed": true
+      },
+      {
+        "check_id": "C06_IDENTITY_NATURAL",
+        "detail": "identity counterexpansion is transport coherent",
+        "passed": true
+      },
+      {
+        "check_id": "C07_TWO_POINT_TORSOR",
+        "detail": "two-point C2 torsor has no fixed point",
+        "passed": true
+      },
+      {
+        "check_id": "C08_THREE_POINT_FIXED",
+        "detail": "three-point control has exactly one fixed point",
+        "passed": true
+      },
+      {
+        "check_id": "C09_TWO_OBJECT_IDENTITY",
+        "detail": "g inverse after g is identity transport",
+        "passed": true
+      },
+      {
+        "check_id": "C10_TWO_OBJECT_COMPOSITION",
+        "detail": "composite transport equals identity",
+        "passed": true
+      },
+      {
+        "check_id": "C11_TWO_OBJECT_RANK",
+        "detail": "transport preserves rank",
+        "passed": true
+      },
+      {
+        "check_id": "C12_SAME_REDUCT_DISTINCT",
+        "detail": "same old reduct admits zero and identity expansions",
+        "passed": true
+      },
+      {
+        "check_id": "C13_DISTINCT_ATTACHMENTS_AVAILABLE",
+        "detail": "zero and identity are maximally distinct decorations",
+        "passed": true
+      },
+      {
+        "check_id": "C14_REDUCT_FORGETS_DECORATION",
+        "detail": "forgetting P leaves the same fixed source presentation",
+        "passed": true
+      },
+      {
+        "check_id": "C15_RANK_DISTANCE_BOUND",
+        "detail": "rank distance lies in zero through six",
+        "passed": true
+      },
+      {
+        "check_id": "C16_NULL_ISOLATED",
+        "detail": "nonzero tested idempotents lie outside the radius-one null ball",
+        "passed": true
+      },
+      {
+        "check_id": "C17_CONJUGATION_ISOMETRY",
+        "detail": "rank distance is conjugation invariant",
+        "passed": true
+      },
+      {
+        "check_id": "C18_RESTRICTION_NONEXPANSIVE",
+        "detail": "restriction cannot increase a supremum rank distance",
+        "passed": true
+      },
+      {
+        "check_id": "C19_COMPATIBLE_GLUE",
+        "detail": "equal local idempotents glue to the same idempotent",
+        "passed": true
+      },
+      {
+        "check_id": "C20_OUTPUT_ARROW_REJECT",
+        "detail": "output-relative arrow restriction is detected",
+        "passed": true
+      },
+      {
+        "check_id": "C21_TORSOR_FALSE_SECTION",
+        "detail": "identity-only arrows manufacture a false torsor section",
+        "passed": true
+      },
+      {
+        "check_id": "C22_DAG_ACYCLIC",
+        "detail": "pre-outcome provenance graph is acyclic",
+        "passed": true
+      },
+      {
+        "check_id": "C23_NO_P4_ROOT",
+        "detail": "no desired P4 value is a provenance root",
+        "passed": true
+      },
+      {
+        "check_id": "C24_P4_BACKEDGE_REJECT",
+        "detail": "desired-P4 back-edge creates a detected cycle",
+        "passed": true
+      }
+    ],
+    "failed_count": 0,
+    "passed_count": 24,
+    "payload_sha256": "c518499677b3a256ef0a10dd648261fe0b38fefd1f46013169581ea4633fedc3",
+    "schema_id": "v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_model_receipt_v1"
+  },
+  "schema_id": "v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_validation_v1",
+  "status": "PASS"
+}

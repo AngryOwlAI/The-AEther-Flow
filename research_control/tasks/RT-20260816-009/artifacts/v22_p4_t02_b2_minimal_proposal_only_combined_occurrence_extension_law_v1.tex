@@ -1,0 +1,238 @@
+\documentclass[11pt]{article}
+\usepackage[margin=0.82in]{geometry}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage{booktabs,array,longtable}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.55em}
+\sloppy
+
+\newtheorem{theorem}{Theorem}
+\newtheorem{lemma}{Lemma}
+\newcommand{\Focc}{\mathcal F_{\mathrm{occ}}}
+\newcommand{\Adm}{\mathrm{Adm}_{\mathrm{occ}}}
+\newcommand{\Xocc}{\mathcal X_{\mathrm{OCC}}}
+\newcommand{\Weq}{W_{\mathrm{eq}}}
+
+\title{V22 P4--T02 B2: Minimal Proposal-Only Combined Occurrence Extension Law}
+\author{RT-20260816-009 / AJ-RT-20260816-009-001}
+\date{2026-08-16}
+
+\begin{document}
+\maketitle
+
+\begin{center}
+\fbox{\parbox{0.94\linewidth}{
+\textbf{Decisive status.} A target-free, proposal-only combined
+occurrence/admissibility extension is constructed under disclosed semantic
+roots. Its attachment is the algebraically canonical but semantically vacuous
+null section. The construction is pending a separately admitted Smuggling
+Audit. It is not independently derived from the current ontology, does not
+assign realized occurrence or physical probability, gives no P4 relevance
+result, and carries no adoption or promotion authority.
+}}
+\end{center}
+
+\section{Fixed source boundary and proposal roots}
+
+Hold fixed the registered P4--T01 reduced source equation data. On every source
+open $O$, let $\Weq|_O$ be the rank-six equation bundle. Each independently
+admitted source/equation-frame arrow $g$ carries an invertible frame map $S_g$.
+No target atlas, target metric, cone, response, benchmark answer, or
+frozen-candidate output enters the definitions below.
+
+The packet adds four disclosed roots before any comparison:
+\begin{enumerate}
+\item endomorphism decorations $P\in\Gamma(O,\operatorname{End}(\Weq))$;
+\item the pointwise idempotency law $P^2=P$;
+\item the semantic designation of $0_{\Weq}$ as the sole formal attachment;
+\item a bounded rank-difference control used only for algebraic validation.
+\end{enumerate}
+These are draft/control, proposal-only source-extension data. The algebraic
+operations already available from $\Weq$ do not by themselves derive the
+occurrence/admissibility or attachment semantics.
+
+\section{Combined carrier}
+
+Define the contravariant decoration fibre
+\[
+ \Focc(d,O)=\Gamma\!\left(O,\operatorname{End}(\Weq(d))\right).
+\]
+For an admitted arrow $g:(d,O)\to(d',O')$, transport is source pullback
+together with equation-frame conjugation,
+\[
+ T_g(P)=S_g\,g^*P\,S_g^{-1}.
+\]
+Define the admissible subsheaf
+\[
+ \Adm(d,O)=\{P\in\Focc(d,O):P^2=P\}.
+\]
+The combined extension $\Xocc$ is the Grothendieck category of elements of
+$\Adm$, and
+\[
+ U:\Xocc\longrightarrow\mathsf D_{\mathrm{source}}
+\]
+forgets $P$.
+
+Exactly one attachment mode is present:
+\[
+ s_0(d,O)=(d,O,0_{\Weq}).
+\]
+Every conjugation and restriction fixes zero. Neither $\Adm$ itself nor a
+probability kernel is relabeled as attachment.
+
+\begin{theorem}[Conditional typing and null-section theorem]
+Assume the registered equation-frame arrows are invertible and coherent.
+Then:
+\begin{enumerate}
+\setlength{\itemsep}{0.15em}
+\setlength{\parskip}{0pt}
+\item $T_g$ preserves products, idempotency, identity arrows, composition,
+and inverse arrows;
+\item $\Adm$ is a nonempty invariant contravariant subsheaf;
+\item $\Xocc$ and $U$ are well formed;
+\item $s_0$ is a deterministic natural section;
+\item componentwise natural sections are exactly transport-coherent choices
+from the isotropy-fixed admissible loci.
+\end{enumerate}
+\end{theorem}
+
+\begin{proof}
+Conjugation is an algebra automorphism:
+$T_g(P^2)=T_g(P)^2$. Coherence of the $S_g$ gives the functor laws.
+The zero map is idempotent and fixed by every conjugation, so each fibre is
+nonempty and $s_0$ is natural. A natural section must be fixed by every
+isotropy arrow. Conversely, transport of a fixed representative is
+path-independent precisely when its isotropy orbit is trivial.
+\end{proof}
+
+The two-point swap torsor is the sharp falsifier: its fixed locus is empty, so
+no deterministic natural section exists. The three-point control with one
+fixed point and one swapped pair verifies the positive direction.
+
+\section{Restriction, gluing, and algebraic isolation}
+
+Endomorphism sections restrict and glue uniquely on compatible open covers.
+Because $P^2=P$ is pointwise, compatible local idempotents glue to an
+idempotent. Define
+\[
+ d_{\mathrm{rank},O}(P,Q)
+   =\sup_{x\in O}\operatorname{rank}(P_x-Q_x),
+\]
+with value zero on the empty open. Then
+\[
+ 0\leq d_{\mathrm{rank},O}(P,Q)\leq6.
+\]
+Matrix rank is invariant under invertible conjugation, and a supremum over a
+smaller open cannot increase. If an idempotent $P$ is nonzero somewhere, then
+$d_{\mathrm{rank},O}(P,0)\geq1$. Hence the rank ball of radius one around the
+null section contains no other idempotent.
+
+This is only discrete algebraic covariance and isolation. It is not a norm
+topology, a small-perturbation theorem, continuum stability, physical
+robustness, or empirical robustness.
+
+\section{Conservativity and nonselection}
+
+Assume the decoration is inert in every old source equation, coefficient,
+constraint, gauge rule, and lawful reduction. Every old model then has the
+zero-decoration expansion. Old-language validity is model conservative:
+every old countermodel lifts, while forgetting $P$ returns the old model.
+
+Over one fixed old reduct, both
+\[
+ P=0_{\Weq}\qquad\text{and}\qquad P=I_{\Weq}
+\]
+are admissible. Therefore the old reduct does not choose an arbitrary
+decoration token. The conclusion is deliberately narrow:
+$\operatorname{End}(\Weq)$, zero, identity, idempotency, and rank are
+algebraically definable once $\Weq$ is given. The witness does not prove those
+objects nondefinable, nor does it prove the functorial carrier nondefinable. It
+proves only chosen-token nonselection and leaves the proposal semantic roots
+unjustified.
+
+\section{Exact controls and conflict resolution}
+
+\begin{longtable}{p{0.23\linewidth}p{0.70\linewidth}}
+\toprule
+Control & Exact result \\
+\midrule
+Two-point torsor & Full swap isotropy has no fixed point and no natural
+deterministic section. \\
+Three-point action & The fixed locus is exactly the declared singleton. \\
+Two-object groupoid & Conjugation and its inverse preserve idempotency and
+rank and compose to identity. \\
+Same reduct & Zero and identity are distinct admissible tokens forgotten by
+$U$. \\
+Output-relative arrows & Removing the swap because it moves a token creates
+a false section and is rejected. \\
+P4 back edge & Making desired P4 output an ancestor of the attachment creates
+the forbidden provenance cycle. \\
+\bottomrule
+\end{longtable}
+
+The executable finite model passes all $24$ exact checks. Its payload SHA-256
+is
+\[
+\texttt{c518499677b3a256ef0a10dd648261fe0b38fefd1f46013169581ea4633fedc3}.
+\]
+
+The two internal specialists initially differed on the carrier. The
+mathematical child proposed the idempotent construction; the philosophical
+child proposed a local-solution subfunctor whose full arrow action required an
+unbound coherent family of equation intertwiners. In one conflict-resolution
+round both converged on the idempotent construction because registered
+equation-frame covariance already types conjugation on the entire admitted
+arrow class. Without separately bound intertwiners, the local-solution
+alternative must return a source-category typing obstruction.
+
+\section{Provenance and firewall}
+
+The written dependency order is
+\[
+\begin{split}
+ &\text{source opens and registered }\Weq\\
+ &\longrightarrow\text{algebraic End, zero, identity, idempotency, covariance}\\
+ &\longrightarrow\text{proposal semantics and rank control}\\
+ &\longrightarrow(\Focc,\Adm,\Xocc,U,s_0)\\
+ &\longrightarrow\text{comparison-only diagnostics}.
+\end{split}
+\]
+This graph is acyclic and excludes target, empirical, benchmark, desired-P4,
+and frozen-output ancestors. Acyclic disclosure proves within-packet
+nonadaptivity only; it does not supply independent current-source provenance
+or epistemic justification.
+
+Images, kernels, quotients, projector sectors, rank strata, response maps, and
+P4 use are not constructed here. Any such use must be separately admitted and
+must pass a new materiality and smuggling audit.
+
+\section{Distance to GR and authority}
+
+All nine inherited freezes remain active. All fourteen Distance-to-GR burdens
+retain literal status \texttt{no\_delta}: source primitives, source
+equivalence, RetainH, GenH, observer localization, response, $M_{\rm src}$,
+$g_{\rm eff}$, matter coupling, Einstein equations, finite-variation
+robustness, benchmark promotion, Gate Chair status, and freeze/hard-fail
+status.
+
+D7 was not reevaluated, B2 remains inactive, and P4--T03 remains locked. The
+packet gives no realized occurrence, probability, P4 relevance or
+irrelevance, response bridge, source-law adoption, ontology promotion, proof
+authority, publication, push, external action, global no-go, or completed
+derivation.
+
+Exactly one successor is selected but not executed:
+\[
+\begin{split}
+&\texttt{PKT-V22-P4T02-B2-IDEMPOTENT-EQUATION-DECORATION-}\\
+&\texttt{COMBINED-EXTENSION-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1}.
+\end{split}
+\]
+It is a \texttt{source\_extension\_smuggling\_audit} assigned to
+\texttt{smuggling-auditor@0.2.0}. The audit may test the disclosed roots and
+firewall; it may not adopt the candidate or execute downstream work.
+
+\end{document}

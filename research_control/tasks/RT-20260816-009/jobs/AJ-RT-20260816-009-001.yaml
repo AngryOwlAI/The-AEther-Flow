@@ -1,0 +1,427 @@
+job_id: "AJ-RT-20260816-009-001"
+task_id: "RT-20260816-009"
+decision_id: "DDR-20260816-009"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260816-009"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-16T17:58:31Z"
+started_at: "2026-08-16T17:58:31Z"
+completed_at: "2026-08-16T18:39:54Z"
+completion_path: "research_control/tasks/RT-20260816-009/jobs/completions/AJC-AJ-RT-20260816-009-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active full-V22 goal, committed RT008 checkpoint 013f17022ca644bb688cebb833f14fc2b331ea3a, and handoff-1051 authorize exactly one bounded proposal-only Ontology Formalizer packet and one checkpoint. Successor execution and all adoption or promotion remain unauthorized."
+objective: "Execute the selected minimal proposal-only combined occurrence-extension packet by constructing or precisely obstructing F_occ, X_OCC, U, source-arrow transport, invariant admissibility, exactly one attachment mode, restriction/gluing, conservative reduct, acyclic provenance, and bounded robustness while preserving nine freezes and downstream blocks."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Construct or precisely obstruct the missing target-free combined occurrence/admissibility carrier, source-arrow transport, and independently predeclared attachment law before any P4 relevance claim."
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+missing_source_law: "minimal_combined_occurrence_admissibility_carrier_transport_attachment_restriction_gluing_provenance_robustness_law"
+adoption_status: "blocked_adoption_open_continuation"
+route_reason: "handoff_1051_selects_one_fresh_ontology_formalizer_packet_after_committed_rt008_checkpoint"
+route_strategy_id: "formalize_v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_v1"
+selected_packet_id: "PKT-V22-P4T02-B2-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW-V1"
+immutable_route_sha256: "ee8d32b96655a9c234c3213a7aa8450b8ed278c70b4ef836a933830e3929585f"
+selected_packet_spec_sha256: "71f31372d0ae224b6f43c3ed808563b57ff54e84e961e42d6be3d6af409c0d8f"
+source_head: "013f17022ca644bb688cebb833f14fc2b331ea3a"
+source_tree: "124fc2c64b7721426c665b275b42f6eafebbd8c4"
+assembly_parent_head: "013f17022ca644bb688cebb833f14fc2b331ea3a"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+work_item_id: "P4-T02-B2-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW"
+recommendation_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R10"
+  - "V22-R13"
+declared_coverage_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R13"
+  - "S5"
+sequence_step_ids:
+  - "S5"
+cross_cutting_directive_ids:
+  - "V22-X02"
+  - "V22-X04"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P4-T02"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1051"
+  source_handoff_path: "research_control/handoffs/handoff-1051.yaml"
+  source_handoff_sha256: "ee8d32b96655a9c234c3213a7aa8450b8ed278c70b4ef836a933830e3929585f"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite:
+    task_id: "RT-20260816-008"
+    commit: "013f17022ca644bb688cebb833f14fc2b331ea3a"
+    committed: true
+  immutable_handoff_checkpoint_note: "Handoff-1051 was emitted before checkpoint and remains immutable; commit 013f17022ca644bb688cebb833f14fc2b331ea3a contains the complete RT008 transaction and satisfies the Ontology Formalizer prerequisite."
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1266
+    relationship_row_count: 6516
+    semantic_row_count: 1266
+    vault_row_count: 1266
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'P4 T01 principal symbol specification' --limit 10 --json"
+      query_type: "search"
+      query_text: "P4 T01 principal symbol specification"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      result_note: "Retrieval returned the registered V22 plan among the bounded results; canonical source inspection followed."
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  authority_note: "Tracked registered sources and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "source_law"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  assumption_delta:
+    - "Hold the current source base, RT007 factorization result, and all nine inherited freezes fixed."
+    - "Introduce only explicitly typed target-free proposal fibres, transport, admissibility, attachment, restriction/gluing, robustness, and provenance roots fixed before outcome tests."
+    - "Choose exactly one attachment semantic mode and keep it distinct from realized occurrence and physical probability."
+    - "Import no target atlas, target metric, empirical response semantics, desired cone, benchmark answer, or frozen-candidate output."
+  materiality_basis: "The packet constructs or obstructs the missing combined extension layer itself rather than repeating the RT007 typing obstruction, the prior measurable-fiber token kernel, or any frozen response, quotient, character, oriented-matroid, viability, robust-invariance, K_star, or conormal branch."
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1"
+    - "TEX-V22-P4-T02-B2-CURRENT-SOURCE-OCCURRENCE-ADMISSIBILITY-P4-RELEVANCE-FACTORIZATION-AUDIT-V1"
+    - "research_control/handoffs/handoff-1051.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_v1.tex"
+    - "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_record_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+    - "latex_compile_pass"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    physical_occurrence_assigned: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+ontology_law_research_packet:
+  schema_id: "ontology_law_research_packet_receipt_v1"
+  trigger_classification: "derivation_critical_missing_source_law"
+  missing_law: "minimal_combined_occurrence_admissibility_carrier_transport_attachment_restriction_gluing_provenance_robustness_law"
+  candidate_status: "proposal-only"
+  adoption_status: "blocked_adoption_open_continuation"
+  candidate_law_payload:
+    source_domain: "current source-only category plus disclosed proposal-only fibres"
+    law_family: "combined carrier transport admissibility attachment restriction gluing robustness and provenance"
+    target_atlas_free: true
+    target_metric_free: true
+    predeclared_before_outcome_test: true
+  exact_gr_recovery_obligations_preserved: true
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  human_gate_before_adoption_required: true
+combined_occurrence_extension_contract:
+  schema_id: "minimal_proposal_only_combined_occurrence_extension_law_contract_v1"
+  formal_domain_count: 10
+  formal_object_count: 12
+  formal_map_count: 10
+  theorem_target_count: 6
+  proof_obligation_count: 16
+  failure_branch_count: 14
+  exact_control_count: 6
+  attachment_semantic_mode_count: 1
+  permitted_result_types:
+    - "proposal_only_combined_occurrence_extension_law_constructed_pending_smuggling_audit"
+    - "source_category_typing_obstruction"
+    - "source_provenance_obstruction"
+    - "functoriality_or_nonempty_extension_obstruction"
+    - "automorphism_fixed_point_or_attachment_obstruction"
+    - "conservativity_or_material_distinctness_obstruction"
+  exact_controls:
+    - "two-point C2 torsor with no fixed point"
+    - "three-point C2 action with exactly one fixed point"
+    - "connected two-object groupoid transport coherence"
+    - "same-old-reduct distinct-expansion nonselection"
+    - "output-relative-arrow falsifier"
+    - "desired-P4-back-edge falsifier"
+  no_fog_requirement: "Return exactly one permitted result and identify complete theorem hypotheses or the first failed primitive."
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "formalize_v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  family_identity_sha256: "71f31372d0ae224b6f43c3ed808563b57ff54e84e961e42d6be3d6af409c0d8f"
+  assumption_sha256es:
+    - "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - "ee8d32b96655a9c234c3213a7aa8450b8ed278c70b4ef836a933830e3929585f"
+    - "71f31372d0ae224b6f43c3ed808563b57ff54e84e961e42d6be3d6af409c0d8f"
+    - "d0ad866ccf9791487e5a7a04d23acf482581609d2a017206799fa13296bd8e62"
+    - "2090122b675f8e236dc45bca044b27aa77ff82a483b383ba99a5c2d5903359c5"
+  route_kind: "candidate_construction"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+    - "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+    - "NDCL-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY"
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V22-P4-T02-B2-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW"
+    material_difference_basis: "The packet types the combined extension carrier and its one attachment law, rather than reconstructing any frozen response family or replaying the earlier token-kernel law."
+    reconstructs_frozen_candidate: false
+  authority_limits:
+    local_family_freeze_preserved: true
+    all_local_freezes_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered draft/control proposal-only combined occurrence-extension law theorem or exact obstruction manuscript"
+      - "one typed formal record and exact finite groupoid control family"
+    project_system:
+      - "task-local model focused validator compact receipt LaTeX receipt provenance parent-child synthesis and standard synchronization"
+  acceptance_criteria:
+    physics:
+      - "exactly one permitted result is stated with proof and proposal boundary or first precise failed primitive"
+      - "ten domains twelve objects ten maps six theorem targets sixteen obligations fourteen branches and six controls are accounted for"
+      - "exactly one attachment semantic mode is used"
+      - "all nine freezes and every downstream claim block remain unchanged"
+    project_system:
+      - "source hashes artifacts registries backlog program state and handoff pass deterministic validation"
+      - "the registered TeX source compiles and every rendered page passes visual inspection"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the exact packet current-source boundary nine freezes and downstream locks fixed"
+      - "review child proofs countermodels provenance findings and semantic boundaries"
+      - "resolve every blocking conflict and fuse exactly one permitted result"
+      - "select at most one separately admitted successor without executing it"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260816-009/artifacts/child_phys_math_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law.yaml"
+      status: "pending"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260816-009/artifacts/child_phys_phil_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law.yaml"
+      status: "pending"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260816-009/artifacts/parent_conflict_review_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260816-009/artifacts/parent_fusion_notes_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law.md"
+    fused_output_path: "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+  rationale: "Two internal child execution units work in parallel under one outer AgentJob, one Ontology Formalizer overlay, one claim boundary, and one completion record."
+expected_outputs:
+  - "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_v1.tex"
+  - "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_record_v1.yaml"
+  - "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_controls_v1.yaml"
+  - "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_model.py"
+  - "research_control/tasks/RT-20260816-009/artifacts/child_phys_math_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law.yaml"
+  - "research_control/tasks/RT-20260816-009/artifacts/child_phys_phil_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law.yaml"
+  - "research_control/tasks/RT-20260816-009/artifacts/parent_conflict_review_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law.yaml"
+  - "research_control/tasks/RT-20260816-009/artifacts/parent_fusion_notes_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law.md"
+  - "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_provenance_manifest_v1.yaml"
+  - "research_control/tasks/RT-20260816-009/artifacts/validate_v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law.py"
+  - "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_validation.json"
+  - "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_compact_receipt.json"
+  - "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_idempotent_equation_decoration_combined_extension_selected_future_packet_v1.yaml"
+  - "research_control/tasks/RT-20260816-009/jobs/completions/AJC-AJ-RT-20260816-009-001.yaml"
+  - "research_control/handoffs/handoff-1052.yaml"
+  - "research_control/handoffs/handoff-1052.md"
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/roles/physics/smuggling-auditor.v0.2.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-1051.yaml"
+  - "research_control/handoffs/handoff-1051.md"
+  - "research_control/tasks/RT-20260816-008/**"
+  - "research_control/tasks/RT-20260816-007/**"
+  - "research_control/tasks/RT-20260816-005/**"
+  - "research_control/tasks/RT-20260816-003/**"
+  - "registries/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-1052.yaml"
+  - "research_control/handoffs/handoff-1052.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260816-009/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - ".local/**"
+forbidden_paths:
+  - "ontology/**"
+  - "papers/**"
+  - "manuscripts/**"
+  - "experiments/**"
+  - ".git/**"
+allowed_source_classes:
+  - "registered_tex"
+  - "registered_markdown"
+  - "tracked_control_state"
+  - "task_local_draft_control"
+  - "proposal_only_source_extension_data"
+forbidden_source_classes:
+  - "candidate_reconstruction"
+  - "canonical_ontology_write"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "Phi_src_semantics"
+  - "P2_T01_adequacy_reevaluation"
+  - "B2_activation_or_adoption_or_disposal"
+  - "target_atlas"
+  - "target_metric"
+  - "target_tetrad"
+  - "target_coframe"
+  - "desired_gr_cone"
+  - "physical_norm"
+  - "detector_response"
+  - "physical_probability_or_realized_event"
+  - "p4_relevance_or_irrelevance_claim"
+  - "response_bridge"
+  - "benchmark_promotion"
+  - "completed_derivation_claim"
+  - "gate_chair_verdict"
+  - "global_theory_rejection"
+  - "benchmark_success"
+  - "generated_derivative_authority"
+stop_conditions:
+  - "human gate or authority expansion becomes necessary"
+  - "active task or write-path conflict"
+  - "the proposed law can only be defined from target geometry desired P4 output empirical response or a frozen candidate"
+  - "no permitted decisive result can be supported"
+  - "validation fails without an in-scope deterministic repair"

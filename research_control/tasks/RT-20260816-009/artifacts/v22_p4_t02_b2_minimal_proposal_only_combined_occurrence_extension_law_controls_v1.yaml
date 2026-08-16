@@ -1,0 +1,75 @@
+schema_id: "v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_controls_v1"
+task_id: "RT-20260816-009"
+job_id: "AJ-RT-20260816-009-001"
+candidate_id: "CAND-V22-P4T02-B2-IDEMPOTENT-EQUATION-DECORATION-COMBINED-EXTENSION-V1"
+status: "PASS"
+control_count: 6
+controls:
+  - control_id: "CTRL-01-TWO-POINT-C2-TORSOR"
+    control_type: "fixed_point_obstruction"
+    input: "S2={a,b} with the nontrivial C2 swap."
+    expected: "The fixed locus is empty and no deterministic natural section exists."
+    observed: "The fixed locus is empty."
+    passed: true
+    falsifies: "Any claimed section without a coherent isotropy-fixed point."
+  - control_id: "CTRL-02-THREE-POINT-C2-ACTION"
+    control_type: "unique_fixed_point_witness"
+    input: "S3={r,a,b} with r fixed and a,b swapped."
+    expected: "The fixed locus is exactly {r}."
+    observed: "The fixed locus is exactly {r}."
+    passed: true
+    falsifies: "Any claim that the fixed-point criterion rejects a genuine fixed point."
+  - control_id: "CTRL-03-CONNECTED-TWO-OBJECT-GROUPOID"
+    control_type: "transport_coherence"
+    input: "Two rank-six equation fibres linked by an invertible permutation-frame arrow and its inverse."
+    expected: "Conjugation and inverse conjugation compose to identity and preserve idempotency and rank."
+    observed: "All properties hold exactly."
+    passed: true
+    falsifies: "Any transport that fails identity, inverse, composition, idempotency, or rank covariance."
+  - control_id: "CTRL-04-SAME-OLD-REDUCT-DISTINCT-EXPANSIONS"
+    control_type: "nondefinability"
+    input: "The zero and identity idempotents over one identical old source presentation."
+    expected: "The decorations differ while the old reduct is identical."
+    observed: "P=0 and P=I are distinct, transport coherent, and forgotten by Red."
+    passed: true
+    falsifies: "Old-language definitional uniqueness of the decoration or null attachment."
+  - control_id: "CTRL-05-OUTPUT-RELATIVE-ARROW-FALSIFIER"
+    control_type: "circular_naturality"
+    input: "Replace the full C2 torsor arrow class by identity arrows chosen because they preserve a token."
+    expected: "A false section appears and the arrow restriction is rejected."
+    observed: "Identity-only fixed points contrast with the full swap action's empty fixed locus."
+    passed: true
+    falsifies: "Naturality evidence derived from an output-preserving arrow subclass."
+  - control_id: "CTRL-06-DESIRED-P4-BACK-EDGE-FALSIFIER"
+    control_type: "provenance_cycle"
+    input: "Add desired P4 output as an ancestor of the null attachment while comparison depends on the attachment."
+    expected: "The provenance graph becomes cyclic."
+    observed: "The cycle is detected exactly."
+    passed: true
+    falsifies: "Carrier, admissibility, attachment, arrows, or robustness selected by desired P4 success."
+model_receipt:
+  model_path: "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_model.py"
+  model_sha256: "4fe902787652f61267b4a28b6cc08889afdf388ba14e9a12ef8a25aff4ab9615"
+  model_check_count: 24
+  model_passed_count: 24
+  model_failed_count: 0
+  payload_sha256: "c518499677b3a256ef0a10dd648261fe0b38fefd1f46013169581ea4633fedc3"
+robustness_control:
+  distance: "d_rank,O(P,Q)=sup over x in O of rank(P_x-Q_x), with zero on the empty open"
+  bound: "0<=d_rank,O<=6"
+  conjugation_invariant: true
+  restriction_nonexpansive: true
+  null_isolation: "Every nonzero idempotent has d_rank,O(P,0)>=1 on an open where it is nonzero."
+  attachment_protection: "The open rank ball of radius one about the null section contains no other idempotent."
+  perturbative_norm_claimed: false
+  continuum_stability_claimed: false
+  physical_interpretation: false
+authority_limits:
+  validation_only: true
+  source_evidence: false
+  current_ontology_derivation: false
+  source_extension_adoption: false
+  realized_occurrence: false
+  physical_probability: false
+  p4_relevance: false
+  distance_to_gr_delta: false
