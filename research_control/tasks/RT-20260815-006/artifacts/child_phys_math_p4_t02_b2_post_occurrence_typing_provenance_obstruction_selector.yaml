@@ -1,0 +1,999 @@
+schema_id: "child_phys_math_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-POST-OCCURRENCE-TYPING-PROVENANCE-OBSTRUCTION-SELECTOR-001"
+artifact_type: "parent_child_synthesis_child_output"
+authority: "science_draft"
+status: "complete_for_parent_synthesis"
+status_label: "draft/control"
+task_id: "RT-20260815-006"
+job_id: "AJ-RT-20260815-006-001"
+decision_id: "DDR-20260815-006"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260815-006"
+claim_boundary_id: "CB-V22-P4-T02-B2-POST-OCCURRENCE-TYPING-PROVENANCE-OBSTRUCTION-THEORETICAL-SELECTION-001"
+selected_input_packet_id: "PKT-V22-P4T02-B2-POST-OCCURRENCE-ADMISSIBILITY-TYPING-PROVENANCE-OBSTRUCTION-THEORETICAL-CONTINUATION-SELECTION-V1"
+created_at: "2026-08-15T22:51:25Z"
+source_head: "f12c4bc85a3ca58e544a31a7a39bad67b726c954"
+source_tree: "cd8fde41bcd5812e1a350d222d5cd2d1a82babc1"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Choose one materially distinct same-milestone continuation after the current-source proposal-carrier typing and provenance obstruction."
+route_label: "ordinary-research-packet"
+
+ownership_boundary:
+  owned_path: "research_control/tasks/RT-20260815-006/artifacts/child_phys_math_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector.yaml"
+  files_written_count: 1
+  other_files_modified: false
+  peer_child_file_inspected: false
+  parent_artifact_modified: false
+  task_or_job_modified: false
+  role_overlay_modified: false
+  registry_modified: false
+  handoff_modified: false
+  completion_created: false
+  program_state_modified: false
+  generated_output_modified: false
+  selected_packet_executed: false
+  child_agentjob_created: false
+
+execution_controls:
+  outer_agentjob_count: 1
+  internal_child_count: 2
+  child_agentjob_count: 0
+  compared_route_count: 4
+  selected_route_count: 1
+  selected_packet_count: 1
+  selected_packet_status: "selected_not_executed"
+  inherited_conditional_theorem_count: 5
+  inherited_freeze_count: 8
+  distance_to_gr_row_count: 14
+  literal_no_delta_row_count: 14
+  formal_domain_count: 10
+  formal_object_count: 14
+  formal_map_count: 14
+  new_mathematical_payload_count: 5
+  exact_control_count: 6
+  proof_obligation_count: 16
+  failure_branch_count: 12
+  score_criterion_count: 6
+  constructive_preference_applied: true
+  material_distinctness_required: true
+  source_extension_classification_required: true
+  frozen_route_reconstructed_repaired_audited_stressed_or_replayed: false
+  d7_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked_or_executed: false
+  canonical_ontology_modified: false
+  source_law_or_occurrence_law_adopted: false
+  physical_or_empirical_semantics_added: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  global_no_go_claimed: false
+  future_extension_impossibility_claimed: false
+
+source_binding:
+  binding_note: "Tracked control state, registered RT003 fusion sources, fixed RT003 records, role contracts, plan, burden map, and current registry rows govern this child analysis. Retrieval and generated memory layers are not authority."
+  hash_algorithm: "sha256"
+  governing_source_count: 31
+  governing_sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      authority: "control"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      authority: "control"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      authority: "control"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      authority: "workflow_contract"
+    - path: ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+      sha256: "85550a50a4be3fc2b1fbf6e22b22c160b25923944276d0b555e75fb10380ff79"
+      authority: "role_contract"
+    - path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+      sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+      authority: "candidate_next_role_contract"
+    - path: ".agents/roles/physics/refuter.v0.2.0.md"
+      sha256: "01b7897ecf5861d952d7349e3eb743feed6f178112264de73f5226d3c88946fc"
+      authority: "candidate_next_role_contract"
+    - path: "research_control/tasks/RT-20260815-006/00_TASK.yaml"
+      sha256: "e477dea270cfbc5b81e04ccbc50bde6d6464f9c6b8cde80c5312e046101692d6"
+      authority: "tracked_control_state_active"
+    - path: "research_control/tasks/RT-20260815-006/DDR-20260815-006.md"
+      sha256: "2f121ee28323146e17bcfeec1abdf570b18de7c08a091482b2f0d9ce3b05268f"
+      authority: "tracked_control_state_active"
+    - path: "research_control/tasks/RT-20260815-006/jobs/AJ-RT-20260815-006-001.yaml"
+      sha256: "2c659affca8fb37351b6e61c7f11caaf41ee268f5095d657e382b3734336754a"
+      authority: "tracked_control_state_active"
+    - path: "research_control/tasks/RT-20260815-006/roles/theoretical-continuation-selector@0.1.0--RT-20260815-006.yaml"
+      sha256: "b4dc5780752e433d772c2bf32a6f3b2a0bbdd9f7e10a0fbc402d282220b9f597"
+      authority: "execution_role_active"
+    - path: "research_control/handoffs/handoff-1039.yaml"
+      sha256: "d839ed55c99054af7839c20d8394091bcb5ce9d79c88ca7562e73ea66ffb84e6"
+      authority: "tracked_control_state"
+    - path: "research_control/handoffs/handoff-1039.md"
+      sha256: "34d5f2a87f4e6c10ed5dfd8989773da97e8057e1368bbc81054ff7f08468d3e9"
+      authority: "tracked_control_state"
+    - path: "research_control/tasks/RT-20260815-003/jobs/completions/AJC-AJ-RT-20260815-003-001.yaml"
+      sha256: "9bdf3ec4261f5507981f24e96001e2353233a868a2b2c5d5df1666070a838087"
+      authority: "completed_control_state"
+    - path: "research_control/tasks/RT-20260815-003/artifacts/parent_fusion_notes_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel.md"
+      sha256: "54f91f607269d6bdf9f69cc30d7fbf2dcfb77bb1efe4d7c81fd335e92dddaa09"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260815-003/artifacts/v22_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel_v1.tex"
+      sha256: "0853ee5a77184e6e7a82663b16c3339810bb48946a2421f8e796e5d9df7f7d14"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260815-003/artifacts/v22_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel_record_v1.yaml"
+      sha256: "1dc7d95b6e7e2d7be47cbfea64c66a5f2e6751af00f29af495245044cbcbb2a6"
+      authority: "fixed_task_local_science_draft"
+    - path: "research_control/tasks/RT-20260815-003/artifacts/v22_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel_controls_v1.yaml"
+      sha256: "38cc940bfffd9874f01b5cfa2118c02556709f6b6bd890e3e4575e54f3e2fcce"
+      authority: "fixed_task_local_science_draft"
+    - path: "research_control/tasks/RT-20260815-003/artifacts/v22_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel_provenance_manifest_v1.yaml"
+      sha256: "5127c11e3f216347592b40cbaecd60c6436b30c6f135f89dd75b4573dbe778ed"
+      authority: "control_receipt"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      authority: "registered_project_control"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      authority: "control"
+    - path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+      sha256: "562405dd78a03efde831806323081285c7850ee18dbeb2a6b6ecf900417c814c"
+      authority: "control"
+    - path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+      sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789"
+      authority: "control_schema"
+    - path: "registries/TEX_SOURCE_REGISTRY.csv"
+      sha256: "7d0fb6785e4dab3a5c966c8cd5719742fc1b0ef2daadacfb14a847e89c0272a3"
+      authority: "registry"
+    - path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      sha256: "a94a5ab1c5919100ad6e19b3fd79c69a3fa0a33d810f5ced3c37817b59017998"
+      authority: "registry"
+    - path: "registries/ROLE_EXECUTION_REGISTRY.csv"
+      sha256: "bc9e37e61d1bd9784e7a437bed67e8649cc25b661056ab3eadb0c8845c6316a2"
+      authority: "registry"
+    - path: "registries/AGENT_JOB_REGISTRY.csv"
+      sha256: "6c22d4ad039c2a46c73af13f11eb06bd80a470ea0b970957a3d4ce738068153c"
+      authority: "registry"
+    - path: "registries/RESEARCH_TASK_REGISTRY.csv"
+      sha256: "6e7cbb58ab8666e3538d8d5f4d4dbdd4a0145e47a3b408500ab983f5ba15ba67"
+      authority: "registry"
+    - path: "registries/DIRECTOR_DECISION_REGISTRY.csv"
+      sha256: "ee3ff0340d11381bfbe7e74b690ea5678c8ed78f30ed68adc95f15db4da7da27"
+      authority: "registry"
+    - path: "registries/CLAIM_BOUNDARY_REGISTRY.csv"
+      sha256: "c4eacb6945a35bddc6c1ff564553057009630045e77f7075552a3b851efa7f22"
+      authority: "registry"
+    - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+      authority: "registry"
+  registry_row_checks:
+    rt006_task_row_present: true
+    rt006_decision_row_present: true
+    rt006_agentjob_row_present: true
+    rt006_role_overlay_row_present: true
+    rt006_claim_boundary_row_present: true
+    rt003_tex_object_id: "TEX-V22-P4-T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1"
+    rt003_tex_registered_hash_matches: true
+    rt003_markdown_object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1"
+    rt003_markdown_registered_hash_matches: true
+    distance_to_gr_ledger_row_count: 14
+
+inherited_fixed_result:
+  result_type: "current_source_provenance_or_typing_obstruction"
+  obstruction_id: "OB-V22-P4T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-CURRENT-SOURCE-TYPING-PROVENANCE-001"
+  current_source_groupoid: "SmoothMan_4^iso"
+  first_missing_primitive: "target-free current-source-derived proposal-fiber pseudofunctor F_prop, equivalently a nonvacuous Prop carrier with U and coherent source-arrow transport"
+  current_source_general_proposal_carrier_formed: false
+  current_source_occurrence_law_derived: false
+  conditional_theorems_preserved: true
+  scoped_obstruction_only: true
+  conservative_continuation_open: true
+  global_no_go: false
+  changed_by_this_selector: false
+
+inherited_conditional_theorem_preservation:
+  theorem_count: 5
+  all_preserved_unchanged: true
+  rows:
+    - theorem_id: "THM-RT003-SECTION-FIXED-POINT-001"
+      theorem_name: "GroupoidDeterministicSectionFixedPointCriterion"
+      preservation_status: "preserved_unchanged"
+      selector_use: "Applied only to the canonical Open fiber after its independent definitional formation; no general Prop instance is asserted."
+    - theorem_id: "THM-RT003-INVARIANT-SUBFUNCTOR-001"
+      theorem_name: "InvariantAdmissibleSubfunctorCriterion"
+      preservation_status: "preserved_unchanged"
+      selector_use: "Retained as a conditional classification; no proper admissible subfunctor is derived."
+    - theorem_id: "THM-RT003-EQUIVARIANT-KERNEL-001"
+      theorem_name: "EquivariantOccurrenceKernelCriterion"
+      preservation_status: "preserved_unchanged"
+      selector_use: "Used only for a conditional nonuniqueness fixture on a declared discrete measurable fiber."
+    - theorem_id: "THM-RT003-KERNEL-DESCENT-001"
+      theorem_name: "LocalOccurrenceDescentCriterion"
+      preservation_status: "preserved_unchanged"
+      selector_use: "Distinguished from the unconditional sheaf descent of open subsets."
+    - theorem_id: "THM-RT003-SAME-REDUCT-FACTORIZATION-001"
+      theorem_name: "CurrentSourceProvenanceFactorCriterion"
+      preservation_status: "preserved_unchanged"
+      selector_use: "Any later occurrence law over the Open carrier must still factor through current-source data and remain fiber-constant under unchanged reducts."
+
+exclusive_selector_verdict:
+  verdict_type: "theoretical_packet_selection"
+  verdict_count: 1
+  selected_route_id: "A_CANONICAL_SOURCE_OPEN_EVENT_FIBRATION_TYPING_DESCENT_PRECURSOR"
+  selected_packet_id: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+  selected_packet_type: "bounded_theoretical_calculation"
+  selected_route_label: "ordinary-research-packet"
+  selected_next_role: "ontology-formalizer@0.2.0"
+  selected_status: "selected_not_executed"
+  selection_rationale: "Route A is the unique maximizer under the declared six-criterion score. It constructs a canonical target-free carrier from topology already included in each smooth source manifold, has exact restriction and gluing theorems, and moves the first question from carrier formation to occurrence-law selection without introducing a new ontology primitive. Routes B and C remain lawful later alternatives, while Route D is premature because Route A is non-promotional and executable without protected authority."
+  no_fog_check: true
+  no_fog_explanation: "The next packet must formalize the Grothendieck bifibration of open subsets, prove source-cover descent and the connected-source trivial-section classification, and determine exactly which part is a conservative definitional precursor. It does not construct or adopt an occurrence law."
+
+conflict_resolution_revision:
+  round: 1
+  revision_kind: "identity_only"
+  prior_descriptive_alias: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-PRECURSOR-V1"
+  canonical_packet_id: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+  resolution: "The precursor wording is retained only as a descriptive alias; the live model identity is canonical everywhere in decision-bearing fields."
+  verdict_science_packet_type_route_role_status_unchanged: true
+  unresolved_conflict_count: 0
+
+physics_progress_status:
+  status: "selector_only_no_distance_delta"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Choose one materially distinct same-milestone continuation after the current-source proposal-carrier typing and provenance obstruction."
+  explanation: "The selector chooses one canonical current-topology formation precursor. It constructs no physical event, occurrence generator, geometry, metric, coupling, or field equation and changes no Distance-to-GR status."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+theoretical_decision_output:
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  selected_packet_id: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+  selected_route_id: "A_CANONICAL_SOURCE_OPEN_EVENT_FIBRATION_TYPING_DESCENT_PRECURSOR"
+  selected_route_label: "ordinary-research-packet"
+  selected_next_role: "ontology-formalizer@0.2.0"
+  decision_basis: "A canonical Open carrier is definable functorially from the topology of the already typed smooth source manifold, while a measurable occurrence generator is not. Exact bifibration, descent, natural-section, and kernel-nonuniqueness lemmas make the precursor decidable and materially distinct from RT003's general proposal-carrier formation obstruction."
+  theoretical_method: "Category-of-elements construction, inverse-image sheaf descent, diffeomorphism-transitivity classification, exact rational overlap fixtures, and invariant-measure nonuniqueness control."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "No protected authority is needed to study a conservative definitional construction from current smooth topology; ontology or occurrence-law adoption remains outside the packet."
+  source_extension_category: "conservative_definitional_extension_from_existing_smooth_topology"
+  source_extension_import_classification: "target_free_current_source_topology_only"
+  decision_consequence: "If the precursor is typed, the narrow Open carrier formation burden is discharged while occurrence selection remains underived; if its current-source site or variance cannot be typed, the packet must return the first precise formation obstruction without opening Route C by fiat."
+  selected_packet_executed: false
+
+score_rubric:
+  criterion_count: 6
+  scale_minimum: 0
+  scale_maximum: 4
+  tie_break_rule: "Prefer higher constructive_yield, then lower ontology_authority_cost, then higher exact_tractability."
+  criteria:
+    - criterion_id: "constructive_yield"
+      description: "Produces a named source-side object or theorem precursor rather than only a stop."
+    - criterion_id: "material_distinctness"
+      description: "Does not restate RT003 or reopen any of the eight frozen families."
+    - criterion_id: "current_source_provenance"
+      description: "Uses only already typed source data and no target or desired-output import."
+    - criterion_id: "exact_tractability"
+      description: "Has finite or exact proof obligations and decisive falsifiers."
+    - criterion_id: "roadmap_decision_consequence"
+      description: "Changes the identity of the next missing object or closes a scoped branch."
+    - criterion_id: "freeze_and_authority_safety"
+      description: "Preserves freezes, adoption blocks, and downstream locks at low authority cost."
+
+route_comparison:
+  route_count: 4
+  exactly_job_fixed_routes_compared: true
+  routes:
+    - route_id: "A_CANONICAL_SOURCE_OPEN_EVENT_FIBRATION_TYPING_DESCENT_PRECURSOR"
+      route_name: "Canonical current-topology Open event-carrier typing and descent precursor"
+      packet_type: "bounded_theoretical_calculation"
+      next_role_family: "ontology-formalizer@0.2.0"
+      constructive_status: "constructive_definitional_precursor"
+      source_extension_classification: "conservative_definitional_extension"
+      current_source_basis: "The topology and diffeomorphisms included in the typed smooth four-manifold primitive."
+      exact_payload: "Form Open_!:SmoothMan_4^iso->FrmIso, its category of elements, inverse-image restrictions on source opens, exact cover descent, componentwise trivial natural sections on connected sources, and a conditional invariant-kernel nonuniqueness control."
+      material_difference: "RT003 proved that no general proposal pseudofunctor is declared. Route A asks whether one narrow canonical fiber is already definable from existing topology and keeps occurrence generation separate."
+      decision_consequence: "Replaces the broad carrier-formation question for this one canonical fiber by the sharper question of source-derived nontrivial occurrence or admissibility law."
+      principal_falsifier: "Failure to type the required source-open restriction site or functorial direct-image and inverse-image maps from the current smooth source definition would force a precise obstruction."
+      constructive_yield_score: 4
+      material_distinctness_score: 4
+      current_source_provenance_score: 4
+      exact_tractability_score: 4
+      roadmap_decision_consequence_score: 4
+      freeze_and_authority_safety_score: 4
+      total_score: 24
+      disposition: "selected_not_executed"
+    - route_id: "B_CURRENT_SOURCE_OCCURRENCE_IRRELEVANCE_THEOREM"
+      route_name: "Materially new current-source occurrence irrelevance theorem"
+      packet_type: "source_side_irrelevance_theorem"
+      next_role_family: "refuter@0.2.0"
+      constructive_status: "negative_theorem_path"
+      source_extension_classification: "current_ontology_theorem_no_extension"
+      current_source_basis: "Full-diffeomorphism naturality on connected smooth source manifolds."
+      exact_payload: "Prove that any natural selected open subset is empty or the whole source and state the precise occurrence-law class thereby excluded."
+      material_difference: "This would be a current-source irrelevance theorem beyond RT003's prior formation obstruction, but its central open-fiber control can be tested within Route A before selecting a negative-only packet."
+      decision_consequence: "Would freeze only the natural nontrivial Open-section occurrence class and leave richer source extensions open."
+      principal_falsifier: "A typed marked point or another independently source-derived symmetry breaker admits a proper natural open under the reduced automorphism group."
+      constructive_yield_score: 1
+      material_distinctness_score: 4
+      current_source_provenance_score: 4
+      exact_tractability_score: 4
+      roadmap_decision_consequence_score: 3
+      freeze_and_authority_safety_score: 4
+      total_score: 20
+      disposition: "not_selected"
+    - route_id: "C_PROPOSAL_ONLY_MEASURABLE_FIBER_OCCURRENCE_LAW_EXTENSION"
+      route_name: "Proposal-only measurable-fiber occurrence-law extension"
+      packet_type: "ontology_law_research_packet"
+      next_role_family: "ontology-formalizer@0.2.0"
+      constructive_status: "constructive_new_primitive"
+      source_extension_classification: "new_ontology_primitive_proposal_only"
+      current_source_basis: "Not derivable from the exact current signature; requires declared measurable fibers, transport, restrictions, and Gen_occ."
+      exact_payload: "Propose a target-free measurable proposal pseudofunctor and occurrence generator with covariance, normalization, descent, same-reduct factorization, robustness, and later audit obligations."
+      material_difference: "It supplies the primitive RT003 found missing, but only as disclosed proposal-only source-extension data."
+      decision_consequence: "Could create a candidate law for later Smuggling Audit, stress, and human-gated adoption."
+      principal_falsifier: "Same-reduct opposite labels, target-dependent sigma algebras, failure of overlap descent, or nonrobust kernels defeat the candidate."
+      constructive_yield_score: 4
+      material_distinctness_score: 4
+      current_source_provenance_score: 1
+      exact_tractability_score: 2
+      roadmap_decision_consequence_score: 4
+      freeze_and_authority_safety_score: 2
+      total_score: 17
+      disposition: "not_selected_higher_assumption_cost"
+    - route_id: "D_PROTECTED_HUMAN_GATED_ONTOLOGY_CHANGE_REQUIRED"
+      route_name: "Protected human-gated ontology stop"
+      packet_type: "human_gated_ontology_change_required"
+      next_role_family: "human_gate"
+      constructive_status: "protected_stop"
+      source_extension_classification: "no_extension_selected_human_authority_required"
+      current_source_basis: "Authority route only; supplies no mathematical carrier or law."
+      exact_payload: "Record that continuation requires protected canonical ontology or adoption authority after every non-promotional route is unavailable."
+      material_difference: "It changes authority state rather than supplying a source-side mathematical payload."
+      decision_consequence: "Would stop autonomous continuation pending a protected decision."
+      principal_falsifier: "The existence of any lawful bounded non-promotional route, including Route A, defeats the necessity criterion."
+      constructive_yield_score: 0
+      material_distinctness_score: 2
+      current_source_provenance_score: 4
+      exact_tractability_score: 4
+      roadmap_decision_consequence_score: 1
+      freeze_and_authority_safety_score: 4
+      total_score: 15
+      disposition: "not_selected_premature"
+
+formal_domains:
+  domain_count: 10
+  domains:
+    - domain_id: "DOM-01"
+      name: "SmoothMan4Iso"
+      definition: "The groupoid of nonempty smooth four-manifolds and all diffeomorphisms."
+    - domain_id: "DOM-02"
+      name: "ConnectedSmoothMan4Iso"
+      definition: "The full subgroupoid on connected smooth four-manifolds used for the trivial-section theorem."
+    - domain_id: "DOM-03"
+      name: "OpenFrameFiber"
+      definition: "For M, the complete frame Open(M) of topological open subsets."
+    - domain_id: "DOM-04"
+      name: "OpenCarrierTotalCategory"
+      definition: "The category of elements of the covariant direct-image functor Open_!."
+    - domain_id: "DOM-05"
+      name: "SourceOpenEmbeddingSite"
+      definition: "Source opens and open embeddings, used only for inverse-image restriction and cover descent."
+    - domain_id: "DOM-06"
+      name: "CompatibleOpenCoverData"
+      definition: "Open covers with local open subsets agreeing on every pairwise overlap."
+    - domain_id: "DOM-07"
+      name: "NaturalOpenSectionSpace"
+      definition: "Natural sections of the Open carrier over a fixed connected groupoid component."
+    - domain_id: "DOM-08"
+      name: "ConditionalDiscreteKernelSpace"
+      definition: "Probability measures on a declared powerset measurable structure over Open(M), used only as a nonuniqueness control."
+    - domain_id: "DOM-09"
+      name: "FourRouteDecisionSpace"
+      definition: "The four routes fixed by AJ-RT-20260815-006-001 with six exact scores each."
+    - domain_id: "DOM-10"
+      name: "SelectedFuturePacketBoundary"
+      definition: "The unexecuted Route A packet and its formalization obligations."
+
+formal_objects:
+  object_count: 14
+  objects:
+    - object_id: "OBJ-01"
+      name: "M"
+      type: "object of SmoothMan4Iso"
+    - object_id: "OBJ-02"
+      name: "Open(M)"
+      type: "complete frame of source-topological opens"
+    - object_id: "OBJ-03"
+      name: "Open_!"
+      type: "covariant functor from SmoothMan4Iso to frame isomorphisms"
+    - object_id: "OBJ-04"
+      name: "IntegralOpen"
+      type: "Grothendieck category of elements of Open_!"
+    - object_id: "OBJ-05"
+      name: "pi_Open"
+      type: "discrete bifibration from IntegralOpen to SmoothMan4Iso"
+    - object_id: "OBJ-06"
+      name: "OpenRestrictionPresheaf"
+      type: "contravariant inverse-image assignment on source opens"
+    - object_id: "OBJ-07"
+      name: "CompatibleFamily(A_i)"
+      type: "cover-indexed local opens satisfying overlap equality"
+    - object_id: "OBJ-08"
+      name: "Glue(A_i)"
+      type: "unique global open union"
+    - object_id: "OBJ-09"
+      name: "EmptyNaturalSection"
+      type: "componentwise natural section M maps to empty"
+    - object_id: "OBJ-10"
+      name: "TotalNaturalSection"
+      type: "componentwise natural section M maps to M"
+    - object_id: "OBJ-11"
+      name: "DeltaEmpty"
+      type: "conditional invariant Dirac kernel at the empty open"
+    - object_id: "OBJ-12"
+      name: "DeltaTotal"
+      type: "conditional invariant Dirac kernel at the total open"
+    - object_id: "OBJ-13"
+      name: "K_lambda"
+      type: "conditional convex family lambda DeltaEmpty plus (1-lambda) DeltaTotal"
+    - object_id: "OBJ-14"
+      name: "RouteASelectionRecord"
+      type: "one unexecuted theoretical packet selection"
+
+formal_maps:
+  map_count: 14
+  maps:
+    - map_id: "MAP-01"
+      signature: "f_*:Open(M)->Open(N), A maps to f(A)"
+      status: "formed_for_each_diffeomorphism"
+    - map_id: "MAP-02"
+      signature: "f^*:Open(N)->Open(M), B maps to f^{-1}(B)"
+      status: "formed_and_inverse_to_f_*"
+    - map_id: "MAP-03"
+      signature: "Open_!:SmoothMan4Iso->FrmIso"
+      status: "selector_lemma_constructed"
+    - map_id: "MAP-04"
+      signature: "pi_Open:IntegralOpen->SmoothMan4Iso"
+      status: "selector_lemma_constructed"
+    - map_id: "MAP-05"
+      signature: "cocart_f:(M,A)->(N,f(A))"
+      status: "unique_cocartesian_lift"
+    - map_id: "MAP-06"
+      signature: "cart_f:(M,f^{-1}(B))->(N,B)"
+      status: "unique_cartesian_lift"
+    - map_id: "MAP-07"
+      signature: "res_VU:Open(U)->Open(V), A maps to A intersect V"
+      status: "formed_for_source_open_inclusions"
+    - map_id: "MAP-08"
+      signature: "Glue:{A_i compatible}->union_i A_i"
+      status: "proved_unique"
+    - map_id: "MAP-09"
+      signature: "sigma_empty:1=>Open_!"
+      status: "natural_trivial_section"
+    - map_id: "MAP-10"
+      signature: "sigma_total:1=>Open_!"
+      status: "natural_trivial_section"
+    - map_id: "MAP-11"
+      signature: "delta_empty:PowerSet(Open(M))->[0,1]"
+      status: "conditional_control_kernel"
+    - map_id: "MAP-12"
+      signature: "delta_total:PowerSet(Open(M))->[0,1]"
+      status: "conditional_control_kernel"
+    - map_id: "MAP-13"
+      signature: "lambda maps to K_lambda=lambda delta_empty+(1-lambda) delta_total"
+      status: "injective_conditional_kernel_family"
+    - map_id: "MAP-14"
+      signature: "Select:{A,B,C,D}->A"
+      status: "selector_decision_only"
+
+new_mathematical_payload:
+  payload_count: 5
+  items:
+    - payload_id: "NMP-RT015-006-001"
+      payload_type: "definition_and_lemma"
+      object_name: "CanonicalOpenCarrierBifibration"
+      statement: "For every diffeomorphism f:M->N, direct image is a frame isomorphism Open(M)->Open(N). The category of elements of Open_! projects to SmoothMan4Iso as a discrete bifibration."
+      assumptions: "M and N are smooth four-manifolds and f is a diffeomorphism."
+      proof: "A diffeomorphism is a homeomorphism, so direct image and inverse image preserve arbitrary unions and finite intersections and are mutually inverse. In the category of elements an arrow over f from (M,A) must end at (N,f(A)), giving a unique cocartesian lift; for an object (N,B), (M,f^{-1}(B))->(N,B) is the unique cartesian lift."
+      falsifier: "For a general non-open smooth map, direct image need not preserve openness, so the stated variance would fail; the packet is restricted to diffeomorphisms for the bifibration and inverse images for restrictions."
+    - payload_id: "NMP-RT015-006-002"
+      payload_type: "theorem_with_proof"
+      object_name: "OpenSubsetCoverDescent"
+      statement: "If {U_i} covers M and A_i is open in U_i with A_i intersect U_j equal to U_i intersect A_j for all i,j, then A=union_i A_i is the unique open subset of M satisfying A intersect U_i=A_i."
+      assumptions: "Each U_i is open in M and the pairwise overlap equalities hold."
+      proof: "Each A_i is open in M because it is open in the open subspace U_i, hence their union A is open. Compatibility gives A intersect U_i subset A_i, while A_i subset A intersect U_i is immediate. Any other global open with the same restrictions equals the union of those restrictions and therefore equals A."
+      falsifier: "Opposite local choices on a nonempty overlap violate the equality and cannot be restrictions of one global open."
+    - payload_id: "NMP-RT015-006-003"
+      payload_type: "theorem_with_proof"
+      object_name: "ConnectedFullDiffeomorphismNaturalOpenSectionClassification"
+      statement: "On each connected component of ConnectedSmoothMan4Iso, every natural section of Open_! is fiberwise either the empty open or the whole manifold."
+      assumptions: "Sources are connected and naturality is required for all diffeomorphisms."
+      proof: "At a representative M, naturality makes A_M invariant under Diff(M). Connected smooth manifolds are diffeomorphism-point-transitive: a path between two points can be covered by coordinate balls and compactly supported local moves composed along the path. If A_M is nonempty and contains x, transitivity sends x to every y, so invariance implies A_M=M; otherwise A_M is empty. RT003 transport then determines the same alternative throughout the component."
+      falsifier: "With a marked source point p and only point-preserving diffeomorphisms, M minus {p} is a proper nonempty invariant open, showing that the full-diffeomorphism and bare-source hypotheses are essential."
+    - payload_id: "NMP-RT015-006-004"
+      payload_type: "conditional_countermodel"
+      object_name: "OpenCarrierDoesNotDetermineOccurrenceKernel"
+      statement: "After conditionally equipping Open(M) with the powerset sigma algebra, equivariance and normalization admit the distinct kernels delta_empty, delta_total, and every K_lambda=lambda delta_empty+(1-lambda) delta_total. Therefore carrier formation plus equivariance does not determine a unique occurrence kernel."
+      assumptions: "The measurable structure is declared only for this control; no physical probability or current-source generator is inferred."
+      proof: "The empty and total opens are fixed by every diffeomorphism, so both Dirac measures and their convex mixtures are invariant and normalized. Distinct lambda give distinct mass to the singleton {empty}."
+      falsifier: "An additional independently source-derived law fixing lambda could select one kernel, but that law is not contained in the carrier, covariance, or normalization constraints."
+    - payload_id: "NMP-RT015-006-005"
+      payload_type: "packet_selection"
+      object_name: "CanonicalSourceOpenEventFibrationTypingDescentPrecursorPacket"
+      statement: "The unique selected next packet is Route A under ontology-formalizer@0.2.0, bounded_theoretical_calculation, and selected_not_executed status."
+      assumptions: "All four route scores, constructive preference, eight freezes, and the RT003 obstruction remain fixed."
+      proof: "Route A scores 24 of 24 and strictly exceeds Routes B, C, and D at 20, 17, and 15. It is constructive, target-free, exact, and lower-assumption than Route C, while Route D's necessity condition is false because Route A is available."
+      falsifier: "A demonstrated inability to type smooth-topology opens or their restriction site from the current source would invalidate Route A and require the future packet's precise-obstruction branch; it does not authorize automatic substitution of Route C."
+
+exact_controls:
+  control_count: 6
+  controls:
+    - control_id: "CTRL-A1-R4-TRANSLATION-TRIVIALITY"
+      fixture: "M=R^4 with every translation T_a(x)=x+a."
+      exact_result: "Any translation-invariant open A is empty or R^4: if x is in A, T_(y-x)(x)=y is in A for every y."
+      falsifies: "A claim that bare full-symmetry naturality selects a proper nonempty open on R^4."
+    - control_id: "CTRL-A2-MARKED-POINT-SCOPE"
+      fixture: "M=R^4 with marked point p=0 and only p-preserving diffeomorphisms."
+      exact_result: "R^4 minus {0} is a proper nonempty invariant open."
+      falsifies: "Any overread of the trivial-section theorem after adding independently typed symmetry-breaking source data."
+    - control_id: "CTRL-A3-RATIONAL-COVER-GLUING"
+      fixture: "U_minus={x0<1}, U_plus={x0>-1}, A_minus={x0<0} intersect U_minus, A_plus={x0<0} intersect U_plus."
+      exact_result: "The local opens agree on the overlap and glue uniquely to {x0<0}."
+      falsifies: "A claim that canonical open-subset descent requires a target atlas, metric, or occurrence law."
+    - control_id: "CTRL-A4-RATIONAL-OVERLAP-MISMATCH"
+      fixture: "Use the same cover with B_minus={x0<0} intersect U_minus and B_plus={x0<1/2} intersect U_plus."
+      exact_result: "They disagree for overlap points with 0<=x0<1/2, so no global open has both restrictions."
+      falsifies: "A claim that arbitrary local carrier values glue without overlap equality."
+    - control_id: "CTRL-A5-RATIONAL-KERNEL-NONUNIQUENESS"
+      fixture: "K_1/3=(1/3)delta_empty+(2/3)delta_total and K_2/3=(2/3)delta_empty+(1/3)delta_total."
+      exact_result: "Both are normalized and Diff(M)-invariant but are unequal because their mass at {empty} differs."
+      falsifies: "A claim that carrier plus covariance plus normalization uniquely determines a kernel."
+    - control_id: "CTRL-A6-CARRIER-LAW-SEPARATION"
+      fixture: "Hold M, Open(M), pi_Open, restrictions, and gluing fixed while choose delta_empty or delta_total as the conditional kernel."
+      exact_result: "The identical carrier supports opposite normalized invariant laws, so the law does not invert uniquely from carrier data."
+      falsifies: "A claim that typing Open(M) already derives admissibility, occurrence, physical probability, or a realized token."
+
+proof_obligation_audit:
+  obligation_count: 16
+  discharged_selector_level_count: 16
+  obligations:
+    - obligation_id: "PO-01"
+      status: "discharged_selector_level"
+      evidence: "Exactly the four job-fixed routes A, B, C, and D are compared."
+    - obligation_id: "PO-02"
+      status: "discharged_selector_level"
+      evidence: "The RT003 obstruction identity and its scoped current-ontology meaning are preserved unchanged."
+    - obligation_id: "PO-03"
+      status: "discharged_selector_level_future_packet_must_formalize"
+      evidence: "Direct image and inverse image are typed with their distinct variances and exact hypotheses."
+    - obligation_id: "PO-04"
+      status: "discharged_selector_level_future_packet_must_formalize"
+      evidence: "The category-of-elements projection is proved a discrete bifibration over the source groupoid."
+    - obligation_id: "PO-05"
+      status: "discharged_selector_level_future_packet_must_formalize"
+      evidence: "Restriction by inverse image and exact open-cover descent are proved."
+    - obligation_id: "PO-06"
+      status: "discharged_selector_level_future_packet_must_formalize"
+      evidence: "Connectedness and full-diffeomorphism naturality are explicit in the trivial-section theorem."
+    - obligation_id: "PO-07"
+      status: "discharged_selector_level"
+      evidence: "The marked-point control demonstrates the theorem's exact hypothesis boundary."
+    - obligation_id: "PO-08"
+      status: "discharged_selector_level"
+      evidence: "Two rational invariant kernels prove nonuniqueness without assigning physical probability or realized occurrence."
+    - obligation_id: "PO-09"
+      status: "discharged_selector_level"
+      evidence: "Open-subset descent is explicitly separated from RT003 conditional occurrence-kernel descent."
+    - obligation_id: "PO-10"
+      status: "discharged_selector_level"
+      evidence: "All five inherited conditional theorem schemas are listed and unchanged."
+    - obligation_id: "PO-11"
+      status: "discharged_selector_level"
+      evidence: "Route A is classified as a conservative definitional extension from existing smooth topology, not a new occurrence primitive."
+    - obligation_id: "PO-12"
+      status: "discharged_selector_level"
+      evidence: "Route C is classified as a new proposal-only ontology primitive with adoption blocked."
+    - obligation_id: "PO-13"
+      status: "discharged_selector_level"
+      evidence: "Six scores are explicit for every route and Route A is the unique maximum."
+    - obligation_id: "PO-14"
+      status: "discharged_selector_level"
+      evidence: "Exactly one packet ID, packet type, route label, and next role are selected and marked unexecuted."
+    - obligation_id: "PO-15"
+      status: "discharged_selector_level"
+      evidence: "Eight freezes and fourteen literal no_delta rows are preserved with D7, B2, and P4-T03 locked."
+    - obligation_id: "PO-16"
+      status: "discharged_selector_level"
+      evidence: "No target import, canonical ontology change, adoption, physical meaning, GR promotion, publication, push, or external action is claimed."
+
+failure_branch_audit:
+  branch_count: 12
+  triggered_blocking_count: 0
+  branches:
+    - branch_id: "FB-01"
+      condition: "Direct image is asserted for a map that is not a homeomorphism or open map."
+      consequence: "Route A variance proof fails and the future packet must return a precise map-class obstruction or restrict the base category."
+      status: "not_triggered_diffeomorphism_base_explicit"
+    - branch_id: "FB-02"
+      condition: "The current smooth source primitive is found not to include its topology as typed data."
+      consequence: "Route A returns a precise current-source formation obstruction."
+      status: "not_triggered_by_current_smooth_manifold_typing"
+    - branch_id: "FB-03"
+      condition: "Local open values do not agree on overlaps."
+      consequence: "No global carrier value glues; the mismatch control records exact failure."
+      status: "controlled_not_aggregate_failure"
+    - branch_id: "FB-04"
+      condition: "Connectedness is omitted from the trivial-section theorem."
+      consequence: "Component-union invariant opens can invalidate the overbroad conclusion."
+      status: "not_triggered_connectedness_explicit"
+    - branch_id: "FB-05"
+      condition: "Naturality is weakened to a symmetry-breaking subgroup."
+      consequence: "Proper invariant opens may exist and Route B's theorem does not apply."
+      status: "controlled_by_marked_point_fixture"
+    - branch_id: "FB-06"
+      condition: "An open-subset token is called a physical or realized event."
+      consequence: "Claim-boundary failure; selected packet is invalid under its authorized scope."
+      status: "not_triggered_semantic_boundary_explicit"
+    - branch_id: "FB-07"
+      condition: "A normalized invariant kernel is treated as token selection or empirical probability."
+      consequence: "Semantic overread and authority failure."
+      status: "not_triggered_kernel_boundary_explicit"
+    - branch_id: "FB-08"
+      condition: "Route B merely restates RT003 formation failure without a new theorem and decision consequence."
+      consequence: "Material-distinctness guard rejects Route B."
+      status: "not_triggered_route_b_scoped_but_not_selected"
+    - branch_id: "FB-09"
+      condition: "Route C defines fibers, sigma algebras, or kernels from desired target geometry or labels."
+      consequence: "Forbidden target import; Route C candidate fails."
+      status: "not_triggered_route_c_not_selected"
+    - branch_id: "FB-10"
+      condition: "Route C's new primitive is represented as derived from current ontology."
+      consequence: "Current-source provenance failure and blocked adoption."
+      status: "not_triggered_classification_explicit"
+    - branch_id: "FB-11"
+      condition: "Route D is selected while any lawful non-promotional route remains available."
+      consequence: "Human-gate necessity criterion fails."
+      status: "not_triggered_route_a_available"
+    - branch_id: "FB-12"
+      condition: "Any route replays a frozen family, reevaluates D7, acts on B2, unlocks P4-T03, or executes the selected packet."
+      consequence: "Hard scope stop."
+      status: "not_triggered"
+
+source_extension_classification:
+  classification_required: true
+  selected_route_category: "conservative_definitional_extension"
+  selected_route_current_source_basis: "smooth-manifold topology and diffeomorphisms"
+  selected_route_new_ontology_primitive: false
+  selected_route_target_import: false
+  selected_route_occurrence_law_constructed: false
+  selected_route_occurrence_law_adopted: false
+  selected_route_physical_event_semantics: false
+  selected_route_status_label: "draft/control"
+  route_b_category: "current_ontology_scoped_theorem_no_extension"
+  route_c_category: "new_ontology_primitive_proposal_only"
+  route_c_adoption_status: "blocked_adoption_open_continuation"
+  route_d_category: "protected_human_gated_stop"
+  canonical_ontology_candidate_claimed: false
+  canonical_ontology_modified: false
+  physical_or_empirical_meaning: false
+  p4_t02_acceptance_credit: false
+
+freeze_preservation:
+  freeze_count: 8
+  all_freezes_preserved: true
+  new_freeze_created: false
+  frozen_route_replay_performed: false
+  rows:
+    - freeze_id: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+      status: "active_untouched"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "none_new"
+  prior_attempts_considered:
+    - "RT-20260815-003"
+    - "RT-20260815-002"
+  freeze_if:
+    - "A future packet repeats the general missing-Prop obligation without forming or precisely obstructing the canonical Open carrier."
+    - "A future packet repackages the connected-source trivial-section lemma without a new decision consequence."
+  do_not_freeze_if:
+    - "The selected packet decides the exact definitional Open bifibration and source-cover descent precursor under current topology."
+  freeze_decision: "not_frozen"
+  decision_reason: "Route A is materially distinct from RT003 because it tests one canonical carrier derivable from existing topology rather than assuming or proposing the missing general proposal fibration."
+  next_allowed_route: "theoretical_selector"
+
+distance_to_gr_delta:
+  changed: false
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "accepted"
+  new_status: "accepted"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "physical occurrence law"
+    - "P4-T02 candidate continuation verdict"
+    - "P4-T03 conformal reconstruction"
+    - "effective metric construction"
+    - "matter coupling derivation"
+    - "Einstein equations derivation"
+    - "benchmark promotion"
+  explanation: "Packet selection and a definitional carrier lemma create no Distance-to-GR delta and do not alter the ledger."
+
+distance_to_gr_status:
+  row_count: 14
+  changed: false
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      finding: "No source primitive is adopted; Open(M) is selected only for a future conservative definitional audit."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      finding: "SmoothMan_4^iso remains a mathematical audit groupoid and is not adopted as EqSrc."
+    - burden: "RetainH"
+      status: "no_delta"
+      finding: "No retention object or theorem is added."
+    - burden: "GenH"
+      status: "no_delta"
+      finding: "No source occurrence or admissibility generator is constructed."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      finding: "Open subsets receive no observer-localization or realized-event semantics."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      finding: "No response relation, detector semantics, or empirical readout is constructed."
+    - burden: "M_src"
+      status: "no_delta"
+      finding: "No new source-manifold adoption or target-spacetime identification occurs."
+    - burden: "g_eff"
+      status: "no_delta"
+      finding: "No cone, conformal class, scale, or effective metric is constructed."
+    - burden: "matter coupling"
+      status: "no_delta"
+      finding: "No propagation or universal coupling law is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      finding: "No action, variation law, stress-energy relation, or field equation is supplied."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      finding: "The selector supplies no admitted finite-variation protection law."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      finding: "No benchmark comparison or promotion occurs."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      finding: "No protected verdict or adoption authority is exercised."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      finding: "All eight inherited local freezes remain active; no new freeze or global hard fail is created."
+
+downstream_locks:
+  d7_reevaluated: false
+  d7_coverage_claimed: false
+  descriptor_instance_complete: false
+  b2_active: false
+  b2_activated: false
+  b2_disposed: false
+  b2_adopted: false
+  b2_rejected: false
+  b2_viability_claimed: false
+  b2_adequacy_claimed: false
+  b2_sufficiency_claimed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+  p4_t03_unlocked_or_executed: false
+  physical_event_constructed: false
+  occurrence_law_constructed: false
+  physical_probability_assigned: false
+  realized_occurrence_selected: false
+  physical_response_semantics_assigned: false
+  physical_time_orientation_assigned: false
+  physical_causality_assigned: false
+  conformal_class_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+
+selected_future_packet:
+  packet_id: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+  packet_type: "bounded_theoretical_calculation"
+  route_id: "A_CANONICAL_SOURCE_OPEN_EVENT_FIBRATION_TYPING_DESCENT_PRECURSOR"
+  route_label: "ordinary-research-packet"
+  next_role: "ontology-formalizer@0.2.0"
+  status: "selected_not_executed"
+  objective: "Formalize and either prove or precisely obstruct the canonical current-topology Open carrier bifibration and source-cover descent precursor; classify its connected-source natural sections; prove that carrier covariance and normalization do not determine an occurrence kernel; distinguish conservative definitional formation from occurrence, admissibility, physical meaning, and ontology adoption."
+  required_formal_objects:
+    - "SmoothMan_4^iso"
+    - "Open_! and inverse-image restriction"
+    - "IntegralOpen and pi_Open"
+    - "source-open cover descent data"
+    - "connected-source natural section space"
+    - "conditional invariant kernel control space"
+  required_terminal_branches:
+    - "canonical_open_carrier_precursor_typed_with_occurrence_law_still_underived"
+    - "precise_current_source_topology_site_or_variance_obstruction"
+    - "invalid_under_claim_boundary"
+  executed: false
+  separate_agentjob_required: true
+  successor_creation_authorized_here: false
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_occurrence_admissibility_source_law"
+  current_cycle_step: "post_typing_provenance_obstruction_theoretical_selector"
+  prior_related_tasks:
+    - "RT-20260815-003"
+    - "RT-20260815-002"
+    - "RT-20260815-001"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "The selected packet does not restate the missing general Prop grammar. It tests the canonical Open fiber already definable from source topology, with exact variance, gluing, trivial-section, and law-nonuniqueness outcomes."
+  next_role_consequence: "ontology-formalizer@0.2.0"
+
+risk_and_conflict_review:
+  risk_count: 8
+  risks:
+    - risk_id: "RISK-01"
+      risk: "The word event may be physically overread."
+      control: "Open event-carrier means mathematical open-subset syntax only."
+    - risk_id: "RISK-02"
+      risk: "Direct-image covariance and inverse-image restriction may be conflated."
+      control: "The two variances and map classes are separately typed."
+    - risk_id: "RISK-03"
+      risk: "Connectedness may be dropped from the trivial-section theorem."
+      control: "Connectedness is an explicit hypothesis and marked-point or disconnected controls delimit scope."
+    - risk_id: "RISK-04"
+      risk: "Conditional discrete measures may be represented as a current-source occurrence law."
+      control: "They are labeled conditional controls only and demonstrate nonuniqueness."
+    - risk_id: "RISK-05"
+      risk: "Route A may be mistaken for solving RT003's general proposal-fibration obstruction."
+      control: "It supplies only one narrow definitional carrier and leaves the general Prop and occurrence generator absent."
+    - risk_id: "RISK-06"
+      risk: "Route B may be replayed as a generic negative theorem."
+      control: "Any later Route B must state a new theorem class and decision consequence beyond the Open-section lemma."
+    - risk_id: "RISK-07"
+      risk: "Route C may smuggle desired output through its measurable law."
+      control: "Route C is not selected and remains a new proposal-only primitive requiring separate audit and authority."
+    - risk_id: "RISK-08"
+      risk: "Parent and children may choose semantically identical Route A packet IDs with different wording."
+      control: "Resolved identity-only in round 1: the theorem identity is canonical and the precursor wording is descriptive only."
+  scientific_conflict_count: 0
+  identity_conflict_count: 0
+  unresolved_blocking_conflict_count: 0
+  parent_precision_caveat: "The exact theorem is componentwise on connected source manifolds under all-diffeomorphism naturality. It does not exclude proper opens after extra source markings, reduced symmetry, disconnected component data, or a separately proposed occurrence law."
+
+mathematical_payload_manifest:
+  - payload_id: "NMP-RT015-006-001"
+    payload_type: "lemma"
+    object_name: "CanonicalOpenCarrierBifibration"
+    claim_status: "proved_selector_level_draft_control"
+    source_path: "research_control/tasks/RT-20260815-006/artifacts/child_phys_math_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector.yaml"
+    burden_effect: "narrows"
+    summary: "Open direct image over diffeomorphisms yields a discrete bifibration; inverse images provide restrictions."
+  - payload_id: "NMP-RT015-006-002"
+    payload_type: "theorem"
+    object_name: "OpenSubsetCoverDescent"
+    claim_status: "proved_selector_level_draft_control"
+    source_path: "research_control/tasks/RT-20260815-006/artifacts/child_phys_math_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector.yaml"
+    burden_effect: "narrows"
+    summary: "Compatible local opens glue uniquely by union."
+  - payload_id: "NMP-RT015-006-003"
+    payload_type: "theorem"
+    object_name: "ConnectedFullDiffeomorphismNaturalOpenSectionClassification"
+    claim_status: "proved_selector_level_draft_control"
+    source_path: "research_control/tasks/RT-20260815-006/artifacts/child_phys_math_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector.yaml"
+    burden_effect: "narrows"
+    summary: "Bare connected full-diffeomorphism sources admit only empty and total natural open sections."
+  - payload_id: "NMP-RT015-006-004"
+    payload_type: "countermodel"
+    object_name: "OpenCarrierKernelNonuniqueness"
+    claim_status: "exact_conditional_control"
+    source_path: "research_control/tasks/RT-20260815-006/artifacts/child_phys_math_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector.yaml"
+    burden_effect: "narrows"
+    summary: "Two exact rational invariant kernels prove that carrier plus covariance and normalization does not determine occurrence."
+  - payload_id: "NMP-RT015-006-005"
+    payload_type: "packet_selection"
+    object_name: "CanonicalSourceOpenEventFibrationTypingDescentPrecursorPacket"
+    claim_status: "selected_not_executed"
+    source_path: "research_control/tasks/RT-20260815-006/artifacts/child_phys_math_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector.yaml"
+    burden_effect: "selects_next"
+    summary: "Route A is selected as the unique constructive, source-only, exact, low-authority maximum."
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit or adoption"
+    - "general proposal carrier derived"
+    - "source occurrence or admissibility law derived or adopted"
+    - "Open subset interpreted as a physical or realized event"
+    - "normalized kernel interpreted as physical probability or empirical frequency"
+    - "EqSrc adoption or Phi_src semantics"
+    - "D7 adequacy"
+    - "B2 activation disposal viability adoption rejection or sufficiency"
+    - "P4-T03 unlock or execution"
+    - "conformal class time orientation or g_eff construction"
+    - "matter coupling or Einstein-equation derivation"
+    - "benchmark or Gate Chair promotion"
+    - "global no-go or future-extension impossibility"
+    - "proof publication push external action or completed derivation"
+  summary: "The selector proves bounded mathematical lemmas and chooses an unexecuted precursor packet. Neither those lemmas nor validator or role authority create occurrence, physical meaning, geometry, adoption, or downstream GR progress."
+
+authority_blocks:
+  parent_completion_created_by_child: false
+  selected_packet_executed: false
+  selected_packet_agentjob_created: false
+  frozen_candidate_reconstructed_repaired_audited_stressed_or_replayed: false
+  general_prop_or_f_prop_constructed: false
+  occurrence_or_admissibility_generator_constructed: false
+  source_law_or_canonical_ontology_adopted: false
+  eqsrc_adopted: false
+  phi_src_typed_or_interpreted: false
+  physical_event_or_occurrence_selected: false
+  probability_given_physical_or_empirical_meaning: false
+  target_atlas_metric_tetrad_coframe_or_desired_cone_imported: false
+  physical_response_time_causality_or_geometry_assigned: false
+  d7_adequacy_claimed: false
+  b2_action_taken: false
+  p4_t03_action_taken: false
+  effective_metric_constructed_or_adopted: false
+  matter_coupling_derived_or_adopted: false
+  einstein_equations_derived_or_adopted: false
+  gate_benchmark_or_proof_claimed: false
+  global_no_go_or_future_impossibility_claimed: false
+  publication_or_push_executed: false
+  external_action_executed: false
+  completed_derivation_claimed: false
+
+validation:
+  strict_unique_key_yaml: "PASS"
+  repository_subset_yaml: "PASS"
+  source_hashes_recomputed: "PASS"
+  source_hash_match_count: 31
+  source_hash_expected_count: 31
+  exact_four_route_count_check: "PASS_4"
+  selected_route_count_check: "PASS_1"
+  inherited_conditional_theorem_count_check: "PASS_5"
+  inherited_freeze_count_check: "PASS_8"
+  distance_to_gr_row_count_check: "PASS_14"
+  literal_no_delta_count_check: "PASS_14"
+  formal_domain_count_check: "PASS_10"
+  formal_object_count_check: "PASS_14"
+  formal_map_count_check: "PASS_14"
+  new_mathematical_payload_count_check: "PASS_5"
+  exact_control_count_check: "PASS_6"
+  proof_obligation_count_check: "PASS_16"
+  failure_branch_count_check: "PASS_12"
+  score_arithmetic_check: "PASS"
+  selected_packet_identity_and_status_check: "PASS_1_selected_not_executed"
+  no_fog_check: "PASS"
+  forbidden_claim_scan: "PASS_no_adoption_physical_P4_GR_promotion_or_global_impossibility_claim"
+  duplicate_key_scan: "PASS"
+  git_diff_check: "PASS_owned_file_only_no_whitespace_error"
+  whitespace_check: "PASS_no_trailing_spaces_tabs_or_carriage_returns_and_final_newline_present"
+  parent_validator_run: false
+  parent_checkpoint_run: false
+  memory_sync_run: false
+  validation_result: "PASS_CHILD_SCOPE"

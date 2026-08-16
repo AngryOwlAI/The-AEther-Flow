@@ -1,0 +1,269 @@
+schema_id: "v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_packet_v1"
+status: "selected_not_executed"
+authority: "science_draft"
+task_id: "RT-20260815-006"
+job_id: "AJ-RT-20260815-006-001"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+
+packet:
+  packet_id: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+  packet_type: "bounded_theoretical_calculation"
+  route_id: "A_CANONICAL_SOURCE_OPEN_EVENT_FIBRATION_TYPING_DESCENT_PRECURSOR"
+  route_label: "ordinary-research-packet"
+  next_role_family: "ontology-formalizer@0.2.0"
+  selected_packet_executed: false
+  requires_human_gate: false
+  objective: "Construct or precisely obstruct the canonical current-topology Open(-) carrier, its restriction and cover-descent structure, and its explicit typed comparison with the RT003 proposal-fiber schema, without introducing an occurrence generator or physical event semantics."
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Determine whether current smooth topology supplies a definitional proposal-carrier precursor while keeping admissibility, occurrence generation, and every physical interpretation underived."
+  result_scope: "canonical_open_carrier_typing_restriction_descent_and_proposal_fiber_comparison_only"
+
+fixed_inputs:
+  predecessor_result_type: "current_source_provenance_or_typing_obstruction"
+  predecessor_obstruction_id: "OB-V22-P4T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-CURRENT-SOURCE-TYPING-PROVENANCE-001"
+  first_missing_primitive: "A target-free current-source-derived proposal-fiber pseudofunctor F_prop, equivalently nonvacuous Prop with U and coherent source-arrow transport."
+  conditional_theorem_count: 5
+  inherited_freeze_count: 8
+  predecessor_scope_fixed: true
+  global_no_go_fixed_false: true
+  future_extension_impossibility_fixed_false: true
+
+formal_domains:
+  - domain_id: "DOM-01"
+    name: "SmoothOpenSrc4"
+    definition: "The category whose objects are nonempty smooth four-manifolds and their declared open submanifolds, with open embeddings as typed arrows."
+  - domain_id: "DOM-02"
+    name: "OpenLattices"
+    definition: "For each source open U, the set Open(U) of topologically open subsets ordered by inclusion."
+  - domain_id: "DOM-03"
+    name: "OpenCovers"
+    definition: "Declared covers {U_i->U}, their overlaps, inverse-image restrictions, and compatibility equations."
+  - domain_id: "DOM-04"
+    name: "OpenGrothendieckCarrier"
+    definition: "The category of pairs (U,O) with O in Open(U), transported contravariantly along open embeddings."
+  - domain_id: "DOM-05"
+    name: "ConnectedObjects"
+    definition: "Connected smooth source objects used only for the full-diffeomorphism natural-section classification."
+  - domain_id: "DOM-06"
+    name: "RT003ProposalFiberSchema"
+    definition: "The conditional target-free proposal-fiber pseudofunctor schema and its Prop, U, source-arrow transport, and measurable-structure requirements from RT003."
+  - domain_id: "DOM-07"
+    name: "FormalKernelControls"
+    definition: "Purely mathematical probability kernels on finite controls, including delta_empty, delta_total, and their convex mixtures; no physical probability meaning is admitted."
+  - domain_id: "DOM-08"
+    name: "TypeComparisonEvidence"
+    definition: "Typed maps, commuting diagrams, countermodels, and the first exact mismatch between the Open carrier and RT003 proposal fibers."
+  - domain_id: "DOM-09"
+    name: "SourceProvenanceEvidence"
+    definition: "Eliminability, current-signature dependency, target-atlas exclusion, and source-arrow naturality records."
+  - domain_id: "DOM-10"
+    name: "ExclusiveResult"
+    definition: "Exactly one theorem, type-mismatch obstruction, restriction/descent obstruction, or current-source definitional-extension obstruction."
+
+formal_objects:
+  - object_id: "OBJ-01"
+    name: "OpenCarrier"
+    type: "U maps to Open(U)"
+  - object_id: "OBJ-02"
+    name: "InverseImageRestriction"
+    type: "j:V->U maps O to j^{-1}(O)"
+  - object_id: "OBJ-03"
+    name: "CompatibleOpenFamily"
+    type: "{O_i in Open(U_i)} satisfying overlap equality"
+  - object_id: "OBJ-04"
+    name: "UniqueGlobalOpen"
+    type: "O in Open(U) with every restriction equal to O_i"
+  - object_id: "OBJ-05"
+    name: "OpenCarrierGrothendieckObject"
+    type: "pair (U,O) with typed cartesian transport"
+  - object_id: "OBJ-06"
+    name: "NaturalOpenSection"
+    type: "assignment s(U) in Open(U) natural for the declared arrow class"
+  - object_id: "OBJ-07"
+    name: "TrivialSectionPair"
+    type: "the empty and total natural open assignments"
+  - object_id: "OBJ-08"
+    name: "FormalKernelFamily"
+    type: "delta_empty, delta_total, and convex mixtures on a finite two-point carrier control"
+  - object_id: "OBJ-09"
+    name: "ProposalFiberComparison"
+    type: "typed comparison or exact mismatch between OpenGrothendieckCarrier and F_prop"
+  - object_id: "OBJ-10"
+    name: "ProvenanceFactorization"
+    type: "record that every Open-carrier constructor factors through current smooth topology only"
+  - object_id: "OBJ-11"
+    name: "NonsemanticBoundaryLedger"
+    type: "explicit separation of opens, proposals, events, occurrence, probability, response, and physical meaning"
+  - object_id: "OBJ-12"
+    name: "PacketResult"
+    type: "exclusive permitted result with proof or first precise obstruction"
+
+formal_maps:
+  - map_id: "MAP-01"
+    signature: "OpenObj:SmoothOpenSrc4^op->Set"
+    purpose: "Assign Open(U) to each source open U."
+  - map_id: "MAP-02"
+    signature: "Restrict_j:Open(U)->Open(V)"
+    purpose: "Use inverse image along an open embedding j:V->U."
+  - map_id: "MAP-03"
+    signature: "Glue:{compatible O_i}->Open(U)"
+    purpose: "Form the union of compatible local opens."
+  - map_id: "MAP-04"
+    signature: "Groth(Open):SmoothOpenSrc4->Cat"
+    purpose: "Build the typed Grothendieck carrier of pairs (U,O)."
+  - map_id: "MAP-05"
+    signature: "AutAction:Diff(U)xOpen(U)->Open(U)"
+    purpose: "Act on opens for the connected full-diffeomorphism section classification."
+  - map_id: "MAP-06"
+    signature: "ClassifySection:NaturalOpenSection->TrivialSectionPair or Counterexample"
+    purpose: "Decide whether a full-Diff-natural open assignment is empty or total under the declared hypotheses."
+  - map_id: "MAP-07"
+    signature: "KernelControl:[0,1]->Prob({empty,total})"
+    purpose: "Exhibit carrier-compatible formal kernels that differ while carrier data is fixed."
+  - map_id: "MAP-08"
+    signature: "CompareProp:OpenGrothendieckCarrier->RT003ProposalFiberSchema or TypeMismatch"
+    purpose: "Prove a typed comparison or return the first exact mismatch."
+  - map_id: "MAP-09"
+    signature: "AuditProvenance:Construction->SourceProvenanceEvidence"
+    purpose: "Prove current-topology eliminability and exclude target or outcome-selected inputs."
+  - map_id: "MAP-10"
+    signature: "Decide:TypeComparisonEvidence x SourceProvenanceEvidence->PacketResult"
+    purpose: "Return exactly one scoped result without adoption or promotion."
+
+theorem_targets:
+  - theorem_id: "THM-01"
+    name: "CanonicalContravariantOpenCarrier"
+    target: "Prove that inverse image makes U->Open(U) a contravariant functor on the declared open-embedding category."
+  - theorem_id: "THM-02"
+    name: "UniqueOpenCoverDescent"
+    target: "Prove that compatible local opens glue uniquely and recover their local restrictions."
+  - theorem_id: "THM-03"
+    name: "ConnectedFullDiffTrivialNaturalSection"
+    target: "Prove that a selected open invariant under all diffeomorphisms of a connected declared object is empty or total."
+  - theorem_id: "THM-04"
+    name: "CarrierOccurrenceUnderdetermination"
+    target: "Prove by distinct formal kernels on the same carrier that carrier formation alone does not determine occurrence."
+  - theorem_id: "THM-05"
+    name: "OpenCarrierProposalFiberComparisonDecision"
+    target: "Construct the exact typed comparison to the RT003 F_prop schema or return the first precise type, naturality, restriction, descent, or provenance obstruction."
+
+proof_obligations:
+  - obligation_id: "PO-01"
+    text: "Bind the plan, RT003 parent fusion and TeX, RT003 completion, handoff-1039, burden map, and live control state by exact hashes."
+  - obligation_id: "PO-02"
+    text: "Hold the RT003 obstruction, five conditional theorem schemas, eight freezes, and fourteen no-delta burdens fixed."
+  - obligation_id: "PO-03"
+    text: "Declare the source-open object class, arrow variance, empty-open convention, and cover hypotheses before proving results."
+  - obligation_id: "PO-04"
+    text: "Prove inverse image preserves opens, identities, and composition."
+  - obligation_id: "PO-05"
+    text: "Prove compatible-cover gluing by union and uniqueness from the covering property."
+  - obligation_id: "PO-06"
+    text: "Type the Grothendieck construction and every restriction arrow without importing Prop or proposal semantics by name."
+  - obligation_id: "PO-07"
+    text: "State connectedness and full-diffeomorphism naturality explicitly in the natural-section theorem."
+  - obligation_id: "PO-08"
+    text: "Prove point transitivity or provide a valid substitute before classifying invariant opens."
+  - obligation_id: "PO-09"
+    text: "Keep empty and total sections as mathematical sections, not occurrence laws or realized events."
+  - obligation_id: "PO-10"
+    text: "Exhibit at least two distinct formal kernels on one fixed carrier and state that they have no physical probability semantics."
+  - obligation_id: "PO-11"
+    text: "Give an explicit typed comparison with each RT003 F_prop requirement or return the first exact mismatch."
+  - obligation_id: "PO-12"
+    text: "Prove current-topology eliminability and exclude target atlas, target metric, empirical response, desired cone, and benchmark answer inputs."
+  - obligation_id: "PO-13"
+    text: "Preserve D7, B2, P4-T03, g_eff, adoption, proof, publication, and global-no-go locks."
+  - obligation_id: "PO-14"
+    text: "Return exactly one permitted result with a falsifier and no claim that current topology determines occurrence."
+
+failure_branches:
+  - branch_id: "FB-01"
+    trigger: "The RT003 predecessor obstruction or any inherited freeze is altered."
+    result: "invalid_packet_boundary"
+  - branch_id: "FB-02"
+    trigger: "The object category, arrow variance, empty-open convention, or cover class is not typed."
+    result: "precise_open_carrier_formation_obstruction"
+  - branch_id: "FB-03"
+    trigger: "Inverse image fails identity or composition on an admitted arrow."
+    result: "restriction_or_functoriality_obstruction"
+  - branch_id: "FB-04"
+    trigger: "Compatible local opens have no unique global gluing."
+    result: "restriction_or_descent_obstruction"
+  - branch_id: "FB-05"
+    trigger: "An open subset is called a proposal, event, occurrence, or response without a typed source map."
+    result: "semantic_relabeling_obstruction"
+  - branch_id: "FB-06"
+    trigger: "Connectedness, point transitivity, or all-diffeomorphism naturality is omitted from the section classification."
+    result: "natural_section_scope_obstruction"
+  - branch_id: "FB-07"
+    trigger: "Carrier uniqueness is used to infer a unique admissibility or occurrence generator."
+    result: "carrier_occurrence_nonsequitur"
+  - branch_id: "FB-08"
+    trigger: "A formal kernel is labeled physical probability, empirical frequency, or realized occurrence."
+    result: "physical_probability_overread"
+  - branch_id: "FB-09"
+    trigger: "The comparison to F_prop omits proposal objects, source-arrow transport, measurable structure, or descent typing."
+    result: "precise_open_carrier_to_proposal_fibration_type_mismatch_obstruction"
+  - branch_id: "FB-10"
+    trigger: "The construction depends on target geometry, empirical response, desired P4 output, or frozen candidate data."
+    result: "forbidden_target_or_outcome_import"
+  - branch_id: "FB-11"
+    trigger: "A bounded mismatch is promoted to impossibility of every future source extension."
+    result: "global_no_go_overread"
+  - branch_id: "FB-12"
+    trigger: "The packet adopts ontology, assigns EqSrc, changes Distance-to-GR, unlocks P4-T03, or claims proof or publication authority."
+    result: "authority_boundary_violation"
+
+permitted_results:
+  - "canonical_open_event_fibration_typing_descent_theorem"
+  - "precise_open_carrier_to_proposal_fibration_type_mismatch_obstruction"
+  - "restriction_or_descent_obstruction"
+  - "current_source_definitional_extension_obstruction"
+
+exact_controls:
+  finite_topology_control: "Use a finite topology with explicit opens and inverse-image maps to validate identity, composition, and gluing mechanically."
+  connected_transitive_control: "Use a connected/transitive automorphism analogue to confirm that only empty and total opens are invariant."
+  kernel_nonuniqueness_control: "Hold the carrier fixed while varying delta_empty, delta_total, and convex mixtures."
+  falsifier_control: "Admit a proper nonempty fully invariant open or a canonical unique nontrivial occurrence kernel only if its hypotheses are independently proven."
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+  - "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+
+distance_to_gr_contract:
+  row_count: 14
+  every_row_status: "no_delta"
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+
+authority_limits:
+  selected_packet_executed: false
+  theorem_truth_inferred: false
+  open_carrier_constructed_by_selector: false
+  proposal_fibration_constructed: false
+  occurrence_generator_constructed: false
+  source_extension_adopted: false
+  canonical_ontology_modified: false
+  eqsrc_assigned: false
+  physical_event_semantics_assigned: false
+  physical_probability_assigned: false
+  empirical_response_semantics_assigned: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  effective_metric_constructed: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

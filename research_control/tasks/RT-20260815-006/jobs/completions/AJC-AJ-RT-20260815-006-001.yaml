@@ -1,0 +1,545 @@
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+job_id: "AJ-RT-20260815-006-001"
+completion_id: "AJC-AJ-RT-20260815-006-001"
+task_id: "RT-20260815-006"
+task_type: "v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_theoretical_continuation_selector"
+decision_id: "DDR-20260815-006"
+role_id: "theoretical-continuation-selector"
+source_role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260815-006"
+supporting_perspective: "ontology-formalizer@0.2.0"
+status: "completed"
+result: "completed"
+completion_status: "PASS"
+final_repository_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-15T22:41:47Z"
+started_at: "2026-08-15T22:41:47Z"
+completed_at: "2026-08-15T23:25:00Z"
+objective: "Compare exactly four post-occurrence-carrier-typing-obstruction continuations, preserve the exact RT003 scoped obstruction and all eight active freezes, and select exactly one materially distinct future packet and next role without executing it."
+completion_summary: "The parent and both independent physics children selected Route A. Current smooth topology canonically supplies the Open(-) carrier, inverse-image restriction, and compatible cover gluing; on connected objects full-diffeomorphism natural selections are objectwise empty or total, while distinct invariant formal kernels prove that carrier formation does not determine occurrence. The future packet is one canonical Open-carrier typing, descent, and RT003 proposal-fiber comparison theorem under ontology-formalizer@0.2.0. It is selected but not executed. All five predecessor theorem schemas, eight freezes, fourteen no-delta rows, D7/B2/P4-T03 locks, and promotion blocks remain fixed."
+objective_result: "route_A_selected"
+transaction_status: "completed_ready_for_governed_checkpoint"
+result_disposition: "canonical_source_open_event_fibration_typing_descent_theorem_selected_checkpoint_pending"
+milestone_disposition: "effective_metric_burden_selector_only_no_distance_delta"
+requires_human_gate: false
+human_gate_required: false
+source_head: "f12c4bc85a3ca58e544a31a7a39bad67b726c954"
+source_tree: "cd8fde41bcd5812e1a350d222d5cd2d1a82babc1"
+source_handoff_id: "handoff-1039"
+source_handoff_sha256: "d839ed55c99054af7839c20d8394091bcb5ce9d79c88ca7562e73ea66ffb84e6"
+source_extension_classification_required: true
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1248
+    relationship_row_count: 6415
+    semantic_row_count: 1248
+    vault_row_count: 1248
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'source derived occurrence admissibility descent kernel' --limit 10 --json"
+      query_type: "search"
+      query_text: "source derived occurrence admissibility descent kernel"
+      returned_object_ids:
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1"
+        - "TEX-V22-P4-T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260815-003/artifacts/parent_fusion_notes_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel.md"
+      source_hash: "54f91f607269d6bdf9f69cc30d7fbf2dcfb77bb1efe4d7c81fd335e92dddaa09"
+    - object_id: "TEX-V22-P4-T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260815-003/artifacts/v22_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel_v1.tex"
+      source_hash: "0853ee5a77184e6e7a82663b16c3339810bb48946a2421f8e796e5d9df7f7d14"
+  additional_control_inspections:
+    - object_id: "HANDOFF-1039"
+      control_path: "research_control/handoffs/handoff-1039.yaml"
+      source_hash: "d839ed55c99054af7839c20d8394091bcb5ce9d79c88ca7562e73ea66ffb84e6"
+    - object_id: "RT-20260815-003-COMPLETION"
+      control_path: "research_control/tasks/RT-20260815-003/jobs/completions/AJC-AJ-RT-20260815-003-001.yaml"
+      source_hash: "9bdf3ec4261f5507981f24e96001e2353233a868a2b2c5d5df1666070a838087"
+    - object_id: "RT-20260815-005-COMPLETION"
+      control_path: "research_control/tasks/RT-20260815-005/jobs/completions/AJC-AJ-RT-20260815-005-001.yaml"
+      source_hash: "4649d93a3a18bd4f1994241fb7100833b9f4e7ba0879ea053e5c635d8ca1d837"
+  authority_note: "Tracked registered sources and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+plan_result:
+  plan_id: "recommendations_implementation_plan_continue_task-v22"
+  phase_id: "P4"
+  plan_task_id: "P4-T02"
+  work_item_status: "canonical_source_open_event_fibration_typing_descent_theorem_selected_not_executed"
+  completed_plan_subroute: "P4-T02-B2-POST-OCCURRENCE-TYPING-PROVENANCE-OBSTRUCTION-THEORETICAL-CONTINUATION-SELECTION"
+  next_plan_task_id: "P4-T02"
+  next_plan_subroute: "P4-T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM"
+  recommendation_ids:
+    - "V22-R07"
+    - "V22-R08"
+    - "V22-R10"
+    - "V22-R13"
+  declared_coverage_ids:
+    - "V22-R07"
+    - "V22-R08"
+    - "V22-R13"
+    - "S5"
+  decisive_result: "route_A_selected"
+  selected_route_id: "A_CANONICAL_SOURCE_OPEN_EVENT_FIBRATION_TYPING_DESCENT_PRECURSOR"
+  selected_successor_packet_id: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+  selected_successor_packet_type: "bounded_theoretical_calculation"
+  selected_successor_route_label: "ordinary-research-packet"
+  selected_successor_role_family: "ontology-formalizer@0.2.0"
+  selected_successor_executed: false
+  active_freeze_count: 8
+  descriptor_instance_complete: false
+  adequacy_reevaluated: false
+  b2_fallback_activated: false
+  b2_activated: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  scientific_claims_changed: false
+  physical_status_changed: false
+  distance_to_gr_delta_changed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+
+dual_budget_result:
+  schema_id: "dual_budget_result_v1"
+  policy_id: "dual_budget_policy_v1"
+  status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  observed_durable_outputs:
+    physics:
+      - "one registered draft/control four-route selector manuscript with canonical Open-carrier restriction descent symmetry and occurrence-separation payloads"
+      - "one exact route decision and one selected unexecuted theorem packet"
+    project_system:
+      - "task-local exact model, focused validator, compact receipt, LaTeX receipt, provenance, parent-child synthesis, and standard synchronization"
+  accepted_criteria:
+    physics:
+      - "exactly four materially distinct routes are compared and exactly one future packet is selected but not executed"
+      - "the RT003 obstruction five theorem schemas and all eight freezes remain fixed"
+      - "all fourteen Distance-to-GR rows remain literal no-delta"
+    project_system:
+      - "source hashes, artifacts, registries, backlog, program state, and handoff pass deterministic validation"
+      - "the registered TeX source compiles and every rendered page passes visual inspection"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+physics_payload_admission_result:
+  schema_id: "physics_payload_admission_result_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  declared_payload_type: "route_decision"
+  realized_payload_type: "four_route_selector_with_canonical_open_carrier_restriction_descent_trivial_section_and_occurrence_separation_controls"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  result: "PASS_MATERIAL_SELECTOR_PAYLOAD_PRESENT"
+  material_payload_present: true
+  process_receipts_counted_as_payload: false
+  theorem_truth_evaluated_by_admission: false
+  scientific_status_changed_by_admission: false
+  physics_promotion_authorized: false
+
+family_freeze_admission_result:
+  schema_id: "family_freeze_route_admission_result_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "select_v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_continuation_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  result: "PASS_MATERIALLY_DISTINCT_THEORETICAL_SELECTION"
+  reopening_requested: false
+  inherited_freeze_count: 8
+  candidate_local_freeze_created: false
+  active_freeze_count: 8
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+
+ordinary_route_guard_admission_result:
+  schema_id: "ordinary_route_guard_admission_result_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1039"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite_commit: "f12c4bc85a3ca58e544a31a7a39bad67b726c954"
+  result: "PASS"
+  ordinary_research_handoff_authoritative: true
+  project_system_sidecar_supersedes: false
+  scientific_status_changed_by_guard: false
+  physics_promotion_authorized: false
+
+parent_child_synthesis:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  child_outputs:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260815-006/artifacts/child_phys_math_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector.yaml"
+      output_sha256: "3b6598a9d5f1289578aaeba05591440361b825b50783c5d131157a0ba79735f8"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260815-006/artifacts/child_phys_phil_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector.yaml"
+      output_sha256: "4cf64669993b7a377601f1bb129ffc11d62060dfbc081116fcb7cbfb5ffb3d5c"
+      status: "completed"
+  conflict_review:
+    status: "resolved"
+    review_path: "research_control/tasks/RT-20260815-006/artifacts/parent_conflict_review_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector.yaml"
+    review_sha256: "1bd116b20cb92627798787d8374b1c18be76c6a527636583fb8dcb00339c4cc0"
+    resolution_rounds: 1
+    unresolved_conflicts: []
+  fusion:
+    status: "completed"
+    fused_output_path: "research_control/tasks/RT-20260815-006/artifacts/v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_route_selection_v1.tex"
+    fused_output_sha256: "e3aa386e1524616ebbef19b164b0a3f3f92e8380e82abe41ced9fa36f6570246"
+    fusion_notes_path: "research_control/tasks/RT-20260815-006/artifacts/parent_fusion_notes_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector.md"
+    fusion_notes_sha256: "2b7fd71d7c98a121de57172aeb91e8fc786c633ba04cc4124836c0e59a0532f7"
+    shared_consensus_summary: "Both children independently select Route A and preserve the current-topology-only scope, five conditional theorems, eight freezes, fourteen no-delta rows, and every authority lock."
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+
+theoretical_decision_output:
+  selected_next_packet_type: "bounded_theoretical_calculation"
+  selected_next_role_family: "ontology-formalizer@0.2.0"
+  selected_packet_id: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+  selected_route_id: "A_CANONICAL_SOURCE_OPEN_EVENT_FIBRATION_TYPING_DESCENT_PRECURSOR"
+  selected_route_label: "ordinary-research-packet"
+  decision_basis: "Current smooth topology canonically supplies Open(U), inverse-image restriction, and compatible gluing. Full source symmetry leaves only objectwise empty or total natural selections, and distinct invariant formal kernels prove that the carrier does not determine occurrence."
+  theoretical_method: "Construct the variance-correct Open carrier and category of elements, prove unique cover descent, classify connected full-diffeomorphism natural sections, and type-compare this carrier to every RT003 proposal-fiber requirement or return the first exact obstruction."
+  decision_consequence: "After checkpoint one separately admitted Ontology Formalizer AgentJob may execute the theorem packet."
+  new_payload_novelty: "First post-RT003 selector to isolate a conservative current-topology carrier formation result from the still-underived proposal and occurrence law."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  selected_packet_executed: false
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  item_id: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+  item_kind: "selected_unexecuted_current_topology_definitional_carrier_audit"
+  classification: "conservative_definitional_extension"
+  claim_boundary_id: "CB-V22-P4-T02-B2-POST-OCCURRENCE-TYPING-PROVENANCE-OBSTRUCTION-THEORETICAL-SELECTION-001"
+  relation_to_current_ontology: "conservative"
+  relation_to_target_side_structures: "none"
+  protected_authority_required: false
+  downstream_promotion_authorized: false
+  blocked_overreads:
+    - "the selected packet is already executed or its theorem already promoted"
+    - "Open(U) is a physical event proposal token occurrence response or probability law"
+    - "the general RT003 proposal-fiber obstruction is solved by vocabulary relabeling"
+    - "D7 B2 P4-T03 g_eff coupling Einstein benchmark Gate or adoption status changed"
+  allowed_conclusion: "One scoped current-topology carrier theorem packet is selected and remains unexecuted."
+  physics_promotion_authorized: false
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+  - "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+
+distance_to_gr_delta:
+  changed: false
+  effect: "no_distance_delta"
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  ledger_row_updated: false
+  downstream_unlocked:
+    - "one separately admitted canonical Open-carrier typing and descent theorem packet"
+  downstream_still_blocked:
+    - "general proposal-fiber type match and current-source provenance"
+    - "admissibility and occurrence generation"
+    - "physical event probability response and sector universality"
+    - "D7 adequacy and B2 action"
+    - "P4-T03 conformal reconstruction and time orientation"
+    - "g_eff scale coupling Einstein equations benchmark and completed derivation"
+
+physics_progress_status:
+  status: "selector_only_no_distance_delta"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Determine whether current smooth topology supplies a definitional proposal-carrier precursor while keeping occurrence generation underived."
+  explanation: "The selector chooses one bounded theorem packet but constructs or adopts no source law or physical object."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_delta"
+  - burden: "Source equivalence EqSrc"
+    status: "no_delta"
+  - burden: "RetainH"
+    status: "no_delta"
+  - burden: "GenH"
+    status: "no_delta"
+  - burden: "ObsLoc_lc"
+    status: "no_delta"
+  - burden: "Resp_lc"
+    status: "no_delta"
+  - burden: "M_src"
+    status: "no_delta"
+  - burden: "g_eff"
+    status: "no_delta"
+  - burden: "matter coupling"
+    status: "no_delta"
+  - burden: "Einstein equations"
+    status: "no_delta"
+  - burden: "finite-variation robustness"
+    status: "no_delta"
+  - burden: "benchmark promotion"
+    status: "no_delta"
+  - burden: "Gate Chair status"
+    status: "no_delta"
+  - burden: "current route freeze or hard-fail status"
+    status: "no_delta"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT015-006-001"
+    payload_type: "lemma"
+    summary: "Diffeomorphism direct image and source-open inverse image give the variance-correct canonical Open carrier."
+  - payload_id: "NMP-RT015-006-002"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    summary: "Compatible local open subsets glue uniquely by union."
+  - payload_id: "NMP-RT015-006-003"
+    payload_type: "theorem_with_hypotheses_and_proof"
+    summary: "Connected bare sources under full diffeomorphisms admit only empty or total natural open selections."
+  - payload_id: "NMP-RT015-006-004"
+    payload_type: "countermodel_or_obstruction"
+    summary: "Distinct invariant normalized formal kernels on one carrier prove occurrence-law nonuniqueness."
+  - payload_id: "NMP-RT015-006-005"
+    payload_type: "packet_selection"
+    summary: "Route A selects one canonical Open-carrier theorem packet without execution."
+
+mathematical_payload_manifest:
+  - payload_id: "NMP-RT015-006-001"
+    payload_type: "lemma"
+    object_name: "CanonicalOpenCarrierBifibration"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260815-006/artifacts/v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_route_selection_v1.tex"
+    burden_effect: "narrows"
+    summary: "Exact carrier and variance control."
+  - payload_id: "NMP-RT015-006-002"
+    payload_type: "theorem"
+    object_name: "OpenSubsetCoverDescent"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260815-006/artifacts/v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_route_selection_v1.tex"
+    burden_effect: "narrows"
+    summary: "Exact compatible-cover gluing theorem."
+  - payload_id: "NMP-RT015-006-003"
+    payload_type: "theorem"
+    object_name: "ConnectedFullDiffeomorphismNaturalOpenSectionClassification"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260815-006/artifacts/v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_route_selection_v1.tex"
+    burden_effect: "narrows"
+    summary: "Objectwise empty-or-total classification with marked-point falsifier."
+  - payload_id: "NMP-RT015-006-004"
+    payload_type: "countermodel"
+    object_name: "OpenCarrierOccurrenceKernelNonuniqueness"
+    claim_status: "exact_conditional_control"
+    source_path: "research_control/tasks/RT-20260815-006/artifacts/v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector_model.py"
+    burden_effect: "narrows"
+    summary: "Carrier does not invert to a unique occurrence kernel."
+  - payload_id: "NMP-RT015-006-005"
+    payload_type: "packet_selection"
+    object_name: "CanonicalSourceOpenEventFibrationTypingDescentTheorem"
+    claim_status: "selected_not_executed"
+    source_path: "research_control/tasks/RT-20260815-006/artifacts/v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector_decision_v1.yaml"
+    burden_effect: "selects_next"
+    summary: "One theorem packet selected for later Ontology Formalizer execution."
+
+artifact_receipt:
+  science:
+    manuscript_path: "research_control/tasks/RT-20260815-006/artifacts/v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_route_selection_v1.tex"
+    manuscript_sha256: "e3aa386e1524616ebbef19b164b0a3f3f92e8380e82abe41ced9fa36f6570246"
+    comparison_sha256: "dee28a411d74a816a8ac2396d48a1dd5864959a48dd262ec72dff62bf6280072"
+    decision_sha256: "78766779a37d5b3fbf55155fb3353087ea58f84efc5aaa4255f5b6e1127cd452"
+    future_packet_sha256: "ef49d08582c537eee64908f2109d581504c2bb94ac25e05fceb9cae5a8923930"
+    model_sha256: "e4a2604d88a23e368e6028a27772f91788f49006811fd8d06096ec3f5a737716"
+    provenance_sha256: "8050e48043f65b66064ac9e5eaa403fb0165c2294a883a22cc5800cddb40012d"
+  rendering:
+    latex_compile_receipt_sha256: "072bdf8fff2ac9bbfc3271186afb797d062563cecb308d1d8cc973a577014b28"
+    page_count: 4
+    visually_inspected_page_count: 4
+    visual_inspection_status: "PASS"
+    tracked_pdf_created: false
+  validation:
+    focused_validator_sha256: "a4c68a800d88799121fd0d1329703d90e008d92199bb4eca1b9a4c8e38ace46c"
+    focused_validation_sha256: "a76d023b668c60b30537ec1ad58c25efc7be22288913d2dd1d475b543717ab3c"
+    compact_receipt_sha256: "4be99328f93b52d89a0a3076b0db6ce1c184acd5319efc2d60a979edc1ef60e1"
+    focused_check_count: 31
+    focused_pass_count: 31
+    exact_model_check_count: 20
+    exact_model_pass_count: 20
+    research_control_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    documentation_impact_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    affected_profile_status: "PASS_16_OF_16_PRECHECKPOINT_STAGING_REQUIRED"
+    memory_validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+    project_improvement_signal_validation_status: "PASS"
+    whitespace_validation_status: "PASS"
+
+command_results:
+  - command: "post-occurrence-typing-obstruction selector model --json"
+    status: "PASS"
+    detail: "All 20 exact controls pass."
+  - command: "pdfTeX two-pass compile and four-page rendered inspection"
+    status: "PASS"
+    detail: "Four pages compile and every page passes visual inspection."
+  - command: "focused selector validator --write-report --json"
+    status: "PASS"
+    detail: "All 31 focused selector checks pass after terminal control synchronization."
+  - command: "bootstrap_memory_system.py"
+    status: "PASS"
+    detail: "Registered sources and generated memory surfaces are synchronized; validate-only reports no blocking finding."
+  - command: "affected validation profile"
+    status: "PASS"
+    detail: "All 16 affected-profile gates pass with zero warnings, failures, or blocked gates."
+  - command: "validate_research_control.py --check-diff --job-id AJ-RT-20260815-006-001"
+    status: "PASS"
+    detail: "Research-control validation passes with no errors; historical warnings remain nonblocking."
+  - command: "validate_documentation_impact.py"
+    status: "PASS"
+    detail: "Documentation-impact validation passes with zero findings."
+  - command: "collect_project_improvement_signals.py --validate-emitted"
+    status: "PASS"
+    detail: "No project-improvement sidecar is required because no signal was emitted."
+  - command: "git diff --check"
+    status: "PASS"
+    detail: "The governed transaction has no whitespace errors."
+  - command: "checkpoint_research_transaction.py --planner-validation"
+    status: "PENDING"
+    detail: "Exactly one governed checkpoint remains."
+
+validation_layers:
+  pre_execution:
+    status: "PASS"
+    evidence:
+      - "Memory, checkpoint prerequisite, route, payload, freeze, and claim-boundary admissions pass."
+  completion_internal:
+    status: "PASS"
+    evidence:
+      - "Exact model, both children, conflict review, fusion, compilation, and visual inspection pass."
+  post_write:
+    status: "PASS"
+    evidence:
+      - "Focused, research-control, documentation, memory, affected-profile, signal, freshness, and whitespace checks pass before checkpoint."
+  post_checkpoint:
+    status: "PENDING"
+    evidence:
+      - "Exactly one governed checkpoint remains required."
+  renderer:
+    status: "PASS"
+    evidence:
+      - "All four rendered pages passed visual inspection."
+  memory_bootstrap:
+    status: "PASS"
+    evidence:
+      - "Registered sources and generated memory surfaces are synchronized before checkpoint."
+  claim_language_linter:
+    status: "PASS"
+    evidence:
+      - "The affected profile confirms the claim-language gate before checkpoint."
+
+authorization_layers:
+  protected_scoped_gate_review_authorized: false
+  protected_scoped_gate_review_scope: "No protected Gate review is authorized."
+  downstream_physics_promotion_authorized: false
+  benchmark_promotion_authorized: false
+  completed_derivation_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_edit_authorized: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "Open(U) is an adopted proposal carrier physical event occurrence probability response or effective geometry"
+    - "the selected future theorem is already promoted or executed"
+    - "a scoped mismatch is universal source-extension impossibility or global theory rejection"
+    - "D7 adequacy B2 action P4-T03 unlock or g_eff coupling Einstein derivation"
+    - "M_src adoption"
+    - "g_eff construction"
+    - "matter coupling derivation"
+    - "Einstein equations derivation"
+    - "benchmark promotion"
+    - "completed derivation"
+    - "global theory rejection"
+    - "benchmark Gate proof promotion publication push external action or completed derivation"
+  summary: "The selector and future packet are draft/control evidence only; occurrence, physical meaning, M_src adoption, g_eff, coupling, equations, benchmark promotion, and completed derivation remain blocked."
+
+checkpoint:
+  invocation_count_before_completion: 0
+  committed_before_completion: false
+  required: true
+  permitted_invocation_count: 1
+  consumed_checkpoint_replay_authorized: false
+  push_authorized: false
+
+project_improvement_signals: []
+open_project_improvement_signal_ids: []
+resolved_project_improvement_signals: []
+project_improvement_bridge:
+  required: false
+  improvement_handoff_path: ""
+  signal_ids: []
+  bridge_status: "not_required_no_new_signal_emitted"
+  sidecar_supersedes_research_handoff: false
+
+selected_successor:
+  packet_id: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+  packet_type: "bounded_theoretical_calculation"
+  route_label: "ordinary-research-packet"
+  role_family: "ontology-formalizer@0.2.0"
+  selection_status: "selected_not_executed"
+  executed: false
+  admitted: false
+  successor_requested: false
+
+notes: "Exactly one bounded selector was executed. The canonical Open-carrier theorem packet remains unexecuted until a fresh post-checkpoint invocation."
