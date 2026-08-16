@@ -8,14 +8,14 @@
     "research_control/current_frontier.md",
     "research_control/design/accepted_status_calibration_v2.yaml",
     "research_control/design/active_state_bifurcation_policy_v1.md",
-    "research_control/handoffs/handoff-1045.yaml",
+    "research_control/handoffs/handoff-1046.yaml",
     "research_control/program_state.yaml"
   ],
   "report_provenance": {
     "schema_id": "generated_report_provenance_v1",
     "policy_id": "p13_t07_live_generated_report_freshness_v1",
     "report_class": "compact_current_frontier",
-    "source_commit": "50f4d83d130d402b9633ffc6232540aaefb0804e",
+    "source_commit": "c5a289a9c331f4a394fc6fbb17b8c6092d779bf4",
     "source_hashes": [
       {
         "path": "registries/DISTANCE_TO_GR_LEDGER.csv",
@@ -23,19 +23,19 @@
       },
       {
         "path": "registries/RESEARCH_TASK_REGISTRY.csv",
-        "sha256": "f4ce8063b1a01b824bfe44efcd42b768101ddb79f0476556ed2e15be0913e720"
+        "sha256": "dc80f6547a7952e3040424ecd6acde61816de1da2eb69e3571b29f74b8ea70ba"
       },
       {
         "path": "research_control/current_frontier.md",
-        "sha256": "a78dba35a385173995329513d2704baf48d3e36fda6cf07db049b6d0691f49da"
+        "sha256": "a54dee146f554c2fbb6bfe061d1b2398b1e643fe8f257175b99c407c04ef3b2b"
       },
       {
-        "path": "research_control/handoffs/handoff-1045.yaml",
-        "sha256": "363481447761e944ae552220d4c4fb9b76b52b782a98cd7659f6fd6ff1eb72b5"
+        "path": "research_control/handoffs/handoff-1046.yaml",
+        "sha256": "55ae7fa9e3ad39b6ab9a9ae630655834ace10c3026816fae357458859a9c8657"
       },
       {
         "path": "research_control/program_state.yaml",
-        "sha256": "3ac1bf1e73aedc2e8e6380d2937bc09aea5d0a70ad2e79c6b7c3eb965b395d3d"
+        "sha256": "62d6eba80b0c3c20009aa0cf04df3305b336138d56ff66e464c83f33cac68689"
       },
       {
         "path": "research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml",
@@ -50,10 +50,10 @@
         "sha256": "3700556e8fe203bb8bfb1c2caf15b7fbfc95b25f608169209e1b9930677e3564"
       }
     ],
-    "source_manifest_sha256": "70b6acb04bf815cec483887676bd43e4db81dd81541df7115e90e8ca616ad0d8",
+    "source_manifest_sha256": "6bef7dac6ead134f43120d8ecf03862958a87898aed26a7426e9de2e8d85f80a",
     "source_path_count": "12",
-    "generation_time": "2026-08-16T09:03:37Z",
-    "task_count": "1302",
+    "generation_time": "2026-08-16T10:32:35Z",
+    "task_count": "1303",
     "maximum_commit_lag": "1",
     "freshness_status": "fresh_at_generation",
     "generated_view_is_authority": false,
@@ -61,17 +61,17 @@
     "proof_authority": false
   },
   "active_state": {
-    "active_task_id": "RT-20260816-002",
-    "latest_handoff_id": "handoff-1045",
-    "current_status": "v22_p4_t02_rt001_handoff_1044_blank_eof_checkpoint_recovery_pass_fresh_checkpoint_pending",
+    "active_task_id": "RT-20260816-003",
+    "latest_handoff_id": "handoff-1046",
+    "current_status": "v22_p4_t02_proposal_only_measurable_fiber_occurrence_law_source_pure_as_written_refuter_stress_selected_checkpoint_pending",
     "v15_completed": false,
     "v16_completed": false,
     "v16_plan_registered": true
   },
   "active_state_bifurcation": {
-    "latest_research_task_id": "RT-20260816-002",
-    "latest_research_handoff_id": "handoff-1045",
-    "latest_research_next_action": "Run the single fresh governed checkpoint for AJ-RT-20260816-002-001. After it commits, execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1. Do not replay RT001, execute the successor before checkpoint, adopt the proposal-only law, infer physical probability or occurrence, reevaluate D7, act on B2, unlock P4-T03, or authorize g_eff, promotion, publication, push, or global no-go.",
+    "latest_research_task_id": "RT-20260816-003",
+    "latest_research_handoff_id": "handoff-1046",
+    "latest_research_next_action": "Run the single governed checkpoint for AJ-RT-20260816-003-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS-V1. Do not replay RT003, repair or adopt the law, infer physical probability or occurrence, reevaluate D7, act on B2, unlock P4-T03, or authorize g_eff, promotion, publication, push, or global no-go.",
     "latest_project_system_task_id": "none",
     "latest_project_system_status": "none",
     "latest_project_system_sidecar_task_id": "none",
@@ -80,10 +80,10 @@
     "next_research_route_source": "latest_research_handoff"
   },
   "next_route": {
-    "route_id": "audit_v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_v1",
-    "role_family": "smuggling-auditor@0.2.0",
+    "route_id": "stress_v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_v1",
+    "role_family": "refuter@0.2.0",
     "target_derivation_milestone": "effective_metric_g_eff",
-    "milestone_burden": "Audit whether the proposal-only occurrence-law packet imports or preloads the missing source law or overreads formal kernels as physical occurrence.",
+    "milestone_burden": "Stress exact coupling, parameter, stationarity, occurrence, clock, and TV-scope vulnerabilities without repair or adoption.",
     "requires_human_gate": false
   },
   "claim_boundary": {
@@ -445,7 +445,7 @@
   ],
   "distance_to_gr": {
     "delta": {
-      "effect": "no_distance_delta_project_system_checkpoint_recovery",
+      "effect": "no_distance_delta",
       "changed": false,
       "milestone": "effective_metric_g_eff",
       "burden_id": "g_eff"
@@ -748,7 +748,7 @@
     }
   },
   "validation": {
-    "latest_required_status": "PASS_PRECHECKPOINT_RECOVERY_READY",
+    "latest_required_status": "PASS_PRECHECKPOINT_STAGING_REQUIRED",
     "pending_layers": []
   },
   "authority_warning": {

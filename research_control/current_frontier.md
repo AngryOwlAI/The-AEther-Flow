@@ -3,14 +3,14 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260816-002` and `handoff-1045`.
+`RT-20260816-003` and `handoff-1046`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-16T09:03:37Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"50f4d83d130d402b9633ffc6232540aaefb0804e","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"f4ce8063b1a01b824bfe44efcd42b768101ddb79f0476556ed2e15be0913e720"},{"path":"research_control/handoffs/handoff-1045.yaml","sha256":"363481447761e944ae552220d4c4fb9b76b52b782a98cd7659f6fd6ff1eb72b5"},{"path":"research_control/program_state.yaml","sha256":"3ac1bf1e73aedc2e8e6380d2937bc09aea5d0a70ad2e79c6b7c3eb965b395d3d"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"475c60a3d1755dbc5bef413c148a6e356112d1dea613631dac4e81564d062862","source_path_count":"12","task_count":"1302"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-16T10:32:35Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"c5a289a9c331f4a394fc6fbb17b8c6092d779bf4","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"dc80f6547a7952e3040424ecd6acde61816de1da2eb69e3571b29f74b8ea70ba"},{"path":"research_control/handoffs/handoff-1046.yaml","sha256":"55ae7fa9e3ad39b6ab9a9ae630655834ace10c3026816fae357458859a9c8657"},{"path":"research_control/program_state.yaml","sha256":"62d6eba80b0c3c20009aa0cf04df3305b336138d56ff66e464c83f33cac68689"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"948116a8d51e5b52ffccfcc44be5ba66d3b23e9ebd580ae7c5c6796741f17b1c","source_path_count":"12","task_count":"1303"} -->
 
 ## Generated-Report Provenance
 
@@ -19,11 +19,11 @@ tracked authority files govern.
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `current_frontier` |
-| Source commit | `50f4d83d130d402b9633ffc6232540aaefb0804e` |
-| Source-derived generation time | `2026-08-16T09:03:37Z` |
-| Tracked task count | 1302 |
+| Source commit | `c5a289a9c331f4a394fc6fbb17b8c6092d779bf4` |
+| Source-derived generation time | `2026-08-16T10:32:35Z` |
+| Tracked task count | 1303 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `475c60a3d1755dbc5bef413c148a6e356112d1dea613631dac4e81564d062862` |
+| Source manifest SHA-256 | `948116a8d51e5b52ffccfcc44be5ba66d3b23e9ebd580ae7c5c6796741f17b1c` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -31,9 +31,9 @@ tracked authority files govern.
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `f4ce8063b1a01b824bfe44efcd42b768101ddb79f0476556ed2e15be0913e720`
-- `research_control/handoffs/handoff-1045.yaml`: `363481447761e944ae552220d4c4fb9b76b52b782a98cd7659f6fd6ff1eb72b5`
-- `research_control/program_state.yaml`: `3ac1bf1e73aedc2e8e6380d2937bc09aea5d0a70ad2e79c6b7c3eb965b395d3d`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `dc80f6547a7952e3040424ecd6acde61816de1da2eb69e3571b29f74b8ea70ba`
+- `research_control/handoffs/handoff-1046.yaml`: `55ae7fa9e3ad39b6ab9a9ae630655834ace10c3026816fae357458859a9c8657`
+- `research_control/program_state.yaml`: `62d6eba80b0c3c20009aa0cf04df3305b336138d56ff66e464c83f33cac68689`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_current_frontier.py`: `62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6`
@@ -47,15 +47,15 @@ or claim-promotion authority.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260816-002` |
-| Latest handoff ID | `handoff-1045` |
-| Current status | `v22_p4_t02_rt001_handoff_1044_blank_eof_checkpoint_recovery_pass_fresh_checkpoint_pending` |
+| Active task ID | `RT-20260816-003` |
+| Latest handoff ID | `handoff-1046` |
+| Current status | `v22_p4_t02_proposal_only_measurable_fiber_occurrence_law_source_pure_as_written_refuter_stress_selected_checkpoint_pending` |
 | V16 completed | false |
-| Current route family | benchmark or recovery (project system) |
+| Current route family | audit or review (scientific audit) |
 | Target derivation milestone | `effective_metric_g_eff` |
 | Current burden | `g_eff` |
-| Required next authority | One fresh governed checkpoint for AJ-RT-20260816-002-001, then one separately admitted Smuggling Auditor audit of the fixed RT001 proposal-only law. |
-| Next recommended action | Run the single fresh governed checkpoint for AJ-RT-20260816-002-001. After it commits, execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1. Do not replay RT001, execute the successor before checkpoint, adopt the proposal-only law, infer physical probability or occurrence, reevaluate D7, act on B2, unlock P4-T03, or authorize g_eff, promotion, publication, push, or global no-go. |
+| Required next authority | One fresh governed checkpoint for AJ-RT-20260816-003-001, then one separately admitted Refuter stress of the unchanged proposal-only measurable-fiber occurrence law. |
+| Next recommended action | Run the single governed checkpoint for AJ-RT-20260816-003-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS-V1. Do not replay RT003, repair or adopt the law, infer physical probability or occurrence, reevaluate D7, act on B2, unlock P4-T03, or authorize g_eff, promotion, publication, push, or global no-go. |
 
 ## Active-State Bifurcation
 
@@ -66,9 +66,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260816-002` |
-| Latest research handoff ID | `handoff-1045` |
-| Latest research next action | Run the single fresh governed checkpoint for AJ-RT-20260816-002-001. After it commits, execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1. Do not replay RT001, execute the successor before checkpoint, adopt the proposal-only law, infer physical probability or occurrence, reevaluate D7, act on B2, unlock P4-T03, or authorize g_eff, promotion, publication, push, or global no-go. |
+| Latest research task ID | `RT-20260816-003` |
+| Latest research handoff ID | `handoff-1046` |
+| Latest research next action | Run the single governed checkpoint for AJ-RT-20260816-003-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS-V1. Do not replay RT003, repair or adopt the law, infer physical probability or occurrence, reevaluate D7, act on B2, unlock P4-T03, or authorize g_eff, promotion, publication, push, or global no-go. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -101,12 +101,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260816-002/00_TASK.yaml`.
-- Active task objective: Preserve the repaired handoff-1044 Markdown bytes and cumulative RT001 scientific transaction, bind the exact checkpoint blocker and failed staged blob, synchronize and revalidate the cumulative transaction, and invoke at most one fresh governed checkpoint without replaying AJ-RT-20260816-001-001 or executing its Smuggling Auditor successor.
-- Latest handoff path: `research_control/handoffs/handoff-1045.yaml`.
-- Latest handoff summary: RT-20260816-002 binds the prior failed staged blob and blank EOF, exact failed tree, tracked RT001 checkpoint blocker, failed operational receipt, repaired handoff-1044 bytes, seven governing RT001 source hashes, and restored empty index. The RT001 proposal-only construction and all protected boundaries are unchanged; the selected Smuggling Auditor remains unexecuted.
-- Current route family: benchmark or recovery (project system).
-- Next recommended action: Run the single fresh governed checkpoint for AJ-RT-20260816-002-001. After it commits, execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1. Do not replay RT001, execute the successor before checkpoint, adopt the proposal-only law, infer physical probability or occurrence, reevaluate D7, act on B2, unlock P4-T03, or authorize g_eff, promotion, publication, push, or global no-go.
+- Active task path: `research_control/tasks/RT-20260816-003/00_TASK.yaml`.
+- Active task objective: Execute PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1 by holding the complete RT001 construction fixed and auditing whether the token set, locally constant fiber, total admissibility, complement involution, global parameter, shared flip coupling, restriction and pullback arrows, total-variation structure, and probability or occurrence interpretation are target-free and independently source-provenanced rather than desired-output preload; preserve correct conditional mathematics and all eight freezes, and return one decisive audit verdict.
+- Latest handoff path: `research_control/handoffs/handoff-1046.yaml`.
+- Latest handoff summary: RT-20260816-003 audits the fixed proposal-only measurable-fiber occurrence law and returns exactly source_pure_as_written at narrow disclosed-syntax scope. It preserves the conditional fiber, kernel, naturality, shared-driver, and TV mathematics while proving coupling, parameter, stationarity, initial-law, realization, clock, and empty-open nonselection limits. The law remains an unadopted new ontology primitive with zero P4 or Distance-to-GR credit.
+- Current route family: audit or review (scientific audit).
+- Next recommended action: Run the single governed checkpoint for AJ-RT-20260816-003-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS-V1. Do not replay RT003, repair or adopt the law, infer physical probability or occurrence, reevaluate D7, act on B2, unlock P4-T03, or authorize g_eff, promotion, publication, push, or global no-go.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -336,7 +336,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the single fresh governed checkpoint for AJ-RT-20260816-002-001. After it commits, execute exactly one separately admitted smuggling-auditor@0.2.0 packet PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1. Do not replay RT001, execute the successor before checkpoint, adopt the proposal-only law, infer physical probability or occurrence, reevaluate D7, act on B2, unlock P4-T03, or authorize g_eff, promotion, publication, push, or global no-go.
+Run the single governed checkpoint for AJ-RT-20260816-003-001. After it commits, execute exactly one separately admitted refuter@0.2.0 packet PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS-V1. Do not replay RT003, repair or adopt the law, infer physical probability or occurrence, reevaluate D7, act on B2, unlock P4-T03, or authorize g_eff, promotion, publication, push, or global no-go.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -364,9 +364,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260816-002`;
-- latest handoff: `handoff-1045`;
-- current status: `v22_p4_t02_rt001_handoff_1044_blank_eof_checkpoint_recovery_pass_fresh_checkpoint_pending`;
+- active task: `RT-20260816-003`;
+- latest handoff: `handoff-1046`;
+- current status: `v22_p4_t02_proposal_only_measurable_fiber_occurrence_law_source_pure_as_written_refuter_stress_selected_checkpoint_pending`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -376,8 +376,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-1045.yaml`
-- `research_control/tasks/RT-20260816-002/00_TASK.yaml`
+- `research_control/handoffs/handoff-1046.yaml`
+- `research_control/tasks/RT-20260816-003/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -393,7 +393,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 1045*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 1046*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

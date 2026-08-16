@@ -1,0 +1,188 @@
+schema_id: "v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_disposition_v1"
+task_id: "RT-20260816-003"
+job_id: "AJ-RT-20260816-003-001"
+decision_id: "DDR-20260816-003"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SOURCE-EXTENSION-SMUGGLING-AUDIT-V1"
+candidate_id: "CAND-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-V1"
+candidate_name: "ProposalOnlyMeasurableFiberOccurrenceLaw_v1"
+status: "draft_control"
+authority: "science_draft"
+
+smuggling_audit_result:
+  result_count: 1
+  result_type: "source_pure_as_written"
+  result_scope: "The fixed RT001 proposal is target-free and workflow-authority-clean at local written-syntax scope under its explicit proposal-only reading."
+  target_import_detected: false
+  workflow_authority_import_detected: false
+  exact_mathematical_defect_detected: false
+  conditional_mathematics_preserved: true
+  disclosed_goal_property_preload: true
+  independent_source_provenance_passed: false
+  current_ontology_derivation_passed: false
+  definitional_conservativity_passed: false
+  epistemic_root_selection_passed: false
+  parameter_selection_passed: false
+  coupling_selection_passed: false
+  clock_selection_passed: false
+  physical_semantics_passed: false
+  empirical_semantics_passed: false
+  realized_occurrence_passed: false
+  p4_t02_acceptance_passed: false
+  adoption_passed: false
+  no_fog_check: true
+  claim_boundary_preserved: true
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  category: "new_ontology_primitive"
+  controlled_status: "proposal-only"
+  status_label: "proposal-only"
+  material_class: "source-extension data"
+  relation_to_current_ontology: "missing_primitive"
+  current_ontology_derivation: false
+  current_ontology_modified: false
+  definitionally_conservative: false
+  model_conservativity_claimed: false
+  canonical_ontology_candidate: false
+  adopted: false
+  rejected: false
+  target_import_detected_in_written_syntax: false
+  epistemic_source_derivation_established: false
+  adoption_status: "blocked_adoption_open_continuation"
+  protected_authority_required_before_adoption: true
+  downstream_promotion_authorized: false
+
+preserved_rt001_results:
+  - result_id: "THM-V22-P4T02-B2-MEASURABLE-FIBER-STANDARD-BOREL-001"
+    status: "preserved_exact_conditional_proof"
+  - result_id: "THM-V22-P4T02-B2-MEASURABLE-FIBER-KERNEL-NORMALIZATION-001"
+    status: "preserved_exact_conditional_proof"
+  - result_id: "THM-V22-P4T02-B2-MEASURABLE-FIBER-RESTRICTION-NATURALITY-001"
+    status: "preserved_on_declared_open_pullbacks"
+  - result_id: "THM-V22-P4T02-B2-MEASURABLE-FIBER-SHARED-DRIVER-DESCENT-001"
+    status: "preserved_for_section_indexed_shared_global_flip_law_only"
+  - result_id: "THM-V22-P4T02-B2-MEASURABLE-FIBER-TV-CONTROL-001"
+    status: "preserved_with_empty_open_degeneracy"
+  - result_id: "THM-V22-P4T02-B2-MEASURABLE-FIBER-SWAP-EQUIVARIANCE-001"
+    status: "preserved_exact_conditional_proof"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT016-003-001"
+    payload_type: "coupling_nonuniqueness_theorem"
+    name: "Shared-global versus token-class natural coupling nonuniqueness"
+    summary: "A shared Bernoulli flip and a Bernoulli driver indexed by token value are both restriction-natural and complement-equivariant, agree on every constant one-component marginal, but differ on mixed-token sections."
+    falsifier: "A source-derived axiom forcing equality of every admissible joint law would overturn this nonuniqueness."
+  - payload_id: "NMP-RT016-003-002"
+    payload_type: "countermodel"
+    name: "Componentwise-independent coupling restriction failure"
+    summary: "Independent flips per connected component have the same one-component marginals as the shared law but fail naturality when one connected open restricts to a disconnected subopen."
+    falsifier: "Restricting the arrow category to component-preserving maps would repair this law but would add a separately justified arrow restriction."
+  - payload_id: "NMP-RT016-003-003"
+    payload_type: "stationarity_nonselection_theorem"
+    name: "Uniform stationary law does not identify p"
+    summary: "The uniform law on each two-point complement orbit is stationary for all p in (0,1), so p=1/3 and p=2/3 share stationary data while defining distinct kernels."
+    falsifier: "A source-derived asymmetric stationary observable or dynamical rate calibration could distinguish p but is absent."
+  - payload_id: "NMP-RT016-003-004"
+    payload_type: "occurrence_nonselection_lemma"
+    name: "Kernel without initial law or realization selects no occurrence"
+    summary: "K_p specifies conditional one-step weights only; delta_0 K_p and delta_1 K_p differ, and no sample realization follows from the abstract kernel."
+    falsifier: "An independently sourced initial law and sampling or realization map would define stronger occurrence semantics."
+  - payload_id: "NMP-RT016-003-005"
+    payload_type: "clock_nonselection_lemma"
+    name: "Positive generator-rate rescaling leaves formal transitions underdetermined"
+    summary: "Replacing L_p by a L_p for a>0 changes any time scale while retaining the same fixed points and transition support, so the one-step generator supplies no physical clock normalization."
+    falsifier: "A current-source clock standard fixing a would remove this freedom."
+  - payload_id: "NMP-RT016-003-006"
+    payload_type: "metric_scope_lemma"
+    name: "Empty-open total-variation degeneration"
+    summary: "On nonempty complement orbits d_TV(K_p,K_q)=|p-q|, while the unique empty-open section is complement-fixed and both kernels equal the same Dirac law, giving distance zero."
+    falsifier: "A nontrivial empty-open fiber would change the domain and is not part of the fixed candidate."
+
+exact_model:
+  path: "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_model.py"
+  check_count: 27
+  pass_count: 27
+  payload_sha256: "ea0aa7d49c27c94b97b6cbcf48c18d1314f80dab9ec94023822f1000b52134b7"
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+  - "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+
+freeze_criteria_status:
+  evaluated: true
+  inherited_freeze_count: 8
+  new_freeze_created: false
+  active_freeze_count: 8
+  freeze_decision: "not_frozen_pending_separately_admitted_refuter_stress"
+  reason: "The first focused audit finds no literal target import or mathematical defect, while coupling, parameter, stationarity, occurrence, and clock-selection burdens remain testable in a distinct Refuter packet."
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_delta"
+  - burden: "Source equivalence EqSrc"
+    status: "no_delta"
+  - burden: "RetainH"
+    status: "no_delta"
+  - burden: "GenH"
+    status: "no_delta"
+  - burden: "ObsLoc_lc"
+    status: "no_delta"
+  - burden: "Resp_lc"
+    status: "no_delta"
+  - burden: "M_src"
+    status: "no_delta"
+  - burden: "g_eff"
+    status: "no_delta"
+  - burden: "matter coupling"
+    status: "no_delta"
+  - burden: "Einstein equations"
+    status: "no_delta"
+  - burden: "finite-variation robustness"
+    status: "no_delta"
+  - burden: "benchmark promotion"
+    status: "no_delta"
+  - burden: "Gate Chair status"
+    status: "no_delta"
+  - burden: "current route freeze or hard-fail status"
+    status: "no_delta"
+
+selected_successor:
+  packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS-V1"
+  packet_type: "source_extension_refuter_stress"
+  route_label: "ontology-law-research-packet"
+  role_family: "refuter@0.2.0"
+  status: "selected_not_executed"
+  created: false
+  executed: false
+  objective: "Stress coupling uniqueness, full restriction naturality, parameter and stationary-law identifiability, initial-law and realization dependence, clock normalization, and empty-open metric scope without repairing or adopting the candidate."
+
+authority_limits:
+  source_law_adopted: false
+  eqsrc_adopted: false
+  occurrence_realized: false
+  physical_probability_established: false
+  physical_time_selected: false
+  causal_cone_constructed: false
+  conformal_geometry_constructed: false
+  g_eff_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
