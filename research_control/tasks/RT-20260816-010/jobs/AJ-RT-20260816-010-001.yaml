@@ -1,0 +1,339 @@
+job_id: "AJ-RT-20260816-010-001"
+task_id: "RT-20260816-010"
+decision_id: "DDR-20260816-010"
+role_id: "process-integrity-auditor"
+role_version: "0.1.0"
+execution_role_ref: "process-integrity-auditor@0.1.0--RT-20260816-010"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_RECOVERY_READY"
+created_at: "2026-08-16T19:34:16Z"
+started_at: "2026-08-16T19:34:16Z"
+completed_at: "2026-08-16T19:34:16Z"
+completion_path: "research_control/tasks/RT-20260816-010/jobs/completions/AJC-AJ-RT-20260816-010-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active complete-V22 goal, explicit user permission, committed RT009 checkpoint, and exact live continuation failure authorize this distinct project-system identity recovery only."
+objective: "Repair only the canonical handoff-1052 Markdown identity, prove every subsequent content byte and all RT009 science unchanged, restore live continuation resolution, synchronize the recovery, and invoke at most one fresh checkpoint without executing the selected Smuggling Audit."
+target_derivation_milestone: "none"
+milestone_burden: "Project-system handoff identity recovery only; no derivation milestone advances."
+route_label: "repair_handoff_1052_markdown_identity_routing_v1"
+route_reason: "The committed paired Markdown uses a legacy noncanonical heading and the live continuation validator uniquely reports that it does not identify handoff-1052."
+source_head: "67f887ce528f52bf745c61d849c6dfcb4926d2e5"
+source_tree: "644c753d3a1cbd4d3179dbdfb2b2d38ea852325c"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+recovery_for_plan_task_id: "P4-T02"
+next_plan_task_id: "P4-T02"
+next_plan_task_execution_authorized: false
+project_system_change_only: true
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "project_system"
+  payload_type: "not_applicable"
+  candidate_family: "not_applicable"
+  assumption_delta:
+    - "No scientific assumption changes; the packet repairs one exact handoff identity representation."
+    - "The RT009 proposal-only candidate, nine freezes, fourteen no-delta rows, selected Smuggling Audit, and every downstream block remain unchanged."
+  materiality_basis: "Restores canonical handoff discovery and continuation routing without changing any scientific content or authority."
+  source_basis:
+    - "MD-SKILL-IMPROVE-PROJECT-SYSTEM"
+    - "research_control/handoffs/handoff-1052.yaml"
+    - "research_control/handoffs/handoff-1052.md"
+    - "research_control/tasks/RT-20260816-009/jobs/completions/AJC-AJ-RT-20260816-009-001.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260816-010/artifacts/validate_handoff_1052_identity_routing_recovery.py"
+    - "research_control/tasks/RT-20260816-010/artifacts/handoff_1052_identity_routing_recovery_receipt.json"
+  project_system_justification: "This is exact nonsemantic routing recovery and control synchronization; it creates no physics payload and executes no Smuggling Audit."
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "system_bearing"
+  primary_budget: "project_system"
+  task_count_credit:
+    physics: 0
+    project_system: 1
+  expected_durable_outputs:
+    physics: []
+    project_system:
+      - "one exact handoff identity transformation receipt"
+      - "one distinct recovery task and handoff"
+      - "one fresh governed checkpoint"
+  acceptance_criteria:
+    physics: []
+    project_system:
+      - "the committed source Markdown hash and deterministic repair both match"
+      - "the repaired heading contains the exact handoff-1052 identifier"
+      - "every content byte after the heading and all RT009 governing hashes remain unchanged"
+      - "live continuation resolution returns director_decision_required"
+      - "all required project-control gates pass"
+      - "one fresh checkpoint commits before Smuggling Audit execution"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1052"
+  source_handoff_path: "research_control/handoffs/handoff-1052.yaml"
+  source_handoff_sha256: "ac7c53caf0c0cb15cd768e8863ac7508353702a0e43c7ab67967ecc3d8b3ce50"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "below_threshold"
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1268
+    relationship_row_count: 6524
+    semantic_row_count: 1268
+    vault_row_count: 1268
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  before_local_retrieval_status: "PASS"
+  after_local_retrieval_status: "PASS"
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"idempotent equation decoration combined extension smuggling audit\" --limit 10 --json"
+      query_type: "search"
+      query_text: "idempotent equation decoration combined extension smuggling audit"
+      returned_object_ids:
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW-V1"
+        - "TEX-V22-P4-T02-B2-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW-V1"
+  canonical_inspections:
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260816-009/artifacts/parent_fusion_notes_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law.md"
+      source_hash: "098ebae192ae860801c0a535b9818973248f47da4735e0c50bd23372742d6c8f"
+    - object_id: "TEX-V22-P4-T02-B2-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260816-009/artifacts/v22_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law_v1.tex"
+      source_hash: "661577114e29902534e6a08975ca3c9bbdb64b23f43d2218ae04c05aa5944ac8"
+  authority_note: "Tracked registered sources and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval evidence only and not authority."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".codex/skills/improve-project-system/SKILL.md"
+  - ".agents/roles/research_ops/project-system-director.v0.2.0.md"
+  - ".agents/roles/research_ops/process-integrity-auditor.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/current_frontier.md"
+  - "research_control/handoffs/handoff-1052.yaml"
+  - "research_control/handoffs/handoff-1052.md"
+  - "research_control/tasks/RT-20260816-009/**"
+  - "research_control/tasks/RT-20260816-010/**"
+  - "scripts/project_control/**"
+  - "scripts/research_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "registries/**"
+  - ".local/validation-receipts/**"
+
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-1052.md"
+  - "research_control/handoffs/handoff-1053.yaml"
+  - "research_control/handoffs/handoff-1053.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260816-009/**"
+  - "research_control/tasks/RT-20260816-010/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "research_control/current_frontier.md"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "registries/CONTENT_SEMANTIC_REGISTRY*"
+  - "registries/FILE_OBJECT_REGISTRY*"
+  - "registries/OBJECT_RELATIONSHIP_REGISTRY*"
+  - "registries/OBSIDIAN_VAULT_REGISTRY*"
+  - "registries/WIKI_ARTIFACT_REGISTRY*"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+forbidden_paths:
+  - ".agents/roles/**"
+  - ".codex/skills/**"
+  - "scripts/research_control/**"
+  - "scripts/project_control/**"
+  - "scripts/validation/**"
+  - "tests/**"
+  - "implementations_plans/**"
+  - "ontology/**"
+  - "legacy_ontology/**"
+  - "manuscripts/**"
+  - "markdown/publication-briefs/**"
+  - "markdown/html-explainer-specs/**"
+  - "github-facing/**"
+  - "html/**"
+  - "pdf/**"
+
+allowed_source_classes:
+  - "exact_handoff_identity_failure_evidence"
+  - "exact_handoff_byte_repair"
+  - "control_state"
+  - "registry"
+  - "execution_role_contract"
+  - "task_control_record"
+  - "generated_memory_derivative"
+  - "prior_authorized_transaction_checkpoint"
+  - "scientific_payload_preservation_evidence"
+
+forbidden_source_classes:
+  - "predecessor_science_reexecution_or_rewrite"
+  - "validator_test_schema_skill_or_base_role_semantics_change"
+  - "selected_smuggling_auditor_execution"
+  - "canonical_ontology_write"
+  - "source_law_adoption"
+  - "physics_claim_or_interpretation_promotion"
+  - "physical_probability_or_realized_occurrence_claim"
+  - "P4_relevance_or_irrelevance_claim"
+  - "D7_adequacy_or_B2_action"
+  - "P4_T03_unlock"
+  - "gate_chair_verdict"
+  - "benchmark_result_or_promotion"
+  - "proof_authority"
+  - "publication_push_or_external_action_authority"
+  - "global_no_go_claim"
+  - "completed_derivation_claim"
+  - "generated_derivative_authority"
+
+approved_commands:
+  - ".venv/bin/python research_control/tasks/RT-20260816-010/artifacts/validate_handoff_1052_identity_routing_recovery.py --write-report --json"
+  - ".venv/bin/python research_control/tasks/RT-20260816-010/artifacts/validate_handoff_1052_identity_routing_recovery.py --check --json"
+  - ".venv/bin/python scripts/project_control/classify_project_changes.py --json"
+  - ".venv/bin/python scripts/project_control/resolve_project_improvement.py --json"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/research_control/render_current_frontier.py --write"
+  - ".venv/bin/python scripts/research_control/render_task_index.py --write"
+  - ".venv/bin/python scripts/research_control/render_compact_current_frontier_v16.py --write"
+  - ".venv/bin/python scripts/research_control/render_dependency_graph.py --json output/research_dependency_graph.json --markdown wiki/indexes/research_dependency_graph.md --dot output/research_dependency_graph.dot"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only --summary"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260816-010-001 --json-summary"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected --scope working"
+  - ".venv/bin/python scripts/research_control/continue_research.py --summary"
+  - "git diff --check"
+  - ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260816-010-001 --planner-validation"
+
+required_validators:
+  - "memory_preflight"
+  - "physics_payload_admission"
+  - "dual_budget_allocation"
+  - "ordinary_route_guard_admission"
+  - "task_local_handoff_1052_identity_recovery"
+  - "memory_sync"
+  - "memory_core"
+  - "render_current_frontier_check"
+  - "task_index_check"
+  - "compact_current_frontier_check"
+  - "dependency_graph_freshness"
+  - "project_change_classifier"
+  - "project_improvement_resolver"
+  - "project_improvement_signals"
+  - "documentation_impact"
+  - "claim_language_changed"
+  - "research_control_diff"
+  - "continue_research_resolution"
+  - "git_diff_check"
+  - "checkpoint_transaction"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260816-010/artifacts/validate_handoff_1052_identity_routing_recovery.py"
+  - "research_control/tasks/RT-20260816-010/artifacts/handoff_1052_identity_routing_recovery_receipt.json"
+  - "research_control/tasks/RT-20260816-010/documentation_impact.yaml"
+  - "research_control/tasks/RT-20260816-010/jobs/completions/AJC-AJ-RT-20260816-010-001.yaml"
+  - "research_control/handoffs/handoff-1053.yaml"
+  - "research_control/handoffs/handoff-1053.md"
+  - "research_control/program_state.yaml"
+
+claim_boundary: "CB-V22-P4-T02-HANDOFF-1052-IDENTITY-ROUTING-RECOVERY-001"
+resolves_signal_routing: false
+documentation_impact_id: "DI-RT-20260816-010-001"
+completion_id: "AJC-AJ-RT-20260816-010-001"

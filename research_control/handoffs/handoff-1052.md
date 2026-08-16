@@ -1,4 +1,6 @@
-# Handoff 1052 — Idempotent equation-decoration combined extension to Smuggling Audit
+<!-- authority: control -->
+
+# handoff-1052 — Idempotent equation-decoration combined extension to Smuggling Audit
 
 RT-20260816-009 completed one bounded Ontology Formalizer packet. The parent and both independent specialist children converge, after one conflict-resolution round, on a proposal-only combined occurrence extension built from smooth endomorphism decorations of the registered rank-six source equation bundle, pointwise idempotent admissibility, conjugation transport, the Grothendieck carrier `X_OCC`, and exactly one deterministic natural null attachment.
 
