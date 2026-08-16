@@ -1,0 +1,471 @@
+job_id: "AJ-RT-20260816-005-001"
+task_id: "RT-20260816-005"
+decision_id: "DDR-20260816-005"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260816-005"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-16T12:03:37Z"
+started_at: "2026-08-16T12:03:37Z"
+completed_at: "2026-08-16T12:23:36Z"
+completion_path: "research_control/tasks/RT-20260816-005/jobs/completions/AJC-AJ-RT-20260816-005-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active full-V22 goal, committed RT004 recovery checkpoint 761afa621680ee41e3dec30709a90fbbbf5a2545, and handoff-1047 authorize exactly one bounded source-extension Refuter stress and one checkpoint. Candidate repair, adoption, successor execution, adequacy, B2 action, P4-T03, promotion, publication, push, and external action remain unauthorized."
+objective: "Hold the exact ProposalOnlyMeasurableFiberOccurrenceLaw_v1 construction and RT003 audit verdict fixed and attack coupling isolation, p-identifiability, stationary selector force, finite-lag ambiguity, continuous-time embeddability, initial-law and realization dependence, clock normalization, total-admission nonselection, and finite-variation robustness while preserving correct conditional mathematics and all downstream locks."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Stress whether the formal occurrence-law candidate has any robust natural coupling, parameter, stationary occurrence, or clock selection force before P4-T02 credit."
+route_label: "ontology-law-research-packet"
+trigger_classification: "derivation_critical_missing_source_law"
+missing_source_law: "robust_natural_occurrence_coupling_parameter_and_clock_selection_law"
+adoption_status: "blocked_adoption_open_continuation"
+route_reason: "handoff_1047_selects_one_fresh_fixed_candidate_refuter_stress_after_committed_rt004_recovery_checkpoint"
+route_strategy_id: "stress_v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_v1"
+selected_packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS-V1"
+selected_candidate_id: "CAND-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-V1"
+immutable_route_sha256: "5d6dad187fd1a4d1f18ea062c78c4018592fe3f609c15ac3fe3c47625a2ac785"
+source_head: "761afa621680ee41e3dec30709a90fbbbf5a2545"
+source_tree: "ed5bc5b0505e2008da10801604dd1a296c49700f"
+assembly_parent_head: "761afa621680ee41e3dec30709a90fbbbf5a2545"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+work_item_id: "P4-T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS"
+packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS-V1"
+recommendation_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R10"
+  - "V22-R13"
+declared_coverage_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R13"
+  - "S5"
+sequence_step_ids:
+  - "S5"
+cross_cutting_directive_ids:
+  - "V22-X02"
+  - "V22-X04"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P4-T02"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1047"
+  source_handoff_path: "research_control/handoffs/handoff-1047.yaml"
+  source_handoff_sha256: "5d6dad187fd1a4d1f18ea062c78c4018592fe3f609c15ac3fe3c47625a2ac785"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite:
+    task_id: "RT-20260816-004"
+    commit: "761afa621680ee41e3dec30709a90fbbbf5a2545"
+    tree: "ed5bc5b0505e2008da10801604dd1a296c49700f"
+    committed: true
+  immutable_handoff_checkpoint_note: "Handoff-1047 was emitted before checkpoint and remains immutable; commit 761afa621680ee41e3dec30709a90fbbbf5a2545 contains the complete RT004 recovery and satisfies its prerequisite."
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1258
+    relationship_row_count: 6466
+    semantic_row_count: 1258
+    vault_row_count: 1258
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS --limit 10 --json"
+      query_type: "search"
+      query_text: "COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS"
+      returned_object_ids:
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SMUGGLING-AUDIT-V1"
+        - "TEX-V22-P4-T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SMUGGLING-AUDIT-V1"
+  canonical_inspections:
+    - object_id: "TEX-V22-P4-T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SMUGGLING-AUDIT-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_audit_v1.tex"
+      source_hash: "97eb186301e5600dbda55fdc3663a604f7380c9beb38eebee2419f706d8b212c"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SMUGGLING-AUDIT-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260816-003/artifacts/parent_fusion_notes_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_audit.md"
+      source_hash: "0d8adbd8f0954131e045224f4e56c32c242ea80d916987df6ca17925099798d6"
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  additional_control_inspections:
+    - control_path: "research_control/handoffs/handoff-1047.yaml"
+      source_hash: "5d6dad187fd1a4d1f18ea062c78c4018592fe3f609c15ac3fe3c47625a2ac785"
+    - control_path: "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_disposition_v1.yaml"
+      source_hash: "8cd3ebddce439157273a8d35afb52101060f872dfa3d268b10d2a493e791fbd2"
+    - control_path: "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_matrix_v1.yaml"
+      source_hash: "6ac30c01e463fa2890ec603758705e10b1de7fc0f9730edd780bacc89eb5d2d4"
+    - control_path: "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_model.py"
+      source_hash: "712efbd9ddf6da6f483ce83988bb198813bce14ff1c751cdfc47b7b74ee9dbfc"
+  authority_note: "Tracked registered source and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval evidence only and not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "countermodel"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  assumption_delta:
+    - "Hold the complete RT001 candidate, RT003 audit result, exact conditional mathematics, source-extension classification, and eight inherited freezes fixed."
+    - "Treat the binary token fiber, complement, p, total admission, natural token-class coupling interval, shared driver, and total-variation metric as disclosed proposal-only new primitive debt."
+    - "Test arbitrarily small changes in p and coupling parameter a within the admitted natural family without importing target geometry or empirical calibration."
+    - "Use the exact two-state spectrum, finite-lag laws, and homogeneous continuous-time embedding problem only to test clock and occurrence overreads."
+    - "Distinguish stationary distribution, transition law, initial law, sample realization, clock normalization, and physical occurrence."
+    - "Keep D7 unevaluated, B2 inactive, P4-T03 locked, and every successor unexecuted."
+  materiality_basis: "This is the first focused Refuter stress after the RT003 narrow source-purity audit. It adds an exact coupling isolation metric, finite-lag spectral ambiguity, and continuous-time embeddability theorem rather than replaying the audit's basic nonselection statements."
+  payload_details:
+    candidate_identity: "CAND-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-V1"
+    expected_result_kind: "one_decisive_refuter_class_with_freeze_evaluation"
+    required_new_payload: "at least one exact coupling-fragility countermodel and one finite-lag or continuous-time embeddability theorem with proof and falsifier"
+    global_no_go_claimed: false
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P4-T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SMUGGLING-AUDIT-V1"
+    - "MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-SMUGGLING-AUDIT-V1"
+    - "research_control/handoffs/handoff-1047.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260816-005/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_v1.tex"
+    - "research_control/tasks/RT-20260816-005/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_matrix_v1.yaml"
+    - "research_control/tasks/RT-20260816-005/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_disposition_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+    - "latex_compile_pass"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "stress_v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  family_identity_sha256: "16817d3d1fb608b1fc8e9cf53064e06c5cb0c3b796ad82a22cd3b6d63a381778"
+  assumption_sha256es:
+    - "5d6dad187fd1a4d1f18ea062c78c4018592fe3f609c15ac3fe3c47625a2ac785"
+    - "97eb186301e5600dbda55fdc3663a604f7380c9beb38eebee2419f706d8b212c"
+    - "8cd3ebddce439157273a8d35afb52101060f872dfa3d268b10d2a493e791fbd2"
+    - "6ac30c01e463fa2890ec603758705e10b1de7fc0f9730edd780bacc89eb5d2d4"
+    - "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+  route_kind: "candidate_stress"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+    - "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+  reopening:
+    requested: false
+    class: "none"
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered draft/control measurable-fiber occurrence-law Refuter stress manuscript"
+      - "one exact stress matrix, disposition, obstruction, freeze evaluation, and successor decision"
+    project_system:
+      - "task-local exact model, focused validator, compact receipt, LaTeX receipt, provenance, parent-child synthesis, and standard synchronization"
+  acceptance_criteria:
+    physics:
+      - "all ten stress dimensions receive explicit evidence and one local result"
+      - "all correct RT001 and RT003 conditional mathematics and boundary qualifications are preserved"
+      - "at least one exact countermodel and one theorem with proof and falsifier are new"
+      - "one exclusive Refuter class and candidate-local freeze evaluation are recorded"
+    project_system:
+      - "source hashes, artifacts, registries, backlog, program state, and handoff pass deterministic validation"
+      - "the registered TeX source compiles and every rendered page passes visual inspection"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    evidence_path: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+forbidden_source_classes:
+  - "predecessor_source_rewrite"
+  - "candidate_reconstruction"
+  - "candidate_repair_execution"
+  - "canonical_ontology_write"
+  - "source_law_adoption"
+  - "M_src_adoption"
+  - "P2_T01_adequacy_reevaluation"
+  - "B2_activation_or_adoption_or_disposal"
+  - "shared_tau_selector"
+  - "fixed_Q_ray_atlas"
+  - "common_character_or_anchor_selector"
+  - "oriented_matroid_bridge_as_selector"
+  - "signed_cubic_viability_selector"
+  - "source_law_space_robust_invariance_selector"
+  - "K_star_repair_or_replay"
+  - "target_atlas"
+  - "target_metric"
+  - "target_lorentz_group"
+  - "target_tetrad"
+  - "target_coframe"
+  - "desired_gr_cone"
+  - "physical_norm"
+  - "detector_response"
+  - "empirical_calibration"
+  - "benchmark_success"
+  - "generated_derivative_authority"
+  - "registry_metadata_authority"
+  - "role_authority"
+  - "validation_authority"
+  - "gate_chair_verdict"
+  - "physics_claim_promotion"
+  - "benchmark_promotion"
+  - "completed_derivation_claim"
+  - "global_theory_rejection"
+  - "future_source_extension_impossibility"
+  - "P4_T03_execution"
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the exact candidate, RT003 audit qualifiers, eight freeze labels, source hashes, and claim blocks fixed"
+      - "preserve conditional mathematics while attacking robust occurrence, coupling, parameter, stationarity, and clock force"
+      - "require exact countermodels or theorems with falsifiers across all ten stress dimensions"
+      - "separate candidate-local obstruction from global impossibility or ontology rejection"
+      - "review child outputs for conflicts and fuse one exclusive Refuter class"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260816-005/artifacts/child_phys_math_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260816-005/artifacts/child_phys_phil_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260816-005/artifacts/parent_conflict_review_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260816-005/artifacts/parent_fusion_notes_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.md"
+    fused_output_path: "research_control/tasks/RT-20260816-005/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+  rationale: "Two internal child execution units worked in parallel under one outer AgentJob, one Refuter overlay, one claim boundary, and one completion record."
+
+role_assembly_invariant:
+  one_outer_agent_job: true
+  execution_role_record_count: 1
+  child_agent_job_count: 0
+  child_role_record_count: 0
+  parent_child_authority_inherited: true
+  child_authority_expansion: false
+
+inputs:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - "research_control/design/gr_derivation_burden_map.md"
+  - "research_control/design/refuter_obstruction_schema_v1.md"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/handoffs/handoff-1047.yaml"
+  - "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_audit_v1.tex"
+  - "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_disposition_v1.yaml"
+  - "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_model.py"
+  - "research_control/tasks/RT-20260816-003/artifacts/parent_fusion_notes_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_audit.md"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260816-005/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_v1.tex"
+  - "research_control/tasks/RT-20260816-005/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_matrix_v1.yaml"
+  - "research_control/tasks/RT-20260816-005/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_disposition_v1.yaml"
+  - "research_control/tasks/RT-20260816-005/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_model.py"
+  - "research_control/tasks/RT-20260816-005/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_validation.json"
+  - "research_control/tasks/RT-20260816-005/artifacts/parent_conflict_review_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+  - "research_control/tasks/RT-20260816-005/artifacts/parent_fusion_notes_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.md"
+  - "research_control/tasks/RT-20260816-005/jobs/completions/AJC-AJ-RT-20260816-005-001.yaml"
+  - "research_control/handoffs/handoff-1048.yaml"
+  - "research_control/handoffs/handoff-1048.md"
+
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-1048.yaml"
+  - "research_control/handoffs/handoff-1048.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260816-005/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+required_checks:
+  - "strict unique-key repository-subset YAML parsing"
+  - "exact source-hash validation"
+  - "task-local exact finite-state and coupling model"
+  - "all ten stress dimensions and one exclusive Refuter class"
+  - "formal refuter obstruction record if obstruction is selected"
+  - "new mathematical payload with proof and falsifier"
+  - "eight inherited freezes plus any one candidate-local freeze"
+  - "fourteen literal no_delta Distance-to-GR rows"
+  - "parent-child conflict review and fusion"
+  - "LaTeX compile and page-level visual inspection"
+  - "affected-profile repository validation"
+  - "documentation-impact validation"
+  - "scoped diff and whitespace validation"
+  - "one fresh governed checkpoint and no replay"
+
+completion_requirements:
+  exclusive_refuter_class_required: true
+  allowed_refuter_classes:
+    - "concrete_witness_path"
+    - "source_side_irrelevance_theorem_path"
+    - "bridge_facing_candidate_path"
+    - "repeated_unmet_burdens_no_new_payload"
+    - "scoped_obstruction"
+  refuter_obstruction_record_required_if_applicable: true
+  minimal_countermodel_required_when_available: true
+  new_mathematical_payload_required: true
+  source_extension_classification_required: true
+  freeze_criteria_status_required: true
+  distance_to_gr_status_required: true
+  successor_created: false
+  successor_executed: false
+  parent_child_parallel_synthesis_required: true
+  child_outputs_required: 2
+  parent_conflict_review_required: true
+  parent_fusion_required: true
+  no_unresolved_blocking_parent_conflict: true
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+authority_limits:
+  candidate_repaired: false
+  source_law_adopted: false
+  ontology_modified: false
+  physical_probability_established: false
+  realized_occurrence_established: false
+  physical_clock_selected: false
+  causal_geometry_constructed: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  g_eff_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  benchmark_promoted: false
+  gate_chair_action_authorized: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+
+notes: "One bounded Refuter stress is active. Children inherit this exact authority and write only their assigned child artifacts; no child AgentJob or role record exists."

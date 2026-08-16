@@ -1,0 +1,256 @@
+schema_id: "v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_matrix_v1"
+task_id: "RT-20260816-005"
+job_id: "AJ-RT-20260816-005-001"
+packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS-V1"
+candidate_id: "CAND-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-V1"
+candidate_name: "ProposalOnlyMeasurableFiberOccurrenceLaw_v1"
+status_label: "draft/control"
+candidate_status: "proposal-only"
+source_extension_category: "new_ontology_primitive"
+decisive_result_class: "scoped_obstruction"
+adoption_status: "blocked_adoption_open_continuation"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Stress whether the formal occurrence-law candidate has any robust natural coupling, parameter, stationary occurrence, or clock selection force before P4-T02 credit."
+
+fixed_results_preserved:
+  - result_id: "FIX-01-SOURCE-PURITY"
+    status: "preserved"
+    statement: "RT003 source_pure_as_written remains valid only for disclosed target-free written syntax and grants no provenance, selection, physical meaning, P4 credit, or adoption."
+  - result_id: "FIX-02-FIBER"
+    status: "preserved"
+    statement: "The locally constant binary section fiber remains standard Borel on the declared domains."
+  - result_id: "FIX-03-KERNEL"
+    status: "preserved"
+    statement: "K_p is normalized and complement-equivariant for every disclosed p in (0,1)."
+  - result_id: "FIX-04-NATURALITY"
+    status: "preserved"
+    statement: "Open restriction and source-diffeomorphism pullback naturality remain correct for the declared section construction."
+  - result_id: "FIX-05-SHARED-DESCENT"
+    status: "preserved_with_scope"
+    statement: "The packet-global shared driver gives the declared section-indexed cover law but does not become the unique law compatible with the local marginals."
+  - result_id: "FIX-06-TV"
+    status: "preserved_with_scope"
+    statement: "On nonempty two-point orbits d_TV(K_p,K_q)=|p-q|; the empty-open singleton gives zero."
+  - result_id: "FIX-07-STATIONARITY"
+    status: "preserved"
+    statement: "For p in (0,1), stationarity is exactly complement invariance and therefore does not identify p."
+
+stress_branches:
+  - branch_id: "STRESS-01-FIXED-BOUNDARY"
+    dimension_id: "fixed_candidate_and_rt003_audit_preservation"
+    exact_result: "Every exact conditional RT001 and RT003 theorem survives; the Refuter attacks only standalone robust occurrence and clock-selection force."
+    disposition: "fixed_mathematics_and_narrow_source_purity_preserved"
+  - branch_id: "STRESS-02-COUPLING-ISOLATION"
+    dimension_id: "natural_coupling_isolation_and_finite_variation"
+    exact_result: "For fixed p, exchange-symmetric token-class couplings J_a satisfy max(0,2p-1)<=a<=p and d_TV(J_a,J_b)=2|a-b|. Hence the shared a=p law has arbitrarily close natural same-marginal alternatives."
+    disposition: "shared_coupling_not_isolated_or_robustly_selected"
+  - branch_id: "STRESS-03-PARAMETER"
+    dimension_id: "kernel_parameter_identifiability"
+    exact_result: "Every p in (0,1) preserves normalization, swap equivariance, restriction naturality, and total admission; no candidate equation isolates one p."
+    disposition: "parameter_family_remains_unselected"
+  - branch_id: "STRESS-04-STATIONARITY"
+    dimension_id: "stationary_law_selector_force"
+    exact_result: "The stationary measures are exactly the complement-invariant measures for every p in (0,1), so stationary snapshots select neither p, token, orbit weight, nor realized occurrence."
+    disposition: "stationarity_has_zero_root_selection_force"
+  - branch_id: "STRESS-05-FINITE-LAG"
+    dimension_id: "finite_lag_spectral_ambiguity"
+    exact_result: "K_p has spectrum {1,2p-1} and K_p^n has nontrivial eigenvalue (2p-1)^n. Every even lag identifies p and 1-p, while odd lags separate them away from p=1/2."
+    disposition: "even_lag_observation_is_noninjective"
+  - branch_id: "STRESS-06-CONTINUOUS-TIME"
+    dimension_id: "continuous_time_embeddability_and_clock_scale"
+    exact_result: "A finite homogeneous two-state CTMC embedding exists exactly for p>1/2. For p=1/2 K_p is singular; for p<1/2 det K_p<0. On the positive branch p=(1+exp(-2 lambda tau))/2, so only lambda*tau is fixed."
+    disposition: "candidate_has_no_uniform_continuous_time_semantics_or_clock_normalization"
+  - branch_id: "STRESS-07-OCCURRENCE"
+    dimension_id: "initial_law_sample_realization_and_token_occurrence"
+    exact_result: "The kernel supplies neither an initial law nor a sample seed or realization map, and the complement swap has no fixed token."
+    disposition: "formal_transition_weights_do_not_select_realized_occurrence"
+  - branch_id: "STRESS-08-ADMISSION"
+    dimension_id: "total_admission_and_restriction_naturality"
+    exact_result: "Adm equals the full section fiber, so it accepts every p and every admitted natural token-class coupling and supplies no discriminator."
+    disposition: "total_admission_is_mathematically_valid_but_selector_free"
+  - branch_id: "STRESS-09-EMPTY-OPEN"
+    dimension_id: "empty_open_and_total_variation_scope"
+    exact_result: "The empty-open fiber is a singleton fixed by complement, so all kernels collapse to the same Dirac law and total variation is zero."
+    disposition: "edge_case_preserved_without_physical_metric_force"
+  - branch_id: "STRESS-10-AUTHORITY"
+    dimension_id: "source_provenance_physical_semantics_and_p4_relevance"
+    exact_result: "No exact model, theorem, registry, validator, or checkpoint supplies independent current-source provenance, empirical calibration, physical probability, realized occurrence, clock, P4 acceptance, or adoption."
+    disposition: "all_downstream_claim_and_workflow_locks_preserved"
+
+new_mathematical_payload:
+  - payload_id: "NMP-RT016-005-001"
+    payload_type: "finite_variation_countermodel"
+    statement: "At every p in (0,1), the shared token-class coupling a=p has arbitrarily close fully natural same-marginal alternatives a=p-epsilon with exact joint-law total variation 2 epsilon."
+    falsifier: "An independently source-derived law isolating a=p from all other natural couplings would overturn this candidate-local nonisolation result."
+  - payload_id: "NMP-RT016-005-002"
+    payload_type: "spectral_theorem"
+    statement: "The two-state kernel has nontrivial eigenvalue 2p-1 and exact n-step form with eigenvalue (2p-1)^n."
+    falsifier: "A different fixed kernel or extra observed odd-lag transition data would change the inference problem but is outside the unchanged candidate."
+  - payload_id: "NMP-RT016-005-003"
+    payload_type: "nonidentifiability_theorem"
+    statement: "For every even n, K_p^n=K_(1-p)^n, giving an exact p versus 1-p ambiguity."
+    falsifier: "An independently specified one-step direction or any exact odd-lag law would distinguish the pair away from p=1/2."
+  - payload_id: "NMP-RT016-005-004"
+    payload_type: "embeddability_theorem"
+    statement: "The complement-equivariant two-state K_p is a finite-time homogeneous CTMC transition matrix exactly when p>1/2; p=1/2 is singular and p<1/2 has negative determinant."
+    falsifier: "A nonhomogeneous, discrete-time-only, or enlarged hidden-state dynamics is not covered and would require a materially different candidate."
+  - payload_id: "NMP-RT016-005-005"
+    payload_type: "clock_nonidentifiability_corollary"
+    statement: "On the embeddable branch, K_p fixes only lambda*tau=-1/2 log(2p-1), leaving rate and elapsed time separately unselected."
+    falsifier: "An independent source clock or rate standard would remove the scale freedom."
+  - payload_id: "NMP-RT016-005-006"
+    payload_type: "scoped_obstruction"
+    statement: "The unchanged proposal cannot serve as a standalone robust natural occurrence and clock selector because its coupling, parameter, initial law, realization, and rate-duration split remain unselected."
+    falsifier: "A materially distinct source-derived selection law with robustness and realization certificates could reopen continuation without invalidating this local freeze."
+
+refuter_result:
+  selected_class: "scoped_obstruction"
+  selected_count: 1
+  scope: "The unchanged ProposalOnlyMeasurableFiberOccurrenceLaw_v1 as a standalone robust, naturally selected occurrence, coupling, parameter, and clock law under the fixed proposal-only roots."
+  smallest_failed_premise: "Neither the candidate nor current ontology supplies an independently source-derived rule that isolates one natural coupling and p, selects initial law and realization, and calibrates or replaces the missing clock."
+  fixed_candidate_invalidated_on_its_exact_domain: false
+  source_purity_verdict_invalidated: false
+  p4_t02_burden_reduced: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+
+refuter_obstruction_record:
+  obstruction_id: "OB-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY-001"
+  target_claim: "The unchanged proposal-only measurable-fiber law supplies a robust and naturally selected occurrence, coupling, parameter, stationary law, and clock precursor with P4-T02 bridge force."
+  target_milestone: "effective_metric_g_eff"
+  failed_premise: "No current-source law isolates one admitted natural coupling and p, supplies an initial law and sample realization, or selects a finite-time embedding and clock normalization."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260816-005/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_model.py"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "Missing independent coupling-isolation, parameter-selection, occurrence-realization, continuous-time embedding, and clock-normalization certificates."
+  source_extension_repair_possible: "materially_distinct_extension_or_theorem_remains_possible"
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+freeze_criteria_status:
+  freeze_decision: "locally_frozen"
+  active_freeze_label: "NDCL-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY"
+  freeze_scope: "Freeze replay of the unchanged proposal-only measurable-fiber law as a standalone robust, naturally selected occurrence and clock precursor. Its exact conditional finite-state mathematics remains usable as diagnostic draft/control evidence."
+  repeated_burden_basis:
+    - "the parameter and coupling remain disclosed proposal choices rather than current-source-selected roots"
+    - "the shared coupling has no isolation margin inside the fully natural same-marginal family"
+    - "stationarity and even-lag laws do not identify p or occurrence"
+    - "the full p-domain lacks a uniform finite-time homogeneous CTMC interpretation and the positive branch selects no clock scale"
+  continuation_left_open:
+    - "a materially distinct source-derived occurrence, coupling, and clock-selection law"
+    - "a source-side irrelevance or scoped no-go theorem with a different target claim"
+    - "a hidden-state or nonhomogeneous proposal followed by its own audit and stress"
+    - "a protected human-gated ontology decision"
+  global_theory_rejection: false
+  future_source_extension_impossibility: false
+
+preserved_freezes:
+  - freeze_id: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    status: "active_untouched"
+  - freeze_id: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    status: "active_untouched"
+  - freeze_id: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    status: "active_untouched"
+  - freeze_id: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+    status: "active_untouched"
+  - freeze_id: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    status: "active_untouched"
+  - freeze_id: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+    status: "active_untouched"
+  - freeze_id: "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+    status: "active_untouched"
+  - freeze_id: "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+    status: "active_untouched"
+
+new_candidate_local_freeze:
+  freeze_id: "NDCL-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY"
+  status: "active_new_local_freeze"
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "The token fiber, complement, p, coupling, occurrence, and clock roots remain unadopted proposal debt."
+    task_delta: "no_delta"
+  - burden: "Source equivalence EqSrc"
+    status: "Restriction and diffeomorphism naturality are conditional proposal mathematics, not adopted EqSrc."
+    task_delta: "no_delta"
+  - burden: "RetainH"
+    status: "No history-retention primitive or theorem is supplied."
+    task_delta: "no_delta"
+  - burden: "GenH"
+    status: "No current-source generator selects p, coupling, initial law, or realization."
+    task_delta: "no_delta"
+  - burden: "ObsLoc_lc"
+    status: "Formal locally constant tokens have no observer-localization semantics."
+    task_delta: "no_delta"
+  - burden: "Resp_lc"
+    status: "No detector response, empirical readout, or physical occurrence relation is constructed."
+    task_delta: "no_delta"
+  - burden: "M_src"
+    status: "The smooth arena and proposal fiber are not adopted physical source spacetime."
+    task_delta: "no_delta"
+  - burden: "g_eff"
+    status: "No causal or metric law follows from the formal kernel."
+    task_delta: "no_delta"
+  - burden: "matter coupling"
+    status: "No universal propagation or matter-coupling law is derived."
+    task_delta: "no_delta"
+  - burden: "Einstein equations"
+    status: "No action, variation principle, stress-energy law, or field equation is supplied."
+    task_delta: "no_delta"
+  - burden: "finite-variation robustness"
+    status: "The shared coupling and p are not isolated inside arbitrarily close admissible natural families."
+    task_delta: "no_delta"
+  - burden: "benchmark promotion"
+    status: "No exact-GR comparison or benchmark promotion occurs."
+    task_delta: "no_delta"
+  - burden: "Gate Chair status"
+    status: "No protected adoption, rejection, activation, disposal, or proof verdict occurs."
+    task_delta: "no_delta"
+  - burden: "current route freeze or hard-fail status"
+    status: "Eight inherited freezes remain active and one candidate-local measurable-fiber occurrence-law freeze is added without global theory rejection."
+    task_delta: "no_delta"
+
+source_extension_classification:
+  category: "new_ontology_primitive"
+  controlled_status: "proposal-only"
+  local_source_purity_verdict: "source_pure_as_written_preserved"
+  current_ontology_derivation: false
+  independent_source_provenance: false
+  adopted: false
+  canonical_ontology_modified: false
+  physical_or_empirical_meaning: false
+  p4_t02_acceptance_credit: false
+
+selected_successor:
+  packet_id: "PKT-V22-P4T02-B2-POST-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  packet_type: "theoretical_continuation_selector"
+  route_label: "ontology-law-research-packet"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  status: "selected_not_executed"
+  executed: false
+  decision_question: "Select exactly one materially distinct source-derived occurrence or clock law, source-side irrelevance or scoped no-go theorem, hidden-state or nonhomogeneous candidate, or protected human-gated stop without replaying any of the nine active freezes."
+
+authority_limits:
+  source_law_derived_from_current_ontology: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  refuter_stress_executed: true
+  successor_executed: false
+  adequacy_reevaluated: false
+  d7_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked: false
+  physical_probability_established: false
+  realized_occurrence_established: false
+  physical_clock_selected: false
+  physical_causality_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

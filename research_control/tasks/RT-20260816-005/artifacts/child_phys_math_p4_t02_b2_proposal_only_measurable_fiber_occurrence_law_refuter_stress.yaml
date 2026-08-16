@@ -1,0 +1,920 @@
+schema_id: "child_phys_math_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-STRESS-001"
+artifact_type: "parent_child_synthesis_child_output"
+authority: "science_draft"
+status: "complete_for_parent_synthesis"
+status_label: "draft/control"
+task_id: "RT-20260816-005"
+job_id: "AJ-RT-20260816-005-001"
+decision_id: "DDR-20260816-005"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+role_id: "refuter"
+role_version: "0.2.0"
+execution_role_ref: "refuter@0.2.0--RT-20260816-005"
+claim_boundary_id: "CB-V22-P4-T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-STRESS-001"
+packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-COUPLING-PARAMETER-STATIONARITY-REFUTER-STRESS-V1"
+candidate_id: "CAND-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-V1"
+created_on: "2026-08-16"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Stress whether the formal occurrence-law candidate has any robust natural coupling, parameter, stationary occurrence, or clock selection force before P4-T02 credit."
+
+ownership_boundary:
+  owned_path: "research_control/tasks/RT-20260816-005/artifacts/child_phys_math_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+  files_written_count: 1
+  other_files_modified: false
+  peer_child_file_inspected: false
+  parent_artifact_modified: false
+  predecessor_artifact_modified: false
+  task_file_modified: false
+  decision_file_modified: false
+  job_file_modified: false
+  role_file_modified: false
+  registry_modified: false
+  canonical_ontology_modified: false
+  completion_created: false
+  handoff_created: false
+  checkpoint_executed: false
+  parent_validator_executed: false
+  successor_executed: false
+  child_agentjob_created: false
+
+execution_controls:
+  outer_agentjob_count: 1
+  internal_child_count: 2
+  child_agentjob_count: 0
+  exact_refuter_class_count: 1
+  stress_dimension_count: 10
+  stressed_dimension_count: 10
+  obstruction_record_count: 1
+  inherited_freeze_count: 8
+  candidate_local_freeze_count: 1
+  successor_selection_count: 1
+  successor_execution_count: 0
+  candidate_reconstructed: false
+  candidate_repaired: false
+  candidate_adopted: false
+  rt003_replayed: false
+  target_or_empirical_import_used: false
+  physical_probability_assigned: false
+  realized_occurrence_assigned: false
+  physical_clock_selected: false
+  physical_status_changed: false
+  distance_to_gr_changed: false
+
+source_binding:
+  source_head_at_assignment: "761afa621680ee41e3dec30709a90fbbbf5a2545"
+  source_tree_at_assignment: "ed5bc5b0505e2008da10801604dd1a296c49700f"
+  immutable_route_sha256: "5d6dad187fd1a4d1f18ea062c78c4018592fe3f609c15ac3fe3c47625a2ac785"
+  binding_note: "Tracked canonical and research-control sources govern. The existing AgentJob memory-preflight receipt was used instead of rerunning a cache-refresh command outside this child's one-file ownership. No peer child, concurrent parent output, generated derivative, registry status, validator result, or local cache was used as scientific authority."
+  governing_source_count: 21
+  governing_sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      use: "Scientific rigor, scope discipline, and falsifiability."
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      use: "Authority hierarchy, ontology-law routing, and no-promotion boundary."
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      use: "Research-control ownership, tracked-state authority, and bounded continuation rules."
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      use: "One outer AgentJob, child authority inheritance, Refuter class, freeze, payload, and Distance-to-GR contract."
+    - path: ".agents/roles/physics/refuter.v0.2.0.md"
+      sha256: "01b7897ecf5861d952d7349e3eb743feed6f178112264de73f5226d3c88946fc"
+      use: "Exclusive Refuter classes, formal obstruction record, minimal countermodel, and local-negative-result scope."
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      use: "Milestone burden, source-extension classification, freeze criteria, and fourteen Distance-to-GR rows."
+    - path: "research_control/design/refuter_obstruction_schema_v1.md"
+      sha256: "2045fc2a2895ac02f04dbd87be3e60c66497ec599e4f756fc92afd6ede36b7fe"
+      use: "Required Refuter obstruction fields and protected global-conclusion defaults."
+    - path: "research_control/design/obstruction_and_freeze_control.md"
+      sha256: "42f07f733d3d28beaef78c1d8509ef97d4bb7bdda36ef21eb06375600d175d57"
+      use: "Candidate-local obstruction scope, local freeze, and route-cycle controls."
+    - path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+      sha256: "562405dd78a03efde831806323081285c7850ee18dbeb2a6b6ecf900417c814c"
+      use: "No-fog progress, obstruction, payload, freeze, and forbidden-conclusion contract."
+    - path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+      sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789"
+      use: "Allowed progress, obstruction, freeze, route, and payload vocabulary."
+    - path: "research_control/tasks/RT-20260816-005/00_TASK.yaml"
+      sha256: "5749667220fbbe3d922a049ba0ca999f91c86d2b111471596a4c0245fe342ce2"
+      use: "Terminal completed task record, exact scoped-obstruction and local-freeze closure, ten stress dimensions, PASS_PRECHECKPOINT_STAGING_REQUIRED status, and downstream locks."
+    - path: "research_control/tasks/RT-20260816-005/DDR-20260816-005.md"
+      sha256: "38d96af048153b966acddfff4abc918f18e826c0ba40f5244bab9e1a417cf832"
+      use: "Terminal completed Director decision for coupling TV, spectrum, lag ambiguity, embeddability, and candidate-local disposition."
+    - path: "research_control/tasks/RT-20260816-005/jobs/AJ-RT-20260816-005-001.yaml"
+      sha256: "bf8130abd43d23431eca36c442d29113f7296dcca85ab1869c375f1eddebdaff"
+      use: "Terminal completed outer AgentJob, bound payload, parent-child synthesis receipt, PASS_PRECHECKPOINT_STAGING_REQUIRED status, and authority limits."
+    - path: "research_control/tasks/RT-20260816-005/roles/refuter@0.2.0--RT-20260816-005.yaml"
+      sha256: "7382191a1203fc08d0ce79e12fe2e44c3fad13b6a9f22e79925a4643f61b353f"
+      use: "Expired one-job Refuter overlay, terminal PASS_PRECHECKPOINT_STAGING_REQUIRED status, and preserved removal of repair, adoption, adequacy, promotion, and successor-execution authority."
+    - path: "research_control/handoffs/handoff-1047.yaml"
+      sha256: "5d6dad187fd1a4d1f18ea062c78c4018592fe3f609c15ac3fe3c47625a2ac785"
+      use: "Immutable selected packet, RT004 checkpoint prerequisite, preserved RT003 science, and downstream blocks."
+    - path: "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_audit_v1.tex"
+      sha256: "97eb186301e5600dbda55fdc3663a604f7380c9beb38eebee2419f706d8b212c"
+      use: "Canonical narrow source-purity verdict, fixed candidate mathematics, coupling family, stationarity, and boundary claims."
+    - path: "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_disposition_v1.yaml"
+      sha256: "8cd3ebddce439157273a8d35afb52101060f872dfa3d268b10d2a493e791fbd2"
+      use: "Fixed source-extension classification, preserved theorems, freezes, successor, and no-credit disposition."
+    - path: "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_matrix_v1.yaml"
+      sha256: "6ac30c01e463fa2890ec603758705e10b1de7fc0f9730edd780bacc89eb5d2d4"
+      use: "Twelve-dimension audit evidence and fixed empty-open, naturality, occurrence, and P4 boundaries."
+    - path: "research_control/tasks/RT-20260816-003/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_model.py"
+      sha256: "712efbd9ddf6da6f483ce83988bb198813bce14ff1c751cdfc47b7b74ee9dbfc"
+      use: "Exact finite predecessor controls for shared, componentwise, token-class, stationarity, initial-law, and empty-open claims."
+    - path: "research_control/tasks/RT-20260816-003/artifacts/parent_fusion_notes_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_audit.md"
+      sha256: "0d8adbd8f0954131e045224f4e56c32c242ea80d916987df6ca17925099798d6"
+      use: "Fused RT003 verdict, conditional mathematics, constructive preload, and selected Refuter scope."
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      use: "P4-T02 hyperbolicity, universality, robustness, hidden-target, hard-fail, and repeated-route boundary."
+  source_hash_validation_status: "PASS"
+  source_hash_mismatch_count: 0
+
+fixed_candidate_and_audit_boundary:
+  predecessor_candidate_task_id: "RT-20260816-001"
+  predecessor_audit_task_id: "RT-20260816-003"
+  candidate_name: "ProposalOnlyMeasurableFiberOccurrenceLaw_v1"
+  candidate_status: "proposal-only"
+  material_class: "source-extension data"
+  rt003_exact_verdict: "source_pure_as_written"
+  rt003_verdict_scope: "narrow_written_syntax_only"
+  rt003_source_extension_classification: "new_ontology_primitive"
+  candidate_held_fixed: true
+  conditional_mathematics_preserved: true
+  candidate_reconstructed: false
+  candidate_repaired: false
+  source_purity_reaudited: false
+  source_purity_reversed: false
+  current_ontology_derivation_established: false
+  independent_source_provenance_established: false
+  definitionally_conservative: false
+  epistemically_selected: false
+  adopted: false
+  rejected: false
+  physical_probability_established: false
+  realized_occurrence_established: false
+  p4_t02_credit_established: false
+  fixed_roots:
+    - "S={0,1}"
+    - "F_ext(O)=LC(O,S)"
+    - "Adm_ext(O)=F_ext(O)"
+    - "pointwise complement c"
+    - "p in (0,1)"
+    - "shared global stay-or-flip coupling"
+    - "formal total-variation structure"
+
+refuter_result:
+  exact_class_count: 1
+  result_class: "scoped_obstruction"
+  result_scope: "source_extension_candidate"
+  class_flags:
+    concrete_witness_path: false
+    source_side_irrelevance_theorem_path: false
+    bridge_facing_candidate_path: false
+    repeated_unmet_burdens_no_new_payload: false
+    scoped_obstruction: true
+  obstruction_id: "OB-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY-001"
+  local_freeze_id: "NDCL-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY"
+  exact_result: "The fixed proposal is a correct target-free dimensionless discrete Markov construction, but it fails as a robust natural occurrence-selection law. At every fixed p its shared coupling a=p is a non-isolated endpoint of fully natural same-marginal couplings with joint TV distance 2|a-b|; stationary data do not select p or occurrence; even-lag data identify only |2p-1|; and finite homogeneous continuous-time embedding either fails for p<=1/2 or fixes only lambda*tau for p>1/2."
+  failed_premise: "The candidate has no source-derived isolating principle that uniquely and robustly selects the shared coupling, p, an initial law, a realization map, and a clock normalization across its admitted p-domain."
+  minimal_countermodel_available: true
+  minimal_countermodel_scope: "source_extension_candidate"
+  new_mathematical_payload_present: true
+  no_fog_check: true
+  no_fog_explanation: "A named candidate-local premise fails by exact finite countermodels and spectral theorems; this is neither vague incompleteness nor a global impossibility claim."
+  claim_boundary_preserved: true
+
+formal_objects_domains_and_maps:
+  domain_count: 8
+  domains:
+    - domain_id: "DOM-01"
+      definition: "p in (0,1)"
+      purpose: "fixed one-step stay parameter"
+    - domain_id: "DOM-02"
+      definition: "D_p=[max(0,2p-1),p]"
+      purpose: "exchange-symmetric token-class coupling interval"
+    - domain_id: "DOM-03"
+      definition: "Omega_J={(1,1),(1,0),(0,1),(0,0)}"
+      purpose: "two token-class stay-or-flip driver outcomes"
+    - domain_id: "DOM-04"
+      definition: "X_x={x,cx}"
+      purpose: "nonempty two-state complement orbit"
+    - domain_id: "DOM-05"
+      definition: "N_positive={1,2,3,...}"
+      purpose: "finite discrete lag indices"
+    - domain_id: "DOM-06"
+      definition: "lambda>0 and tau>0"
+      purpose: "finite homogeneous continuous-time rate and elapsed-time parameters"
+    - domain_id: "DOM-07"
+      definition: "Prob(X_x)"
+      purpose: "initial and stationary probability laws on one complement orbit"
+    - domain_id: "DOM-08"
+      definition: "F_ext(empty)={empty_section}"
+      purpose: "empty-open singleton edge case"
+  object_count: 15
+  objects:
+    - object_id: "OBJ-01"
+      symbol: "J_{p,a}"
+      type: "exchange-symmetric token-class driver coupling"
+    - object_id: "OBJ-02"
+      symbol: "J_{p,p}"
+      type: "shared global coupling endpoint"
+    - object_id: "OBJ-03"
+      symbol: "J_{p,p^2}"
+      type: "independent token-class coupling control"
+    - object_id: "OBJ-04"
+      symbol: "K_p"
+      type: "two-state complement-orbit transition matrix"
+    - object_id: "OBJ-05"
+      symbol: "Pi_plus"
+      type: "symmetric spectral projector"
+    - object_id: "OBJ-06"
+      symbol: "Pi_minus"
+      type: "antisymmetric spectral projector"
+    - object_id: "OBJ-07"
+      symbol: "r_p=2p-1"
+      type: "nontrivial eigenvalue"
+    - object_id: "OBJ-08"
+      symbol: "K_p^n"
+      type: "finite-lag transition matrix"
+    - object_id: "OBJ-09"
+      symbol: "Q_lambda"
+      type: "homogeneous symmetric continuous-time Markov generator"
+    - object_id: "OBJ-10"
+      symbol: "exp(tau Q_lambda)"
+      type: "finite-time CTMC transition matrix"
+    - object_id: "OBJ-11"
+      symbol: "mu_0"
+      type: "unselected initial law"
+    - object_id: "OBJ-12"
+      symbol: "PathLaw(mu_0,K_p)"
+      type: "path law requiring initial data"
+    - object_id: "OBJ-13"
+      symbol: "X_n(omega)"
+      type: "realization random variables requiring a probability space"
+    - object_id: "OBJ-14"
+      symbol: "Adm_ext=F_ext"
+      type: "total nondiscriminating admission rule"
+    - object_id: "OBJ-15"
+      symbol: "K_p_empty=I_empty"
+      type: "parameter-independent empty-open kernel"
+  map_count: 9
+  maps:
+    - map_id: "MAP-01"
+      signature: "a -> J_{p,a}"
+    - map_id: "MAP-02"
+      signature: "restriction_pushforward:J_{p,a}(x) -> J_{p,a}(x|_U)"
+    - map_id: "MAP-03"
+      signature: "token_swap:J_{p,a}(x) -> J_{p,a}(cx)"
+    - map_id: "MAP-04"
+      signature: "K_p=Pi_plus+(2p-1)Pi_minus"
+    - map_id: "MAP-05"
+      signature: "n -> K_p^n=Pi_plus+(2p-1)^n Pi_minus"
+    - map_id: "MAP-06"
+      signature: "(lambda,tau) -> exp(tau Q_lambda)"
+    - map_id: "MAP-07"
+      signature: "mu_0 -> mu_n=mu_0 K_p^n"
+    - map_id: "MAP-08"
+      signature: "omega -> X_n(omega)"
+    - map_id: "MAP-09"
+      signature: "forget:proposal_extension -> current_source_reduct"
+
+ten_dimension_stress:
+  required_dimension_count: 10
+  stressed_dimension_count: 10
+  all_dimensions_decisively_classified: true
+  dimensions:
+    - dimension_id: "fixed_candidate_and_rt003_audit_preservation"
+      stress_status: "PRESERVED"
+      exact_evidence: "The stress changes no fixed root or theorem. RT003 source_pure_as_written remains true only for disclosed written syntax, and the source-extension class remains proposal-only new ontology primitive."
+      proof: "Every countermodel varies only an already admitted free proposal parameter a, p, initial law, or clock factor and introduces no target or empirical premise."
+      falsifier: "Any stress step that repairs a root, changes the candidate formulas, reverses the narrow source-purity verdict, or imports a target output."
+    - dimension_id: "natural_coupling_isolation_and_finite_variation"
+      stress_status: "OBSTRUCTED_NONISOLATED_SHARED_ENDPOINT"
+      exact_evidence: "For fixed p and every a in D_p, J_{p,a} is restriction-natural, source-diffeomorphism-natural, token-swap-equivariant, and has the fixed one-token Bernoulli-p marginals. The shared law is a=p."
+      proof: "The four joint masses are a,p-a,p-a,1-2p+a. Their pairwise TV distance is 2|a-b|. For every delta>0 choose 0<epsilon<min(p,1-p,delta/2); then a=p-epsilon is admissible, distinct, fully natural, and within TV distance 2epsilon<delta of the shared endpoint."
+      falsifier: "A source-derived axiom that excludes every a<p while preserving the fixed arrow class and assumptions, or any admissible a,b for which the exact TV formula fails."
+    - dimension_id: "kernel_parameter_identifiability"
+      stress_status: "FULL_ONE_STEP_IDENTIFIABLE_BUT_SOURCE_UNSELECTED"
+      exact_evidence: "A fully labeled one-step kernel identifies p through K_p(x,{x})=p, but current source syntax, normalization, naturality, total admission, and stationarity select no value of p."
+      proof: "Distinct p and q give distinct one-step diagonal masses, while the same current reduct admits every p in (0,1). Mathematical recoverability from supplied transition data is not source derivation or selection."
+      falsifier: "A current-ontology term or independent source law that uniquely fixes p without target, empirical, or workflow input."
+    - dimension_id: "stationary_law_selector_force"
+      stress_status: "OBSTRUCTED_STATIONARY_CLASS_P_INDEPENDENT"
+      exact_evidence: "For p in (0,1), mu is stationary exactly when c_*mu=mu; on each nonempty complement orbit the stationary law is uniform and does not depend on p."
+      proof: "T_p(mu)-mu=(1-p)(c_*mu-mu), and 1-p is nonzero. Distinct complement orbits may retain arbitrary invariant mixture weights."
+      falsifier: "A complement-asymmetric stationary measure for p in (0,1), or a stationary observable within the fixed candidate that uniquely identifies p, an orbit, or a realized token."
+    - dimension_id: "finite_lag_spectral_ambiguity"
+      stress_status: "OBSTRUCTED_AT_EVEN_LAGS"
+      exact_evidence: "On a nonempty complement orbit spec(K_p)={1,2p-1} and K_p^n=Pi_plus+(2p-1)^n Pi_minus."
+      proof: "The symmetric and antisymmetric vectors diagonalize K_p. Since 2(1-p)-1=-(2p-1), K_p^(2m)=K_(1-p)^(2m) for every positive m, whereas odd-lag or labeled one-step data distinguish the pair unless p=1/2."
+      falsifier: "An even positive lag m for which K_p^(2m) differs from K_(1-p)^(2m), or a claimed ambiguity for complete labeled one-step data."
+    - dimension_id: "continuous_time_embeddability_and_clock_scale"
+      stress_status: "OBSTRUCTED_BRANCH_DEPENDENT_AND_SCALE_NONSELECTING"
+      exact_evidence: "A finite positive-time homogeneous symmetric two-state CTMC embedding exists exactly for p>1/2. At p=1/2 the kernel is singular; for p<1/2 its nontrivial eigenvalue and determinant are negative."
+      proof: "For Q_lambda=[[-lambda,lambda],[lambda,-lambda]], exp(tau Q_lambda)=Pi_plus+exp(-2lambda tau)Pi_minus. Matching K_p requires exp(-2lambda tau)=2p-1. Thus p>1/2 is necessary and sufficient, and only lambda*tau=-(1/2)log(2p-1) is fixed. At p=1/2 finite exponentials cannot be singular; at p<1/2 their determinant cannot be negative."
+      falsifier: "Finite positive lambda and tau embedding p<=1/2, failure of the displayed construction for p>1/2, or separate recovery of lambda and tau from one dimensionless transition matrix."
+    - dimension_id: "initial_law_sample_realization_and_token_occurrence"
+      stress_status: "OBSTRUCTED_MISSING_INITIAL_AND_REALIZATION_DATA"
+      exact_evidence: "K_p gives conditional transition weights only. A path law additionally requires mu_0, and an occurrence additionally requires a probability space, random variables, and an interpretation or observation map."
+      proof: "For p not equal to 1/2, delta_0 K_p and delta_1 K_p differ and expose explicit dependence on the unchosen initial law. At p=1/2 the first transition erases that dependence, but the kernel still contains no rule choosing mu_0. A measure is not one of its sampled outcomes, and a stationary ensemble does not specify which omega or token is realized."
+      falsifier: "A fixed-candidate term that uniquely supplies mu_0 and a realization map with operational source semantics."
+    - dimension_id: "total_admission_and_restriction_naturality"
+      stress_status: "PRESERVED_MATHEMATICS_ZERO_SELECTOR_FORCE"
+      exact_evidence: "Adm_ext(O)=F_ext(O) is closed under every declared restriction and admits both shared and alternative natural coupling laws."
+      proof: "Total admission accepts every locally constant section, so it cannot distinguish a, p, initial laws, sample paths, or clock scales. Restriction naturality remains exact but nondiscriminating."
+      falsifier: "A nontrivial selector theorem derived from total admission alone, or a declared open restriction under which a valid fixed section becomes inadmissible."
+    - dimension_id: "empty_open_and_total_variation_scope"
+      stress_status: "PRESERVED_DEGENERATE_EDGE_CASE"
+      exact_evidence: "F_ext(empty) is a singleton, complement is the identity, K_p_empty is the same Dirac kernel for all p, its spectrum is {1}, and every parameter or coupling TV distance is zero."
+      proof: "There is one empty function and no antisymmetric complement orbit. Hence the nonempty-orbit spectral, |p-q| TV, coupling, and CTMC classifications are explicitly inapplicable there."
+      falsifier: "A second empty-open section, a p-dependent empty kernel, a nonzero empty-open TV distance, or application of the two-state eigenvalue to the singleton."
+    - dimension_id: "source_provenance_physical_semantics_and_p4_relevance"
+      stress_status: "OBSTRUCTION_LOCAL_NO_PHYSICAL_OR_P4_CREDIT"
+      exact_evidence: "The stress finds no hidden target import and preserves RT003 written purity, but no source law selects the missing coupling, p, initial state, realization, or clock primitives."
+      proof: "All exact results are finite formal consequences of disclosed proposal data. None constructs a causal cone, sector-universal principal structure, conformal geometry, scale, g_eff, matter coupling, or empirical occurrence."
+      falsifier: "An independently sourced and audited selection law satisfying P4-T02 robustness and physical interpretation without target import."
+
+coupling_fragility_theorem:
+  theorem_id: "THM-RT16005-PM-COUPLING-TV-NONISOLATION-001"
+  assumptions:
+    - "p in (0,1)"
+    - "two token-class stay indicators J_0,J_1 with common marginal p"
+    - "exchange symmetry under token swap"
+    - "mixed-token section so all four driver outcomes are distinguishable"
+  admissible_interval: "max(0,2p-1)<=a<=p"
+  joint_mass_formula:
+    both_stay: "a"
+    zero_stays_one_flips: "p-a"
+    one_stays_zero_flips: "p-a"
+    both_flip: "1-2p+a"
+  shared_parameter: "a=p"
+  independent_token_parameter: "a=p^2"
+  joint_tv_formula: "d_TV(J_{p,a},J_{p,b})=2|a-b|"
+  tv_proof: "The signed mass differences in the four ordered outcomes are d,-d,-d,d with d=a-b, so one half of their absolute sum is 2|d|."
+  arbitrary_close_alternative: "For every delta>0, choose epsilon with 0<epsilon<min(p,1-p,delta/2). Then a=p-epsilon lies in D_p, differs from shared a=p, preserves every stated naturality and marginal, and has TV distance 2epsilon<delta."
+  naturality_proof: "Open restriction removes points but preserves the token values present; unused driver variables are marginalized. Source diffeomorphisms transport points without changing the exchange-symmetric driver law. Complement swaps identically distributed token labels."
+  exact_consequence: "The shared coupling is not isolated in the fixed-marginal fully natural coupling space and therefore has no finite-variation robust selection force under the fixed premises."
+  falsifier: "A positive isolation radius around a=p containing no other admissible fully natural same-marginal coupling."
+
+spectral_and_finite_lag_theorem:
+  theorem_id: "THM-RT16005-PM-SPECTRUM-EVEN-LAG-001"
+  scope: "nonempty two-state complement orbit only"
+  kernel_matrix: "K_p=[[p,1-p],[1-p,p]]"
+  symmetric_projector: "Pi_plus=(1/2)[[1,1],[1,1]]"
+  antisymmetric_projector: "Pi_minus=(1/2)[[1,-1],[-1,1]]"
+  spectral_decomposition: "K_p=Pi_plus+(2p-1)Pi_minus"
+  spectrum: "{1,2p-1}"
+  finite_lag_formula: "K_p^n=Pi_plus+(2p-1)^n Pi_minus"
+  even_lag_identity: "K_p^(2m)=K_(1-p)^(2m) for every integer m>=1"
+  exact_boundary: "Complete labeled one-step or odd-lag data identify the sign and hence p; stationary or even-lag data do not."
+  proof: "The projectors are complementary idempotents. Replacing p by 1-p negates only the antisymmetric eigenvalue, which disappears under even powers."
+  falsifier: "An even-lag transition entry that differs between p and 1-p under the fixed two-state kernel."
+
+continuous_time_embedding_theorem:
+  theorem_id: "THM-RT16005-PM-HOMOGENEOUS-SYMMETRIC-CTMC-EMBEDDING-001"
+  scope: "finite positive-time homogeneous symmetric CTMC embedding of a nonempty two-state complement orbit"
+  generator: "Q_lambda=[[-lambda,lambda],[lambda,-lambda]] with lambda>0"
+  exponential: "exp(tau Q_lambda)=Pi_plus+exp(-2lambda tau)Pi_minus"
+  classification:
+    p_greater_than_half: "embeddable at finite positive time; choose any tau>0 and lambda=-(1/(2tau))log(2p-1)"
+    p_equal_half: "not embeddable at finite rate and positive finite time; K_p is singular and requires lambda*tau tending to infinity"
+    p_less_than_half: "not embeddable; the nontrivial eigenvalue and determinant 2p-1 are negative whereas a finite real matrix exponential has positive determinant"
+  necessary_and_sufficient_condition: "p>1/2"
+  identified_combination: "lambda*tau=-(1/2)log(2p-1)"
+  separately_identified_rate: false
+  separately_identified_elapsed_time: false
+  proof: "The symmetric generator has eigenvalues 0 and -2lambda, so its finite-time exponential has eigenvalues 1 and exp(-2lambda tau). Equality with K_p is equivalent to the displayed scalar equation."
+  falsifier: "A finite lambda>0,tau>0 solution for p<=1/2, or two one-step matrices with the same p but different inferred lambda*tau."
+
+occurrence_total_admission_and_empty_open_controls:
+  initial_law_required: true
+  path_probability_space_required: true
+  random_variable_realization_required: true
+  operational_interpretation_required_for_physical_occurrence: true
+  stationary_distribution_is_realized_occurrence: false
+  transition_kernel_selects_initial_law: false
+  total_admission_selects_token: false
+  total_admission_selects_coupling: false
+  total_admission_selects_p: false
+  total_admission_selects_clock: false
+  empty_open_fiber_cardinality: 1
+  empty_open_complement_fixed: true
+  empty_open_kernel: "identity_Dirac"
+  empty_open_spectrum: "{1}"
+  empty_open_tv_distance: "0"
+  nonempty_ctmc_classification_applies_to_empty_open: false
+  exact_boundary: "These controls refute occurrence and selector overreads without invalidating normalization, restriction naturality, section descent, or the declared dimensionless one-step law."
+
+failure_branch_matrix:
+  branch_count: 12
+  branches:
+    - branch_id: "BR-01"
+      condition: "shared coupling is claimed isolated at fixed p"
+      result: "FAIL_BY_ARBITRARILY_CLOSE_NATURAL_ALTERNATIVES"
+      falsifier: "positive isolation radius"
+    - branch_id: "BR-02"
+      condition: "full labeled one-step kernel is supplied"
+      result: "PASS_MATHEMATICAL_IDENTIFICATION_OF_P_ONLY"
+      falsifier: "two distinct p values with the same labeled one-step matrix"
+    - branch_id: "BR-03"
+      condition: "stationary law alone is used to select p or occurrence"
+      result: "FAIL_STATIONARY_CLASS_IS_P_INDEPENDENT"
+      falsifier: "complement-asymmetric stationary law"
+    - branch_id: "BR-04"
+      condition: "even-lag data are used to distinguish p from 1-p"
+      result: "FAIL_EXACT_SIGN_AMBIGUITY"
+      falsifier: "different even-lag matrices"
+    - branch_id: "BR-05"
+      condition: "p>1/2 and finite homogeneous symmetric CTMC embedding is requested"
+      result: "PASS_EXISTENCE_WITH_PRODUCT_ONLY"
+      falsifier: "failure of the exponential construction"
+    - branch_id: "BR-06"
+      condition: "p=1/2 and finite CTMC embedding is requested"
+      result: "FAIL_SINGULAR_LIMIT"
+      falsifier: "finite real exponential with zero determinant"
+    - branch_id: "BR-07"
+      condition: "p<1/2 and finite CTMC embedding is requested"
+      result: "FAIL_NEGATIVE_EIGENVALUE_AND_DETERMINANT"
+      falsifier: "finite Markov exponential with negative determinant"
+    - branch_id: "BR-08"
+      condition: "one embeddable transition matrix is used to select rate and elapsed time separately"
+      result: "FAIL_ONLY_LAMBDA_TAU_IDENTIFIED"
+      falsifier: "source clock fixing one factor independently"
+    - branch_id: "BR-09"
+      condition: "kernel alone is used to select an initial law"
+      result: "FAIL_DISTINCT_INITIAL_LAWS"
+      falsifier: "candidate term fixing mu_0"
+    - branch_id: "BR-10"
+      condition: "probability law is treated as a realized occurrence"
+      result: "FAIL_MISSING_SAMPLE_AND_INTERPRETATION_MAP"
+      falsifier: "source-defined realization and operational map"
+    - branch_id: "BR-11"
+      condition: "total admission is used as a selector"
+      result: "FAIL_NONDISCRIMINATING_BY_DEFINITION"
+      falsifier: "a section excluded by Adm_ext=F_ext"
+    - branch_id: "BR-12"
+      condition: "nonempty two-state spectral or TV claims are applied to the empty open"
+      result: "FAIL_DOMAIN_ERROR_EMPTY_SINGLETON"
+      falsifier: "a second empty-open section"
+
+exact_finite_control:
+  execution_mode: "local_inline_exact_fraction_and_finite_matrix_check"
+  status: "PASS"
+  check_count: 144
+  pass_count: 144
+  failed_check_count: 0
+  payload_sha256: "f68dd227a8de1e1ceadec90b0c155cb211d7a22cd6cf756ca0efa3b5bd3ab9d2"
+  checked_claims:
+    - "coupling nonnegativity normalization and common marginals on a rational p grid"
+    - "joint TV formula 2|a-b|"
+    - "shared endpoint and independent token-class point"
+    - "arbitrarily-close alternative samples"
+    - "symmetric and antisymmetric eigenvalues"
+    - "two-lag and four-lag p versus 1-p identity"
+    - "odd-lag distinction"
+    - "p=1/2 singularity and determinant sign branches"
+    - "p>1/2 CTMC exponential and rate-time rescaling"
+    - "uniform stationarity distinct initial laws and empty-open degeneration"
+  authority_note: "The finite check corroborates exact proposal mathematics only; it is not external review, physical evidence, proof promotion, or source-law adoption."
+
+new_mathematical_payload:
+  payload_count: 7
+  items:
+    - payload_id: "PAYLOAD-RT16005-PM-001"
+      payload_type: "theorem"
+      name: "natural coupling TV and non-isolation theorem"
+      statement: "At fixed p, d_TV(J_{p,a},J_{p,b})=2|a-b| on D_p, so the shared endpoint a=p has arbitrarily close distinct fully natural same-marginal alternatives."
+      proof: "The four signed atom differences are d,-d,-d,d; choose a=p-epsilon inside D_p."
+      falsifier: "a positive isolation radius for the shared law"
+      burden_effect: "obstructs"
+    - payload_id: "PAYLOAD-RT16005-PM-002"
+      payload_type: "theorem"
+      name: "two-state spectral decomposition"
+      statement: "On each nonempty complement orbit, spec(K_p)={1,2p-1} and K_p^n=Pi_plus+(2p-1)^n Pi_minus."
+      proof: "The symmetric and antisymmetric vectors form an eigenbasis."
+      falsifier: "a different eigenvalue or n-step matrix under the fixed K_p"
+      burden_effect: "narrows"
+    - payload_id: "PAYLOAD-RT16005-PM-003"
+      payload_type: "countermodel"
+      name: "even-lag p versus 1-p ambiguity"
+      statement: "For every m>=1, K_p^(2m)=K_(1-p)^(2m), although the one-step kernels differ unless p=1/2."
+      proof: "The antisymmetric eigenvalues are negatives and even powers agree."
+      falsifier: "different even-lag matrices"
+      burden_effect: "obstructs"
+    - payload_id: "PAYLOAD-RT16005-PM-004"
+      payload_type: "theorem"
+      name: "finite homogeneous symmetric CTMC embedding classification"
+      statement: "A finite positive-time embedding exists exactly for p>1/2; p=1/2 is singular and p<1/2 has negative determinant."
+      proof: "Match exp(-2lambda tau) to 2p-1 and use invertibility and positive determinant of finite matrix exponentials."
+      falsifier: "a finite positive embedding for p<=1/2"
+      burden_effect: "obstructs"
+    - payload_id: "PAYLOAD-RT16005-PM-005"
+      payload_type: "lemma"
+      name: "rate-time product nonidentifiability"
+      statement: "When p>1/2, one transition matrix fixes only lambda*tau=-(1/2)log(2p-1), not lambda and tau separately."
+      proof: "Every positive rescaling tau->s tau and lambda->lambda/s preserves the exponential."
+      falsifier: "separate recovery of lambda and tau from K_p alone"
+      burden_effect: "narrows"
+    - payload_id: "PAYLOAD-RT16005-PM-006"
+      payload_type: "lemma"
+      name: "initial-law and realization separation"
+      statement: "K_p determines neither mu_0 nor a realized sample path or occurrence."
+      proof: "For p not equal to 1/2, different initial Dirac laws give different finite-time laws. At p=1/2 they remain distinct admissible initial laws even though one step erases the marginal difference. In every branch a measure does not specify a sampled omega."
+      falsifier: "a candidate-internal unique initial and realization map"
+      burden_effect: "obstructs"
+    - payload_id: "PAYLOAD-RT16005-PM-007"
+      payload_type: "obstruction"
+      name: "robust occurrence selection and embeddability obstruction"
+      statement: "The fixed candidate lacks robust coupling isolation and parameter, occurrence, and clock selection across its admitted domain."
+      proof: "Payloads 001 through 006 jointly exhibit the exact failed premise."
+      falsifier: "an independently sourced selector satisfying every failed branch without target import"
+      burden_effect: "freezes"
+
+mathematical_payload_manifest:
+  - payload_id: "PAYLOAD-RT16005-PM-001"
+    payload_type: "theorem"
+    object_name: "natural coupling TV and non-isolation theorem"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-005/artifacts/child_phys_math_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+    burden_effect: "obstructs"
+    summary: "Exact TV geometry proves the shared coupling is not robustly isolated."
+  - payload_id: "PAYLOAD-RT16005-PM-002"
+    payload_type: "theorem"
+    object_name: "two-state spectrum and finite-lag formula"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-005/artifacts/child_phys_math_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+    burden_effect: "narrows"
+    summary: "Diagonalizes the one-step law and isolates the exact nontrivial eigenvalue."
+  - payload_id: "PAYLOAD-RT16005-PM-003"
+    payload_type: "countermodel"
+    object_name: "even-lag p versus 1-p pair"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-005/artifacts/child_phys_math_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+    burden_effect: "obstructs"
+    summary: "Two distinct one-step parameters have identical every-even-lag data."
+  - payload_id: "PAYLOAD-RT16005-PM-004"
+    payload_type: "theorem"
+    object_name: "finite homogeneous symmetric CTMC embedding classification"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-005/artifacts/child_phys_math_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+    burden_effect: "obstructs"
+    summary: "Classifies the p>1/2, p=1/2, and p<1/2 embedding branches exactly."
+  - payload_id: "PAYLOAD-RT16005-PM-005"
+    payload_type: "lemma"
+    object_name: "lambda-tau product degeneracy"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-005/artifacts/child_phys_math_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+    burden_effect: "narrows"
+    summary: "Separates formal embeddability from a selected physical clock or rate."
+  - payload_id: "PAYLOAD-RT16005-PM-006"
+    payload_type: "lemma"
+    object_name: "initial-law and realization separation"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-005/artifacts/child_phys_math_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+    burden_effect: "obstructs"
+    summary: "Separates conditional transition syntax from path law and realized occurrence."
+  - payload_id: "PAYLOAD-RT16005-PM-007"
+    payload_type: "obstruction"
+    object_name: "candidate-local robust selection and embeddability obstruction"
+    claim_status: "draft/control"
+    source_path: "research_control/tasks/RT-20260816-005/artifacts/child_phys_math_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+    burden_effect: "freezes"
+    summary: "Combines the exact finite controls into one candidate-local scoped obstruction."
+
+refuter_obstruction_record:
+  obstruction_id: "OB-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY-001"
+  target_claim: "The fixed ProposalOnlyMeasurableFiberOccurrenceLaw_v1 supplies a robustly isolated natural coupling, selected p, stationary occurrence, realizable event law, and normalized clock suitable for P4-T02 credit."
+  target_milestone: "effective_metric_g_eff"
+  failed_premise: "No fixed-candidate or current-source premise isolates a=p, selects p, supplies mu_0 or a realization map, or normalizes lambda and tau; part of the admitted p-domain is not finitely CTMC-embeddable."
+  minimal_countermodel_available: true
+  countermodel_path: "research_control/tasks/RT-20260816-005/artifacts/child_phys_math_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+  countermodel_scope: "source_extension_candidate"
+  certificate_gap: "missing source-derived robust selector certificate for coupling, parameter, initial law, realization, and clock normalization"
+  source_extension_repair_possible: true
+  global_no_go_claim_authorized: false
+  future_source_extension_impossibility_authorized: false
+  freeze_criteria_status:
+    freeze_decision: "locally_frozen"
+    decision_reason: "The unchanged candidate has completed construct-audit-stress and fails robust selection under exact finite controls."
+    next_allowed_route: "theoretical_selector"
+  route_cycle_control:
+    cycle_family: "v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law"
+    current_cycle_step: "refuter_stress_scoped_obstruction"
+    prior_related_tasks:
+      - "RT-20260816-001"
+      - "RT-20260816-003"
+    cycle_risk: "high"
+    orbit_avoidance_reason: "Freeze the unchanged candidate route and require a theoretical selector to choose a materially distinct source-side packet."
+    next_role_consequence: "theoretical-continuation-selector@0.1.0"
+  forbidden_conclusions:
+    - "The narrow RT003 source_pure_as_written verdict is false."
+    - "The fixed discrete-time conditional mathematics is invalid."
+    - "All future source extensions or occurrence laws are impossible."
+    - "The global AEther-flow theory is rejected."
+    - "The proposal is canonically rejected or adopted."
+    - "A physical probability, occurrence, clock, cone, or metric is established."
+    - "D7, B2, P4-T03, g_eff, matter coupling, Einstein equations, benchmark, Gate, proof, publication, or completed derivation follows."
+
+obstruction_record:
+  present: true
+  obstruction_id: "OB-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY-001"
+  scope: "source_extension_candidate"
+  failed_object: "robust natural occurrence coupling parameter and clock selector"
+  exact_failure: "The shared coupling is not isolated in the exact natural fixed-marginal family, stationary and even-lag data fail to select p or occurrence, and finite CTMC embedding either fails or determines only lambda*tau."
+  minimal_counterexample_path: "research_control/tasks/RT-20260816-005/artifacts/child_phys_math_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.yaml"
+  current_ontology_implication: "does_not_derive"
+  source_extension_implication: "repair_allowed"
+  consequence: "route_frozen"
+  forbidden_overread: "This candidate-local obstruction and freeze do not reject future source extensions, reverse written source purity, reject the global theory, or unlock any downstream GR claim."
+
+source_extension_classification:
+  checklist_id: "source_extension_classification_checklist_v1"
+  required_four_way_classification: "new_ontology_primitive"
+  category: "new_ontology_primitive"
+  controlled_status: "proposal-only"
+  material_class: "source-extension data"
+  inherited_from_rt003: true
+  classification_changed_by_stress: false
+  derivation_from_current_ontology: false
+  conservative_definitional_extension: false
+  new_ontology_primitive: true
+  forbidden_target_import: false
+  target_import_detected: false
+  independent_source_provenance_established: false
+  epistemically_selected: false
+  adopted: false
+  rejected: false
+  human_gate_invoked: false
+  adoption_status: "blocked_adoption_open_continuation"
+  source_extension_repair_possible: true
+  exact_rationale: "The stress preserves the target-free written syntax but proves that the disclosed new roots do not robustly select the required coupling, parameter, occurrence, or clock. A materially distinct future source extension remains logically possible and separately governed."
+
+physics_progress_status:
+  status: "precise_obstruction_found"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "The fixed proposal lacks robust natural coupling, parameter, stationary occurrence, realization, and clock-selection force before P4-T02 credit."
+  explanation: "Exact finite coupling, spectrum, lag, embedding, initial-law, and empty-open controls establish one candidate-local scoped obstruction and justify local route freeze without any physical or Distance-to-GR promotion."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  inherited_freeze_count: 8
+  candidate_local_freeze_count: 1
+  active_freeze_label: "NDCL-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY"
+  prior_attempts_considered:
+    - "RT-20260816-001"
+    - "RT-20260816-003"
+  freeze_if:
+    - "The construct-audit-stress cycle ends with a named robust-selection obstruction under the unchanged candidate roots."
+    - "A later packet would repeat the same candidate, coupling family, p-domain, occurrence overread, or clock overread without a materially new source primitive or theorem."
+  do_not_freeze_if:
+    - "A separately admitted theoretical selector chooses a materially distinct source-side primitive, witness, irrelevance theorem, or new scoped question."
+    - "A protected human gate later authorizes ontology action under its own evidence and packet."
+  freeze_decision: "locally_frozen"
+  decision_reason: "The unchanged candidate route has completed construction, smuggling audit, and Refuter stress. Exact non-isolation and embedding branches defeat robust selection, so repeating it would orbit."
+  next_allowed_route: "theoretical_selector"
+  status_update_path: ""
+  no_status_update_rationale: "This internal child has one-file authority and did not update the ledger, registry, task, or parent disposition; its local-freeze analysis remains child evidence for the now-completed parent synthesis."
+  global_freeze_created: false
+  global_theory_rejected: false
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law"
+  current_cycle_step: "refuter_stress_scoped_obstruction"
+  prior_related_tasks:
+    - "RT-20260816-001"
+    - "RT-20260816-003"
+    - "RT-20260816-004"
+  cycle_risk: "high"
+  orbit_avoidance_reason: "The child supplies genuinely new exact coupling-TV, spectrum, even-lag, CTMC-embedding, and rate-time results, freezes only the unchanged candidate route, and selects a decision packet rather than another generic formalization."
+  next_role_consequence: "theoretical-continuation-selector@0.1.0"
+
+selected_successor:
+  selection_count: 1
+  packet_id: "PKT-V22-P4T02-B2-POST-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1"
+  packet_type: "theoretical_continuation_selector"
+  role: "theoretical-continuation-selector@0.1.0"
+  role_family: "theoretical-continuation-selector@0.1.0"
+  status: "selected_not_executed"
+  objective: "Select exactly one materially distinct same-milestone continuation after the candidate-local robust-selection and embeddability freeze while preserving all source-extension, physical, P4, and promotion gates."
+  selected_packet_executed: false
+  executed_in_current_task: false
+  created_in_current_task: false
+  separate_agentjob_required: true
+  theoretical_decision_output_required_in_successor: true
+  candidate_repair_selected: false
+  ontology_action_selected: false
+  gate_action_selected: false
+
+freeze_preservation:
+  inherited_freeze_count: 8
+  inherited_freezes_preserved: true
+  inherited_freezes_reopened: false
+  candidate_local_freeze_count: 1
+  total_named_freeze_count: 9
+  inherited_freezes:
+    - freeze_label: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+      status: "preserved_not_reopened"
+    - freeze_label: "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+      status: "preserved_not_reopened"
+  candidate_local_freeze:
+    freeze_label: "NDCL-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY"
+    status: "locally_frozen_for_unchanged_candidate_assumptions"
+    scope: "source_extension_candidate"
+    global_effect: false
+
+distance_to_gr_delta:
+  changed: false
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "not_derived"
+  new_status: "not_derived"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "robust source-side occurrence coupling parameter and clock selection"
+    - "D7 adequacy and B2 action"
+    - "P4-T03 and g_eff"
+    - "matter coupling and Einstein equations"
+    - "benchmark promotion and Gate Chair status"
+  row_count: 14
+  literal_no_delta_row_count: 14
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      evidence: "The proposal remains unadopted new primitive debt."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      evidence: "Proposal naturality does not adopt EqSrc."
+    - burden: "RetainH"
+      status: "no_delta"
+      evidence: "No history-retention primitive is derived."
+    - burden: "GenH"
+      status: "no_delta"
+      evidence: "Neither K_p nor a CTMC embedding is adopted as GenH."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      evidence: "No observer-localization semantics is supplied."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      evidence: "No detector response or realized token meaning is supplied."
+    - burden: "M_src"
+      status: "no_delta"
+      evidence: "No response-to-manifold bridge is constructed."
+    - burden: "g_eff"
+      status: "no_delta"
+      evidence: "No causal cone, conformal structure, scale, or effective metric is derived."
+    - burden: "matter coupling"
+      status: "no_delta"
+      evidence: "No universal matter propagation or coupling law is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      evidence: "No gravitational action or field equation is derived."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      evidence: "The shared coupling is non-isolated; formal TV results earn no physical robustness credit."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      evidence: "No benchmark comparison or promotion occurs."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      evidence: "No protected adoption, rejection, activation, or sufficiency verdict occurs."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      evidence: "The child records one candidate-local freeze recommendation without modifying the persistent ledger or issuing a global hard fail."
+  explanation: "A draft/control candidate-local obstruction and route freeze sharpen routing but do not derive a source law, satisfy P4-T02, or reduce any downstream GR burden."
+
+downstream_locks:
+  rt003_source_pure_as_written_reversed: false
+  d7_reevaluated: false
+  p2_t01_adequacy_reevaluated: false
+  b2_activated: false
+  b2_viability_decided: false
+  b2_adopted: false
+  b2_rejected: false
+  b2_disposed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  g_eff_authorized: false
+  matter_coupling_authorized: false
+  einstein_equations_authorized: false
+  benchmark_promotion_authorized: false
+  gate_chair_authorized: false
+
+authority_blocks:
+  candidate_reconstruction_authorized: false
+  candidate_repair_authorized: false
+  canonical_ontology_edit_authorized: false
+  source_law_adoption_authorized: false
+  canonical_ontology_candidacy_authorized: false
+  physical_probability_authorized: false
+  realized_occurrence_authorized: false
+  physical_event_semantics_authorized: false
+  physical_clock_or_causality_authorized: false
+  empirical_response_authorized: false
+  p2_t01_adequacy_authorized: false
+  d7_reevaluation_authorized: false
+  b2_action_authorized: false
+  p4_t03_execution_authorized: false
+  effective_metric_authorized: false
+  matter_coupling_authorized: false
+  einstein_equation_authorized: false
+  benchmark_promotion_authorized: false
+  gate_chair_verdict_authorized: false
+  proof_promotion_authorized: false
+  publication_authorized: false
+  public_release_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_claim_authorized: false
+  global_no_go_authorized: false
+  future_source_extension_impossibility_authorized: false
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "RT003 written-source purity was overturned."
+    - "The discrete-time kernel, restriction naturality, shared-driver descent, stationarity classification, or empty-open qualification is mathematically invalid."
+    - "The proposal is canonically adopted or rejected."
+    - "Every future source extension, occurrence law, or CTMC realization is impossible."
+    - "The candidate-local freeze is a global theory rejection or global no-go."
+    - "Formal normalization, stationarity, or embeddability is physical probability, occurrence, clock, or causality."
+    - "Total admission supplies a nontrivial selector."
+    - "D7 or P2-T01 adequacy is reevaluated."
+    - "B2 is activated, viable, adopted, rejected, disposed, adequate, sufficient, or complete."
+    - "P4-T03 is unlocked or g_eff is constructed."
+    - "Matter coupling or Einstein equations are derived."
+    - "A benchmark, Gate Chair, proof, promotion, publication, push, external action, or completed derivation is authorized."
+  summary: "The exact result is one proposal-local robust-selection and embeddability obstruction. It preserves correct conditional mathematics and blocks every global, physical, adoption, P4, and promotion overread."
+
+conflict_status:
+  child_internal_conflict_count: 0
+  child_unresolved_conflict_count: 0
+  peer_child_file_inspected: false
+  parent_conflict_review_pending: false
+  provisional_identity_conflict_count: 0
+  blocking_conflict_known_to_child: false
+
+validation:
+  validation_scope: "owned_child_artifact_only"
+  strict_unique_key_yaml_parse: "PASS"
+  repository_subset_yaml: "PASS"
+  source_hash_check: "PASS"
+  source_hash_count_check: "21_of_21_PASS"
+  source_hash_mismatch_count: 0
+  exact_refuter_class_count_check: "1_of_1_scoped_obstruction_PASS"
+  stress_dimension_count_check: "10_of_10_PASS"
+  formal_domain_count_check: "8_of_8_PASS"
+  formal_object_count_check: "15_of_15_PASS"
+  formal_map_count_check: "9_of_9_PASS"
+  failure_branch_count_check: "12_of_12_PASS"
+  new_mathematical_payload_count_check: "7_of_7_PASS"
+  obstruction_record_count_check: "1_of_1_PASS"
+  exact_finite_control_check: "144_of_144_PASS"
+  coupling_tv_formula_check: "PASS"
+  arbitrary_close_shared_alternative_check: "PASS"
+  spectrum_check: "PASS"
+  even_lag_ambiguity_check: "PASS"
+  ctmc_embedding_classification_check: "PASS"
+  rate_time_product_check: "PASS"
+  initial_law_realization_check: "PASS"
+  total_admission_nonselection_check: "PASS"
+  empty_open_scope_check: "PASS"
+  source_extension_four_way_classification_check: "1_of_1_new_ontology_primitive_PASS"
+  inherited_freeze_count_check: "8_of_8_PASS"
+  candidate_local_freeze_count_check: "1_of_at_most_1_PASS"
+  distance_row_count_check: "14_of_14_literal_no_delta_PASS"
+  successor_selection_count_check: "1_of_at_most_1_PASS"
+  successor_execution_count_check: "0_PASS"
+  authority_block_check: "PASS"
+  child_conflict_count_check: "0_unresolved_PASS"
+  peer_file_inspection_check: "not_inspected_PASS"
+  trailing_whitespace_check: "PASS"
+  tab_character_check: "PASS"
+  final_newline_check: "PASS"
+  parent_validator_run: false
+  checkpoint_run: false
+  bootstrap_run: false
+  validation_authority_note: "Local integrity and exact finite checks are not theorem promotion, independent review, ontology adoption, physical evidence, P4 completion, or protected authority."
