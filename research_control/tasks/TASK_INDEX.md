@@ -2,7 +2,7 @@
 
 Generated navigation support only. This index is not task authority, physics proof authority, benchmark authority, Gate Chair authority, or completed-derivation evidence.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-16T04:50:31Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"20ae0306caed33b7f98bd62873606a8d7d8a2df9","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"eec0e7508c0d753f7bef3d5782b11ad54600a32f0dc1f1e6da079dcb2ac78ecf"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"fea1308dc4f9771065aad1768742860e0f498d9c2b0cc64a23224275dd1d650c"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"2f684cd3045176ec71d6bf5c62980e16529f7b7b8b3ff4a4a4a1a7a53294a404"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"49e9a14e7a06d3a10bced50a7bbe02c3737b5a068266bb50efcda1d71c5da51b","source_path_count":"5206","task_count":"1303"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-16T05:34:15Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"5a49277037c456b8726d61b7d7f43ef601813a0c","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"884258d6e24a7b8f524e0f9466caa257813657963fd79117668f3b01db550b6c"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"87cbce3bd3ea575754de8add723766ceec941b5f02b14036727eacf5caea863c"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"9448306411b2cf3d9293f193e700d34093cba2c7baff5f62d31d486b1b7a017c"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"bc1ad70581579edced63468cf609bd29160ffabe71e028006305d4e4c6bda9d3","source_path_count":"5210","task_count":"1304"} -->
 
 ## Generated-Report Provenance
 
@@ -11,21 +11,21 @@ Generated navigation support only. This index is not task authority, physics pro
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_task_index` |
-| Source commit | `20ae0306caed33b7f98bd62873606a8d7d8a2df9` |
-| Source-derived generation time | `2026-08-16T04:50:31Z` |
-| Tracked task count | 1303 |
-| Exact source-path count | 5206 |
-| Source manifest SHA-256 | `49e9a14e7a06d3a10bced50a7bbe02c3737b5a068266bb50efcda1d71c5da51b` |
+| Source commit | `5a49277037c456b8726d61b7d7f43ef601813a0c` |
+| Source-derived generation time | `2026-08-16T05:34:15Z` |
+| Tracked task count | 1304 |
+| Exact source-path count | 5210 |
+| Source manifest SHA-256 | `bc1ad70581579edced63468cf609bd29160ffabe71e028006305d4e4c6bda9d3` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `eec0e7508c0d753f7bef3d5782b11ad54600a32f0dc1f1e6da079dcb2ac78ecf`
+- `registries/AGENT_JOB_REGISTRY.csv`: `884258d6e24a7b8f524e0f9466caa257813657963fd79117668f3b01db550b6c`
 - `registries/AGENT_ROLE_REGISTRY.csv`: `847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `fea1308dc4f9771065aad1768742860e0f498d9c2b0cc64a23224275dd1d650c`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `2f684cd3045176ec71d6bf5c62980e16529f7b7b8b3ff4a4a4a1a7a53294a404`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `87cbce3bd3ea575754de8add723766ceec941b5f02b14036727eacf5caea863c`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `9448306411b2cf3d9293f193e700d34093cba2c7baff5f62d31d486b1b7a017c`
 - `research_control/design/task_index_schema_v2.md`: `4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f`
 - `research_control/design/v21_recommendation_backlog.yaml`: `849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f`
 - `research_control/design/v21_task_taxonomy_policy.md`: `7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b`
@@ -41,9 +41,9 @@ or claim-promotion authority.
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `4a86a497f9414e8de1a4b517a6e3de45157d2fb53e54b1350761ac234d813edc`
-- Generated-at source timestamp: `2026-08-16T04:50:31Z`
-- Row count: `1303`
+- Source fingerprint: `4492a6bd3b5d04a7979522ebfe2b4578c8a2960de0270859bd8879362caf6620`
+- Generated-at source timestamp: `2026-08-16T05:34:15Z`
+- Row count: `1304`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -51,6 +51,7 @@ or claim-promotion authority.
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260815-009|RT-20260815-007|2026-08-16T05:34:15Z|2026-08-16T06:15:00Z|Select one materially distinct P4-T02 continuation after the canonical Open-carrier theorem|v22_p4_t02_b2_post_canonical_open_carrier_theorem_theoretical_continuation_selector|integration_or_selection|effective_metric_g_eff|v22_b2_matter_principal_polynomial|completed_or_precisely_blocked|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Choose the next materially distinct route after the canonical current-topology carrier precursor is proved while admissibility and occurrence remain underived.|theoretical-continuation-selector@0.1.0|false|false|15||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260815-009/jobs/completions/AJC-AJ-RT-20260815-009-001.yaml|
 |RT-20260815-008|RT-20260815-007|2026-08-16T04:50:31Z|2026-08-16T04:50:31Z|Restore the canonical handoff-1041 Markdown identity|project_system_v22_p4_t02_handoff_1041_markdown_identity_checkpoint_recovery|benchmark_or_recovery|not_applicable|handoff_markdown_identity_checkpoint_recovery|completed_or_precisely_blocked|project_control|project_system|explicit|high|completed|none|Project-system handoff identity and checkpoint compatibility only; no derivation milestone advances.|process-integrity-auditor@0.1.0|false|false|2|Run the single governed checkpoint for AJ-RT-20260815-008-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-CANONICAL-OPEN-CARRIER-THEORETICAL-CONTINUATION-SELECTION-V1.|PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260815-008/jobs/completions/AJC-AJ-RT-20260815-008-001.yaml|
 |RT-20260815-007|RT-20260815-006|2026-08-16T02:37:22Z|2026-08-16T03:29:06Z|Construct or precisely obstruct the canonical source Open-event fibration typing and descent theorem|v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem|formalization_or_theorem|effective_metric_g_eff|v22_b2_matter_principal_polynomial|theorem_or_precise_obstruction|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Determine whether current smooth topology supplies a definitional proposal-carrier precursor while keeping admissibility, occurrence generation, and every physical interpretation underived.|ontology-formalizer@0.2.0|false|false|12||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260815-007/jobs/completions/AJC-AJ-RT-20260815-007-001.yaml|
 |RT-20260815-006|RT-20260815-003|2026-08-15T22:41:47Z|2026-08-15T23:25:00Z|Select one materially distinct P4-T02 continuation after the occurrence-carrier typing and provenance obstruction|v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_theoretical_continuation_selector|integration_or_selection|effective_metric_g_eff|v22_b2_matter_principal_polynomial|completed_or_precisely_blocked|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Choose one materially distinct same-milestone continuation after the current-source proposal-carrier typing and provenance obstruction.|theoretical-continuation-selector@0.1.0|false|false|14||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260815-006/jobs/completions/AJC-AJ-RT-20260815-006-001.yaml|

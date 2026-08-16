@@ -1,0 +1,918 @@
+schema_id: "child_phys_math_p4_t02_b2_post_canonical_open_carrier_selector_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-POST-CANONICAL-OPEN-CARRIER-SELECTOR-001"
+artifact_type: "parent_child_synthesis_child_output"
+authority: "science_draft"
+status: "complete_for_parent_synthesis"
+status_label: "draft/control"
+task_id: "RT-20260815-009"
+job_id: "AJ-RT-20260815-009-001"
+decision_id: "DDR-20260815-009"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260815-009"
+claim_boundary_id: "CB-V22-P4-T02-B2-POST-CANONICAL-OPEN-CARRIER-THEORETICAL-SELECTION-001"
+selected_input_packet_id: "PKT-V22-P4T02-B2-POST-CANONICAL-OPEN-CARRIER-THEORETICAL-CONTINUATION-SELECTION-V1"
+created_at: "2026-08-16T05:54:48Z"
+revised_at: "2026-08-16T06:11:59Z"
+source_head: "5a49277037c456b8726d61b7d7f43ef601813a0c"
+source_tree: "c54b8f84f2089e46e279faa851c1814cf0cb6210"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Choose one materially distinct same-milestone continuation after the canonical current-topology Open-carrier theorem."
+route_label: "ordinary-research-packet"
+
+ownership_boundary:
+  owned_path: "research_control/tasks/RT-20260815-009/artifacts/child_phys_math_p4_t02_b2_post_canonical_open_carrier_selector.yaml"
+  files_written_count: 1
+  other_files_modified: false
+  peer_child_file_inspected: true
+  parent_artifact_modified: false
+  task_or_job_modified: false
+  role_overlay_modified: false
+  registry_modified: false
+  handoff_modified: false
+  completion_created: false
+  program_state_modified: false
+  generated_output_modified: false
+  selected_packet_executed: false
+  child_agentjob_created: false
+
+execution_controls:
+  outer_agentjob_count: 1
+  internal_child_count: 2
+  child_agentjob_count: 0
+  compared_route_count: 4
+  selected_route_count: 1
+  selected_packet_count: 1
+  selected_packet_status: "selected_not_executed"
+  inherited_conditional_theorem_count: 5
+  inherited_freeze_count: 8
+  distance_to_gr_row_count: 14
+  literal_no_delta_row_count: 14
+  formal_domain_count: 10
+  formal_object_count: 14
+  formal_map_count: 14
+  new_mathematical_payload_count: 5
+  exact_control_count: 6
+  proof_obligation_count: 16
+  failure_branch_count: 12
+  score_criterion_count: 6
+  constructive_preference_applied: true
+  material_distinctness_required: true
+  source_extension_classification_required: true
+  frozen_route_reconstructed_repaired_audited_stressed_or_replayed: false
+  d7_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked_or_executed: false
+  canonical_ontology_modified: false
+  source_law_or_occurrence_law_adopted: false
+  physical_or_empirical_semantics_added: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  global_no_go_claimed: false
+  future_extension_impossibility_claimed: false
+
+source_binding:
+  binding_note: "Tracked active control state, canonical RT007 theorem and fusion paths, the fixed RT003 obstruction, role contracts, plan, burden map, and the Distance-to-GR ledger govern this child analysis. Retrieval and generated memory layers are navigation only and are not authority."
+  acyclic_manifest_note: "Whole-file hashes for TEX_SOURCE_REGISTRY.csv, MARKDOWN_SOURCE_REGISTRY.csv, ROLE_EXECUTION_REGISTRY.csv, AGENT_JOB_REGISTRY.csv, RESEARCH_TASK_REGISTRY.csv, DIRECTOR_DECISION_REGISTRY.csv, and CLAIM_BOUNDARY_REGISTRY.csv are intentionally omitted because downstream completion, handoff, frontier, and registry refreshes can depend on this child artifact and would create a hash cycle. Canonical science and control paths remain directly hash-bound; registry-row booleans below are nonhash navigation evidence only."
+  hash_algorithm: "sha256"
+  governing_source_count: 23
+  governing_sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      authority: "control"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      authority: "control"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      authority: "control"
+    - path: ".codex/skills/continue-research/SKILL.md"
+      sha256: "6f92a296d2d0edf065bfbf9c278dcbfb527f48297a41c9c7f7d79125e99063ea"
+      authority: "workflow_contract"
+    - path: ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+      sha256: "85550a50a4be3fc2b1fbf6e22b22c160b25923944276d0b555e75fb10380ff79"
+      authority: "role_contract"
+    - path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+      sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+      authority: "candidate_next_role_contract"
+    - path: ".agents/roles/physics/refuter.v0.2.0.md"
+      sha256: "01b7897ecf5861d952d7349e3eb743feed6f178112264de73f5226d3c88946fc"
+      authority: "selected_next_role_contract"
+    - path: "research_control/tasks/RT-20260815-009/00_TASK.yaml"
+      sha256: "ee78e63ec25675aa27fdb978b7e8eba2d45b6a5834d878dcbf52258f00ddd809"
+      authority: "tracked_control_state_active"
+    - path: "research_control/tasks/RT-20260815-009/DDR-20260815-009.md"
+      sha256: "25b70495667f55496a194241607241233d0a4d1779136bb05ac002289873e967"
+      authority: "tracked_control_state_active"
+    - path: "research_control/tasks/RT-20260815-009/jobs/AJ-RT-20260815-009-001.yaml"
+      sha256: "e70a17012417fe2632e9eaf286bd1fd2aa06fa2cdc044ed69f0f7907ff9671cd"
+      authority: "tracked_control_state_active"
+    - path: "research_control/tasks/RT-20260815-009/roles/theoretical-continuation-selector@0.1.0--RT-20260815-009.yaml"
+      sha256: "ae0f1d77721f908206cfca3fafe0321fd28443bf1dc48bf9e5a40345ecd3b1c8"
+      authority: "execution_role_active"
+    - path: "research_control/handoffs/handoff-1042.yaml"
+      sha256: "245aaf6a49645af321691fb49a3b0975f58ff53bdcfdc099463cfee94a6ad3d7"
+      authority: "tracked_control_state"
+    - path: "research_control/tasks/RT-20260815-007/artifacts/parent_fusion_notes_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.md"
+      sha256: "9e45c407be92b8d4b66303b5ed8cd4043453f09b303227ac35de74f1feb62604"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_result_v1.yaml"
+      sha256: "486604706dee7d65dde80d61cf282abc7b8598a1835042611d58bdf9314ad9d7"
+      authority: "fixed_task_local_science_draft"
+    - path: "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_v1.tex"
+      sha256: "ce0d1b5ba842fb019928cabeffec127416c1205642bdadf1a536dea610cab1e5"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260815-007/jobs/completions/AJC-AJ-RT-20260815-007-001.yaml"
+      sha256: "b8d51235c26430b9db31be24357d73c8a40288be1b5018bb2d02c7938622c4e6"
+      authority: "completed_control_state"
+    - path: "research_control/tasks/RT-20260815-003/artifacts/parent_fusion_notes_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel.md"
+      sha256: "54f91f607269d6bdf9f69cc30d7fbf2dcfb77bb1efe4d7c81fd335e92dddaa09"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260815-003/artifacts/v22_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel_v1.tex"
+      sha256: "0853ee5a77184e6e7a82663b16c3339810bb48946a2421f8e796e5d9df7f7d14"
+      authority: "registered_science_draft"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      authority: "registered_project_control"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      authority: "control"
+    - path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+      sha256: "562405dd78a03efde831806323081285c7850ee18dbeb2a6b6ecf900417c814c"
+      authority: "control"
+    - path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+      sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789"
+      authority: "control_schema"
+    - path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+      sha256: "8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"
+      authority: "registry"
+  registry_row_checks:
+    evidence_class: "nonhash_navigation_checks_not_governing_bindings"
+    whole_mutable_registry_hash_authority: false
+    rt009_task_row_present: true
+    rt009_decision_row_present: true
+    rt009_agentjob_row_present: true
+    rt009_role_overlay_row_present: true
+    rt009_claim_boundary_row_present: true
+    rt007_tex_object_id: "TEX-V22-P4-T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+    rt007_tex_registered_hash_matches: true
+    rt007_markdown_object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+    rt007_markdown_registered_hash_matches: true
+    distance_to_gr_ledger_row_count: 14
+
+inherited_fixed_results:
+  rt003:
+    result_type: "current_source_provenance_or_typing_obstruction"
+    obstruction_id: "OB-V22-P4T02-B2-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-CURRENT-SOURCE-TYPING-PROVENANCE-001"
+    current_source_groupoid: "SmoothMan_4^iso"
+    first_missing_primitive: "target-free current-source-derived proposal-fiber pseudofunctor F_prop, equivalently a nonvacuous Prop carrier with U and coherent source-arrow transport"
+    current_source_general_proposal_carrier_formed: false
+    current_source_occurrence_law_derived: false
+    conditional_theorems_preserved: true
+    scoped_obstruction_only: true
+    conservative_continuation_open: true
+    global_no_go: false
+  rt007:
+    result_type: "canonical_open_event_fibration_typing_descent_theorem"
+    theorem_id: "V22-P4-T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-001"
+    carrier: "Open(-) on boundaryless smooth four-manifolds and open embeddings"
+    variance: "contravariant by inverse image"
+    category_of_elements_type: "discrete_fibration"
+    bifibration_over_noninvertible_open_embeddings_claimed: false
+    open_cover_descent: "unique"
+    connected_full_diffeomorphism_natural_sections: "empty_or_total"
+    normalized_binary_formal_kernel_family: "mu_t=(1-t)delta_empty+t delta_total for t in [0,1]"
+    occurrence_selected: false
+    physical_probability_assigned: false
+    exact_control_pass_count: 24
+    exact_control_check_count: 24
+    global_no_go: false
+  this_child_changes_predecessor_science: false
+
+inherited_conditional_theorem_preservation:
+  theorem_count: 5
+  all_preserved_unchanged: true
+  rows:
+    - theorem_id: "THM-RT003-SECTION-FIXED-POINT-001"
+      theorem_name: "GroupoidDeterministicSectionFixedPointCriterion"
+      preservation_status: "preserved_unchanged"
+      selector_use: "RT007's natural-section theorem is fixed; this child studies admissibility subsheaves rather than another point-section."
+    - theorem_id: "THM-RT003-INVARIANT-SUBFUNCTOR-001"
+      theorem_name: "InvariantAdmissibleSubfunctorCriterion"
+      preservation_status: "preserved_unchanged"
+      selector_use: "A concrete clopen component-union subsheaf is supplied as a source-only control, without calling it a physical admissibility law."
+    - theorem_id: "THM-RT003-EQUIVARIANT-KERNEL-001"
+      theorem_name: "EquivariantOccurrenceKernelCriterion"
+      preservation_status: "preserved_unchanged"
+      selector_use: "A continuum of restriction-natural formal measures is exhibited only as nonselection evidence."
+    - theorem_id: "THM-RT003-KERNEL-DESCENT-001"
+      theorem_name: "LocalOccurrenceDescentCriterion"
+      preservation_status: "preserved_unchanged"
+      selector_use: "Open-set or clopen-set sheaf descent is kept distinct from descent of an occurrence kernel."
+    - theorem_id: "THM-RT003-SAME-REDUCT-FACTORIZATION-001"
+      theorem_name: "CurrentSourceProvenanceFactorCriterion"
+      preservation_status: "preserved_unchanged"
+      selector_use: "Every later source-law root or P4 relevance map must be typed on current-source reducts before a factorization claim is admissible."
+
+exclusive_selector_verdict:
+  verdict_type: "theoretical_packet_selection"
+  verdict_count: 1
+  selected_route_id: "B_PROPOSAL_ONLY_MEASURABLE_FIBER_OCCURRENCE_LAW_EXTENSION"
+  selected_packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-EXTENSION-V1"
+  selected_packet_type: "ontology_law_research_packet"
+  selected_route_label: "ontology-law-research-packet"
+  selected_next_role: "ontology-formalizer@0.2.0"
+  selected_status: "selected_not_executed"
+  selected_packet_executed: false
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  selection_rationale: "Route B is a lawful controlled source-extension candidate and wins the selector role's mandatory constructive preference. RT003 identifies the first unresolved dependency as a derivation-critical missing proposal-fiber and occurrence-law root; RT007 supplies only a topology-generated carrier and proves carrier-only nonselection. A separately admitted Ontology Formalizer packet can therefore declare a non-eliminable target-free proposal-only root, type its measurable transport, restrictions, descent, admissibility, and formal kernel, and return exact obstructions if formation fails, while adoption remains blocked. Route A's Clop, endpoint, and natural mu_t theorems remain high-value exact controls and become the immediate post-candidate Refuter stress. Route C remains untyped and Route D remains premature."
+  exact_novelty_relative_to_rt007: "Route B must add a non-eliminable proposal-only source-law root beyond Open(-), not rename the carrier. Route A's preserved Clop, E, and mu_t results separately classify the diagnostic admissibility and kernel layer that must stress the candidate immediately afterward."
+  no_fog_check: true
+  no_fog_explanation: "The next packet must define every genuinely new proposal-only root, domain, fiber, map, sigma structure, transport, restriction, descent, admissibility predicate, and formal kernel; prove coherence or return the first exact obstruction; demonstrate non-eliminability beyond Open(-); publish source provenance and falsifiers; preserve blocked adoption; and execute no later Refuter or audit."
+
+theoretical_decision_output:
+  selected_next_packet_type: "ontology_law_research_packet"
+  selected_packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-EXTENSION-V1"
+  selected_route_id: "B_PROPOSAL_ONLY_MEASURABLE_FIBER_OCCURRENCE_LAW_EXTENSION"
+  selected_route_label: "ontology-law-research-packet"
+  selected_next_role: "ontology-formalizer@0.2.0"
+  decision_basis: "The role contract makes a non-promotional controlled source-extension candidate lexically prior to another diagnostic theorem when the active milestone is blocked by a derivation-critical missing source law. RT003 supplies that exact trigger, and proposal-only construction can proceed without adoption."
+  theoretical_method: "Proposal-only measurable pseudofunctor formalization, non-eliminability model-pair test, coherent transport and descent proofs, source-reduct factorization, acyclic dependency audit inputs, and explicit formal-kernel existence or nonuniqueness branches."
+  preserves_claim_blocks: true
+  requires_human_gate: false
+  human_gate_reason: "Constructing and testing proposal-only source-extension data at draft/control status requires no canonical ontology adoption; any later adoption remains human-gated."
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  source_extension_category: "proposal-only_source-extension_data"
+  source_extension_import_classification: "new_target_free_source_law_candidate_not_derived_from_current_ontology"
+  decision_consequence: "A successful non-eliminable Route B candidate creates the exact object for immediate Route A admissibility and kernel Refuter stress and later independent Smuggling Audit. A definitional rename, forbidden import, or formation obstruction returns a scoped failure without adoption or global impossibility."
+  new_payload_novelty: "The selection preserves the new Clop subsheaf, endpoint descent counterexample, and restriction-natural mu_t family as exact controls while routing first to construction of the missing non-eliminable proposal-only law root required by the role's constructive preference."
+  selected_packet_executed: false
+
+score_rubric:
+  criterion_count: 6
+  scale_minimum: 0
+  scale_maximum: 4
+  tie_break_rule: "Apply the role's mandatory constructive-packet preference first; within that admissible class prefer higher source_purity, exact_tractability, and authority_safety."
+  criteria:
+    - criterion_id: "constructive_yield"
+      description: "Constructs the first missing source-side dependency under controlled non-promotional status; diagnostic classification receives less credit than a lawful source-extension candidate."
+    - criterion_id: "material_distinctness"
+      description: "Does not restate RT003, RT007, or reopen any of the eight frozen route families."
+    - criterion_id: "source_purity"
+      description: "Uses current-source data and discloses every genuinely new source-law root without target or desired-output import."
+    - criterion_id: "exact_tractability"
+      description: "Has exact hypotheses, proofs, finite controls, and decisive falsifiers."
+    - criterion_id: "roadmap_decision_consequence"
+      description: "Changes the exact next dependency or closes a scoped branch."
+    - criterion_id: "authority_safety"
+      description: "Preserves freezes, nonadoption, downstream locks, and outward-action blocks."
+
+route_comparison:
+  route_count: 4
+  exactly_job_fixed_routes_compared: true
+  routes:
+    - route_id: "A_OPEN_CARRIER_ADMISSIBILITY_KERNEL_REFUTER_STRESS"
+      route_name: "Open-carrier admissibility and kernel Refuter stress"
+      packet_id: "PKT-V22-P4T02-B2-OPEN-CARRIER-ADMISSIBILITY-KERNEL-REFUTER-STRESS-V1"
+      packet_type: "source_side_irrelevance_theorem"
+      route_label: "ordinary-research-packet"
+      next_role: "refuter@0.2.0"
+      constructive_status: "constructive_mathematical_control_but_diagnostic_packet"
+      source_extension_classification: "none_current_ontology_theorem_stress"
+      typed_domain: "The open-embedding category of nonempty boundaryless smooth four-manifolds, with the connected full subcategory for the endpoint classification."
+      variance: "Contravariant inverse-image restrictions."
+      restriction_and_descent_target: "Proper full-Diff-invariant subpresheaves of Open(-), with subsheaf descent tested separately."
+      invariant_group: "Diff(U) objectwise and every isomorphism induced by source diffeomorphisms."
+      exact_payload: "Classify the clopen/component-union subsheaf as a positive proper invariant control, separate it from the endpoint subpresheaf that fails descent on disconnected sources, and stress the continuum of restriction-natural normalized formal measures."
+      material_difference: "RT007 classified natural selected opens; this route classifies admissibility subobjects and probability-valued natural families."
+      decision_consequence: "Determines whether current topology supplies any connected-source discriminating admissibility or kernel selector before a new source-law root is proposed."
+      principal_falsifier: "A properly typed source-only invariant subsheaf with a proper nonempty connected-source fiber element or a current-source equation selecting one natural formal measure defeats the scoped irrelevance branch and becomes a positive candidate."
+      constructive_yield_score: 2
+      material_distinctness_score: 4
+      source_purity_score: 4
+      exact_tractability_score: 4
+      roadmap_decision_consequence_score: 4
+      authority_safety_score: 4
+      total_score: 22
+      disposition: "not_selected_deferred_immediate_post_candidate_refuter"
+    - route_id: "B_PROPOSAL_ONLY_MEASURABLE_FIBER_OCCURRENCE_LAW_EXTENSION"
+      route_name: "Proposal-only measurable-fiber occurrence-law extension"
+      packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-EXTENSION-V1"
+      packet_type: "ontology_law_research_packet"
+      route_label: "ontology-law-research-packet"
+      next_role: "ontology-formalizer@0.2.0"
+      constructive_status: "constructive_new_primitive_proposal_only"
+      source_extension_classification: "new_ontology_primitive_proposal_only"
+      typed_domain: "A not-yet-declared measurable proposal pseudofunctor over current-source reducts."
+      variance: "Must be declared with coherent source-arrow transport, restrictions, and measurable-fiber descent."
+      restriction_and_descent_target: "A proposed measurable fiber, admissibility rule, and occurrence generator satisfying covariance, normalization, and overlap conditions."
+      invariant_group: "Must be induced by current-source automorphisms and remain fiber-constant on equal reducts."
+      exact_payload: "Declare a genuinely new source-law root and test it as source-extension data; do not infer it from carrier normalization."
+      material_difference: "It supplies the missing primitive found by RT003, but by proposal rather than derivation."
+      decision_consequence: "If later selected, it opens a Smuggling Audit and Refuter sequence while adoption stays human-gated."
+      principal_falsifier: "Target-derived labels, same-reduct opposite outputs, incoherent transport, failed descent, or instability under admissible source variation defeats the proposal."
+      constructive_yield_score: 4
+      material_distinctness_score: 4
+      source_purity_score: 4
+      exact_tractability_score: 4
+      roadmap_decision_consequence_score: 4
+      authority_safety_score: 4
+      total_score: 24
+      disposition: "selected_not_executed"
+    - route_id: "C_DISTINCT_OPEN_CARRIER_P4_RELEVANCE_IRRELEVANCE_THEOREM"
+      route_name: "Distinct Open-carrier P4 relevance or irrelevance theorem"
+      packet_id: "not_assigned_route_not_currently_typed"
+      packet_type: "source_side_irrelevance_theorem"
+      route_label: "ordinary-research-packet"
+      next_role: "refuter@0.2.0"
+      constructive_status: "conditional_negative_theorem_route"
+      source_extension_classification: "none_if_independently_typed"
+      typed_domain: "Open-carrier data would be the domain, but the fixed inputs supply no independently source-derived P4-relevant codomain D_P4."
+      variance: "Unavailable until both domain and codomain functoriality are declared."
+      restriction_and_descent_target: "A map q_U from an Open-derived admissibility fiber to D_P4(U), with typed fibers and a new factorization or nonfactorization theorem."
+      invariant_group: "Would have to be induced by current-source automorphisms on both domain and codomain."
+      exact_payload: "No packet-ready q_U, codomain D_P4, or fiber theorem is present in the fixed sources; reusing carrier nonselection alone would replay RT007."
+      material_difference: "Potentially distinct only after the missing codomain and map are independently typed."
+      decision_consequence: "Route remains open but unavailable in this selection; a future registered source-side codomain and map would reactivate it."
+      principal_falsifier: "A registered current-source definition of D_P4 and q_U with explicit fibers and a new factorization or nonfactorization theorem makes this availability judgment false."
+      constructive_yield_score: 1
+      material_distinctness_score: 1
+      source_purity_score: 2
+      exact_tractability_score: 1
+      roadmap_decision_consequence_score: 3
+      authority_safety_score: 4
+      total_score: 12
+      disposition: "not_selected_not_currently_packet_ready"
+    - route_id: "D_PROTECTED_HUMAN_GATED_ONTOLOGY_CHANGE_REQUIRED"
+      route_name: "Protected human-gated ontology change required"
+      packet_id: "not_assigned_gate_necessity_criterion_unsatisfied"
+      packet_type: "human_gated_ontology_change_required"
+      route_label: "human-gated-ontology-change-required"
+      next_role: "human_gate"
+      constructive_status: "protected_stop"
+      source_extension_classification: "no_extension_selected_human_authority_required"
+      typed_domain: "Authority-state decision only."
+      variance: "not_applicable"
+      restriction_and_descent_target: "not_applicable"
+      invariant_group: "not_applicable"
+      exact_payload: "Stop only if every honest non-promotional continuation requires protected canonical ontology authority."
+      material_difference: "Changes authority state rather than constructing or testing a mathematical object."
+      decision_consequence: "Would suspend autonomous continuation pending a protected human decision."
+      principal_falsifier: "The existence of either Route A or proposal-only Route B as a lawful non-promotional packet falsifies gate necessity now."
+      constructive_yield_score: 0
+      material_distinctness_score: 2
+      source_purity_score: 4
+      exact_tractability_score: 4
+      roadmap_decision_consequence_score: 1
+      authority_safety_score: 4
+      total_score: 15
+      disposition: "not_selected_premature"
+
+formal_domains:
+  domain_count: 10
+  domains:
+    - domain_id: "DOM-01"
+      name: "SrcOpenEmb4"
+      definition: "The category of nonempty boundaryless smooth four-manifolds and smooth open embeddings."
+    - domain_id: "DOM-02"
+      name: "ConnSrcOpenEmb4"
+      definition: "The full subcategory of DOM-01 on connected objects, with connected source and target for the natural formal-measure family."
+    - domain_id: "DOM-03"
+      name: "OpenCarrierPresheaf"
+      definition: "The contravariant Set-valued functor U maps to Open(U) and j maps to inverse image."
+    - domain_id: "DOM-04"
+      name: "ClopenAdmissibilitySubsheaf"
+      definition: "The subfunctor Clop(U) of open subsets whose complements in U are open."
+    - domain_id: "DOM-05"
+      name: "EndpointSubpresheaf"
+      definition: "The subfunctor E(U)={empty,U}, tested separately for descent."
+    - domain_id: "DOM-06"
+      name: "OpenCoverDescentData"
+      definition: "Open covers with compatible local subfunctor elements and their unique Open(-) glue."
+    - domain_id: "DOM-07"
+      name: "NaturalFormalMeasureFamilies"
+      definition: "Families of normalized finite measures on E(U) compatible with probability pushforward along restrictions."
+    - domain_id: "DOM-08"
+      name: "SourceLawRootSpace"
+      definition: "Explicitly declared source-only roots that could constrain admissibility or a formal kernel; empty in the fixed current signature for occurrence selection."
+    - domain_id: "DOM-09"
+      name: "P4FactorizationCandidateSpace"
+      definition: "Hypothetical source-derived P4 codomains, maps, and fibers required to distinguish Route C from RT007."
+    - domain_id: "DOM-10"
+      name: "FourRouteDecisionSpace"
+      definition: "Exactly the four routes fixed by AJ-RT-20260815-009-001 and the selected unexecuted packet boundary."
+
+formal_objects:
+  object_count: 14
+  objects:
+    - object_id: "OBJ-01"
+      name: "U"
+      type: "object of SrcOpenEmb4"
+    - object_id: "OBJ-02"
+      name: "V"
+      type: "object of SrcOpenEmb4"
+    - object_id: "OBJ-03"
+      name: "j:V->U"
+      type: "smooth open embedding"
+    - object_id: "OBJ-04"
+      name: "Open(U)"
+      type: "set and frame of open subsets of U"
+    - object_id: "OBJ-05"
+      name: "Clop(U)"
+      type: "subset of Open(U) consisting of complemented opens"
+    - object_id: "OBJ-06"
+      name: "E(U)"
+      type: "two-element endpoint subset {empty,U} of Open(U)"
+    - object_id: "OBJ-07"
+      name: "Pi0(U)"
+      type: "set of connected components of U"
+    - object_id: "OBJ-08"
+      name: "cover_U"
+      type: "family {U_i} of open subsets whose union is U"
+    - object_id: "OBJ-09"
+      name: "local_clopen_family"
+      type: "compatible family A_i in Clop(U_i)"
+    - object_id: "OBJ-10"
+      name: "mu_t_U"
+      type: "formal probability measure (1-t)delta_empty+t delta_U on E(U)"
+    - object_id: "OBJ-11"
+      name: "H_struct"
+      type: "structural axiom set of restriction, descent, invariance, and normalization"
+    - object_id: "OBJ-12"
+      name: "G_src"
+      type: "hypothetical genuinely new source-law root"
+    - object_id: "OBJ-13"
+      name: "D_P4"
+      type: "hypothetical independently source-derived P4-relevant codomain functor"
+    - object_id: "OBJ-14"
+      name: "selected_future_packet"
+      type: "unexecuted Route B proposal-only Ontology Formalizer packet"
+
+formal_maps:
+  map_count: 14
+  maps:
+    - map_id: "MAP-01"
+      notation: "j^*:Open(U)->Open(V)"
+      definition: "Inverse image A maps to j^{-1}(A)."
+      typed: true
+    - map_id: "MAP-02"
+      notation: "j^*|Clop:Clop(U)->Clop(V)"
+      definition: "Restriction of inverse image to complemented opens."
+      typed: true
+    - map_id: "MAP-03"
+      notation: "j^*|E:E(U)->E(V)"
+      definition: "Endpoint restriction sends empty to empty and U to V."
+      typed: true
+    - map_id: "MAP-04"
+      notation: "phi^*:Clop(U)->Clop(U)"
+      definition: "Pullback action of phi in Diff(U)."
+      typed: true
+    - map_id: "MAP-05"
+      notation: "glue:{A_i}->union_i A_i"
+      definition: "Unique Open(-) descent map for compatible local opens."
+      typed: true
+    - map_id: "MAP-06"
+      notation: "complement_glue:{U_i\\A_i}->U\\union_i A_i"
+      definition: "Identification proving the glued clopen complement is open."
+      typed: true
+    - map_id: "MAP-07"
+      notation: "i_U:Clop(U)->Open(U)"
+      definition: "Natural inclusion of the clopen subsheaf."
+      typed: true
+    - map_id: "MAP-08"
+      notation: "c_U:P(Pi0(U))->Clop(U)"
+      definition: "Maps a set of connected components to their union; an isomorphism for manifolds."
+      typed: true
+    - map_id: "MAP-09"
+      notation: "delta_U:E(U)->Prob(E(U))"
+      definition: "Dirac embedding used only for formal finite measures."
+      typed: true
+    - map_id: "MAP-10"
+      notation: "m_U:[0,1]->Prob(E(U))"
+      definition: "Maps t to mu_t_U=(1-t)delta_empty+t delta_U."
+      typed: true
+    - map_id: "MAP-11"
+      notation: "Prob(j^*):Prob(E(U))->Prob(E(V))"
+      definition: "Pushforward of a finite measure along endpoint restriction."
+      typed: true
+    - map_id: "MAP-12"
+      notation: "Gen_G:G_src->NatProb(E)"
+      definition: "Hypothetical source-law-to-natural-measure map; absent and not stipulated."
+      typed: false
+    - map_id: "MAP-13"
+      notation: "q_U:A(U)->D_P4(U)"
+      definition: "Hypothetical Route C relevance map; codomain, fibers, and naturality are absent."
+      typed: false
+    - map_id: "MAP-14"
+      notation: "Select:{A,B,C,D}->B"
+      definition: "Unique route selection under mandatory constructive preference and the declared score; it does not execute B."
+      typed: true
+
+new_mathematical_payloads:
+  payload_count: 5
+  payloads:
+    - payload_id: "NMP-RT009-PM-001"
+      payload_type: "proper_invariant_admissibility_subsheaf_theorem"
+      title: "Clopen component-union subsheaf theorem"
+      exact_scope: "Nonempty boundaryless smooth four-manifolds, smooth open embeddings, and ordinary open-cover topology."
+      statement: "Clop(U)={A in Open(U) | U\\A is open} defines a nonempty proper full-Diff-invariant contravariant subsheaf of Open(-). For every manifold U, Clop(U) is exactly the set of unions of connected components; hence for connected U it equals {empty,U}."
+      hypotheses:
+        - "U and V are nonempty boundaryless smooth four-manifolds."
+        - "j:V->U is a smooth open embedding."
+        - "Cover families are ordinary open covers and local elements agree after inverse-image restriction on all overlaps."
+      proof:
+        - "If A is clopen in U, j^{-1}(A) is open and its complement V\\j^{-1}(A)=j^{-1}(U\\A) is open, so inverse image restricts to Clop. Identities and compositions are inherited from Open(-)."
+        - "Every diffeomorphism is an open embedding with open inverse, so pullback preserves Clop and supplies full-Diff invariance."
+        - "For compatible A_i in Clop(U_i), A=union_i A_i is the unique Open(-) glue. Compatibility implies U\\A=union_i(U_i\\A_i): a point outside A lies in some U_i and its local complement, while a point in a local complement cannot lie in any A_j on an overlap. Thus U\\A is open and A is clopen."
+        - "Each connected component of a manifold is open because manifolds are locally connected. A clopen A meets each connected component in a clopen subset, hence either the whole component or the empty set. Conversely any union of open components has open complementary component union."
+        - "A coordinate chart contains a smaller proper nonempty open ball that is not closed in U, so Clop(U) is a proper subset of Open(U); empty and U show nonemptiness."
+      falsifier: "A smooth open embedding whose inverse image of a clopen set is not clopen, a compatible local clopen family whose unique union has nonopen complement, or a connected smooth four-manifold with a proper nonempty clopen subset falsifies the stated theorem."
+      novelty_relative_to_rt007: "RT007 classified natural selected elements of Open(U); this theorem constructs and classifies a proper invariant descent-closed subobject of the entire carrier."
+      physical_or_occurrence_semantics: false
+    - payload_id: "NMP-RT009-PM-002"
+      payload_type: "restriction_versus_descent_counterexample"
+      title: "Endpoint subpresheaf is not a subsheaf on disconnected sources"
+      exact_scope: "The same open-embedding site including disconnected boundaryless smooth four-manifolds."
+      statement: "E(U)={empty,U} is a full-Diff-invariant contravariant subpresheaf of Open(-), but it fails open-cover descent whenever U is the disjoint union of two nonempty open components."
+      hypotheses:
+        - "U=U_1 disjoint_union U_2 with U_1 and U_2 nonempty open smooth four-manifolds."
+        - "The cover is {U_1,U_2}; empty overlaps impose compatibility vacuously."
+      proof:
+        - "For every open embedding j:V->U, inverse image sends empty to empty and U to V, so E is a contravariant subpresheaf and is Diff-invariant."
+        - "Choose local elements A_1=U_1 in E(U_1) and A_2=empty in E(U_2). They agree on the empty overlap. Their unique Open(-) glue is U_1, which is neither empty nor U, so it is not in E(U)."
+      falsifier: "If the stated local family is not compatible, if its Open(-) glue is an endpoint, or if disconnected objects and their component cover are excluded from the declared domain, this counterexample does not apply."
+      novelty_relative_to_rt007: "It separates inverse-image stability from descent closure, a distinction not decided by the empty-or-total natural-section theorem."
+      physical_or_occurrence_semantics: false
+    - payload_id: "NMP-RT009-PM-003"
+      payload_type: "natural_formal_measure_nonuniqueness_theorem"
+      title: "Continuum of restriction-natural normalized formal measures"
+      exact_scope: "Connected nonempty boundaryless smooth four-manifolds and smooth open embeddings between connected objects, on the two-element Clop fiber."
+      statement: "For every t in [0,1], mu_t,U=(1-t)delta_empty+t delta_U is normalized and satisfies Prob(j^*)(mu_t,U)=mu_t,V for every j:V->U. Distinct t give distinct measures, so restriction naturality, full-Diff invariance, normalization, and the clopen carrier do not select one formal measure."
+      hypotheses:
+        - "U and V are connected, so Clop(U)={empty,U} and Clop(V)={empty,V}."
+        - "Prob(j^*) denotes finite-measure pushforward along endpoint inverse image."
+        - "No physical probability, stochastic event, or realized occurrence meaning is assigned."
+      proof:
+        - "Endpoint restriction sends empty to empty and U to V, so pushforward sends delta_empty to delta_empty and delta_U to delta_V. Linearity gives Prob(j^*)(mu_t,U)=mu_t,V."
+        - "Normalization follows because (1-t)+t=1 and both weights are nonnegative."
+        - "Evaluation on the singleton {U} gives mu_t,U({U})=t, so mu_t,U differs from mu_s,U whenever t differs from s."
+      falsifier: "A declared current-source structural equation satisfied by exactly one t, failure of endpoint restriction, or equality of mu_t and mu_s for distinct t falsifies the corresponding nonselection claim."
+      novelty_relative_to_rt007: "RT007 exhibited continuum many formal measures on a fixed binary carrier; this strengthens the control to a natural family compatible with every connected open embedding."
+      physical_or_occurrence_semantics: false
+    - payload_id: "NMP-RT009-PM-004"
+      payload_type: "scoped_structural_independence_corollary"
+      title: "Carrier, descent, invariance, and normalization are jointly insufficient for unique selection"
+      exact_scope: "Only the structural axiom set H_struct explicitly listed in this child; no claim about all possible future source laws."
+      statement: "Within H_struct, unique formal-measure selection is not a logical consequence because the family in NMP-RT009-PM-003 supplies continuum many models satisfying the same restrictions, invariance, clopen descent control, and normalization."
+      hypotheses:
+        - "H_struct contains only the fixed Open carrier, Clop restriction and descent, full-Diff invariance, and formal-measure normalization and naturality."
+        - "No additional source-law root G_src is included."
+      proof:
+        - "NMP-RT009-PM-003 constructs one H_struct-compatible family for every t in [0,1]."
+        - "At least t=0 and t=1 differ on the total endpoint event. If H_struct entailed one unique family, every H_struct model would agree, contradicting these two explicit models."
+      falsifier: "An already-declared source-only axiom within H_struct that rules out all but one t, or a proof that the t=0 and t=1 constructions violate one listed axiom, falsifies this corollary."
+      novelty_relative_to_rt007: "It identifies the exact axiom boundary of the nonselection control and converts carrier-only nonuniqueness into a route dependency on a new source-law root."
+      global_no_go: false
+    - payload_id: "NMP-RT009-PM-005"
+      payload_type: "p4_route_typing_discriminant"
+      title: "Typed codomain and fiber criterion for a materially distinct Route C"
+      exact_scope: "Packet admissibility for Route C under the fixed RT003 and RT007 sources."
+      statement: "A Route C packet is materially distinct only after a current-source-derived codomain functor D_P4, a natural map q_U:A(U)->D_P4(U), explicit fibers of q_U, and a new factorization or nonfactorization theorem are typed. None of these decision-bearing objects is present in the fixed inputs, so Route C is unavailable now but not impossible."
+      hypotheses:
+        - "Carrier nonselection alone is fixed by RT007 and cannot count as new Route C payload."
+        - "Every P4 relevance object must factor through declared current-source data and may not import target geometry or desired output."
+      proof:
+        - "Without a codomain, q_U has no type; without q_U, its fibers and factorization statement have no mathematical proposition."
+        - "Repeating only Open-carrier section or kernel nonselection therefore adds no P4-relevance theorem beyond RT007."
+        - "The inspected fixed sources define no independent D_P4 or q_U, so the route fails packet readiness rather than mathematical possibility."
+      falsifier: "A registered source-only D_P4 and q_U with explicit fibers, naturality, and a genuinely new P4 factorization or nonfactorization theorem makes the current unavailability judgment false."
+      novelty_relative_to_rt007: "This is a precise type-level admission test for a distinct P4 theorem, not another carrier nonselection claim."
+      global_no_go: false
+
+finite_exact_controls:
+  control_count: 6
+  controls:
+    - control_id: "CTRL-01"
+      fixture: "U=R4 disjoint_union R4 with component cover"
+      assertion: "The endpoint local family total on the first component and empty on the second glues outside E(U)."
+      expected: true
+    - control_id: "CTRL-02"
+      fixture: "Connected U=R4"
+      assertion: "Clop(U) has exactly empty and total."
+      expected: true
+    - control_id: "CTRL-03"
+      fixture: "Open embedding of one coordinate ball into a connected source"
+      assertion: "Inverse image preserves both endpoint labels and every clopen set."
+      expected: true
+    - control_id: "CTRL-04"
+      fixture: "t values 0, 1/2, and 1"
+      assertion: "All three formal measures are normalized, natural on endpoint restrictions, and pairwise distinct."
+      expected: true
+    - control_id: "CTRL-05"
+      fixture: "Route scores A=22, B=24, C=12, D=15 after mandatory constructive preference"
+      assertion: "B is the unique maximizer and the only route constructing the first missing dependency."
+      expected: true
+    - control_id: "CTRL-06"
+      fixture: "Gate necessity versus lawful non-promotional routes"
+      assertion: "The existence of selected Route B and still-lawful deferred Route A makes Route D's necessity predicate false."
+      expected: true
+
+selected_future_packet:
+  packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-EXTENSION-V1"
+  packet_type: "ontology_law_research_packet"
+  route_id: "B_PROPOSAL_ONLY_MEASURABLE_FIBER_OCCURRENCE_LAW_EXTENSION"
+  route_label: "ontology-law-research-packet"
+  next_role: "ontology-formalizer@0.2.0"
+  status: "selected_not_executed"
+  executed: false
+  requires_separate_agentjob: true
+  requires_parent_child_parallel_synthesis: true
+  trigger_classification: "derivation_critical_missing_source_law"
+  source_extension_category: "proposal-only_source-extension_data"
+  source_extension_import_classification: "new_target_free_source_law_candidate_not_derived_from_current_ontology"
+  adoption_status: "blocked_adoption_open_continuation"
+  objective: "Define a target-free non-eliminable measurable proposal-fiber law from explicitly new proposal-only source roots, type coherent transport, restriction, descent, admissibility, and formal kernel or generator candidates, prove exact consequences or the first formation obstruction, and preserve nonadoption and every downstream lock."
+  minimum_required_outputs:
+    - "A typed proposal-only pseudofunctor F_prop or equivalent Prop projection, with nonvacuous fibers and every new root disclosed as source-extension data."
+    - "A model-pair non-eliminability proof showing the extension contains content beyond a definitional renaming of Open(-)."
+    - "Coherent measurable transport, inverse restrictions, cover and overlap data, cocycles, descent, and exact failure branches."
+    - "An invariant admissibility law and normalized formal kernel or generator candidate, or exact scoped nonexistence or nonuniqueness results."
+    - "Acyclic source-to-law-to-diagnostic dependency data, same-reduct controls, explicit proof obligations and falsifiers, and inputs for a later independent Smuggling Audit."
+    - "A strict type separation among formal kernel, realized token, physical probability, empirical response, and occurrence semantics."
+    - "All eight freezes, fourteen literal no-delta rows, and D7/B2/P4-T03 locks unchanged."
+  success_branches:
+    - branch_id: "SFP-SB-01"
+      result: "noneliminable_proposal_only_law_candidate"
+      consequence: "Return source-extension data only, then route the candidate to the deferred Route A Refuter stress and later independent Smuggling Audit; do not adopt it."
+    - branch_id: "SFP-SB-02"
+      result: "definitional_rename_no_progress"
+      consequence: "Preserve RT003's obstruction and return the exact eliminability proof without semantic relabeling or global impossibility."
+    - branch_id: "SFP-SB-03"
+      result: "transport_measurability_or_descent_obstruction"
+      consequence: "Return the first failed formation obligation with its falsifier; same-milestone continuation remains open."
+    - branch_id: "SFP-SB-04"
+      result: "admissibility_or_formal_kernel_nonselection"
+      consequence: "Preserve the Clop, endpoint, and mu_t controls and hand the concrete candidate to the deferred Route A Refuter; no physical selection follows."
+  deferred_immediate_post_candidate_refuter:
+    packet_id: "PKT-V22-P4T02-B2-OPEN-CARRIER-ADMISSIBILITY-KERNEL-REFUTER-STRESS-V1"
+    packet_type: "source_side_irrelevance_theorem"
+    route_id: "A_OPEN_CARRIER_ADMISSIBILITY_KERNEL_REFUTER_STRESS"
+    route_label: "ordinary-research-packet"
+    next_role: "refuter@0.2.0"
+    status: "deferred_not_selected_not_executed"
+    execution_order: "Immediate mathematical stress after a separately admitted Route B candidate packet returns; no AgentJob is created here."
+    preserved_controls: "NMP-RT009-PM-001 through NMP-RT009-PM-004, especially Clop descent, endpoint non-descent, and restriction-natural mu_t nonselection."
+  mandatory_later_smuggling_audit:
+    required_before_any_adoption_consideration: true
+    role_family: "smuggling-auditor"
+    status: "required_later_not_selected_not_executed"
+  authority_note: "This selection creates no successor AgentJob and grants no ontology, occurrence, physical, P4-T03, promotion, proof, publication, push, or external authority. Route B, Route A stress, and the later audit all remain unexecuted."
+
+proof_obligations:
+  obligation_count: 16
+  obligations:
+    - obligation_id: "PO-01"
+      status: "discharged"
+      evidence: "Thirty live governing sources are path- and SHA-256-bound; the parent-provided immutable peer review snapshot is recorded separately to avoid a child-to-child hash cycle."
+    - obligation_id: "PO-02"
+      status: "discharged"
+      evidence: "RT003 obstruction, five conditional theorem schemas, and RT007 theorem are held fixed."
+    - obligation_id: "PO-03"
+      status: "discharged"
+      evidence: "Exactly the four AgentJob routes A, B, C, and D are compared."
+    - obligation_id: "PO-04"
+      status: "discharged"
+      evidence: "Exactly one packet, Route B, is selected and marked selected_not_executed."
+    - obligation_id: "PO-05"
+      status: "discharged"
+      evidence: "Mandatory constructive preference selects the controlled proposal-only source-extension candidate for the derivation-critical missing source law."
+    - obligation_id: "PO-06"
+      status: "discharged"
+      evidence: "Subsheaf and natural-measure classification is materially distinct from RT007 natural point-sections."
+    - obligation_id: "PO-07"
+      status: "discharged"
+      evidence: "Formal domains, objects, maps, variance, restrictions, invariant groups, and missing maps are explicit."
+    - obligation_id: "PO-08"
+      status: "discharged"
+      evidence: "The clopen/component-union subsheaf theorem has a complete proof and falsifier."
+    - obligation_id: "PO-09"
+      status: "discharged"
+      evidence: "The endpoint subpresheaf counterexample separates restriction stability from descent."
+    - obligation_id: "PO-10"
+      status: "discharged"
+      evidence: "A continuum of restriction-natural normalized formal measures is proved with no physical semantics."
+    - obligation_id: "PO-11"
+      status: "discharged"
+      evidence: "Carrier-only nonselection is converted into an explicit dependency on a genuinely new source-law root."
+    - obligation_id: "PO-12"
+      status: "discharged"
+      evidence: "Route C is unavailable only because its P4 codomain, map, fibers, and new theorem are untyped; no impossibility is claimed."
+    - obligation_id: "PO-13"
+      status: "discharged"
+      evidence: "Route D's necessity condition is false because lawful non-promotional Routes A and B remain."
+    - obligation_id: "PO-14"
+      status: "discharged"
+      evidence: "Eight freezes and fourteen literal no-delta burdens are preserved exactly."
+    - obligation_id: "PO-15"
+      status: "discharged"
+      evidence: "Source-purity, same-reduct, nonadoption, D7, B2, P4-T03, physical, promotion, and outward-action blocks remain explicit."
+    - obligation_id: "PO-16"
+      status: "discharged"
+      evidence: "The selected Route B packet has exact identity, type, route label, next role, trigger, blocked-adoption status, success branches, and separate-AgentJob boundary; Route A is deferred and unexecuted."
+
+failure_branches:
+  branch_count: 12
+  branches:
+    - branch_id: "FB-01"
+      triggered: false
+      result_if_triggered: "invalid_route_cardinality"
+    - branch_id: "FB-02"
+      triggered: false
+      result_if_triggered: "nonunique_or_unjustified_selection"
+    - branch_id: "FB-03"
+      triggered: false
+      result_if_triggered: "no_genuinely_new_mathematical_payload"
+    - branch_id: "FB-04"
+      triggered: false
+      result_if_triggered: "source_hash_or_registry_binding_drift"
+    - branch_id: "FB-05"
+      triggered: false
+      result_if_triggered: "rt003_rt007_or_frozen_route_replay"
+    - branch_id: "FB-06"
+      triggered: false
+      result_if_triggered: "target_desired_output_or_empirical_import"
+    - branch_id: "FB-07"
+      triggered: false
+      result_if_triggered: "source_law_or_ontology_adoption_overreach"
+    - branch_id: "FB-08"
+      triggered: false
+      result_if_triggered: "connectedness_or_open_embedding_scope_error"
+    - branch_id: "FB-09"
+      triggered: false
+      result_if_triggered: "restriction_closure_misreported_as_descent_closure"
+    - branch_id: "FB-10"
+      triggered: false
+      result_if_triggered: "formal_measure_overread_as_physical_probability_or_occurrence"
+    - branch_id: "FB-11"
+      triggered: false
+      result_if_triggered: "untyped_p4_codomain_or_factorization_claim"
+    - branch_id: "FB-12"
+      triggered: false
+      result_if_triggered: "selected_successor_executed_or_authority_expanded"
+
+source_purity_and_provenance:
+  current_source_reduct: "Topology, smooth structure, connected-component decomposition, and open embeddings already present in the typed smooth source manifold."
+  construction_factors_through_current_source_reduct: true
+  same_reduct_opposite_label_rule_preserved: true
+  new_source_law_root_constructed: false
+  new_source_law_root_adopted: false
+  target_atlas_imported: false
+  target_metric_imported: false
+  desired_cone_imported: false
+  empirical_response_imported: false
+  outcome_label_imported: false
+  benchmark_answer_imported: false
+  token_realization_imported: false
+  provenance_conclusion: "Clop, E, component unions, and inverse-image restrictions are definable from current source topology. No map from these formal carrier objects to physical occurrence, empirical response, P4 relevance, or target geometry is supplied."
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+  - "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+
+distance_to_gr_status:
+  - burden: "Source ontology primitives"
+    status: "no_delta"
+  - burden: "Source equivalence EqSrc"
+    status: "no_delta"
+  - burden: "RetainH"
+    status: "no_delta"
+  - burden: "GenH"
+    status: "no_delta"
+  - burden: "ObsLoc_lc"
+    status: "no_delta"
+  - burden: "Resp_lc"
+    status: "no_delta"
+  - burden: "M_src"
+    status: "no_delta"
+  - burden: "g_eff"
+    status: "no_delta"
+  - burden: "matter coupling"
+    status: "no_delta"
+  - burden: "Einstein equations"
+    status: "no_delta"
+  - burden: "finite-variation robustness"
+    status: "no_delta"
+  - burden: "benchmark promotion"
+    status: "no_delta"
+  - burden: "Gate Chair status"
+    status: "no_delta"
+  - burden: "current route freeze or hard-fail status"
+    status: "no_delta"
+
+downstream_locks:
+  d7_adequacy_reevaluated: false
+  d7_adequacy_established: false
+  b2_activated: false
+  b2_rejected: false
+  b2_disposed: false
+  b2_viability_or_sufficiency_established: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_unlocked: false
+  p4_t03_executed: false
+  g_eff_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  downstream_unlocked: []
+
+authority_limits:
+  selection_only: true
+  general_prop_or_f_prop_constructed: false
+  occurrence_law_constructed: false
+  source_law_derived: false
+  source_law_adopted: false
+  source_extension_adopted: false
+  canonical_ontology_modified: false
+  eqsrc_assigned: false
+  phi_src_typed_or_interpreted: false
+  proposal_semantics_assigned: false
+  physical_event_semantics_assigned: false
+  physical_probability_assigned: false
+  realized_occurrence_selected: false
+  empirical_response_semantics_assigned: false
+  p4_relevance_map_constructed: false
+  target_geometry_imported: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  g_eff_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  benchmark_authority: false
+  gate_chair_authority: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+  completed_derivation_claimed: false
+
+conflict_resolution_revision:
+  round: 1
+  revision_kind: "substantive_successor_convergence_preserving_mathematical_contribution"
+  reviewed_peer_path: "research_control/tasks/RT-20260815-009/artifacts/child_phys_phil_p4_t02_b2_post_canonical_open_carrier_selector.yaml"
+  reviewed_peer_sha256: "04ca912859f7c9305b629e5c5248c23b71a4b87e1354db18bd548b2d4c05e468"
+  reviewed_role_contract_lines: "67-85"
+  prior_selected_route_id: "A_OPEN_CARRIER_ADMISSIBILITY_KERNEL_REFUTER_STRESS"
+  prior_selected_packet_id: "PKT-V22-P4T02-B2-OPEN-CARRIER-ADMISSIBILITY-KERNEL-REFUTER-STRESS-V1"
+  revised_selected_route_id: "B_PROPOSAL_ONLY_MEASURABLE_FIBER_OCCURRENCE_LAW_EXTENSION"
+  revised_selected_packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-EXTENSION-V1"
+  convergence_status: "converged_route_B"
+  route_b_present_availability: "RT003 identifies a derivation-critical missing source-side proposal and occurrence law; the selector role explicitly permits an ontology_law_research_packet when that trigger holds; a future Ontology Formalizer can construct and test the root as proposal-only source-extension data with adoption blocked. Packet availability requires a well-typed future construction contract, not prior existence or canonical adoption of the law."
+  precise_nonblocker: "The new primitive is not presently formed, but forming it under disclosed proposal-only status is the authorized work of the selected future packet and therefore is not a formation blocker at selector time."
+  mandatory_constructive_preference_application: "Route B constructs the first missing dependency. Route A supplies exact diagnostic classification and refutation controls but does not itself construct that missing proposal-law root."
+  route_a_preservation: "NMP-RT009-PM-001 through NMP-RT009-PM-004 remain unchanged and the exact Route A packet is deferred as the immediate post-candidate Refuter."
+  predecessor_science_changed: false
+  authority_expanded: false
+  selected_packet_executed: false
+  blocking_conflict: false
+  unresolved_conflict_count: 0
+
+conflict_risk_note:
+  blocking_conflict_count: 0
+  anticipated_parent_synthesis_conflict_count: 0
+  prior_successor_identity_conflict_resolved: true
+  science_conflict: false
+  predecessor_result_conflict: false
+  authority_conflict: false
+  resolution_required_from_parent: "none_for_child_successor_identity_after_round_1_convergence"
+  live_hash_drift_risk: "Concurrent parent synchronization can change active control, registry, or peer-child bytes after this child closes; any such change requires a hash-only rebind before parent acceptance and does not authorize a science edit."
+
+child_result:
+  result_type: "theoretical_packet_selection"
+  result: "select_route_B_proposal_only_measurable_fiber_occurrence_law_extension"
+  selection_count: 1
+  selected_packet_id: "PKT-V22-P4T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-EXTENSION-V1"
+  selected_packet_type: "ontology_law_research_packet"
+  selected_route_label: "ontology-law-research-packet"
+  selected_next_role: "ontology-formalizer@0.2.0"
+  selected_status: "selected_not_executed"
+  selected_packet_executed: false
+  trigger_classification: "derivation_critical_missing_source_law"
+  adoption_status: "blocked_adoption_open_continuation"
+  exact_scope: "Independent Physicist-Mathematician child analysis and conflict-resolution round 1 for AJ-RT-20260815-009-001 only."
+  blocking_conflict: false

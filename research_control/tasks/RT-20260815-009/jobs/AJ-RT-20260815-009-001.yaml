@@ -1,0 +1,450 @@
+job_id: "AJ-RT-20260815-009-001"
+task_id: "RT-20260815-009"
+decision_id: "DDR-20260815-009"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260815-009"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-16T05:34:15Z"
+started_at: "2026-08-16T05:34:15Z"
+completed_at: "2026-08-16T06:15:00Z"
+completion_path: "research_control/tasks/RT-20260815-009/jobs/completions/AJC-AJ-RT-20260815-009-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active full-V22 goal, committed cumulative checkpoint 5a49277037c456b8726d61b7d7f43ef601813a0c, and handoff-1042 authorize exactly one P4-T02 theoretical selector and one checkpoint. The selected future packet and every downstream scientific or external action remain separate and unauthorized."
+objective: "Compare exactly four post-canonical-Open-carrier-theorem continuations, preserve the exact RT003 scoped obstruction and all eight active freezes, and select exactly one materially distinct future packet and next role without executing it."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Choose one materially distinct same-milestone continuation after the canonical current-topology Open-carrier theorem."
+route_label: "ordinary-research-packet"
+route_reason: "handoff_1042_selects_one_fresh_theoretical_continuation_selector_after_committed_recovery_checkpoint"
+route_strategy_id: "select_v22_p4_t02_b2_post_canonical_open_carrier_continuation_v1"
+immutable_route_sha256: "245aaf6a49645af321691fb49a3b0975f58ff53bdcfdc099463cfee94a6ad3d7"
+source_head: "5a49277037c456b8726d61b7d7f43ef601813a0c"
+source_tree: "c54b8f84f2089e46e279faa851c1814cf0cb6210"
+assembly_parent_head: "5a49277037c456b8726d61b7d7f43ef601813a0c"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+recommendation_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R10"
+  - "V22-R13"
+declared_coverage_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R13"
+  - "S5"
+sequence_step_ids:
+  - "S5"
+cross_cutting_directive_ids:
+  - "V22-X02"
+  - "V22-X04"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P4-T02"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1042"
+  source_handoff_path: "research_control/handoffs/handoff-1042.yaml"
+  source_handoff_sha256: "245aaf6a49645af321691fb49a3b0975f58ff53bdcfdc099463cfee94a6ad3d7"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite:
+    task_id: "RT-20260815-008"
+    recovery_task_id: "RT-20260815-008"
+    commit: "5a49277037c456b8726d61b7d7f43ef601813a0c"
+    committed: true
+  immutable_handoff_checkpoint_note: "Handoff-1042 was emitted before checkpoint and remains immutable; commit 5a49277037c456b8726d61b7d7f43ef601813a0c contains the complete RT008 identity-recovery transaction and satisfies the selector prerequisite."
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1252
+    relationship_row_count: 6435
+    semantic_row_count: 1252
+    vault_row_count: 1252
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22 --json"
+      query_type: "lookup"
+      query_text: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      returned_object_ids:
+        - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-V22-P4-T02-B2-PARENT-FUSION-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-V22-P4-T02-B2-PARENT-FUSION-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+      returned_object_ids:
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260815-007/artifacts/parent_fusion_notes_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.md"
+      source_hash: "9e45c407be92b8d4b66303b5ed8cd4043453f09b303227ac35de74f1feb62604"
+    - object_id: "TEX-V22-P4-T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_v1.tex"
+      source_hash: "ce0d1b5ba842fb019928cabeffec127416c1205642bdadf1a536dea610cab1e5"
+  additional_control_inspections:
+    - object_id: "HANDOFF-1042"
+      control_path: "research_control/handoffs/handoff-1042.yaml"
+      source_hash: "245aaf6a49645af321691fb49a3b0975f58ff53bdcfdc099463cfee94a6ad3d7"
+    - object_id: "RT-20260815-007-COMPLETION"
+      control_path: "research_control/tasks/RT-20260815-007/jobs/completions/AJC-AJ-RT-20260815-007-001.yaml"
+      source_hash: "b8d51235c26430b9db31be24357d73c8a40288be1b5018bb2d02c7938622c4e6"
+    - object_id: "RT-20260815-008-COMPLETION"
+      control_path: "research_control/tasks/RT-20260815-008/jobs/completions/AJC-AJ-RT-20260815-008-001.yaml"
+      source_hash: "a94e4d0b96c7a4116db11d6f6e70139232ed68e38a1983759bc25671b7920736"
+  authority_note: "Tracked registered sources and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  assumption_delta:
+    - "Hold the complete RT003 typing/provenance obstruction, its five conditional theorem schemas, and the RT007 canonical Open-carrier theorem fixed."
+    - "Preserve all eight local freezes and prohibit reconstruction, repair, audit, or stress replay of every frozen route."
+    - "Compare exactly four routes: Open-carrier admissibility/kernel Refuter stress; proposal-only measurable-fiber occurrence-law extension; a materially distinct P4-relevance or irrelevance theorem if independently typed; and protected human-gated ontology stop."
+    - "Require constructive preference, material distinctness, source-only provenance, an explicit route-dependency consequence, and a separately executable next-role contract."
+    - "Import no target atlas, target metric, empirical response semantics, desired cone, benchmark answer, or protected status."
+  materiality_basis: "RT007 has formed the canonical Open carrier and proved its exact limits. The unresolved decision is now whether to stress the remaining admissibility/kernel layers, construct a transparent proposal-only law, prove a genuinely distinct P4-relevance result, or stop at protected authority."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "V22-P4-T02-B2-POST-CANONICAL-OPEN-CARRIER-PACKET-SELECTION-001"
+    not_already_encoded_evidence: "Handoff-1042 selects the selector packet but no successor route. RT007's children recommend different successors and the parent deliberately defers their comparison."
+    route_candidates:
+      - route_id: "A_OPEN_CARRIER_ADMISSIBILITY_KERNEL_REFUTER_STRESS"
+        packet_type: "source_side_irrelevance_theorem"
+        next_role_family: "refuter@0.2.0"
+      - route_id: "B_PROPOSAL_ONLY_MEASURABLE_FIBER_OCCURRENCE_LAW_EXTENSION"
+        packet_type: "ontology_law_research_packet"
+        next_role_family: "ontology-formalizer@0.2.0"
+      - route_id: "C_DISTINCT_OPEN_CARRIER_P4_RELEVANCE_IRRELEVANCE_THEOREM"
+        packet_type: "source_side_irrelevance_theorem"
+        next_role_family: "refuter@0.2.0"
+      - route_id: "D_PROTECTED_HUMAN_GATED_ONTOLOGY_CHANGE_REQUIRED"
+        packet_type: "human_gated_ontology_change_required"
+        next_role_family: "human_gate"
+    selection_status: "pending_two_child_synthesis"
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P4-T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+    - "MD-V22-P4-T02-B2-PARENT-FUSION-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+    - "research_control/handoffs/handoff-1042.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_route_selection_v1.tex"
+    - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_selector_decision_v1.yaml"
+    - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_route_comparison_v1.yaml"
+    - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_selected_future_packet_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+    - "latex_compile_pass"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+selector_mathematical_payload_contract:
+  required: true
+  candidate_payloads:
+    - payload_id: "PAYLOAD-A-ADMISSIBILITY-SUBFUNCTOR-DECISION"
+      statement: "A Refuter packet has decision value only if it classifies a new proper invariant admissibility-subfunctor class or proves a scoped source-side irrelevance result beyond RT007's empty-or-total natural-section theorem."
+      required_precision: "State the subfunctor domain, variance, restriction/descent closure, invariant group, and exact novelty relative to RT007."
+    - payload_id: "PAYLOAD-B-KERNEL-SOURCE-LAW-DEPENDENCY"
+      statement: "The RT007 continuum of normalized binary formal kernels makes carrier-only kernel selection nonunique; a constructive successor must therefore disclose a genuinely new source-law root rather than relabel normalization as occurrence."
+      required_precision: "Preserve formal-kernel nonselection as a fixed predecessor result and distinguish it from physical probability or realized occurrence."
+    - payload_id: "PAYLOAD-C-ROUTE-FACTOR-DISCRIMINANT"
+      statement: "A distinct irrelevance route is admissible only if it types a source-derived P4-relevant codomain and proves a new factorization or nonfactorization theorem; otherwise it is a replay of carrier nonselection."
+      required_precision: "Name the codomain, map, fibers, theorem hypotheses, and roadmap consequence or mark the route unavailable."
+    - payload_id: "PAYLOAD-D-HUMAN-GATE-NECESSITY-CRITERION"
+      statement: "A protected stop is justified only after all three non-promotional routes require canonical ontology adoption or an equivalent protected authority expansion."
+      required_precision: "Missing local data, difficult calculations, or proposal-only primitives do not by themselves trigger the gate."
+  minimum_payload_count: 1
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "select_v22_p4_t02_b2_post_canonical_open_carrier_continuation_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  family_identity_sha256: "16817d3d1fb608b1fc8e9cf53064e06c5cb0c3b796ad82a22cd3b6d63a381778"
+  assumption_sha256es:
+    - "245aaf6a49645af321691fb49a3b0975f58ff53bdcfdc099463cfee94a6ad3d7"
+    - "b8d51235c26430b9db31be24357d73c8a40288be1b5018bb2d02c7938622c4e6"
+    - "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+  route_kind: "theorem_investigation"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+    - "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V22-P4-T02-B2-POST-CANONICAL-OPEN-CARRIER-THEORETICAL-CONTINUATION-SELECTION"
+    material_difference_basis: "The selector neither reconstructs the now-proved Open carrier nor reopens a frozen route; it decides among a new admissibility/kernel stress, a transparent proposal-only law, an independently typed P4-relevance theorem, and a protected stop."
+    reconstructs_frozen_candidate: false
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered draft/control four-route selector manuscript with Open-carrier admissibility, kernel, source-law, and P4-relevance route discriminants"
+      - "one exact route decision and one selected unexecuted future packet"
+    project_system:
+      - "task-local exact model, focused validator, compact receipt, LaTeX receipt, provenance, parent-child synthesis, and standard synchronization"
+  acceptance_criteria:
+    physics:
+      - "exactly four materially distinct routes are compared and exactly one future packet is selected but not executed"
+      - "the RT003 obstruction, RT007 theorem, five conditional theorem schemas, and all eight freezes remain fixed"
+      - "all fourteen Distance-to-GR rows remain literal no-delta"
+    project_system:
+      - "source hashes, artifacts, registries, backlog, program state, and handoff pass deterministic validation"
+      - "the registered TeX source compiles and every rendered page passes visual inspection"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the RT003 obstruction, RT007 theorem, five conditional theorem schemas, eight freezes, plan, and source hashes fixed"
+      - "compare exactly four lawful routes and select exactly one"
+      - "enforce constructive preference, material distinctness, and a clear roadmap consequence"
+      - "separate carrier classification, source law, occurrence, P4 relevance, physical meaning, empirical semantics, adoption, and workflow authority"
+      - "review child outputs for conflicts and fuse one exact unexecuted packet decision"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260815-009/artifacts/child_phys_math_p4_t02_b2_post_canonical_open_carrier_selector.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260815-009/artifacts/child_phys_phil_p4_t02_b2_post_canonical_open_carrier_selector.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260815-009/artifacts/parent_conflict_review_p4_t02_b2_post_canonical_open_carrier_selector.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260815-009/artifacts/parent_fusion_notes_p4_t02_b2_post_canonical_open_carrier_selector.md"
+    fused_output_path: "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_route_selection_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+  rationale: "Two internal child execution units work in parallel under one outer AgentJob, one selector overlay, one claim boundary, and one completion record."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-1042.yaml"
+  - "research_control/handoffs/handoff-1042.md"
+  - "research_control/tasks/RT-20260815-003/**"
+  - "research_control/tasks/RT-20260815-007/**"
+  - "research_control/tasks/RT-20260815-008/**"
+  - "registries/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-1043.yaml"
+  - "research_control/handoffs/handoff-1043.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260815-009/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - ".local/**"
+forbidden_paths:
+  - "ontology/**"
+  - "papers/**"
+  - "manuscripts/**"
+  - "experiments/**"
+  - ".git/**"
+allowed_source_classes:
+  - "registered_tex"
+  - "registered_markdown"
+  - "tracked_control_state"
+  - "task_local_draft_control"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "generated_artifact_as_independent_authority"
+  - "target_answer_import"
+  - "empirical_response_assumption"
+  - "candidate_reconstruction"
+  - "completed_derivation_claim"
+  - "gate_chair_verdict"
+  - "generated_derivative_authority"
+  - "global_theory_rejection"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_route_selection_v1.tex"
+  - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_route_comparison_v1.yaml"
+  - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_selector_decision_v1.yaml"
+  - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_selected_future_packet_v1.yaml"
+  - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_selector_model.py"
+  - "research_control/tasks/RT-20260815-009/artifacts/child_phys_math_p4_t02_b2_post_canonical_open_carrier_selector.yaml"
+  - "research_control/tasks/RT-20260815-009/artifacts/child_phys_phil_p4_t02_b2_post_canonical_open_carrier_selector.yaml"
+  - "research_control/tasks/RT-20260815-009/artifacts/parent_conflict_review_p4_t02_b2_post_canonical_open_carrier_selector.yaml"
+  - "research_control/tasks/RT-20260815-009/artifacts/parent_fusion_notes_p4_t02_b2_post_canonical_open_carrier_selector.md"
+  - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_selector_provenance_manifest_v1.yaml"
+  - "research_control/tasks/RT-20260815-009/artifacts/validate_v22_p4_t02_b2_post_canonical_open_carrier_selector.py"
+  - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_selector_validation.json"
+  - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_selector_compact_receipt.json"
+  - "research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_selector_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260815-009/jobs/completions/AJC-AJ-RT-20260815-009-001.yaml"
+  - "research_control/handoffs/handoff-1043.yaml"
+  - "research_control/handoffs/handoff-1043.md"
+  - "research_control/program_state.yaml"
+
+required_validators:
+  - "strict_yaml_parse"
+  - "task_local_selector_validator"
+  - "latex_compile"
+  - "rendered_page_visual_review"
+  - "research_control_diff"
+  - "memory_core"
+  - "documentation_impact"
+  - "git_diff_check"
+checkpoint_required: true
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260815-009-001 --planner-validation"
+checkpoint_invocation_limit: 1
+selected_future_packet_execution_authorized: false
+stop_conditions:
+  - "a route would replay or repair a frozen candidate"
+  - "the selector would stipulate or adopt the missing carrier or occurrence law"
+  - "a route would import target geometry, empirical response, desired P4 result, or protected authority"
+  - "the children retain an unresolved blocking conflict after two rounds"
+  - "validation fails"
+  - "a required write path is outside this allowlist"
+  - "the selected future packet would be executed in this job"
+notes: "Exactly one outer AgentJob is active. The two child artifacts are internal perspectives, not AgentJobs or authority expansions; the selected future packet remains unexecuted."

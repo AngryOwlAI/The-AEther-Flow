@@ -160,6 +160,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-V1` `research_control/tasks/RT-20260810-014/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POPULATED-INSTANCE-AUDIT-V1` `research_control/tasks/RT-20260809-026/artifacts/parent_fusion_notes_p4_t02_b2_populated_instance_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-BOUNDED-CURRENT-SIGNATURE-CENSUS-SELECTION-V1` `research_control/tasks/RT-20260812-001/artifacts/parent_fusion_notes_p4_t02_b2_post_bounded_current_signature_census_selector.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-POST-CANONICAL-OPEN-CARRIER-SELECTOR-V1` `research_control/tasks/RT-20260815-009/artifacts/parent_fusion_notes_p4_t02_b2_post_canonical_open_carrier_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-COMMON-CHARACTER-SELECTOR-V1` `research_control/tasks/RT-20260810-013/artifacts/parent_fusion_notes_p4_t02_b2_post_common_character_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-CURRENT-SOURCE-KSTAR-THEOREM-SELECTOR-V1` `research_control/tasks/RT-20260814-003/artifacts/parent_fusion_notes_p4_t02_b2_post_current_source_k_star_theorem_selector.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-POST-FINITE-BRIDGE-PROVENANCE-OBSTRUCTION-SELECTOR-V1` `research_control/tasks/RT-20260814-001/artifacts/parent_fusion_notes_p4_t02_b2_post_finite_bridge_provenance_obstruction_selector.md`
@@ -651,6 +652,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P4-T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1` `research_control/tasks/RT-20260810-014/artifacts/v22_p4_t02_b2_oriented_matroid_covector_circuit_bridge_v1.tex`
 - `TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260809-026/artifacts/v22_p4_t02_b2_populated_instance_smuggling_audit_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-BOUNDED-CURRENT-SIGNATURE-CENSUS-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260812-001/artifacts/v22_p4_t02_b2_post_bounded_current_signature_census_route_selection_v1.tex`
+- `TEX-V22-P4-T02-B2-POST-CANONICAL-OPEN-CARRIER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260815-009/artifacts/v22_p4_t02_b2_post_canonical_open_carrier_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-COMMON-CHARACTER-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260810-013/artifacts/v22_p4_t02_b2_post_common_character_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-CURRENT-SOURCE-KSTAR-THEOREM-ROUTE-SELECTION-V1` `research_control/tasks/RT-20260814-003/artifacts/v22_p4_t02_b2_post_current_source_k_star_theorem_route_selection_v1.tex`
 - `TEX-V22-P4-T02-B2-POST-FINITE-BRIDGE-PROVENANCE-OBSTRUCTION-THEORETICAL-SELECTION-V1` `research_control/tasks/RT-20260814-001/artifacts/v22_p4_t02_b2_post_finite_bridge_provenance_obstruction_route_selection_v1.tex`
@@ -1461,6 +1463,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-oriented-matroid-bridge-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POPULATED-INSTANCE-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-populated-instance-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-BOUNDED-CURRENT-SIGNATURE-CENSUS-SELECTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-bounded-current-signature-census-selection-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-CANONICAL-OPEN-CARRIER-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-canonical-open-carrier-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-COMMON-CHARACTER-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-common-character-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-CURRENT-SOURCE-KSTAR-THEOREM-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-current-source-kstar-theorem-selector-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-POST-FINITE-BRIDGE-PROVENANCE-OBSTRUCTION-SELECTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-post-finite-bridge-provenance-obstruction-selector-v1.md`
@@ -1985,6 +1988,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P4-T02-B2-ORIENTED-MATROID-COVECTOR-CIRCUIT-BRIDGE-V1` `wiki/tex/tex-v22-p4-t02-b2-oriented-matroid-covector-circuit-bridge-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POPULATED-INSTANCE-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-populated-instance-smuggling-audit-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-BOUNDED-CURRENT-SIGNATURE-CENSUS-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-bounded-current-signature-census-route-selection-v1.md`
+- `WIKI-TEX-V22-P4-T02-B2-POST-CANONICAL-OPEN-CARRIER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-canonical-open-carrier-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-COMMON-CHARACTER-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-common-character-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-CURRENT-SOURCE-KSTAR-THEOREM-ROUTE-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-current-source-kstar-theorem-route-selection-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-POST-FINITE-BRIDGE-PROVENANCE-OBSTRUCTION-THEORETICAL-SELECTION-V1` `wiki/tex/tex-v22-p4-t02-b2-post-finite-bridge-provenance-obstruction-theoretical-selection-v1.md`
