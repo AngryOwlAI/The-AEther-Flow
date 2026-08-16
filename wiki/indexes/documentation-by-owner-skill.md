@@ -212,6 +212,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-CONSTRUCTION-V1` `research_control/tasks/RT-20260809-023/artifacts/parent_fusion_notes_p4_t02_b2_descriptor_construction.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `research_control/tasks/RT-20260809-021/artifacts/parent_fusion_notes_p4_t02_b2_descriptor.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-V1` `research_control/tasks/RT-20260812-002/artifacts/parent_fusion_notes_p4_t02_b2_finite_typed_presentation_admission_bridge_witness.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-IDEMPOTENT-EQUATION-DECORATION-COMBINED-EXTENSION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260816-011/artifacts/parent_fusion_notes_p4_t02_b2_idempotent_equation_decoration_combined_extension_smuggling_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-V1` `research_control/tasks/RT-20260814-004/artifacts/parent_fusion_notes_p4_t02_b2_kstar_localization_bridge_irrelevance.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW-V1` `research_control/tasks/RT-20260816-009/artifacts/parent_fusion_notes_p4_t02_b2_minimal_proposal_only_combined_occurrence_extension_law.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-017/artifacts/parent_fusion_notes_p4_t02_b2_oriented_matroid_bridge_general_rank_post_repair_smuggling_audit.md`
@@ -950,6 +951,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-CONSTRUCTION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-construction-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-DESCRIPTOR-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-descriptor-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-FINITE-TYPED-PRESENTATION-ADMISSION-BRIDGE-WITNESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-finite-typed-presentation-admission-bridge-witness-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-IDEMPOTENT-EQUATION-DECORATION-COMBINED-EXTENSION-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-idempotent-equation-decoration-combined-extension-smuggling-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-KSTAR-LOCALIZATION-BRIDGE-IRRELEVANCE-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-kstar-localization-bridge-irrelevance-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-MINIMAL-PROPOSAL-ONLY-COMBINED-OCCURRENCE-EXTENSION-LAW-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-minimal-proposal-only-combined-occurrence-extension-law-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-ORIENTED-MATROID-BRIDGE-GENERAL-RANK-POST-REPAIR-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-oriented-matroid-bridge-general-rank-post-repair-smuggling-audit-v1.md`
