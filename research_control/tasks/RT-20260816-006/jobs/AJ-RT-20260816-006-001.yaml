@@ -1,0 +1,456 @@
+job_id: "AJ-RT-20260816-006-001"
+task_id: "RT-20260816-006"
+decision_id: "DDR-20260816-006"
+role_id: "theoretical-continuation-selector"
+role_version: "0.1.0"
+execution_role_ref: "theoretical-continuation-selector@0.1.0--RT-20260816-006"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-16T13:30:38Z"
+started_at: "2026-08-16T13:30:38Z"
+completed_at: "2026-08-16T15:55:00Z"
+completion_path: "research_control/tasks/RT-20260816-006/jobs/completions/AJC-AJ-RT-20260816-006-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active full-V22 goal, committed checkpoint 67ff8b43859f66327ef07019f65193d3e5e38eab, and handoff-1048 authorize exactly one P4-T02 theoretical selector and one checkpoint. The selected future packet and every downstream scientific or external action remain separate and unauthorized."
+objective: "Compare exactly four post-measurable-fiber-occurrence-law-Refuter continuations, preserve the exact RT005 scoped obstruction and all nine active freezes, and select exactly one materially distinct future packet and next role without executing it."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Choose one materially distinct same-milestone continuation after the occurrence-law robust-selection and embeddability obstruction."
+route_label: "ordinary-research-packet"
+route_reason: "handoff_1048_selects_one_fresh_theoretical_continuation_selector_after_committed_rt005_checkpoint"
+route_strategy_id: "select_v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_continuation_v1"
+immutable_route_sha256: "808abd98b9a73510c44aa3472f0ded7c4e0a435b7b1418813281e16d0e66e146"
+source_head: "67ff8b43859f66327ef07019f65193d3e5e38eab"
+source_tree: "e0c607e75c68f5c374400182d57465e58412d1b6"
+assembly_parent_head: "67ff8b43859f66327ef07019f65193d3e5e38eab"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+recommendation_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R10"
+  - "V22-R13"
+declared_coverage_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R13"
+  - "S5"
+sequence_step_ids:
+  - "S5"
+cross_cutting_directive_ids:
+  - "V22-X02"
+  - "V22-X04"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P4-T02"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1048"
+  source_handoff_path: "research_control/handoffs/handoff-1048.yaml"
+  source_handoff_sha256: "808abd98b9a73510c44aa3472f0ded7c4e0a435b7b1418813281e16d0e66e146"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite:
+    task_id: "RT-20260816-005"
+    commit: "67ff8b43859f66327ef07019f65193d3e5e38eab"
+    tree: "e0c607e75c68f5c374400182d57465e58412d1b6"
+    committed: true
+  immutable_handoff_checkpoint_note: "Handoff-1048 was emitted before checkpoint and remains immutable; commit 67ff8b43859f66327ef07019f65193d3e5e38eab contains the complete RT005 transaction and satisfies the selector prerequisite."
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1260
+    relationship_row_count: 6483
+    semantic_row_count: 1260
+    vault_row_count: 1260
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search \"POST MEASURABLE FIBER OCCURRENCE LAW REFUTER THEORETICAL CONTINUATION SELECTION\" --limit 10 --json"
+      query_type: "search"
+      query_text: "POST MEASURABLE FIBER OCCURRENCE LAW REFUTER THEORETICAL CONTINUATION SELECTION"
+      returned_object_ids:
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-STRESS-V1"
+        - "TEX-V22-P4-T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-STRESS-V1"
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py lookup MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-STRESS-V1 --json"
+      query_type: "lookup"
+      query_text: "MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-STRESS-V1"
+      returned_object_ids:
+        - "MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-STRESS-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-STRESS-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260816-005/artifacts/parent_fusion_notes_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress.md"
+      source_hash: "d735ed55e003a92dd9bc23d6cccf81c3da83bd419d1c4ff7327def93680819f4"
+    - object_id: "TEX-V22-P4-T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-STRESS-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260816-005/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_v1.tex"
+      source_hash: "8390082cdd049a193b66d17fc39610828dbab3af912bccc1ba5d5c4315e827ed"
+  additional_control_inspections:
+    - object_id: "HANDOFF-1048"
+      control_path: "research_control/handoffs/handoff-1048.yaml"
+      source_hash: "808abd98b9a73510c44aa3472f0ded7c4e0a435b7b1418813281e16d0e66e146"
+    - object_id: "RT-20260816-005-COMPLETION"
+      control_path: "research_control/tasks/RT-20260816-005/jobs/completions/AJC-AJ-RT-20260816-005-001.yaml"
+      source_hash: "5d0c023fd98d2c6c58f3f6ce9c30fac7bc6ceaafe35ff824c888874efb67b45d"
+    - object_id: "RT-20260816-005-VALIDATION"
+      control_path: "research_control/tasks/RT-20260816-005/artifacts/v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress_validation.json"
+      source_hash: "26c2fb15e36ee560cf29acb4b4064dbe92a2803c6d55e15b4636f99f8c49053c"
+  authority_note: "Tracked registered sources and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "route_decision"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  assumption_delta:
+    - "Hold the complete RT005 scoped obstruction, all correct predecessor mathematics, and the narrow RT003 source-purity verdict fixed."
+    - "Preserve all nine local freezes and prohibit reconstruction, repair, audit, or stress replay of every frozen route."
+    - "Compare exactly four routes: current-source occurrence/admissibility relevance-factorization audit; source-side P4 irrelevance or scoped no-go theorem; richer audited Resp_lc bridge class; and protected human-gated ontology stop."
+    - "Require constructive preference, material distinctness, source-only provenance, an explicit route-dependency consequence, and a separately executable next-role contract."
+    - "Import no target atlas, target metric, empirical response semantics, desired cone, benchmark answer, or protected status."
+  materiality_basis: "RT005 has shown that the transparent formal occurrence-law candidate supplies no robustly isolated natural coupling, selected parameter, occurrence realization, or clock. The unresolved decision is whether a current-source relevance audit, a genuinely new irrelevance theorem, a distinct bridge class, or protected stop is now the honest next packet."
+  payload_details:
+    resolves_new_route_decision: true
+    decision_identity: "V22-P4-T02-B2-POST-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-PACKET-SELECTION-001"
+    not_already_encoded_evidence: "Handoff-1048 selects the selector packet but no successor route. The previous selector predated construction, audit, and Refuter stress of the measurable-fiber occurrence-law candidate."
+    route_candidates:
+      - route_id: "A_CURRENT_SOURCE_OCCURRENCE_ADMISSIBILITY_RELEVANCE_FACTORIZATION_AUDIT"
+        packet_type: "bounded_theoretical_calculation"
+        next_role_family: "ontology-formalizer@0.2.0"
+      - route_id: "B_OCCURRENCE_LAW_P4_IRRELEVANCE_OR_SCOPED_NO_GO_THEOREM"
+        packet_type: "source_side_irrelevance_theorem"
+        next_role_family: "refuter@0.2.0"
+      - route_id: "C_RICHER_AUDITED_RESP_LC_BRIDGE_CLASS"
+        packet_type: "source_extension_candidate"
+        next_role_family: "candidate-constructor@0.2.0"
+      - route_id: "D_PROTECTED_HUMAN_GATED_ONTOLOGY_CHANGE_REQUIRED"
+        packet_type: "human_gated_ontology_change_required"
+        next_role_family: "human_gate"
+    selection_status: "pending_two_child_synthesis"
+  source_basis:
+    - "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+    - "TEX-V22-P4-T02-B2-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-STRESS-V1"
+    - "MD-V22-P4-T02-B2-PARENT-FUSION-PROPOSAL-ONLY-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-STRESS-V1"
+    - "research_control/handoffs/handoff-1048.yaml"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_route_selection_v1.tex"
+    - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector_decision_v1.yaml"
+    - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_route_comparison_v1.yaml"
+    - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selected_future_packet_v1.yaml"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+    - "latex_compile_pass"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+selector_mathematical_payload_contract:
+  required: true
+  candidate_payloads:
+    - payload_id: "PAYLOAD-A-CURRENT-SOURCE-RELEVANCE-FACTORIZATION"
+      statement: "For a forgetful or reduct map U:X->D and a proposed P4-relevance map R:X->Y, a factor R=f after U exists exactly when R is constant on every U-fibre; uniqueness on all of D additionally requires U to be surjective."
+      required_precision: "Type X, D, Y, U, R, the current-source provenance of Y and R, and distinguish existence on im(U) from uniqueness on D."
+    - payload_id: "PAYLOAD-B-IRRELEVANCE-DECISION-GATE"
+      statement: "Nonselection, nonidentifiability, or many source extensions do not by themselves prove P4 irrelevance; a valid irrelevance theorem needs an independently typed P4-relevant codomain and factor/nonfactor theorem with a roadmap consequence."
+      required_precision: "Name the codomain, map, fibres, theorem hypotheses, novelty relative to RT005, and exact scoped consequence or mark the route unavailable."
+    - payload_id: "PAYLOAD-C-BRIDGE-MATERIAL-DISTINCTNESS"
+      statement: "A richer bridge route is admissible only if its carrier, maps, covariance, response semantics, and failure modes are independent of every frozen tau, quotient, character, oriented-matroid, signed-cubic, robust-invariance, K-star, projective-conormal, and measurable-occurrence encoding."
+      required_precision: "State a falsifiable construction-or-precise-obstruction contract and reject mere renaming or target-shaped preload."
+    - payload_id: "PAYLOAD-D-HUMAN-GATE-NECESSITY-CRITERION"
+      statement: "A protected stop is justified only after all three non-promotional routes require canonical ontology adoption or equivalent protected authority."
+      required_precision: "Missing local data, difficult calculations, or proposal-only bounded constructions do not by themselves trigger the gate."
+  minimum_payload_count: 1
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "select_v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_continuation_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  family_identity_sha256: "16817d3d1fb608b1fc8e9cf53064e06c5cb0c3b796ad82a22cd3b6d63a381778"
+  assumption_sha256es:
+    - "808abd98b9a73510c44aa3472f0ded7c4e0a435b7b1418813281e16d0e66e146"
+    - "5d0c023fd98d2c6c58f3f6ce9c30fac7bc6ceaafe35ff824c888874efb67b45d"
+    - "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - "26c2fb15e36ee560cf29acb4b4064dbe92a2803c6d55e15b4636f99f8c49053c"
+  route_kind: "theorem_investigation"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+    - "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+    - "NDCL-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY"
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V22-P4-T02-B2-POST-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-THEORETICAL-CONTINUATION-SELECTION"
+    material_difference_basis: "The selector neither repairs the occurrence law nor reopens a frozen route; it decides among a current-source factorization audit, a typed irrelevance theorem, a materially distinct bridge class, and protected stop."
+    reconstructs_frozen_candidate: false
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered draft/control four-route selector manuscript with factorization, irrelevance, bridge-materiality, and human-gate discriminants"
+      - "one exact route decision and one selected unexecuted future packet"
+    project_system:
+      - "task-local exact model, focused validator, compact receipt, LaTeX receipt, provenance, parent-child synthesis, and standard synchronization"
+  acceptance_criteria:
+    physics:
+      - "exactly four materially distinct routes are compared and exactly one future packet is selected but not executed"
+      - "the RT005 scoped obstruction, correct conditional mathematics, and all nine freezes remain fixed"
+      - "all fourteen Distance-to-GR rows remain literal no-delta"
+    project_system:
+      - "source hashes, artifacts, registries, backlog, program state, and handoff pass deterministic validation"
+      - "the registered TeX source compiles and every rendered page passes visual inspection"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "hold the RT005 scoped obstruction, correct predecessor mathematics, nine freezes, plan, and source hashes fixed"
+      - "compare exactly four lawful routes and select exactly one"
+      - "enforce constructive preference, material distinctness, and a clear roadmap consequence"
+      - "separate source typing, occurrence, P4 relevance, response bridge, physical meaning, empirical semantics, adoption, and workflow authority"
+      - "review child outputs for conflicts and fuse one exact unexecuted packet decision"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260816-006/artifacts/child_phys_math_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector.yaml"
+      status: "pending"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260816-006/artifacts/child_phys_phil_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector.yaml"
+      status: "pending"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260816-006/artifacts/parent_conflict_review_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260816-006/artifacts/parent_fusion_notes_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector.md"
+    fused_output_path: "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_route_selection_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+  rationale: "Two internal child execution units work in parallel under one outer AgentJob, one selector overlay, one claim boundary, and one completion record."
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+  - ".agents/roles/physics/refuter.v0.2.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/roles/physics/candidate-constructor.v0.2.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "research_control/design/**"
+  - "research_control/program_state.yaml"
+  - "research_control/handoffs/handoff-1048.yaml"
+  - "research_control/handoffs/handoff-1048.md"
+  - "research_control/tasks/RT-20260815-003/**"
+  - "research_control/tasks/RT-20260815-007/**"
+  - "research_control/tasks/RT-20260815-009/**"
+  - "research_control/tasks/RT-20260816-001/**"
+  - "research_control/tasks/RT-20260816-003/**"
+  - "research_control/tasks/RT-20260816-005/**"
+  - "registries/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-1049.yaml"
+  - "research_control/handoffs/handoff-1049.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260816-006/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+allowed_generated_paths:
+  - ".local/**"
+forbidden_paths:
+  - "ontology/**"
+  - "papers/**"
+  - "manuscripts/**"
+  - "experiments/**"
+  - ".git/**"
+allowed_source_classes:
+  - "registered_tex"
+  - "registered_markdown"
+  - "tracked_control_state"
+  - "task_local_draft_control"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "generated_artifact_as_independent_authority"
+  - "target_answer_import"
+  - "empirical_response_assumption"
+  - "candidate_reconstruction"
+  - "completed_derivation_claim"
+  - "gate_chair_verdict"
+  - "generated_derivative_authority"
+  - "global_theory_rejection"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_route_selection_v1.tex"
+  - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_route_comparison_v1.yaml"
+  - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector_decision_v1.yaml"
+  - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selected_future_packet_v1.yaml"
+  - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector_model.py"
+  - "research_control/tasks/RT-20260816-006/artifacts/child_phys_math_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector.yaml"
+  - "research_control/tasks/RT-20260816-006/artifacts/child_phys_phil_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector.yaml"
+  - "research_control/tasks/RT-20260816-006/artifacts/parent_conflict_review_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector.yaml"
+  - "research_control/tasks/RT-20260816-006/artifacts/parent_fusion_notes_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector.md"
+  - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector_provenance_manifest_v1.yaml"
+  - "research_control/tasks/RT-20260816-006/artifacts/validate_v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector.py"
+  - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector_validation.json"
+  - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector_compact_receipt.json"
+  - "research_control/tasks/RT-20260816-006/artifacts/v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selector_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260816-006/jobs/completions/AJC-AJ-RT-20260816-006-001.yaml"
+  - "research_control/handoffs/handoff-1049.yaml"
+  - "research_control/handoffs/handoff-1049.md"
+  - "research_control/program_state.yaml"
+
+required_validators:
+  - "strict_yaml_parse"
+  - "task_local_selector_validator"
+  - "latex_compile"
+  - "rendered_page_visual_review"
+  - "research_control_diff"
+  - "memory_core"
+  - "documentation_impact"
+  - "git_diff_check"
+checkpoint_required: true
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260816-006-001 --planner-validation"
+checkpoint_invocation_limit: 1
+selected_future_packet_execution_authorized: false
+stop_conditions:
+  - "a route would replay repair or reinterpret a frozen candidate"
+  - "the selector would stipulate or adopt the missing P4 codomain occurrence law or Resp_lc bridge"
+  - "a route would import target geometry empirical response desired P4 result or protected authority"
+  - "the children retain an unresolved blocking conflict after two rounds"
+  - "validation fails"
+  - "a required write path is outside this allowlist"
+  - "the selected future packet would be executed in this job"
+notes: "Exactly one outer AgentJob is active. The two child artifacts are internal perspectives, not AgentJobs or authority expansions; the selected future packet remains unexecuted."

@@ -1,0 +1,232 @@
+schema_id: "v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_selected_future_packet_v1"
+status: "selected_not_executed"
+authority: "science_draft"
+task_id: "RT-20260816-006"
+job_id: "AJ-RT-20260816-006-001"
+decision_id: "DDR-20260816-006"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+
+packet:
+  packet_id: "PKT-V22-P4T02-B2-CURRENT-SOURCE-OCCURRENCE-ADMISSIBILITY-P4-RELEVANCE-FACTORIZATION-AUDIT-V1"
+  packet_type: "bounded_theoretical_calculation"
+  route_id: "A_CURRENT_SOURCE_OCCURRENCE_ADMISSIBILITY_RELEVANCE_FACTORIZATION_AUDIT"
+  route_label: "ordinary-research-packet"
+  next_role_family: "ontology-formalizer@0.2.0"
+  selected_packet_executed: false
+  requires_human_gate: false
+  human_gate_reason: ""
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Determine whether the disclosed occurrence/admissibility extension degrees have any current-source-typed dependence on the registered P4-T01 principal data before claiming irrelevance or adding another bridge."
+  objective: "Construct or precisely obstruct the current-source dependency diagram X --U--> D_source and X --R--> Y_PS, where Y_PS is the registered P4-T01 determinant-line principal-data codomain. Prove or refute fibre constancy, factorization on im(U), global uniqueness conditions, source-arrow naturality, and the conservative-versus-operator-changing boundary without importing target geometry or executing any downstream theorem or bridge."
+
+result_contract:
+  exact_one_result_required: true
+  permitted_result_types:
+    - "current_source_occurrence_p4_factorization_theorem"
+    - "current_source_occurrence_p4_nonfactorization_witness"
+    - "current_source_combined_extension_typing_or_provenance_obstruction"
+    - "operator_dependence_or_reduction_change_obstruction"
+  result_must_name_first_failed_primitive_if_obstructed: true
+  result_must_bind_registered_p4_t01_codomain: true
+  result_must_distinguish_factorization_on_image_from_global_uniqueness: true
+  result_must_include_same_reduct_countercontrol: true
+  result_must_include_operator_change_falsifier: true
+  result_must_preserve_nine_freezes: true
+  result_must_include_fourteen_no_delta_rows: true
+  source_extension_or_ontology_adoption_authorized: false
+  p4_irrelevance_theorem_authorized_by_packet_selection: false
+  response_bridge_construction_authorized_by_packet_selection: false
+
+formal_domains:
+  - domain_id: "DOM-01-SRC-LAW-CUR"
+    definition: "The current registered source-law presentations carrying backgrounds, linearized operators, constraint and gauge data, and lawful reduced principal data."
+  - domain_id: "DOM-02-OCC-EXT-CAND"
+    definition: "Candidate occurrence/admissibility expansions whose current-source typing and provenance are to be established or precisely obstructed."
+  - domain_id: "DOM-03-CONSERVATIVE-OCC-SUBCATEGORY"
+    definition: "The declared subcategory holding source equations, background, highest-derivative coefficients, constraints, gauge generators, and reduced quotient fixed."
+  - domain_id: "DOM-04-OPERATOR-CHANGING-CONTROLS"
+    definition: "Countercontrols in which occurrence-associated data changes principal coefficients or the lawful reduction and therefore is not conservative."
+  - domain_id: "DOM-05-P4-PRINCIPAL-DATA"
+    definition: "The determinant-line principal-symbol and principal-polynomial data registered by P4-T01, without physical-cone or metric interpretation."
+  - domain_id: "DOM-06-U-FIBRES"
+    definition: "Fibres of the forgetful map U over current source-law presentations."
+  - domain_id: "DOM-07-IMAGE-U"
+    definition: "The essential image of U, on which a fibre-constant relevance map may have a canonical factor."
+  - domain_id: "DOM-08-FULL-REDUCT-CODOMAIN"
+    definition: "The full proposed reduct codomain D, including objects not necessarily reached by U."
+  - domain_id: "DOM-09-SOURCE-ARROW-GROUPOID"
+    definition: "Current source presentation isomorphisms and declared extension arrows for naturality checks."
+  - domain_id: "DOM-10-FAILURE-CERTIFICATES"
+    definition: "Typed first-failure records for missing carriers, maps, provenance, fibre constancy, naturality, or conservative-boundary coherence."
+
+formal_objects:
+  - object_id: "OBJ-01-D"
+    name: "Current source-law presentation D"
+  - object_id: "OBJ-02-X"
+    name: "Combined occurrence/admissibility extension object X"
+  - object_id: "OBJ-03-U"
+    name: "Forgetful source-law reduct U"
+  - object_id: "OBJ-04-Y-PS"
+    name: "Registered P4-T01 determinant-line principal-data codomain Y_PS"
+  - object_id: "OBJ-05-R"
+    name: "P4 relevance map R from extensions to principal data"
+  - object_id: "OBJ-06-F"
+    name: "Candidate factor f on im(U)"
+  - object_id: "OBJ-07-FIBRE"
+    name: "One U-fibre with distinct occurrence/admissibility roots"
+  - object_id: "OBJ-08-SIGMA"
+    name: "Reduced source principal symbol sigma_L"
+  - object_id: "OBJ-09-P"
+    name: "Reduced source principal polynomial P_D"
+  - object_id: "OBJ-10-NAT"
+    name: "Source-arrow naturality square"
+  - object_id: "OBJ-11-AUDIT-RESULT"
+    name: "Exclusive theorem, witness, or precise-obstruction result"
+
+formal_maps:
+  - map_id: "MAP-01-U"
+    signature: "U:X->D_source"
+    purpose: "Forget occurrence/admissibility extension data while retaining the source-law presentation."
+  - map_id: "MAP-02-PRIN"
+    signature: "Prin:D_source->Y_PS"
+    purpose: "Send a lawful reduced source operator to its determinant-line principal data."
+  - map_id: "MAP-03-R"
+    signature: "R:X->Y_PS"
+    purpose: "The P4 relevance map whose factorization is audited rather than assumed."
+  - map_id: "MAP-04-FACTOR"
+    signature: "f:im(U)->Y_PS"
+    purpose: "Candidate factor defined by f(U(x))=R(x) when fibre constancy holds."
+  - map_id: "MAP-05-FIBRE-INCLUSION"
+    signature: "i_d:U^{-1}(d)->X"
+    purpose: "Expose exact same-reduct variation controls."
+  - map_id: "MAP-06-SOURCE-TRANSPORT"
+    signature: "T_g:D->D'"
+    purpose: "Transport source-law presentations under admitted current-source arrows."
+  - map_id: "MAP-07-EXTENSION-TRANSPORT"
+    signature: "E_g:X_D->X_D'"
+    purpose: "Transport extension objects without output-relative arrow deletion."
+  - map_id: "MAP-08-PRINCIPAL-TRANSPORT"
+    signature: "Y_g:Y_PS(D)->Y_PS(D')"
+    purpose: "Express determinant-line covariance of the registered principal data."
+  - map_id: "MAP-09-OPERATOR-PERTURBATION"
+    signature: "delta_L:L_D->L_D'"
+    purpose: "Falsifier control that changes principal coefficients or reduction data."
+  - map_id: "MAP-10-RESULT"
+    signature: "Audit(X,U,R)->Result"
+    purpose: "Return exactly one theorem, witness, or precise obstruction with roadmap consequence."
+
+theorem_targets:
+  - theorem_id: "THM-01-FIBRE-FACTORIZATION"
+    statement: "R factors through U on im(U) if and only if R is constant on every U-fibre."
+  - theorem_id: "THM-02-FACTOR-UNIQUENESS"
+    statement: "The factor is unique on im(U); uniqueness on all of D requires surjectivity or independently fixed off-image data."
+  - theorem_id: "THM-03-CONSERVATIVE-PRINCIPAL-CONSTANCY"
+    statement: "Within the declared conservative subcategory, P4-T01 principal data depends only on the fixed reduced highest-derivative operator and is constant across occurrence/admissibility roots."
+  - theorem_id: "THM-04-OPERATOR-DEPENDENCE-FALSIFIER"
+    statement: "A change to highest-derivative coefficients, constraints, gauge generators, or the reduced quotient is a source-law/reduction change, not an occurrence-only conservative variation."
+  - theorem_id: "THM-05-NONSELECTION-NONIMPLICATION"
+    statement: "Multiplicity or nonselection of occurrence roots alone implies neither P4 factorization nor nonfactorization."
+  - theorem_id: "THM-06-NATURALITY"
+    statement: "Any factorization result descends through all declared current-source arrows without deleting arrows by desired output."
+
+proof_obligations:
+  - obligation_id: "PO-01"
+    requirement: "Bind the registered current source-law and P4-T01 principal-data sources by exact hash."
+  - obligation_id: "PO-02"
+    requirement: "Type the combined extension category X or identify the first missing current-source carrier."
+  - obligation_id: "PO-03"
+    requirement: "Define U independently of the desired factorization verdict."
+  - obligation_id: "PO-04"
+    requirement: "Type Y_PS as determinant-line source-principal data and prohibit physical-cone or metric overread."
+  - obligation_id: "PO-05"
+    requirement: "Define R from source-law dependence rather than from desired P4 irrelevance."
+  - obligation_id: "PO-06"
+    requirement: "State the complete conservative-extension hypothesis, including coefficients, constraints, gauge, and quotient."
+  - obligation_id: "PO-07"
+    requirement: "Prove or refute fibre constancy with an exact same-reduct family."
+  - obligation_id: "PO-08"
+    requirement: "Construct the factor on im(U) only when well-definedness is proved."
+  - obligation_id: "PO-09"
+    requirement: "State surjectivity or off-image data before claiming global factor uniqueness."
+  - obligation_id: "PO-10"
+    requirement: "Prove source-arrow naturality for U, R, and the factor without output-relative arrow restriction."
+  - obligation_id: "PO-11"
+    requirement: "Include an exact operator-changing countercontrol and classify it outside the conservative fibre."
+  - obligation_id: "PO-12"
+    requirement: "Show that occurrence nonselection alone is not used as a proof of P4 irrelevance."
+  - obligation_id: "PO-13"
+    requirement: "Audit target import, desired-cone preload, and target-shaped codomain risk."
+  - obligation_id: "PO-14"
+    requirement: "Demonstrate material distinctness from all nine frozen routes."
+  - obligation_id: "PO-15"
+    requirement: "Return the first precise typing/provenance obstruction if X, U, or R is unavailable."
+  - obligation_id: "PO-16"
+    requirement: "State one exact roadmap consequence without executing Route B, Route C, adoption, or P4-T03."
+
+failure_branches:
+  - branch_id: "FB-01"
+    trigger: "No current-source type exists for the combined occurrence/admissibility extension category X."
+  - branch_id: "FB-02"
+    trigger: "The forgetful map U is stipulated but not typed or source-provenanced."
+  - branch_id: "FB-03"
+    trigger: "The P4 codomain is replaced by a target metric, desired cone, or physical response answer."
+  - branch_id: "FB-04"
+    trigger: "The relevance map R is selected by the desired factorization or irrelevance verdict."
+  - branch_id: "FB-05"
+    trigger: "Occurrence data enters a highest-derivative coefficient inside a purported conservative fibre."
+  - branch_id: "FB-06"
+    trigger: "Occurrence data changes the constraint space or constraint propagation."
+  - branch_id: "FB-07"
+    trigger: "Occurrence data changes gauge generators, redundancies, or the reduced quotient."
+  - branch_id: "FB-08"
+    trigger: "R is not constant on a U-fibre."
+  - branch_id: "FB-09"
+    trigger: "A factor on im(U) is promoted to a unique factor on all of D without surjectivity or off-image data."
+  - branch_id: "FB-10"
+    trigger: "Naturality is obtained by deleting arrows that do not preserve the desired output."
+  - branch_id: "FB-11"
+    trigger: "The audit merely renames a frozen tau, quotient, character, oriented-matroid, signed-cubic, robust-invariance, K-star, conormal, or measurable-occurrence encoding."
+  - branch_id: "FB-12"
+    trigger: "Occurrence-root multiplicity is treated as proof of P4 irrelevance without a typed R."
+  - branch_id: "FB-13"
+    trigger: "The theorem or witness lacks an exact proof/falsifier control."
+  - branch_id: "FB-14"
+    trigger: "The result has no bounded roadmap consequence."
+  - branch_id: "FB-15"
+    trigger: "The packet adopts a source law, response bridge, ontology change, physical interpretation, or downstream Gate status."
+
+preserved_freeze_labels:
+  - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+  - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+  - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+  - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+  - "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+  - "NDCL-V22-P4T02-B2-MEASURABLE-FIBER-OCCURRENCE-LAW-ROBUST-SELECTION-EMBEDDABILITY"
+
+authority_limits:
+  selected_packet_executed: false
+  theorem_truth_inferred: false
+  combined_extension_category_constructed: false
+  p4_relevance_map_constructed: false
+  occurrence_p4_irrelevance_theorem_proved: false
+  source_extension_constructed: false
+  response_bridge_constructed: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  physical_response_assigned: false
+  physical_probability_assigned: false
+  realized_occurrence_assigned: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false

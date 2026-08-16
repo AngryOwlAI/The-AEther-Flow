@@ -2,7 +2,7 @@
 
 Generated navigation support only. This index is not task authority, physics proof authority, benchmark authority, Gate Chair authority, or completed-derivation evidence.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-16T12:03:37Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"761afa621680ee41e3dec30709a90fbbbf5a2545","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"ec0829373552aaf02790bc6d7b5d6d348f7db52d97408c9f89283368c111fffa"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"9a1ee213f196c761871ee286f498824a416c38f7e0166fa3f4d78056b6a73e5d"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"eb2d68c6ad3b314b6c6fddb3fd385f025dcbb19caa684123ad2f7be84d15bc16"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"7f76a490760f71ea38572f4e6da6abdbc35d09cb11866929c6098485c63bc547","source_path_count":"5230","task_count":"1309"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-16T13:30:38Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"research_task_index","schema_id":"generated_report_provenance_v1","source_commit":"67ff8b43859f66327ef07019f65193d3e5e38eab","source_hashes":[{"path":"registries/AGENT_JOB_REGISTRY.csv","sha256":"d66367bc8e3f1f332bd90dacdfb4b1754bb6861384531cefffca388d1d01f9fc"},{"path":"registries/AGENT_ROLE_REGISTRY.csv","sha256":"847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824"},{"path":"registries/DIRECTOR_DECISION_REGISTRY.csv","sha256":"10ebfb046fc0b44ad579e1ff387dfc51406f3720a4066a9be7f38426c43406fb"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"6a58611299eed16edaeb45bf9192ec53c538597182f6e54620c8d9be04031ce6"},{"path":"research_control/design/task_index_schema_v2.md","sha256":"4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f"},{"path":"research_control/design/v21_recommendation_backlog.yaml","sha256":"849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f"},{"path":"research_control/design/v21_task_taxonomy_policy.md","sha256":"7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_task_index.py","sha256":"90f32ea7732aa5e4957fdb4501e0a660b41cc70c796a00f9fb4b059a4e6e999e"}],"source_manifest_sha256":"44f98125d54d18cdce4fd6c059f8381c36a865aa155d5f8a025f4cf06ea53460","source_path_count":"5234","task_count":"1310"} -->
 
 ## Generated-Report Provenance
 
@@ -11,21 +11,21 @@ Generated navigation support only. This index is not task authority, physics pro
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `research_task_index` |
-| Source commit | `761afa621680ee41e3dec30709a90fbbbf5a2545` |
-| Source-derived generation time | `2026-08-16T12:03:37Z` |
-| Tracked task count | 1309 |
-| Exact source-path count | 5230 |
-| Source manifest SHA-256 | `7f76a490760f71ea38572f4e6da6abdbc35d09cb11866929c6098485c63bc547` |
+| Source commit | `67ff8b43859f66327ef07019f65193d3e5e38eab` |
+| Source-derived generation time | `2026-08-16T13:30:38Z` |
+| Tracked task count | 1310 |
+| Exact source-path count | 5234 |
+| Source manifest SHA-256 | `44f98125d54d18cdce4fd6c059f8381c36a865aa155d5f8a025f4cf06ea53460` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
 
 Exact primary source hashes:
 
-- `registries/AGENT_JOB_REGISTRY.csv`: `ec0829373552aaf02790bc6d7b5d6d348f7db52d97408c9f89283368c111fffa`
+- `registries/AGENT_JOB_REGISTRY.csv`: `d66367bc8e3f1f332bd90dacdfb4b1754bb6861384531cefffca388d1d01f9fc`
 - `registries/AGENT_ROLE_REGISTRY.csv`: `847b13d539b640ed2ad5de7463703ca050d3f5b272b72c26da637f24e4619824`
-- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `9a1ee213f196c761871ee286f498824a416c38f7e0166fa3f4d78056b6a73e5d`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `eb2d68c6ad3b314b6c6fddb3fd385f025dcbb19caa684123ad2f7be84d15bc16`
+- `registries/DIRECTOR_DECISION_REGISTRY.csv`: `10ebfb046fc0b44ad579e1ff387dfc51406f3720a4066a9be7f38426c43406fb`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `6a58611299eed16edaeb45bf9192ec53c538597182f6e54620c8d9be04031ce6`
 - `research_control/design/task_index_schema_v2.md`: `4bc422ddf7b13318c82d093d896748d289ac38ad4608ddd9e89068d00302125f`
 - `research_control/design/v21_recommendation_backlog.yaml`: `849a4e8dfe848e80bc0c8236252b924e636e5c95ac1a090478a69f7f5377559f`
 - `research_control/design/v21_task_taxonomy_policy.md`: `7460702270a26079f39f64ced2b5934e6a67a721983d913e4d3d114917ecca0b`
@@ -41,9 +41,9 @@ or claim-promotion authority.
 
 - Schema: `research_control_task_index_v2`
 - Schema source: `research_control/design/task_index_schema_v2.md`
-- Source fingerprint: `984436d5986bb9ee0dc9f691edcc38dc76a02cabbd32aaac6010f9a5ca66b008`
-- Generated-at source timestamp: `2026-08-16T12:03:37Z`
-- Row count: `1309`
+- Source fingerprint: `b1425f6e334ced62f47abfa277edc8d6009ae95b9f86913d82398842b30d151a`
+- Generated-at source timestamp: `2026-08-16T13:30:38Z`
+- Row count: `1310`
 - Issue count: `297`
 - CSV output: `research_control/tasks/TASK_INDEX.csv`
 
@@ -51,6 +51,7 @@ or claim-promotion authority.
 
 |task_id|parent_task_id|created_at|closed_at|title|task_type|work_kind|milestone|candidate_family|result_kind|authority|scope|taxonomy_source|taxonomy_confidence|status|target_derivation_milestone|milestone_burden|role_family|physics_delta|ledger_rows_changed|artifact_count|next_recommended_action|validation_status|completion_path|
 |---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|RT-20260816-006|RT-20260816-005|2026-08-16T13:30:38Z|2026-08-16T15:55:00Z|Select one materially distinct P4-T02 continuation after the measurable-fiber occurrence-law obstruction|v22_p4_t02_b2_post_measurable_fiber_occurrence_law_refuter_theoretical_continuation_selector|integration_or_selection|effective_metric_g_eff|v22_b2_matter_principal_polynomial|completed_or_precisely_blocked|science_draft|scientific|explicit|high|completed|effective_metric_g_eff|Choose one materially distinct continuation after the formal occurrence-law candidate failed to provide robust natural occurrence, coupling, parameter, or clock-selection force.|theoretical-continuation-selector@0.1.0|false|false|15||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260816-006/jobs/completions/AJC-AJ-RT-20260816-006-001.yaml|
 |RT-20260816-005|RT-20260816-004|2026-08-16T12:03:37Z|2026-08-16T12:23:36Z|Stress the proposal-only measurable-fiber occurrence law for robust occurrence and clock selection|v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_refuter_stress|audit_or_review|effective_metric_g_eff|v22_b2_matter_principal_polynomial|theorem_or_precise_obstruction|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Stress whether the formal occurrence-law candidate has any robust natural coupling, parameter, stationary occurrence, or clock selection force before P4-T02 credit.|refuter@0.2.0|false|false|12|After exactly one governed checkpoint, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-MEASURABLE-FIBER-OCCURRENCE-LAW-REFUTER-THEORETICAL-CONTINUATION-SELECTION-V1 to select one materially distinct source-derived occurrence or admissibility theorem, source-side irrelevance or scoped no-go theorem, richer audited bridge class, or protected human-gated ontology stop without replaying any active freeze.|PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260816-005/jobs/completions/AJC-AJ-RT-20260816-005-001.yaml|
 |RT-20260816-004|RT-20260816-003|2026-08-16T11:10:13Z|2026-08-16T11:10:13Z|Restore RT003 AgentJob, execution-role, and registry write-allowlist parity|project_system_v22_p4_t02_rt003_allowlist_parity_checkpoint_recovery|benchmark_or_recovery|not_applicable|rt003_agentjob_execution_role_allowlist_parity|completed_or_precisely_blocked|project_control|project_system|explicit|high|completed|none|Project-system ordered allowlist identity recovery only; no derivation milestone advances.|process-integrity-auditor@0.1.0|false|false|2|Invoke one fresh governed checkpoint for AJ-RT-20260816-004-001. Only after it commits may one separately admitted Refuter stress execute.|PASS_PRECHECKPOINT_RECOVERY_READY|research_control/tasks/RT-20260816-004/jobs/completions/AJC-AJ-RT-20260816-004-001.yaml|
 |RT-20260816-003|RT-20260816-002|2026-08-16T10:04:52Z|2026-08-16T10:30:00Z|Audit the proposal-only measurable-fiber occurrence law for hidden target or authority imports|v22_p4_t02_b2_proposal_only_measurable_fiber_occurrence_law_smuggling_audit|audit_or_review|effective_metric_g_eff|v22_b2_matter_principal_polynomial|audit_verdict_or_precise_repair|science_draft|scientific_audit|explicit|high|completed|effective_metric_g_eff|Audit whether the proposal-only measurable-fiber carrier, admissibility, complement, parameter, shared coupling, and occurrence language import or preload the missing source law before any adoption or P4 credit.|smuggling-auditor@0.2.0|false|false|13||PASS_PRECHECKPOINT_STAGING_REQUIRED|research_control/tasks/RT-20260816-003/jobs/completions/AJC-AJ-RT-20260816-003-001.yaml|
