@@ -1,0 +1,951 @@
+schema_id: "child_phys_math_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_v1"
+artifact_id: "CHILD-PHYS-MATH-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-001"
+artifact_type: "parent_child_synthesis_child_output"
+authority: "science_draft"
+status: "complete_for_parent_synthesis"
+status_label: "draft/control"
+task_id: "RT-20260815-007"
+job_id: "AJ-RT-20260815-007-001"
+decision_id: "DDR-20260815-007"
+execution_unit_id: "child_phys_math"
+perspective: "physicist_mathematician"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260815-007"
+claim_boundary_id: "CB-V22-P4-T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-001"
+executed_packet_id: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+created_at: "2026-08-16T02:53:54Z"
+source_head: "74a084524287d6cfc6e27570d45931d36b7bd55f"
+source_tree: "97663fbe03eb9b6a2daa16ee3fe5ff1e3fd23560"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Determine whether current smooth topology supplies a definitional proposal-carrier precursor while keeping admissibility, occurrence generation, and every physical interpretation underived."
+route_label: "ordinary-research-packet"
+trigger_classification: "ordinary_gap_theoretical_calculation_under_current_topology"
+
+ownership_boundary:
+  owned_path: "research_control/tasks/RT-20260815-007/artifacts/child_phys_math_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+  files_written_count: 1
+  other_files_modified: false
+  peer_child_file_inspected: false
+  parent_artifact_modified: false
+  parent_model_modified: false
+  task_or_job_modified: false
+  role_overlay_modified: false
+  registry_modified: false
+  handoff_modified: false
+  completion_created: false
+  program_state_modified: false
+  generated_output_modified: false
+  successor_executed: false
+  child_agentjob_created: false
+  parent_validator_run: false
+  parent_checkpoint_run: false
+  bootstrap_or_memory_sync_run: false
+  commit_or_push_executed: false
+
+execution_controls:
+  outer_agentjob_count: 1
+  internal_child_count: 2
+  child_agentjob_count: 0
+  exclusive_result_count: 1
+  permitted_result_type_used: true
+  formal_domain_count: 10
+  formal_object_count: 12
+  formal_map_count: 10
+  theorem_target_count: 5
+  proof_obligation_count: 14
+  failure_branch_count: 12
+  exact_control_count: 6
+  rt003_requirement_comparison_count: 14
+  inherited_conditional_theorem_count: 5
+  inherited_freeze_count: 8
+  distance_to_gr_row_count: 14
+  literal_no_delta_row_count: 14
+  recommended_successor_count: 1
+  recommended_successor_executed: false
+  current_topology_only: true
+  target_or_empirical_import_used: false
+  frozen_route_reconstructed_repaired_audited_stressed_or_replayed: false
+  general_prop_or_f_prop_constructed: false
+  occurrence_or_admissibility_generator_constructed: false
+  physical_probability_or_realized_event_assigned: false
+  source_law_or_ontology_adopted: false
+  d7_reevaluated: false
+  b2_activated_or_disposed: false
+  p4_t03_unlocked_or_executed: false
+  distance_to_gr_changed: false
+  physics_promotion_authorized: false
+  global_no_go_claimed: false
+  future_extension_impossibility_claimed: false
+
+source_binding:
+  binding_note: "Terminal RT007 tracked control records, the selected packet, registered RT003 science drafts, and canonical foundations and dynamics govern. The task-local parent model is read-only corroborating control evidence and is not independent scientific authority."
+  hash_algorithm: "sha256"
+  governing_source_count: 19
+  governing_sources:
+    - path: "SOUL.md"
+      sha256: "4991c1d84009bff7f39750a72ab648dafe491f5783b5cf927cd0c7d6bb8daa4b"
+      authority: "control"
+    - path: "AGENTS.md"
+      sha256: "3a987a7ae1fb0bc4f91dbcbe0e1432eeecacf7febc1256e8498860016f4baf29"
+      authority: "control"
+    - path: "research_control/AGENTS.md"
+      sha256: "c93e14bb2cc6e7bbc5c299085f8843ca84d714cdaef99b2b78a46715b5b310ae"
+      authority: "control"
+    - path: "research_control/tasks/RT-20260815-007/00_TASK.yaml"
+      sha256: "86071ed9137bda90dc6bd798cba542dd69eda90811707584fe7a2f3cfc09559f"
+      authority: "tracked_control_state_terminal"
+    - path: "research_control/tasks/RT-20260815-007/DDR-20260815-007.md"
+      sha256: "945e8d33a7204f4959e8d076ed7ce145d876c25b23d27946a1095c9c609961f5"
+      authority: "tracked_control_state_terminal"
+    - path: "research_control/tasks/RT-20260815-007/jobs/AJ-RT-20260815-007-001.yaml"
+      sha256: "85e8147a7f36a0cb3ccf75466cff35ed33fe2280ce461ce3b807053c793262cc"
+      authority: "tracked_control_state_terminal"
+    - path: "research_control/tasks/RT-20260815-007/roles/ontology-formalizer@0.2.0--RT-20260815-007.yaml"
+      sha256: "c6c985187bf984d91dcc53d7b0e28a82eaaecb46b673d69718b26b01a7e8f32d"
+      authority: "execution_role_expired_terminal"
+    - path: ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+      sha256: "429a37d58f93c0693e3f704ba98edc00487d77b92008565acc295e7b20dc5a6c"
+      authority: "role_contract"
+    - path: "research_control/handoffs/handoff-1040.yaml"
+      sha256: "0804f5e6c6244260e06a46bc146505d74ed993fa229099318ab3aebc59ab9167"
+      authority: "tracked_control_state"
+    - path: "research_control/tasks/RT-20260815-006/artifacts/v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selected_future_packet_v1.yaml"
+      sha256: "ef49d08582c537eee64908f2109d581504c2bb94ac25e05fceb9cae5a8923930"
+      authority: "selected_packet_contract"
+    - path: "research_control/tasks/RT-20260815-003/artifacts/parent_fusion_notes_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel.md"
+      sha256: "54f91f607269d6bdf9f69cc30d7fbf2dcfb77bb1efe4d7c81fd335e92dddaa09"
+      authority: "registered_science_draft"
+    - path: "research_control/tasks/RT-20260815-003/artifacts/v22_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel_v1.tex"
+      sha256: "0853ee5a77184e6e7a82663b16c3339810bb48946a2421f8e796e5d9df7f7d14"
+      authority: "registered_science_draft"
+    - path: "ontology/tex/aether_flow_foundations.tex"
+      sha256: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+      authority: "canonical_ontology_read_only"
+    - path: "ontology/tex/aether_flow_dynamics.tex"
+      sha256: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+      authority: "canonical_ontology_read_only"
+    - path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      sha256: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+      authority: "registered_project_control"
+    - path: "research_control/design/gr_derivation_burden_map.md"
+      sha256: "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+      authority: "control"
+    - path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+      sha256: "562405dd78a03efde831806323081285c7850ee18dbeb2a6b6ecf900417c814c"
+      authority: "control"
+    - path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+      sha256: "a6240f011b29b8da37f84b22da157171629a63c168f002c16e50328ab5c6c789"
+      authority: "control_schema"
+    - path: "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_model.py"
+      sha256: "d1837ca9085d1eb2542a02dce68c2d1322e154271d7fd10983644a4250dc957d"
+      authority: "parent_control_read_only_not_independent_authority"
+
+fixed_hypotheses_and_conventions:
+  source_signature: "The current source supplies a nonempty smooth four-manifold with its topology and smooth structure as explicit primitive debt; Phi_src remains an unresolved nonsemantic marker."
+  source_target_separation: "The source manifold is not physical spacetime and no target atlas, target metric, desired cone, empirical response, benchmark answer, or physical event data is imported."
+  base_category: "C_Open has standard Hausdorff, second-countable, boundaryless, nonempty smooth four-manifolds as objects and smooth open embeddings as arrows. Declared nonempty open submanifolds are objects through their induced smooth structure."
+  boundary_convention: "Boundaryless is an explicit theorem hypothesis. If manifolds with boundary are admitted, the full-diffeomorphism natural-section clause must be restricted to each diffeomorphism orbit or replaced, because the interior is a proper invariant open."
+  carrier_empty_convention: "The empty subset is admitted as an element of Open(U) for every nonempty base object U, but the empty manifold need not be a base object."
+  cover_convention: "A cover is a jointly surjective family of open embeddings j_i:U_i->U; after identifying U_i with its open image, this is an ordinary open cover."
+  variance_convention: "Inverse image j^*:Open(U)->Open(V) is contravariant on all open embeddings. Direct image j_!:Open(V)->Open(U) is covariant for open embeddings and is inverse to j^* only for diffeomorphisms. The theorem claims the discrete fibration of the inverse-image presheaf, not a discrete bifibration over all noninvertible embeddings."
+  connected_section_convention: "The natural-section theorem is objectwise and componentwise on the groupoid of connected boundaryless sources and all diffeomorphisms. Different diffeomorphism classes may independently choose empty or total."
+  measurable_control_convention: "The powerset sigma algebra on Open(U) is introduced only for exact formal-kernel controls. It is not a canonical physical probability space or an adopted proposal measurable structure."
+
+exclusive_result:
+  result_type: "canonical_open_event_fibration_typing_descent_theorem"
+  result_count: 1
+  theorem_id: "V22-P4-T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-001"
+  result_status: "proved_child_audit_draft_control"
+  no_fog_check: true
+  no_fog_explanation: "Current smooth topology canonically defines the strict inverse-image presheaf U maps to Open(U), whose category of elements is a discrete fibration and whose compatible open-cover data glue uniquely. On connected boundaryless sources, full-diffeomorphism natural selections are objectwise empty or total. Distinct natural formal kernels on the same fixed carrier prove that carrier formation does not determine occurrence. This supplies one narrow definitional carrier precursor only; it does not construct RT003's general proposal pseudofunctor, proposal semantics, admissibility law, occurrence generator, or physical probability."
+  exact_scope: "Current-topology Open carrier typing, inverse-image restriction, discrete-fibration category of elements, open-cover descent, connected full-diffeomorphism section classification, formal-kernel nonselection, and typed RT003 comparison only."
+  narrow_carrier_precursor_constructed: true
+  general_prop_or_f_prop_constructed: false
+  occurrence_or_admissibility_law_constructed: false
+  physical_or_empirical_meaning_assigned: false
+  global_no_go: false
+
+composite_theorem:
+  theorem_name: "CanonicalSourceOpenCarrierTypingDescentAndNonselectionTheorem"
+  hypotheses:
+    - "C_Open is the declared category of standard boundaryless smooth four-manifolds and smooth open embeddings."
+    - "Open(U) is the frame of all topologically open subsets of U, including empty and total."
+    - "Covers are jointly surjective open-embedding families and compatibility is equality after pullback to every pairwise fiber product."
+    - "The natural-section classification is restricted to connected objects and naturality under every diffeomorphism."
+    - "Formal kernels use the powerset sigma algebra and inverse-image pushforward only as mathematical controls."
+    - "No open subset is assigned proposal, event, occurrence, probability, response, causal, temporal, geometric, or empirical semantics."
+  statement_clauses:
+    - clause_id: "CLAUSE-01"
+      statement: "Open:C_Open^op->Frm is a strict contravariant functor with Open(j)=j^{-1}."
+    - clause_id: "CLAUSE-02"
+      statement: "The category of elements IntegralOpen of the underlying Set-valued presheaf projects by pi_Open:IntegralOpen->C_Open as a discrete fibration."
+    - clause_id: "CLAUSE-03"
+      statement: "Open is a sheaf for the declared open-cover topology: compatible local opens glue uniquely by union of their open images."
+    - clause_id: "CLAUSE-04"
+      statement: "On each connected component of the groupoid of connected boundaryless source manifolds and diffeomorphisms, every natural open selection is fiberwise empty or total."
+    - clause_id: "CLAUSE-05"
+      statement: "For every lambda in [0,1], K_U^lambda=lambda delta_empty+(1-lambda)delta_U is a normalized inverse-image-natural formal kernel, and distinct lambda give distinct kernels on the same carrier."
+    - clause_id: "CLAUSE-06"
+      statement: "The Open construction satisfies only the narrow topology-carrier, transport, projection, restriction, and underlying-cover-descent part of the RT003 grammar; every proposal-semantic, discriminating-admissibility, occurrence-generator, realized-token, physical-probability, and kernel-descent claim remains absent."
+  proof:
+    - step_id: "PROOF-01"
+      derivation: "For any continuous open embedding j:V->U, inverse images of opens are open, j^{-1}(empty)=empty, j^{-1}(U)=V, and inverse image preserves arbitrary unions and finite intersections. Thus j^* is a frame homomorphism."
+    - step_id: "PROOF-02"
+      derivation: "Identity and composition follow from id_U^{-1}(O)=O and (j composed with k)^{-1}(O)=k^{-1}(j^{-1}(O)), so Open is strict contravariant."
+    - step_id: "PROOF-03"
+      derivation: "Objects of IntegralOpen are pairs (U,O). An arrow (V,O_V)->(U,O_U) over j exists exactly when O_V=j^{-1}(O_U). For each j and codomain pair there is exactly one lift (V,j^{-1}(O_U))->(U,O_U); the composition identity above proves its cartesian universal property."
+    - step_id: "PROOF-04"
+      derivation: "For a compatible cover, each image j_i(O_i) is open in U. Their union O is open. Fiber-product compatibility implies j_i^{-1}(O)=O_i. If O' has the same restrictions, joint surjectivity gives O'=union_i j_i(O_i)=O."
+    - step_id: "PROOF-05"
+      derivation: "A connected smooth manifold is path connected. Compactly supported coordinate-ball diffeomorphisms can be composed along a path from x to y, so Diff(M) acts transitively on points. A Diff(M)-invariant open containing one point contains every point; otherwise it is empty. Naturality transports the same alternative through each diffeomorphism-class component."
+    - step_id: "PROOF-06"
+      derivation: "For every open embedding j:V->U, j^{-1}(empty)=empty and j^{-1}(U)=V. Hence pushforward along j^* sends delta_empty to delta_empty and delta_U to delta_V, so it sends K_U^lambda to K_V^lambda. The mass of the singleton {empty} is lambda, making different lambda distinct."
+    - step_id: "PROOF-07"
+      derivation: "All constructors in PROOF-01 through PROOF-06 eliminate to topology, set operations, and typed source arrows. None defines a map from an open subset to a general RT003 proposal, an admissibility predicate, an occurrence generator, or a physical interpretation. The typed comparison therefore narrows but does not erase the RT003 obstruction."
+  principal_falsifier: "The composite result would be falsified by an admitted arrow on which inverse image fails functoriality, compatible open-cover data with no unique global open, a proper nonempty open invariant under the full diffeomorphism group of a connected boundaryless source, uniqueness of the formal kernel from carrier and naturality alone, or a target-free current-source construction of the missing RT003 proposal semantics and occurrence generator."
+  scope_falsifiers:
+    - "A connected manifold with nonempty boundary has a proper invariant interior; this falsifies any version of the section clause that omits the boundaryless hypothesis."
+    - "A marked point with only point-preserving diffeomorphisms makes M without {p} a proper invariant open; this falsifies any version that weakens full-diffeomorphism naturality without recording the symmetry-breaking datum."
+    - "On a disconnected manifold, unions of component orbits may be proper invariant opens; this falsifies any version that omits connectedness."
+    - "Direct image and inverse image are not mutually inverse for a proper open embedding; this falsifies any claim of a discrete bifibration of the discrete inverse-image category of elements over all open embeddings."
+
+formal_domains:
+  domain_count: 10
+  domains:
+    - domain_id: "DOM-01"
+      name: "SmoothOpenSrc4"
+      definition: "The category C_Open of nonempty boundaryless smooth four-manifolds and smooth open embeddings."
+    - domain_id: "DOM-02"
+      name: "OpenLattices"
+      definition: "The complete frames Open(U) of topological opens, including empty and total."
+    - domain_id: "DOM-03"
+      name: "OpenCovers"
+      definition: "Jointly surjective open-embedding families, their fiber-product overlaps, inverse-image restrictions, and compatibility equations."
+    - domain_id: "DOM-04"
+      name: "OpenGrothendieckCarrier"
+      definition: "The category of elements IntegralOpen of the inverse-image presheaf, with projection pi_Open."
+    - domain_id: "DOM-05"
+      name: "ConnectedObjects"
+      definition: "The groupoid of connected boundaryless source objects and all diffeomorphisms used only for the componentwise natural-section classification."
+    - domain_id: "DOM-06"
+      name: "RT003ProposalFiberSchema"
+      definition: "The fixed conditional proposal grammar, including Prop, U, transport, fiber actions, measurable structure, sections, admissibility, kernels, restriction, descent, occurrence, and provenance."
+    - domain_id: "DOM-07"
+      name: "FormalKernelControls"
+      definition: "Powerset-measurable Open fibers and the mathematical kernel family K^lambda with no physical probability meaning."
+    - domain_id: "DOM-08"
+      name: "TypeComparisonEvidence"
+      definition: "Fourteen exact requirement rows distinguishing narrow discharged carrier structure from absent RT003 proposal and occurrence structure."
+    - domain_id: "DOM-09"
+      name: "SourceProvenanceEvidence"
+      definition: "Eliminability to current topology and typed arrows, plus explicit target and outcome exclusion."
+    - domain_id: "DOM-10"
+      name: "ExclusiveResult"
+      definition: "Exactly one permitted theorem result, its proof, falsifiers, scope, and downstream locks."
+
+formal_objects:
+  object_count: 12
+  objects:
+    - object_id: "OBJ-01"
+      name: "OpenCarrier"
+      type: "U maps to Open(U)"
+      status: "constructed_as_narrow_definitional_carrier"
+    - object_id: "OBJ-02"
+      name: "InverseImageRestriction"
+      type: "j:V->U maps O to j^{-1}(O)"
+      status: "proved_strict_functorial"
+    - object_id: "OBJ-03"
+      name: "CompatibleOpenFamily"
+      type: "{O_i in Open(U_i)} with equality on every pullback overlap"
+      status: "typed"
+    - object_id: "OBJ-04"
+      name: "UniqueGlobalOpen"
+      type: "O in Open(U) restricting to every O_i"
+      status: "proved_exists_uniquely"
+    - object_id: "OBJ-05"
+      name: "OpenCarrierGrothendieckObject"
+      type: "pair (U,O) in IntegralOpen"
+      status: "typed_without_proposal_semantics"
+    - object_id: "OBJ-06"
+      name: "NaturalOpenSection"
+      type: "componentwise assignment s(M) in Open(M) natural under every diffeomorphism"
+      status: "classified_under_connected_boundaryless_hypotheses"
+    - object_id: "OBJ-07"
+      name: "TrivialSectionPair"
+      type: "empty and total alternatives on each diffeomorphism-class component"
+      status: "proved_exhaustive_componentwise"
+    - object_id: "OBJ-08"
+      name: "FormalKernelFamily"
+      type: "K^lambda=lambda delta_empty+(1-lambda)delta_total"
+      status: "constructed_as_nonselection_control_only"
+    - object_id: "OBJ-09"
+      name: "ProposalFiberComparison"
+      type: "fourteen-row typed comparison with the fixed RT003 grammar"
+      status: "completed"
+    - object_id: "OBJ-10"
+      name: "ProvenanceFactorization"
+      type: "constructor elimination to current topology and typed arrows"
+      status: "proved_for_carrier_only"
+    - object_id: "OBJ-11"
+      name: "NonsemanticBoundaryLedger"
+      type: "separation of open carriers, proposals, admissibility, occurrence, probability, response, and physical meaning"
+      status: "preserved"
+    - object_id: "OBJ-12"
+      name: "PacketResult"
+      type: "exclusive canonical_open_event_fibration_typing_descent_theorem"
+      status: "returned_once"
+
+formal_maps:
+  map_count: 10
+  maps:
+    - map_id: "MAP-01"
+      signature: "Open:C_Open^op->Frm"
+      purpose: "Assign the frame Open(U) contravariantly."
+      status: "proved"
+    - map_id: "MAP-02"
+      signature: "j^*:Open(U)->Open(V)"
+      purpose: "Restrict by inverse image along j:V->U."
+      status: "proved_frame_homomorphism"
+    - map_id: "MAP-03"
+      signature: "Glue:{compatible O_i}->Open(U)"
+      purpose: "Glue by union of open images."
+      status: "proved_exists_uniquely"
+    - map_id: "MAP-04"
+      signature: "pi_Open:IntegralOpen->C_Open"
+      purpose: "Project the category of elements of the inverse-image presheaf."
+      status: "proved_discrete_fibration"
+    - map_id: "MAP-05"
+      signature: "AutAction:Diff(M)xOpen(M)->Open(M)"
+      purpose: "Act by direct image for the full-diffeomorphism classification."
+      status: "typed_on_groupoid"
+    - map_id: "MAP-06"
+      signature: "ClassifySection:NaturalOpenSection->componentwise {empty,total}"
+      purpose: "Classify full-Diff-natural opens under connected boundaryless hypotheses."
+      status: "proved"
+    - map_id: "MAP-07"
+      signature: "KernelControl:[0,1]->Prob(Open(U),PowerSet(Open(U)))"
+      purpose: "Exhibit distinct normalized natural formal kernels on a fixed carrier."
+      status: "constructed_control_only"
+    - map_id: "MAP-08"
+      signature: "CompareProp:OpenCarrier x RT003ProposalFiberSchema->TypeComparisonEvidence"
+      purpose: "Record every discharged, partial, and absent RT003 requirement without semantic relabeling."
+      status: "completed"
+    - map_id: "MAP-09"
+      signature: "AuditProvenance:Construction->SourceProvenanceEvidence"
+      purpose: "Prove topology-only eliminability and exclude target or desired-output inputs."
+      status: "passed_for_carrier_constructors"
+    - map_id: "MAP-10"
+      signature: "Decide:TypeComparisonEvidence x SourceProvenanceEvidence->PacketResult"
+      purpose: "Return exactly one scoped result."
+      status: "returned_theorem_once"
+
+theorem_target_audit:
+  theorem_target_count: 5
+  all_targets_decided: true
+  targets:
+    - theorem_id: "THM-01"
+      name: "CanonicalContravariantOpenCarrier"
+      status: "proved"
+      hypotheses: "Typed open embeddings and ordinary source topology."
+      statement: "Inverse image makes Open a strict contravariant frame-valued functor, and its category of elements is a discrete fibration."
+      proof: "Inverse image preserves opens, frame operations, identities, and composition. The unique cartesian lift over j with codomain (U,O) has domain (V,j^{-1}O)."
+      falsifier: "An admitted arrow whose inverse image is not open or violates identity or composition."
+    - theorem_id: "THM-02"
+      name: "UniqueOpenCoverDescent"
+      status: "proved"
+      hypotheses: "Jointly surjective open-embedding cover and pairwise pullback compatibility."
+      statement: "Compatible local opens glue uniquely to the union of their open images."
+      proof: "Open images have open union; compatibility gives the prescribed restrictions; the covering property gives uniqueness."
+      falsifier: "Compatible local opens with zero or multiple globals, or a purported global for an overlap-incompatible family."
+    - theorem_id: "THM-03"
+      name: "ConnectedFullDiffTrivialNaturalSection"
+      status: "proved_with_explicit_boundaryless_and_componentwise_scope"
+      hypotheses: "Connected boundaryless smooth manifold and naturality under the full diffeomorphism group."
+      statement: "Each natural selected open is empty or total, independently on each diffeomorphism-class component."
+      proof: "Full diffeomorphisms act transitively on points; any nonempty invariant subset contains every point."
+      falsifier: "A proper nonempty fully invariant open under the declared hypotheses. Manifold boundary, disconnectedness, or reduced symmetry falsifies only an overbroad hypothesis set."
+    - theorem_id: "THM-04"
+      name: "CarrierOccurrenceUnderdetermination"
+      status: "proved_by_distinct_formal_kernels"
+      hypotheses: "Powerset sigma algebra and inverse-image pushforward used as nonsemantic controls."
+      statement: "The same Open carrier and restrictions support continuum-many distinct normalized natural formal kernels K^lambda."
+      proof: "Empty and total restrict to empty and total; convex mixtures remain normalized and natural; singleton mass at empty separates lambda."
+      falsifier: "A theorem deriving one lambda from carrier, restriction, covariance, and normalization without any additional source law."
+    - theorem_id: "THM-05"
+      name: "OpenCarrierProposalFiberComparisonDecision"
+      status: "proved_narrow_precursor_with_exact_remaining_mismatch"
+      hypotheses: "RT003 obstruction and five conditional theorem schemas remain fixed."
+      statement: "Open supplies a narrow source-topological carrier, projection, transport, restriction, and underlying descent, but not the general proposal sort, proposal semantics, discriminating admissibility, occurrence generator, realized token, physical probability, or kernel descent required by RT003."
+      proof: "The fourteen-row typed comparison exhibits an explicit constructor for every discharged row and an absent typed map or law for every undischarged row."
+      falsifier: "A missing discharged constructor or a current-source term providing one of the rows recorded as absent."
+
+inherited_conditional_theorem_preservation:
+  theorem_count: 5
+  all_preserved_unchanged: true
+  rows:
+    - theorem_id: "THM-RT003-SECTION-FIXED-POINT-001"
+      theorem_name: "GroupoidDeterministicSectionFixedPointCriterion"
+      status: "preserved_unchanged"
+      use_here: "Applied only to the Open carrier after independent formation; the result is componentwise empty or total and has no occurrence meaning."
+    - theorem_id: "THM-RT003-INVARIANT-SUBFUNCTOR-001"
+      theorem_name: "InvariantAdmissibleSubfunctorCriterion"
+      status: "preserved_unchanged"
+      use_here: "Not instantiated as an admissibility law; no proper nonempty subfunctor is designated admissible."
+    - theorem_id: "THM-RT003-EQUIVARIANT-KERNEL-001"
+      theorem_name: "EquivariantOccurrenceKernelCriterion"
+      status: "preserved_unchanged"
+      use_here: "Used only to demonstrate multiple mathematical kernels; no occurrence or physical probability semantics is assigned."
+    - theorem_id: "THM-RT003-KERNEL-DESCENT-001"
+      theorem_name: "LocalOccurrenceDescentCriterion"
+      status: "preserved_unchanged"
+      use_here: "Explicitly distinguished from the unconditional sheaf descent of underlying open subsets."
+    - theorem_id: "THM-RT003-SAME-REDUCT-FACTORIZATION-001"
+      theorem_name: "CurrentSourceProvenanceFactorCriterion"
+      status: "preserved_unchanged"
+      use_here: "Carrier constructors factor through current topology; no occurrence output exists to receive a factorization claim."
+
+rt003_typed_comparison:
+  requirement_count: 14
+  comparison_scope: "The Open carrier is compared with every object and law named in the RT003 proposal-fiber grammar. Narrow mathematical formation is not semantic identification."
+  first_remaining_mismatch: "There is no typed current-source map that designates elements of Open(U) as the general proposal objects required by RT003; therefore the general Prop or F_prop interpretation remains absent even though the narrow category IntegralOpen forms."
+  rows:
+    - requirement_id: "RT003-REQ-01"
+      requirement: "Typed current source base Src"
+      open_carrier_evidence: "C_Open and its diffeomorphism subgroupoid are definable from the smooth-manifold topology."
+      disposition: "discharged_as_mathematical_base_not_adopted_EqSrc"
+    - requirement_id: "RT003-REQ-02"
+      requirement: "Nonvacuous carrier fibers"
+      open_carrier_evidence: "Every Open(U) contains empty and U, and every nonempty four-manifold has proper nonempty chart opens."
+      disposition: "discharged_for_narrow_open_carrier_only_not_general_proposal_sort"
+    - requirement_id: "RT003-REQ-03"
+      requirement: "Projection U:Prop->Src"
+      open_carrier_evidence: "pi_Open:IntegralOpen->C_Open is a typed projection."
+      disposition: "discharged_for_narrow_integral_open_only"
+    - requirement_id: "RT003-REQ-04"
+      requirement: "Coherent source-arrow transport"
+      open_carrier_evidence: "Inverse image is strict contravariant on open embeddings; on diffeomorphisms direct image and inverse image are inverse frame isomorphisms."
+      disposition: "discharged_with_variance_split_explicit"
+    - requirement_id: "RT003-REQ-05"
+      requirement: "Automorphism actions on fibers"
+      open_carrier_evidence: "Diff(U) acts on Open(U) by direct image."
+      disposition: "discharged_mathematically_without_occurrence_semantics"
+    - requirement_id: "RT003-REQ-06"
+      requirement: "Measurable fiber structure"
+      open_carrier_evidence: "The powerset sigma algebra is definable and every restriction function is measurable."
+      disposition: "available_for_formal_control_only_not_adopted_as_proposal_measure_structure"
+    - requirement_id: "RT003-REQ-07"
+      requirement: "Deterministic natural sections"
+      open_carrier_evidence: "Empty and total sections exist; full-Diff natural sections are componentwise exhausted by them under the declared hypotheses."
+      disposition: "classified_but_nonselecting_and_not_occurrence"
+    - requirement_id: "RT003-REQ-08"
+      requirement: "Invariant discriminating admissibility subfunctor"
+      open_carrier_evidence: "The carrier alone designates no invariant subset of Open(U) as admissible and supplies no source law selecting one."
+      disposition: "not_discharged"
+    - requirement_id: "RT003-REQ-09"
+      requirement: "Normalized equivariant kernel"
+      open_carrier_evidence: "The K^lambda family gives many normalized natural formal kernels on the same fixed carrier."
+      disposition: "existence_control_only_unique_selection_not_discharged"
+    - requirement_id: "RT003-REQ-10"
+      requirement: "Restriction maps on local proposal data"
+      open_carrier_evidence: "j^* gives strict inverse-image restriction of opens."
+      disposition: "discharged_for_underlying_open_carrier_only"
+    - requirement_id: "RT003-REQ-11"
+      requirement: "Effective local-to-global descent"
+      open_carrier_evidence: "Compatible underlying opens glue uniquely. This does not prove descent for admissibility predicates or probability kernels."
+      disposition: "underlying_carrier_descent_discharged_kernel_descent_not_discharged"
+    - requirement_id: "RT003-REQ-12"
+      requirement: "Occurrence or admissibility generator Gen_occ"
+      open_carrier_evidence: "No current-source term selects an open, an admissibility subset, or one K^lambda."
+      disposition: "not_discharged"
+    - requirement_id: "RT003-REQ-13"
+      requirement: "Current-source provenance and same-reduct factorization"
+      open_carrier_evidence: "Carrier constructors eliminate to current topology, but no occurrence output exists to test or claim occurrence factorization."
+      disposition: "discharged_for_carrier_provenance_only_occurrence_provenance_absent"
+    - requirement_id: "RT003-REQ-14"
+      requirement: "Proposal, realized-token, physical-probability, response, or event semantics"
+      open_carrier_evidence: "No typed interpretation map or physical law is present."
+      disposition: "not_discharged_and_forbidden_in_this_packet"
+
+exact_controls:
+  control_count: 6
+  parent_model_check_count: 24
+  parent_model_pass_count: 24
+  parent_model_payload_sha256: "e1aa071fa04a510771c762cb21188af474686defd06ab0981266b3ca110377a4"
+  controls:
+    - control_id: "CTRL-01-FINITE-INVERSE-IMAGE-FUNCTOR"
+      fixture: "X={0,1,2} with the discrete topology, identity, and two cyclic permutations f and g."
+      exact_result: "All eight opens remain open under inverse image; id^{-1} is identity; and (g composed with f)^{-1}=f^{-1} composed with g^{-1} on all eight opens."
+      falsifies: "Any failure of inverse-image functoriality in the exact finite control."
+    - control_id: "CTRL-02-FINITE-DISCRETE-FIBRATION"
+      fixture: "For every O subset X and the permutation f, enumerate all candidate domains over f."
+      exact_result: "Exactly one candidate equals f^{-1}(O) for every O, giving eight of eight unique cartesian lifts."
+      falsifies: "A category-of-elements claim with zero or multiple lifts over a fixed base arrow and codomain."
+    - control_id: "CTRL-03-FINITE-COVER-DESCENT"
+      fixture: "Cover X by U_0={0,1} and U_1={1,2}; enumerate all local subset pairs agreeing on {1}."
+      exact_result: "Exactly eight compatible families exist and all eight glue uniquely to their union."
+      falsifies: "A failure of existence, uniqueness, or union gluing for compatible opens."
+    - control_id: "CTRL-04-FINITE-OVERLAP-MISMATCH"
+      fixture: "Use local opens A_0={1} in U_0 and A_1=empty in U_1."
+      exact_result: "Restrictions disagree on {1}, so no global subset has both local restrictions."
+      falsifies: "A claim that incompatible local values glue or that compatibility is unnecessary."
+    - control_id: "CTRL-05-TRANSITIVE-INVARIANT-OPEN"
+      fixture: "Let the full symmetric group S_3 act on the discrete three-point control."
+      exact_result: "The action is point-transitive and its only invariant subsets are empty and X."
+      falsifies: "A proper nonempty invariant subset under a full transitive action."
+    - control_id: "CTRL-06-FORMAL-KERNEL-AND-TYPE-BOUNDARY"
+      fixture: "On the fixed endpoint carrier {empty,total}, use lambda in {0,1/2,1}; compare nine parent-model type-boundary rows."
+      exact_result: "All three kernels are normalized and distinct; the topology carrier, inverse-image transport, and open-cover descent rows pass, while the general proposal sort, map to proposals, general F_prop, proposal semantics, occurrence generator, and physical-probability rows remain false."
+      falsifies: "A claim that carrier covariance and normalization choose one kernel or that the narrow carrier supplies the absent general proposal and occurrence rows."
+
+proof_obligation_audit:
+  obligation_count: 14
+  discharged_count: 14
+  obligations:
+    - obligation_id: "PO-01"
+      status: "discharged_child_audit"
+      evidence: "Nineteen sources are hash-bound, including plan, RT003 fusion and TeX, live RT007 control state, burden map, canonical sources, selected packet, and the read-only parent model."
+    - obligation_id: "PO-02"
+      status: "discharged_child_audit"
+      evidence: "The RT003 obstruction, five conditional theorem schemas, eight freezes, and fourteen no-delta rows are preserved unchanged."
+    - obligation_id: "PO-03"
+      status: "discharged_child_audit"
+      evidence: "Base objects, open embeddings, contravariant variance, empty-carrier convention, boundaryless hypothesis, and jointly surjective covers are explicit."
+    - obligation_id: "PO-04"
+      status: "discharged_child_audit"
+      evidence: "Inverse image is proved to preserve opens, identities, composition, arbitrary unions, and finite intersections."
+    - obligation_id: "PO-05"
+      status: "discharged_child_audit"
+      evidence: "Compatible-cover gluing by union and uniqueness from joint surjectivity are proved."
+    - obligation_id: "PO-06"
+      status: "discharged_child_audit"
+      evidence: "IntegralOpen and pi_Open are typed as the category of elements and its discrete-fibration projection without using Prop or event semantics."
+    - obligation_id: "PO-07"
+      status: "discharged_child_audit"
+      evidence: "Connectedness, boundarylessness, componentwise scope, and full-diffeomorphism naturality are explicit in THM-03."
+    - obligation_id: "PO-08"
+      status: "discharged_child_audit"
+      evidence: "Point transitivity is derived by compactly supported local moves along a path, and the S_3 finite analogue is exact."
+    - obligation_id: "PO-09"
+      status: "discharged_child_audit"
+      evidence: "Empty and total remain mathematical sections only; neither is called an occurrence law or realized event."
+    - obligation_id: "PO-10"
+      status: "discharged_child_audit"
+      evidence: "K^0, K^(1/2), and K^1 are distinct normalized kernels on one fixed carrier and are explicitly nonphysical."
+    - obligation_id: "PO-11"
+      status: "discharged_child_audit"
+      evidence: "Fourteen rows compare every RT003 object and law, including the variance split and the first remaining general-proposal mismatch."
+    - obligation_id: "PO-12"
+      status: "discharged_child_audit"
+      evidence: "Every positive constructor eliminates to current topology and typed source arrows; target atlas, metric, response, desired cone, benchmark answer, and frozen data are excluded."
+    - obligation_id: "PO-13"
+      status: "discharged_child_audit"
+      evidence: "D7, B2, P4-T03, g_eff, adoption, proof promotion, publication, push, global-no-go, and all downstream locks remain false or blocked."
+    - obligation_id: "PO-14"
+      status: "discharged_child_audit"
+      evidence: "Exactly one permitted theorem result is returned with a composite falsifier and no occurrence-determination claim."
+
+failure_branch_audit:
+  branch_count: 12
+  triggered_blocking_count: 0
+  branches:
+    - branch_id: "FB-01"
+      trigger: "The RT003 predecessor obstruction or an inherited freeze is altered."
+      result: "invalid_packet_boundary"
+      status: "not_triggered_fixed_inputs_preserved"
+    - branch_id: "FB-02"
+      trigger: "The object category, arrow variance, empty-open convention, or cover class is not typed."
+      result: "precise_open_carrier_formation_obstruction"
+      status: "not_triggered_all_types_explicit"
+    - branch_id: "FB-03"
+      trigger: "Inverse image fails identity or composition on an admitted arrow."
+      result: "restriction_or_functoriality_obstruction"
+      status: "not_triggered_proof_and_finite_control_pass"
+    - branch_id: "FB-04"
+      trigger: "Compatible local opens have no unique global gluing."
+      result: "restriction_or_descent_obstruction"
+      status: "not_triggered_proof_and_eight_of_eight_control_pass"
+    - branch_id: "FB-05"
+      trigger: "An open subset is called a proposal, event, occurrence, or response without a typed source map."
+      result: "semantic_relabeling_obstruction"
+      status: "not_triggered_nonsemantic_ledger_explicit"
+    - branch_id: "FB-06"
+      trigger: "Connectedness, point transitivity, boundarylessness, or all-diffeomorphism naturality is omitted from the section classification."
+      result: "natural_section_scope_obstruction"
+      status: "not_triggered_hypotheses_and_boundary_counterexample_explicit"
+    - branch_id: "FB-07"
+      trigger: "Carrier uniqueness is used to infer a unique admissibility or occurrence generator."
+      result: "carrier_occurrence_nonsequitur"
+      status: "not_triggered_distinct_kernel_family_proves_nonselection"
+    - branch_id: "FB-08"
+      trigger: "A formal kernel is labeled physical probability, empirical frequency, or realized occurrence."
+      result: "physical_probability_overread"
+      status: "not_triggered_formal_control_only"
+    - branch_id: "FB-09"
+      trigger: "The comparison to F_prop omits proposal objects, source-arrow transport, measurable structure, or descent typing."
+      result: "precise_open_carrier_to_proposal_fibration_type_mismatch_obstruction"
+      status: "not_triggered_fourteen_rows_cover_all_rt003_requirements"
+    - branch_id: "FB-10"
+      trigger: "The construction depends on target geometry, empirical response, desired P4 output, or frozen candidate data."
+      result: "forbidden_target_or_outcome_import"
+      status: "not_triggered_topology_only_eliminability_proved"
+    - branch_id: "FB-11"
+      trigger: "A bounded mismatch is promoted to impossibility of every future source extension."
+      result: "global_no_go_overread"
+      status: "not_triggered_scoped_continuation_preserved"
+    - branch_id: "FB-12"
+      trigger: "The packet adopts ontology, assigns EqSrc, changes Distance-to-GR, unlocks P4-T03, or claims proof or publication authority."
+      result: "authority_boundary_violation"
+      status: "not_triggered_all_authority_blocks_preserved"
+
+source_extension_classification:
+  classification_required: true
+  category: "conservative_definitional_extension_from_existing_smooth_topology"
+  status_label: "draft/control"
+  current_source_basis: "Topological opens and smooth open embeddings already included in the smooth-manifold primitive."
+  narrow_open_carrier_defined: true
+  narrow_integral_open_projection_defined: true
+  new_ontology_primitive: false
+  general_proposal_pseudofunctor_constructed: false
+  typed_map_from_opens_to_general_proposals: false
+  occurrence_or_admissibility_law_constructed: false
+  source_extension_adopted: false
+  canonical_ontology_candidate_claimed: false
+  target_import: false
+  physical_or_empirical_meaning: false
+  p4_t02_acceptance_credit: false
+  classification_explanation: "Open(-) is eliminable definitional mathematics over current topology. Calling its elements proposals or events, or choosing an admissibility or occurrence law on them, would require additional typed structure and authority."
+
+freeze_preservation:
+  freeze_count: 8
+  all_freezes_preserved: true
+  new_freeze_created: false
+  frozen_route_replay_performed: false
+  rows:
+    - freeze_id: "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+      status: "active_untouched"
+    - freeze_id: "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+      status: "active_untouched"
+
+freeze_criteria_status:
+  repeated_burden: true
+  freeze_evaluation_required: true
+  active_freeze_label: "none_new"
+  prior_attempts_considered:
+    - "RT-20260815-003"
+    - "RT-20260815-006"
+  freeze_if:
+    - "A later packet merely renames Open(U) as Prop or event data without a typed interpretation map and a new decision consequence."
+    - "A later packet repeats the empty-or-total section theorem or formal-kernel nonuniqueness without testing a materially new admissibility or occurrence-law class."
+  do_not_freeze_if:
+    - "A separately admitted refuter packet classifies proper invariant admissibility subfunctors or proves a new source-side irrelevance theorem on the formed Open carrier."
+    - "A separately admitted proposal-only packet supplies a target-free law generator and survives provenance, descent, and nonselection stress without claiming adoption."
+  freeze_decision: "not_frozen"
+  decision_reason: "This packet resolves the narrow Open-carrier formation and descent question rather than repeating RT003's missing-general-Prop obstruction. A materially new refuter stress on admissibility and kernel selection remains available."
+  next_allowed_route: "refuter"
+
+physics_progress_status:
+  status: "no_distance_delta"
+  target_derivation_milestone: "effective_metric_g_eff"
+  milestone_burden: "Determine whether current smooth topology supplies a definitional proposal-carrier precursor while keeping admissibility, occurrence generation, and every physical interpretation underived."
+  explanation: "The child audit proves the narrow topology-generated carrier precursor and its exact limits. It constructs no occurrence law, causal geometry, effective metric, coupling, or field equation and changes no Distance-to-GR row."
+  physics_promotion_authorized: false
+  promotion_authority_path: ""
+
+distance_to_gr_delta:
+  changed: false
+  burden_id: "g_eff"
+  milestone: "effective_metric_g_eff"
+  old_status: "accepted"
+  new_status: "accepted"
+  ledger_row_updated: false
+  ledger_path: "registries/DISTANCE_TO_GR_LEDGER.csv"
+  downstream_unlocked:
+    - "none"
+  downstream_still_blocked:
+    - "physical occurrence or admissibility law"
+    - "P4-T02 qualifying continuation verdict"
+    - "P4-T03 conformal reconstruction"
+    - "effective metric construction"
+    - "matter coupling derivation"
+    - "Einstein equations derivation"
+    - "benchmark promotion"
+    - "Gate Chair action"
+  explanation: "A definitional Open carrier is not a source-to-metric law and does not change the persistent ledger."
+
+distance_to_gr_status:
+  row_count: 14
+  changed: false
+  all_rows_literal_no_delta: true
+  rows:
+    - burden: "Source ontology primitives"
+      status: "no_delta"
+      finding: "No source primitive is adopted; Open(U) is eliminable from topology already present in the smooth-manifold primitive."
+    - burden: "Source equivalence EqSrc"
+      status: "no_delta"
+      finding: "C_Open and SmoothMan_4^iso are mathematical audit categories and are not adopted as EqSrc."
+    - burden: "RetainH"
+      status: "no_delta"
+      finding: "No retention object or theorem is added."
+    - burden: "GenH"
+      status: "no_delta"
+      finding: "No occurrence, admissibility, or proposal generator is constructed."
+    - burden: "ObsLoc_lc"
+      status: "no_delta"
+      finding: "Open subsets receive no observer-localization or realized-event semantics."
+    - burden: "Resp_lc"
+      status: "no_delta"
+      finding: "Formal kernels provide no response relation, empirical readout, or selector semantics."
+    - burden: "M_src"
+      status: "no_delta"
+      finding: "The source manifold is unchanged and is not identified with target spacetime."
+    - burden: "g_eff"
+      status: "no_delta"
+      finding: "No cone, conformal class, scale, time orientation, or effective metric is constructed."
+    - burden: "matter coupling"
+      status: "no_delta"
+      finding: "No propagation or universal matter-coupling law is derived."
+    - burden: "Einstein equations"
+      status: "no_delta"
+      finding: "No source action, variation, stress-energy relation, or field equation is supplied."
+    - burden: "finite-variation robustness"
+      status: "no_delta"
+      finding: "Finite controls test theorem syntax only and provide no physical finite-variation robustness law."
+    - burden: "benchmark promotion"
+      status: "no_delta"
+      finding: "No benchmark comparison, recovery, or promotion occurs."
+    - burden: "Gate Chair status"
+      status: "no_delta"
+      finding: "No protected adoption or verdict authority is exercised."
+    - burden: "current route freeze or hard-fail status"
+      status: "no_delta"
+      finding: "All eight inherited freezes remain active and no new freeze, global hard fail, or future-extension impossibility is created."
+
+downstream_locks:
+  d7_reevaluated: false
+  d7_coverage_claimed: false
+  descriptor_instance_complete: false
+  b2_active: false
+  b2_activated: false
+  b2_disposed: false
+  b2_adopted: false
+  b2_rejected: false
+  b2_viability_claimed: false
+  b2_adequacy_claimed: false
+  b2_sufficiency_claimed: false
+  p4_t02_complete_for_plan_dependency: false
+  p4_t03_locked: true
+  p4_t03_unlocked_or_executed: false
+  general_proposal_carrier_derived: false
+  occurrence_law_constructed: false
+  physical_event_constructed: false
+  physical_probability_assigned: false
+  realized_occurrence_selected: false
+  physical_response_semantics_assigned: false
+  physical_time_orientation_assigned: false
+  physical_causality_assigned: false
+  conformal_class_constructed: false
+  effective_metric_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+
+recommended_successor:
+  recommendation_count: 1
+  packet_id: "PKT-V22-P4T02-B2-OPEN-CARRIER-ADMISSIBILITY-KERNEL-REFUTER-STRESS-V1"
+  packet_type: "source_side_irrelevance_theorem"
+  route_label: "ordinary-research-packet"
+  role_family: "refuter@0.2.0"
+  status: "recommended_not_executed"
+  executed: false
+  separate_agentjob_required: true
+  successor_creation_authorized_here: false
+  objective: "Adversarially classify whether the formed Open carrier admits any target-free proper invariant admissibility subfunctor or uniquely source-derived natural kernel under explicitly declared source-only hypotheses, while stress-testing the boundaryless, componentwise, variance, descent, and nonsemantic clauses without replaying the natural-section theorem."
+  material_difference: "The current packet forms and classifies carrier sections. The recommended successor would test the distinct RT003 admissibility-subfunctor and kernel-selection layers that remain undischarged."
+  principal_falsifier: "A proper invariant subfunctor or unique kernel is not progress unless its defining predicate or parameter is independently source-derived, target-free, stable under declared transport and descent, and materially distinct from a relabeling of desired outcomes."
+  authority_limits: "Recommendation only; no AgentJob, source law, ontology candidate, adoption, occurrence semantics, D7/B2/P4-T03 action, promotion, or external action is authorized."
+
+route_cycle_control:
+  cycle_family: "v22_p4_t02_b2_occurrence_admissibility_source_law"
+  current_cycle_step: "canonical_open_carrier_typing_descent_theorem"
+  prior_related_tasks:
+    - "RT-20260815-003"
+    - "RT-20260815-006"
+  cycle_risk: "medium"
+  orbit_avoidance_reason: "RT003 located the absent general proposal grammar and RT006 selected one canonical current-topology precursor. RT007 now proves that precursor exactly and moves the unresolved question to distinct admissibility-subfunctor and kernel-selection laws."
+  next_role_consequence: "refuter@0.2.0"
+
+risk_and_conflict_review:
+  scientific_conflict_count: 0
+  identity_conflict_count: 0
+  scope_conflict_count: 0
+  authority_conflict_count: 0
+  unresolved_blocking_conflict_count: 0
+  precision_condition_count: 4
+  precision_conditions:
+    - condition_id: "PRECISION-01"
+      condition: "Boundaryless must remain explicit in the connected full-Diff theorem; otherwise manifold interior is a counterexample."
+      blocking: false
+    - condition_id: "PRECISION-02"
+      condition: "The theorem is componentwise by diffeomorphism class; it does not assert that the entire disconnected groupoid has only two global natural sections."
+      blocking: false
+    - condition_id: "PRECISION-03"
+      condition: "Inverse-image category of elements is a discrete fibration. A discrete bifibration over noninvertible open embeddings is not claimed; bifibration language is safe only on the diffeomorphism groupoid or after changing fiber categories and arrow typing."
+      blocking: false
+    - condition_id: "PRECISION-04"
+      condition: "Powerset measurable structure is a formal control, not an adopted RT003 proposal-measurable or physical probability structure."
+      blocking: false
+  parent_precision_caveat: "Fuse the theorem only with the boundaryless, componentwise, and variance qualifications intact. The narrow IntegralOpen projection is a definitional carrier precursor, not the general RT003 Prop or F_prop."
+  residual_limitations:
+    - "The audit does not classify every invariant subfunctor of Open(U); that is deliberately assigned to the recommended refuter successor."
+    - "The audit proves descent of underlying opens, not descent of arbitrary probability measures or occurrence kernels."
+    - "Weak, stacky, homotopy-coherent, or manifold-with-boundary variants require separately stated hypotheses."
+
+mathematical_payload_manifest:
+  payload_count: 5
+  items:
+    - payload_id: "NMP-RT007-PM-001"
+      payload_type: "theorem"
+      object_name: "CanonicalContravariantOpenCarrierDiscreteFibration"
+      claim_status: "draft/control"
+      source_path: "research_control/tasks/RT-20260815-007/artifacts/child_phys_math_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+      burden_effect: "narrows"
+      summary: "Inverse image yields a strict frame-valued presheaf whose category of elements is a discrete fibration."
+    - payload_id: "NMP-RT007-PM-002"
+      payload_type: "theorem"
+      object_name: "UniqueOpenCoverDescent"
+      claim_status: "draft/control"
+      source_path: "research_control/tasks/RT-20260815-007/artifacts/child_phys_math_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+      burden_effect: "narrows"
+      summary: "Compatible local opens glue uniquely by union."
+    - payload_id: "NMP-RT007-PM-003"
+      payload_type: "theorem"
+      object_name: "ConnectedBoundarylessFullDiffNaturalSectionClassification"
+      claim_status: "draft/control"
+      source_path: "research_control/tasks/RT-20260815-007/artifacts/child_phys_math_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+      burden_effect: "narrows"
+      summary: "Full-Diff natural selected opens are componentwise empty or total under connected boundaryless hypotheses."
+    - payload_id: "NMP-RT007-PM-004"
+      payload_type: "countermodel"
+      object_name: "OpenCarrierFormalKernelNonselection"
+      claim_status: "exact_nonsemantic_control"
+      source_path: "research_control/tasks/RT-20260815-007/artifacts/child_phys_math_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+      burden_effect: "narrows"
+      summary: "Continuum-many natural normalized formal kernels coexist on the same carrier, so occurrence is not determined."
+    - payload_id: "NMP-RT007-PM-005"
+      payload_type: "source_extension_classification"
+      object_name: "OpenCarrierToRT003ProposalFiberTypedComparison"
+      claim_status: "draft/control"
+      source_path: "research_control/tasks/RT-20260815-007/artifacts/child_phys_math_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+      burden_effect: "narrows"
+      summary: "The Open carrier is a conservative definitional precursor; general proposal semantics, admissibility, occurrence generation, kernel descent, and physical interpretation remain absent."
+
+forbidden_conclusion_summary:
+  physics_promotion_authorized: false
+  forbidden_conclusions:
+    - "canonical ontology edit or adoption"
+    - "general Prop or F_prop derivation"
+    - "proposal or event semantics for an open subset"
+    - "source occurrence or admissibility law derivation or adoption"
+    - "formal kernel interpreted as physical probability empirical frequency or realized occurrence"
+    - "EqSrc adoption or Phi_src semantics"
+    - "target atlas metric coframe tetrad desired cone or benchmark import"
+    - "D7 adequacy or coverage"
+    - "B2 activation disposal viability adoption rejection adequacy or sufficiency"
+    - "P4-T03 unlock or execution"
+    - "conformal class scale time orientation causality or g_eff construction"
+    - "matter coupling or Einstein-equation derivation"
+    - "benchmark or Gate Chair promotion"
+    - "global no-go or future-extension impossibility"
+    - "proof authority publication push external action or completed derivation"
+  summary: "The theorem establishes task-local definitional topology and its exact limits only. Neither theorem truth at draft/control status nor model, validator, role, registry, or checkpoint evidence creates source-law adoption, physical meaning, downstream GR progress, promotion, or outward-action authority."
+
+authority_blocks:
+  parent_completion_created_by_child: false
+  successor_executed: false
+  successor_agentjob_created: false
+  frozen_candidate_reconstructed_repaired_audited_stressed_or_replayed: false
+  general_prop_or_f_prop_constructed: false
+  occurrence_or_admissibility_generator_constructed: false
+  source_law_derived: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  eqsrc_adopted: false
+  phi_src_typed_or_interpreted: false
+  proposal_semantics_assigned: false
+  physical_event_semantics_assigned: false
+  physical_event_or_occurrence_selected: false
+  probability_given_physical_or_empirical_meaning: false
+  empirical_response_semantics_assigned: false
+  target_atlas_metric_tetrad_coframe_or_desired_cone_imported: false
+  physical_response_time_causality_or_geometry_assigned: false
+  d7_reevaluated: false
+  d7_adequacy_claimed: false
+  b2_action_taken: false
+  p4_t03_action_taken: false
+  effective_metric_constructed_or_adopted: false
+  matter_coupling_derived_or_adopted: false
+  einstein_equations_derived_or_adopted: false
+  distance_to_gr_changed: false
+  gate_benchmark_or_proof_claimed: false
+  global_no_go_or_future_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  publication_or_push_executed: false
+  push_authorized: false
+  external_action_authorized: false
+  external_action_executed: false
+  completed_derivation_claimed: false
+
+validation:
+  strict_unique_key_yaml: "PASS"
+  repository_subset_yaml: "PASS"
+  source_hashes_recomputed: "PASS"
+  source_hash_match_count: 19
+  source_hash_expected_count: 19
+  exclusive_result_count_check: "PASS_1"
+  permitted_result_check: "PASS_canonical_open_event_fibration_typing_descent_theorem"
+  formal_domain_count_check: "PASS_10"
+  formal_object_count_check: "PASS_12"
+  formal_map_count_check: "PASS_10"
+  theorem_target_count_check: "PASS_5"
+  proof_obligation_count_check: "PASS_14"
+  failure_branch_count_check: "PASS_12"
+  exact_control_count_check: "PASS_6"
+  rt003_requirement_count_check: "PASS_14"
+  inherited_conditional_theorem_count_check: "PASS_5"
+  inherited_freeze_count_check: "PASS_8_exact_identity"
+  distance_to_gr_row_count_check: "PASS_14"
+  literal_no_delta_count_check: "PASS_14"
+  mathematical_payload_manifest_count_check: "PASS_5"
+  mathematical_payload_manifest_unique_id_check: "PASS_NMP_RT007_PM_001_THROUGH_005"
+  mathematical_payload_manifest_type_check: "PASS_all_five_typed"
+  recommended_successor_count_and_status_check: "PASS_1_recommended_not_executed"
+  parent_exact_model_check: "PASS_24_OF_24_READ_ONLY_CONTROL"
+  exact_math_audit: "PASS_inverse_image_identity_composition_unique_lifts_8_of_8_descent_transitivity_invariants_and_three_distinct_kernels"
+  forbidden_claim_scan: "PASS_authority_boolean_and_scope_checks"
+  duplicate_key_scan: "PASS"
+  owned_path_diff_check: "PASS_owned_untracked_path_only"
+  whitespace_check: "PASS_no_trailing_spaces_tabs_or_carriage_returns"
+  final_newline_check: "PASS"
+  parent_validator_run: false
+  parent_checkpoint_run: false
+  bootstrap_or_memory_sync_run: false
+  commit_or_push_run: false
+  final_child_check_count: 30
+  final_child_pass_count: 30
+  validation_result: "PASS_CHILD_SCOPE"

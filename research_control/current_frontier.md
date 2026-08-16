@@ -3,14 +3,14 @@
 # Current Research Frontier
 
 This control snapshot records the active research-control frontier after
-`RT-20260815-006` and `handoff-1040`.
+`RT-20260815-007` and `handoff-1041`.
 It is generated from tracked control state. It is a synchronized reader-facing
 snapshot, not independent routing authority and not a physics proof surface.
 If this file ever contradicts `research_control/program_state.yaml`, the
 handoff named by that file, or `registries/DISTANCE_TO_GR_LEDGER.csv`, those
 tracked authority files govern.
 
-<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-15T23:27:00Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"f12c4bc85a3ca58e544a31a7a39bad67b726c954","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"e7fa73972da16b3203e772260e9454ed37c62bc887d22884ddad97d72933ea23"},{"path":"research_control/handoffs/handoff-1040.yaml","sha256":"0804f5e6c6244260e06a46bc146505d74ed993fa229099318ab3aebc59ab9167"},{"path":"research_control/program_state.yaml","sha256":"991a8b5c3eebc26b9d03d733848a80738847eaf34c32032cd7c0bdb6be5bbf93"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"ae685dff31aac8a0078fbd12c6d8698188356cfa6572094b48d08aa016a11942","source_path_count":"12","task_count":"1297"} -->
+<!-- generated-report-provenance: {"freshness_status":"fresh_at_generation","generated_view_is_authority":false,"generation_time":"2026-08-16T03:29:06Z","maximum_commit_lag":"1","physics_promotion_authorized":false,"policy_id":"p13_t07_live_generated_report_freshness_v1","proof_authority":false,"report_class":"current_frontier","schema_id":"generated_report_provenance_v1","source_commit":"74a084524287d6cfc6e27570d45931d36b7bd55f","source_hashes":[{"path":"registries/DISTANCE_TO_GR_LEDGER.csv","sha256":"8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642"},{"path":"registries/RESEARCH_TASK_REGISTRY.csv","sha256":"94aa43ee38a147e1d4279a5a23fb6337e4a6ff2ca45d17af960d97a99a1752ef"},{"path":"research_control/handoffs/handoff-1041.yaml","sha256":"3ecf4ec8e17ba6e0b3ef590b78305a668a4cfc7ba21ca59dd03d8fcb3414c1ac"},{"path":"research_control/program_state.yaml","sha256":"1e0a0f4f867c09ab67a7f0d5c5776092486a680fdce6484d35736246f37030c7"},{"path":"research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml","sha256":"dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3"},{"path":"scripts/research_control/generated_report_provenance.py","sha256":"af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c"},{"path":"scripts/research_control/render_current_frontier.py","sha256":"62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6"}],"source_manifest_sha256":"4716901305e163484b6e7ff472fbd1f02b6a302499c2e2353f45c8a70dccd88d","source_path_count":"12","task_count":"1298"} -->
 
 ## Generated-Report Provenance
 
@@ -19,11 +19,11 @@ tracked authority files govern.
 | Provenance schema | `generated_report_provenance_v1` |
 | Freshness policy | `p13_t07_live_generated_report_freshness_v1` |
 | Report class | `current_frontier` |
-| Source commit | `f12c4bc85a3ca58e544a31a7a39bad67b726c954` |
-| Source-derived generation time | `2026-08-15T23:27:00Z` |
-| Tracked task count | 1297 |
+| Source commit | `74a084524287d6cfc6e27570d45931d36b7bd55f` |
+| Source-derived generation time | `2026-08-16T03:29:06Z` |
+| Tracked task count | 1298 |
 | Exact source-path count | 12 |
-| Source manifest SHA-256 | `ae685dff31aac8a0078fbd12c6d8698188356cfa6572094b48d08aa016a11942` |
+| Source manifest SHA-256 | `4716901305e163484b6e7ff472fbd1f02b6a302499c2e2353f45c8a70dccd88d` |
 | Maximum commit lag | 1 |
 | Freshness status at generation | `fresh_at_generation` |
 | Generated view is authority | `false` |
@@ -31,9 +31,9 @@ tracked authority files govern.
 Exact primary source hashes:
 
 - `registries/DISTANCE_TO_GR_LEDGER.csv`: `8b3aca0b7c5cd8aca4c0e4456ca423e2b0d0d63b1fe2f2a092a604554beff642`
-- `registries/RESEARCH_TASK_REGISTRY.csv`: `e7fa73972da16b3203e772260e9454ed37c62bc887d22884ddad97d72933ea23`
-- `research_control/handoffs/handoff-1040.yaml`: `0804f5e6c6244260e06a46bc146505d74ed993fa229099318ab3aebc59ab9167`
-- `research_control/program_state.yaml`: `991a8b5c3eebc26b9d03d733848a80738847eaf34c32032cd7c0bdb6be5bbf93`
+- `registries/RESEARCH_TASK_REGISTRY.csv`: `94aa43ee38a147e1d4279a5a23fb6337e4a6ff2ca45d17af960d97a99a1752ef`
+- `research_control/handoffs/handoff-1041.yaml`: `3ecf4ec8e17ba6e0b3ef590b78305a668a4cfc7ba21ca59dd03d8fcb3414c1ac`
+- `research_control/program_state.yaml`: `1e0a0f4f867c09ab67a7f0d5c5776092486a680fdce6484d35736246f37030c7`
 - `research_control/tasks/RT-20260801-011/artifacts/generated_report_freshness_metadata_schema_v1.yaml`: `dc83260a771ac0bed94e150de76f83d8fb163dbe356f1532da11018fce06adc3`
 - `scripts/research_control/generated_report_provenance.py`: `af417fa48220fbb4abffd9a4ab2cb93b4f9ea32f2f26e67e65dd6ad6ba4cee6c`
 - `scripts/research_control/render_current_frontier.py`: `62ed4741bcafe652c03f742a022a2f2fa47e3f132f97f0dd8fdb065e5e2e5ba6`
@@ -47,15 +47,15 @@ or claim-promotion authority.
 
 | Field | Value |
 | --- | --- |
-| Active task ID | `RT-20260815-006` |
-| Latest handoff ID | `handoff-1040` |
-| Current status | `v22_p4_t02_canonical_source_open_event_fibration_typing_descent_theorem_selected_checkpoint_pending` |
+| Active task ID | `RT-20260815-007` |
+| Latest handoff ID | `handoff-1041` |
+| Current status | `v22_p4_t02_canonical_source_open_event_fibration_typing_descent_theorem_complete_theoretical_selector_selected_checkpoint_pending` |
 | V16 completed | false |
-| Current route family | integration or selection (scientific) |
+| Current route family | formalization or theorem (scientific) |
 | Target derivation milestone | none; this is project-control tooling work |
-| Current burden | none for physics derivation; live control burden is v22 p4 t02 b2 canonical source open event fibration typing descent theorem |
-| Required next authority | Run the single governed checkpoint for AJ-RT-20260815-006-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1. Type the current-source open category, direct- and inverse-image variances, category of elements, and unique cover descent; classify connected full-diffeomorphism natural open selections; compare explicitly with every RT003 F_prop requirement; return one permitted theorem or precise obstruction. Do not assign proposal, occurrence, physical-event, probability, response, EqSrc, adoption, D7/B2/P4-T03, g_eff, promotion, publication, push, or global-no-go authority. |
-| Next recommended action | Run the single governed checkpoint for AJ-RT-20260815-006-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1. Type the current-source open category, direct- and inverse-image variances, category of elements, and unique cover descent; classify connected full-diffeomorphism natural open selections; compare explicitly with every RT003 F_prop requirement; return one permitted theorem or precise obstruction. Do not assign proposal, occurrence, physical-event, probability, response, EqSrc, adoption, D7/B2/P4-T03, g_eff, promotion, publication, push, or global-no-go authority. |
+| Current burden | none for physics derivation; live control burden is v22 p4 t02 b2 post canonical open carrier theorem theoretical continuation selector |
+| Required next authority | Run the single governed checkpoint for AJ-RT-20260815-007-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-CANONICAL-OPEN-CARRIER-THEORETICAL-CONTINUATION-SELECTION-V1. Compare at minimum the Open-carrier admissibility/kernel Refuter route, the proposal-only measurable-fiber occurrence-law extension route, a materially distinct irrelevance route if available, and the protected human-gated stop. Select exactly one next packet without executing it. Preserve the RT003 obstruction, this theorem, all eight freezes, fourteen no-delta rows, and every D7/B2/P4-T03, physical, promotion, and outward-action block. |
+| Next recommended action | Run the single governed checkpoint for AJ-RT-20260815-007-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-CANONICAL-OPEN-CARRIER-THEORETICAL-CONTINUATION-SELECTION-V1. Compare at minimum the Open-carrier admissibility/kernel Refuter route, the proposal-only measurable-fiber occurrence-law extension route, a materially distinct irrelevance route if available, and the protected human-gated stop. Select exactly one next packet without executing it. Preserve the RT003 obstruction, this theorem, all eight freezes, fourteen no-delta rows, and every D7/B2/P4-T03, physical, promotion, and outward-action block. |
 
 ## Active-State Bifurcation
 
@@ -66,9 +66,9 @@ tracked validator and handoff explicitly authorize that change.
 
 | Field | Value |
 | --- | --- |
-| Latest research task ID | `RT-20260815-006` |
-| Latest research handoff ID | `handoff-1040` |
-| Latest research next action | Run the single governed checkpoint for AJ-RT-20260815-006-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1. Type the current-source open category, direct- and inverse-image variances, category of elements, and unique cover descent; classify connected full-diffeomorphism natural open selections; compare explicitly with every RT003 F_prop requirement; return one permitted theorem or precise obstruction. Do not assign proposal, occurrence, physical-event, probability, response, EqSrc, adoption, D7/B2/P4-T03, g_eff, promotion, publication, push, or global-no-go authority. |
+| Latest research task ID | `RT-20260815-007` |
+| Latest research handoff ID | `handoff-1041` |
+| Latest research next action | Run the single governed checkpoint for AJ-RT-20260815-007-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-CANONICAL-OPEN-CARRIER-THEORETICAL-CONTINUATION-SELECTION-V1. Compare at minimum the Open-carrier admissibility/kernel Refuter route, the proposal-only measurable-fiber occurrence-law extension route, a materially distinct irrelevance route if available, and the protected human-gated stop. Select exactly one next packet without executing it. Preserve the RT003 obstruction, this theorem, all eight freezes, fourteen no-delta rows, and every D7/B2/P4-T03, physical, promotion, and outward-action block. |
 | Latest project-system task ID | `none` |
 | Latest project-system status | `none` |
 | Latest project-system sidecar task ID | `none` |
@@ -101,12 +101,12 @@ active-state authority. The renderer provides a deterministic repair command:
 
 ## Current Route Evidence
 
-- Active task path: `research_control/tasks/RT-20260815-006/00_TASK.yaml`.
-- Active task objective: Compare exactly four materially distinct same-milestone continuations after the current-source proposal-carrier typing and provenance obstruction; preserve the five conditional theorem schemas, all eight freezes, and all fourteen no-delta rows; select exactly one future packet and next role without executing it.
-- Latest handoff path: `research_control/handoffs/handoff-1040.yaml`.
-- Latest handoff summary: RT-20260815-006 selects Route A after exact four-route comparison and two-child synthesis. Current smooth topology canonically supplies the mathematical Open(-) carrier, inverse-image restrictions, and compatible cover gluing. Full-diffeomorphism natural selections on connected sources are objectwise empty or total, while distinct invariant formal kernels show that carrier formation does not determine occurrence. The selected future packet must type-compare this conservative carrier with every RT003 proposal-fiber requirement or return the first exact formation, variance, descent, naturality, or provenance obstruction. It is selected but not executed. The five RT003 conditional theorem schemas, eight freezes, fourteen no-delta rows, and every D7/B2/P4-T03, physical, promotion, and outward-action block remain fixed.
-- Current route family: integration or selection (scientific).
-- Next recommended action: Run the single governed checkpoint for AJ-RT-20260815-006-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1. Type the current-source open category, direct- and inverse-image variances, category of elements, and unique cover descent; classify connected full-diffeomorphism natural open selections; compare explicitly with every RT003 F_prop requirement; return one permitted theorem or precise obstruction. Do not assign proposal, occurrence, physical-event, probability, response, EqSrc, adoption, D7/B2/P4-T03, g_eff, promotion, publication, push, or global-no-go authority.
+- Active task path: `research_control/tasks/RT-20260815-007/00_TASK.yaml`.
+- Active task objective: Construct or precisely obstruct the canonical current-topology Open(-) carrier, inverse-image restriction, category-of-elements fibration, unique cover descent, connected full-diffeomorphism natural-section classification, formal-kernel nonselection control, and exact typed comparison with the RT003 proposal-fiber schema.
+- Latest handoff path: `research_control/handoffs/handoff-1041.yaml`.
+- Latest handoff summary: RT-20260815-007 proves the canonical current-topology Open(-) carrier, inverse-image discrete fibration, unique open-cover descent, connected boundaryless full-Diff objectwise trivial-section classification, and fixed-carrier formal-kernel occurrence nonselection. The exact RT003 comparison discharges only carrier, declared-arrow transport, and open-cover descent; the general proposal sort, typed identification, general F_prop, proposal semantics, admissibility or occurrence generator, probability, and realization remain absent. The children agree on the theorem and differ only on whether Refuter classification or proposal-only law construction should come next. The parent therefore selects one fresh theoretical-continuation selector and executes neither route here.
+- Current route family: formalization or theorem (scientific).
+- Next recommended action: Run the single governed checkpoint for AJ-RT-20260815-007-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-CANONICAL-OPEN-CARRIER-THEORETICAL-CONTINUATION-SELECTION-V1. Compare at minimum the Open-carrier admissibility/kernel Refuter route, the proposal-only measurable-fiber occurrence-law extension route, a materially distinct irrelevance route if available, and the protected human-gated stop. Select exactly one next packet without executing it. Preserve the RT003 obstruction, this theorem, all eight freezes, fourteen no-delta rows, and every D7/B2/P4-T03, physical, promotion, and outward-action block.
 
 ## Three-Tier Claim Summary Pilot
 
@@ -336,7 +336,7 @@ preserves the raw ledger `current_status` field for continuity.
 The immediate next route is:
 
 ```text
-Run the single governed checkpoint for AJ-RT-20260815-006-001. After it commits, execute exactly one separately admitted ontology-formalizer@0.2.0 packet PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1. Type the current-source open category, direct- and inverse-image variances, category of elements, and unique cover descent; classify connected full-diffeomorphism natural open selections; compare explicitly with every RT003 F_prop requirement; return one permitted theorem or precise obstruction. Do not assign proposal, occurrence, physical-event, probability, response, EqSrc, adoption, D7/B2/P4-T03, g_eff, promotion, publication, push, or global-no-go authority.
+Run the single governed checkpoint for AJ-RT-20260815-007-001. After it commits, execute exactly one separately admitted theoretical-continuation-selector@0.1.0 packet PKT-V22-P4T02-B2-POST-CANONICAL-OPEN-CARRIER-THEORETICAL-CONTINUATION-SELECTION-V1. Compare at minimum the Open-carrier admissibility/kernel Refuter route, the proposal-only measurable-fiber occurrence-law extension route, a materially distinct irrelevance route if available, and the protected human-gated stop. Select exactly one next packet without executing it. Preserve the RT003 obstruction, this theorem, all eight freezes, fourteen no-delta rows, and every D7/B2/P4-T03, physical, promotion, and outward-action block.
 ```
 
 The next route must be executed through tracked continue-research state. This
@@ -364,9 +364,9 @@ No authorization-layer split is recorded in the latest handoff.
 
 Legacy compatibility records:
 
-- active task: `RT-20260815-006`;
-- latest handoff: `handoff-1040`;
-- current status: `v22_p4_t02_canonical_source_open_event_fibration_typing_descent_theorem_selected_checkpoint_pending`;
+- active task: `RT-20260815-007`;
+- latest handoff: `handoff-1041`;
+- current status: `v22_p4_t02_canonical_source_open_event_fibration_typing_descent_theorem_complete_theoretical_selector_selected_checkpoint_pending`;
 - renderer source: `scripts/research_control/render_current_frontier.py`;
 - renderer policy: tracked-state snapshot only, not authority;
 - claim boundary: no ontology edit, no source-law adoption, no `MetricData(E)` adoption, no `g_eff` scope expansion, no coupling-law adoption, no matter-coupling derivation or adoption, no stress-energy semantics, no Einstein equations, no benchmark promotion, no completed derivation, and no downstream GR promotion.
@@ -376,8 +376,8 @@ Legacy compatibility records:
 This renderer reads only tracked control sources:
 
 - `research_control/program_state.yaml`
-- `research_control/handoffs/handoff-1040.yaml`
-- `research_control/tasks/RT-20260815-006/00_TASK.yaml`
+- `research_control/handoffs/handoff-1041.yaml`
+- `research_control/tasks/RT-20260815-007/00_TASK.yaml`
 - `registries/DISTANCE_TO_GR_LEDGER.csv`
 - `research_control/design/distance_to_gr_status_aliases.yaml` when present
 
@@ -393,7 +393,7 @@ The AEther-Flow Research Project. (2026, June 17). *GR derivation burden map*
 The AEther-Flow Research Project. (2026, July 1). *Current research frontier*
 [Generated internal control snapshot].
 
-The AEther-Flow Research Project. (2026, July 1). *Handoff 1040*
+The AEther-Flow Research Project. (2026, July 1). *Handoff 1041*
 [Internal research-control handoff].
 
 The AEther-Flow Research Project. (2026, July 1). *Recommendations

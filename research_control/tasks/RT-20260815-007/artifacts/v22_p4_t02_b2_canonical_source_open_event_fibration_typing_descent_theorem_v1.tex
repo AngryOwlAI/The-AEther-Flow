@@ -1,0 +1,220 @@
+% source_object_id: TEX-V22-P4-T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1
+% registration_status: draft_control
+% authority: science_draft
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[margin=1in]{geometry}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}{Proposition}
+\newtheorem{lemma}{Lemma}
+\newtheorem{corollary}{Corollary}
+\newtheorem{definition}{Definition}
+\title{Canonical Source Open-Carrier Typing and Descent\\A Bounded P4--T02 Draft/Control Theorem}
+\author{The \AE ther-Flow Research Project}
+\date{2026-08-16}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+We isolate the structure supplied by the current smooth topology before any
+proposal, admissibility, or occurrence law is added.  Inverse image makes the
+open-set assignment contravariant; its category of elements is a typed discrete
+fibration; compatible open subsets satisfy unique cover descent; and a selected
+open invariant under the full diffeomorphism group of a connected source is
+empty or total.  The same two-point subcarrier supports many normalized formal
+kernels, so the carrier does not select occurrence.  These results provide a
+canonical current-topology typing precursor only.  They neither construct the
+general proposal-fiber pseudofunctor required by RT003 nor assign physical-event,
+probability, response, causal, or metric meaning.
+\end{abstract}
+
+\section{Claim and authority boundary}
+
+This document is a task-local draft/control calculation for P4--T02.  The
+current source signature supplies a smooth four-manifold with its topology and
+smooth structure; it does not supply a source law, a typed general proposal
+sort, an occurrence generator, a physical probability, or a target geometry.
+The word \emph{open} below therefore means topologically open and nothing more.
+In particular, it is not a semantic synonym for proposal, event, response, or
+occurrence.
+
+All eight inherited local freezes and all fourteen Distance-to-GR no-delta
+rows are held fixed.  No D7 adequacy verdict is revisited, B2 remains inactive,
+P4--T03 remains locked, and no ontology adoption or proof promotion follows.
+
+\section{Typed carrier}
+
+\begin{definition}[Declared source-open category]
+Let $\mathsf{OpenSrc}_4$ be the category whose objects are nonempty smooth
+four-manifolds, under the standard boundaryless-manifold convention, and their
+declared open submanifolds and whose arrows are smooth open embeddings.  The
+empty subset is admitted as an element of every open-set lattice, but not as an
+object of $\mathsf{OpenSrc}_4$.
+\end{definition}
+
+For an object $U$, write $\operatorname{Open}(U)$ for its set of topologically
+open subsets, ordered by inclusion.  For an arrow $j:V\hookrightarrow U$, set
+\[
+  j^{*}(O)=j^{-1}(O),\qquad O\in\operatorname{Open}(U).
+\]
+
+\begin{theorem}[Canonical contravariant Open carrier]
+The assignment $U\mapsto\operatorname{Open}(U)$ and
+$j\mapsto j^{*}$ is a contravariant functor
+\[
+  \operatorname{Open}:\mathsf{OpenSrc}_4^{\mathrm{op}}
+  \longrightarrow \mathsf{Poset}.
+\]
+\end{theorem}
+
+\begin{proof}
+Continuity of $j$ makes $j^{-1}(O)$ open.  The identity satisfies
+$\operatorname{id}_{U}^{-1}(O)=O$, and for composable arrows
+$W\xrightarrow{k}V\xrightarrow{j}U$ one has
+$(j\circ k)^{-1}(O)=k^{-1}(j^{-1}(O))$.  Inverse image also preserves
+inclusion, finite intersections, and arbitrary unions.
+\end{proof}
+
+\begin{definition}[Category of elements]
+The category $\int\!\operatorname{Open}$ has objects $(U,O)$ with
+$O\in\operatorname{Open}(U)$.  An arrow over $j:V\hookrightarrow U$ from
+$(V,P)$ to $(U,O)$ is admitted exactly when $P=j^{-1}(O)$.
+\end{definition}
+
+\begin{proposition}[Typed discrete-fibration property]
+For every $j:V\hookrightarrow U$ and every $(U,O)$, there is a unique lift over
+$j$ with domain $(V,j^{-1}(O))$.  Thus the projection
+$\int\!\operatorname{Open}\to\mathsf{OpenSrc}_4$ is the discrete fibration
+associated with the contravariant functor above.
+\end{proposition}
+
+\begin{proof}
+Existence is the inverse-image construction.  The defining equality for an
+arrow in the category of elements forces the domain open to equal
+$j^{-1}(O)$, hence gives uniqueness.  This statement introduces no proposal
+object by semantic relabeling.
+\end{proof}
+
+\section{Unique cover descent}
+
+Let $\{j_i:U_i\hookrightarrow U\}_{i\in I}$ be a declared open cover.  Suppose
+$O_i\in\operatorname{Open}(U_i)$ and, on every overlap,
+\[
+  O_i\cap U_i\cap U_j=O_j\cap U_i\cap U_j.
+\]
+
+\begin{theorem}[Unique open-cover descent]
+There is a unique $O\in\operatorname{Open}(U)$ satisfying
+$O\cap U_i=O_i$ for every $i$, namely $O=\bigcup_i O_i$.
+\end{theorem}
+
+\begin{proof}
+Each $O_i$ is open in the open submanifold $U_i$ and hence open in $U$; their
+union is open.  Compatibility implies that restricting the union to $U_i$
+returns $O_i$.  If $O'$ has the same restrictions, the covering property gives
+$O'=\bigcup_i(O'\cap U_i)=\bigcup_iO_i=O$.
+\end{proof}
+
+\section{Full-diffeomorphism natural sections}
+
+\begin{lemma}[Point transitivity]
+If $U$ is a connected boundaryless smooth manifold of positive dimension, then for any
+$x,y\in U$ there exists a diffeomorphism $\phi:U\to U$ with $\phi(x)=y$.
+\end{lemma}
+
+\begin{proof}
+Join $x$ to $y$ by a piecewise smooth path inside the connected manifold.
+Finitely many coordinate balls cover the compact path image.  In each ball a
+compactly supported flow moves the current point to the next; their finite
+composition is the required diffeomorphism.
+\end{proof}
+
+\begin{theorem}[Connected full-Diff trivial-section theorem]
+Let $U$ be connected and boundaryless, and let $S(U)\in\operatorname{Open}(U)$ satisfy
+$\phi(S(U))=S(U)$ for every $\phi\in\operatorname{Diff}(U)$.  Then
+$S(U)=\varnothing$ or $S(U)=U$.
+\end{theorem}
+
+\begin{proof}
+If $S(U)$ is nonempty, choose $x\in S(U)$.  For every $y\in U$, point
+transitivity gives $\phi(x)=y$; invariance then implies $y\in S(U)$.  Hence the
+nonempty case is total.
+\end{proof}
+
+Connectedness, the boundaryless convention, and the full-diffeomorphism arrow
+class are load-bearing.  A disconnected object, a manifold with boundary, or a
+restricted arrow class may admit proper nonempty invariant opens and is
+therefore a direct falsifier of any hypothesis-free version of this theorem.
+The conclusion is objectwise on each diffeomorphism-groupoid component; it does
+not force different nonisomorphic components to make the same empty-versus-total
+choice.
+
+\section{Carrier does not determine occurrence}
+
+The empty and total assignments form a fixed two-point mathematical subcarrier
+$E_U=\{\varnothing,U\}$.  For every $t\in[0,1]$, define
+\[
+  \mu_t=(1-t)\delta_{\varnothing}+t\delta_U.
+\]
+Each $\mu_t$ is normalized and natural under open embeddings on this binary
+subcarrier, yet $\mu_s\neq\mu_t$ whenever $s\neq t$.
+
+\begin{theorem}[Carrier--occurrence underdetermination]
+The Open carrier, its restriction maps, and its cover descent do not select a
+unique normalized formal kernel, an admissibility law, a realized token, or an
+occurrence generator.
+\end{theorem}
+
+\begin{proof}
+The carrier data is fixed while the family $\{\mu_t\}_{t\in[0,1]}$ contains
+distinct normalized kernels.  Therefore no unique kernel can be recovered from
+that fixed data alone.  The $\mu_t$ are proof controls only and receive no
+physical-probability, empirical-frequency, or realized-occurrence semantics.
+\end{proof}
+
+\section{Exact comparison with the RT003 proposal-fiber schema}
+
+The Open construction discharges three bounded formation obligations:
+
+\begin{enumerate}
+  \item a target-free carrier $U\mapsto\operatorname{Open}(U)$;
+  \item contravariant inverse-image transport on the declared open embeddings;
+  \item unique descent for compatible open families over open covers.
+\end{enumerate}
+
+It does not discharge the remaining RT003 requirements.  The current signature
+contains no general nonvacuous proposal sort $\mathsf{Prop}$, no typed map from
+an arbitrary proposal to its source object, no general proposal-fiber
+pseudofunctor $F_{\mathrm{prop}}$, no typed semantic map identifying an open
+subset with a proposal, no occurrence/admissibility generator, and no physical
+probability or realized-occurrence interpretation.  Writing
+$F_{\mathrm{prop}}(U)=\operatorname{Open}(U)$ would be a new semantic
+identification, not an eliminable theorem of the current signature.
+
+\begin{theorem}[Canonical Open-event fibration typing/descent theorem]
+Under the declared source-open category, cover, connectedness, and full-Diff
+hypotheses, the five mathematical targets above hold: the Open carrier is
+contravariantly functorial; its category of elements is a typed discrete
+fibration; compatible opens descend uniquely; connected fully invariant
+selected opens are empty or total; and fixed carrier data admits multiple
+formal normalized kernels.  The exact RT003 comparison stops at the absence of
+a typed semantic map from opens to general proposal objects and therefore
+preserves the RT003 current-source proposal-fiber typing/provenance obstruction.
+\end{theorem}
+
+\section{Falsifiers and limits}
+
+The theorem would fail or narrow if an admitted arrow were not continuous, if
+a declared family did not cover, if local opens disagreed on overlaps, if the
+object were disconnected, if naturality used less than the full diffeomorphism
+group, or if a typed current-source semantic map to independently defined
+proposal objects were later supplied.  Those cases do not retroactively alter
+the theorem under its printed hypotheses.  They also do not prove that every
+future conservative source extension is impossible.
+
+No conclusion here constructs $g_{\mathrm{eff}}$, matter coupling, or Einstein
+equations, and no Distance-to-GR row changes.
+
+\end{document}

@@ -690,6 +690,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `MD-V22-P3-T04-PARENT-FUSION-LINEAR-RESPONSE-V1` `research_control/tasks/RT-20260809-016/artifacts/parent_fusion_notes_p3_t04_linear_response.md`
 - `MD-V22-P4-T01-PARENT-FUSION-PRINCIPAL-SYMBOL-V1` `research_control/tasks/RT-20260809-018/artifacts/parent_fusion_notes_p4_t01_principal_symbol.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS-V1` `research_control/tasks/RT-20260811-013/artifacts/parent_fusion_notes_p4_t02_b2_bounded_natural_invariant_presentation_admission_census.md`
+- `MD-V22-P4-T02-B2-PARENT-FUSION-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1` `research_control/tasks/RT-20260815-007/artifacts/parent_fusion_notes_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-CHARACTER-INDEPENDENT-VARIATION-REFUTER-STRESS-V1` `research_control/tasks/RT-20260810-012/artifacts/parent_fusion_notes_p4_t02_b2_common_character_independent_variation_refuter_stress.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-011/artifacts/parent_fusion_notes_p4_t02_b2_common_character_independent_variation_smuggling_audit.md`
 - `MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-CHARACTER-INDEPENDENT-VARIATION-V1` `research_control/tasks/RT-20260810-010/artifacts/parent_fusion_notes_p4_t02_b2_common_character_independent_variation.md`
@@ -1218,6 +1219,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `TEX-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-PREPRINCIPAL-V1` `research_control/tasks/RT-20260809-016/artifacts/v22_p3_t04_background_linear_response_preprincipal_v1.tex`
 - `TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1` `research_control/tasks/RT-20260809-018/artifacts/v22_p4_t01_gauge_reduced_principal_symbol_v1.tex`
 - `TEX-V22-P4-T02-B2-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS-V1` `research_control/tasks/RT-20260811-013/artifacts/v22_p4_t02_b2_bounded_natural_invariant_presentation_admission_census_v1.tex`
+- `TEX-V22-P4-T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1` `research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_v1.tex`
 - `TEX-V22-P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-LAW-V1` `research_control/tasks/RT-20260810-010/artifacts/v22_p4_t02_b2_common_character_independent_variation_law_v1.tex`
 - `TEX-V22-P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-REFUTER-STRESS-V1` `research_control/tasks/RT-20260810-012/artifacts/v22_p4_t02_b2_common_character_independent_variation_refuter_stress_v1.tex`
 - `TEX-V22-P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT-V1` `research_control/tasks/RT-20260810-011/artifacts/v22_p4_t02_b2_common_character_independent_variation_smuggling_audit_v1.tex`
@@ -1949,6 +1951,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-MD-V22-P3-T04-PARENT-FUSION-LINEAR-RESPONSE-V1` `wiki/markdown/md-v22-p3-t04-parent-fusion-linear-response-v1.md`
 - `WIKI-MD-V22-P4-T01-PARENT-FUSION-PRINCIPAL-SYMBOL-V1` `wiki/markdown/md-v22-p4-t01-parent-fusion-principal-symbol-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-bounded-natural-invariant-presentation-admission-census-v1.md`
+- `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-canonical-source-open-event-fibration-typing-descent-theorem-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-CHARACTER-INDEPENDENT-VARIATION-REFUTER-STRESS-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-common-character-independent-variation-refuter-stress-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-common-character-independent-variation-smuggling-audit-v1.md`
 - `WIKI-MD-V22-P4-T02-B2-PARENT-FUSION-COMMON-CHARACTER-INDEPENDENT-VARIATION-V1` `wiki/markdown/md-v22-p4-t02-b2-parent-fusion-common-character-independent-variation-v1.md`
@@ -2471,6 +2474,7 @@ Generated metadata index. Not canonical authority. Update source registries, the
 - `WIKI-TEX-V22-P3-T04-BACKGROUND-LINEAR-RESPONSE-PREPRINCIPAL-V1` `wiki/tex/tex-v22-p3-t04-background-linear-response-preprincipal-v1.md`
 - `WIKI-TEX-V22-P4-T01-GAUGE-REDUCED-SOURCE-PRINCIPAL-SYMBOL-V1` `wiki/tex/tex-v22-p4-t01-gauge-reduced-source-principal-symbol-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-BOUNDED-NATURAL-INVARIANT-PRESENTATION-ADMISSION-CENSUS-V1` `wiki/tex/tex-v22-p4-t02-b2-bounded-natural-invariant-presentation-admission-census-v1.md`
+- `WIKI-TEX-V22-P4-T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1` `wiki/tex/tex-v22-p4-t02-b2-canonical-source-open-event-fibration-typing-descent-theorem-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-LAW-V1` `wiki/tex/tex-v22-p4-t02-b2-common-character-independent-variation-law-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-REFUTER-STRESS-V1` `wiki/tex/tex-v22-p4-t02-b2-common-character-independent-variation-refuter-stress-v1.md`
 - `WIKI-TEX-V22-P4-T02-B2-COMMON-CHARACTER-INDEPENDENT-VARIATION-SMUGGLING-AUDIT-V1` `wiki/tex/tex-v22-p4-t02-b2-common-character-independent-variation-smuggling-audit-v1.md`

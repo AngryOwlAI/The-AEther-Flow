@@ -1,0 +1,500 @@
+job_id: "AJ-RT-20260815-007-001"
+task_id: "RT-20260815-007"
+decision_id: "DDR-20260815-007"
+role_id: "ontology-formalizer"
+role_version: "0.2.0"
+execution_role_ref: "ontology-formalizer@0.2.0--RT-20260815-007"
+status: "completed"
+validation_status: "PASS_PRECHECKPOINT_STAGING_REQUIRED"
+created_at: "2026-08-16T02:37:22Z"
+started_at: "2026-08-16T02:37:22Z"
+completed_at: "2026-08-16T03:29:06Z"
+completion_path: "research_control/tasks/RT-20260815-007/jobs/completions/AJC-AJ-RT-20260815-007-001.yaml"
+requires_human_gate: false
+human_authorization_note: "The active full-V22 goal, committed checkpoint 74a084524287d6cfc6e27570d45931d36b7bd55f, and handoff-1040 authorize exactly this one bounded theorem-or-obstruction AgentJob and one checkpoint."
+objective: "Construct or precisely obstruct the canonical current-topology Open-event fibration typing/descent theorem and compare it exactly with the RT003 proposal-fiber schema without assigning occurrence or physical semantics."
+target_derivation_milestone: "effective_metric_g_eff"
+milestone_burden: "Determine whether current smooth topology supplies a definitional proposal-carrier precursor while keeping admissibility, occurrence generation, and every physical interpretation underived."
+route_label: "ordinary-research-packet"
+trigger_classification: "ordinary_gap_theoretical_calculation_under_current_topology"
+route_reason: "handoff_1040_selects_the_canonical_open_carrier_theorem_after_committed_checkpoint"
+route_strategy_id: "execute_v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_v1"
+executed_packet_id: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+immutable_route_sha256: "0804f5e6c6244260e06a46bc146505d74ed993fa229099318ab3aebc59ab9167"
+source_head: "74a084524287d6cfc6e27570d45931d36b7bd55f"
+source_tree: "97663fbe03eb9b6a2daa16ee3fe5ff1e3fd23560"
+assembly_parent_head: "74a084524287d6cfc6e27570d45931d36b7bd55f"
+plan_id: "recommendations_implementation_plan_continue_task-v22"
+plan_task_id: "P4-T02"
+recommendation_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R10"
+  - "V22-R13"
+declared_coverage_ids:
+  - "V22-R07"
+  - "V22-R08"
+  - "V22-R13"
+  - "S5"
+sequence_step_ids:
+  - "S5"
+cross_cutting_directive_ids:
+  - "V22-X02"
+  - "V22-X04"
+next_plan_id: "recommendations_implementation_plan_continue_task-v22"
+next_plan_task_ids:
+  - "P4-T02"
+next_plan_task_execution_authorized: false
+source_extension_classification_required: true
+project_system_change_only: false
+scientific_claims_changed: false
+physical_status_changed: false
+distance_to_gr_delta_changed: false
+physics_promotion_authorized: false
+proof_authority: false
+tag_creation_authorized: false
+public_release_authorized: false
+publication_authorized: false
+push_authorized: false
+external_action_authorized: false
+
+mathematical_decisiveness_contract:
+  contract_path: "research_control/design/mathematical_decisiveness_completion_contract.md"
+  schema_path: ".agents/schemas/PHYSICS_COMPLETION_DECISIVENESS_SCHEMA.md"
+  enforcement_mode: "hard_failure"
+  active_after: "2026-06-21T02:32:39Z"
+
+ordinary_route_guard_admission:
+  schema_id: "ordinary_route_guard_admission_v1"
+  policy_id: "ordinary_route_guard_policy_v1"
+  source_handoff_id: "handoff-1040"
+  source_handoff_path: "research_control/handoffs/handoff-1040.yaml"
+  source_handoff_sha256: "0804f5e6c6244260e06a46bc146505d74ed993fa229099318ab3aebc59ab9167"
+  selected_plan_id: "recommendations_implementation_plan_continue_task-v22"
+  selected_plan_task_id: "P4-T02"
+  selected_plan_task_ref: "recommendations_implementation_plan_continue_task-v22:P4-T02"
+  selected_packet_id: "PKT-V22-P4T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-THEOREM-V1"
+  guard_outcome: "below_threshold"
+  checkpoint_prerequisite:
+    task_id: "RT-20260815-006"
+    commit: "74a084524287d6cfc6e27570d45931d36b7bd55f"
+    tree: "97663fbe03eb9b6a2daa16ee3fe5ff1e3fd23560"
+    committed: true
+  immutable_handoff_checkpoint_note: "Handoff-1040 remains immutable; checkpoint 74a084524287d6cfc6e27570d45931d36b7bd55f contains the complete RT006 transaction and satisfies its prerequisite without replay."
+  authority_limits:
+    ordinary_research_handoff_authoritative: true
+    project_system_sidecar_supersedes: false
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    scientific_status_changed: false
+    physics_promotion_authorized: false
+
+memory_preflight:
+  status_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py status --json"
+  preflight_command: ".venv/bin/python scripts/research_control/continue_research_memory_preflight.py --json"
+  refresh_command: ".venv/bin/python .codex/skills/project-memory-system/scripts/sync_obsidian_vault.py"
+  status_summary:
+    core_validation_status: "PASS"
+    freshness_status: "PASS"
+    local_retrieval_status: "PASS"
+    vault_exists: true
+    memory_index_exists: true
+    source_object_count: 1250
+    relationship_row_count: 6427
+    semantic_row_count: 1250
+    vault_row_count: 1250
+    blocking_warning_count: 0
+    local_cache_only_warning_count: 0
+    non_blocking_warning_count: 0
+  refresh_needed: false
+  refresh_performed: false
+  queries:
+    - command: ".venv/bin/python .codex/skills/project-memory-system/scripts/query_memory.py search 'full-diffeomorphism trivial natural sections' --limit 10 --json"
+      query_type: "search"
+      query_text: "full-diffeomorphism trivial natural sections"
+      returned_object_ids:
+        - "TEX-V22-P4-T02-B2-POST-OCCURRENCE-TYPING-PROVENANCE-OBSTRUCTION-ROUTE-SELECTION-V1"
+  canonical_inspections:
+    - object_id: "MD-RECOMMENDATIONS-IMPLEMENTATION-PLAN-CONTINUE-TASK-V22"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+      source_hash: "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-POST-OCCURRENCE-TYPING-PROVENANCE-OBSTRUCTION-SELECTOR-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260815-006/artifacts/parent_fusion_notes_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selector.md"
+      source_hash: "2b7fd71d7c98a121de57172aeb91e8fc786c633ba04cc4124836c0e59a0532f7"
+    - object_id: "MD-V22-P4-T02-B2-PARENT-FUSION-SOURCE-DERIVED-OCCURRENCE-ADMISSIBILITY-DESCENT-KERNEL-V1"
+      source_registry: "MARKDOWN_SOURCE_REGISTRY.csv"
+      registry_path: "registries/MARKDOWN_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260815-003/artifacts/parent_fusion_notes_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel.md"
+      source_hash: "54f91f607269d6bdf9f69cc30d7fbf2dcfb77bb1efe4d7c81fd335e92dddaa09"
+    - object_id: "TEX-V22-P4-T02-B2-POST-OCCURRENCE-TYPING-PROVENANCE-OBSTRUCTION-ROUTE-SELECTION-V1"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "research_control/tasks/RT-20260815-006/artifacts/v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_route_selection_v1.tex"
+      source_hash: "e3aa386e1524616ebbef19b164b0a3f3f92e8380e82abe41ced9fa36f6570246"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-FOUNDATIONS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_foundations.tex"
+      source_hash: "4749d9e8b6858a43230e99029cccc3274b55fc2ae2a2cdf45a983a60c98e5b59"
+    - object_id: "TEX-ONTOLOGY-AETHER-FLOW-DYNAMICS"
+      source_registry: "TEX_SOURCE_REGISTRY.csv"
+      registry_path: "registries/TEX_SOURCE_REGISTRY.csv"
+      canonical_path: "ontology/tex/aether_flow_dynamics.tex"
+      source_hash: "fd6e579e71ef7f2ac4c9668ceede051ad57033ee52357b2552a9e3a5a53939c7"
+  additional_control_inspections:
+    - object_id: "HANDOFF-1040"
+      control_path: "research_control/handoffs/handoff-1040.yaml"
+      source_hash: "0804f5e6c6244260e06a46bc146505d74ed993fa229099318ab3aebc59ab9167"
+    - object_id: "RT-20260815-006-COMPLETION"
+      control_path: "research_control/tasks/RT-20260815-006/jobs/completions/AJC-AJ-RT-20260815-006-001.yaml"
+      source_hash: "816f7e0420363322d0bb5c6225fadfe825463d15f64b17d449b25aa7b2786bd7"
+  authority_note: "Tracked registered sources and control records govern. Generated wiki, semantic, Obsidian, SQLite, and .local layers are retrieval or operational evidence only and are not authority."
+
+physics_payload_admission:
+  schema_id: "physics_payload_admission_v1"
+  policy_id: "physics_payload_admission_policy_v1"
+  admission_path: "physics"
+  payload_type: "theorem"
+  candidate_family: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  assumption_delta:
+    - "Use only the current smooth-manifold topology and typed open embeddings to construct Open(-)."
+    - "Hold the RT003 current-source proposal-fiber typing/provenance obstruction and its five conditional theorem schemas fixed."
+    - "Preserve all eight active freezes and prohibit replay or repair of every frozen route."
+    - "Treat formal kernels solely as mathematical nonselection controls without physical probability or realized-occurrence meaning."
+    - "Import no target atlas, metric, empirical response, desired cone, benchmark answer, or protected status."
+  materiality_basis: "The selected packet determines whether a canonical definitional carrier precursor exists in the current topology and exactly what remains missing before any occurrence or admissibility law can be stated."
+  payload_details:
+    resolves_new_theorem_or_obstruction: true
+    theorem_identity: "V22-P4-T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT-001"
+    permitted_results:
+      - "canonical_open_event_fibration_typing_descent_theorem"
+      - "precise_open_carrier_to_proposal_fibration_type_mismatch_obstruction"
+      - "restriction_or_descent_obstruction"
+      - "current_source_definitional_extension_obstruction"
+    result_status: "canonical_open_event_fibration_typing_descent_theorem"
+  source_basis:
+    - "research_control/handoffs/handoff-1040.yaml"
+    - "research_control/tasks/RT-20260815-006/artifacts/v22_p4_t02_b2_post_occurrence_typing_provenance_obstruction_selected_future_packet_v1.yaml"
+    - "ontology/tex/aether_flow_foundations.tex"
+    - "ontology/tex/aether_flow_dynamics.tex"
+    - "research_control/tasks/RT-20260815-003/artifacts/parent_fusion_notes_p4_t02_b2_source_derived_occurrence_admissibility_descent_kernel.md"
+  expected_artifact_paths:
+    - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_v1.tex"
+    - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_result_v1.yaml"
+    - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_model.py"
+  process_receipts_excluded_from_payload:
+    - "validator_pass"
+    - "checkpoint_pass"
+    - "documentation_receipt"
+    - "role_or_route_selection"
+    - "internal_child_review"
+    - "latex_compile_pass"
+  authority_limits:
+    theorem_truth_inferred: false
+    scientific_status_changed: false
+    ontology_or_source_law_adopted: false
+    distance_to_gr_changed: false
+    physics_promotion_authorized: false
+
+family_freeze_admission:
+  schema_id: "family_freeze_route_admission_v1"
+  policy_id: "family_freeze_reopening_policy_v1"
+  route_id: "execute_v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_v1"
+  family_id: "FAM-V22-B2-MATTER-PRINCIPAL-POLYNOMIAL"
+  family_identity_sha256: "16817d3d1fb608b1fc8e9cf53064e06c5cb0c3b796ad82a22cd3b6d63a381778"
+  assumption_sha256es:
+    - "0804f5e6c6244260e06a46bc146505d74ed993fa229099318ab3aebc59ab9167"
+    - "2b7fd71d7c98a121de57172aeb91e8fc786c633ba04cc4124836c0e59a0532f7"
+    - "04628b66c60229f4a1411018fe3da49cb8fbecba1d93aef6f163f9eaf6046c65"
+    - "8e9d44e3a18ecc8a2430a9c42497da3eb9911c2cf6cd714c1525c5d91551835e"
+  route_kind: "theorem_investigation"
+  preserved_freeze_labels:
+    - "NDCL-V22-P4T02-B2-SHARED-TAU-SELECTOR"
+    - "NDCL-V22-P4T02-B2-REPAIRED-QUOTIENT-DESCENT-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-COMMON-CHARACTER-HOLONOMY-PROTECTION"
+    - "NDCL-V22-P4T02-B2-ORIENTED-MATROID-BRIDGE-SELECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SIGNED-CUBIC-VIABILITY-SELECTOR-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-SOURCE-LAW-SPACE-ROBUST-INVARIANCE-PROTECTION-ROBUSTNESS"
+    - "NDCL-V22-P4T02-B2-KSTAR-STANDALONE-LOCAL-BRIDGE-IRRELEVANCE"
+    - "NDCL-V22-P4T02-B2-PROJECTIVE-CONORMAL-ROBUST-SELECTION-CONFORMAL-LIFT"
+  reopening:
+    requested: false
+    class: "none"
+  distinct_branch:
+    branch_identity: "V22-P4-T02-B2-CANONICAL-SOURCE-OPEN-EVENT-FIBRATION-TYPING-DESCENT"
+    material_difference_basis: "This branch types a topology-generated carrier and its descent; it does not reconstruct an earlier selector, quotient, bridge, viability law, or proposal-fiber extension."
+    reconstructs_frozen_candidate: false
+  authority_limits:
+    local_family_freeze_preserved: true
+    global_no_go_claimed: false
+    automatic_candidate_adoption: false
+    theorem_truth_inferred: false
+    ontology_modified: false
+    physics_promotion_authorized: false
+
+dual_budget_allocation:
+  schema_id: "dual_budget_allocation_v1"
+  policy_id: "dual_budget_policy_v1"
+  category: "mixed"
+  primary_budget: "physics"
+  task_count_credit:
+    physics: 1
+    project_system: 0
+  expected_durable_outputs:
+    physics:
+      - "one registered draft/control theorem manuscript with exact Open-carrier, discrete-fibration, cover-descent, symmetry, and occurrence-nonselection results"
+      - "one exact theorem result and one selected unexecuted theoretical-continuation selector"
+    project_system:
+      - "task-local model, focused validator, compact receipt, compile receipt, provenance, parent-child synthesis, and standard synchronization"
+  acceptance_criteria:
+    physics:
+      - "exactly one permitted result is returned with five theorem targets, fourteen proof obligations, and twelve failure branches"
+      - "the RT003 obstruction, five conditional theorem schemas, eight freezes, and fourteen no-delta rows remain fixed"
+    project_system:
+      - "source hashes, artifacts, registries, backlog, program state, and handoff pass deterministic validation"
+      - "the registered TeX source compiles to the recorded three-page derivative"
+  reporting_dimensions:
+    - "task_count"
+    - "elapsed_effort"
+    - "compute"
+    - "durable_outputs"
+  resource_measurement:
+    physics:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+    project_system:
+      elapsed_effort:
+        status: "not_measured"
+        unit: "seconds"
+      compute:
+        status: "not_measured"
+        unit: ""
+  blocked_physics_exception:
+    active: false
+    exception_id: ""
+    evidence_path: ""
+    evidence_sha256: ""
+  authority_limits:
+    system_success_counts_as_physics: false
+    system_success_counts_as_distance_to_gr: false
+    validator_pass_counts_as_physics: false
+    theorem_packaging_counts_as_physics: false
+    route_selection_counts_as_physics: false
+
+formalization_contract:
+  formal_domain_count: 10
+  formal_object_count: 12
+  formal_map_count: 10
+  theorem_targets:
+    - "inverse_image_open_carrier_contravariant_functor"
+    - "open_cover_unique_descent"
+    - "connected_full_diffeomorphism_trivial_natural_section"
+    - "carrier_occurrence_underdetermination_by_distinct_formal_kernels"
+    - "typed_comparison_or_first_mismatch_with_rt003_proposal_fibers"
+  proof_obligation_count: 14
+  failure_branch_count: 12
+  exact_control_required: true
+  exact_control_description: "Finite topology and cover controls must independently test inverse-image functoriality, gluing uniqueness, invariant opens, distinct normalized formal kernels, and the RT003 type mismatch."
+
+role_decomposition:
+  mode: "parent_child_parallel_synthesis"
+  decomposition_version: "0.1.0"
+  parent:
+    execution_unit_id: "parent"
+    perspective: "physicist_mathematician_philosopher"
+    responsibilities:
+      - "inspect every authoritative source directly and hold the RT003 obstruction, five conditional theorem schemas, eight freezes, and plan fixed"
+      - "construct the theorem model manuscript and exact RT003 comparison"
+      - "review both child outputs for scientific typing scope and identity conflicts"
+      - "fuse one bounded theorem result and one unexecuted successor selection"
+  children:
+    - execution_unit_id: "child_phys_math"
+      perspective: "physicist_mathematician"
+      output_path: "research_control/tasks/RT-20260815-007/artifacts/child_phys_math_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+      status: "completed"
+    - execution_unit_id: "child_phys_phil"
+      perspective: "physicist_philosopher"
+      output_path: "research_control/tasks/RT-20260815-007/artifacts/child_phys_phil_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+      status: "completed"
+  conflict_policy:
+    review_path: "research_control/tasks/RT-20260815-007/artifacts/parent_conflict_review_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+    max_resolution_rounds: 2
+    require_parallel_child_revision: true
+    unresolved_conflict_status: "blocked"
+  fusion_policy:
+    fusion_notes_path: "research_control/tasks/RT-20260815-007/artifacts/parent_fusion_notes_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.md"
+    fused_output_path: "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_v1.tex"
+    preserve_shared_consensus: true
+    preserve_unique_contributions: true
+    preserve_unresolved_limitations: true
+    final_output_replaces_old_single_role_artifact: true
+  outer_agentjob_count: 1
+  child_agentjob_count: 0
+  subagent_count: 2
+  rationale: "Two internal child execution units worked in parallel under one outer AgentJob, one ontology-formalizer overlay, one claim boundary, and one completion record."
+
+required_outputs:
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_v1.tex"
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_result_v1.yaml"
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_model.py"
+  - "research_control/tasks/RT-20260815-007/artifacts/child_phys_math_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+  - "research_control/tasks/RT-20260815-007/artifacts/child_phys_phil_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+  - "research_control/tasks/RT-20260815-007/artifacts/parent_conflict_review_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+  - "research_control/tasks/RT-20260815-007/artifacts/parent_fusion_notes_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.md"
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_provenance_manifest_v1.yaml"
+  - "research_control/tasks/RT-20260815-007/artifacts/validate_v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.py"
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_validation.json"
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_compact_receipt.json"
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260815-007/jobs/completions/AJC-AJ-RT-20260815-007-001.yaml"
+  - "research_control/handoffs/handoff-1041.yaml"
+  - "research_control/handoffs/handoff-1041.md"
+  - "research_control/program_state.yaml"
+
+expected_outputs:
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_v1.tex"
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_result_v1.yaml"
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_model.py"
+  - "research_control/tasks/RT-20260815-007/artifacts/child_phys_math_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+  - "research_control/tasks/RT-20260815-007/artifacts/child_phys_phil_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+  - "research_control/tasks/RT-20260815-007/artifacts/parent_conflict_review_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.yaml"
+  - "research_control/tasks/RT-20260815-007/artifacts/parent_fusion_notes_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.md"
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_provenance_manifest_v1.yaml"
+  - "research_control/tasks/RT-20260815-007/artifacts/validate_v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.py"
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_validation.json"
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_compact_receipt.json"
+  - "research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_latex_compile_receipt.json"
+  - "research_control/tasks/RT-20260815-007/jobs/completions/AJC-AJ-RT-20260815-007-001.yaml"
+  - "research_control/handoffs/handoff-1041.yaml"
+  - "research_control/handoffs/handoff-1041.md"
+
+allowed_read_paths:
+  - "SOUL.md"
+  - "AGENTS.md"
+  - "research_control/AGENTS.md"
+  - ".codex/skills/continue-research/SKILL.md"
+  - ".agents/roles/research_ops/director-of-research.v0.3.0.md"
+  - ".agents/roles/physics/ontology-formalizer.v0.2.0.md"
+  - ".agents/roles/physics/theoretical-continuation-selector.v0.1.0.md"
+  - ".agents/schemas/**"
+  - "implementations_plans/recommendations_implementation_plan_continue_task-v22.md"
+  - "ontology/tex/aether_flow_foundations.tex"
+  - "ontology/tex/aether_flow_dynamics.tex"
+  - "registries/**"
+  - "research_control/**"
+allowed_write_paths:
+  - "FOLDER_MAP.md"
+  - "output/**"
+  - "registries/**"
+  - "research_control/current_frontier.md"
+  - "research_control/design/v22_recommendation_backlog.yaml"
+  - "research_control/handoffs/handoff-1041.yaml"
+  - "research_control/handoffs/handoff-1041.md"
+  - "research_control/program_state.yaml"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_burden_status_migration_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status.md"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_compact_receipt.json"
+  - "research_control/tasks/RT-20260721-009/artifacts/v21_current_burden_status_validation.json"
+  - "research_control/tasks/RT-20260815-007/**"
+  - "research_control/tasks/TASK_INDEX.csv"
+  - "research_control/tasks/TASK_INDEX.md"
+  - "wiki/indexes/**"
+  - "wiki/markdown/**"
+  - "wiki/tex/**"
+
+allowed_generated_paths:
+  - ".local/**"
+forbidden_paths:
+  - "ontology/**"
+  - "papers/**"
+  - "manuscripts/**"
+  - "experiments/**"
+  - ".git/**"
+allowed_source_classes:
+  - "registered_tex"
+  - "registered_markdown"
+  - "tracked_control_state"
+  - "task_local_draft_control"
+forbidden_source_classes:
+  - "canonical_ontology_write"
+  - "benchmark_promotion"
+  - "generated_artifact_as_independent_authority"
+  - "target_answer_import"
+  - "empirical_response_assumption"
+  - "candidate_reconstruction"
+  - "completed_derivation_claim"
+  - "gate_chair_verdict"
+  - "generated_derivative_authority"
+  - "global_theory_rejection"
+
+completion_requirements:
+  exactly_one_permitted_result: true
+  two_child_artifacts: true
+  parent_source_inspection: true
+  parent_conflict_review: true
+  parent_fusion: true
+  new_mathematical_payload: true
+  exact_control_model: true
+  source_hash_manifest: true
+  expanded_distance_to_gr_matrix: true
+  inherited_freeze_count: 8
+  one_unexecuted_successor: true
+  documentation_impact_decision: true
+  standard_memory_registry_sync: true
+  affected_profile_validation: true
+  checkpoint_invocation_count: 1
+  push: false
+
+authority_limits:
+  general_prop_or_f_prop_constructed: false
+  occurrence_law_constructed: false
+  source_law_adopted: false
+  canonical_ontology_modified: false
+  physical_event_semantics_assigned: false
+  physical_probability_assigned: false
+  realized_occurrence_selected: false
+  d7_reevaluated: false
+  b2_activated: false
+  p4_t03_unlocked: false
+  g_eff_constructed: false
+  matter_coupling_derived: false
+  einstein_equations_derived: false
+  distance_to_gr_changed: false
+  global_no_go_claimed: false
+  future_source_extension_impossibility_claimed: false
+  physics_promotion_authorized: false
+  proof_authority: false
+  publication_authorized: false
+  push_authorized: false
+  external_action_authorized: false
+
+required_validators:
+  - ".venv/bin/python research_control/tasks/RT-20260815-007/artifacts/v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent_theorem_model.py"
+  - ".venv/bin/python research_control/tasks/RT-20260815-007/artifacts/validate_v22_p4_t02_b2_canonical_source_open_event_fibration_typing_descent.py --write"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py"
+  - ".venv/bin/python scripts/project_control/validate_documentation_impact.py --json"
+  - ".venv/bin/python scripts/research_control/validate_research_control.py --check-diff --job-id AJ-RT-20260815-007-001 --json-summary"
+  - ".venv/bin/python -m scripts.validation.cli run --profile affected"
+  - ".venv/bin/python .codex/skills/project-memory-system/scripts/bootstrap_memory_system.py --validate-only"
+  - ".venv/bin/python scripts/project_control/collect_project_improvement_signals.py --validate-emitted"
+checkpoint_required: true
+checkpoint_command: ".venv/bin/python scripts/research_control/checkpoint_research_transaction.py --job-id AJ-RT-20260815-007-001 --planner-validation"
+checkpoint_invocation_limit: 1
+selected_future_packet_execution_authorized: false
+stop_conditions:
+  - "exactly one permitted theorem or precise obstruction is fused"
+  - "both child artifacts are complete and every conflict is reviewed"
+  - "the exact model and focused validator pass"
+  - "registered sources compile and generated memory or wiki derivatives synchronize"
+  - "research-control, documentation-impact, affected-profile, and read-only memory validation pass"
+  - "one unexecuted successor or protected stop is recorded"
+  - "the single checkpoint is invoked without push"
+notes: "Exactly one outer AgentJob completed. The two child artifacts are internal perspectives, not AgentJobs or authority expansions; the selected theoretical-continuation selector remains unexecuted."
